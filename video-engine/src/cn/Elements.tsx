@@ -63,29 +63,30 @@ export const Widget: React.FC<{ el: Extract<Element, { kind: "widget" }>; start:
     <div
       style={{
         position: "absolute",
-        left: 90,
-        width: W - 180,
+        left: 60,
+        width: W - 120,
         top: ZONE_TOP,
         transformOrigin: "top center",
         transform: `translateY(${(1 - s) * 60}px) scale(${0.9 + 0.1 * s})`,
         opacity: Math.min(1, s * 1.3) * out,
-        background: "rgba(255,255,255,0.14)",
-        backdropFilter: "blur(14px)",
-        WebkitBackdropFilter: "blur(14px)",
-        border: "2px solid rgba(255,255,255,0.35)",
+        background: "rgba(11,15,10,0.9)",
+        borderLeft: `14px solid ${BRAND.lime}`,
+        border: "2px solid rgba(184,215,234,0.45)",
+        borderLeftWidth: 14,
+        borderLeftColor: BRAND.lime,
         borderRadius: 28,
-        padding: "26px 34px",
-        boxShadow: "0 16px 40px rgba(0,0,0,0.35)",
+        padding: "26px 36px 28px 34px",
+        boxShadow: "0 18px 44px rgba(0,0,0,0.5)",
         fontFamily: FONT,
         color: BRAND.white,
       }}
     >
-      <div style={{ fontWeight: 800, fontSize: 40, textTransform: "uppercase", color: BRAND.lime, letterSpacing: 1, marginBottom: 10 }}>{el.title}</div>
+      <div style={{ fontWeight: 900, fontSize: 44, textTransform: "uppercase", color: BRAND.lime, letterSpacing: 1, marginBottom: 12, lineHeight: 1.05 }}>{el.title}</div>
       {el.lines.map((l, i) => {
         const ls = spring({ frame: local - 6 - i * 5, fps, config: { damping: 14, stiffness: 200 } });
         return (
-          <div key={i} style={{ fontWeight: 600, fontSize: 44, lineHeight: 1.25, opacity: ls, transform: `translateX(${(1 - ls) * 30}px)` }}>
-            <span style={{ color: BRAND.az, marginRight: 14 }}>▸</span>
+          <div key={i} style={{ fontWeight: 700, fontSize: 52, lineHeight: 1.22, opacity: ls, transform: `translateX(${(1 - ls) * 30}px)`, textShadow: "0 2px 6px rgba(0,0,0,0.6)" }}>
+            <span style={{ color: BRAND.az, marginRight: 16 }}>▸</span>
             {l}
           </div>
         );
@@ -202,7 +203,7 @@ export const Checklist: React.FC<{ el: Extract<Element, { kind: "checklist" }>; 
         return (
           <div key={i} style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 12, transform: `translateX(${(1 - ls) * -60}px)`, opacity: ls }}>
             <div style={{ width: 54, height: 54, borderRadius: 14, background: struck ? "#C2412E" : BRAND.green, display: "flex", alignItems: "center", justifyContent: "center", color: BRAND.white, fontWeight: 900, fontSize: 36 }}>{struck ? "✕" : "✓"}</div>
-            <div style={{ background: "rgba(11,15,10,0.75)", color: BRAND.white, padding: "10px 24px", borderRadius: 14, fontWeight: 700, fontSize: 46, textDecoration: struck ? "line-through" : "none" }}>{it}</div>
+            <div style={{ background: "rgba(11,15,10,0.9)", color: BRAND.white, padding: "10px 26px", borderRadius: 14, fontWeight: 800, fontSize: 50, textDecoration: struck ? "line-through" : "none" }}>{it}</div>
           </div>
         );
       })}
