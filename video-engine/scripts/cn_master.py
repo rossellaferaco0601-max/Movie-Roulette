@@ -23,6 +23,25 @@ def crop_filter(zoom: float):
     y = max(0, min(SRC_H - h, y))
     return f"crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={OUT_W}:{OUT_H}:flags=lanczos,fps={FPS},setsar=1"
 
+# schede grafiche del sorgente (viola/verdi, non brand): coperte con un fermo immagine di Daniele + lento zoom
+CARDS = [(149.2, 162.3), (180.2, 189.8), (205.2, 219.3)]
+
+def freeze_inputs(src, seg, zoom, n, tmp, i):
+    """Per ogni scheda che cade nel pezzo: png del fotogramma prima della scheda + filtro overlay con zoompan."""
+    extra_in, chains, k = [], [], 0
+    for (a, b) in CARDS:
+        lo, hi = max(a, seg["from"]), min(b, seg["to"])
+        if hi - lo < 0.3: continue
+        t_img = max(seg["from"], a - 0.25)
+        png = os.path.join(tmp, f"frz{i}_{k}.png")
+        run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{t_img:.3f}", "-i", src, "-frames:v", "1", "-vf", crop_filter(zoom).replace(f",fps={FPS}", ""), png])
+        t0, t1 = lo - seg["from"], hi - seg["from"]
+        nf = int(round((t1 - t0) * FPS)) + 2
+        extra_in += ["-loop", "1", "-framerate", str(FPS), "-t", f"{(nf + 2) / FPS:.4f}", "-i", png]
+        chains.append((t0, t1, nf))
+        k += 1
+    return extra_in, chains
+
 def build(reel, src_dir, out_dir):
     rid, segs, blend = reel["id"], reel["segments"], reel["blendFrames"]
     src = os.path.join(src_dir, reel["src"])
@@ -32,8 +51,17 @@ def build(reel, src_dir, out_dir):
         n = round((s["to"] - s["from"]) * FPS)
         zoom = 1.0 if i % 2 == 0 else 1.08
         p = os.path.join(tmp, f"p{i}.mp4")
-        run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{s['from']:.3f}", "-i", src, "-t", f"{n / FPS:.4f}",
-             "-vf", crop_filter(zoom), "-frames:v", str(n), "-af", f"aresample=48000,atrim=0:{n / FPS:.4f},apad=whole_dur={n / FPS:.4f}",
+        extra_in, chains = freeze_inputs(src, s, zoom, n, tmp, i)
+        fc = f"[0:v]{crop_filter(zoom)}[v0];"
+        prev = "[v0]"
+        for j, (t0, t1, nf) in enumerate(chains):
+            # fermo immagine con zoom lento 1.00 -> 1.06, sovrapposto solo durante la scheda
+            fc += (f"[{j + 1}:v]scale=2160:3840,zoompan=z='1+0.06*on/{nf}':d=1:x='iw/2-(iw/zoom/2)':y='ih*0.35-(ih/zoom*0.35)':s={OUT_W}x{OUT_H}:fps={FPS},"
+                   f"setpts=PTS-STARTPTS+{t0:.4f}/TB[f{j}];{prev}[f{j}]overlay=enable='between(t,{t0:.4f},{t1:.4f})':eof_action=pass[v{j + 1}];")
+            prev = f"[v{j + 1}]"
+        fc = fc.rstrip(";")
+        run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{s['from']:.3f}", "-i", src, *extra_in, "-t", f"{n / FPS:.4f}",
+             "-filter_complex", fc, "-map", prev, "-map", "0:a", "-frames:v", str(n), "-af", f"aresample=48000,atrim=0:{n / FPS:.4f},apad=whole_dur={n / FPS:.4f}",
              "-c:v", "libx264", "-preset", "fast", "-crf", "14", "-pix_fmt", "yuv420p", "-c:a", "pcm_s16le", p])
         parts.append((p, n))
     out = os.path.join(out_dir, f"{rid}.mp4")

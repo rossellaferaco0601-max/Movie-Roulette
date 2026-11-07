@@ -134,7 +134,7 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
       elements: [
         { kind: "text3d", at: 6.4, word: "allenare", dur: 2.4, word3d: "RESPIRA", sub: "si allena come un muscolo" },
         { kind: "pill", at: 11.1, word: "tre", dur: 3.0, text: "3 esercizi semplici" },
-        { kind: "stage", at: 18.9, word: "primo", dur: 14.5, title: "Esercizio 1 · respirazione nasale controllata", keyword: "controllata", steps: ["Bocca chiusa", "Inspira dal naso 3-4 s", "Espira dal naso 4-5 s", "10 respiri con calma"] },
+        { kind: "stage", at: 18.75, dur: 14.6, title: "Esercizio 1 · respirazione nasale controllata", keyword: "controllata", steps: ["Bocca chiusa", "Inspira dal naso 3-4 s", "Espira dal naso 4-5 s", "10 respiri con calma"] },
         { kind: "sphere3d", at: 33.6, dur: 7.5, phases: BREATH },
         { kind: "widget", at: 41.7, dur: 6.0, title: "Cosa allena", lines: ["Tolleranza alla CO₂", "Uso migliore dell'ossigeno", "Più resistenza, meno affanno"] },
       ],
@@ -157,7 +157,7 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
       segments: [seg(175.15, 205.1)],
       hook: { lines: ["Correre in controllo", "senza panico"], keyword: "controllo", dur: 4.0 },
       elements: [
-        { kind: "stage", at: 5.1, word: "dopo", dur: 9.5, title: "Esercizio 2 · le pause respiratorie", keyword: "pause", steps: ["Espira normalmente", "Trattieni qualche secondo", "Riprendi dal naso", "5-10 volte, senza forzare"] },
+        { kind: "stage", at: 5.2, dur: 9.4, title: "Esercizio 2 · le pause respiratorie", keyword: "pause", steps: ["Espira normalmente", "Trattieni qualche secondo", "Riprendi dal naso", "5-10 volte, senza forzare"] },
         { kind: "sphere3d", at: 14.8, dur: 7.4, phases: [{ label: "ESPIRA", sec: 2, scale: 0.25 }, { label: "TRATTIENI", sec: 4, scale: 0.25 }, { label: "INSPIRA", sec: 3, scale: 1 }] },
         { kind: "widget", at: 22.4, dur: 3.1, title: "Cosa insegna", lines: ["Restare calmo", "anche quando la CO₂ sale"] },
         { kind: "text3d", at: 25.65, word: "controllo", dur: 2.2, word3d: "CONTROLLO", sub: "senza panico" },

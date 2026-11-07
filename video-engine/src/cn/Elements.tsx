@@ -195,7 +195,7 @@ export const Checklist: React.FC<{ el: Extract<Element, { kind: "checklist" }>; 
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
   return (
-    <div style={{ position: "absolute", left: 120, width: W - 240, top: ZONE_TOP, opacity: Math.min(1, s * 1.3) * out, fontFamily: FONT }}>
+    <div style={{ position: "absolute", left: 120, width: W - 240, top: ZONE_TOP, opacity: Math.min(1, s * 1.3) * out, fontFamily: FONT, display: "flex", flexDirection: "column", alignItems: "center" }}>
       {el.items.map((it, i) => {
         const ls = spring({ frame: local - i * 9, fps, config: { damping: 13, stiffness: 210 } });
         const struck = el.strike && local > i * 9 + 20;
