@@ -32,7 +32,7 @@ def freeze_inputs(src, seg, zoom, n, tmp, i):
     for (a, b, t_img) in CARDS:
         lo, hi = max(a, seg["from"]), min(b, seg["to"])
         if hi - lo < 0.3: continue
-        t_img = max(seg["from"], t_img)
+        t_img = max(0.0, t_img)  # può stare anche prima dell'inizio del pezzo
         png = os.path.join(tmp, f"frz{i}_{k}.png")
         run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{t_img:.3f}", "-i", src, "-frames:v", "1", "-vf", crop_filter(zoom).replace(f",fps={FPS}", ""), png])
         t0, t1 = lo - seg["from"], hi - seg["from"]
