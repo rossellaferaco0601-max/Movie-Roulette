@@ -9,3 +9,6 @@ video-engine/public/*.mp3
 .env.*
 __pycache__/
 video-engine/public/ytcn51/
+video-engine/work/**/frames/
+video-engine/work/**/*.wav
+video-engine/work/**/*.csv
