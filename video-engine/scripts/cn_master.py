@@ -24,15 +24,15 @@ def crop_filter(zoom: float):
     return f"crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={OUT_W}:{OUT_H}:flags=lanczos,fps={FPS},setsar=1"
 
 # schede grafiche del sorgente (viola/verdi, non brand): coperte con un fermo immagine di Daniele + lento zoom
-CARDS = [(149.2, 162.3), (180.2, 189.8), (205.2, 219.3)]
+CARDS = [(148.8, 162.3, 148.3), (180.2, 189.8, 179.6), (205.0, 219.3, 204.65)]  # (inizio, fine, fotogramma da congelare)
 
 def freeze_inputs(src, seg, zoom, n, tmp, i):
     """Per ogni scheda che cade nel pezzo: png del fotogramma prima della scheda + filtro overlay con zoompan."""
     extra_in, chains, k = [], [], 0
-    for (a, b) in CARDS:
+    for (a, b, t_img) in CARDS:
         lo, hi = max(a, seg["from"]), min(b, seg["to"])
         if hi - lo < 0.3: continue
-        t_img = max(seg["from"], a - 0.25)
+        t_img = max(seg["from"], t_img)
         png = os.path.join(tmp, f"frz{i}_{k}.png")
         run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{t_img:.3f}", "-i", src, "-frames:v", "1", "-vf", crop_filter(zoom).replace(f",fps={FPS}", ""), png])
         t0, t1 = lo - seg["from"], hi - seg["from"]
