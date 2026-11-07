@@ -8,3 +8,4 @@ video-engine/public/*.mp3
 .env
 .env.*
 __pycache__/
+video-engine/public/ytcn51/
