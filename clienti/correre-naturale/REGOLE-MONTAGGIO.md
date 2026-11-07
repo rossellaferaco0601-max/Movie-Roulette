@@ -187,7 +187,36 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   per ognuna delle 5 strategie, nello stesso stile di bici e nuoto, sotto la scheda del capitolo (mai sovrapposti).
 - Y7: l'infinito deve chiudersi (era un errore di lunghezza del tratto).
 
-### 7/11/2026 — vlog lungo v4 (feedback di Oscar via Ross)
+### 7/11/2026 — reel condensato con brano (Jalen Ngonda) e vlog lungo v4
+- **2026-11-07 (Ross, condensato con brano)** — «Usa questo audio [Jalen Ngonda, *If You Don't Want My Love*], il video deve durare 1 minuto al
+  massimo, usa le riprese migliori, togli ogni altro tipo di audio o suono». Quindi: quando Ross dà un brano, nel reel c'è **solo quello** (clip mute,
+  niente pop, niente sfx, niente parlato), durata totale con la CTA sotto il minuto, più inquadrature scelte sui fogli di fotogrammi di tutte le clip
+  (`scripts/clip_sheets.py` → `work/evento/clipsheets`).
+  Tecnica: il tempo di una band dal vivo oscilla (qui 121-125 bpm, scarti fino a 250 ms da una griglia fissa) → misurare i colpi con librosa
+  (venv `ReelStudio/tools/venv_tts`: `scripts/beat_analysis.py`, `beat_check.py` per verificare la fase, `song_sections.py` per la struttura) e agganciare
+  ogni stacco al colpo misurato (`cut_frames` in `vlog_build60s.py`), non a una cadenza in fotogrammi; i colpi di librosa stanno ~15 ms dopo l'attacco.
+  Per trovare il ritornello: trascrivere il testo con Whisper e cercare le righe che si ripetono. La prima versione partiva dalla levata del
+  ritornello: Ross, «doveva partire dall'inizio, non dal ritornello» → **il brano parte dall'inizio del file**, se non detto altrimenti; scegliere il
+  colpo della CTA in modo che il reel finisca su una frase forte (qui il primo ritornello, 56-60 s) e stia nel minuto. Il brano si decodifica in WAV e si
+  monta dopo con ffmpeg sul render muto (`vlog_mix60s.py`): livello −14 LUFS, dissolvenza 2 s; così il volume è costante (il renderer alza la musica
+  ×1,8 sui B-roll e ×2,2 sulla CTA).
+  Master: con `-shortest` + `loudnorm` i pezzi uscivano di 1-2 fotogrammi più corti (gli stacchi slittavano dalla battuta) → via `-shortest`, `apad`,
+  `setpts=PTS-STARTPTS` prima di `fps`, `tpad` di sicurezza; le velocità vanno date come rapporto esatto fotogrammi sorgente/uscita.
+- **2026-11-07 notte (Ross, condensato con brano, seconda correzione)**: «è quasi perfetto»; la raffica del titolo con il cambio di font di
+  «workshop» deve durare di più, «fino a 0:06-0:07 della canzone» (era 2 s) → 14 colpi (7,1 s), 28 inquadrature da mezzo colpo e un cambio di
+  stile per inquadratura; **CTA più leggibile e un po' più lunga** → 8 s, testi al 135 %, frasi corte su una riga, fondo più scuro; **la musica
+  deve sfumare meglio sul finale** → dissolvenza 5 s con curva a S (`afade curve=hsin`), non 2 s lineari; **le targhette devono essere più
+  leggibili** → 84 px, le lunghe su due righe, box più larga; **«rispetta sempre gli spazi di visione di Instagram»** → tutto ciò che va letto
+  sta sopra i ~1500 px (didascalia) e a sinistra della colonna delle icone (x > 950 da ~1150 px in giù): targhette con il centro a y 0,54, nella
+  CTA icone e «Segui» alzati (`iconsTop`/`followTop` in `Reel.tsx`). Per restare nel minuto con raffica e CTA più lunghe si tolgono inquadrature
+  deboli, non si accorcia il ritmo (uno stacco ogni due colpi resta).
+- **2026-11-07 notte (Ross, condensato con brano, terza correzione)**: «devi seguire il ritmo della musica»: l'intro con il titolo a 7 s «dura troppo,
+  massimo a 5 secondi deve arrivare» → raffica = due battute intere (8 colpi, 4,2 s), finisce sul primo colpo della terza battuta; «alcuni cambi
+  di box con le scritte sono troppo veloci, come nel caso di Daniela» → **nessuna targhetta sotto i 2 stacchi (≈2 s)**; «il tasto Segui alla
+  fine si sovrappone agli altri» → nella CTA lasciare almeno 40 px tra le etichette delle icone e il bottone (icone a 1120, Segui a 1400).
+  Ross vuole l'elenco dei titoli delle targhette per correggerli lui: proporli sempre in chat prima del render.
+  Titoli dettati da Ross: 9:30 Check in · 10:00 Lezione Teorica · Riscaldamento · 12:30 Prove di corsa · La lezione · Esercizi · Si corre ·
+  La squadra · Pausa · 16:00 Postura / piedi / e squat · 17:30 La pedana · 18:00 Running analysis · 18:30 Testimonianze · Chiusura · Ci vediamo / al prossimo?
 - **2026-11-07 (Oscar via Ross, vlog lungo v4)**: feedback di Oscar sul vlog v3b: «voce di Daniele fin dall'inizio, già dai primissimi secondi»;
   «musica ancora troppo alta, la abbasserei per dare risalto alla voce»; «troppi suoni, ne ridurrei il numero»; «togliere l'ombra quadrata in
   alto a destra sul logo, lasciare solo il logo tondo». Ross: «esegui tutte queste modifiche e metti la stessa musica del video corto» (Jalen

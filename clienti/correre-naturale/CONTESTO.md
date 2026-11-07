@@ -20,8 +20,10 @@ Prima di montare qualsiasi cosa per questo cliente: leggere `REGOLE-MONTAGGIO.md
 | Crema | `#F4F1E5` |
 | Inchiostro | `#0B0F0A` |
 | Lime | `#95FF00` — SOLO parola detta nei sottotitoli / parola chiave del titolo |
-| Font | Blinker (400/600/700/800; ExtraBold per i titoli) |
-| Logo | circolare, scontornato, bianco con ombra morbida cotta nel PNG; mai ruotato/deformato/azzurro; mai su disco o cartiglio; mai icona Instagram |
+| Font | Blinker (400/600/700/800; ExtraBold per i titoli). Deroga solo per i cambi di stile della parola «workshop» nel reel condensato: DM Serif, Pacifico, Anton, Playfair, Caveat, Bebas, Lobster, Fraunces, Marker, Abril, Instrument, Righteous, Oswald, Bangers (da `FONT_FILES` in `src/remotion/lib.ts`) |
+| Velo sotto titolo | `rgba(73,118,46,0.62)` (verde brand, mai scuro) |
+| brand.json | `C:\Users\roxfe\Documents\ReelStudio\clients\correre-naturale\brand.json` (costanti LIME, GREEN, AZ, CREAM, INK; contenuto non recuperato dalle trascrizioni) |
+| Logo | `ReelStudio/clients/correre-naturale/logo-circolare-bianco.png` (693×695, bianco su trasparente, ombra cotta nel PNG: blur 10, offset 8 px, 55 %, padding 48 px); circolare, scontornato; mai ruotato/deformato/azzurro; mai su disco o cartiglio; mai icona Instagram |
 | Prodotto | «percorsi di coaching **personalizzato** di Correre Naturale®» (singolare) |
 | Formato | 9:16, 1080×1920, 30 fps, MP4 H.264 |
 
@@ -50,10 +52,15 @@ Prima di montare qualsiasi cosa per questo cliente: leggere `REGOLE-MONTAGGIO.md
 | Progetto | Stato |
 |---|---|
 | 9 reel YTCN 38 (Y1 auto-efficiente … Y8 cinque-strategie, Y9v2 costanza) da video YouTube «correre con meno fatica» | Consegnati il 6/11 sera dopo la seconda revisione di Ross; didascalie lasciate con «personalizzati» su scelta di Ross. Nulla aperto. |
-| Reel ADV 60 s del workshop (`VLOG_workshop_60s.mp4`, v7) | Chiuso e consegnato il 7/11 (59,7 s, 15 targhette di Ross in ordine, «Segui» staccato dalle icone). |
+| Reel ADV 60 s del workshop (`VLOG_workshop_60s.mp4`, v7) | Chiuso e consegnato il 7/11 dopo tre correzioni di Ross (brano dall'inizio, raffica titolo 4,2 s, CTA 8 s, targhette ≥2 s, zone sicure Instagram, 15 titoli dettati da Ross). |
 | Vlog lungo workshop 24/10 Vicenza (`VLOG_workshop_v4.mp4`, 2:31) | v4 in render il 7/11 con le correzioni di Oscar (voce di Daniele dall'inizio, musica bassa, meno suoni, logo senza ombra quadrata). **Aperto**: controlli audio/fotogrammi v4, invio anteprima, approvazione di Oscar/Ross. «busto» in IMG_0649 da confermare all'ascolto. |
 
 Parole CTA già usate: CORRO, PIANO, GUIDA, SCUOLA, EFFICIENTE, CARBURANTE, RESISTENZA, SEGRETO, LENTO, NASO, ASCOLTO, STRATEGIE, COSTANZA, WORKSHOP.
+
+## Reference usate
+- Reel «a day in my life» di snaps_by_adwi (17 s) + progetto CapCut di Ross con la timeline dei testi (schema del reel condensato).
+- Reel di zeeuiux («ABDUL»: titolo dietro la persona).
+- «WhatsApp Video 2026-11-03 at 01.34.11 (1).mp4» (dinamismo richiesto il 3/11).
 
 ## Materiale evento 24/10/2026 (Vicenza)
 - 36 clip iPhone verticali HDR + 13 foto in `input/evento/` (IMG_0598…0650); clip con audio spaziale Apple (0600, 0621, 0625, 0626) solo B-roll muto.
