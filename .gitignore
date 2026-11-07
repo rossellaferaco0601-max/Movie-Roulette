@@ -12,3 +12,4 @@ video-engine/public/ytcn51/
 video-engine/work/**/frames/
 video-engine/work/**/*.wav
 video-engine/work/**/*.csv
+video-engine/work/**/*.log
