@@ -1,9 +1,9 @@
 import { useCurrentFrame, useVideoConfig, spring, interpolate } from "remotion";
-import { BRAND, H, W } from "./types";
+import { BRAND, GFX_TOP, W } from "./types";
 import type { Hook as HookT } from "./types";
 
 /** Hook "boxed": scritta animata sotto il mento di Daniele, visibile dal primo fotogramma, una sola parola in lime. */
-export const Hook: React.FC<{ hook: HookT; y?: number }> = ({ hook, y = 0.5 }) => {
+export const Hook: React.FC<{ hook: HookT }> = ({ hook }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const durF = Math.round(hook.dur * fps);
@@ -15,7 +15,7 @@ export const Hook: React.FC<{ hook: HookT; y?: number }> = ({ hook, y = 0.5 }) =
         position: "absolute",
         left: 0,
         width: W,
-        top: H * y,
+        top: GFX_TOP,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

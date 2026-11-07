@@ -1,5 +1,8 @@
 import { useCurrentFrame, useVideoConfig, spring, interpolate, Easing } from "remotion";
-import { BRAND, H, W } from "./types";
+import { BRAND, GFX_TOP, W } from "./types";
+import { Trail } from "@remotion/motion-blur";
+import { gsap } from "gsap";
+const easeBack = gsap.parseEase("back.out(1.6)");
 import type { Element } from "./types";
 
 const FONT = "Blinker, sans-serif";
@@ -13,8 +16,8 @@ const useInOut = (start: number, durF: number) => {
   return { local, s, out, visible: local >= 0 && local < durF };
 };
 
-/** zona libera sotto il volto: y 0.46-0.72 (sottotitoli a 0.80) */
-const ZONE_TOP = H * 0.47;
+/** zona grafiche: y 0.47-0.74 (sottotitoli da 0.76) */
+const ZONE_TOP = GFX_TOP;
 
 export const Kinetic: React.FC<{ el: Extract<Element, { kind: "kinetic" }>; start: number }> = ({ el, start }) => {
   const { fps } = useVideoConfig();
@@ -25,7 +28,7 @@ export const Kinetic: React.FC<{ el: Extract<Element, { kind: "kinetic" }>; star
   return (
     <div style={{ position: "absolute", left: 0, width: W, top: ZONE_TOP + 20, textAlign: "center", opacity: out }}>
       {el.words.map((w, i) => {
-        const s = spring({ frame: local - i * 5, fps, config: { damping: 11, stiffness: 220 } });
+        const s = easeBack(Math.min(1, Math.max(0, (local - i * 5) / 14)));
         const accent = i === (el.accentIndex ?? el.words.length - 1);
         return (
           <div
@@ -37,8 +40,8 @@ export const Kinetic: React.FC<{ el: Extract<Element, { kind: "kinetic" }>; star
               lineHeight: 0.95,
               textTransform: "uppercase",
               color: accent ? BRAND.lime : BRAND.white,
-              transform: `scale(${s}) rotate(${(1 - s) * -6}deg)`,
-              opacity: s,
+              transform: `scale(${Math.max(0.01, s)}) rotate(${(1 - s) * -6}deg)`,
+              opacity: Math.min(1, Math.max(0, s)),
               textShadow: "0 6px 24px rgba(0,0,0,0.7)",
               WebkitTextStroke: accent ? "0" : "1px rgba(0,0,0,0.6)",
             }}

@@ -1,9 +1,8 @@
 import { useCurrentFrame, useVideoConfig, spring } from "remotion";
-import { BRAND, H, W } from "./types";
+import { BRAND, H, W, ZONE } from "./types";
+import type { RWord } from "./timeline";
 
-export type RWord = { text: string; start: number; end: number };
-
-/** Pagine stile hormozi: max 3 parole, nuova pagina a pausa > 0.45 s o a fine frase. */
+/** Pagine stile hormozi: max 3 parole, nuova pagina a pausa > 0.45 s o a fine frase. Ogni pagina resta fino alla successiva. */
 export const paginate = (words: RWord[], maxWords = 3) => {
   const pages: { words: RWord[]; start: number; end: number }[] = [];
   let cur: RWord[] = [];
@@ -18,7 +17,6 @@ export const paginate = (words: RWord[], maxWords = 3) => {
     if (cur.length >= maxWords || /[.?!]$/.test(w.text)) flush();
   });
   flush();
-  // ogni pagina resta a schermo fino alla successiva (sottotitoli sempre presenti)
   for (let i = 0; i < pages.length; i++) {
     const next = pages[i + 1];
     pages[i].end = next ? Math.min(next.start, pages[i].end + 24) : pages[i].end + 12;
@@ -26,32 +24,27 @@ export const paginate = (words: RWord[], maxWords = 3) => {
   return pages;
 };
 
-const clean = (t: string) => t.toLowerCase().replace(/[.,?!;:«»"']/g, "");
-
-export const Captions: React.FC<{ words: RWord[]; emph: string[]; y?: number; size?: number; endFrame: number }> = ({
-  words,
-  emph,
-  y = 0.8,
-  size = 64,
-  endFrame,
-}) => {
+/** Sottotitoli sempre presenti: bianchi, in lime SOLO la parola che viene detta in quel momento. */
+export const Captions: React.FC<{ words: RWord[]; size?: number; endFrame: number }> = ({ words, size = 64, endFrame }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   if (frame >= endFrame) return null;
   const pages = paginate(words);
   const page = pages.find((p) => frame >= p.start && frame < p.end) ?? pages.find((p) => frame < p.start && p.start - frame < 6);
   if (!page) return null;
+  const top = H * ZONE.capTop;
   return (
     <div
       style={{
         position: "absolute",
         left: 0,
         width: W,
-        top: H * y - size,
+        top,
+        height: H * (ZONE.capBottom - ZONE.capTop),
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        gap: `${0.26}em`,
+        gap: "0.34em",
         fontFamily: "Blinker, sans-serif",
         fontWeight: 800,
         fontSize: size,
@@ -66,18 +59,17 @@ export const Captions: React.FC<{ words: RWord[]; emph: string[]; y?: number; si
     >
       {page.words.map((w, i) => {
         const active = frame >= w.start && frame < w.end;
-        const isEmph = emph.includes(clean(w.text));
         const s = active ? spring({ frame: frame - w.start, fps, config: { damping: 14, stiffness: 240 } }) : 0;
-        const scale = 1.03 + 0.04 * s;
         return (
           <span
             key={i}
             style={{
               display: "inline-block",
-              color: active || isEmph ? BRAND.lime : BRAND.white,
-              transform: `scale(${active ? scale : 1})`,
+              color: active ? BRAND.lime : BRAND.white,
+              transform: `scale(${active ? 1.03 + 0.04 * s : 1})`,
               transformOrigin: "center",
               whiteSpace: "nowrap",
+              padding: "0 3px",
             }}
           >
             {w.text}

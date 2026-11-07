@@ -1,76 +1,62 @@
-import { AbsoluteFill, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig, interpolate } from "remotion";
-import { TransitionSeries, linearTiming } from "@remotion/transitions";
-import { fade } from "@remotion/transitions/fade";
+import { AbsoluteFill, OffthreadVideo, Sequence, staticFile, useVideoConfig, interpolate, useCurrentFrame } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Blinker";
 import { useMemo } from "react";
-import type { CNReelProps } from "./types";
-import { FPS, H, SRC_W, VID_SCALE, W } from "./types";
-import { layout, remapWords, secToFrames } from "./timeline";
+import type { CNReelProps, Element } from "./types";
+import { FPS } from "./types";
+import { layout, remapWords, resolveStart, secToFrames } from "./timeline";
 import { Captions } from "./Captions";
 import { Hook } from "./Hook";
 import { ElementView } from "./Elements";
+import { Text3D, Wave, Sphere3D, Gauge3D, ECG, Steps, Bars } from "./Elements3D";
 import { CTA } from "./CTA";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
 
-/** Clip del sorgente 16:9 4K ritagliata in 9:16 sul volto, con punch-in alternato e dissolvenze audio. */
-const Clip: React.FC<{ src: string; from: number; to: number; punch: number; len: number }> = ({ src, from, to, punch, len }) => {
+const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => {
+  switch (el.kind) {
+    case "text3d": return <Text3D el={el} start={start} />;
+    case "wave": return <Wave el={el} start={start} />;
+    case "sphere3d": return <Sphere3D el={el} start={start} />;
+    case "gauge3d": return <Gauge3D el={el} start={start} />;
+    case "ecg": return <ECG el={el} start={start} />;
+    case "steps": return <Steps el={el} start={start} />;
+    case "bars": return <Bars el={el} start={start} />;
+    default: return <ElementView el={el} start={start} />;
+  }
+};
+
+/** Il master (già montato con FFmpeg) scorre continuo: niente seek tra i tagli, niente lampi. */
+const Master: React.FC<{ src: string; total: number }> = ({ src, total }) => {
   const frame = useCurrentFrame();
-  const fadeIn = secToFrames(0.12), fadeOut = secToFrames(0.28);
-  const volume = (f: number) =>
-    Math.min(
-      interpolate(f, [0, fadeIn], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
-      interpolate(f, [len - fadeOut, len], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
-    );
-  const vidW = SRC_W * VID_SCALE;
-  return (
-    <AbsoluteFill style={{ overflow: "hidden", background: "#000" }}>
-      <div style={{ position: "absolute", left: (W - vidW) / 2, top: 0, width: vidW, height: H, transform: `scale(${punch})`, transformOrigin: "50% 28%" }}>
-        <OffthreadVideo
-          src={staticFile(src)}
-          startFrom={secToFrames(from)}
-          endAt={secToFrames(to)}
-          volume={volume}
-          style={{ width: vidW, height: H, objectFit: "cover" }}
-        />
-      </div>
-      <span style={{ display: "none" }}>{frame}</span>
-    </AbsoluteFill>
-  );
+  const tail = secToFrames(0.5);
+  const volume = interpolate(frame, [total - tail, total], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return <OffthreadVideo src={staticFile(src)} volume={volume} style={{ width: "100%", height: "100%" }} />;
 };
 
 export const CNReel: React.FC<CNReelProps> = (p) => {
   const { fps } = useVideoConfig();
+  const frame = useCurrentFrame();
   const { items, total } = useMemo(() => layout(p.segments, p.blendFrames), [p.segments, p.blendFrames]);
-  const words = useMemo(() => remapWords(p.words, items, p.wordFix), [p.words, items, p.wordFix]);
+  const words = useMemo(() => remapWords(p.words, items, p.wordFix, p.wordOffset), [p.words, items, p.wordFix, p.wordOffset]);
+  const starts = useMemo(() => p.elements.map((el) => resolveStart(el, words)), [p.elements, words]);
   const ctaFrames = Math.round(p.ctaSeconds * fps);
+  const xfade = 12;
+  const videoFade = interpolate(frame, [total - xfade, total], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
 
   return (
-    <AbsoluteFill style={{ background: "#000", fontFamily: "Blinker, sans-serif" }}>
-      <TransitionSeries>
-        {items.map((it, i) => (
-          <>
-            <TransitionSeries.Sequence key={`c${i}`} durationInFrames={it.len}>
-              <Clip src={p.src} from={it.seg.from} to={it.seg.to} punch={i % 2 === 0 ? 1 : 1.08} len={it.len} />
-            </TransitionSeries.Sequence>
-            {i < items.length - 1 ? (
-              <TransitionSeries.Transition key={`t${i}`} presentation={fade()} timing={linearTiming({ durationInFrames: p.blendFrames })} />
-            ) : null}
-          </>
-        ))}
-        <TransitionSeries.Transition presentation={fade()} timing={linearTiming({ durationInFrames: 12 })} />
-        <TransitionSeries.Sequence durationInFrames={ctaFrames + 12}>
-          <CTA cta={p.cta} frames={ctaFrames} />
-        </TransitionSeries.Sequence>
-      </TransitionSeries>
-
-      {/* livello grafico (sopra il video, sotto il volto) */}
+    <AbsoluteFill style={{ background: "#2F4D1E", fontFamily: "Blinker, sans-serif" }}>
       <Sequence from={0} durationInFrames={total} layout="none">
+        <AbsoluteFill style={{ opacity: videoFade }}>
+          <Master src={p.master} total={total} />
+        </AbsoluteFill>
         <Hook hook={p.hook} />
         {p.elements.map((el, i) => (
-          <ElementView key={i} el={el} start={secToFrames(el.at)} />
+          <AnyElement key={i} el={el} start={starts[i]} />
         ))}
-        <Captions words={words} emph={p.emph} endFrame={total - 6} />
+        <Captions words={words} endFrame={total - 4} />
+      </Sequence>
+      <Sequence from={total - xfade} durationInFrames={ctaFrames + xfade} layout="none">
+        <CTA cta={p.cta} frames={ctaFrames} />
       </Sequence>
     </AbsoluteFill>
   );

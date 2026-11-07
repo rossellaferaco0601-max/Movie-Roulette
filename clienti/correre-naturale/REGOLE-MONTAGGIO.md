@@ -230,3 +230,11 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 - **Hook SVG bocciati** (6/11): niente tachimetri, sagome o badge disegnati; mostrare un fotogramma e aspettare l'ok («disastro degli hook animati»).
 - **Niente emoji** come icone o animazioni: SVG o forme del brand.
 - **Metodo di lavoro**: per un montaggio nuovo prima il piano in chat, poi il via. Un reel alla volta, niente render in parallelo che caricano la macchina.
+
+### 7/11/2026 pomeriggio — reel YTCN 51 (respirazione), feedback di Ross sul reel 1 v1 (motore cloud)
+- **Niente logo nei reel** (ribadito; resta solo in copertina).
+- **Transizioni fluide tra i tagli: mai lampi neri.** Causa nella v1: dissolvenze fatte in Remotion tra due `OffthreadVideo` del sorgente 4K (frame non pronti sul cambio). Regola: costruire prima il **master** dei pezzi con FFmpeg (ritaglio 9:16, punch-in, `xfade`/`acrossfade` di 5 fotogrammi, audio PCM unico), poi Remotion legge un solo file continuo e aggiunge solo grafica e CTA.
+- **Le parole in evidenza devono seguire sottotitoli e audio**: in lime SOLO la parola che Daniele sta dicendo in quel momento (nessuna parola colorata «fissa» sulla pagina); parole a comparsa e grafiche agganciate al tempo della parola detta (non a secondi stimati); compensare il ritardo di Whisper (−0,08 s).
+- **Più animazioni: 3D, modelli, simulazioni**, usando tutti gli strumenti installati (Three.js/@remotion/three, Blender, GSAP, @remotion/paths, noise, motion-blur): es. onda del respiro che si scompone e si calma, sfera 3D che si gonfia con timer inspira/espira, contagiri 3D delle «marce», ECG del cuore in gola, impronte 3-4 passi, barre della capacità aerobica, testi 3D estrusi resi in Blender.
+- **Volto di Daniele sempre libero e nessuna sovrapposizione tra elementi**: zone fisse (volto 0-0,45 · grafiche 0,47-0,74 · sottotitoli 0,76-0,86), un solo elemento alla volta nella zona grafiche, controllo automatico (script) che blocca il render se due elementi si sovrappongono nel tempo o se un elemento esce dalla sua zona.
+- Punch-in: origine dello zoom più bassa (35 % dell'altezza) così la testa non tocca il bordo superiore.

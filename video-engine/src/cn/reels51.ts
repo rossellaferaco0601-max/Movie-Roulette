@@ -2,18 +2,20 @@ import words from "./words51.json";
 import type { CNReelProps, Element } from "./types";
 
 const SRC = "ytcn51/ytcn51_src.mp4";
+const master = (id: string) => `ytcn51/masters/${id}.mp4`;
 
 const base = {
   src: SRC,
   words: words as CNReelProps["words"],
   blendFrames: 5,
   ctaSeconds: 7,
-  wordFix: { "iperventilare": "iperventilare", "breath": "breath", "holds": "hold" } as Record<string, string>,
+  wordOffset: -0.08,
+  wordFix: {} as Record<string, string>,
 };
 
 export type ReelDef = { id: string; title: string; props: CNReelProps; didascalia: string };
-
 const seg = (from: number, to: number) => ({ from, to });
+const BREATH = [{ label: "INSPIRA", sec: 3.5, scale: 1 }, { label: "ESPIRA", sec: 4.5, scale: 0.25 }];
 
 export const REELS: ReelDef[] = [
   {
@@ -21,16 +23,18 @@ export const REELS: ReelDef[] = [
     title: "Non sei fatto per correre? Sbagliato",
     props: {
       ...base,
+      master: master("R1-fiatone"),
       segments: [seg(0.0, 16.9), seg(23.75, 44.95)],
       hook: { lines: ["Ti manca il fiato", "dopo pochi minuti?"], keyword: "fiato", dur: 4.3 },
-      emph: ["fiato", "cuore", "sbagliato", "respirare", "fiatone", "controllo", "sabotando", "respiro"],
       elements: [
-        { kind: "kinetic", at: 10.2, dur: 1.6, words: ["SBAGLIATO"] },
-        { kind: "widget", at: 11.0, dur: 5.5, title: "Il problema non è il corpo", lines: ["Nessuno ti ha insegnato", "a respirare nel modo giusto"] },
-        { kind: "pill", at: 17.3, dur: 2.2, text: "Fiatone = fuori controllo" },
-        { kind: "widget", at: 25.2, dur: 5.2, title: "Se parti troppo veloce", lines: ["il respiro si scompone", "il cervello va in allarme", "e ti ferma"] },
-        { kind: "kinetic", at: 33.6, dur: 3.0, words: ["NON È LA CORSA", "È IL RESPIRO"], accentIndex: 1 },
-      ] as Element[],
+        { kind: "ecg", at: 6.4, word: "cuore", dur: 3.2, title: "Il cuore in gola", bpmFrom: 148, bpmTo: 176 },
+        { kind: "text3d", at: 10.2, word: "sbagliato", dur: 2.4, word3d: "SBAGLIATO" },
+        { kind: "widget", at: 12.9, dur: 3.6, title: "Il problema non è il corpo", lines: ["Nessuno ti ha insegnato", "a respirare nel modo giusto"] },
+        { kind: "wave", at: 17.2, word: "fiatone", dur: 6.0, title: "Il fiatone", mode: "calm-to-chaos" },
+        { kind: "pill", at: 24.4, dur: 2.6, text: "Il corpo si allena per gradi" },
+        { kind: "widget", at: 27.7, word: "veloce", dur: 4.8, title: "Se parti troppo veloce", lines: ["il respiro si scompone", "il cervello va in allarme", "e ti ferma"] },
+        { kind: "kinetic", at: 32.8, word: "corsa", dur: 3.7, words: ["NON È LA CORSA", "È IL RESPIRO"], accentIndex: 1 },
+      ],
       cta: { word: "FIATO", title: "Vuoi correre senza fiatone?" },
     },
     didascalia: `Ti manca il fiato dopo pochi minuti di corsa? Non è il tuo corpo che non è adatto: nessuno ti ha mai insegnato a respirare nel modo giusto.
@@ -48,15 +52,15 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
     title: "Il primo passo: respira con il naso",
     props: {
       ...base,
+      master: master("R2-naso"),
       segments: [seg(44.9, 74.3)],
-      hook: { lines: ["Il motore in quinta", "appena acceso"], keyword: "quinta", dur: 4.5 },
-      emph: ["motore", "quinta", "marce", "naso", "filtro", "ritmo", "ossigeno", "controllo"],
+      hook: { lines: ["Il motore in quinta", "appena acceso"], keyword: "quinta", dur: 4.3 },
       elements: [
-        { kind: "kinetic", at: 5.2, dur: 1.8, words: ["VA IN TILT"] },
-        { kind: "pill", at: 7.2, dur: 2.2, text: "Usa le marce giuste" },
-        { kind: "kinetic", at: 13.0, dur: 2.2, words: ["RESPIRA", "CON IL NASO"], accentIndex: 1 },
-        { kind: "widget", at: 16.0, dur: 12.0, title: "Il naso è il filtro", lines: ["Regola il ritmo", "Usa meglio l'ossigeno", "Mantiene il controllo"] },
-      ] as Element[],
+        { kind: "gauge3d", at: 4.8, dur: 8.3, title: "Le marce giuste", from: 5, to: 1, labels: ["1ª", "2ª", "3ª", "4ª", "5ª"] },
+        { kind: "text3d", at: 14.1, word: "naso", dur: 2.4, word3d: "NASO", sub: "il filtro naturale del respiro" },
+        { kind: "widget", at: 17.1, dur: 6.0, title: "Il naso è il regolatore", lines: ["Ti obbliga a un ritmo sostenibile", "Usa meglio l'ossigeno", "Mantiene il controllo"] },
+        { kind: "wave", at: 23.6, dur: 5.5, title: "Respiro dal naso", mode: "calm" },
+      ],
       cta: { word: "NASO", title: "Vuoi imparare a respirare bene quando corri?" },
     },
     didascalia: `È come far girare un motore in quinta appena lo accendi: non regge, va in tilt. Nella corsa servono le marce giuste, e la prima marcia è il naso.
@@ -74,14 +78,15 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
     title: "Chiudi la bocca e trova il tuo ritmo",
     props: {
       ...base,
+      master: master("R3-bocca"),
       segments: [seg(74.35, 98.5)],
-      hook: { lines: ["Durante la corsa", "chiudi la bocca"], keyword: "bocca", dur: 4.0 },
-      emph: ["bocca", "rallenta", "cammina", "ritmo", "diaframma", "ossigena", "calma", "energia"],
+      hook: { lines: ["Durante la corsa", "chiudi la bocca"], keyword: "bocca", dur: 3.3 },
       elements: [
-        { kind: "checklist", at: 5.0, dur: 4.5, items: ["Voglia di aprire la bocca?", "Rallenta o cammina"] },
-        { kind: "widget", at: 10.0, dur: 5.5, title: "Respirazione nasale", lines: ["Stimola il diaframma", "Ossigena i tessuti", "Calma il sistema nervoso"] },
-        { kind: "kinetic", at: 19.5, dur: 2.6, words: ["PIÙ ENERGIA", "DOPO LA CORSA"], accentIndex: 0 },
-      ] as Element[],
+        { kind: "checklist", at: 4.2, word: "rallenta", dur: 4.3, items: ["Voglia di aprire la bocca?", "Rallenta o cammina"] },
+        { kind: "widget", at: 9.9, dur: 5.3, title: "Respirazione nasale", lines: ["Stimola il diaframma", "Ossigena i tessuti", "Calma il sistema nervoso"] },
+        { kind: "sphere3d", at: 15.8, dur: 4.7, phases: BREATH },
+        { kind: "text3d", at: 21.0, word: "energia", dur: 3.0, word3d: "ENERGIA", sub: "dopo la corsa, non meno" },
+      ],
       cta: { word: "ENERGIA", title: "Vuoi finire la corsa con più energia di prima?" },
     },
     didascalia: `Durante la corsa chiudi la bocca. Se ti viene voglia di aprirla, rallenta o cammina: così il corpo impara mano a mano a trovare il suo ritmo naturale.
@@ -97,16 +102,17 @@ Commenta ENERGIA e ti mando tutte le info sui percorsi di coaching personalizzat
     title: "Il secondo errore: corri troppo forte",
     props: {
       ...base,
+      master: master("R4-piano"),
       segments: [seg(98.65, 130.7)],
       hook: { lines: ["Il secondo errore:", "corri troppo forte"], keyword: "forte", dur: 4.3 },
-      emph: ["errore", "forte", "piano", "velocità", "resistenza", "energia", "naso", "cammina", "riparti", "aerobica"],
       elements: [
-        { kind: "kinetic", at: 8.5, dur: 2.0, words: ["CORRI", "PIÙ PIANO"], accentIndex: 1 },
-        { kind: "widget", at: 11.0, dur: 5.5, title: "All'inizio l'obiettivo", lines: ["non è la velocità", "è costruire resistenza"] },
-        { kind: "stat", at: 17.5, dur: 3.0, value: "20-30", label: "minuti di corsa" },
-        { kind: "checklist", at: 21.0, dur: 7.5, items: ["Respira solo dal naso", "Perdi il controllo? Cammina", "Torna calmo? Riparti"] },
-        { kind: "pill", at: 28.0, dur: 3.5, text: "Capacità aerobica" },
-      ] as Element[],
+        { kind: "checklist", at: 4.9, word: "spingere", dur: 3.5, items: ["Spingere di più"], strike: true },
+        { kind: "text3d", at: 9.65, word: "piano", dur: 2.2, word3d: "PIANO", sub: "è così che si migliora" },
+        { kind: "widget", at: 12.1, dur: 4.9, title: "All'inizio l'obiettivo", lines: ["non è la velocità", "è costruire resistenza", "e gestire l'energia"] },
+        { kind: "stat", at: 18.4, word: "20", dur: 2.6, value: "20-30", label: "minuti di corsa" },
+        { kind: "checklist", at: 21.4, dur: 5.5, items: ["Respira solo dal naso", "Perdi il controllo? Cammina", "Torna calmo? Riparti"] },
+        { kind: "bars", at: 27.2, word: "alternanza", dur: 4.7, title: "Capacità aerobica", labels: ["Sett. 1", "Sett. 2", "Sett. 3", "Sett. 4"], values: [30, 48, 68, 92] },
+      ],
       cta: { word: "PIANO", title: "Vuoi costruire resistenza senza farti male?" },
     },
     didascalia: `Il secondo errore di chi inizia a correre è correre troppo forte. Molti pensano che per migliorare bisogna spingere di più: in realtà bisogna imparare a correre più piano.
@@ -122,15 +128,16 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
     title: "Allena il respiro: respirazione nasale controllata",
     props: {
       ...base,
+      master: master("R5-esercizio1"),
       segments: [seg(130.65, 179.25)],
       hook: { lines: ["Correre bene", "dipende da come respiri"], keyword: "respiri", dur: 4.6 },
-      emph: ["gambe", "respiri", "allenare", "muscoli", "tre", "esercizi", "fiatone", "naso", "3", "4", "5", "10", "anidride", "carbonica", "ossigeno", "resistenza", "affanno"],
       elements: [
-        { kind: "kinetic", at: 5.2, dur: 2.4, words: ["ALLENA", "IL RESPIRO"], accentIndex: 1 },
-        { kind: "pill", at: 10.2, dur: 3.5, text: "3 esercizi semplici" },
-        { kind: "stage", at: 19.0, dur: 15.0, title: "Esercizio 1 · respirazione nasale controllata", keyword: "controllata", steps: ["Bocca chiusa", "Inspira dal naso 3-4 s", "Espira dal naso 4-5 s", "10 respiri con calma"] },
-        { kind: "widget", at: 35.5, dur: 8.0, title: "Cosa allena", lines: ["Tolleranza alla CO₂", "Uso migliore dell'ossigeno", "Più resistenza, meno affanno"] },
-      ] as Element[],
+        { kind: "text3d", at: 6.4, word: "allenare", dur: 2.4, word3d: "RESPIRA", sub: "si allena come un muscolo" },
+        { kind: "pill", at: 11.1, word: "tre", dur: 3.0, text: "3 esercizi semplici" },
+        { kind: "stage", at: 18.9, word: "primo", dur: 14.5, title: "Esercizio 1 · respirazione nasale controllata", keyword: "controllata", steps: ["Bocca chiusa", "Inspira dal naso 3-4 s", "Espira dal naso 4-5 s", "10 respiri con calma"] },
+        { kind: "sphere3d", at: 33.6, dur: 7.5, phases: BREATH },
+        { kind: "widget", at: 41.7, dur: 6.0, title: "Cosa allena", lines: ["Tolleranza alla CO₂", "Uso migliore dell'ossigeno", "Più resistenza, meno affanno"] },
+      ],
       cta: { word: "ESERCIZI", title: "Vuoi tutti gli esercizi per respirare meglio?" },
     },
     didascalia: `Correre bene non dipende solo dalle gambe: dipende da come respiri. E la buona notizia è che la respirazione si allena, proprio come un muscolo.
@@ -146,14 +153,16 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
     title: "Esercizio 2: le pause respiratorie",
     props: {
       ...base,
+      master: master("R6-breathhold"),
       segments: [seg(175.15, 205.1)],
       hook: { lines: ["Correre in controllo", "senza panico"], keyword: "controllo", dur: 4.0 },
-      emph: ["breath", "hold", "pause", "trattieni", "naso", "5", "10", "forzare", "calmo", "anidride", "carbonica", "controllo", "panico", "iperventilare"],
       elements: [
-        { kind: "stage", at: 5.0, dur: 12.0, title: "Esercizio 2 · le pause respiratorie", keyword: "pause", steps: ["Espira normalmente", "Trattieni qualche secondo", "Riprendi dal naso", "5-10 volte, senza forzare"] },
-        { kind: "widget", at: 18.5, dur: 5.5, title: "Cosa insegna", lines: ["Restare calmo", "anche quando la CO₂ sale"] },
-        { kind: "kinetic", at: 25.5, dur: 3.5, words: ["IN CONTROLLO", "SENZA PANICO"], accentIndex: 1 },
-      ] as Element[],
+        { kind: "stage", at: 5.1, word: "dopo", dur: 9.5, title: "Esercizio 2 · le pause respiratorie", keyword: "pause", steps: ["Espira normalmente", "Trattieni qualche secondo", "Riprendi dal naso", "5-10 volte, senza forzare"] },
+        { kind: "sphere3d", at: 14.8, dur: 7.4, phases: [{ label: "ESPIRA", sec: 2, scale: 0.25 }, { label: "TRATTIENI", sec: 4, scale: 0.25 }, { label: "INSPIRA", sec: 3, scale: 1 }] },
+        { kind: "widget", at: 22.4, dur: 3.1, title: "Cosa insegna", lines: ["Restare calmo", "anche quando la CO₂ sale"] },
+        { kind: "text3d", at: 25.65, word: "controllo", dur: 2.2, word3d: "CONTROLLO", sub: "senza panico" },
+        { kind: "wave", at: 28.3, dur: 1.5, title: "Senza iperventilare", mode: "calm" },
+      ],
       cta: { word: "CONTROLLO", title: "Vuoi correre in controllo, senza affanno?" },
     },
     didascalia: `Secondo esercizio: i breath hold, le pause respiratorie. Dopo una normale espirazione trattieni il respiro per qualche secondo, poi riprendi a respirare dal naso. Fallo 5-10 volte, senza forzare.
@@ -169,15 +178,17 @@ Commenta CONTROLLO e ti mando tutte le info sui percorsi di coaching personalizz
     title: "Esercizio 3: respirazione ritmica",
     props: {
       ...base,
+      master: master("R7-ritmica"),
       segments: [seg(205.05, 241.3)],
-      hook: { lines: ["Inspira 3 passi,", "espira 4"], keyword: "3", dur: 4.2 },
-      emph: ["ritmica", "naso", "tre", "quattro", "ritmo", "equilibrio", "meditazione", "respiro", "movimento", "fluidità", "cambiano", "tutto", "naturale", "leggero"],
+      hook: { lines: ["Inspira 3 passi,", "espira 4"], keyword: "3", dur: 3.6 },
       elements: [
-        { kind: "stage", at: 5.5, dur: 11.0, title: "Esercizio 3 · respirazione ritmica", keyword: "ritmica", steps: ["Cammina o corri piano, dal naso", "Inspira per 3 passi", "Espira per 4 passi"] },
-        { kind: "pill", at: 17.0, dur: 3.5, text: "Meditazione in movimento" },
-        { kind: "widget", at: 21.0, dur: 5.5, title: "Risultato", lines: ["Respiro e movimento sincronizzati", "Meno sforzo, più fluidità"] },
-        { kind: "kinetic", at: 30.8, dur: 4.5, words: ["NATURALE", "LEGGERO"], accentIndex: 1 },
-      ] as Element[],
+        { kind: "stage", at: 4.5, word: "camminata", dur: 8.0, title: "Esercizio 3 · respirazione ritmica", keyword: "ritmica", steps: ["Cammina o corri piano, dal naso", "Inspira per 3 passi", "Espira per 4 passi"] },
+        { kind: "steps", at: 12.7, dur: 4.4, inhale: 3, exhale: 4 },
+        { kind: "widget", at: 17.3, word: "sincronizzerai", dur: 5.0, title: "Risultato", lines: ["Respiro e movimento insieme", "Meno sforzo, più fluidità"] },
+        { kind: "wave", at: 22.6, dur: 3.6, title: "Respiro e passo sincronizzati", mode: "calm" },
+        { kind: "kinetic", at: 27.4, word: "cambiano", dur: 2.2, words: ["CAMBIANO", "TUTTO"], accentIndex: 1 },
+        { kind: "text3d", at: 33.5, word: "naturale", dur: 1.4, word3d: "RITMO", sub: "naturale, leggero, meditativo" },
+      ],
       cta: { word: "RITMO", title: "Vuoi trovare il tuo ritmo naturale di corsa?" },
     },
     didascalia: `Terzo esercizio: la respirazione ritmica. Durante una camminata o una corsa lenta respira dal naso, inspira per tre passi ed espira per quattro, e cerca il ritmo che ti fa sentire in equilibrio. È una forma di meditazione in movimento.
@@ -193,16 +204,18 @@ Commenta RITMO e ti mando tutte le info sui percorsi di coaching personalizzato.
     title: "La corsa è un dialogo con il tuo corpo",
     props: {
       ...base,
+      master: master("R8-dialogo"),
       segments: [seg(241.15, 279.9)],
       hook: { lines: ["La corsa non è", "un test di resistenza"], keyword: "resistenza", dur: 4.4 },
-      emph: ["resistenza", "dialogo", "corpo", "ascoltarlo", "soffrire", "goderti", "spingere", "respirare", "rallentare", "ascoltare", "lontano", "energia", "forte", "sostenibili"],
       elements: [
-        { kind: "kinetic", at: 5.0, dur: 2.6, words: ["UN DIALOGO", "CON IL CORPO"], accentIndex: 0 },
-        { kind: "checklist", at: 14.5, dur: 4.5, items: ["Spingere di più"], strike: true },
-        { kind: "kinetic", at: 17.5, dur: 2.0, words: ["RESPIRA MEGLIO"] },
-        { kind: "widget", at: 21.5, dur: 7.0, title: "Se ti manca il fiato", lines: ["Non fermarti", "Impara a respirare", "Impara a rallentare", "Ascolta il corpo"] },
-        { kind: "kinetic", at: 33.2, dur: 4.5, words: ["ANDARE", "LONTANO"], accentIndex: 1 },
-      ] as Element[],
+        { kind: "kinetic", at: 5.8, word: "dialogo", dur: 2.6, words: ["UN DIALOGO", "CON IL CORPO"], accentIndex: 0 },
+        { kind: "widget", at: 9.7, dur: 4.8, title: "Quando impari ad ascoltarlo", lines: ["Smetti di soffrire", "Inizi a goderti ogni passo"] },
+        { kind: "checklist", at: 15.3, word: "spingere", dur: 1.4, items: ["Spingere di più"], strike: true },
+        { kind: "text3d", at: 16.85, word: "respirare", dur: 2.3, word3d: "RESPIRA", sub: "meglio, non di più" },
+        { kind: "widget", at: 20.4, dur: 7.4, title: "Se ti manca il fiato", lines: ["Non fermarti", "Impara a respirare", "Impara a rallentare", "Ascolta il tuo corpo"] },
+        { kind: "wave", at: 28.0, dur: 3.6, title: "Più lontano, meno sforzo", mode: "calm" },
+        { kind: "text3d", at: 35.6, word: "lontano", dur: 2.0, word3d: "LONTANO", sub: "ed essere sostenibili" },
+      ],
       cta: { word: "LONTANO", title: "Vuoi correre più lontano con meno sforzo?" },
     },
     didascalia: `La corsa non è un test di resistenza: è un dialogo tra te e il tuo corpo. Quando impari ad ascoltarlo smetti di soffrire e inizi a goderti ogni passo.
