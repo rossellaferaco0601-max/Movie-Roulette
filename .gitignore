@@ -1,0 +1,10 @@
+node_modules/
+video-engine/out/
+video-engine/public/*.mp4
+video-engine/public/*.mov
+video-engine/public/*.wav
+video-engine/public/*.mp3
+*.captions.json
+.env
+.env.*
+__pycache__/

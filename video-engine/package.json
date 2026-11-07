@@ -1,0 +1,47 @@
+{
+  "name": "video-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render",
+    "still": "remotion still",
+    "typecheck": "tsc",
+    "transcribe": "python3 scripts/transcribe.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@remotion/captions": "^4.0.541",
+    "@remotion/cli": "^4.0.541",
+    "@remotion/gif": "^4.0.541",
+    "@remotion/install-whisper-cpp": "^4.0.541",
+    "@remotion/lottie": "^4.0.541",
+    "@remotion/media-utils": "^4.0.541",
+    "@remotion/motion-blur": "^4.0.541",
+    "@remotion/noise": "^4.0.541",
+    "@remotion/paths": "^4.0.541",
+    "@remotion/player": "^4.0.541",
+    "@remotion/shapes": "^4.0.541",
+    "@remotion/three": "^4.0.541",
+    "@remotion/transitions": "^4.0.541",
+    "elevenlabs": "^1.59.0",
+    "gsap": "^3.15.1",
+    "lottie-web": "^5.13.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.541",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "typescript": "^7.0.2"
+  },
+  "private": true
+}
