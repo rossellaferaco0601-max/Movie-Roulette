@@ -3,7 +3,7 @@ import { BRAND, H, W, ZONE } from "./types";
 import type { RWord } from "./timeline";
 
 /** Pagine stile hormozi: max 3 parole, nuova pagina a pausa > 0.45 s o a fine frase. Ogni pagina resta fino alla successiva. */
-export const paginate = (words: RWord[], maxWords = 3) => {
+export const paginate = (words: RWord[], maxWords = 3, maxChars = 22) => {
   const pages: { words: RWord[]; start: number; end: number }[] = [];
   let cur: RWord[] = [];
   const flush = () => {
@@ -12,7 +12,8 @@ export const paginate = (words: RWord[], maxWords = 3) => {
   };
   words.forEach((w, i) => {
     const prev = words[i - 1];
-    if (prev && (w.start - prev.end > 14 || /[.?!]$/.test(prev.text))) flush();
+    const chars = cur.reduce((a, x) => a + x.text.length + 1, 0) + w.text.length;
+    if (prev && (w.start - prev.end > 14 || /[.?!]$/.test(prev.text) || (cur.length > 0 && chars > maxChars))) flush();
     cur.push(w);
     if (cur.length >= maxWords || /[.?!]$/.test(w.text)) flush();
   });
