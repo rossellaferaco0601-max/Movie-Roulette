@@ -9,7 +9,7 @@
 | Remotion Claude Code Plugin | ⚠️ equivalente alle skill già installate | il sito remotion.dev non è raggiungibile dalla rete del container; sul tuo PC: `/plugin marketplace add remotion-dev/skills` poi `/plugin install` dalla lista |
 | React 19, Three.js + R3F/drei, GSAP, lottie-web | ✅ installati | vedi skill `web-animation-stack` |
 | CSS Animations, SVG, WebGL, Web Audio API | ✅ tecnologie del browser (Chromium di sistema) | linee guida nella skill `web-animation-stack` |
-| Whisper | ✅ `faster-whisper` installato, script `scripts/transcribe.py` | il download dei modelli richiede accesso a `huggingface.co` (allowlist di rete) |
+| Whisper | ✅ `faster-whisper` installato, script `scripts/transcribe.py` | modelli scaricati da huggingface.co (ambiente cloud "Reel studio" già configurato); richiede `av<16` |
 | Blender 4.0 | ✅ installato via apt, solo headless (`blender -b`) | Cycles CPU, denoiser disattivato; nessuna GUI nel cloud |
 | ElevenLabs | ✅ SDK `elevenlabs` installato | serve `ELEVENLABS_API_KEY` come secret di ambiente |
 | Runway | ⚠️ via API REST / `@runwayml/sdk` | serve `RUNWAYML_API_SECRET`; istruzioni nella skill `broll-editing` |

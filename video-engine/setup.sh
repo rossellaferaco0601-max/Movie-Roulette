@@ -9,7 +9,8 @@ if ! command -v blender >/dev/null; then
 fi
 blender --version | head -1
 echo "== Python: faster-whisper"
-pip3 install --quiet --break-system-packages faster-whisper
+export HF_HUB_DISABLE_XET=1
+pip3 install --quiet --break-system-packages faster-whisper "av<16" "av<16"
 echo "== npm: Remotion, React, Three.js, GSAP, Lottie, ElevenLabs"
 npm install
 echo "== Remotion skills (già copiate in ../.claude/skills; per aggiornarle: npx skills add remotion-dev/skills)"
