@@ -23,6 +23,9 @@ scripts/ffmpeg-presets.sh                     # elenco preset FFmpeg
 blender -b -P scripts/blender_render.py -- "TITOLO" out/title.png
 ```
 
+## Clienti
+Le regole di montaggio e il contesto di ogni cliente stanno in `clienti/` (indice in `clienti/README.md`). Per Correre Naturale usa la skill `cliente-correre-naturale` prima di qualsiasi montaggio.
+
 ## Regole
 - Le sorgenti (video/audio/immagini) vanno in `video-engine/public/` e si caricano con `staticFile()`.
 - Ogni animazione è funzione pura di `useCurrentFrame()`; niente timer o CSS transition nel render.
