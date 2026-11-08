@@ -230,18 +230,18 @@ Commenta RITMO e ti mando tutte le info sui percorsi di coaching personalizzato.
       ...base,
       master: master("R8-dialogo", true),
       segments: [seg(242.78, 279.95)],
-      // motivo visivo del reel 8: dialogo / manifesto (notifiche dal corpo come hook, scontrino con le regole, punch-in finale)
+      // motivo visivo del reel 8: dialogo (notifiche dal corpo come hook, sottolineatura a pennarello, punch-in finale)
       hook: null,
       fx: [
         { fx: "messages", at: 0, dur: 4.4, text: "La corsa non è un test di resistenza|È un dialogo tra te e me|Ascoltami", title: "Il tuo corpo", y: 0.6 },
-        { fx: "scribble", at: 15.22, word: "respirare", dur: 2.3, text: "respira meglio", color: LIME },
-        { fx: "the-bill", at: 18.77, dur: 7.4, wide: true, text: "SE TI MANCA IL FIATO|Non fermarti|Impara a respirare|Impara a rallentare|Ascolta il tuo corpo" },
+        { fx: "scribble", at: 15.22, word: "respirare", dur: 2.3, text: "meglio", color: "#49762E" },
         { fx: "lean-in", at: 34.0, word: "lontano", dur: 1.0, zoom: 1.3 },
       ],
       elements: [
         { kind: "kinetic", at: 4.6, word: "dialogo", dur: 2.6, words: ["UN DIALOGO", "CON IL CORPO"], accentIndex: 0 },
         { kind: "widget", at: 8.07, dur: 4.8, title: "Quando impari ad ascoltarlo", lines: ["Smetti di soffrire", "Inizi a goderti ogni passo"] },
         { kind: "checklist", at: 13.7, word: "spingere", dur: 1.4, items: ["Spingere di più"], strike: true },
+        { kind: "widget", at: 18.77, dur: 7.4, title: "Se ti manca il fiato", lines: ["Non fermarti", "Impara a respirare", "Impara a rallentare", "Ascolta il tuo corpo"] },
         { kind: "wave", at: 26.37, dur: 3.6, title: "Più lontano, meno sforzo", mode: "calm" },
         { kind: "kinetic", at: 34.9, dur: 2.4, words: ["LONTANO", "E SOSTENIBILI"], accentIndex: 0 },
       ],

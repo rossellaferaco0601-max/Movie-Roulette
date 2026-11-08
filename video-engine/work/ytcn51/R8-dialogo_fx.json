@@ -1,0 +1,31 @@
+{
+ "effects": [
+  {
+   "fx": "messages",
+   "start": 0,
+   "end": 4.4,
+   "text": "La corsa non è un test di resistenza|È un dialogo tra te e me|Ascoltami",
+   "title": "Il tuo corpo",
+   "y": 0.6
+  },
+  {
+   "fx": "scribble",
+   "start": 14.5,
+   "end": 16.8,
+   "text": "respira meglio",
+   "color": "#95FF00"
+  },
+  {
+   "fx": "the-bill",
+   "start": 18.767,
+   "end": 26.167,
+   "text": "SE TI MANCA IL FIATO|Non fermarti|Impara a respirare|Impara a rallentare|Ascolta il tuo corpo"
+  },
+  {
+   "fx": "lean-in",
+   "start": 34.967,
+   "end": 35.967,
+   "zoom": 1.3
+  }
+ ]
+}
