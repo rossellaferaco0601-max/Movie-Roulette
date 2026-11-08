@@ -202,7 +202,7 @@ export const Chat: React.FC<{ el: Extract<Element, { kind: "chat" }>; start: num
   return (
     <Box s={s} out={out}>
       <div style={{ position: "absolute", top: 16, left: 30, display: "flex", alignItems: "center", gap: 14 }}>
-        <div style={{ width: 54, height: 54, borderRadius: 27, background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 26, display: "flex", alignItems: "center", justifyContent: "center" }}>♥</div>
+        <div style={{ width: 54, height: 54, borderRadius: 27, background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 26, display: "flex", alignItems: "center", justifyContent: "center" }}>C</div>
         <div style={{ fontWeight: 800, fontSize: 34, color: BRAND.cream }}>{el.sender}</div>
         <div style={{ width: 14, height: 14, borderRadius: 7, background: BRAND.lime, marginLeft: 6 }} />
       </div>

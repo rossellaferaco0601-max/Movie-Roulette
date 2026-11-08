@@ -276,3 +276,15 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   `lean-in`, `scribble` (testo corto, colore verde #49762E sulla parete chiara).
   **Fermo immagine sulle schede**: dissolvenza 0,15 s solo se il bordo cade dentro il pezzo, mai a inizio/fine pezzo (altrimenti
   si vede in trasparenza la scheda del sorgente o un doppio volto).
+- **2026-11-08 (Ross, terzo giro su YTCN 51 v7)**: regole generali ricavate dal feedback, valide per tutti i reel.
+  - **Layout Instagram**: nulla di importante sotto l'80 % dell'altezza né nella colonna dei comandi a destra (x > 0,90). Zone del
+    motore CN: volto 0–0,42, grafiche 0,44–0,67, sottotitoli 0,69–0,78; pannelli con margini 100 px per lato. **Mai coprire il volto.**
+  - **Niente fermo immagine di Daniele** quando l'audio continua da solo (schede del video originale): al suo posto una **guida a tutto
+    schermo** illustrata (`guide`: nasale / hold / ritmica) che fa fare l'esercizio a chi guarda, con scritte grandi.
+  - **Non ripetere le animazioni** tra reel della stessa serie: onda del respiro e «respiro e passo sincronizzati» erano già «usate mille
+    volte». Preferire **illustrazioni animate** (bocca che si chiude, corridore che rallenta, polmoni, orizzonte, pillole, chat dal corpo).
+  - Un reel non parte a metà discorso («il terzo esercizio…», «il secondo errore…»): si apre con un **titolo grande** (o con la guida) e
+    l'audio parte dalla frase utile (R4 da «molti pensano…», R7 da «durante una camminata…», R2 da «il primo passo…»).
+  - **Parole dietro la testa** (backdrop-word) non si leggono: usare parole grandi nella zona grafiche. Campo largo su **sfondo brand**
+    (gradiente verde scuro), non sul video sfocato. Conto alla rovescia veloce (1,5 s).
+  - Frase finale di R8 voluta da Ross: «Correre bene = andare lontano ed essere sostenibili». Niente zoom che spinge le scritte sul volto.
