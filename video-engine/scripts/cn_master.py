@@ -12,7 +12,7 @@ OUT_W, OUT_H = 1080, 1920
 TAIL = 0.5            # secondi di coda (fermo immagine + silenzio), = TAIL_FRAMES in types.ts
 WIDE = 1.25           # fattore di arretramento del campo largo (il video occupa l'80 % dell'altezza)
 WIDE_RAMP = 0.45      # secondi di animazione dentro/fuori dal campo largo
-CARD_FADE = 0.15      # dissolvenza del fermo immagine sulle schede (solo se il bordo cade dentro il pezzo)
+CARD_FADE = 0.10      # dissolvenza del fermo immagine sulle schede (solo se il bordo cade dentro il pezzo)
 
 def run(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True)
@@ -35,16 +35,16 @@ def freeze_inputs(src, seg, zoom, tmp, i):
     extra_in, chains, k = [], [], 0
     for (a, b, t_img) in CARDS:
         # la dissolvenza sta FUORI dai bordi della scheda: il fermo immagine è pieno per tutta la durata della scheda
-        lo, hi = max(a - CARD_FADE, seg["from"]), min(b + CARD_FADE, seg["to"])
+        lo, hi = max(a - 0.02, seg["from"]), min(b + CARD_FADE, seg["to"])
         if hi - lo < 0.3: continue
-        t_img = max(0.0, t_img)
+        t_img = max(0.0, a - 0.02)  # ultimo fotogramma pulito prima della scheda: il video "si ferma" senza stacco né dissolvenza
         png = os.path.join(tmp, f"frz{i}_{k}.png")
         run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{t_img:.3f}", "-i", src, "-frames:v", "1", "-vf", crop_filter(zoom).replace(f",fps={FPS}", ""), png])
         t0, t1 = lo - seg["from"], hi - seg["from"]
         nf = int(round((t1 - t0) * FPS)) + 2
         extra_in += ["-loop", "1", "-framerate", str(FPS), "-t", f"{(nf + 2) / FPS:.4f}", "-i", png]
         # niente dissolvenza se la scheda inizia/finisce col pezzo (si vedrebbe la scheda del sorgente in trasparenza)
-        chains.append((t0, t1, nf, a - CARD_FADE > seg["from"] + 0.01, b + CARD_FADE < seg["to"] - 0.01))
+        chains.append((t0, t1, nf, False, b + CARD_FADE < seg["to"] - 0.01))  # mai dissolvenza in entrata (fermo immagine continuo)
         k += 1
     return extra_in, chains
 
