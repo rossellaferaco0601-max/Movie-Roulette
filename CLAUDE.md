@@ -26,6 +26,7 @@ scripts/rs_render.sh progetto.json ytcn51/ytcn51_src.mp4 out/x.mp4   # render di
 python3 scripts/transcribe.py public/clip.mp4 --lang it --out src/captions/clip.json
 scripts/ffmpeg-presets.sh                     # elenco preset FFmpeg
 blender -b -P scripts/blender_render.py -- "TITOLO" out/title.png
+python3 scripts/gemini.py models|testo|analizza|immagine|video   # Gemini (chiave: secret di rete dell'ambiente)
 ```
 
 ## Clienti
