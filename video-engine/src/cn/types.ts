@@ -53,6 +53,8 @@ export type CNReelProps = {
   ctaSeconds: number;
   /** compensazione del ritardo di Whisper, in secondi (negativo = anticipa) */
   wordOffset: number;
+  /** push-in lento della camera durante l'hook (es. 1.12), poi rientro morbido */
+  hookZoom?: number;
 };
 
 export const BRAND = {

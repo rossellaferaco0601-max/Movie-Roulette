@@ -173,11 +173,11 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
     title: "Esercizio 2: le pause respiratorie",
     props: {
       ...base,
-      master: master("R6-breathhold", true),
+      master: master("R6-breathhold"),
       segments: [seg(175.8, 205.06)],
-      // motivo visivo del reel 6: controllo e pressione (push-in lento, barre della CO₂ che sale, parole cinetiche)
+      // motivo visivo del reel 6: controllo e pressione (push-in lento in Remotion, barre della CO₂ che sale, parole cinetiche)
       hook: { lines: ["Correre in controllo", "senza panico"], keyword: "controllo", dur: 4.0 },
-      fx: [{ fx: "slow-push", at: 0, dur: 3.2, zoom: 1.35, blur: 0.004 }],
+      hookZoom: 1.14,
       elements: [
         { kind: "stage", at: 4.55, dur: 9.4, title: "Esercizio 2 · le pause respiratorie", keyword: "pause", steps: ["Espira normalmente", "Trattieni qualche secondo", "Riprendi dal naso", "5-10 volte, senza forzare"] },
         { kind: "sphere3d", at: 14.15, dur: 7.4, phases: [{ label: "ESPIRA", sec: 2, scale: 0.25 }, { label: "TRATTIENI", sec: 4, scale: 0.25 }, { label: "INSPIRA", sec: 3, scale: 1 }] },

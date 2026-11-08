@@ -1,4 +1,4 @@
-import { AbsoluteFill, OffthreadVideo, Sequence, staticFile, useVideoConfig, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, OffthreadVideo, Sequence, staticFile, useVideoConfig, interpolate, useCurrentFrame, Easing } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Blinker";
 import { useMemo } from "react";
 import type { CNReelProps, Element } from "./types";
@@ -53,12 +53,15 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
   let cam = 0;
   p.elements.forEach((el, i) => { if (el.kind === "split") cam = Math.max(cam, splitCamera(frame, starts[i], Math.round(el.dur * fps))); });
   const camShift = H * SPLIT_CARD_H * cam;
+  // push-in lento durante l'hook (tutto in Remotion: niente doppia immagine al rilascio)
+  const hookF = p.hook ? Math.round(p.hook.dur * fps) : 0;
+  const hookZoom = p.hookZoom && hookF ? interpolate(frame, [0, hookF, hookF + 15], [1, p.hookZoom, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.quad) }) : 1;
 
   return (
     <AbsoluteFill style={{ background: "#2F4D1E", fontFamily: "Blinker, sans-serif" }}>
       <Sequence from={0} durationInFrames={total} layout="none">
         {cam > 0 ? <AbsoluteFill style={{ background: "#E9E4D2", opacity: cam }} /> : null}
-        <AbsoluteFill style={{ opacity: videoFade, transform: `translateY(${camShift}px)` }}>
+        <AbsoluteFill style={{ opacity: videoFade, transform: `translateY(${camShift}px) scale(${hookZoom})`, transformOrigin: "50% 30%" }}>
           <Master src={p.master} total={total} />
         </AbsoluteFill>
         {p.hook ? <Hook hook={p.hook} /> : null}
