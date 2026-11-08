@@ -264,3 +264,15 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   di fx.py fa scorrere il video e taglia la testa: non usarlo); nuovo elemento **`stairs`** (gradini che si costruiscono uno alla volta
   con pallina che sale) per i concetti di progressione. Regola generale: ogni concetto detto a voce (per gradi, marce, passi…) va
   tradotto in un'animazione che lo rappresenta, non in una pillola di testo.
+- **2026-11-08 (serie YTCN 51 v7, R1 approvato da Ross «per il resto è perfetto»)**: un motivo visivo per reel, nessun hook ripetuto:
+  R1 allarme (riflettore + ECG + timbro + titolo spezzato), R2 meccanica (contagiri 3D, insegna LED, interruttori), R3 flusso (punch-in,
+  sfera, grafico energia), R4 strada (parola barrata gigante, PIANO dietro la testa, strada 3D che rallenta, barre), R5 allenamento
+  (apertura a punti, conto alla rovescia, scheda esercizio, sfera), R6 controllo (push-in lento, barre CO₂, parole cinetiche),
+  R7 ritmo (metronomo come hook, passi 3/4, titolo con punch-in), R8 dialogo (notifiche dal corpo, pennarello, punch-in finale).
+  Lezioni sugli effetti esterni (fx.py): **non usare** `liquid-glass-graph`, `apple-toggles pos=below` (finiscono nella zona
+  sottotitoli), `the-bill` (testo illeggibile), `slow-push` (doppia immagine al rilascio: usare `hookZoom` di Remotion),
+  `split-headline` (taglia la testa: usare l'elemento `split`). Funzionano bene: `spotlight`, `led-sign`, `backdrop-word`,
+  `huge-strike`, `headline-box`, `countdown-flip` (tutti con `wide: true`), `reject-stamp` con `bg`, `messages`, `dot-reveal`,
+  `lean-in`, `scribble` (testo corto, colore verde #49762E sulla parete chiara).
+  **Fermo immagine sulle schede**: dissolvenza 0,15 s solo se il bordo cade dentro il pezzo, mai a inizio/fine pezzo (altrimenti
+  si vede in trasparenza la scheda del sorgente o un doppio volto).

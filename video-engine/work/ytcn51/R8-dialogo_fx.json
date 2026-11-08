@@ -12,14 +12,8 @@
    "fx": "scribble",
    "start": 14.5,
    "end": 16.8,
-   "text": "respira meglio",
-   "color": "#95FF00"
-  },
-  {
-   "fx": "the-bill",
-   "start": 18.767,
-   "end": 26.167,
-   "text": "SE TI MANCA IL FIATO|Non fermarti|Impara a respirare|Impara a rallentare|Ascolta il tuo corpo"
+   "text": "meglio",
+   "color": "#49762E"
   },
   {
    "fx": "lean-in",

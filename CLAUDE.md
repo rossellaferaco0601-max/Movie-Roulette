@@ -11,7 +11,7 @@ Claude è usato come motore grafico per montare video e reel. Mappa delle cartel
 ## Skill disponibili (`.claude/skills/`)
 - Remotion ufficiali: `remotion-best-practices`, `remotion-create`, `remotion-markup`, `remotion-render`, `remotion-studio`, `remotion-captions`, `remotion-multimedia`, `remotion-interactivity`, `remotion-maps`, `remotion-saas`, `remotion-docs`, `remotion-upgrade`, `remotion-license`.
 - Personalizzate: `kinetic-typography`, `motion-graphics`, `cinematic-animation`, `video-editing`, `compositing`, `audio-sync`, `subtitle-animation`, `broll-editing`, `web-animation-stack`, `cliente-correre-naturale`.
-- `effects` (Vibha, 51 effetti con tracciamento del volto, Python/mediapipe): prima dell'uso va eseguito `bash .claude/skills/effects/scripts/setup.sh` con il consenso di Ross (codice esterno). Le regole del cliente vincono sugli effetti (niente emoji, volto libero).
+- `effects` (Vibha, 51 effetti con tracciamento del volto, Python/mediapipe): venv già pronto in `.claude/skills/effects/.venv` (font sostituiti con Blinker). Nel motore CN si usano via `props.fx` + `scripts/cn_fx.ts`; quali effetti vanno bene e quali no è scritto in `clienti/correre-naturale/REGOLE-MONTAGGIO.md` (8/11). Le regole del cliente vincono sugli effetti (niente emoji, volto libero).
 - Dal PC di Ross (8/11), 34 skill generiche di montaggio e motion: editing reel (`reels-editor`, `video-edit`, `talking-head-editing-skill`, `claude-video-reel-editor`, `edit-video`, `ffmpeg-skill`, `beat-sync-editing`), motion graphics (`motion-doctrine`, `motion-graphics`, `motion-art-direction`, `motion-background`, `motion-broll`, `logo-animation`, `animation-principles`, `color-motion`, `shot-composition`, `cut-the-curve`, `cinematic-camera`, `article-highlights`, `sound-effects`, `media-use`, `style-motion`, `style-sampling`), Remotion extra (`remotion-motion-graphics`, `remotion-overlays`, `remotion-video`), HyperFrames (`hyperframes`, `hyperframes-cli`, `hyperframes-registry`, `remotion-to-hyperframes`, `reverse-any-video`, `captions-overlay`, `seam-craft`), `after-effects`. Le regole del cliente in `clienti/` vincono sempre su queste skill.
 - HyperFrames (`npm hyperframes` in `video-engine`): render HTML→video alternativo a Remotion per grafiche da pagina web.
 
@@ -21,7 +21,10 @@ cd video-engine
 npm run dev                                   # Remotion Studio (preview)
 npx remotion render R1-fiatone out/a.mp4      # render di un reel CN
 npx remotion still R1-fiatone out/f.png --frame=75
-scripts/cn_finish.sh R1-fiatone v3            # render + loudness + copertina + didascalia + ritrascrizione
+scripts/cn_finish.sh R1-fiatone v7            # render + loudness + copertina + didascalia + ritrascrizione
+scripts/cn_queue.sh v7 R2-naso R3-bocca       # coda: master (se manca) → effetti skill (cn_fx) → finitura, un reel alla volta
+npx tsx scripts/cn_fx.ts R1-fiatone --still   # fotogrammi di controllo degli effetti della skill `effects` sul master
+npx tsx scripts/validate-reels.ts             # sovrapposizioni e ancore di hook/elementi/effetti
 scripts/rs_render.sh progetto.json ytcn51/ytcn51_src.mp4 out/x.mp4   # render di un project.json ReelStudio
 python3 scripts/transcribe.py public/clip.mp4 --lang it --out src/captions/clip.json
 scripts/ffmpeg-presets.sh                     # elenco preset FFmpeg
