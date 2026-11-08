@@ -2,9 +2,6 @@
 
 Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fondo con la data.
 
-> Copia ricostruita dalle sessioni Claude Code del 3–7 novembre 2026 (originale sul PC di Ross:
-> `C:\Users\roxfe\Documents\reel_progetti\correre_naturale\REGOLE-MONTAGGIO.md`). Se le due copie divergono, fa fede quella sul PC.
-
 ## Regole base (brief del 2026-11-03)
 
 ### Contenuto
@@ -26,7 +23,7 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 ### Sottotitoli e parole chiave
 - Sottotitoli sempre presenti, sincronizzati, corretti a mano (termini tecnici della corsa).
 - Evidenziate le parole di senso: numeri, errori, parti del corpo, risultati.
-- Alcune parole chiave compaiono GRANDI a comparsa: in quel momento sottotitoli nascosti. *(superata il 5/11: i sottotitoli restano sempre)*
+- Alcune parole chiave compaiono GRANDI a comparsa: in quel momento sottotitoli nascosti.
 
 ### Audio e tagli
 - Controllare ogni punto di taglio: niente parole doppie o mozzate. Whisper è in ritardo di 0,1-0,3 s → aggiustare di 0,1 s alla volta.
@@ -40,7 +37,7 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 - Mai due grafiche grandi nello stesso momento.
 
 ### CTA finale
-- Schermata finale di 4 s DOPO la fine del video. *(dal 6/11: almeno 7 s nei reel, 10 s nel vlog)*
+- Schermata finale di 4 s DOPO la fine del video.
 - Una sola parola chiave da scrivere in DM (CORRO, PIANO, GUIDA, SCUOLA).
 
 ### Brand
@@ -65,7 +62,7 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 
 ## Correzioni ricevute
 <!-- formato: - AAAA-MM-GG — regola -->
-- 2026-11-03 — Se un dato (numero, parola) compare in una scheda/animazione, NON va ripetuto nei sottotitoli in quello stesso momento: togliere quelle parole dai sottotitoli (o nasconderli) finché la scheda è a schermo. *(superata il 5/11)*
+- 2026-11-03 — Se un dato (numero, parola) compare in una scheda/animazione, NON va ripetuto nei sottotitoli in quello stesso momento: togliere quelle parole dai sottotitoli (o nasconderli) finché la scheda è a schermo.
 - 2026-11-03 — Reel troppo statici/noiosi: servono animazioni, effetti e montaggio molto più coinvolgenti (vedi reference "WhatsApp Video 2026-11-03 at 01.34.11 (1).mp4"). Tagli e struttura invece vanno bene.
 - 2026-11-03 · Daniele sempre **a fuoco e in alta definizione**: usare il sorgente 4K (`video4k.mp4`, ricavato da `originale.webm`), non la copia 1080p. Niente sfocature su di lui.
 - 2026-11-03 · **Pochi B-roll**: mai stock di altre persone come riempitivo. Dove il sorgente ha schede: riprese di Daniele da altri suoi video, suoi fermi immagine nitidi, o scene grafiche con Daniele in finestra. Riprese con la bocca che parla solo se il labiale non si legge.
@@ -186,8 +183,6 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 - Y6: icone (SVG) di orologio, cardiofrequenzimetro e tabelle che si cancellano, come nella prima versione; Y8: un pittogramma
   per ognuna delle 5 strategie, nello stesso stile di bici e nuoto, sotto la scheda del capitolo (mai sovrapposti).
 - Y7: l'infinito deve chiudersi (era un errore di lunghezza del tratto).
-
-### 7/11/2026 — reel condensato con brano (Jalen Ngonda) e vlog lungo v4
 - **2026-11-07 (Ross, condensato con brano)** — «Usa questo audio [Jalen Ngonda, *If You Don't Want My Love*], il video deve durare 1 minuto al
   massimo, usa le riprese migliori, togli ogni altro tipo di audio o suono». Quindi: quando Ross dà un brano, nel reel c'è **solo quello** (clip mute,
   niente pop, niente sfx, niente parlato), durata totale con la CTA sotto il minuto, più inquadrature scelte sui fogli di fotogrammi di tutte le clip
@@ -202,6 +197,7 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   ×1,8 sui B-roll e ×2,2 sulla CTA).
   Master: con `-shortest` + `loudnorm` i pezzi uscivano di 1-2 fotogrammi più corti (gli stacchi slittavano dalla battuta) → via `-shortest`, `apad`,
   `setpts=PTS-STARTPTS` prima di `fps`, `tpad` di sicurezza; le velocità vanno date come rapporto esatto fotogrammi sorgente/uscita.
+
 - **2026-11-07 notte (Ross, condensato con brano, seconda correzione)**: «è quasi perfetto»; la raffica del titolo con il cambio di font di
   «workshop» deve durare di più, «fino a 0:06-0:07 della canzone» (era 2 s) → 14 colpi (7,1 s), 28 inquadrature da mezzo colpo e un cambio di
   stile per inquadratura; **CTA più leggibile e un po' più lunga** → 8 s, testi al 135 %, frasi corte su una riga, fondo più scuro; **la musica
@@ -215,8 +211,6 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   di box con le scritte sono troppo veloci, come nel caso di Daniela» → **nessuna targhetta sotto i 2 stacchi (≈2 s)**; «il tasto Segui alla
   fine si sovrappone agli altri» → nella CTA lasciare almeno 40 px tra le etichette delle icone e il bottone (icone a 1120, Segui a 1400).
   Ross vuole l'elenco dei titoli delle targhette per correggerli lui: proporli sempre in chat prima del render.
-  Titoli dettati da Ross: 9:30 Check in · 10:00 Lezione Teorica · Riscaldamento · 12:30 Prove di corsa · La lezione · Esercizi · Si corre ·
-  La squadra · Pausa · 16:00 Postura / piedi / e squat · 17:30 La pedana · 18:00 Running analysis · 18:30 Testimonianze · Chiusura · Ci vediamo / al prossimo?
 - **2026-11-07 (Oscar via Ross, vlog lungo v4)**: feedback di Oscar sul vlog v3b: «voce di Daniele fin dall'inizio, già dai primissimi secondi»;
   «musica ancora troppo alta, la abbasserei per dare risalto alla voce»; «troppi suoni, ne ridurrei il numero»; «togliere l'ombra quadrata in
   alto a destra sul logo, lasciare solo il logo tondo». Ross: «esegui tutte queste modifiche e metti la stessa musica del video corto» (Jalen
@@ -225,6 +219,8 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   ripartire il brano da capo nella CTA); effetti sonori solo sugli elementi firma (capitoli, polaroid, timbro, dato 170-180) e CTA con 4 suoni
   (`cta.sfxLite`); le ombre delle immagini in ReelStudio sono box-shadow **quadrate**: sui PNG scontornati/tondi usare sempre `shadow="no"`
   (o l'ombra cotta nel PNG). Oscar ha notato anche «una parola di troppo alla fine di qualche frase», ma «può andare bene così»: non toccato.
+
+> Copia sincronizzata con l'originale del PC (`reel_progetti\correre_naturale\REGOLE-MONTAGGIO.md`, stato 7/11/2026 ore 10). Da qui in poi: aggiunte fatte nel motore cloud.
 
 ## Regole in memoria (non nel file originale, dalle note di sessione)
 - **Hook SVG bocciati** (6/11): niente tachimetri, sagome o badge disegnati; mostrare un fotogramma e aspettare l'ok («disastro degli hook animati»).

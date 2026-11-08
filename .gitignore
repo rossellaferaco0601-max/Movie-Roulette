@@ -13,3 +13,6 @@ video-engine/work/**/frames/
 video-engine/work/**/*.wav
 video-engine/work/**/*.csv
 video-engine/work/**/*.log
+video-engine/public/reference/
+reelstudio-ref/impostazioni.json
+**/impostazioni.json

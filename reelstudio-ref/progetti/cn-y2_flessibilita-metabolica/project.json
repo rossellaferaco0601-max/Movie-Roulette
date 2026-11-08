@@ -1,0 +1,7310 @@
+{
+ "id": "cn-y2_flessibilita-metabolica",
+ "title": "Y2 · flessibilita metabolica",
+ "client": "correre-naturale",
+ "origin": "youtube",
+ "created": "2026-11-06T18:15:36",
+ "parent": "cn-ytcn38-src",
+ "source": {
+  "file": "../cn-ytcn38-src/video4k.mp4",
+  "original": "YTCN 38.mp4",
+  "duration": 465.732,
+  "width": 3840,
+  "height": 2160
+ },
+ "words": [
+  {
+   "text": "Ti",
+   "start": 0.0,
+   "end": 0.08
+  },
+  {
+   "text": "piacerebbe",
+   "start": 0.08,
+   "end": 0.56
+  },
+  {
+   "text": "riuscire",
+   "start": 0.56,
+   "end": 0.94
+  },
+  {
+   "text": "a",
+   "start": 0.94,
+   "end": 1.08
+  },
+  {
+   "text": "correre",
+   "start": 1.08,
+   "end": 1.56
+  },
+  {
+   "text": "facendo",
+   "start": 1.56,
+   "end": 2.1
+  },
+  {
+   "text": "meno",
+   "start": 2.1,
+   "end": 2.34
+  },
+  {
+   "text": "fatica?",
+   "start": 2.34,
+   "end": 2.82
+  },
+  {
+   "text": "Addirittura",
+   "start": 2.92,
+   "end": 3.6
+  },
+  {
+   "text": "correre",
+   "start": 3.6,
+   "end": 4.2
+  },
+  {
+   "text": "più",
+   "start": 4.2,
+   "end": 4.7
+  },
+  {
+   "text": "velocemente",
+   "start": 4.7,
+   "end": 5.38
+  },
+  {
+   "text": "a",
+   "start": 5.38,
+   "end": 5.58
+  },
+  {
+   "text": "parità",
+   "start": 5.58,
+   "end": 5.9
+  },
+  {
+   "text": "di",
+   "start": 5.9,
+   "end": 6.02
+  },
+  {
+   "text": "sforzo?",
+   "start": 6.02,
+   "end": 6.56
+  },
+  {
+   "text": "O",
+   "start": 6.62,
+   "end": 6.78
+  },
+  {
+   "text": "magari",
+   "start": 6.78,
+   "end": 7.2
+  },
+  {
+   "text": "mantenere",
+   "start": 7.2,
+   "end": 8.34
+  },
+  {
+   "text": "lo",
+   "start": 8.34,
+   "end": 8.44
+  },
+  {
+   "text": "stesso",
+   "start": 8.44,
+   "end": 8.66
+  },
+  {
+   "text": "ritmo",
+   "start": 8.66,
+   "end": 9.24
+  },
+  {
+   "text": "ma",
+   "start": 9.24,
+   "end": 9.52
+  },
+  {
+   "text": "con",
+   "start": 9.52,
+   "end": 9.66
+  },
+  {
+   "text": "un",
+   "start": 9.66,
+   "end": 9.88
+  },
+  {
+   "text": "battito",
+   "start": 9.88,
+   "end": 10.4
+  },
+  {
+   "text": "cardiaco",
+   "start": 10.4,
+   "end": 11.2
+  },
+  {
+   "text": "più",
+   "start": 11.2,
+   "end": 11.36
+  },
+  {
+   "text": "basso",
+   "start": 11.36,
+   "end": 11.78
+  },
+  {
+   "text": "sentendoti",
+   "start": 11.78,
+   "end": 12.44
+  },
+  {
+   "text": "più",
+   "start": 12.44,
+   "end": 12.66
+  },
+  {
+   "text": "leggero,",
+   "start": 12.66,
+   "end": 13.18
+  },
+  {
+   "text": "fluido",
+   "start": 13.18,
+   "end": 13.7
+  },
+  {
+   "text": "e",
+   "start": 13.7,
+   "end": 14.06
+  },
+  {
+   "text": "instancabile?",
+   "start": 14.06,
+   "end": 14.64
+  },
+  {
+   "text": "Beh,",
+   "start": 14.88,
+   "end": 15.02
+  },
+  {
+   "text": "oggi",
+   "start": 15.08,
+   "end": 15.38
+  },
+  {
+   "text": "voglio",
+   "start": 15.38,
+   "end": 15.74
+  },
+  {
+   "text": "mostrarti",
+   "start": 15.74,
+   "end": 16.32
+  },
+  {
+   "text": "come",
+   "start": 16.32,
+   "end": 16.66
+  },
+  {
+   "text": "farlo",
+   "start": 16.66,
+   "end": 17.12
+  },
+  {
+   "text": "seguendo",
+   "start": 17.12,
+   "end": 17.56
+  },
+  {
+   "text": "il",
+   "start": 17.56,
+   "end": 17.7
+  },
+  {
+   "text": "metodo",
+   "start": 17.7,
+   "end": 18.1
+  },
+  {
+   "text": "Correre",
+   "start": 18.1,
+   "end": 18.56
+  },
+  {
+   "text": "Naturale.",
+   "start": 18.56,
+   "end": 19.14
+  },
+  {
+   "text": "Non",
+   "start": 19.22,
+   "end": 19.48
+  },
+  {
+   "text": "parleremo",
+   "start": 19.48,
+   "end": 20.04
+  },
+  {
+   "text": "di",
+   "start": 20.04,
+   "end": 20.16
+  },
+  {
+   "text": "trucchetti,",
+   "start": 20.16,
+   "end": 20.72
+  },
+  {
+   "text": "di",
+   "start": 20.76,
+   "end": 20.8
+  },
+  {
+   "text": "bacchette",
+   "start": 20.8,
+   "end": 21.16
+  },
+  {
+   "text": "magiche",
+   "start": 21.16,
+   "end": 21.72
+  },
+  {
+   "text": "o",
+   "start": 21.72,
+   "end": 22.06
+  },
+  {
+   "text": "di",
+   "start": 22.06,
+   "end": 22.16
+  },
+  {
+   "text": "programmi",
+   "start": 22.16,
+   "end": 22.68
+  },
+  {
+   "text": "standard.",
+   "start": 22.68,
+   "end": 23.04
+  },
+  {
+   "text": "Parleremo",
+   "start": 23.28,
+   "end": 23.9
+  },
+  {
+   "text": "di",
+   "start": 23.9,
+   "end": 24.06
+  },
+  {
+   "text": "come",
+   "start": 24.06,
+   "end": 24.3
+  },
+  {
+   "text": "rendere",
+   "start": 24.3,
+   "end": 24.76
+  },
+  {
+   "text": "il",
+   "start": 24.76,
+   "end": 24.84
+  },
+  {
+   "text": "tuo",
+   "start": 24.84,
+   "end": 24.96
+  },
+  {
+   "text": "corpo",
+   "start": 24.96,
+   "end": 25.32
+  },
+  {
+   "text": "efficiente,",
+   "start": 25.32,
+   "end": 26.46
+  },
+  {
+   "text": "come",
+   "start": 26.46,
+   "end": 26.68
+  },
+  {
+   "text": "la",
+   "start": 26.68,
+   "end": 26.88
+  },
+  {
+   "text": "natura",
+   "start": 26.88,
+   "end": 27.3
+  },
+  {
+   "text": "l'ha",
+   "start": 27.3,
+   "end": 27.7
+  },
+  {
+   "text": "progettato",
+   "start": 27.7,
+   "end": 28.2
+  },
+  {
+   "text": "per",
+   "start": 28.2,
+   "end": 28.36
+  },
+  {
+   "text": "essere.",
+   "start": 28.36,
+   "end": 28.7
+  },
+  {
+   "text": "Prima",
+   "start": 28.7,
+   "end": 29.22
+  },
+  {
+   "text": "di",
+   "start": 29.22,
+   "end": 29.32
+  },
+  {
+   "text": "spiegarti",
+   "start": 29.32,
+   "end": 29.82
+  },
+  {
+   "text": "come",
+   "start": 29.82,
+   "end": 30.16
+  },
+  {
+   "text": "si",
+   "start": 30.16,
+   "end": 30.3
+  },
+  {
+   "text": "fa,",
+   "start": 30.3,
+   "end": 30.5
+  },
+  {
+   "text": "voglio",
+   "start": 30.54,
+   "end": 30.8
+  },
+  {
+   "text": "dirti",
+   "start": 30.8,
+   "end": 31.18
+  },
+  {
+   "text": "perché",
+   "start": 31.18,
+   "end": 31.54
+  },
+  {
+   "text": "dovresti",
+   "start": 31.54,
+   "end": 32.42
+  },
+  {
+   "text": "volerlo",
+   "start": 32.42,
+   "end": 32.9
+  },
+  {
+   "text": "fare",
+   "start": 32.9,
+   "end": 33.16
+  },
+  {
+   "text": "e",
+   "start": 33.16,
+   "end": 33.54
+  },
+  {
+   "text": "mi",
+   "start": 33.54,
+   "end": 33.7
+  },
+  {
+   "text": "servirò",
+   "start": 33.7,
+   "end": 34.24
+  },
+  {
+   "text": "di",
+   "start": 34.24,
+   "end": 34.44
+  },
+  {
+   "text": "un",
+   "start": 34.44,
+   "end": 34.52
+  },
+  {
+   "text": "esempio,",
+   "start": 34.52,
+   "end": 34.84
+  },
+  {
+   "text": "di",
+   "start": 35.06,
+   "end": 35.26
+  },
+  {
+   "text": "una",
+   "start": 35.26,
+   "end": 35.4
+  },
+  {
+   "text": "metafora.",
+   "start": 35.4,
+   "end": 35.94
+  },
+  {
+   "text": "Immagina",
+   "start": 36.06,
+   "end": 36.7
+  },
+  {
+   "text": "di",
+   "start": 36.7,
+   "end": 36.78
+  },
+  {
+   "text": "avere",
+   "start": 36.78,
+   "end": 36.92
+  },
+  {
+   "text": "un'auto",
+   "start": 36.92,
+   "end": 37.38
+  },
+  {
+   "text": "che",
+   "start": 37.38,
+   "end": 37.6
+  },
+  {
+   "text": "consuma",
+   "start": 37.6,
+   "end": 38.08
+  },
+  {
+   "text": "tantissimo.",
+   "start": 38.08,
+   "end": 38.72
+  },
+  {
+   "text": "Ogni",
+   "start": 38.72,
+   "end": 39.06
+  },
+  {
+   "text": "volta",
+   "start": 39.06,
+   "end": 39.3
+  },
+  {
+   "text": "che",
+   "start": 39.3,
+   "end": 39.5
+  },
+  {
+   "text": "acceleri",
+   "start": 39.5,
+   "end": 40.0
+  },
+  {
+   "text": "un",
+   "start": 40.0,
+   "end": 40.08
+  },
+  {
+   "text": "po',",
+   "start": 40.08,
+   "end": 40.3
+  },
+  {
+   "text": "il",
+   "start": 40.3,
+   "end": 40.48
+  },
+  {
+   "text": "consumo",
+   "start": 40.48,
+   "end": 40.84
+  },
+  {
+   "text": "si",
+   "start": 40.84,
+   "end": 41.16
+  },
+  {
+   "text": "alza",
+   "start": 41.16,
+   "end": 41.64
+  },
+  {
+   "text": "vertiginosamente.",
+   "start": 41.64,
+   "end": 42.62
+  },
+  {
+   "text": "Dopo",
+   "start": 42.68,
+   "end": 43.24
+  },
+  {
+   "text": "pochi",
+   "start": 43.24,
+   "end": 43.5
+  },
+  {
+   "text": "chilometri",
+   "start": 43.5,
+   "end": 44.0
+  },
+  {
+   "text": "devi",
+   "start": 44.0,
+   "end": 44.28
+  },
+  {
+   "text": "già",
+   "start": 44.28,
+   "end": 44.6
+  },
+  {
+   "text": "fermarti",
+   "start": 44.6,
+   "end": 45.24
+  },
+  {
+   "text": "a",
+   "start": 45.24,
+   "end": 45.48
+  },
+  {
+   "text": "fare",
+   "start": 45.48,
+   "end": 45.74
+  },
+  {
+   "text": "rifornimento.",
+   "start": 45.74,
+   "end": 46.52
+  },
+  {
+   "text": "Ora,",
+   "start": 46.64,
+   "end": 46.94
+  },
+  {
+   "text": "invece,",
+   "start": 47.02,
+   "end": 47.44
+  },
+  {
+   "text": "immagina",
+   "start": 47.52,
+   "end": 48.26
+  },
+  {
+   "text": "di",
+   "start": 48.26,
+   "end": 48.54
+  },
+  {
+   "text": "avere",
+   "start": 48.54,
+   "end": 48.82
+  },
+  {
+   "text": "un'auto",
+   "start": 48.82,
+   "end": 49.38
+  },
+  {
+   "text": "super",
+   "start": 49.38,
+   "end": 49.94
+  },
+  {
+   "text": "efficiente.",
+   "start": 49.94,
+   "end": 50.74
+  },
+  {
+   "text": "A",
+   "start": 50.76,
+   "end": 50.92
+  },
+  {
+   "text": "parità",
+   "start": 50.92,
+   "end": 51.26
+  },
+  {
+   "text": "di",
+   "start": 51.26,
+   "end": 51.38
+  },
+  {
+   "text": "carburante",
+   "start": 51.38,
+   "end": 51.9
+  },
+  {
+   "text": "percorri",
+   "start": 51.9,
+   "end": 52.54
+  },
+  {
+   "text": "più",
+   "start": 52.54,
+   "end": 52.82
+  },
+  {
+   "text": "di",
+   "start": 52.82,
+   "end": 53.08
+  },
+  {
+   "text": "quattro",
+   "start": 53.08,
+   "end": 53.62
+  },
+  {
+   "text": "volte",
+   "start": 53.62,
+   "end": 54.04
+  },
+  {
+   "text": "della",
+   "start": 54.04,
+   "end": 54.42
+  },
+  {
+   "text": "distanza.",
+   "start": 54.42,
+   "end": 55.0
+  },
+  {
+   "text": "Stesso",
+   "start": 55.16,
+   "end": 55.64
+  },
+  {
+   "text": "sforzo,",
+   "start": 55.64,
+   "end": 56.2
+  },
+  {
+   "text": "ma",
+   "start": 56.2,
+   "end": 56.56
+  },
+  {
+   "text": "molta",
+   "start": 56.56,
+   "end": 57.06
+  },
+  {
+   "text": "più",
+   "start": 57.06,
+   "end": 57.46
+  },
+  {
+   "text": "resa.",
+   "start": 57.46,
+   "end": 57.9
+  },
+  {
+   "text": "E",
+   "start": 57.9,
+   "end": 58.3
+  },
+  {
+   "text": "soprattutto",
+   "start": 58.3,
+   "end": 58.64
+  },
+  {
+   "text": "senza",
+   "start": 58.64,
+   "end": 59.52
+  },
+  {
+   "text": "affaticare",
+   "start": 59.52,
+   "end": 60.44
+  },
+  {
+   "text": "il",
+   "start": 60.44,
+   "end": 60.58
+  },
+  {
+   "text": "motore.",
+   "start": 60.58,
+   "end": 60.94
+  },
+  {
+   "text": "Ecco,",
+   "start": 60.98,
+   "end": 61.46
+  },
+  {
+   "text": "questo",
+   "start": 61.46,
+   "end": 61.84
+  },
+  {
+   "text": "è",
+   "start": 61.84,
+   "end": 61.98
+  },
+  {
+   "text": "ciò",
+   "start": 61.98,
+   "end": 62.12
+  },
+  {
+   "text": "che",
+   "start": 62.12,
+   "end": 62.18
+  },
+  {
+   "text": "succede",
+   "start": 62.18,
+   "end": 62.58
+  },
+  {
+   "text": "con",
+   "start": 62.58,
+   "end": 62.76
+  },
+  {
+   "text": "il",
+   "start": 62.76,
+   "end": 62.88
+  },
+  {
+   "text": "tuo",
+   "start": 62.88,
+   "end": 63.0
+  },
+  {
+   "text": "corpo",
+   "start": 63.0,
+   "end": 63.28
+  },
+  {
+   "text": "quando",
+   "start": 63.28,
+   "end": 63.56
+  },
+  {
+   "text": "inizi",
+   "start": 63.56,
+   "end": 64.02
+  },
+  {
+   "text": "a",
+   "start": 64.02,
+   "end": 64.1
+  },
+  {
+   "text": "correre",
+   "start": 64.1,
+   "end": 64.56
+  },
+  {
+   "text": "nel",
+   "start": 64.56,
+   "end": 64.76
+  },
+  {
+   "text": "modo",
+   "start": 64.76,
+   "end": 64.92
+  },
+  {
+   "text": "giusto",
+   "start": 64.92,
+   "end": 65.34
+  },
+  {
+   "text": "e",
+   "start": 65.34,
+   "end": 65.68
+  },
+  {
+   "text": "ad",
+   "start": 65.68,
+   "end": 65.84
+  },
+  {
+   "text": "allenarti",
+   "start": 65.84,
+   "end": 66.46
+  },
+  {
+   "text": "in",
+   "start": 66.46,
+   "end": 66.58
+  },
+  {
+   "text": "modo",
+   "start": 66.58,
+   "end": 66.76
+  },
+  {
+   "text": "utile",
+   "start": 66.76,
+   "end": 67.48
+  },
+  {
+   "text": "al",
+   "start": 67.48,
+   "end": 67.72
+  },
+  {
+   "text": "miglioramento",
+   "start": 67.72,
+   "end": 68.48
+  },
+  {
+   "text": "di",
+   "start": 68.48,
+   "end": 68.72
+  },
+  {
+   "text": "salute,",
+   "start": 68.72,
+   "end": 69.08
+  },
+  {
+   "text": "benessere",
+   "start": 69.32,
+   "end": 70.08
+  },
+  {
+   "text": "e",
+   "start": 70.08,
+   "end": 70.26
+  },
+  {
+   "text": "performance.",
+   "start": 70.26,
+   "end": 70.64
+  },
+  {
+   "text": "Non",
+   "start": 71.08,
+   "end": 71.36
+  },
+  {
+   "text": "solo",
+   "start": 71.36,
+   "end": 71.6
+  },
+  {
+   "text": "impari",
+   "start": 71.6,
+   "end": 72.06
+  },
+  {
+   "text": "a",
+   "start": 72.06,
+   "end": 72.12
+  },
+  {
+   "text": "consumare",
+   "start": 72.12,
+   "end": 72.72
+  },
+  {
+   "text": "meno",
+   "start": 72.72,
+   "end": 73.04
+  },
+  {
+   "text": "energie",
+   "start": 73.04,
+   "end": 73.68
+  },
+  {
+   "text": "per",
+   "start": 73.68,
+   "end": 73.9
+  },
+  {
+   "text": "andare",
+   "start": 73.9,
+   "end": 74.18
+  },
+  {
+   "text": "alla",
+   "start": 74.18,
+   "end": 74.52
+  },
+  {
+   "text": "stessa",
+   "start": 74.52,
+   "end": 75.02
+  },
+  {
+   "text": "velocità,",
+   "start": 75.02,
+   "end": 75.62
+  },
+  {
+   "text": "ma",
+   "start": 75.64,
+   "end": 75.86
+  },
+  {
+   "text": "inizi",
+   "start": 75.86,
+   "end": 76.42
+  },
+  {
+   "text": "anche",
+   "start": 76.42,
+   "end": 76.72
+  },
+  {
+   "text": "ad",
+   "start": 76.72,
+   "end": 77.12
+  },
+  {
+   "text": "usare",
+   "start": 77.12,
+   "end": 77.66
+  },
+  {
+   "text": "il",
+   "start": 77.66,
+   "end": 77.98
+  },
+  {
+   "text": "carburante",
+   "start": 77.98,
+   "end": 78.52
+  },
+  {
+   "text": "migliore.",
+   "start": 78.52,
+   "end": 79.06
+  },
+  {
+   "text": "Ad",
+   "start": 79.14,
+   "end": 79.4
+  },
+  {
+   "text": "esempio,",
+   "start": 79.4,
+   "end": 79.7
+  },
+  {
+   "text": "insegni",
+   "start": 79.76,
+   "end": 80.18
+  },
+  {
+   "text": "al",
+   "start": 80.18,
+   "end": 80.28
+  },
+  {
+   "text": "tuo",
+   "start": 80.28,
+   "end": 80.4
+  },
+  {
+   "text": "corpo",
+   "start": 80.4,
+   "end": 80.74
+  },
+  {
+   "text": "ad",
+   "start": 80.74,
+   "end": 81.04
+  },
+  {
+   "text": "utilizzare",
+   "start": 81.04,
+   "end": 81.66
+  },
+  {
+   "text": "meglio",
+   "start": 81.66,
+   "end": 81.92
+  },
+  {
+   "text": "i",
+   "start": 81.92,
+   "end": 82.08
+  },
+  {
+   "text": "grassi",
+   "start": 82.08,
+   "end": 82.54
+  },
+  {
+   "text": "che",
+   "start": 82.54,
+   "end": 82.66
+  },
+  {
+   "text": "hai",
+   "start": 82.66,
+   "end": 82.9
+  },
+  {
+   "text": "in",
+   "start": 82.9,
+   "end": 83.18
+  },
+  {
+   "text": "abbondanza",
+   "start": 83.18,
+   "end": 83.9
+  },
+  {
+   "text": "e",
+   "start": 83.9,
+   "end": 83.96
+  },
+  {
+   "text": "che",
+   "start": 83.96,
+   "end": 84.14
+  },
+  {
+   "text": "bruciano",
+   "start": 84.14,
+   "end": 84.78
+  },
+  {
+   "text": "lentamente.",
+   "start": 84.78,
+   "end": 85.56
+  },
+  {
+   "text": "Questo",
+   "start": 85.82,
+   "end": 86.34
+  },
+  {
+   "text": "non",
+   "start": 86.34,
+   "end": 86.7
+  },
+  {
+   "text": "vuol",
+   "start": 86.7,
+   "end": 86.94
+  },
+  {
+   "text": "dire",
+   "start": 86.94,
+   "end": 87.08
+  },
+  {
+   "text": "che",
+   "start": 87.08,
+   "end": 87.28
+  },
+  {
+   "text": "non",
+   "start": 87.28,
+   "end": 87.42
+  },
+  {
+   "text": "consumi.",
+   "start": 87.42,
+   "end": 87.88
+  },
+  {
+   "text": "Che",
+   "start": 87.88,
+   "end": 87.88
+  },
+  {
+   "text": "non",
+   "start": 87.88,
+   "end": 87.88
+  },
+  {
+   "text": "assumerai",
+   "start": 87.88,
+   "end": 88.18
+  },
+  {
+   "text": "carboidrati,",
+   "start": 88.18,
+   "end": 89.22
+  },
+  {
+   "text": "ma",
+   "start": 89.22,
+   "end": 89.32
+  },
+  {
+   "text": "che",
+   "start": 89.32,
+   "end": 89.42
+  },
+  {
+   "text": "insegnerai",
+   "start": 89.42,
+   "end": 90.08
+  },
+  {
+   "text": "al",
+   "start": 90.08,
+   "end": 90.2
+  },
+  {
+   "text": "tuo",
+   "start": 90.2,
+   "end": 90.34
+  },
+  {
+   "text": "corpo",
+   "start": 90.34,
+   "end": 90.7
+  },
+  {
+   "text": "a",
+   "start": 90.7,
+   "end": 90.9
+  },
+  {
+   "text": "migliorare",
+   "start": 90.9,
+   "end": 91.48
+  },
+  {
+   "text": "la",
+   "start": 91.48,
+   "end": 91.6
+  },
+  {
+   "text": "propria",
+   "start": 91.6,
+   "end": 92.1
+  },
+  {
+   "text": "flessibilità",
+   "start": 92.1,
+   "end": 93.22
+  },
+  {
+   "text": "metabolica.",
+   "start": 93.22,
+   "end": 94.08
+  },
+  {
+   "text": "Che",
+   "start": 94.14,
+   "end": 94.4
+  },
+  {
+   "text": "cos'è",
+   "start": 94.4,
+   "end": 94.82
+  },
+  {
+   "text": "la",
+   "start": 94.82,
+   "end": 94.98
+  },
+  {
+   "text": "flessibilità",
+   "start": 94.98,
+   "end": 95.78
+  },
+  {
+   "text": "metabolica?",
+   "start": 95.78,
+   "end": 96.4
+  },
+  {
+   "text": "È",
+   "start": 96.46,
+   "end": 96.76
+  },
+  {
+   "text": "la",
+   "start": 96.76,
+   "end": 96.88
+  },
+  {
+   "text": "capacità",
+   "start": 96.88,
+   "end": 97.42
+  },
+  {
+   "text": "del",
+   "start": 97.42,
+   "end": 97.56
+  },
+  {
+   "text": "tuo",
+   "start": 97.56,
+   "end": 97.72
+  },
+  {
+   "text": "corpo",
+   "start": 97.72,
+   "end": 98.04
+  },
+  {
+   "text": "di",
+   "start": 98.04,
+   "end": 98.26
+  },
+  {
+   "text": "utilizzare",
+   "start": 98.26,
+   "end": 98.78
+  },
+  {
+   "text": "in",
+   "start": 98.78,
+   "end": 98.86
+  },
+  {
+   "text": "modo",
+   "start": 98.86,
+   "end": 99.0
+  },
+  {
+   "text": "efficiente",
+   "start": 99.0,
+   "end": 99.74
+  },
+  {
+   "text": "diverse",
+   "start": 99.74,
+   "end": 99.94
+  },
+  {
+   "text": "fonti",
+   "start": 99.94,
+   "end": 100.76
+  },
+  {
+   "text": "di",
+   "start": 100.76,
+   "end": 100.84
+  },
+  {
+   "text": "energia,",
+   "start": 100.84,
+   "end": 101.14
+  },
+  {
+   "text": "principalmente",
+   "start": 101.34,
+   "end": 101.94
+  },
+  {
+   "text": "grassi",
+   "start": 101.94,
+   "end": 102.8
+  },
+  {
+   "text": "e",
+   "start": 102.8,
+   "end": 102.8
+  },
+  {
+   "text": "carboidrati,",
+   "start": 102.8,
+   "end": 103.56
+  },
+  {
+   "text": "in",
+   "start": 103.56,
+   "end": 103.72
+  },
+  {
+   "text": "base",
+   "start": 103.72,
+   "end": 103.96
+  },
+  {
+   "text": "all'intensità",
+   "start": 103.96,
+   "end": 104.7
+  },
+  {
+   "text": "dello",
+   "start": 104.7,
+   "end": 104.92
+  },
+  {
+   "text": "sforzo",
+   "start": 104.92,
+   "end": 105.46
+  },
+  {
+   "text": "e",
+   "start": 105.46,
+   "end": 105.52
+  },
+  {
+   "text": "alla",
+   "start": 105.52,
+   "end": 105.62
+  },
+  {
+   "text": "disponibilità",
+   "start": 105.62,
+   "end": 106.66
+  },
+  {
+   "text": "di",
+   "start": 106.66,
+   "end": 106.9
+  },
+  {
+   "text": "nutrienti.",
+   "start": 106.9,
+   "end": 107.42
+  },
+  {
+   "text": "In",
+   "start": 107.56,
+   "end": 107.76
+  },
+  {
+   "text": "parole",
+   "start": 107.76,
+   "end": 107.98
+  },
+  {
+   "text": "semplici,",
+   "start": 107.98,
+   "end": 108.54
+  },
+  {
+   "text": "è",
+   "start": 108.54,
+   "end": 108.8
+  },
+  {
+   "text": "la",
+   "start": 108.8,
+   "end": 108.92
+  },
+  {
+   "text": "capacità",
+   "start": 108.92,
+   "end": 109.44
+  },
+  {
+   "text": "naturale",
+   "start": 109.44,
+   "end": 109.78
+  },
+  {
+   "text": "che",
+   "start": 109.78,
+   "end": 110.1
+  },
+  {
+   "text": "abbiamo",
+   "start": 110.1,
+   "end": 110.32
+  },
+  {
+   "text": "di",
+   "start": 110.32,
+   "end": 110.62
+  },
+  {
+   "text": "cambiare",
+   "start": 110.62,
+   "end": 111.22
+  },
+  {
+   "text": "marcia",
+   "start": 111.22,
+   "end": 111.72
+  },
+  {
+   "text": "tra",
+   "start": 111.72,
+   "end": 111.86
+  },
+  {
+   "text": "i",
+   "start": 111.86,
+   "end": 112.02
+  },
+  {
+   "text": "grassi",
+   "start": 112.02,
+   "end": 112.54
+  },
+  {
+   "text": "e",
+   "start": 112.54,
+   "end": 112.66
+  },
+  {
+   "text": "gli",
+   "start": 112.66,
+   "end": 112.76
+  },
+  {
+   "text": "zuccheri,",
+   "start": 112.76,
+   "end": 113.3
+  },
+  {
+   "text": "come",
+   "start": 113.32,
+   "end": 113.6
+  },
+  {
+   "text": "carburante,",
+   "start": 113.6,
+   "end": 114.3
+  },
+  {
+   "text": "senza",
+   "start": 114.36,
+   "end": 114.72
+  },
+  {
+   "text": "sforzo",
+   "start": 114.72,
+   "end": 115.44
+  },
+  {
+   "text": "e",
+   "start": 115.44,
+   "end": 115.56
+  },
+  {
+   "text": "senza",
+   "start": 115.56,
+   "end": 115.88
+  },
+  {
+   "text": "crisi",
+   "start": 115.88,
+   "end": 116.6
+  },
+  {
+   "text": "energetiche.",
+   "start": 116.6,
+   "end": 117.32
+  },
+  {
+   "text": "In",
+   "start": 117.88,
+   "end": 117.96
+  },
+  {
+   "text": "base",
+   "start": 117.96,
+   "end": 117.96
+  },
+  {
+   "text": "all'intensità,",
+   "start": 117.96,
+   "end": 118.52
+  },
+  {
+   "text": "come",
+   "start": 118.56,
+   "end": 119.06
+  },
+  {
+   "text": "nella",
+   "start": 119.06,
+   "end": 119.24
+  },
+  {
+   "text": "camminata",
+   "start": 119.24,
+   "end": 119.88
+  },
+  {
+   "text": "o",
+   "start": 119.88,
+   "end": 119.96
+  },
+  {
+   "text": "nella",
+   "start": 119.96,
+   "end": 120.1
+  },
+  {
+   "text": "corsa",
+   "start": 120.1,
+   "end": 120.54
+  },
+  {
+   "text": "lenta,",
+   "start": 120.54,
+   "end": 120.94
+  },
+  {
+   "text": "il",
+   "start": 120.96,
+   "end": 121.06
+  },
+  {
+   "text": "corpo",
+   "start": 121.06,
+   "end": 121.34
+  },
+  {
+   "text": "dovrebbe",
+   "start": 121.34,
+   "end": 121.82
+  },
+  {
+   "text": "utilizzare",
+   "start": 121.82,
+   "end": 122.9
+  },
+  {
+   "text": "soprattutto",
+   "start": 122.9,
+   "end": 123.12
+  },
+  {
+   "text": "grassi,",
+   "start": 123.12,
+   "end": 123.88
+  },
+  {
+   "text": "che",
+   "start": 123.88,
+   "end": 124.2
+  },
+  {
+   "text": "sono",
+   "start": 124.2,
+   "end": 124.42
+  },
+  {
+   "text": "la",
+   "start": 124.42,
+   "end": 124.64
+  },
+  {
+   "text": "nostra",
+   "start": 124.64,
+   "end": 124.88
+  },
+  {
+   "text": "fonte",
+   "start": 124.88,
+   "end": 125.56
+  },
+  {
+   "text": "di",
+   "start": 125.56,
+   "end": 125.74
+  },
+  {
+   "text": "energia",
+   "start": 125.74,
+   "end": 125.98
+  },
+  {
+   "text": "più",
+   "start": 125.98,
+   "end": 126.46
+  },
+  {
+   "text": "abbondante",
+   "start": 126.46,
+   "end": 127.28
+  },
+  {
+   "text": "e",
+   "start": 127.28,
+   "end": 127.4
+  },
+  {
+   "text": "stabile.",
+   "start": 127.4,
+   "end": 127.88
+  },
+  {
+   "text": "Mano",
+   "start": 127.96,
+   "end": 128.42
+  },
+  {
+   "text": "a",
+   "start": 128.42,
+   "end": 128.42
+  },
+  {
+   "text": "mano",
+   "start": 128.42,
+   "end": 128.68
+  },
+  {
+   "text": "che",
+   "start": 128.68,
+   "end": 128.88
+  },
+  {
+   "text": "l'intensità",
+   "start": 128.88,
+   "end": 129.64
+  },
+  {
+   "text": "si",
+   "start": 129.64,
+   "end": 129.8
+  },
+  {
+   "text": "alza,",
+   "start": 129.8,
+   "end": 130.3
+  },
+  {
+   "text": "fino",
+   "start": 130.3,
+   "end": 130.54
+  },
+  {
+   "text": "ad",
+   "start": 130.54,
+   "end": 130.92
+  },
+  {
+   "text": "arrivare",
+   "start": 130.92,
+   "end": 131.56
+  },
+  {
+   "text": "a",
+   "start": 131.56,
+   "end": 132.02
+  },
+  {
+   "text": "sprint",
+   "start": 132.02,
+   "end": 132.46
+  },
+  {
+   "text": "o",
+   "start": 132.46,
+   "end": 132.92
+  },
+  {
+   "text": "a",
+   "start": 132.92,
+   "end": 133.16
+  },
+  {
+   "text": "sforzi",
+   "start": 133.16,
+   "end": 133.64
+  },
+  {
+   "text": "massimali,",
+   "start": 133.64,
+   "end": 134.18
+  },
+  {
+   "text": "il",
+   "start": 134.24,
+   "end": 134.6
+  },
+  {
+   "text": "corpo",
+   "start": 134.6,
+   "end": 134.92
+  },
+  {
+   "text": "passa",
+   "start": 134.92,
+   "end": 135.36
+  },
+  {
+   "text": "sempre",
+   "start": 135.36,
+   "end": 135.98
+  },
+  {
+   "text": "di",
+   "start": 135.98,
+   "end": 136.2
+  },
+  {
+   "text": "più",
+   "start": 136.2,
+   "end": 136.42
+  },
+  {
+   "text": "a",
+   "start": 136.42,
+   "end": 136.6
+  },
+  {
+   "text": "bruciare",
+   "start": 136.6,
+   "end": 137.14
+  },
+  {
+   "text": "principalmente",
+   "start": 137.14,
+   "end": 137.64
+  },
+  {
+   "text": "i",
+   "start": 137.64,
+   "end": 138.3
+  },
+  {
+   "text": "carboidrati,",
+   "start": 138.3,
+   "end": 139.04
+  },
+  {
+   "text": "perché",
+   "start": 139.04,
+   "end": 139.24
+  },
+  {
+   "text": "forniscono",
+   "start": 139.24,
+   "end": 140.12
+  },
+  {
+   "text": "energia",
+   "start": 140.12,
+   "end": 140.46
+  },
+  {
+   "text": "più",
+   "start": 140.46,
+   "end": 140.96
+  },
+  {
+   "text": "rapidamente,",
+   "start": 140.96,
+   "end": 141.58
+  },
+  {
+   "text": "anche",
+   "start": 141.58,
+   "end": 142.06
+  },
+  {
+   "text": "se",
+   "start": 142.06,
+   "end": 142.34
+  },
+  {
+   "text": "sono",
+   "start": 142.34,
+   "end": 142.58
+  },
+  {
+   "text": "limitati.",
+   "start": 142.58,
+   "end": 143.14
+  },
+  {
+   "text": "Perché",
+   "start": 143.24,
+   "end": 143.6
+  },
+  {
+   "text": "sapere",
+   "start": 143.6,
+   "end": 144.08
+  },
+  {
+   "text": "tutto",
+   "start": 144.08,
+   "end": 144.28
+  },
+  {
+   "text": "ciò",
+   "start": 144.28,
+   "end": 144.66
+  },
+  {
+   "text": "è",
+   "start": 144.66,
+   "end": 144.78
+  },
+  {
+   "text": "importante",
+   "start": 144.78,
+   "end": 145.16
+  },
+  {
+   "text": "per",
+   "start": 145.16,
+   "end": 145.68
+  },
+  {
+   "text": "chi",
+   "start": 145.68,
+   "end": 145.96
+  },
+  {
+   "text": "corre?",
+   "start": 145.96,
+   "end": 146.46
+  },
+  {
+   "text": "Innanzitutto",
+   "start": 148.8,
+   "end": 149.44
+  },
+  {
+   "text": "perché",
+   "start": 149.44,
+   "end": 149.62
+  },
+  {
+   "text": "ti",
+   "start": 149.62,
+   "end": 149.98
+  },
+  {
+   "text": "permette",
+   "start": 149.98,
+   "end": 150.48
+  },
+  {
+   "text": "di",
+   "start": 150.48,
+   "end": 150.62
+  },
+  {
+   "text": "correre",
+   "start": 150.62,
+   "end": 150.94
+  },
+  {
+   "text": "a",
+   "start": 150.94,
+   "end": 151.1
+  },
+  {
+   "text": "lungo",
+   "start": 151.1,
+   "end": 151.48
+  },
+  {
+   "text": "senza",
+   "start": 151.48,
+   "end": 151.62
+  },
+  {
+   "text": "esaurire",
+   "start": 151.62,
+   "end": 152.34
+  },
+  {
+   "text": "le",
+   "start": 152.34,
+   "end": 152.5
+  },
+  {
+   "text": "scorte",
+   "start": 152.5,
+   "end": 152.82
+  },
+  {
+   "text": "energetiche.",
+   "start": 152.82,
+   "end": 153.52
+  },
+  {
+   "text": "Poi",
+   "start": 153.62,
+   "end": 153.96
+  },
+  {
+   "text": "riduce",
+   "start": 153.96,
+   "end": 154.68
+  },
+  {
+   "text": "il",
+   "start": 154.68,
+   "end": 154.82
+  },
+  {
+   "text": "rischio",
+   "start": 154.82,
+   "end": 155.16
+  },
+  {
+   "text": "di",
+   "start": 155.16,
+   "end": 155.24
+  },
+  {
+   "text": "crolli",
+   "start": 155.24,
+   "end": 155.58
+  },
+  {
+   "text": "improvvisi",
+   "start": 155.58,
+   "end": 156.2
+  },
+  {
+   "text": "e",
+   "start": 156.2,
+   "end": 156.38
+  },
+  {
+   "text": "di",
+   "start": 156.38,
+   "end": 156.56
+  },
+  {
+   "text": "crisi",
+   "start": 156.56,
+   "end": 157.18
+  },
+  {
+   "text": "di",
+   "start": 157.18,
+   "end": 157.24
+  },
+  {
+   "text": "fame",
+   "start": 157.24,
+   "end": 157.48
+  },
+  {
+   "text": "durante",
+   "start": 157.48,
+   "end": 157.82
+  },
+  {
+   "text": "gli",
+   "start": 157.82,
+   "end": 158.06
+  },
+  {
+   "text": "allenamenti",
+   "start": 158.06,
+   "end": 158.66
+  },
+  {
+   "text": "e",
+   "start": 158.66,
+   "end": 158.82
+  },
+  {
+   "text": "durante",
+   "start": 158.82,
+   "end": 159.08
+  },
+  {
+   "text": "le",
+   "start": 159.08,
+   "end": 159.34
+  },
+  {
+   "text": "gare.",
+   "start": 159.34,
+   "end": 159.66
+  },
+  {
+   "text": "Inoltre",
+   "start": 159.72,
+   "end": 160.26
+  },
+  {
+   "text": "migliora",
+   "start": 160.26,
+   "end": 160.82
+  },
+  {
+   "text": "la",
+   "start": 160.82,
+   "end": 160.94
+  },
+  {
+   "text": "gestione",
+   "start": 160.94,
+   "end": 161.64
+  },
+  {
+   "text": "del",
+   "start": 161.64,
+   "end": 161.78
+  },
+  {
+   "text": "recupero",
+   "start": 161.78,
+   "end": 162.44
+  },
+  {
+   "text": "e",
+   "start": 162.44,
+   "end": 162.54
+  },
+  {
+   "text": "dell'affaticamento",
+   "start": 162.54,
+   "end": 163.56
+  },
+  {
+   "text": "e",
+   "start": 163.56,
+   "end": 163.88
+  },
+  {
+   "text": "ti",
+   "start": 163.88,
+   "end": 164.06
+  },
+  {
+   "text": "rende",
+   "start": 164.06,
+   "end": 164.6
+  },
+  {
+   "text": "più",
+   "start": 164.6,
+   "end": 164.82
+  },
+  {
+   "text": "efficiente",
+   "start": 164.82,
+   "end": 165.78
+  },
+  {
+   "text": "e",
+   "start": 165.78,
+   "end": 166.04
+  },
+  {
+   "text": "meno",
+   "start": 166.04,
+   "end": 166.36
+  },
+  {
+   "text": "dipendente",
+   "start": 166.36,
+   "end": 167.12
+  },
+  {
+   "text": "da",
+   "start": 167.12,
+   "end": 167.42
+  },
+  {
+   "text": "zuccheri",
+   "start": 167.42,
+   "end": 167.74
+  },
+  {
+   "text": "esterni.",
+   "start": 167.74,
+   "end": 168.26
+  },
+  {
+   "text": "Poi",
+   "start": 168.3,
+   "end": 168.74
+  },
+  {
+   "text": "è",
+   "start": 168.74,
+   "end": 169.1
+  },
+  {
+   "text": "legata",
+   "start": 169.1,
+   "end": 169.68
+  },
+  {
+   "text": "a",
+   "start": 169.68,
+   "end": 169.92
+  },
+  {
+   "text": "una",
+   "start": 169.92,
+   "end": 170.12
+  },
+  {
+   "text": "migliore",
+   "start": 170.12,
+   "end": 170.76
+  },
+  {
+   "text": "salute",
+   "start": 170.76,
+   "end": 171.04
+  },
+  {
+   "text": "metabolica",
+   "start": 171.04,
+   "end": 172.06
+  },
+  {
+   "text": "generale",
+   "start": 172.06,
+   "end": 172.7
+  },
+  {
+   "text": "anche",
+   "start": 172.7,
+   "end": 173.08
+  },
+  {
+   "text": "fuori",
+   "start": 173.08,
+   "end": 173.76
+  },
+  {
+   "text": "dalla",
+   "start": 173.76,
+   "end": 174.02
+  },
+  {
+   "text": "corsa.",
+   "start": 174.02,
+   "end": 174.5
+  },
+  {
+   "text": "Più",
+   "start": 174.64,
+   "end": 175.04
+  },
+  {
+   "text": "rendi",
+   "start": 175.04,
+   "end": 175.44
+  },
+  {
+   "text": "efficiente",
+   "start": 175.44,
+   "end": 175.9
+  },
+  {
+   "text": "il",
+   "start": 175.9,
+   "end": 175.94
+  },
+  {
+   "text": "tuo",
+   "start": 175.94,
+   "end": 176.06
+  },
+  {
+   "text": "corpo,",
+   "start": 176.06,
+   "end": 176.42
+  },
+  {
+   "text": "più",
+   "start": 176.46,
+   "end": 176.7
+  },
+  {
+   "text": "chilometri",
+   "start": 176.7,
+   "end": 177.28
+  },
+  {
+   "text": "puoi",
+   "start": 177.28,
+   "end": 177.48
+  },
+  {
+   "text": "fare,",
+   "start": 177.48,
+   "end": 177.8
+  },
+  {
+   "text": "più",
+   "start": 177.8,
+   "end": 178.06
+  },
+  {
+   "text": "a",
+   "start": 178.06,
+   "end": 178.46
+  },
+  {
+   "text": "lungo",
+   "start": 178.46,
+   "end": 178.9
+  },
+  {
+   "text": "puoi",
+   "start": 178.9,
+   "end": 179.08
+  },
+  {
+   "text": "correre",
+   "start": 179.08,
+   "end": 179.42
+  },
+  {
+   "text": "e",
+   "start": 179.42,
+   "end": 179.66
+  },
+  {
+   "text": "più",
+   "start": 179.66,
+   "end": 179.82
+  },
+  {
+   "text": "forte",
+   "start": 179.82,
+   "end": 180.2
+  },
+  {
+   "text": "puoi",
+   "start": 180.2,
+   "end": 180.62
+  },
+  {
+   "text": "spingere,",
+   "start": 180.62,
+   "end": 181.2
+  },
+  {
+   "text": "senza",
+   "start": 181.26,
+   "end": 181.72
+  },
+  {
+   "text": "esaurire",
+   "start": 181.72,
+   "end": 182.42
+  },
+  {
+   "text": "le",
+   "start": 182.42,
+   "end": 182.62
+  },
+  {
+   "text": "risorse",
+   "start": 182.62,
+   "end": 183.16
+  },
+  {
+   "text": "e",
+   "start": 183.16,
+   "end": 183.32
+  },
+  {
+   "text": "senza",
+   "start": 183.32,
+   "end": 183.68
+  },
+  {
+   "text": "mandare",
+   "start": 183.68,
+   "end": 184.46
+  },
+  {
+   "text": "in",
+   "start": 184.46,
+   "end": 184.68
+  },
+  {
+   "text": "crisi",
+   "start": 184.68,
+   "end": 185.14
+  },
+  {
+   "text": "il",
+   "start": 185.14,
+   "end": 185.38
+  },
+  {
+   "text": "motore.",
+   "start": 185.38,
+   "end": 185.76
+  },
+  {
+   "text": "Questo",
+   "start": 185.84,
+   "end": 186.2
+  },
+  {
+   "text": "è",
+   "start": 186.2,
+   "end": 186.4
+  },
+  {
+   "text": "il",
+   "start": 186.4,
+   "end": 186.42
+  },
+  {
+   "text": "vero",
+   "start": 186.42,
+   "end": 186.64
+  },
+  {
+   "text": "segreto",
+   "start": 186.64,
+   "end": 186.98
+  },
+  {
+   "text": "per",
+   "start": 186.98,
+   "end": 187.18
+  },
+  {
+   "text": "correre",
+   "start": 187.18,
+   "end": 187.56
+  },
+  {
+   "text": "meglio,",
+   "start": 187.56,
+   "end": 187.84
+  },
+  {
+   "text": "diventare",
+   "start": 188.08,
+   "end": 188.6
+  },
+  {
+   "text": "economici,",
+   "start": 188.6,
+   "end": 189.22
+  },
+  {
+   "text": "risparmiare",
+   "start": 189.22,
+   "end": 189.76
+  },
+  {
+   "text": "energia",
+   "start": 189.76,
+   "end": 190.06
+  },
+  {
+   "text": "e",
+   "start": 190.06,
+   "end": 190.42
+  },
+  {
+   "text": "lasciare",
+   "start": 190.42,
+   "end": 191.24
+  },
+  {
+   "text": "che",
+   "start": 191.24,
+   "end": 191.38
+  },
+  {
+   "text": "il",
+   "start": 191.38,
+   "end": 191.44
+  },
+  {
+   "text": "corpo",
+   "start": 191.44,
+   "end": 191.7
+  },
+  {
+   "text": "lavori",
+   "start": 191.7,
+   "end": 192.24
+  },
+  {
+   "text": "nella",
+   "start": 192.24,
+   "end": 192.42
+  },
+  {
+   "text": "sua",
+   "start": 192.42,
+   "end": 192.72
+  },
+  {
+   "text": "zona",
+   "start": 192.72,
+   "end": 193.08
+  },
+  {
+   "text": "naturale",
+   "start": 193.08,
+   "end": 193.54
+  },
+  {
+   "text": "di",
+   "start": 193.54,
+   "end": 193.96
+  },
+  {
+   "text": "massima",
+   "start": 193.96,
+   "end": 194.38
+  },
+  {
+   "text": "efficienza.",
+   "start": 194.38,
+   "end": 194.92
+  },
+  {
+   "text": "Perché",
+   "start": 195.06,
+   "end": 195.46
+  },
+  {
+   "text": "la",
+   "start": 195.46,
+   "end": 196.02
+  },
+  {
+   "text": "fatica",
+   "start": 196.02,
+   "end": 196.44
+  },
+  {
+   "text": "non",
+   "start": 196.44,
+   "end": 196.58
+  },
+  {
+   "text": "è",
+   "start": 196.58,
+   "end": 196.7
+  },
+  {
+   "text": "solo",
+   "start": 196.7,
+   "end": 197.04
+  },
+  {
+   "text": "una",
+   "start": 197.04,
+   "end": 197.26
+  },
+  {
+   "text": "questione",
+   "start": 197.26,
+   "end": 197.86
+  },
+  {
+   "text": "di",
+   "start": 197.86,
+   "end": 197.92
+  },
+  {
+   "text": "gambe,",
+   "start": 197.92,
+   "end": 198.38
+  },
+  {
+   "text": "ma",
+   "start": 198.42,
+   "end": 198.76
+  },
+  {
+   "text": "di",
+   "start": 198.76,
+   "end": 198.9
+  },
+  {
+   "text": "come",
+   "start": 198.9,
+   "end": 199.22
+  },
+  {
+   "text": "gestisci",
+   "start": 199.22,
+   "end": 200.14
+  },
+  {
+   "text": "il",
+   "start": 200.14,
+   "end": 200.4
+  },
+  {
+   "text": "carburante",
+   "start": 200.4,
+   "end": 201.34
+  },
+  {
+   "text": "che",
+   "start": 201.34,
+   "end": 201.62
+  },
+  {
+   "text": "hai",
+   "start": 201.62,
+   "end": 201.74
+  },
+  {
+   "text": "dentro.",
+   "start": 201.74,
+   "end": 202.04
+  },
+  {
+   "text": "La",
+   "start": 202.32,
+   "end": 202.5
+  },
+  {
+   "text": "corsa",
+   "start": 202.5,
+   "end": 202.84
+  },
+  {
+   "text": "funziona",
+   "start": 202.84,
+   "end": 203.64
+  },
+  {
+   "text": "proprio",
+   "start": 203.64,
+   "end": 203.98
+  },
+  {
+   "text": "allo",
+   "start": 203.98,
+   "end": 204.22
+  },
+  {
+   "text": "stesso",
+   "start": 204.22,
+   "end": 204.4
+  },
+  {
+   "text": "modo.",
+   "start": 204.4,
+   "end": 204.78
+  },
+  {
+   "text": "Quando",
+   "start": 204.84,
+   "end": 205.1
+  },
+  {
+   "text": "diventi",
+   "start": 205.1,
+   "end": 205.72
+  },
+  {
+   "text": "più",
+   "start": 205.72,
+   "end": 205.84
+  },
+  {
+   "text": "efficiente,",
+   "start": 205.84,
+   "end": 206.46
+  },
+  {
+   "text": "riesci",
+   "start": 206.46,
+   "end": 206.84
+  },
+  {
+   "text": "a",
+   "start": 206.84,
+   "end": 206.9
+  },
+  {
+   "text": "trasformare",
+   "start": 206.9,
+   "end": 207.6
+  },
+  {
+   "text": "meglio",
+   "start": 207.6,
+   "end": 207.84
+  },
+  {
+   "text": "l'aria",
+   "start": 207.84,
+   "end": 208.48
+  },
+  {
+   "text": "che",
+   "start": 208.52,
+   "end": 208.66
+  },
+  {
+   "text": "respiri",
+   "start": 208.66,
+   "end": 209.22
+  },
+  {
+   "text": "e",
+   "start": 209.22,
+   "end": 209.44
+  },
+  {
+   "text": "il",
+   "start": 209.44,
+   "end": 209.58
+  },
+  {
+   "text": "cibo",
+   "start": 209.58,
+   "end": 209.88
+  },
+  {
+   "text": "che",
+   "start": 209.88,
+   "end": 210.0
+  },
+  {
+   "text": "mangi",
+   "start": 210.0,
+   "end": 210.46
+  },
+  {
+   "text": "in",
+   "start": 210.46,
+   "end": 210.62
+  },
+  {
+   "text": "energia",
+   "start": 210.62,
+   "end": 210.9
+  },
+  {
+   "text": "utile",
+   "start": 210.9,
+   "end": 211.64
+  },
+  {
+   "text": "per",
+   "start": 211.64,
+   "end": 211.82
+  },
+  {
+   "text": "muoverti.",
+   "start": 211.82,
+   "end": 212.32
+  },
+  {
+   "text": "Questo",
+   "start": 212.4,
+   "end": 212.88
+  },
+  {
+   "text": "vuol",
+   "start": 212.88,
+   "end": 213.56
+  },
+  {
+   "text": "dire",
+   "start": 213.56,
+   "end": 213.74
+  },
+  {
+   "text": "che",
+   "start": 213.74,
+   "end": 214.22
+  },
+  {
+   "text": "stai",
+   "start": 214.22,
+   "end": 214.46
+  },
+  {
+   "text": "migliorando",
+   "start": 214.46,
+   "end": 214.94
+  },
+  {
+   "text": "la",
+   "start": 214.94,
+   "end": 215.04
+  },
+  {
+   "text": "tua",
+   "start": 215.04,
+   "end": 215.16
+  },
+  {
+   "text": "capacità",
+   "start": 215.16,
+   "end": 215.74
+  },
+  {
+   "text": "di",
+   "start": 215.74,
+   "end": 215.9
+  },
+  {
+   "text": "portare",
+   "start": 215.9,
+   "end": 216.28
+  },
+  {
+   "text": "ossigeno",
+   "start": 216.28,
+   "end": 216.8
+  },
+  {
+   "text": "ai",
+   "start": 216.8,
+   "end": 216.88
+  },
+  {
+   "text": "muscoli,",
+   "start": 216.88,
+   "end": 217.4
+  },
+  {
+   "text": "che",
+   "start": 217.42,
+   "end": 217.68
+  },
+  {
+   "text": "stai",
+   "start": 217.68,
+   "end": 217.88
+  },
+  {
+   "text": "sfruttando",
+   "start": 217.88,
+   "end": 218.44
+  },
+  {
+   "text": "meglio",
+   "start": 218.44,
+   "end": 218.74
+  },
+  {
+   "text": "i",
+   "start": 218.74,
+   "end": 218.9
+  },
+  {
+   "text": "grassi",
+   "start": 218.9,
+   "end": 219.28
+  },
+  {
+   "text": "come",
+   "start": 219.28,
+   "end": 219.42
+  },
+  {
+   "text": "carburante",
+   "start": 219.42,
+   "end": 219.98
+  },
+  {
+   "text": "principale,",
+   "start": 219.98,
+   "end": 220.6
+  },
+  {
+   "text": "che",
+   "start": 220.66,
+   "end": 220.74
+  },
+  {
+   "text": "stai",
+   "start": 220.74,
+   "end": 220.96
+  },
+  {
+   "text": "producendo",
+   "start": 220.96,
+   "end": 221.52
+  },
+  {
+   "text": "meno",
+   "start": 221.52,
+   "end": 221.92
+  },
+  {
+   "text": "scorte",
+   "start": 221.92,
+   "end": 222.4
+  },
+  {
+   "text": "metaboliche",
+   "start": 222.4,
+   "end": 223.1
+  },
+  {
+   "text": "e",
+   "start": 223.1,
+   "end": 223.24
+  },
+  {
+   "text": "che",
+   "start": 223.24,
+   "end": 223.38
+  },
+  {
+   "text": "le",
+   "start": 223.38,
+   "end": 223.54
+  },
+  {
+   "text": "smaltisci",
+   "start": 223.54,
+   "end": 224.36
+  },
+  {
+   "text": "più",
+   "start": 224.36,
+   "end": 224.58
+  },
+  {
+   "text": "in",
+   "start": 224.58,
+   "end": 224.68
+  },
+  {
+   "text": "fretta.",
+   "start": 224.68,
+   "end": 225.12
+  },
+  {
+   "text": "E",
+   "start": 225.18,
+   "end": 225.32
+  },
+  {
+   "text": "tutto",
+   "start": 225.32,
+   "end": 225.5
+  },
+  {
+   "text": "questo",
+   "start": 225.5,
+   "end": 225.86
+  },
+  {
+   "text": "si",
+   "start": 225.86,
+   "end": 226.04
+  },
+  {
+   "text": "traduce",
+   "start": 226.04,
+   "end": 226.46
+  },
+  {
+   "text": "in",
+   "start": 226.46,
+   "end": 226.58
+  },
+  {
+   "text": "meno",
+   "start": 226.58,
+   "end": 226.7
+  },
+  {
+   "text": "fatica,",
+   "start": 226.7,
+   "end": 227.12
+  },
+  {
+   "text": "meno",
+   "start": 227.12,
+   "end": 227.3
+  },
+  {
+   "text": "stress",
+   "start": 227.3,
+   "end": 227.62
+  },
+  {
+   "text": "sul",
+   "start": 227.62,
+   "end": 227.88
+  },
+  {
+   "text": "corpo,",
+   "start": 227.88,
+   "end": 228.24
+  },
+  {
+   "text": "meno",
+   "start": 228.46,
+   "end": 229.02
+  },
+  {
+   "text": "rischio",
+   "start": 229.02,
+   "end": 229.7
+  },
+  {
+   "text": "di",
+   "start": 229.7,
+   "end": 229.78
+  },
+  {
+   "text": "infortuni",
+   "start": 229.78,
+   "end": 230.44
+  },
+  {
+   "text": "e",
+   "start": 230.44,
+   "end": 230.7
+  },
+  {
+   "text": "prestazioni",
+   "start": 230.7,
+   "end": 231.42
+  },
+  {
+   "text": "migliori.",
+   "start": 231.42,
+   "end": 232.04
+  },
+  {
+   "text": "Indovina",
+   "start": 232.2,
+   "end": 232.68
+  },
+  {
+   "text": "un",
+   "start": 232.68,
+   "end": 232.76
+  },
+  {
+   "text": "po'",
+   "start": 232.76,
+   "end": 232.82
+  },
+  {
+   "text": "a",
+   "start": 232.94,
+   "end": 233.28
+  },
+  {
+   "text": "parità",
+   "start": 233.28,
+   "end": 233.62
+  },
+  {
+   "text": "di",
+   "start": 233.62,
+   "end": 233.76
+  },
+  {
+   "text": "sforzo.",
+   "start": 233.76,
+   "end": 234.3
+  },
+  {
+   "text": "Per",
+   "start": 234.38,
+   "end": 234.62
+  },
+  {
+   "text": "correre",
+   "start": 234.62,
+   "end": 234.98
+  },
+  {
+   "text": "meglio,",
+   "start": 234.98,
+   "end": 235.34
+  },
+  {
+   "text": "più",
+   "start": 235.4,
+   "end": 235.56
+  },
+  {
+   "text": "a",
+   "start": 235.56,
+   "end": 235.66
+  },
+  {
+   "text": "lungo",
+   "start": 235.66,
+   "end": 235.96
+  },
+  {
+   "text": "e",
+   "start": 235.96,
+   "end": 236.0
+  },
+  {
+   "text": "più",
+   "start": 236.0,
+   "end": 236.12
+  },
+  {
+   "text": "forte,",
+   "start": 236.12,
+   "end": 236.48
+  },
+  {
+   "text": "però,",
+   "start": 236.62,
+   "end": 237.0
+  },
+  {
+   "text": "devi",
+   "start": 237.8,
+   "end": 238.04
+  },
+  {
+   "text": "prima",
+   "start": 238.04,
+   "end": 238.04
+  },
+  {
+   "text": "imparare",
+   "start": 238.04,
+   "end": 238.76
+  },
+  {
+   "text": "a",
+   "start": 238.76,
+   "end": 238.88
+  },
+  {
+   "text": "correre",
+   "start": 238.88,
+   "end": 239.48
+  },
+  {
+   "text": "più",
+   "start": 239.48,
+   "end": 239.84
+  },
+  {
+   "text": "lentamente.",
+   "start": 239.84,
+   "end": 240.42
+  },
+  {
+   "text": "Ma",
+   "start": 240.66,
+   "end": 240.8
+  },
+  {
+   "text": "attenzione,",
+   "start": 240.8,
+   "end": 241.36
+  },
+  {
+   "text": "non",
+   "start": 241.38,
+   "end": 241.66
+  },
+  {
+   "text": "sto",
+   "start": 241.66,
+   "end": 241.84
+  },
+  {
+   "text": "parlando",
+   "start": 241.84,
+   "end": 242.28
+  },
+  {
+   "text": "di",
+   "start": 242.28,
+   "end": 242.48
+  },
+  {
+   "text": "correre",
+   "start": 242.48,
+   "end": 242.96
+  },
+  {
+   "text": "piano",
+   "start": 242.96,
+   "end": 243.34
+  },
+  {
+   "text": "tanto",
+   "start": 243.34,
+   "end": 243.86
+  },
+  {
+   "text": "per",
+   "start": 243.86,
+   "end": 244.18
+  },
+  {
+   "text": "fare,",
+   "start": 244.18,
+   "end": 244.56
+  },
+  {
+   "text": "di",
+   "start": 244.68,
+   "end": 244.94
+  },
+  {
+   "text": "correre",
+   "start": 244.94,
+   "end": 245.26
+  },
+  {
+   "text": "piano",
+   "start": 245.26,
+   "end": 245.52
+  },
+  {
+   "text": "fine",
+   "start": 245.52,
+   "end": 246.1
+  },
+  {
+   "text": "a",
+   "start": 246.1,
+   "end": 246.28
+  },
+  {
+   "text": "se",
+   "start": 246.28,
+   "end": 246.44
+  },
+  {
+   "text": "stesso.",
+   "start": 246.44,
+   "end": 246.76
+  },
+  {
+   "text": "Sto",
+   "start": 247.0,
+   "end": 247.2
+  },
+  {
+   "text": "parlando",
+   "start": 247.2,
+   "end": 247.78
+  },
+  {
+   "text": "di",
+   "start": 247.78,
+   "end": 247.96
+  },
+  {
+   "text": "un",
+   "start": 247.96,
+   "end": 248.12
+  },
+  {
+   "text": "lento,",
+   "start": 248.12,
+   "end": 248.64
+  },
+  {
+   "text": "di",
+   "start": 248.7,
+   "end": 248.76
+  },
+  {
+   "text": "una",
+   "start": 248.76,
+   "end": 248.9
+  },
+  {
+   "text": "bassa",
+   "start": 248.9,
+   "end": 249.38
+  },
+  {
+   "text": "intensità",
+   "start": 249.38,
+   "end": 249.98
+  },
+  {
+   "text": "attiva,",
+   "start": 249.98,
+   "end": 250.7
+  },
+  {
+   "text": "consapevole",
+   "start": 250.7,
+   "end": 251.62
+  },
+  {
+   "text": "e",
+   "start": 251.62,
+   "end": 251.66
+  },
+  {
+   "text": "di",
+   "start": 251.66,
+   "end": 251.76
+  },
+  {
+   "text": "qualità.",
+   "start": 251.76,
+   "end": 252.16
+  },
+  {
+   "text": "Quel",
+   "start": 252.24,
+   "end": 252.64
+  },
+  {
+   "text": "tipo",
+   "start": 252.64,
+   "end": 252.86
+  },
+  {
+   "text": "di",
+   "start": 252.86,
+   "end": 253.02
+  },
+  {
+   "text": "corsa",
+   "start": 253.02,
+   "end": 253.28
+  },
+  {
+   "text": "che",
+   "start": 253.28,
+   "end": 253.48
+  },
+  {
+   "text": "permette",
+   "start": 253.48,
+   "end": 253.94
+  },
+  {
+   "text": "al",
+   "start": 253.94,
+   "end": 254.08
+  },
+  {
+   "text": "tuo",
+   "start": 254.08,
+   "end": 254.2
+  },
+  {
+   "text": "corpo",
+   "start": 254.2,
+   "end": 254.52
+  },
+  {
+   "text": "di",
+   "start": 254.52,
+   "end": 254.74
+  },
+  {
+   "text": "sviluppare",
+   "start": 254.74,
+   "end": 255.5
+  },
+  {
+   "text": "e",
+   "start": 255.5,
+   "end": 255.56
+  },
+  {
+   "text": "riprendere",
+   "start": 255.56,
+   "end": 256.28
+  },
+  {
+   "text": "la",
+   "start": 256.28,
+   "end": 256.48
+  },
+  {
+   "text": "capacità",
+   "start": 256.48,
+   "end": 257.04
+  },
+  {
+   "text": "che",
+   "start": 257.04,
+   "end": 257.36
+  },
+  {
+   "text": "la",
+   "start": 257.36,
+   "end": 257.48
+  },
+  {
+   "text": "natura",
+   "start": 257.48,
+   "end": 257.82
+  },
+  {
+   "text": "ti",
+   "start": 257.82,
+   "end": 257.92
+  },
+  {
+   "text": "ha",
+   "start": 257.92,
+   "end": 258.0
+  },
+  {
+   "text": "dato.",
+   "start": 258.0,
+   "end": 258.2
+  },
+  {
+   "text": "La",
+   "start": 258.36,
+   "end": 258.74
+  },
+  {
+   "text": "maggior",
+   "start": 258.74,
+   "end": 259.0
+  },
+  {
+   "text": "parte",
+   "start": 259.0,
+   "end": 259.24
+  },
+  {
+   "text": "delle",
+   "start": 259.24,
+   "end": 259.64
+  },
+  {
+   "text": "persone",
+   "start": 259.64,
+   "end": 260.0
+  },
+  {
+   "text": "corre",
+   "start": 260.0,
+   "end": 260.34
+  },
+  {
+   "text": "sempre",
+   "start": 260.34,
+   "end": 260.62
+  },
+  {
+   "text": "troppo",
+   "start": 260.62,
+   "end": 261.24
+  },
+  {
+   "text": "forte,",
+   "start": 261.24,
+   "end": 261.62
+  },
+  {
+   "text": "anche",
+   "start": 261.82,
+   "end": 262.22
+  },
+  {
+   "text": "quando",
+   "start": 262.22,
+   "end": 262.5
+  },
+  {
+   "text": "dovrebbe",
+   "start": 262.5,
+   "end": 262.98
+  },
+  {
+   "text": "stare",
+   "start": 262.98,
+   "end": 263.4
+  },
+  {
+   "text": "in",
+   "start": 263.4,
+   "end": 263.64
+  },
+  {
+   "text": "fase",
+   "start": 263.64,
+   "end": 263.92
+  },
+  {
+   "text": "di",
+   "start": 263.92,
+   "end": 264.2
+  },
+  {
+   "text": "rigenerazione.",
+   "start": 264.2,
+   "end": 265.08
+  },
+  {
+   "text": "E",
+   "start": 265.08,
+   "end": 265.28
+  },
+  {
+   "text": "così",
+   "start": 265.28,
+   "end": 265.54
+  },
+  {
+   "text": "il",
+   "start": 265.54,
+   "end": 265.88
+  },
+  {
+   "text": "corpo",
+   "start": 265.88,
+   "end": 266.34
+  },
+  {
+   "text": "non",
+   "start": 266.34,
+   "end": 266.56
+  },
+  {
+   "text": "migliora,",
+   "start": 266.56,
+   "end": 267.02
+  },
+  {
+   "text": "anzi",
+   "start": 267.04,
+   "end": 267.6
+  },
+  {
+   "text": "accumula",
+   "start": 267.6,
+   "end": 268.34
+  },
+  {
+   "text": "solo",
+   "start": 268.34,
+   "end": 268.5
+  },
+  {
+   "text": "stress.",
+   "start": 268.5,
+   "end": 268.82
+  },
+  {
+   "text": "Per",
+   "start": 269.06,
+   "end": 269.44
+  },
+  {
+   "text": "diventare",
+   "start": 269.44,
+   "end": 269.96
+  },
+  {
+   "text": "davvero",
+   "start": 269.96,
+   "end": 270.26
+  },
+  {
+   "text": "più",
+   "start": 270.26,
+   "end": 270.4
+  },
+  {
+   "text": "efficiente",
+   "start": 270.4,
+   "end": 271.08
+  },
+  {
+   "text": "devi",
+   "start": 271.08,
+   "end": 271.58
+  },
+  {
+   "text": "dedicare",
+   "start": 271.58,
+   "end": 272.24
+  },
+  {
+   "text": "la",
+   "start": 272.24,
+   "end": 272.36
+  },
+  {
+   "text": "maggior",
+   "start": 272.36,
+   "end": 272.76
+  },
+  {
+   "text": "parte",
+   "start": 272.76,
+   "end": 273.0
+  },
+  {
+   "text": "del",
+   "start": 273.0,
+   "end": 273.26
+  },
+  {
+   "text": "tempo",
+   "start": 273.26,
+   "end": 273.6
+  },
+  {
+   "text": "a",
+   "start": 273.6,
+   "end": 273.94
+  },
+  {
+   "text": "intensità",
+   "start": 273.94,
+   "end": 274.44
+  },
+  {
+   "text": "basse.",
+   "start": 274.44,
+   "end": 274.92
+  },
+  {
+   "text": "Così",
+   "start": 274.94,
+   "end": 275.36
+  },
+  {
+   "text": "alleni",
+   "start": 275.36,
+   "end": 276.14
+  },
+  {
+   "text": "il",
+   "start": 276.14,
+   "end": 276.38
+  },
+  {
+   "text": "motore",
+   "start": 276.38,
+   "end": 276.74
+  },
+  {
+   "text": "aerobico.",
+   "start": 276.74,
+   "end": 277.16
+  },
+  {
+   "text": "Così",
+   "start": 277.2,
+   "end": 277.78
+  },
+  {
+   "text": "costruisci",
+   "start": 277.78,
+   "end": 278.58
+  },
+  {
+   "text": "resistenza",
+   "start": 278.58,
+   "end": 279.78
+  },
+  {
+   "text": "vera",
+   "start": 279.78,
+   "end": 280.4
+  },
+  {
+   "text": "e",
+   "start": 280.4,
+   "end": 280.44
+  },
+  {
+   "text": "duratura.",
+   "start": 280.44,
+   "end": 281.08
+  },
+  {
+   "text": "Metti",
+   "start": 281.16,
+   "end": 281.62
+  },
+  {
+   "text": "fieno",
+   "start": 281.62,
+   "end": 282.02
+  },
+  {
+   "text": "in",
+   "start": 282.02,
+   "end": 282.1
+  },
+  {
+   "text": "cascina.",
+   "start": 282.1,
+   "end": 282.5
+  },
+  {
+   "text": "E",
+   "start": 282.68,
+   "end": 282.84
+  },
+  {
+   "text": "qui",
+   "start": 282.84,
+   "end": 283.02
+  },
+  {
+   "text": "entra",
+   "start": 283.02,
+   "end": 283.3
+  },
+  {
+   "text": "in",
+   "start": 283.3,
+   "end": 283.42
+  },
+  {
+   "text": "gioco",
+   "start": 283.42,
+   "end": 283.68
+  },
+  {
+   "text": "una",
+   "start": 283.68,
+   "end": 283.88
+  },
+  {
+   "text": "delle",
+   "start": 283.88,
+   "end": 284.06
+  },
+  {
+   "text": "parti",
+   "start": 284.06,
+   "end": 284.42
+  },
+  {
+   "text": "più",
+   "start": 284.42,
+   "end": 284.72
+  },
+  {
+   "text": "importanti",
+   "start": 284.72,
+   "end": 285.46
+  },
+  {
+   "text": "del",
+   "start": 285.46,
+   "end": 285.56
+  },
+  {
+   "text": "metodo",
+   "start": 285.56,
+   "end": 285.96
+  },
+  {
+   "text": "correre",
+   "start": 285.96,
+   "end": 286.52
+  },
+  {
+   "text": "naturale.",
+   "start": 286.52,
+   "end": 286.9
+  },
+  {
+   "text": "La",
+   "start": 287.28,
+   "end": 287.76
+  },
+  {
+   "text": "dashboard",
+   "start": 287.76,
+   "end": 288.3
+  },
+  {
+   "text": "interna.",
+   "start": 288.3,
+   "end": 289.42
+  },
+  {
+   "text": "Non",
+   "start": 289.46,
+   "end": 289.74
+  },
+  {
+   "text": "servono",
+   "start": 289.74,
+   "end": 290.18
+  },
+  {
+   "text": "orologi,",
+   "start": 290.18,
+   "end": 290.76
+  },
+  {
+   "text": "non",
+   "start": 290.76,
+   "end": 290.84
+  },
+  {
+   "text": "servono",
+   "start": 290.84,
+   "end": 291.22
+  },
+  {
+   "text": "cardiofrequenzimetri",
+   "start": 291.22,
+   "end": 292.44
+  },
+  {
+   "text": "o",
+   "start": 292.44,
+   "end": 292.54
+  },
+  {
+   "text": "tabelle",
+   "start": 292.54,
+   "end": 293.06
+  },
+  {
+   "text": "complicate.",
+   "start": 293.06,
+   "end": 293.62
+  },
+  {
+   "text": "Certo,",
+   "start": 293.62,
+   "end": 294.22
+  },
+  {
+   "text": "un",
+   "start": 294.22,
+   "end": 294.64
+  },
+  {
+   "text": "cardiofrequenzimetro",
+   "start": 294.64,
+   "end": 295.68
+  },
+  {
+   "text": "può",
+   "start": 295.68,
+   "end": 296.06
+  },
+  {
+   "text": "aiutarti,",
+   "start": 296.06,
+   "end": 296.62
+  },
+  {
+   "text": "ma",
+   "start": 296.76,
+   "end": 296.94
+  },
+  {
+   "text": "all'inizio",
+   "start": 296.94,
+   "end": 297.42
+  },
+  {
+   "text": "la",
+   "start": 297.42,
+   "end": 297.52
+  },
+  {
+   "text": "cosa",
+   "start": 297.52,
+   "end": 297.72
+  },
+  {
+   "text": "più",
+   "start": 297.72,
+   "end": 297.9
+  },
+  {
+   "text": "importante",
+   "start": 297.9,
+   "end": 298.36
+  },
+  {
+   "text": "è",
+   "start": 298.36,
+   "end": 298.92
+  },
+  {
+   "text": "l'ascolto",
+   "start": 298.92,
+   "end": 299.78
+  },
+  {
+   "text": "del",
+   "start": 299.78,
+   "end": 300.02
+  },
+  {
+   "text": "tuo",
+   "start": 300.02,
+   "end": 300.2
+  },
+  {
+   "text": "corpo.",
+   "start": 300.2,
+   "end": 300.52
+  },
+  {
+   "text": "E",
+   "start": 300.7,
+   "end": 300.9
+  },
+  {
+   "text": "per",
+   "start": 300.9,
+   "end": 301.02
+  },
+  {
+   "text": "iniziare",
+   "start": 301.02,
+   "end": 301.56
+  },
+  {
+   "text": "ad",
+   "start": 301.56,
+   "end": 301.68
+  },
+  {
+   "text": "ascoltarci",
+   "start": 301.68,
+   "end": 302.48
+  },
+  {
+   "text": "lo",
+   "start": 302.48,
+   "end": 302.62
+  },
+  {
+   "text": "strumento",
+   "start": 302.62,
+   "end": 303.3
+  },
+  {
+   "text": "principale",
+   "start": 303.3,
+   "end": 303.96
+  },
+  {
+   "text": "che",
+   "start": 303.96,
+   "end": 304.1
+  },
+  {
+   "text": "usiamo",
+   "start": 304.1,
+   "end": 304.52
+  },
+  {
+   "text": "è",
+   "start": 304.52,
+   "end": 304.7
+  },
+  {
+   "text": "la",
+   "start": 304.7,
+   "end": 304.92
+  },
+  {
+   "text": "respirazione",
+   "start": 304.92,
+   "end": 305.98
+  },
+  {
+   "text": "nasale.",
+   "start": 305.98,
+   "end": 306.42
+  },
+  {
+   "text": "Se",
+   "start": 306.52,
+   "end": 306.78
+  },
+  {
+   "text": "durante",
+   "start": 306.78,
+   "end": 307.04
+  },
+  {
+   "text": "la",
+   "start": 307.04,
+   "end": 307.3
+  },
+  {
+   "text": "tua",
+   "start": 307.3,
+   "end": 307.42
+  },
+  {
+   "text": "corsa",
+   "start": 307.42,
+   "end": 307.76
+  },
+  {
+   "text": "riesci",
+   "start": 307.76,
+   "end": 308.14
+  },
+  {
+   "text": "a",
+   "start": 308.14,
+   "end": 308.22
+  },
+  {
+   "text": "respirare",
+   "start": 308.22,
+   "end": 308.82
+  },
+  {
+   "text": "esclusivamente",
+   "start": 308.82,
+   "end": 309.84
+  },
+  {
+   "text": "dal",
+   "start": 309.84,
+   "end": 310.18
+  },
+  {
+   "text": "naso,",
+   "start": 310.18,
+   "end": 310.62
+  },
+  {
+   "text": "in",
+   "start": 310.62,
+   "end": 310.7
+  },
+  {
+   "text": "modo",
+   "start": 310.7,
+   "end": 310.82
+  },
+  {
+   "text": "fluido",
+   "start": 310.82,
+   "end": 311.54
+  },
+  {
+   "text": "e",
+   "start": 311.54,
+   "end": 311.68
+  },
+  {
+   "text": "senza",
+   "start": 311.68,
+   "end": 312.12
+  },
+  {
+   "text": "sforzo,",
+   "start": 312.12,
+   "end": 312.78
+  },
+  {
+   "text": "allora",
+   "start": 312.8,
+   "end": 313.26
+  },
+  {
+   "text": "sei",
+   "start": 313.26,
+   "end": 313.86
+  },
+  {
+   "text": "nel",
+   "start": 313.86,
+   "end": 314.1
+  },
+  {
+   "text": "range",
+   "start": 314.1,
+   "end": 314.46
+  },
+  {
+   "text": "aerobico",
+   "start": 314.46,
+   "end": 315.18
+  },
+  {
+   "text": "giusto.",
+   "start": 315.18,
+   "end": 315.58
+  },
+  {
+   "text": "Appena",
+   "start": 315.7,
+   "end": 316.18
+  },
+  {
+   "text": "senti",
+   "start": 316.18,
+   "end": 316.48
+  },
+  {
+   "text": "il",
+   "start": 316.48,
+   "end": 316.56
+  },
+  {
+   "text": "bisogno",
+   "start": 316.56,
+   "end": 316.96
+  },
+  {
+   "text": "di",
+   "start": 316.96,
+   "end": 317.06
+  },
+  {
+   "text": "aprire",
+   "start": 317.06,
+   "end": 317.3
+  },
+  {
+   "text": "la",
+   "start": 317.3,
+   "end": 317.5
+  },
+  {
+   "text": "bocca",
+   "start": 317.5,
+   "end": 317.9
+  },
+  {
+   "text": "per",
+   "start": 317.9,
+   "end": 318.06
+  },
+  {
+   "text": "respirare,",
+   "start": 318.06,
+   "end": 318.62
+  },
+  {
+   "text": "significa",
+   "start": 318.64,
+   "end": 319.16
+  },
+  {
+   "text": "che",
+   "start": 319.16,
+   "end": 319.72
+  },
+  {
+   "text": "stai",
+   "start": 319.72,
+   "end": 319.98
+  },
+  {
+   "text": "chiedendo",
+   "start": 319.98,
+   "end": 320.48
+  },
+  {
+   "text": "troppo",
+   "start": 320.48,
+   "end": 320.96
+  },
+  {
+   "text": "al",
+   "start": 320.96,
+   "end": 321.04
+  },
+  {
+   "text": "tuo",
+   "start": 321.04,
+   "end": 321.16
+  },
+  {
+   "text": "corpo,",
+   "start": 321.16,
+   "end": 321.48
+  },
+  {
+   "text": "che",
+   "start": 321.52,
+   "end": 321.66
+  },
+  {
+   "text": "l'intensità",
+   "start": 321.66,
+   "end": 322.42
+  },
+  {
+   "text": "si",
+   "start": 322.42,
+   "end": 322.76
+  },
+  {
+   "text": "sta",
+   "start": 322.76,
+   "end": 322.94
+  },
+  {
+   "text": "alzando",
+   "start": 322.94,
+   "end": 323.28
+  },
+  {
+   "text": "troppo.",
+   "start": 323.28,
+   "end": 323.6
+  },
+  {
+   "text": "E",
+   "start": 323.62,
+   "end": 323.94
+  },
+  {
+   "text": "qui",
+   "start": 323.94,
+   "end": 324.26
+  },
+  {
+   "text": "entra",
+   "start": 324.26,
+   "end": 324.82
+  },
+  {
+   "text": "il",
+   "start": 324.82,
+   "end": 324.98
+  },
+  {
+   "text": "concetto",
+   "start": 324.98,
+   "end": 325.48
+  },
+  {
+   "text": "che",
+   "start": 325.48,
+   "end": 325.6
+  },
+  {
+   "text": "chiamiamo",
+   "start": 325.6,
+   "end": 326.1
+  },
+  {
+   "text": "naso",
+   "start": 326.1,
+   "end": 326.62
+  },
+  {
+   "text": "bianco.",
+   "start": 326.62,
+   "end": 327.24
+  },
+  {
+   "text": "Naso",
+   "start": 327.26,
+   "end": 327.72
+  },
+  {
+   "text": "bianco",
+   "start": 327.72,
+   "end": 328.04
+  },
+  {
+   "text": "vuol",
+   "start": 328.04,
+   "end": 328.22
+  },
+  {
+   "text": "dire",
+   "start": 328.22,
+   "end": 328.42
+  },
+  {
+   "text": "che",
+   "start": 328.42,
+   "end": 328.84
+  },
+  {
+   "text": "respiri",
+   "start": 328.84,
+   "end": 329.3
+  },
+  {
+   "text": "dal",
+   "start": 329.3,
+   "end": 329.44
+  },
+  {
+   "text": "naso",
+   "start": 329.44,
+   "end": 329.8
+  },
+  {
+   "text": "facendo",
+   "start": 329.8,
+   "end": 330.22
+  },
+  {
+   "text": "quanto",
+   "start": 330.22,
+   "end": 330.68
+  },
+  {
+   "text": "meno",
+   "start": 330.68,
+   "end": 331.1
+  },
+  {
+   "text": "rumore",
+   "start": 331.1,
+   "end": 331.98
+  },
+  {
+   "text": "possibile.",
+   "start": 331.98,
+   "end": 332.58
+  },
+  {
+   "text": "Insieme",
+   "start": 332.9,
+   "end": 333.4
+  },
+  {
+   "text": "alla",
+   "start": 333.4,
+   "end": 333.54
+  },
+  {
+   "text": "respirazione",
+   "start": 333.54,
+   "end": 334.26
+  },
+  {
+   "text": "poi",
+   "start": 334.26,
+   "end": 334.5
+  },
+  {
+   "text": "usiamo",
+   "start": 334.5,
+   "end": 335.06
+  },
+  {
+   "text": "un",
+   "start": 335.06,
+   "end": 335.48
+  },
+  {
+   "text": "altro",
+   "start": 335.48,
+   "end": 335.86
+  },
+  {
+   "text": "strumento.",
+   "start": 335.86,
+   "end": 336.72
+  },
+  {
+   "text": "Lo",
+   "start": 336.72,
+   "end": 337.2
+  },
+  {
+   "text": "sforzo",
+   "start": 337.2,
+   "end": 337.84
+  },
+  {
+   "text": "percepito.",
+   "start": 337.84,
+   "end": 338.42
+  },
+  {
+   "text": "Su",
+   "start": 338.5,
+   "end": 338.76
+  },
+  {
+   "text": "una",
+   "start": 338.76,
+   "end": 338.92
+  },
+  {
+   "text": "scala",
+   "start": 338.92,
+   "end": 339.32
+  },
+  {
+   "text": "da",
+   "start": 339.32,
+   "end": 339.44
+  },
+  {
+   "text": "1",
+   "start": 339.44,
+   "end": 339.64
+  },
+  {
+   "text": "a",
+   "start": 339.64,
+   "end": 339.76
+  },
+  {
+   "text": "10,",
+   "start": 339.76,
+   "end": 340.02
+  },
+  {
+   "text": "la",
+   "start": 340.22,
+   "end": 340.54
+  },
+  {
+   "text": "corsa",
+   "start": 340.54,
+   "end": 341.02
+  },
+  {
+   "text": "a",
+   "start": 341.02,
+   "end": 341.12
+  },
+  {
+   "text": "bassa",
+   "start": 341.12,
+   "end": 341.48
+  },
+  {
+   "text": "intensità",
+   "start": 341.48,
+   "end": 341.9
+  },
+  {
+   "text": "dovrebbe",
+   "start": 341.9,
+   "end": 342.26
+  },
+  {
+   "text": "stare",
+   "start": 342.26,
+   "end": 342.6
+  },
+  {
+   "text": "tra",
+   "start": 342.6,
+   "end": 342.88
+  },
+  {
+   "text": "3",
+   "start": 342.88,
+   "end": 343.2
+  },
+  {
+   "text": "e",
+   "start": 343.2,
+   "end": 343.42
+  },
+  {
+   "text": "4.",
+   "start": 343.42,
+   "end": 343.7
+  },
+  {
+   "text": "Non",
+   "start": 343.96,
+   "end": 344.1
+  },
+  {
+   "text": "devi",
+   "start": 344.1,
+   "end": 344.34
+  },
+  {
+   "text": "mai",
+   "start": 344.34,
+   "end": 344.68
+  },
+  {
+   "text": "avere",
+   "start": 344.68,
+   "end": 345.02
+  },
+  {
+   "text": "la",
+   "start": 345.02,
+   "end": 345.24
+  },
+  {
+   "text": "sensazione",
+   "start": 345.24,
+   "end": 345.84
+  },
+  {
+   "text": "di",
+   "start": 345.84,
+   "end": 346.0
+  },
+  {
+   "text": "essere",
+   "start": 346.0,
+   "end": 346.22
+  },
+  {
+   "text": "in",
+   "start": 346.22,
+   "end": 346.44
+  },
+  {
+   "text": "difficoltà.",
+   "start": 346.44,
+   "end": 347.04
+  },
+  {
+   "text": "Devi",
+   "start": 347.08,
+   "end": 347.52
+  },
+  {
+   "text": "sentire",
+   "start": 347.52,
+   "end": 348.1
+  },
+  {
+   "text": "di",
+   "start": 348.1,
+   "end": 348.34
+  },
+  {
+   "text": "poter",
+   "start": 348.34,
+   "end": 348.68
+  },
+  {
+   "text": "correre",
+   "start": 348.68,
+   "end": 349.04
+  },
+  {
+   "text": "così",
+   "start": 349.04,
+   "end": 349.26
+  },
+  {
+   "text": "praticamente",
+   "start": 349.26,
+   "end": 349.7
+  },
+  {
+   "text": "all'infinito.",
+   "start": 349.7,
+   "end": 351.08
+  },
+  {
+   "text": "Più",
+   "start": 351.16,
+   "end": 351.56
+  },
+  {
+   "text": "sviluppi",
+   "start": 351.56,
+   "end": 352.02
+  },
+  {
+   "text": "questa",
+   "start": 352.02,
+   "end": 352.18
+  },
+  {
+   "text": "capacità",
+   "start": 352.18,
+   "end": 352.78
+  },
+  {
+   "text": "di",
+   "start": 352.78,
+   "end": 352.92
+  },
+  {
+   "text": "ascolto",
+   "start": 352.92,
+   "end": 353.36
+  },
+  {
+   "text": "intenso,",
+   "start": 353.36,
+   "end": 353.6
+  },
+  {
+   "text": "più",
+   "start": 353.62,
+   "end": 354.16
+  },
+  {
+   "text": "il",
+   "start": 354.16,
+   "end": 354.4
+  },
+  {
+   "text": "tuo",
+   "start": 354.4,
+   "end": 354.54
+  },
+  {
+   "text": "corpo",
+   "start": 354.54,
+   "end": 354.9
+  },
+  {
+   "text": "diventerà",
+   "start": 354.9,
+   "end": 355.64
+  },
+  {
+   "text": "efficiente",
+   "start": 355.64,
+   "end": 356.38
+  },
+  {
+   "text": "e",
+   "start": 356.38,
+   "end": 356.5
+  },
+  {
+   "text": "più",
+   "start": 356.5,
+   "end": 356.68
+  },
+  {
+   "text": "sarà",
+   "start": 356.68,
+   "end": 357.2
+  },
+  {
+   "text": "lui",
+   "start": 357.2,
+   "end": 357.54
+  },
+  {
+   "text": "a",
+   "start": 357.54,
+   "end": 357.8
+  },
+  {
+   "text": "guidarti",
+   "start": 357.8,
+   "end": 358.34
+  },
+  {
+   "text": "senza",
+   "start": 358.34,
+   "end": 358.64
+  },
+  {
+   "text": "bisogno",
+   "start": 358.64,
+   "end": 359.22
+  },
+  {
+   "text": "di",
+   "start": 359.22,
+   "end": 359.3
+  },
+  {
+   "text": "numeri",
+   "start": 359.3,
+   "end": 359.74
+  },
+  {
+   "text": "o",
+   "start": 359.74,
+   "end": 359.96
+  },
+  {
+   "text": "dispositivi",
+   "start": 359.96,
+   "end": 360.62
+  },
+  {
+   "text": "esterni.",
+   "start": 360.62,
+   "end": 361.2
+  },
+  {
+   "text": "Oltre",
+   "start": 361.22,
+   "end": 361.66
+  },
+  {
+   "text": "alla",
+   "start": 361.66,
+   "end": 361.78
+  },
+  {
+   "text": "corsa",
+   "start": 361.78,
+   "end": 362.22
+  },
+  {
+   "text": "a",
+   "start": 362.22,
+   "end": 362.32
+  },
+  {
+   "text": "bassa",
+   "start": 362.32,
+   "end": 362.74
+  },
+  {
+   "text": "intensità",
+   "start": 362.74,
+   "end": 363.18
+  },
+  {
+   "text": "ci",
+   "start": 363.18,
+   "end": 363.38
+  },
+  {
+   "text": "sono",
+   "start": 363.38,
+   "end": 363.54
+  },
+  {
+   "text": "altre",
+   "start": 363.54,
+   "end": 364.12
+  },
+  {
+   "text": "strategie",
+   "start": 364.12,
+   "end": 364.88
+  },
+  {
+   "text": "chiave",
+   "start": 364.88,
+   "end": 365.34
+  },
+  {
+   "text": "per",
+   "start": 365.34,
+   "end": 365.52
+  },
+  {
+   "text": "migliorare",
+   "start": 365.52,
+   "end": 366.22
+  },
+  {
+   "text": "questa",
+   "start": 366.22,
+   "end": 366.44
+  },
+  {
+   "text": "efficienza.",
+   "start": 366.44,
+   "end": 367.08
+  },
+  {
+   "text": "Innanzitutto",
+   "start": 367.28,
+   "end": 368.0
+  },
+  {
+   "text": "aumentare",
+   "start": 368.0,
+   "end": 368.54
+  },
+  {
+   "text": "gradualmente",
+   "start": 368.54,
+   "end": 369.46
+  },
+  {
+   "text": "il",
+   "start": 369.46,
+   "end": 369.76
+  },
+  {
+   "text": "volume.",
+   "start": 369.76,
+   "end": 370.04
+  },
+  {
+   "text": "Più",
+   "start": 370.2,
+   "end": 370.56
+  },
+  {
+   "text": "chilometri",
+   "start": 370.56,
+   "end": 371.12
+  },
+  {
+   "text": "fai,",
+   "start": 371.12,
+   "end": 371.42
+  },
+  {
+   "text": "ovviamente",
+   "start": 371.5,
+   "end": 371.94
+  },
+  {
+   "text": "con",
+   "start": 371.94,
+   "end": 372.26
+  },
+  {
+   "text": "criterio,",
+   "start": 372.26,
+   "end": 372.86
+  },
+  {
+   "text": "più",
+   "start": 372.86,
+   "end": 373.2
+  },
+  {
+   "text": "il",
+   "start": 373.2,
+   "end": 373.34
+  },
+  {
+   "text": "tuo",
+   "start": 373.34,
+   "end": 373.44
+  },
+  {
+   "text": "corpo",
+   "start": 373.44,
+   "end": 373.74
+  },
+  {
+   "text": "diventa",
+   "start": 373.74,
+   "end": 374.34
+  },
+  {
+   "text": "economico.",
+   "start": 374.34,
+   "end": 374.88
+  },
+  {
+   "text": "Inserire",
+   "start": 374.98,
+   "end": 375.56
+  },
+  {
+   "text": "attività",
+   "start": 375.56,
+   "end": 376.26
+  },
+  {
+   "text": "complementari",
+   "start": 376.26,
+   "end": 377.36
+  },
+  {
+   "text": "come",
+   "start": 377.36,
+   "end": 377.72
+  },
+  {
+   "text": "bici,",
+   "start": 377.72,
+   "end": 378.3
+  },
+  {
+   "text": "nuoto",
+   "start": 378.3,
+   "end": 378.76
+  },
+  {
+   "text": "e",
+   "start": 378.76,
+   "end": 378.96
+  },
+  {
+   "text": "tutte",
+   "start": 378.96,
+   "end": 379.18
+  },
+  {
+   "text": "le",
+   "start": 379.18,
+   "end": 379.4
+  },
+  {
+   "text": "attività",
+   "start": 379.4,
+   "end": 379.8
+  },
+  {
+   "text": "che",
+   "start": 379.8,
+   "end": 380.0
+  },
+  {
+   "text": "stimolano",
+   "start": 380.0,
+   "end": 380.58
+  },
+  {
+   "text": "il",
+   "start": 380.58,
+   "end": 380.78
+  },
+  {
+   "text": "sistema",
+   "start": 380.78,
+   "end": 381.22
+  },
+  {
+   "text": "aerobico",
+   "start": 381.22,
+   "end": 381.62
+  },
+  {
+   "text": "senza",
+   "start": 381.62,
+   "end": 382.24
+  },
+  {
+   "text": "sovraccaricare",
+   "start": 382.24,
+   "end": 383.48
+  },
+  {
+   "text": "articolazioni",
+   "start": 383.48,
+   "end": 384.46
+  },
+  {
+   "text": "e",
+   "start": 384.46,
+   "end": 384.78
+  },
+  {
+   "text": "muscoli.",
+   "start": 384.78,
+   "end": 385.32
+  },
+  {
+   "text": "Lavorare",
+   "start": 385.32,
+   "end": 385.92
+  },
+  {
+   "text": "sulla",
+   "start": 385.92,
+   "end": 386.34
+  },
+  {
+   "text": "forza",
+   "start": 386.34,
+   "end": 386.94
+  },
+  {
+   "text": "e",
+   "start": 386.94,
+   "end": 387.12
+  },
+  {
+   "text": "sulla",
+   "start": 387.12,
+   "end": 387.34
+  },
+  {
+   "text": "mobilità.",
+   "start": 387.34,
+   "end": 387.86
+  },
+  {
+   "text": "Un",
+   "start": 387.94,
+   "end": 388.28
+  },
+  {
+   "text": "corpo",
+   "start": 388.28,
+   "end": 388.48
+  },
+  {
+   "text": "forte",
+   "start": 388.48,
+   "end": 388.98
+  },
+  {
+   "text": "e",
+   "start": 388.98,
+   "end": 389.16
+  },
+  {
+   "text": "libero",
+   "start": 389.16,
+   "end": 389.6
+  },
+  {
+   "text": "nei",
+   "start": 389.6,
+   "end": 389.68
+  },
+  {
+   "text": "movimenti",
+   "start": 389.68,
+   "end": 390.28
+  },
+  {
+   "text": "consuma",
+   "start": 390.28,
+   "end": 390.82
+  },
+  {
+   "text": "meno",
+   "start": 390.82,
+   "end": 391.06
+  },
+  {
+   "text": "energia",
+   "start": 391.06,
+   "end": 391.48
+  },
+  {
+   "text": "per",
+   "start": 391.48,
+   "end": 391.8
+  },
+  {
+   "text": "mantenersi",
+   "start": 391.8,
+   "end": 392.52
+  },
+  {
+   "text": "stabile",
+   "start": 392.52,
+   "end": 393.14
+  },
+  {
+   "text": "e",
+   "start": 393.14,
+   "end": 393.38
+  },
+  {
+   "text": "ben",
+   "start": 393.38,
+   "end": 393.56
+  },
+  {
+   "text": "allineato.",
+   "start": 393.56,
+   "end": 394.12
+  },
+  {
+   "text": "Curare",
+   "start": 394.24,
+   "end": 394.8
+  },
+  {
+   "text": "l'alimentazione",
+   "start": 394.8,
+   "end": 395.78
+  },
+  {
+   "text": "e",
+   "start": 395.78,
+   "end": 396.02
+  },
+  {
+   "text": "il",
+   "start": 396.02,
+   "end": 396.12
+  },
+  {
+   "text": "recupero.",
+   "start": 396.12,
+   "end": 396.58
+  },
+  {
+   "text": "Se",
+   "start": 396.6,
+   "end": 396.84
+  },
+  {
+   "text": "non",
+   "start": 396.84,
+   "end": 396.96
+  },
+  {
+   "text": "dai",
+   "start": 396.96,
+   "end": 397.1
+  },
+  {
+   "text": "al",
+   "start": 397.1,
+   "end": 397.22
+  },
+  {
+   "text": "corpo",
+   "start": 397.22,
+   "end": 397.48
+  },
+  {
+   "text": "il",
+   "start": 397.48,
+   "end": 397.64
+  },
+  {
+   "text": "carburante",
+   "start": 397.64,
+   "end": 398.04
+  },
+  {
+   "text": "giusto",
+   "start": 398.04,
+   "end": 398.38
+  },
+  {
+   "text": "non",
+   "start": 398.38,
+   "end": 398.72
+  },
+  {
+   "text": "può",
+   "start": 398.72,
+   "end": 398.94
+  },
+  {
+   "text": "funzionare",
+   "start": 398.94,
+   "end": 399.6
+  },
+  {
+   "text": "bene",
+   "start": 399.6,
+   "end": 399.82
+  },
+  {
+   "text": "e",
+   "start": 399.82,
+   "end": 400.2
+  },
+  {
+   "text": "se",
+   "start": 400.2,
+   "end": 400.36
+  },
+  {
+   "text": "non",
+   "start": 400.36,
+   "end": 400.58
+  },
+  {
+   "text": "recuperi",
+   "start": 400.58,
+   "end": 401.24
+  },
+  {
+   "text": "la",
+   "start": 401.24,
+   "end": 401.42
+  },
+  {
+   "text": "fatica",
+   "start": 401.42,
+   "end": 401.82
+  },
+  {
+   "text": "si",
+   "start": 401.82,
+   "end": 401.94
+  },
+  {
+   "text": "accumula",
+   "start": 401.94,
+   "end": 402.42
+  },
+  {
+   "text": "e",
+   "start": 402.42,
+   "end": 402.66
+  },
+  {
+   "text": "rallenti",
+   "start": 402.66,
+   "end": 403.12
+  },
+  {
+   "text": "i",
+   "start": 403.12,
+   "end": 403.16
+  },
+  {
+   "text": "progressi.",
+   "start": 403.16,
+   "end": 403.66
+  },
+  {
+   "text": "E",
+   "start": 403.78,
+   "end": 403.96
+  },
+  {
+   "text": "infine",
+   "start": 403.96,
+   "end": 404.36
+  },
+  {
+   "text": "uno",
+   "start": 404.36,
+   "end": 404.82
+  },
+  {
+   "text": "degli",
+   "start": 404.82,
+   "end": 405.0
+  },
+  {
+   "text": "strumenti",
+   "start": 405.0,
+   "end": 405.56
+  },
+  {
+   "text": "più",
+   "start": 405.56,
+   "end": 405.68
+  },
+  {
+   "text": "potenti",
+   "start": 405.68,
+   "end": 406.26
+  },
+  {
+   "text": "da",
+   "start": 406.26,
+   "end": 406.54
+  },
+  {
+   "text": "non",
+   "start": 406.54,
+   "end": 406.76
+  },
+  {
+   "text": "dimenticare",
+   "start": 406.76,
+   "end": 407.44
+  },
+  {
+   "text": "è",
+   "start": 407.44,
+   "end": 407.7
+  },
+  {
+   "text": "la",
+   "start": 407.7,
+   "end": 407.9
+  },
+  {
+   "text": "camminata.",
+   "start": 407.9,
+   "end": 408.94
+  },
+  {
+   "text": "Molti",
+   "start": 409.1,
+   "end": 409.7
+  },
+  {
+   "text": "la",
+   "start": 409.7,
+   "end": 409.76
+  },
+  {
+   "text": "considerano",
+   "start": 409.76,
+   "end": 410.46
+  },
+  {
+   "text": "una",
+   "start": 410.46,
+   "end": 410.62
+  },
+  {
+   "text": "sconfitta,",
+   "start": 410.62,
+   "end": 411.36
+  },
+  {
+   "text": "ma",
+   "start": 411.36,
+   "end": 411.52
+  },
+  {
+   "text": "la",
+   "start": 411.52,
+   "end": 411.64
+  },
+  {
+   "text": "verità",
+   "start": 411.64,
+   "end": 411.96
+  },
+  {
+   "text": "è",
+   "start": 411.96,
+   "end": 412.1
+  },
+  {
+   "text": "che",
+   "start": 412.1,
+   "end": 412.24
+  },
+  {
+   "text": "camminare",
+   "start": 412.24,
+   "end": 413.0
+  },
+  {
+   "text": "è",
+   "start": 413.0,
+   "end": 413.1
+  },
+  {
+   "text": "uno",
+   "start": 413.1,
+   "end": 413.24
+  },
+  {
+   "text": "strumento",
+   "start": 413.24,
+   "end": 413.78
+  },
+  {
+   "text": "potentissimo",
+   "start": 413.78,
+   "end": 414.82
+  },
+  {
+   "text": "per",
+   "start": 414.82,
+   "end": 415.12
+  },
+  {
+   "text": "migliorare",
+   "start": 415.12,
+   "end": 415.84
+  },
+  {
+   "text": "la",
+   "start": 415.84,
+   "end": 415.98
+  },
+  {
+   "text": "tua",
+   "start": 415.98,
+   "end": 416.12
+  },
+  {
+   "text": "resistenza,",
+   "start": 416.12,
+   "end": 416.78
+  },
+  {
+   "text": "per",
+   "start": 416.84,
+   "end": 417.18
+  },
+  {
+   "text": "ridurre",
+   "start": 417.18,
+   "end": 417.54
+  },
+  {
+   "text": "il",
+   "start": 417.54,
+   "end": 417.66
+  },
+  {
+   "text": "carico",
+   "start": 417.66,
+   "end": 418.02
+  },
+  {
+   "text": "e",
+   "start": 418.02,
+   "end": 418.18
+  },
+  {
+   "text": "per",
+   "start": 418.18,
+   "end": 418.32
+  },
+  {
+   "text": "costruire",
+   "start": 418.32,
+   "end": 418.9
+  },
+  {
+   "text": "una",
+   "start": 418.9,
+   "end": 419.3
+  },
+  {
+   "text": "base",
+   "start": 419.3,
+   "end": 419.52
+  },
+  {
+   "text": "solida.",
+   "start": 419.52,
+   "end": 419.96
+  },
+  {
+   "text": "Ma",
+   "start": 420.08,
+   "end": 420.3
+  },
+  {
+   "text": "c'è",
+   "start": 420.3,
+   "end": 420.48
+  },
+  {
+   "text": "una",
+   "start": 420.48,
+   "end": 420.58
+  },
+  {
+   "text": "cosa",
+   "start": 420.58,
+   "end": 420.94
+  },
+  {
+   "text": "che",
+   "start": 420.94,
+   "end": 421.28
+  },
+  {
+   "text": "vale",
+   "start": 421.28,
+   "end": 421.52
+  },
+  {
+   "text": "più",
+   "start": 421.52,
+   "end": 421.9
+  },
+  {
+   "text": "di",
+   "start": 421.9,
+   "end": 422.26
+  },
+  {
+   "text": "tutte",
+   "start": 422.26,
+   "end": 422.44
+  },
+  {
+   "text": "le",
+   "start": 422.44,
+   "end": 422.66
+  },
+  {
+   "text": "altre,",
+   "start": 422.66,
+   "end": 422.94
+  },
+  {
+   "text": "più",
+   "start": 423.06,
+   "end": 423.28
+  },
+  {
+   "text": "della",
+   "start": 423.28,
+   "end": 423.62
+  },
+  {
+   "text": "corsa",
+   "start": 423.62,
+   "end": 423.98
+  },
+  {
+   "text": "a",
+   "start": 423.98,
+   "end": 424.1
+  },
+  {
+   "text": "bassa",
+   "start": 424.1,
+   "end": 424.32
+  },
+  {
+   "text": "intensità,",
+   "start": 424.32,
+   "end": 424.76
+  },
+  {
+   "text": "più",
+   "start": 424.88,
+   "end": 425.1
+  },
+  {
+   "text": "del",
+   "start": 425.1,
+   "end": 425.3
+  },
+  {
+   "text": "programma",
+   "start": 425.3,
+   "end": 425.74
+  },
+  {
+   "text": "perfetto,",
+   "start": 425.74,
+   "end": 426.36
+  },
+  {
+   "text": "più",
+   "start": 426.38,
+   "end": 426.58
+  },
+  {
+   "text": "di",
+   "start": 426.58,
+   "end": 426.76
+  },
+  {
+   "text": "qualsiasi",
+   "start": 426.76,
+   "end": 427.24
+  },
+  {
+   "text": "tecnica",
+   "start": 427.24,
+   "end": 427.76
+  },
+  {
+   "text": "ed",
+   "start": 427.76,
+   "end": 428.02
+  },
+  {
+   "text": "è",
+   "start": 428.02,
+   "end": 428.14
+  },
+  {
+   "text": "la",
+   "start": 428.14,
+   "end": 428.52
+  },
+  {
+   "text": "costanza.",
+   "start": 428.52,
+   "end": 429.3
+  },
+  {
+   "text": "Non",
+   "start": 429.5,
+   "end": 429.82
+  },
+  {
+   "text": "importa",
+   "start": 429.82,
+   "end": 430.08
+  },
+  {
+   "text": "cosa",
+   "start": 430.08,
+   "end": 430.66
+  },
+  {
+   "text": "fai",
+   "start": 430.66,
+   "end": 431.02
+  },
+  {
+   "text": "oggi",
+   "start": 431.02,
+   "end": 431.44
+  },
+  {
+   "text": "o",
+   "start": 431.44,
+   "end": 431.84
+  },
+  {
+   "text": "domani,",
+   "start": 431.84,
+   "end": 432.34
+  },
+  {
+   "text": "conta",
+   "start": 432.44,
+   "end": 432.96
+  },
+  {
+   "text": "cosa",
+   "start": 432.96,
+   "end": 433.34
+  },
+  {
+   "text": "fai",
+   "start": 433.34,
+   "end": 433.82
+  },
+  {
+   "text": "ogni",
+   "start": 433.82,
+   "end": 434.14
+  },
+  {
+   "text": "giorno,",
+   "start": 434.14,
+   "end": 434.52
+  },
+  {
+   "text": "ogni",
+   "start": 434.56,
+   "end": 434.76
+  },
+  {
+   "text": "settimana,",
+   "start": 434.76,
+   "end": 435.42
+  },
+  {
+   "text": "ogni",
+   "start": 435.42,
+   "end": 435.66
+  },
+  {
+   "text": "mese",
+   "start": 435.66,
+   "end": 436.2
+  },
+  {
+   "text": "e",
+   "start": 436.2,
+   "end": 436.54
+  },
+  {
+   "text": "ogni",
+   "start": 436.54,
+   "end": 436.74
+  },
+  {
+   "text": "anno.",
+   "start": 436.74,
+   "end": 437.1
+  },
+  {
+   "text": "Perché",
+   "start": 437.18,
+   "end": 437.54
+  },
+  {
+   "text": "la",
+   "start": 437.54,
+   "end": 437.74
+  },
+  {
+   "text": "corsa,",
+   "start": 437.74,
+   "end": 438.06
+  },
+  {
+   "text": "quella",
+   "start": 438.12,
+   "end": 438.56
+  },
+  {
+   "text": "vera,",
+   "start": 438.56,
+   "end": 439.0
+  },
+  {
+   "text": "si",
+   "start": 439.0,
+   "end": 439.42
+  },
+  {
+   "text": "costruisce",
+   "start": 439.42,
+   "end": 440.22
+  },
+  {
+   "text": "nel",
+   "start": 440.22,
+   "end": 440.44
+  },
+  {
+   "text": "tempo.",
+   "start": 440.44,
+   "end": 440.82
+  },
+  {
+   "text": "E",
+   "start": 440.82,
+   "end": 441.18
+  },
+  {
+   "text": "più",
+   "start": 441.18,
+   "end": 441.36
+  },
+  {
+   "text": "tempo",
+   "start": 441.36,
+   "end": 441.62
+  },
+  {
+   "text": "passi",
+   "start": 441.62,
+   "end": 442.08
+  },
+  {
+   "text": "a",
+   "start": 442.08,
+   "end": 442.1
+  },
+  {
+   "text": "correre",
+   "start": 442.1,
+   "end": 442.46
+  },
+  {
+   "text": "nel",
+   "start": 442.46,
+   "end": 442.66
+  },
+  {
+   "text": "modo",
+   "start": 442.66,
+   "end": 442.84
+  },
+  {
+   "text": "giusto,",
+   "start": 442.84,
+   "end": 443.3
+  },
+  {
+   "text": "più",
+   "start": 443.3,
+   "end": 443.48
+  },
+  {
+   "text": "vedrai",
+   "start": 443.48,
+   "end": 443.86
+  },
+  {
+   "text": "il",
+   "start": 443.86,
+   "end": 444.0
+  },
+  {
+   "text": "tuo",
+   "start": 444.0,
+   "end": 444.16
+  },
+  {
+   "text": "corpo",
+   "start": 444.16,
+   "end": 444.56
+  },
+  {
+   "text": "trasformarsi",
+   "start": 444.56,
+   "end": 445.52
+  },
+  {
+   "text": "più",
+   "start": 445.52,
+   "end": 445.96
+  },
+  {
+   "text": "veloce,",
+   "start": 445.96,
+   "end": 446.42
+  },
+  {
+   "text": "più",
+   "start": 446.48,
+   "end": 446.88
+  },
+  {
+   "text": "leggero,",
+   "start": 446.88,
+   "end": 447.6
+  },
+  {
+   "text": "più",
+   "start": 447.6,
+   "end": 447.98
+  },
+  {
+   "text": "elastico",
+   "start": 447.98,
+   "end": 448.64
+  },
+  {
+   "text": "e",
+   "start": 448.64,
+   "end": 448.82
+  },
+  {
+   "text": "più",
+   "start": 448.82,
+   "end": 449.0
+  },
+  {
+   "text": "efficiente.",
+   "start": 449.0,
+   "end": 449.7
+  },
+  {
+   "text": "E",
+   "start": 449.7,
+   "end": 450.04
+  },
+  {
+   "text": "tutto",
+   "start": 450.04,
+   "end": 450.22
+  },
+  {
+   "text": "questo",
+   "start": 450.22,
+   "end": 450.66
+  },
+  {
+   "text": "con",
+   "start": 450.66,
+   "end": 451.2
+  },
+  {
+   "text": "meno",
+   "start": 451.2,
+   "end": 451.4
+  },
+  {
+   "text": "sforzo.",
+   "start": 451.4,
+   "end": 451.94
+  },
+  {
+   "text": "Se",
+   "start": 452.02,
+   "end": 452.26
+  },
+  {
+   "text": "questi",
+   "start": 452.26,
+   "end": 452.5
+  },
+  {
+   "text": "principi",
+   "start": 452.5,
+   "end": 453.24
+  },
+  {
+   "text": "ti",
+   "start": 453.24,
+   "end": 453.32
+  },
+  {
+   "text": "hanno",
+   "start": 453.32,
+   "end": 453.44
+  },
+  {
+   "text": "fatto",
+   "start": 453.44,
+   "end": 453.66
+  },
+  {
+   "text": "riflettere,",
+   "start": 453.66,
+   "end": 453.98
+  },
+  {
+   "text": "se",
+   "start": 454.36,
+   "end": 454.48
+  },
+  {
+   "text": "vuoi",
+   "start": 454.48,
+   "end": 454.7
+  },
+  {
+   "text": "scoprire",
+   "start": 454.7,
+   "end": 455.1
+  },
+  {
+   "text": "come",
+   "start": 455.1,
+   "end": 455.3
+  },
+  {
+   "text": "allenarti",
+   "start": 455.3,
+   "end": 455.72
+  },
+  {
+   "text": "davvero",
+   "start": 455.72,
+   "end": 456.56
+  },
+  {
+   "text": "in",
+   "start": 456.56,
+   "end": 456.8
+  },
+  {
+   "text": "modo",
+   "start": 456.8,
+   "end": 457.12
+  },
+  {
+   "text": "naturale,",
+   "start": 457.12,
+   "end": 457.6
+  },
+  {
+   "text": "efficace",
+   "start": 457.6,
+   "end": 458.38
+  },
+  {
+   "text": "e",
+   "start": 458.38,
+   "end": 458.44
+  },
+  {
+   "text": "senza",
+   "start": 458.44,
+   "end": 458.64
+  },
+  {
+   "text": "infortuni,",
+   "start": 458.64,
+   "end": 458.96
+  },
+  {
+   "text": "iscriviti",
+   "start": 459.4,
+   "end": 459.8
+  },
+  {
+   "text": "al",
+   "start": 459.8,
+   "end": 459.98
+  },
+  {
+   "text": "canale",
+   "start": 459.98,
+   "end": 460.54
+  },
+  {
+   "text": "Correre",
+   "start": 460.54,
+   "end": 460.9
+  },
+  {
+   "text": "Naturale.",
+   "start": 460.9,
+   "end": 461.46
+  },
+  {
+   "text": "E",
+   "start": 461.5,
+   "end": 461.58
+  },
+  {
+   "text": "noi",
+   "start": 461.58,
+   "end": 461.82
+  },
+  {
+   "text": "ci",
+   "start": 461.82,
+   "end": 462.04
+  },
+  {
+   "text": "vediamo",
+   "start": 462.04,
+   "end": 462.5
+  },
+  {
+   "text": "al",
+   "start": 462.5,
+   "end": 462.84
+  },
+  {
+   "text": "prossimo",
+   "start": 462.84,
+   "end": 463.22
+  },
+  {
+   "text": "video.",
+   "start": 463.22,
+   "end": 463.4
+  }
+ ],
+ "removed": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61,
+  62,
+  63,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  82,
+  83,
+  84,
+  85,
+  86,
+  87,
+  88,
+  89,
+  90,
+  91,
+  92,
+  93,
+  94,
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119,
+  120,
+  121,
+  122,
+  123,
+  124,
+  125,
+  126,
+  127,
+  128,
+  129,
+  130,
+  131,
+  132,
+  133,
+  134,
+  135,
+  136,
+  137,
+  138,
+  139,
+  140,
+  141,
+  142,
+  143,
+  144,
+  145,
+  146,
+  147,
+  148,
+  149,
+  150,
+  151,
+  152,
+  153,
+  154,
+  155,
+  156,
+  157,
+  158,
+  159,
+  160,
+  161,
+  162,
+  163,
+  164,
+  165,
+  166,
+  167,
+  168,
+  169,
+  170,
+  171,
+  172,
+  173,
+  174,
+  175,
+  176,
+  177,
+  178,
+  179,
+  180,
+  181,
+  182,
+  183,
+  184,
+  185,
+  186,
+  187,
+  188,
+  189,
+  190,
+  191,
+  192,
+  193,
+  194,
+  195,
+  196,
+  197,
+  198,
+  199,
+  200,
+  201,
+  202,
+  203,
+  204,
+  205,
+  206,
+  207,
+  208,
+  209,
+  210,
+  211,
+  212,
+  213,
+  214,
+  215,
+  216,
+  217,
+  218,
+  219,
+  220,
+  221,
+  222,
+  223,
+  224,
+  225,
+  226,
+  227,
+  228,
+  229,
+  230,
+  231,
+  232,
+  233,
+  234,
+  235,
+  236,
+  237,
+  238,
+  239,
+  240,
+  241,
+  242,
+  263,
+  264,
+  265,
+  266,
+  267,
+  268,
+  269,
+  270,
+  271,
+  272,
+  273,
+  274,
+  275,
+  276,
+  366,
+  367,
+  368,
+  369,
+  370,
+  371,
+  372,
+  373,
+  374,
+  375,
+  376,
+  377,
+  378,
+  379,
+  380,
+  381,
+  382,
+  383,
+  384,
+  385,
+  386,
+  387,
+  388,
+  389,
+  390,
+  391,
+  392,
+  393,
+  394,
+  395,
+  396,
+  397,
+  398,
+  399,
+  400,
+  401,
+  402,
+  403,
+  404,
+  405,
+  406,
+  407,
+  408,
+  409,
+  410,
+  411,
+  412,
+  413,
+  414,
+  415,
+  416,
+  417,
+  418,
+  419,
+  420,
+  421,
+  422,
+  423,
+  424,
+  425,
+  426,
+  427,
+  428,
+  429,
+  430,
+  431,
+  432,
+  433,
+  434,
+  435,
+  436,
+  437,
+  438,
+  439,
+  440,
+  441,
+  442,
+  443,
+  444,
+  445,
+  446,
+  447,
+  448,
+  449,
+  450,
+  451,
+  452,
+  453,
+  454,
+  455,
+  456,
+  457,
+  458,
+  459,
+  460,
+  461,
+  462,
+  463,
+  464,
+  465,
+  466,
+  467,
+  468,
+  469,
+  470,
+  471,
+  472,
+  473,
+  474,
+  475,
+  476,
+  477,
+  478,
+  479,
+  480,
+  481,
+  482,
+  483,
+  484,
+  485,
+  486,
+  487,
+  488,
+  489,
+  490,
+  491,
+  492,
+  493,
+  494,
+  495,
+  496,
+  497,
+  498,
+  499,
+  500,
+  501,
+  502,
+  503,
+  504,
+  505,
+  506,
+  507,
+  508,
+  509,
+  510,
+  511,
+  512,
+  513,
+  514,
+  515,
+  516,
+  517,
+  518,
+  519,
+  520,
+  521,
+  522,
+  523,
+  524,
+  525,
+  526,
+  527,
+  528,
+  529,
+  530,
+  531,
+  532,
+  533,
+  534,
+  535,
+  536,
+  537,
+  538,
+  539,
+  540,
+  541,
+  542,
+  543,
+  544,
+  545,
+  546,
+  547,
+  548,
+  549,
+  550,
+  551,
+  552,
+  553,
+  554,
+  555,
+  556,
+  557,
+  558,
+  559,
+  560,
+  561,
+  562,
+  563,
+  564,
+  565,
+  566,
+  567,
+  568,
+  569,
+  570,
+  571,
+  572,
+  573,
+  574,
+  575,
+  576,
+  577,
+  578,
+  579,
+  580,
+  581,
+  582,
+  583,
+  584,
+  585,
+  586,
+  587,
+  588,
+  589,
+  590,
+  591,
+  592,
+  593,
+  594,
+  595,
+  596,
+  597,
+  598,
+  599,
+  600,
+  601,
+  602,
+  603,
+  604,
+  605,
+  606,
+  607,
+  608,
+  609,
+  610,
+  611,
+  612,
+  613,
+  614,
+  615,
+  616,
+  617,
+  618,
+  619,
+  620,
+  621,
+  622,
+  623,
+  624,
+  625,
+  626,
+  627,
+  628,
+  629,
+  630,
+  631,
+  632,
+  633,
+  634,
+  635,
+  636,
+  637,
+  638,
+  639,
+  640,
+  641,
+  642,
+  643,
+  644,
+  645,
+  646,
+  647,
+  648,
+  649,
+  650,
+  651,
+  652,
+  653,
+  654,
+  655,
+  656,
+  657,
+  658,
+  659,
+  660,
+  661,
+  662,
+  663,
+  664,
+  665,
+  666,
+  667,
+  668,
+  669,
+  670,
+  671,
+  672,
+  673,
+  674,
+  675,
+  676,
+  677,
+  678,
+  679,
+  680,
+  681,
+  682,
+  683,
+  684,
+  685,
+  686,
+  687,
+  688,
+  689,
+  690,
+  691,
+  692,
+  693,
+  694,
+  695,
+  696,
+  697,
+  698,
+  699,
+  700,
+  701,
+  702,
+  703,
+  704,
+  705,
+  706,
+  707,
+  708,
+  709,
+  710,
+  711,
+  712,
+  713,
+  714,
+  715,
+  716,
+  717,
+  718,
+  719,
+  720,
+  721,
+  722,
+  723,
+  724,
+  725,
+  726,
+  727,
+  728,
+  729,
+  730,
+  731,
+  732,
+  733,
+  734,
+  735,
+  736,
+  737,
+  738,
+  739,
+  740,
+  741,
+  742,
+  743,
+  744,
+  745,
+  746,
+  747,
+  748,
+  749,
+  750,
+  751,
+  752,
+  753,
+  754,
+  755,
+  756,
+  757,
+  758,
+  759,
+  760,
+  761,
+  762,
+  763,
+  764,
+  765,
+  766,
+  767,
+  768,
+  769,
+  770,
+  771,
+  772,
+  773,
+  774,
+  775,
+  776,
+  777,
+  778,
+  779,
+  780,
+  781,
+  782,
+  783,
+  784,
+  785,
+  786,
+  787,
+  788,
+  789,
+  790,
+  791,
+  792,
+  793,
+  794,
+  795,
+  796,
+  797,
+  798,
+  799,
+  800,
+  801,
+  802,
+  803,
+  804,
+  805,
+  806,
+  807,
+  808,
+  809,
+  810,
+  811,
+  812,
+  813,
+  814,
+  815,
+  816,
+  817,
+  818,
+  819,
+  820,
+  821,
+  822,
+  823,
+  824,
+  825,
+  826,
+  827,
+  828,
+  829,
+  830,
+  831,
+  832,
+  833,
+  834,
+  835,
+  836,
+  837,
+  838,
+  839,
+  840,
+  841,
+  842,
+  843,
+  844,
+  845,
+  846,
+  847,
+  848,
+  849,
+  850,
+  851,
+  852,
+  853,
+  854,
+  855,
+  856,
+  857,
+  858,
+  859,
+  860,
+  861,
+  862,
+  863,
+  864,
+  865,
+  866,
+  867,
+  868,
+  869,
+  870,
+  871,
+  872,
+  873,
+  874,
+  875,
+  876,
+  877,
+  878,
+  879,
+  880,
+  881,
+  882,
+  883,
+  884,
+  885,
+  886,
+  887,
+  888,
+  889,
+  890,
+  891,
+  892,
+  893,
+  894,
+  895,
+  896,
+  897,
+  898,
+  899,
+  900,
+  901,
+  902,
+  903,
+  904,
+  905,
+  906,
+  907,
+  908,
+  909,
+  910,
+  911,
+  912,
+  913,
+  914,
+  915,
+  916,
+  917,
+  918,
+  919,
+  920,
+  921,
+  922,
+  923,
+  924,
+  925,
+  926,
+  927,
+  928,
+  929,
+  930,
+  931,
+  932,
+  933,
+  934,
+  935,
+  936,
+  937,
+  938,
+  939,
+  940,
+  941,
+  942,
+  943,
+  944,
+  945,
+  946,
+  947,
+  948,
+  949,
+  950,
+  951,
+  952,
+  953,
+  954,
+  955,
+  956,
+  957,
+  958,
+  959,
+  960,
+  961,
+  962,
+  963,
+  964,
+  965,
+  966,
+  967,
+  968,
+  969,
+  970,
+  971,
+  972,
+  973,
+  974,
+  975,
+  976,
+  977,
+  978,
+  979,
+  980,
+  981,
+  982,
+  983,
+  984,
+  985,
+  986,
+  987,
+  988,
+  989,
+  990,
+  991,
+  992,
+  993,
+  994,
+  995,
+  996,
+  997,
+  998,
+  999,
+  1000,
+  1001,
+  1002,
+  1003,
+  1004,
+  1005,
+  1006,
+  1007,
+  1008,
+  1009,
+  1010,
+  1011,
+  1012,
+  1013,
+  1014,
+  1015,
+  1016,
+  1017,
+  1018,
+  1019,
+  1020,
+  1021,
+  1022,
+  1023,
+  1024,
+  1025,
+  1026,
+  1027,
+  1028,
+  1029,
+  1030,
+  1031,
+  1032,
+  1033,
+  1034,
+  1035,
+  1036,
+  1037,
+  1038,
+  1039,
+  1040,
+  1041,
+  1042,
+  1043,
+  1044,
+  1045,
+  1046,
+  1047,
+  1048,
+  1049,
+  1050,
+  1051,
+  1052,
+  1053,
+  1054,
+  1055,
+  1056,
+  1057,
+  1058,
+  1059,
+  1060,
+  1061,
+  1062,
+  1063,
+  1064,
+  1065,
+  1066,
+  1067,
+  1068,
+  1069,
+  1070,
+  1071,
+  1072,
+  1073,
+  1074,
+  1075,
+  1076,
+  1077,
+  1078,
+  1079,
+  1080,
+  1081,
+  1082,
+  1083,
+  1084,
+  1085,
+  1086,
+  1087,
+  1088,
+  1089,
+  1090,
+  1091,
+  1092,
+  1093,
+  1094,
+  1095,
+  1096,
+  1097,
+  1098,
+  1099,
+  1100,
+  1101,
+  1102,
+  1103,
+  1104,
+  1105,
+  1106,
+  1107,
+  1108,
+  1109,
+  1110,
+  1111,
+  1112,
+  1113,
+  1114,
+  1115,
+  1116,
+  1117,
+  1118,
+  1119,
+  1120,
+  1121,
+  1122,
+  1123,
+  1124,
+  1125,
+  1126,
+  1127,
+  1128,
+  1129,
+  1130,
+  1131,
+  1132,
+  1133,
+  1134,
+  1135,
+  1136,
+  1137,
+  1138,
+  1139,
+  1140,
+  1141,
+  1142,
+  1143,
+  1144,
+  1145,
+  1146,
+  1147,
+  1148,
+  1149,
+  1150,
+  1151,
+  1152,
+  1153,
+  1154,
+  1155,
+  1156,
+  1157,
+  1158,
+  1159,
+  1160,
+  1161,
+  1162,
+  1163,
+  1164,
+  1165,
+  1166,
+  1167,
+  1168,
+  1169,
+  1170,
+  1171,
+  1172,
+  1173,
+  1174,
+  1175,
+  1176,
+  1177,
+  1178,
+  1179,
+  1180,
+  1181,
+  1182,
+  1183,
+  1184,
+  1185,
+  1186,
+  1187,
+  1188,
+  1189,
+  1190,
+  1191,
+  1192,
+  1193
+ ],
+ "cuts": [
+  {
+   "s": 94.22,
+   "e": 101.2867,
+   "frame": "volto",
+   "fx": 0.513,
+   "fy": 0.3
+  },
+  {
+   "s": 107.645,
+   "e": 117.5117,
+   "frame": "volto",
+   "fx": 0.466,
+   "fy": 0.3,
+   "blend": true,
+   "hard": true
+  },
+  {
+   "s": 117.6,
+   "e": 128.0167,
+   "frame": "volto",
+   "fx": 0.477,
+   "fy": 0.3,
+   "blend": true
+  },
+  {
+   "s": 128.0167,
+   "e": 143.3333,
+   "frame": "volto",
+   "fx": 0.482,
+   "fy": 0.3,
+   "blend": true
+  }
+ ],
+ "brand": {
+  "id": "correre-naturale",
+  "name": "Correre Naturale",
+  "handle": "@correrenaturale",
+  "tagline": "Running Culture",
+  "colors": {
+   "primary": "#49762E",
+   "accent": "#B8D7EA",
+   "cream": "#F4F1E5",
+   "dark": "#000000",
+   "light": "#FFFFFF"
+  },
+  "fonts": {
+   "title": "Blinker",
+   "body": "Blinker"
+  },
+  "logos": {
+   "onDark": "logo-bianco.png",
+   "onLight": "logo-verde-nero.png",
+   "mono": "logo-verde.png",
+   "darkBrand": "logo-verde-bianco.png",
+   "pictogramOnLight": "pittogramma-verde.png",
+   "pictogramOnDark": "pittogramma-bianco.png",
+   "circular": "logo-circolare.png"
+  },
+  "rules": [
+   "Logo mai ruotato, deformato, con ombre o in azzurro",
+   "Su sfondo verde: testi bianchi/crema/azzurro",
+   "La & del Blinker va sostituita con quella del Lato quando possibile"
+  ],
+  "defaultCta": "Commenta CORRO e ti mando la guida",
+  "ctaKeywords": [
+   "CORRO",
+   "GUIDA",
+   "SCUOLA"
+  ],
+  "notificationApp": "Correre Naturale",
+  "speaker": {
+   "name": "Daniele Vecchioni",
+   "role": "Ideatore del metodo Correre Naturale®"
+  }
+ },
+ "settings": {
+  "target": 0,
+  "dynamism": 2,
+  "silenceGap": 0.45
+ },
+ "hook": {
+  "style": "boxed",
+  "sfx": null,
+  "duration": 2.6,
+  "text": "Cos'è la *flessibilità* metabolica",
+  "top": 940
+ },
+ "cta": {
+  "keyword": "CARBURANTE",
+  "after": true,
+  "sfx": null,
+  "style": "coaching",
+  "duration": 7,
+  "text": "Vuoi insegnare al corpo a usare il *carburante* giusto?",
+  "sub": "Nei percorsi di coaching personalizzato di Correre Naturale® alleniamo la tua flessibilità metabolica con un piano costruito su di te.",
+  "variant": "cream",
+  "note": "Commenta CARBURANTE e ti mando tutte le info",
+  "dm": "Ecco tutte le info sui percorsi di coaching personalizzato"
+ },
+ "style": {
+  "palette": "brand",
+  "titleFont": "brand",
+  "videoStyle": "talking",
+  "layout": "full",
+  "filter": "caldo",
+  "captions": {
+   "style": "hormozi",
+   "position": "low",
+   "y": 0.8,
+   "size": 0.85,
+   "wordsPerLine": 3,
+   "lines": 1,
+   "activeColor": "#95FF00",
+   "color": "#FFFFFF",
+   "stroke": 4,
+   "anim": "pop",
+   "emphColor": "#95FF00",
+   "wordFx": "colore",
+   "highlight": "#95FF00",
+   "wordGap": 0.26,
+   "alwaysOn": true,
+   "activeBase": 1.03,
+   "activeScale": 0.04
+  },
+  "emphWords": [
+   "metabolica",
+   "efficiente",
+   "energia",
+   "marcia",
+   "grassi",
+   "zuccheri",
+   "crisi",
+   "camminata",
+   "grassi",
+   "abbondante",
+   "stabile",
+   "sprint",
+   "carboidrati",
+   "rapidamente",
+   "limitati"
+  ],
+  "breathing": false,
+  "cutZoom": true,
+  "pushIn": false,
+  "cutBlend": 5,
+  "logo": false,
+  "logoKind": "pictogramOnDark",
+  "progressBar": false,
+  "gradient": false,
+  "vignette": false,
+  "focusX": 0.5,
+  "focusY": 0.3,
+  "faceZone": {
+   "on": true,
+   "y0": 0.06,
+   "y1": 0.47
+  }
+ },
+ "effects": [
+  {
+   "id": "e0",
+   "type": "zoom",
+   "start": 4.73,
+   "duration": 1.6,
+   "props": {
+    "amount": 1.07
+   },
+   "sfx": null
+  },
+  {
+   "id": "e1",
+   "type": "duoGlow",
+   "start": 10.592,
+   "duration": 6.55,
+   "props": {
+    "items": [
+     {
+      "title": "GRASSI",
+      "sub": "lenti e abbondanti",
+      "at": 0.85
+     },
+     {
+      "title": "ZUCCHERI",
+      "sub": "veloci e limitati",
+      "at": 1.59
+     }
+    ]
+   },
+   "sfx": null,
+   "tf": {
+    "y": 0.14
+   }
+  },
+  {
+   "id": "e2",
+   "type": "gauge",
+   "start": 17.243,
+   "duration": 16.77,
+   "props": {
+    "y": 0.49,
+    "left": "camminata",
+    "right": "sprint",
+    "label": "In base all'*intensità*",
+    "moveAt": 10.05,
+    "scale": 0.82,
+    "low": 45
+   },
+   "sfx": null
+  },
+  {
+   "id": "e3",
+   "type": "pills",
+   "start": 40.243,
+   "duration": 2.423,
+   "props": {
+    "items": [
+     "Energia più rapida",
+     "Ma limitata"
+    ]
+   },
+   "sfx": null,
+   "position": "center"
+  }
+ ],
+ "audio": {
+  "music": null,
+  "musicVolume": 0.08,
+  "sfxVolume": 0.25,
+  "voiceVolume": 1,
+  "ducking": true,
+  "sfxOn": true,
+  "sfxOnCuts": false
+ },
+ "caption": "La flessibilità metabolica è la capacità naturale del corpo di cambiare marcia tra grassi e zuccheri in base all'intensità.\n\nA bassa intensità, come nella camminata o nella corsa lenta, il corpo dovrebbe usare soprattutto i grassi: la fonte di energia più abbondante e stabile che abbiamo. Più l'intensità sale, più passa ai carboidrati, che danno energia in fretta ma sono limitati.\n\nUn dettaglio che non dico nel video: la maggior parte dei runner amatoriali corre quasi sempre a un'intensità in cui brucia soprattutto zuccheri, anche nelle uscite «facili». È per questo che le scorte finiscono presto e la fatica arriva prima del dovuto. La flessibilità metabolica si allena, e si allena soprattutto correndo lento nel modo giusto.\n\nVuoi insegnare al tuo corpo a usare il carburante giusto? Commenta CARBURANTE e ti mando tutte le info sui percorsi di coaching personalizzati.\n\n#correrenaturale #flessibilitametabolica #corsalenta #running #metodocorrerenaturale\n",
+ "exports": []
+}

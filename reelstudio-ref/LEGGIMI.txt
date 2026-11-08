@@ -1,0 +1,23 @@
+REELSTUDIO — Dashboard di montaggio reel e caroselli
+=====================================================
+
+PRIMA VOLTA
+1. Doppio clic su "Installa ReelStudio.bat" (in questa cartella).
+   Scarica il motore di trascrizione, il modello vocale italiano e il browser
+   di rendering: circa 600 MB, 5-10 minuti. Serve internet.
+   Se Windows mostra "Windows ha protetto il PC": clic su "Ulteriori informazioni" > "Esegui comunque".
+2. Alla fine trovi l'icona "ReelStudio" sul Desktop e la dashboard si apre da sola.
+
+OGNI GIORNO
+- Doppio clic sull'icona "ReelStudio" sul Desktop (oppure "Avvia ReelStudio.bat").
+- Si apre il browser su http://localhost:4321
+- Lascia aperta la finestra nera mentre lavori (puoi ridurla a icona).
+
+DOVE TROVO I FILE
+- Reel esportati e slide dei caroselli:  ESPORTAZIONI
+- Le tue musiche (mp3/wav):              MUSICA
+- I progetti:                            progetti
+
+AIUTO
+- Nella dashboard c'è il tab "Guida".
+- Per modifiche "intelligenti" usa il box "Chiedi a Claude" e incolla la richiesta in chat.

@@ -1,0 +1,1574 @@
+{
+ "id": "cn-vlog_workshop60",
+ "title": "Vlog condensato · Workshop Correre Naturale (24/10/2026, Vicenza)",
+ "client": "correre-naturale",
+ "origin": "inedito",
+ "created": "2026-11-07T00:48:11",
+ "source": {
+  "file": "video.mp4",
+  "original": "input/evento (telefono di Paola)",
+  "duration": 52.0,
+  "width": 1080,
+  "height": 1920
+ },
+ "words": [
+  {
+   "text": "chi",
+   "start": 25.633,
+   "end": 26.413
+  },
+  {
+   "text": "sente",
+   "start": 26.413,
+   "end": 26.813
+  },
+  {
+   "text": "che",
+   "start": 26.813,
+   "end": 27.193
+  },
+  {
+   "text": "il",
+   "start": 27.193,
+   "end": 27.293
+  },
+  {
+   "text": "peso",
+   "start": 27.293,
+   "end": 27.673
+  },
+  {
+   "text": "è",
+   "start": 27.673,
+   "end": 27.873
+  },
+  {
+   "text": "tutto",
+   "start": 27.873,
+   "end": 28.113
+  },
+  {
+   "text": "sui",
+   "start": 28.113,
+   "end": 28.473
+  },
+  {
+   "text": "talloni",
+   "start": 28.473,
+   "end": 28.973
+  },
+  {
+   "text": "tra",
+   "start": 39.433,
+   "end": 39.553
+  },
+  {
+   "text": "venti",
+   "start": 39.553,
+   "end": 40.013
+  },
+  {
+   "text": "voglio",
+   "start": 40.013,
+   "end": 40.173
+  },
+  {
+   "text": "che",
+   "start": 40.173,
+   "end": 40.273
+  },
+  {
+   "text": "stiate",
+   "start": 40.273,
+   "end": 40.453
+  },
+  {
+   "text": "meglio",
+   "start": 40.453,
+   "end": 40.893
+  },
+  {
+   "text": "di",
+   "start": 40.893,
+   "end": 41.313
+  },
+  {
+   "text": "adesso",
+   "start": 41.313,
+   "end": 41.693
+  }
+ ],
+ "removed": [],
+ "cuts": [
+  {
+   "s": 0.0,
+   "e": 0.2,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 0.2,
+   "e": 0.4,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 0.4,
+   "e": 0.6,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 0.6,
+   "e": 0.8,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 0.8,
+   "e": 1.0,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 1.0,
+   "e": 1.2,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 1.2,
+   "e": 1.3667,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 1.3667,
+   "e": 1.5667,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 1.5667,
+   "e": 3.6667,
+   "speed": 2.0,
+   "vol": 0.3
+  },
+  {
+   "s": 3.6667,
+   "e": 4.7333,
+   "vol": 0.3
+  },
+  {
+   "s": 4.7333,
+   "e": 5.8,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 5.8,
+   "e": 6.8667,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 6.8667,
+   "e": 7.9333,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 7.9333,
+   "e": 9.0,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 9.0,
+   "e": 10.7,
+   "speed": 1.6,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 10.7,
+   "e": 11.7667,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 11.7667,
+   "e": 12.8333,
+   "vol": 0.3
+  },
+  {
+   "s": 12.8333,
+   "e": 13.9,
+   "vol": 0.3
+  },
+  {
+   "s": 13.9,
+   "e": 14.9667,
+   "vol": 0.3
+  },
+  {
+   "s": 14.9667,
+   "e": 16.0333,
+   "vol": 0.3
+  },
+  {
+   "s": 16.0333,
+   "e": 17.1,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 17.1,
+   "e": 18.1667,
+   "vol": 0.3
+  },
+  {
+   "s": 18.1667,
+   "e": 19.2333,
+   "vol": 0.3
+  },
+  {
+   "s": 19.2333,
+   "e": 20.3,
+   "vol": 0.3
+  },
+  {
+   "s": 20.3,
+   "e": 21.3667,
+   "vol": 0.3
+  },
+  {
+   "s": 21.3667,
+   "e": 22.4333,
+   "vol": 0.3
+  },
+  {
+   "s": 22.4333,
+   "e": 23.5,
+   "vol": 0.3
+  },
+  {
+   "s": 23.5,
+   "e": 24.5667,
+   "vol": 0.3
+  },
+  {
+   "s": 24.5667,
+   "e": 25.6333,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 25.6333,
+   "e": 29.2333,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  },
+  {
+   "s": 29.2333,
+   "e": 30.4,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 30.4,
+   "e": 31.4667,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 31.4667,
+   "e": 32.5333,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 32.5333,
+   "e": 33.9333,
+   "speed": 1.3,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 33.9333,
+   "e": 35.0,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 35.0,
+   "e": 36.0667,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 36.0667,
+   "e": 37.1,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 37.1,
+   "e": 38.1667,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 38.1667,
+   "e": 39.2333,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 39.2333,
+   "e": 41.9667,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  },
+  {
+   "s": 41.9667,
+   "e": 42.9333,
+   "vol": 0.3
+  },
+  {
+   "s": 42.9333,
+   "e": 44.0,
+   "vol": 0.3
+  }
+ ],
+ "brand": {
+  "id": "correre-naturale",
+  "name": "Correre Naturale",
+  "handle": "@correrenaturale",
+  "tagline": "Running Culture",
+  "colors": {
+   "primary": "#49762E",
+   "accent": "#B8D7EA",
+   "cream": "#F4F1E5",
+   "dark": "#000000",
+   "light": "#FFFFFF"
+  },
+  "fonts": {
+   "title": "Blinker",
+   "body": "Blinker"
+  },
+  "logos": {
+   "onDark": "logo-bianco.png",
+   "onLight": "logo-verde-nero.png",
+   "mono": "logo-verde.png",
+   "darkBrand": "logo-verde-bianco.png",
+   "pictogramOnLight": "pittogramma-verde.png",
+   "pictogramOnDark": "pittogramma-bianco.png",
+   "circular": "logo-circolare.png"
+  },
+  "rules": [
+   "Logo mai ruotato, deformato, con ombre o in azzurro",
+   "Su sfondo verde: testi bianchi/crema/azzurro",
+   "La & del Blinker va sostituita con quella del Lato quando possibile"
+  ],
+  "defaultCta": "Commenta CORRO e ti mando la guida",
+  "ctaKeywords": [
+   "CORRO",
+   "GUIDA",
+   "SCUOLA"
+  ],
+  "notificationApp": "Correre Naturale",
+  "speaker": {
+   "name": "Daniele Vecchioni",
+   "role": "Ideatore del metodo Correre Naturale®"
+  }
+ },
+ "settings": {
+  "target": 0,
+  "dynamism": 3,
+  "silenceGap": 0.45
+ },
+ "hook": {
+  "text": "",
+  "style": "none"
+ },
+ "cta": {
+  "style": "coaching",
+  "after": true,
+  "duration": 7,
+  "keyword": "WORKSHOP",
+  "variant": "video",
+  "textScale": 1.15,
+  "titleTop": 380,
+  "subTop": 610,
+  "noteTop": 1005,
+  "overlay": "linear-gradient(180deg, rgba(14,23,10,.60) 0%, rgba(14,23,10,.80) 45%, rgba(14,23,10,.92) 100%)",
+  "text": "Vuoi esserci al *prossimo* workshop?",
+  "sub": "Una giornata dal vivo con Daniele e il metodo Correre Naturale®",
+  "note": "Commenta WORKSHOP: ti mando date e info",
+  "dm": "Ecco date e info del prossimo workshop dal vivo di Correre Naturale®",
+  "video": {
+   "src": "/progetti/cn-vlog_workshop60/video.mp4",
+   "from": 44.0
+  },
+  "sfx": null
+ },
+ "style": {
+  "palette": "brand",
+  "titleFont": "brand",
+  "videoStyle": "vlog",
+  "layout": "full",
+  "filter": "none",
+  "captions": {
+   "style": "hormozi",
+   "position": "low",
+   "y": 0.8,
+   "size": 0.85,
+   "wordsPerLine": 3,
+   "lines": 1,
+   "alwaysOn": true,
+   "activeColor": "#95FF00",
+   "color": "#FFFFFF",
+   "stroke": 4,
+   "anim": "pop",
+   "emphColor": "#95FF00",
+   "wordFx": "colore",
+   "highlight": "#95FF00",
+   "wordGap": 0.3,
+   "font": "brand",
+   "activeBase": 1.0,
+   "activeScale": 0.06
+  },
+  "emphWords": [
+   "talloni",
+   "venti",
+   "meglio"
+  ],
+  "breathing": false,
+  "cutZoom": false,
+  "pushIn": false,
+  "cutBlend": 0,
+  "logo": false,
+  "logoKind": "pictogramOnDark",
+  "progressBar": false,
+  "gradient": false,
+  "vignette": false,
+  "focusX": 0.5,
+  "focusY": 0.35,
+  "faceZone": {
+   "on": true,
+   "y0": 0.2,
+   "y1": 0.45
+  }
+ },
+ "effects": [
+  {
+   "id": "o1",
+   "type": "obj",
+   "start": 0,
+   "duration": 1.567,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "shape",
+    "shape": "rettangolo",
+    "fill": "rgba(73,118,46,0.62)",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1080,
+    "h": 1920,
+    "inA": "none",
+    "outA": "none"
+   }
+  },
+  {
+   "id": "o2",
+   "type": "obj",
+   "start": 0,
+   "duration": 1.567,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Una",
+    "x": 0.5,
+    "y": 0.285,
+    "w": 1000,
+    "size": 118,
+    "weight": 600,
+    "color": "#FFFFFF",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o3",
+   "type": "obj",
+   "start": 0,
+   "duration": 1.567,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "giornata",
+    "x": 0.5,
+    "y": 0.36,
+    "w": 1000,
+    "size": 150,
+    "weight": 800,
+    "color": "#95FF00",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o4",
+   "type": "obj",
+   "start": 0,
+   "duration": 1.567,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "di",
+    "x": 0.5,
+    "y": 0.44,
+    "w": 1000,
+    "size": 118,
+    "weight": 600,
+    "color": "#FFFFFF",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o5",
+   "type": "obj",
+   "start": 0,
+   "duration": 1.567,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "con Correre Naturale®",
+    "x": 0.5,
+    "y": 0.635,
+    "w": 1000,
+    "size": 88,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o6",
+   "type": "obj",
+   "start": 0,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 150,
+    "weight": 800,
+    "color": "#95FF00",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Blinker",
+    "italic": false,
+    "upper": true,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o7",
+   "type": "obj",
+   "start": 0.098,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 168,
+    "weight": 400,
+    "color": "#FFFFFF",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "DMSerif",
+    "italic": true,
+    "upper": false,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o8",
+   "type": "obj",
+   "start": 0.196,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 168,
+    "weight": 400,
+    "color": "#B8D7EA",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Pacifico",
+    "italic": false,
+    "upper": false,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o9",
+   "type": "obj",
+   "start": 0.294,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 150,
+    "weight": 400,
+    "color": "#FFFFFF",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Anton",
+    "italic": false,
+    "upper": true,
+    "letter": 6
+   }
+  },
+  {
+   "id": "o10",
+   "type": "obj",
+   "start": 0.392,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 168,
+    "weight": 700,
+    "color": "#F4F1E5",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Playfair",
+    "italic": true,
+    "upper": false,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o11",
+   "type": "obj",
+   "start": 0.49,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 168,
+    "weight": 700,
+    "color": "#95FF00",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Caveat",
+    "italic": false,
+    "upper": false,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o12",
+   "type": "obj",
+   "start": 0.588,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 150,
+    "weight": 400,
+    "color": "#FFFFFF",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Bebas",
+    "italic": false,
+    "upper": true,
+    "letter": 10
+   }
+  },
+  {
+   "id": "o13",
+   "type": "obj",
+   "start": 0.685,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 168,
+    "weight": 400,
+    "color": "#B8D7EA",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Lobster",
+    "italic": false,
+    "upper": false,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o14",
+   "type": "obj",
+   "start": 0.783,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 168,
+    "weight": 900,
+    "color": "#FFFFFF",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Fraunces",
+    "italic": true,
+    "upper": false,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o15",
+   "type": "obj",
+   "start": 0.881,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 168,
+    "weight": 400,
+    "color": "#95FF00",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Marker",
+    "italic": false,
+    "upper": false,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o16",
+   "type": "obj",
+   "start": 0.979,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 168,
+    "weight": 400,
+    "color": "#F4F1E5",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Abril",
+    "italic": false,
+    "upper": false,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o17",
+   "type": "obj",
+   "start": 1.077,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 168,
+    "weight": 400,
+    "color": "#FFFFFF",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Instrument",
+    "italic": true,
+    "upper": false,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o18",
+   "type": "obj",
+   "start": 1.175,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 150,
+    "weight": 400,
+    "color": "#B8D7EA",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Righteous",
+    "italic": false,
+    "upper": true,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o19",
+   "type": "obj",
+   "start": 1.273,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 150,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Oswald",
+    "italic": false,
+    "upper": true,
+    "letter": 4
+   }
+  },
+  {
+   "id": "o20",
+   "type": "obj",
+   "start": 1.371,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 150,
+    "weight": 800,
+    "color": "#F4F1E5",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Syne",
+    "italic": false,
+    "upper": true,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o21",
+   "type": "obj",
+   "start": 1.469,
+   "duration": 0.098,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "workshop",
+    "x": 0.5,
+    "y": 0.53,
+    "w": 1000,
+    "size": 150,
+    "weight": 800,
+    "color": "#95FF00",
+    "align": "center",
+    "shadow": "morbida",
+    "strokeW": 2,
+    "strokeColor": "rgba(11,15,10,.55)",
+    "inA": "none",
+    "outA": "none",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5,
+    "font": "Blinker",
+    "italic": false,
+    "upper": true,
+    "letter": 0
+   }
+  },
+  {
+   "id": "o22",
+   "type": "obj",
+   "start": 1.617,
+   "duration": 2.933,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "9:30 Check in",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 525,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o23",
+   "type": "obj",
+   "start": 4.8,
+   "duration": 2.95,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "10:00 In sala",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 525,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o24",
+   "type": "obj",
+   "start": 8.0,
+   "duration": 1.879,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Riscaldamento",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 525,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o25",
+   "type": "obj",
+   "start": 10.129,
+   "duration": 1.883,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Prove di corsa",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 560,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o26",
+   "type": "obj",
+   "start": 12.263,
+   "duration": 1.883,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "12:30 Sul prato",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 595,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o27",
+   "type": "obj",
+   "start": 14.396,
+   "duration": 1.883,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "La lezione",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 420,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o28",
+   "type": "obj",
+   "start": 16.529,
+   "duration": 1.883,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Esercizi",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 350,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o29",
+   "type": "obj",
+   "start": 18.663,
+   "duration": 2.95,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Si corre",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 350,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o30",
+   "type": "obj",
+   "start": 21.863,
+   "duration": 0.817,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "La squadra",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 420,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o31",
+   "type": "obj",
+   "start": 22.929,
+   "duration": 0.817,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "La pausa",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 350,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o32",
+   "type": "obj",
+   "start": 23.996,
+   "duration": 4.517,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "16:00 Postura piedi e squat",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 880,
+    "size": 60,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o33",
+   "type": "obj",
+   "start": 28.762,
+   "duration": 1.883,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "17:30 La pedana",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 595,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o34",
+   "type": "obj",
+   "start": 30.896,
+   "duration": 1.894,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "18:00 Tapis roulant",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 735,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o35",
+   "type": "obj",
+   "start": 33.039,
+   "duration": 2.917,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Running analysis",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 630,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o36",
+   "type": "obj",
+   "start": 36.206,
+   "duration": 0.817,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "18:30 La storia di Daniela",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 850,
+    "size": 60,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o37",
+   "type": "obj",
+   "start": 37.273,
+   "duration": 2.483,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Chiusura",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 350,
+    "size": 70,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o38",
+   "type": "obj",
+   "start": 40.006,
+   "duration": 1.783,
+   "sfx": "pop",
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Ci vediamo al prossimo",
+    "x": 0.5,
+    "y": 0.585,
+    "w": 730,
+    "size": 60,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 16,
+    "bgRadius": 20,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "fade",
+    "inSpeed": 0.5,
+    "outSpeed": 0.5
+   }
+  },
+  {
+   "id": "o39",
+   "type": "obj",
+   "start": 0,
+   "duration": 41.989,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "image",
+    "src": "/progetti/cn-vlog_workshop/foto/logo_circ_bianco_ombra.png",
+    "x": 0.875,
+    "y": 0.085,
+    "w": 230,
+    "shadow": "no",
+    "inA": "fade",
+    "outA": "fade",
+    "opacity": 1
+   }
+  }
+ ],
+ "audio": {
+  "music": "pop-solare-32f",
+  "musicVolume": 0.42,
+  "sfxVolume": 0.3,
+  "voiceVolume": 1,
+  "ducking": true,
+  "sfxOn": true,
+  "sfxOnCuts": false,
+  "voiceovers": [
+   {
+    "src": "/progetti/cn-vlog_workshop60/silenzio.mp3",
+    "at": 23.946,
+    "dur": 3.6,
+    "volume": 0
+   },
+   {
+    "src": "/progetti/cn-vlog_workshop60/silenzio.mp3",
+    "at": 37.223,
+    "dur": 2.733,
+    "volume": 0
+   }
+  ]
+ },
+ "caption": "",
+ "exports": []
+}

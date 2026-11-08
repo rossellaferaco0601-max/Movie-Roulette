@@ -1,0 +1,25 @@
+{
+  "name": "reelstudio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ReelStudio — dashboard di montaggio reel e caroselli per La Problem Solver",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js --open",
+    "build-ui": "esbuild ui/src/app.tsx --bundle --minify --outfile=ui/dist/app.js --jsx=automatic --define:process.env.NODE_ENV=\\\"production\\\""
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.539",
+    "@remotion/install-whisper-cpp": "4.0.539",
+    "@remotion/player": "4.0.539",
+    "@remotion/renderer": "4.0.539",
+    "pptxgenjs": "3.12.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "qrcode-generator": "^1.4.4"
+  }
+}

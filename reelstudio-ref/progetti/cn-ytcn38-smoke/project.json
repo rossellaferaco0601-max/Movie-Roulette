@@ -1,0 +1,328 @@
+{
+ "id": "cn-ytcn38-smoke",
+ "title": "smoke",
+ "client": "correre-naturale",
+ "origin": "youtube",
+ "parent": "cn-ytcn38-src",
+ "source": {
+  "file": "../cn-ytcn38-src/video4k.mp4",
+  "original": "YTCN 38.mp4",
+  "duration": 465.73,
+  "width": 3840,
+  "height": 2160
+ },
+ "words": [
+  {
+   "text": "Immagina",
+   "start": 36.06,
+   "end": 36.5
+  },
+  {
+   "text": "di",
+   "start": 36.5,
+   "end": 36.6
+  },
+  {
+   "text": "avere",
+   "start": 36.6,
+   "end": 36.9
+  },
+  {
+   "text": "un'auto",
+   "start": 36.9,
+   "end": 37.3
+  },
+  {
+   "text": "che",
+   "start": 37.3,
+   "end": 37.5
+  },
+  {
+   "text": "consuma",
+   "start": 37.5,
+   "end": 38.0
+  },
+  {
+   "text": "tantissimo.",
+   "start": 38.0,
+   "end": 38.7
+  },
+  {
+   "text": "Ogni",
+   "start": 38.72,
+   "end": 39.0
+  },
+  {
+   "text": "volta",
+   "start": 39.0,
+   "end": 39.3
+  },
+  {
+   "text": "che",
+   "start": 39.3,
+   "end": 39.4
+  },
+  {
+   "text": "acceleri",
+   "start": 39.4,
+   "end": 39.9
+  },
+  {
+   "text": "un",
+   "start": 39.9,
+   "end": 40.0
+  },
+  {
+   "text": "po',",
+   "start": 40.0,
+   "end": 40.3
+  },
+  {
+   "text": "il",
+   "start": 40.3,
+   "end": 40.5
+  },
+  {
+   "text": "consumo",
+   "start": 40.5,
+   "end": 41.0
+  },
+  {
+   "text": "si",
+   "start": 41.0,
+   "end": 41.2
+  },
+  {
+   "text": "alza",
+   "start": 41.2,
+   "end": 41.6
+  },
+  {
+   "text": "vertiginosamente.",
+   "start": 41.6,
+   "end": 42.6
+  }
+ ],
+ "removed": [],
+ "cuts": [
+  {
+   "s": 36.06,
+   "e": 38.72,
+   "frame": "volto",
+   "fx": 0.55,
+   "fy": 0.3
+  },
+  {
+   "s": 38.72,
+   "e": 42.62,
+   "frame": "volto",
+   "fx": 0.52,
+   "fy": 0.3,
+   "blend": true
+  }
+ ],
+ "brand": {
+  "id": "correre-naturale",
+  "name": "Correre Naturale",
+  "handle": "@correrenaturale",
+  "tagline": "Running Culture",
+  "colors": {
+   "primary": "#49762E",
+   "accent": "#B8D7EA",
+   "cream": "#F4F1E5",
+   "dark": "#000000",
+   "light": "#FFFFFF"
+  },
+  "fonts": {
+   "title": "Blinker",
+   "body": "Blinker"
+  },
+  "logos": {
+   "onDark": "logo-bianco.png",
+   "onLight": "logo-verde-nero.png",
+   "mono": "logo-verde.png",
+   "darkBrand": "logo-verde-bianco.png",
+   "pictogramOnLight": "pittogramma-verde.png",
+   "pictogramOnDark": "pittogramma-bianco.png",
+   "circular": "logo-circolare.png"
+  },
+  "rules": [
+   "Logo mai ruotato, deformato, con ombre o in azzurro",
+   "Su sfondo verde: testi bianchi/crema/azzurro",
+   "La & del Blinker va sostituita con quella del Lato quando possibile"
+  ],
+  "defaultCta": "Commenta CORRO e ti mando la guida",
+  "ctaKeywords": [
+   "CORRO",
+   "GUIDA",
+   "SCUOLA"
+  ],
+  "notificationApp": "Correre Naturale",
+  "speaker": {
+   "name": "Daniele Vecchioni",
+   "role": "Ideatore del metodo Correre Naturale®"
+  }
+ },
+ "settings": {
+  "target": 0,
+  "dynamism": 2,
+  "silenceGap": 0.45
+ },
+ "hook": {
+  "style": "boxed",
+  "duration": 2.6,
+  "sfx": null,
+  "text": "Correre con *meno* fatica",
+  "top": 940
+ },
+ "cta": {
+  "style": "coaching",
+  "duration": 6,
+  "keyword": "EFFICIENTE",
+  "after": true,
+  "sfx": null,
+  "text": "Vuoi correre con *meno fatica*?",
+  "sub": "Nei percorsi di coaching personalizzati di Correre Naturale® costruiamo con te un corpo efficiente, passo dopo passo.",
+  "note": "Commenta EFFICIENTE e ti mando tutte le info 👇",
+  "variant": "green"
+ },
+ "style": {
+  "palette": "brand",
+  "titleFont": "brand",
+  "videoStyle": "talking",
+  "layout": "full",
+  "filter": "caldo",
+  "captions": {
+   "style": "hormozi",
+   "position": "low",
+   "y": 0.7,
+   "size": 0.9,
+   "wordsPerLine": 3,
+   "lines": 1,
+   "activeColor": "#95FF00",
+   "color": "#FFFFFF",
+   "stroke": 4,
+   "anim": "pop",
+   "emphColor": "#95FF00",
+   "wordFx": "colore",
+   "highlight": "#95FF00"
+  },
+  "emphWords": [
+   "consuma"
+  ],
+  "breathing": false,
+  "cutZoom": false,
+  "pushIn": false,
+  "cutBlend": 5,
+  "logo": false,
+  "logoKind": "pictogramOnDark",
+  "progressBar": false,
+  "gradient": false,
+  "vignette": false,
+  "focusX": 0.5,
+  "focusY": 0.3,
+  "faceZone": {
+   "on": true,
+   "y0": 0.08,
+   "y1": 0.42
+  }
+ },
+ "effects": [
+  {
+   "id": "ig0",
+   "type": "obj",
+   "start": 0,
+   "duration": 6.5,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "image",
+    "src": "/progetti/cn-ytcn38-src/elementi/20261104-195147-instagram.svg",
+    "tint": "#FFFFFF",
+    "w": 54,
+    "h": 54,
+    "x": 0.875,
+    "y": 0.108,
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "none",
+    "opacity": 0.95
+   }
+  },
+  {
+   "id": "ig1",
+   "type": "obj",
+   "start": 0,
+   "duration": 6.5,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "@correrenaturale",
+    "x": 0.875,
+    "y": 0.142,
+    "w": 360,
+    "size": 24,
+    "weight": 700,
+    "color": "#FFFFFF",
+    "upper": true,
+    "letter": 1,
+    "align": "center",
+    "shadow": "morbida",
+    "inA": "fade",
+    "outA": "none",
+    "opacity": 0.95
+   }
+  },
+  {
+   "id": "e0",
+   "type": "glassStats",
+   "start": 3.0,
+   "duration": 3.3,
+   "sfx": null,
+   "position": "center",
+   "props": {
+    "items": [
+     {
+      "big": "4×",
+      "label": "la distanza",
+      "at": 0.2,
+      "x": 0.05,
+      "y": 0.5,
+      "w": 0.43
+     },
+     {
+      "big": "−30%",
+      "label": "consumo",
+      "at": 1.2,
+      "x": 0.52,
+      "y": 0.5,
+      "w": 0.43,
+      "accent": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "e1",
+   "type": "zoom",
+   "start": 4.5,
+   "duration": 1.4,
+   "sfx": null,
+   "props": {
+    "amount": 1.15
+   }
+  }
+ ],
+ "audio": {
+  "music": "lofi-corsa-mattutina",
+  "musicVolume": 0.08,
+  "sfxVolume": 0.55,
+  "voiceVolume": 1,
+  "ducking": true,
+  "sfxOn": false,
+  "sfxOnCuts": false
+ },
+ "caption": "",
+ "exports": []
+}

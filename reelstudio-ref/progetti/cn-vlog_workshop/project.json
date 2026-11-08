@@ -1,0 +1,2551 @@
+{
+ "id": "cn-vlog_workshop",
+ "title": "Vlog v4 · Workshop Correre Naturale (24/10/2026, Vicenza) · brano Jalen Ngonda",
+ "client": "correre-naturale",
+ "origin": "inedito",
+ "created": "2026-11-07T11:22:49",
+ "source": {
+  "file": "video.mp4",
+  "original": "input/evento (telefono di Paola) + testimonianze dal sito",
+  "duration": 162.633,
+  "width": 1080,
+  "height": 1920
+ },
+ "words": [
+  {
+   "text": "È",
+   "start": 0.35,
+   "end": 0.61
+  },
+  {
+   "text": "da",
+   "start": 0.61,
+   "end": 0.85
+  },
+  {
+   "text": "un",
+   "start": 0.85,
+   "end": 0.97
+  },
+  {
+   "text": "po'",
+   "start": 0.97,
+   "end": 1.19
+  },
+  {
+   "text": "che",
+   "start": 1.21,
+   "end": 1.29
+  },
+  {
+   "text": "siamo",
+   "start": 1.29,
+   "end": 1.51
+  },
+  {
+   "text": "fermi,",
+   "start": 1.51,
+   "end": 2.03
+  },
+  {
+   "text": "quindi",
+   "start": 2.03,
+   "end": 2.15
+  },
+  {
+   "text": "domani",
+   "start": 2.15,
+   "end": 2.51
+  },
+  {
+   "text": "sarà",
+   "start": 2.51,
+   "end": 2.65
+  },
+  {
+   "text": "una",
+   "start": 2.65,
+   "end": 2.81
+  },
+  {
+   "text": "giornata",
+   "start": 2.81,
+   "end": 3.23
+  },
+  {
+   "text": "scoppiettante.",
+   "start": 3.23,
+   "end": 4.63
+  },
+  {
+   "text": "Ragazzi,",
+   "start": 6.033,
+   "end": 6.653
+  },
+  {
+   "text": "non",
+   "start": 6.653,
+   "end": 6.833
+  },
+  {
+   "text": "vedo",
+   "start": 6.833,
+   "end": 7.513
+  },
+  {
+   "text": "l'ora,",
+   "start": 7.513,
+   "end": 7.833
+  },
+  {
+   "text": "arrivi",
+   "start": 7.853,
+   "end": 8.313
+  },
+  {
+   "text": "domani",
+   "start": 8.313,
+   "end": 8.993
+  },
+  {
+   "text": "mattina",
+   "start": 8.993,
+   "end": 9.533
+  },
+  {
+   "text": "per",
+   "start": 9.533,
+   "end": 9.853
+  },
+  {
+   "text": "il",
+   "start": 9.853,
+   "end": 10.373
+  },
+  {
+   "text": "workshop",
+   "start": 10.373,
+   "end": 11.173
+  },
+  {
+   "text": "di",
+   "start": 11.173,
+   "end": 11.753
+  },
+  {
+   "text": "Correre",
+   "start": 11.753,
+   "end": 12.273
+  },
+  {
+   "text": "Naturale.",
+   "start": 12.273,
+   "end": 12.753
+  },
+  {
+   "text": "se",
+   "start": 30.92,
+   "end": 31.14
+  },
+  {
+   "text": "riscopriamo",
+   "start": 31.14,
+   "end": 32.02
+  },
+  {
+   "text": "come",
+   "start": 32.02,
+   "end": 32.4
+  },
+  {
+   "text": "recuperare,",
+   "start": 32.4,
+   "end": 33.5
+  },
+  {
+   "text": "come",
+   "start": 33.5,
+   "end": 33.68
+  },
+  {
+   "text": "ridare",
+   "start": 33.68,
+   "end": 34.28
+  },
+  {
+   "text": "informazioni,",
+   "start": 34.28,
+   "end": 35.66
+  },
+  {
+   "text": "riportare",
+   "start": 35.68,
+   "end": 36.4
+  },
+  {
+   "text": "il",
+   "start": 36.4,
+   "end": 36.5
+  },
+  {
+   "text": "nostro",
+   "start": 36.5,
+   "end": 36.62
+  },
+  {
+   "text": "corpo",
+   "start": 36.62,
+   "end": 37.04
+  },
+  {
+   "text": "a",
+   "start": 37.04,
+   "end": 37.2
+  },
+  {
+   "text": "capire",
+   "start": 37.2,
+   "end": 37.52
+  },
+  {
+   "text": "come",
+   "start": 37.52,
+   "end": 37.76
+  },
+  {
+   "text": "deve",
+   "start": 37.76,
+   "end": 37.94
+  },
+  {
+   "text": "muoversi",
+   "start": 37.94,
+   "end": 38.54
+  },
+  {
+   "text": "io",
+   "start": 48.287,
+   "end": 49.047
+  },
+  {
+   "text": "lo",
+   "start": 49.047,
+   "end": 49.127
+  },
+  {
+   "text": "so",
+   "start": 49.127,
+   "end": 49.287
+  },
+  {
+   "text": "che",
+   "start": 49.287,
+   "end": 49.367
+  },
+  {
+   "text": "là",
+   "start": 49.367,
+   "end": 49.467
+  },
+  {
+   "text": "fuori",
+   "start": 49.467,
+   "end": 49.787
+  },
+  {
+   "text": "tanti",
+   "start": 49.787,
+   "end": 50.107
+  },
+  {
+   "text": "dicono",
+   "start": 50.107,
+   "end": 50.447
+  },
+  {
+   "text": "ah",
+   "start": 50.447,
+   "end": 50.607
+  },
+  {
+   "text": "no",
+   "start": 50.607,
+   "end": 50.787
+  },
+  {
+   "text": "ma",
+   "start": 50.787,
+   "end": 50.947
+  },
+  {
+   "text": "non",
+   "start": 50.947,
+   "end": 51.067
+  },
+  {
+   "text": "c'è",
+   "start": 51.067,
+   "end": 51.307
+  },
+  {
+   "text": "una",
+   "start": 51.307,
+   "end": 51.467
+  },
+  {
+   "text": "tecnica",
+   "start": 51.467,
+   "end": 52.007
+  },
+  {
+   "text": "di",
+   "start": 52.007,
+   "end": 52.107
+  },
+  {
+   "text": "corsa",
+   "start": 52.107,
+   "end": 52.467
+  },
+  {
+   "text": "ognuno",
+   "start": 52.467,
+   "end": 53.107
+  },
+  {
+   "text": "corre",
+   "start": 53.107,
+   "end": 53.287
+  },
+  {
+   "text": "come",
+   "start": 53.287,
+   "end": 53.527
+  },
+  {
+   "text": "vuole",
+   "start": 53.527,
+   "end": 53.927
+  },
+  {
+   "text": "è",
+   "start": 53.927,
+   "end": 54.487
+  },
+  {
+   "text": "un",
+   "start": 54.487,
+   "end": 54.607
+  },
+  {
+   "text": "po'",
+   "start": 54.607,
+   "end": 54.667
+  },
+  {
+   "text": "stupido",
+   "start": 54.667,
+   "end": 55.227
+  },
+  {
+   "text": "pensarlo",
+   "start": 55.227,
+   "end": 55.927
+  },
+  {
+   "text": "ritmo",
+   "start": 56.34,
+   "end": 57.02
+  },
+  {
+   "text": "di",
+   "start": 57.02,
+   "end": 57.1
+  },
+  {
+   "text": "170-180",
+   "start": 57.1,
+   "end": 58.18
+  },
+  {
+   "text": "è",
+   "start": 58.18,
+   "end": 58.82
+  },
+  {
+   "text": "quello",
+   "start": 58.82,
+   "end": 59.14
+  },
+  {
+   "text": "che",
+   "start": 59.14,
+   "end": 59.4
+  },
+  {
+   "text": "ottimizza",
+   "start": 59.4,
+   "end": 60.88
+  },
+  {
+   "text": "il",
+   "start": 60.88,
+   "end": 61.16
+  },
+  {
+   "text": "nostro",
+   "start": 61.16,
+   "end": 61.86
+  },
+  {
+   "text": "armamentario",
+   "start": 61.86,
+   "end": 62.5
+  },
+  {
+   "text": "di",
+   "start": 62.5,
+   "end": 62.6
+  },
+  {
+   "text": "essere",
+   "start": 62.6,
+   "end": 62.74
+  },
+  {
+   "text": "umano.",
+   "start": 62.74,
+   "end": 63.12
+  },
+  {
+   "text": "Perché,",
+   "start": 66.167,
+   "end": 66.607
+  },
+  {
+   "text": "ricordiamoci",
+   "start": 66.607,
+   "end": 67.287
+  },
+  {
+   "text": "che",
+   "start": 67.287,
+   "end": 67.367
+  },
+  {
+   "text": "stiamo",
+   "start": 67.367,
+   "end": 67.707
+  },
+  {
+   "text": "migliorando",
+   "start": 67.707,
+   "end": 68.567
+  },
+  {
+   "text": "l'essere",
+   "start": 68.567,
+   "end": 68.907
+  },
+  {
+   "text": "umano",
+   "start": 68.907,
+   "end": 69.167
+  },
+  {
+   "text": "grazie",
+   "start": 69.167,
+   "end": 69.487
+  },
+  {
+   "text": "alla",
+   "start": 69.487,
+   "end": 69.567
+  },
+  {
+   "text": "corsa.",
+   "start": 69.567,
+   "end": 69.887
+  },
+  {
+   "text": "chi",
+   "start": 70.267,
+   "end": 71.047
+  },
+  {
+   "text": "sente",
+   "start": 71.047,
+   "end": 71.447
+  },
+  {
+   "text": "che",
+   "start": 71.447,
+   "end": 71.827
+  },
+  {
+   "text": "il",
+   "start": 71.827,
+   "end": 71.927
+  },
+  {
+   "text": "peso",
+   "start": 71.927,
+   "end": 72.307
+  },
+  {
+   "text": "è",
+   "start": 72.307,
+   "end": 72.507
+  },
+  {
+   "text": "tutto",
+   "start": 72.507,
+   "end": 72.747
+  },
+  {
+   "text": "sui",
+   "start": 72.747,
+   "end": 73.107
+  },
+  {
+   "text": "talloni",
+   "start": 73.107,
+   "end": 73.607
+  },
+  {
+   "text": "e",
+   "start": 73.607,
+   "end": 73.747
+  },
+  {
+   "text": "quindi",
+   "start": 73.747,
+   "end": 73.907
+  },
+  {
+   "text": "sta",
+   "start": 73.907,
+   "end": 74.167
+  },
+  {
+   "text": "un",
+   "start": 74.167,
+   "end": 74.287
+  },
+  {
+   "text": "po'",
+   "start": 74.287,
+   "end": 74.507
+  },
+  {
+   "text": "cadendo",
+   "start": 74.527,
+   "end": 74.927
+  },
+  {
+   "text": "all'indietro",
+   "start": 74.927,
+   "end": 75.587
+  },
+  {
+   "text": "venga",
+   "start": 75.587,
+   "end": 76.867
+  },
+  {
+   "text": "su",
+   "start": 76.867,
+   "end": 77.107
+  },
+  {
+   "text": "chi",
+   "start": 77.107,
+   "end": 78.047
+  },
+  {
+   "text": "deve",
+   "start": 78.047,
+   "end": 78.327
+  },
+  {
+   "text": "tenere",
+   "start": 78.327,
+   "end": 78.807
+  },
+  {
+   "text": "i",
+   "start": 78.807,
+   "end": 78.927
+  },
+  {
+   "text": "talloni",
+   "start": 78.927,
+   "end": 79.287
+  },
+  {
+   "text": "sollevati",
+   "start": 79.287,
+   "end": 79.807
+  },
+  {
+   "text": "per",
+   "start": 79.807,
+   "end": 80.027
+  },
+  {
+   "text": "stare",
+   "start": 80.027,
+   "end": 80.207
+  },
+  {
+   "text": "in",
+   "start": 80.207,
+   "end": 80.367
+  },
+  {
+   "text": "posizione",
+   "start": 80.367,
+   "end": 80.967
+  },
+  {
+   "text": "venga",
+   "start": 80.967,
+   "end": 82.127
+  },
+  {
+   "text": "su",
+   "start": 82.127,
+   "end": 82.387
+  },
+  {
+   "text": "Questo",
+   "start": 86.133,
+   "end": 86.653
+  },
+  {
+   "text": "è",
+   "start": 86.653,
+   "end": 87.173
+  },
+  {
+   "text": "il",
+   "start": 87.173,
+   "end": 87.233
+  },
+  {
+   "text": "sistema",
+   "start": 87.233,
+   "end": 87.533
+  },
+  {
+   "text": "nervoso",
+   "start": 87.533,
+   "end": 88.093
+  },
+  {
+   "text": "Questa",
+   "start": 88.733,
+   "end": 89.253
+  },
+  {
+   "text": "è",
+   "start": 89.253,
+   "end": 89.433
+  },
+  {
+   "text": "la",
+   "start": 89.433,
+   "end": 89.573
+  },
+  {
+   "text": "capacità",
+   "start": 89.573,
+   "end": 90.493
+  },
+  {
+   "text": "poi",
+   "start": 90.493,
+   "end": 90.753
+  },
+  {
+   "text": "Di",
+   "start": 90.753,
+   "end": 91.433
+  },
+  {
+   "text": "far",
+   "start": 91.433,
+   "end": 91.653
+  },
+  {
+   "text": "sì",
+   "start": 91.653,
+   "end": 91.913
+  },
+  {
+   "text": "che",
+   "start": 91.913,
+   "end": 92.033
+  },
+  {
+   "text": "piano",
+   "start": 92.033,
+   "end": 92.373
+  },
+  {
+   "text": "piano",
+   "start": 92.373,
+   "end": 92.713
+  },
+  {
+   "text": "Dica",
+   "start": 93.353,
+   "end": 93.873
+  },
+  {
+   "text": "Tu",
+   "start": 93.873,
+   "end": 94.813
+  },
+  {
+   "text": "va",
+   "start": 94.813,
+   "end": 94.993
+  },
+  {
+   "text": "tutto",
+   "start": 94.993,
+   "end": 95.173
+  },
+  {
+   "text": "bene",
+   "start": 95.173,
+   "end": 95.533
+  },
+  {
+   "text": "Vai",
+   "start": 95.533,
+   "end": 96.473
+  },
+  {
+   "text": "tranquillo,",
+   "start": 96.473,
+   "end": 96.973
+  },
+  {
+   "text": "fidati,",
+   "start": 96.993,
+   "end": 97.393
+  },
+  {
+   "text": "ce",
+   "start": 97.393,
+   "end": 97.573
+  },
+  {
+   "text": "l'hai",
+   "start": 97.573,
+   "end": 98.193
+  },
+  {
+   "text": "ancora",
+   "start": 105.9,
+   "end": 106.12
+  },
+  {
+   "text": "perfetta.",
+   "start": 106.12,
+   "end": 106.68
+  },
+  {
+   "text": "Vedete",
+   "start": 106.74,
+   "end": 107.02
+  },
+  {
+   "text": "che",
+   "start": 107.02,
+   "end": 107.16
+  },
+  {
+   "text": "non",
+   "start": 107.16,
+   "end": 107.28
+  },
+  {
+   "text": "è",
+   "start": 107.28,
+   "end": 107.38
+  },
+  {
+   "text": "cambiato",
+   "start": 107.38,
+   "end": 107.72
+  },
+  {
+   "text": "niente.",
+   "start": 107.72,
+   "end": 108.08
+  },
+  {
+   "text": "Stesso",
+   "start": 108.14,
+   "end": 108.5
+  },
+  {
+   "text": "ritmo,",
+   "start": 108.5,
+   "end": 108.9
+  },
+  {
+   "text": "stessa",
+   "start": 108.92,
+   "end": 109.16
+  },
+  {
+   "text": "postura,",
+   "start": 109.16,
+   "end": 109.68
+  },
+  {
+   "text": "stesso",
+   "start": 109.68,
+   "end": 109.94
+  },
+  {
+   "text": "relax,",
+   "start": 109.94,
+   "end": 110.26
+  },
+  {
+   "text": "stesse",
+   "start": 110.48,
+   "end": 110.76
+  },
+  {
+   "text": "braccia,",
+   "start": 110.76,
+   "end": 111.28
+  },
+  {
+   "text": "stesso",
+   "start": 111.32,
+   "end": 111.6
+  },
+  {
+   "text": "busto,",
+   "start": 111.6,
+   "end": 111.9
+  },
+  {
+   "text": "stesso",
+   "start": 111.98,
+   "end": 112.2
+  },
+  {
+   "text": "appoggio.",
+   "start": 112.2,
+   "end": 112.84
+  },
+  {
+   "text": "ero",
+   "start": 115.8,
+   "end": 115.92
+  },
+  {
+   "text": "una",
+   "start": 115.92,
+   "end": 116.12
+  },
+  {
+   "text": "che",
+   "start": 116.12,
+   "end": 116.3
+  },
+  {
+   "text": "stava",
+   "start": 116.3,
+   "end": 116.7
+  },
+  {
+   "text": "sul",
+   "start": 116.7,
+   "end": 116.86
+  },
+  {
+   "text": "divano",
+   "start": 116.86,
+   "end": 117.54
+  },
+  {
+   "text": "a",
+   "start": 117.54,
+   "end": 117.66
+  },
+  {
+   "text": "guardare",
+   "start": 117.66,
+   "end": 118.04
+  },
+  {
+   "text": "la",
+   "start": 118.04,
+   "end": 118.2
+  },
+  {
+   "text": "televisione",
+   "start": 118.2,
+   "end": 119.12
+  },
+  {
+   "text": "e",
+   "start": 119.12,
+   "end": 119.26
+  },
+  {
+   "text": "non",
+   "start": 119.26,
+   "end": 119.6
+  },
+  {
+   "text": "avevo",
+   "start": 119.6,
+   "end": 120.18
+  },
+  {
+   "text": "mai",
+   "start": 120.18,
+   "end": 120.34
+  },
+  {
+   "text": "corso.",
+   "start": 120.34,
+   "end": 120.96
+  },
+  {
+   "text": "Per",
+   "start": 120.98,
+   "end": 121.5
+  },
+  {
+   "text": "dimagrire",
+   "start": 121.5,
+   "end": 122.4
+  },
+  {
+   "text": "ho",
+   "start": 122.4,
+   "end": 122.84
+  },
+  {
+   "text": "usato",
+   "start": 122.84,
+   "end": 123.7
+  },
+  {
+   "text": "Correre",
+   "start": 123.7,
+   "end": 124.06
+  },
+  {
+   "text": "Naturale",
+   "start": 124.06,
+   "end": 124.42
+  },
+  {
+   "text": "e",
+   "start": 124.42,
+   "end": 125.04
+  },
+  {
+   "text": "mi",
+   "start": 125.04,
+   "end": 125.18
+  },
+  {
+   "text": "ha",
+   "start": 125.18,
+   "end": 125.26
+  },
+  {
+   "text": "miracolato.",
+   "start": 125.26,
+   "end": 126.24
+  },
+  {
+   "text": "e",
+   "start": 126.7,
+   "end": 127.14
+  },
+  {
+   "text": "nella",
+   "start": 127.14,
+   "end": 127.32
+  },
+  {
+   "text": "mezza",
+   "start": 127.32,
+   "end": 127.7
+  },
+  {
+   "text": "maratona",
+   "start": 127.7,
+   "end": 128.46
+  },
+  {
+   "text": "la",
+   "start": 128.46,
+   "end": 128.88
+  },
+  {
+   "text": "Daniela",
+   "start": 128.88,
+   "end": 129.46
+  },
+  {
+   "text": "di",
+   "start": 129.46,
+   "end": 129.54
+  },
+  {
+   "text": "60",
+   "start": 129.54,
+   "end": 129.88
+  },
+  {
+   "text": "anni",
+   "start": 129.88,
+   "end": 130.42
+  },
+  {
+   "text": "batte",
+   "start": 130.42,
+   "end": 130.98
+  },
+  {
+   "text": "la",
+   "start": 130.98,
+   "end": 131.06
+  },
+  {
+   "text": "Daniela",
+   "start": 131.06,
+   "end": 131.54
+  },
+  {
+   "text": "di",
+   "start": 131.54,
+   "end": 131.66
+  },
+  {
+   "text": "50",
+   "start": 131.66,
+   "end": 132.04
+  },
+  {
+   "text": "anni",
+   "start": 132.04,
+   "end": 132.6
+  },
+  {
+   "text": "di",
+   "start": 132.6,
+   "end": 132.92
+  },
+  {
+   "text": "20",
+   "start": 132.92,
+   "end": 133.4
+  },
+  {
+   "text": "minuti",
+   "start": 133.4,
+   "end": 134.24
+  },
+  {
+   "text": "ragazzi,",
+   "start": 134.587,
+   "end": 135.087
+  },
+  {
+   "text": "tra",
+   "start": 135.087,
+   "end": 135.267
+  },
+  {
+   "text": "dieci",
+   "start": 135.267,
+   "end": 135.567
+  },
+  {
+   "text": "anni",
+   "start": 135.567,
+   "end": 135.767
+  },
+  {
+   "text": "voglio",
+   "start": 135.767,
+   "end": 136.107
+  },
+  {
+   "text": "che",
+   "start": 136.107,
+   "end": 136.147
+  },
+  {
+   "text": "stiate",
+   "start": 136.147,
+   "end": 136.347
+  },
+  {
+   "text": "meglio",
+   "start": 136.347,
+   "end": 136.747
+  },
+  {
+   "text": "di",
+   "start": 136.747,
+   "end": 136.887
+  },
+  {
+   "text": "adesso,",
+   "start": 136.887,
+   "end": 137.127
+  },
+  {
+   "text": "tra",
+   "start": 137.347,
+   "end": 137.467
+  },
+  {
+   "text": "venti",
+   "start": 137.467,
+   "end": 137.927
+  },
+  {
+   "text": "voglio",
+   "start": 137.927,
+   "end": 138.087
+  },
+  {
+   "text": "che",
+   "start": 138.087,
+   "end": 138.187
+  },
+  {
+   "text": "stiate",
+   "start": 138.187,
+   "end": 138.367
+  },
+  {
+   "text": "meglio",
+   "start": 138.367,
+   "end": 138.807
+  },
+  {
+   "text": "di",
+   "start": 138.807,
+   "end": 139.227
+  },
+  {
+   "text": "adesso",
+   "start": 139.227,
+   "end": 139.607
+  },
+  {
+   "text": "e",
+   "start": 139.607,
+   "end": 140.207
+  },
+  {
+   "text": "si",
+   "start": 140.207,
+   "end": 140.407
+  },
+  {
+   "text": "può",
+   "start": 140.407,
+   "end": 140.707
+  },
+  {
+   "text": "fare,",
+   "start": 140.707,
+   "end": 141.127
+  },
+  {
+   "text": "quindi",
+   "start": 141.307,
+   "end": 142.107
+  },
+  {
+   "text": "sfruttate",
+   "start": 142.107,
+   "end": 142.727
+  },
+  {
+   "text": "la",
+   "start": 142.727,
+   "end": 142.887
+  },
+  {
+   "text": "corsa",
+   "start": 142.887,
+   "end": 143.287
+  },
+  {
+   "text": "per",
+   "start": 143.287,
+   "end": 143.447
+  },
+  {
+   "text": "far",
+   "start": 143.447,
+   "end": 143.667
+  },
+  {
+   "text": "questo,",
+   "start": 143.667,
+   "end": 144.227
+  }
+ ],
+ "removed": [],
+ "cuts": [
+  {
+   "s": 0.0,
+   "e": 0.8,
+   "vol": 0.22
+  },
+  {
+   "s": 0.8,
+   "e": 1.6667,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 1.6667,
+   "e": 2.4667,
+   "blend": true,
+   "vol": 0.22
+  },
+  {
+   "s": 2.4667,
+   "e": 3.2667,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 3.2667,
+   "e": 4.1333,
+   "blend": true,
+   "vol": 0.22
+  },
+  {
+   "s": 4.1333,
+   "e": 4.9333,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 4.9333,
+   "e": 5.7333,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 5.7333,
+   "e": 13.0,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.42
+  },
+  {
+   "s": 13.0,
+   "e": 18.5,
+   "blend": true,
+   "vol": 0.22
+  },
+  {
+   "s": 18.5,
+   "e": 22.5,
+   "blend": true,
+   "speed": 2.0,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 22.5,
+   "e": 25.0,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 25.0,
+   "e": 27.6,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 27.6,
+   "e": 30.8,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 30.8,
+   "e": 38.8667,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  },
+  {
+   "s": 38.8667,
+   "e": 42.8667,
+   "blend": true,
+   "speed": 1.6,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 42.8667,
+   "e": 45.8667,
+   "blend": true,
+   "vol": 0.22
+  },
+  {
+   "s": 45.8667,
+   "e": 48.1667,
+   "blend": true,
+   "vol": 0.22
+  },
+  {
+   "s": 48.1667,
+   "e": 56.2,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.33
+  },
+  {
+   "s": 56.2,
+   "e": 63.3667,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  },
+  {
+   "s": 63.3667,
+   "e": 65.7667,
+   "blend": true,
+   "vol": 0.22
+  },
+  {
+   "s": 65.7667,
+   "e": 70.2667,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.33
+  },
+  {
+   "s": 70.2667,
+   "e": 82.7333,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  },
+  {
+   "s": 82.7333,
+   "e": 85.7333,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 85.7333,
+   "e": 98.5,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  },
+  {
+   "s": 98.5,
+   "e": 101.9,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 101.9,
+   "e": 105.5,
+   "blend": true,
+   "speed": 1.3,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 105.5,
+   "e": 113.2,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  },
+  {
+   "s": 113.2,
+   "e": 115.8,
+   "blend": true,
+   "vol": 0.0,
+   "mute": true
+  },
+  {
+   "s": 115.8,
+   "e": 126.6,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  },
+  {
+   "s": 126.6,
+   "e": 134.4667,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  },
+  {
+   "s": 134.4667,
+   "e": 145.1333,
+   "blend": true,
+   "frame": "volto",
+   "fx": 0.5,
+   "fy": 0.3
+  }
+ ],
+ "brand": {
+  "id": "correre-naturale",
+  "name": "Correre Naturale",
+  "handle": "@correrenaturale",
+  "tagline": "Running Culture",
+  "colors": {
+   "primary": "#49762E",
+   "accent": "#B8D7EA",
+   "cream": "#F4F1E5",
+   "dark": "#000000",
+   "light": "#FFFFFF"
+  },
+  "fonts": {
+   "title": "Blinker",
+   "body": "Blinker"
+  },
+  "logos": {
+   "onDark": "logo-bianco.png",
+   "onLight": "logo-verde-nero.png",
+   "mono": "logo-verde.png",
+   "darkBrand": "logo-verde-bianco.png",
+   "pictogramOnLight": "pittogramma-verde.png",
+   "pictogramOnDark": "pittogramma-bianco.png",
+   "circular": "logo-circolare.png"
+  },
+  "rules": [
+   "Logo mai ruotato, deformato, con ombre o in azzurro",
+   "Su sfondo verde: testi bianchi/crema/azzurro",
+   "La & del Blinker va sostituita con quella del Lato quando possibile"
+  ],
+  "defaultCta": "Commenta CORRO e ti mando la guida",
+  "ctaKeywords": [
+   "CORRO",
+   "GUIDA",
+   "SCUOLA"
+  ],
+  "notificationApp": "Correre Naturale",
+  "speaker": {
+   "name": "Daniele Vecchioni",
+   "role": "Ideatore del metodo Correre Naturale®"
+  }
+ },
+ "settings": {
+  "target": 0,
+  "dynamism": 3,
+  "silenceGap": 0.45
+ },
+ "hook": {
+  "text": "Ti portiamo in una giornata di workshop con Correre Naturale",
+  "style": "typewriter",
+  "font": "brand",
+  "top": 470,
+  "size": 0.9,
+  "align": "center",
+  "pad": 60,
+  "typeFrac": 0.72,
+  "duration": 5.73,
+  "sfx": null,
+  "captions": true,
+  "lines": [
+   {
+    "text": "Ti portiamo in",
+    "size": 1.0
+   },
+   {
+    "text": "una giornata di",
+    "size": 1.0
+   },
+   {
+    "text": "WORKSHOP",
+    "size": 2.05,
+    "color": "#49762E",
+    "weight": 800
+   },
+   {
+    "text": "con",
+    "size": 1.0
+   },
+   {
+    "text": "CORRERE",
+    "size": 2.05,
+    "color": "#49762E",
+    "weight": 800
+   },
+   {
+    "text": "NATURALE",
+    "size": 2.05,
+    "color": "#49762E",
+    "weight": 800
+   }
+  ]
+ },
+ "cta": {
+  "style": "coaching",
+  "after": true,
+  "duration": 10,
+  "keyword": "WORKSHOP",
+  "variant": "video",
+  "textScale": 1.25,
+  "titleTop": 360,
+  "subTop": 600,
+  "noteTop": 1005,
+  "overlay": "linear-gradient(180deg, rgba(14,23,10,.60) 0%, rgba(14,23,10,.80) 45%, rgba(14,23,10,.92) 100%)",
+  "text": "Vuoi esserci al *prossimo* workshop?",
+  "sub": "Una giornata dal vivo con Daniele e il metodo Correre Naturale®",
+  "note": "Commenta WORKSHOP: ti mando date e info",
+  "dm": "Ecco date e info del prossimo workshop dal vivo di Correre Naturale®",
+  "video": {
+   "src": "/progetti/cn-vlog_workshop/video.mp4",
+   "from": 151.6333
+  },
+  "sfx": null,
+  "sfxLite": true
+ },
+ "style": {
+  "palette": "brand",
+  "titleFont": "brand",
+  "videoStyle": "vlog",
+  "layout": "full",
+  "filter": "none",
+  "captions": {
+   "style": "hormozi",
+   "position": "low",
+   "y": 0.8,
+   "size": 0.85,
+   "wordsPerLine": 3,
+   "lines": 1,
+   "alwaysOn": true,
+   "activeColor": "#95FF00",
+   "color": "#FFFFFF",
+   "stroke": 4,
+   "anim": "pop",
+   "emphColor": "#95FF00",
+   "wordFx": "colore",
+   "highlight": "#95FF00",
+   "wordGap": 0.3,
+   "font": "brand",
+   "activeBase": 1.0,
+   "activeScale": 0.06
+  },
+  "emphWords": [
+   "workshop",
+   "tecnica",
+   "stupido",
+   "170-180",
+   "ritmo",
+   "migliorando",
+   "corsa",
+   "divano",
+   "miracolato",
+   "muoversi",
+   "recuperare",
+   "60",
+   "50",
+   "20",
+   "minuti",
+   "dieci",
+   "venti",
+   "meglio",
+   "sfruttate",
+   "talloni",
+   "nervoso",
+   "fidati",
+   "gravità",
+   "postura",
+   "appoggio"
+  ],
+  "breathing": false,
+  "cutZoom": false,
+  "pushIn": false,
+  "cutBlend": 5,
+  "logo": false,
+  "logoKind": "pictogramOnDark",
+  "progressBar": false,
+  "gradient": false,
+  "vignette": false,
+  "focusX": 0.5,
+  "focusY": 0.35,
+  "faceZone": {
+   "on": true,
+   "y0": 0.2,
+   "y1": 0.45
+  }
+ },
+ "effects": [
+  {
+   "id": "e20",
+   "type": "fxClip",
+   "start": 5.733,
+   "duration": 7.267,
+   "props": {
+    "src": "/progetti/cn-vlog_workshop/fx/selfie.mp4"
+   },
+   "sfx": null,
+   "anim": "cut"
+  },
+  {
+   "id": "e31",
+   "type": "broll",
+   "start": 44.667,
+   "duration": 1.7,
+   "props": {
+    "t": 145.1333,
+    "zoom": 0.06,
+    "fin": 0,
+    "fout": 5
+   },
+   "sfx": null,
+   "anim": "cut"
+  },
+  {
+   "id": "e35",
+   "type": "broll",
+   "start": 62.267,
+   "duration": 1.3,
+   "props": {
+    "t": 148.6333,
+    "zoom": 0.06,
+    "fin": 0,
+    "fout": 5
+   },
+   "sfx": null,
+   "anim": "cut"
+  },
+  {
+   "id": "e41",
+   "type": "fxClip",
+   "start": 130.136,
+   "duration": 10.667,
+   "props": {
+    "src": "/progetti/cn-vlog_workshop/fx/chiusura.mp4"
+   },
+   "sfx": null,
+   "anim": "cut"
+  },
+  {
+   "id": "e1",
+   "type": "chapter",
+   "start": 18.55,
+   "duration": 2.35,
+   "props": {
+    "number": "9:30",
+    "title": "CHECK IN",
+    "color": "#B8D7EA",
+    "size": 62
+   },
+   "sfx": "whoosh",
+   "anim": "slideLeft",
+   "position": "top"
+  },
+  {
+   "id": "e2",
+   "type": "chapter",
+   "start": 25.65,
+   "duration": 2.8,
+   "props": {
+    "number": "10:00",
+    "title": "LEZIONE IN SALA",
+    "color": "#B8D7EA",
+    "size": 62
+   },
+   "sfx": "whoosh",
+   "anim": "slideLeft",
+   "position": "top"
+  },
+  {
+   "id": "o3",
+   "type": "obj",
+   "start": 26.9,
+   "duration": 1.7,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Daniele apre la giornata",
+    "x": 0.5,
+    "y": 0.7,
+    "w": 940,
+    "size": 40,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 16,
+    "bgRadius": 24,
+    "inA": "slideUp",
+    "outA": "fade",
+    "lineH": 1.1
+   }
+  },
+  {
+   "id": "o4",
+   "type": "obj",
+   "start": 29.05,
+   "duration": 7.617,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "il corpo deve riscoprire come muoversi",
+    "x": 0.5,
+    "y": 0.66,
+    "w": 940,
+    "size": 40,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 16,
+    "bgRadius": 24,
+    "inA": "slideUp",
+    "outA": "fade",
+    "lineH": 1.1
+   }
+  },
+  {
+   "id": "o5",
+   "type": "obj",
+   "start": 37.117,
+   "duration": 2.05,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "esercizi in piedi, tutti insieme",
+    "x": 0.5,
+    "y": 0.7,
+    "w": 940,
+    "size": 40,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 16,
+    "bgRadius": 24,
+    "inA": "slideUp",
+    "outA": "fade",
+    "lineH": 1.1
+   }
+  },
+  {
+   "id": "e6",
+   "type": "chapter",
+   "start": 39.417,
+   "duration": 2.8,
+   "props": {
+    "number": "12:30",
+    "title": "ANALISI TECNICA DELLA CORSA",
+    "color": "#B8D7EA",
+    "size": 46
+   },
+   "sfx": "whoosh",
+   "anim": "slideLeft",
+   "position": "top"
+  },
+  {
+   "id": "o7",
+   "type": "obj",
+   "start": 42.617,
+   "duration": 1.85,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "prove di corsa, una alla volta",
+    "x": 0.5,
+    "y": 0.7,
+    "w": 940,
+    "size": 40,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 16,
+    "bgRadius": 24,
+    "inA": "slideUp",
+    "outA": "fade",
+    "lineH": 1.1
+   }
+  },
+  {
+   "id": "e8",
+   "type": "chapter",
+   "start": 44.717,
+   "duration": 2.8,
+   "props": {
+    "number": "12:45",
+    "title": "LA LEZIONE",
+    "color": "#B8D7EA",
+    "size": 62
+   },
+   "sfx": "whoosh",
+   "anim": "slideLeft",
+   "position": "top"
+  },
+  {
+   "id": "e9",
+   "type": "chapter",
+   "start": 66.817,
+   "duration": 2.8,
+   "props": {
+    "number": "16:00",
+    "title": "PIEDI E POSTURA",
+    "color": "#B8D7EA",
+    "size": 62
+   },
+   "sfx": "whoosh",
+   "anim": "slideLeft",
+   "position": "top"
+  },
+  {
+   "id": "o10",
+   "type": "obj",
+   "start": 68.167,
+   "duration": 3.2,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "chi carica i talloni?",
+    "x": 0.5,
+    "y": 0.63,
+    "w": 760,
+    "size": 44,
+    "weight": 800,
+    "color": "#FFFFFF",
+    "upper": true,
+    "letter": 1,
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 14,
+    "bgRadius": 18,
+    "rot": -3,
+    "inA": "pop",
+    "outA": "fade",
+    "shadow": "morbida"
+   }
+  },
+  {
+   "id": "o11",
+   "type": "obj",
+   "start": 79.483,
+   "duration": 2.55,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "lavoro sui piedi, a terra",
+    "x": 0.5,
+    "y": 0.7,
+    "w": 940,
+    "size": 40,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 16,
+    "bgRadius": 24,
+    "inA": "slideUp",
+    "outA": "fade",
+    "lineH": 1.1
+   }
+  },
+  {
+   "id": "o12",
+   "type": "obj",
+   "start": 82.733,
+   "duration": 3.2,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "il piede si rilassa",
+    "x": 0.5,
+    "y": 0.63,
+    "w": 760,
+    "size": 44,
+    "weight": 800,
+    "color": "#FFFFFF",
+    "upper": true,
+    "letter": 1,
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 14,
+    "bgRadius": 18,
+    "rot": -3,
+    "inA": "pop",
+    "outA": "fade",
+    "shadow": "morbida"
+   }
+  },
+  {
+   "id": "e13",
+   "type": "chapter",
+   "start": 95.05,
+   "duration": 2.8,
+   "props": {
+    "number": "17:30",
+    "title": "ANALISI DELL'APPOGGIO",
+    "color": "#B8D7EA",
+    "size": 46
+   },
+   "sfx": "whoosh",
+   "anim": "slideLeft",
+   "position": "top"
+  },
+  {
+   "id": "o14",
+   "type": "obj",
+   "start": 96.3,
+   "duration": 1.5,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "la pressione del piede sulla pedana",
+    "x": 0.5,
+    "y": 0.7,
+    "w": 940,
+    "size": 40,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 16,
+    "bgRadius": 24,
+    "inA": "slideUp",
+    "outA": "fade",
+    "lineH": 1.1
+   }
+  },
+  {
+   "id": "e15",
+   "type": "chapter",
+   "start": 98.45,
+   "duration": 2.8,
+   "props": {
+    "number": "18:00",
+    "title": "RUNNING ANALYSIS",
+    "color": "#B8D7EA",
+    "size": 62
+   },
+   "sfx": "whoosh",
+   "anim": "slideLeft",
+   "position": "top"
+  },
+  {
+   "id": "o16",
+   "type": "obj",
+   "start": 99.7,
+   "duration": 1.269,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "corsa sul tapis roulant, ripresa e analizzata",
+    "x": 0.5,
+    "y": 0.7,
+    "w": 940,
+    "size": 40,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 16,
+    "bgRadius": 24,
+    "inA": "slideUp",
+    "outA": "fade",
+    "lineH": 1.1
+   }
+  },
+  {
+   "id": "o17",
+   "type": "obj",
+   "start": 101.669,
+   "duration": 3.2,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "stessa tecnica, più veloce",
+    "x": 0.5,
+    "y": 0.63,
+    "w": 760,
+    "size": 44,
+    "weight": 800,
+    "color": "#FFFFFF",
+    "upper": true,
+    "letter": 1,
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 14,
+    "bgRadius": 18,
+    "rot": 3,
+    "inA": "pop",
+    "outA": "fade",
+    "shadow": "morbida"
+   }
+  },
+  {
+   "id": "e18",
+   "type": "chapter",
+   "start": 111.869,
+   "duration": 2.8,
+   "props": {
+    "number": "18:30",
+    "title": "LA STORIA DI DANIELA",
+    "color": "#B8D7EA",
+    "size": 62
+   },
+   "sfx": "whoosh",
+   "anim": "slideLeft",
+   "position": "lower"
+  },
+  {
+   "id": "e19",
+   "type": "rec",
+   "start": 0,
+   "duration": 5.733,
+   "props": {},
+   "sfx": null,
+   "anim": "cut"
+  },
+  {
+   "id": "o21",
+   "type": "obj",
+   "start": 6.133,
+   "duration": 6.667,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "la sera prima · dall'ufficio",
+    "x": 0.5,
+    "y": 0.64,
+    "w": 960,
+    "size": 50,
+    "weight": 800,
+    "color": "#0B0F0A",
+    "upper": true,
+    "letter": 1,
+    "align": "center",
+    "bg": "#B8D7EA",
+    "bgPad": 12,
+    "bgRadius": 18,
+    "rot": -4,
+    "inA": "pop",
+    "outA": "fade",
+    "shadow": "morbida"
+   }
+  },
+  {
+   "id": "o22",
+   "type": "obj",
+   "start": 13.2,
+   "duration": 5.2,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "Programma della giornata",
+    "x": 0.5,
+    "y": 0.3,
+    "w": 980,
+    "size": 60,
+    "weight": 800,
+    "color": "#FFFFFF",
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 18,
+    "bgRadius": 26,
+    "inA": "pop",
+    "outA": "fade",
+    "shadow": "morbida"
+   }
+  },
+  {
+   "id": "o23",
+   "type": "obj",
+   "start": 13.45,
+   "duration": 4.95,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "sabato 24 ottobre · Vicenza",
+    "x": 0.5,
+    "y": 0.365,
+    "w": 760,
+    "size": 36,
+    "weight": 700,
+    "color": "#0B0F0A",
+    "align": "center",
+    "upper": true,
+    "letter": 1,
+    "bg": "#B8D7EA",
+    "bgPad": 12,
+    "bgRadius": 18,
+    "inA": "pop",
+    "outA": "fade",
+    "shadow": "morbida"
+   }
+  },
+  {
+   "id": "o24",
+   "type": "obj",
+   "start": 13.8,
+   "duration": 4.6,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "9:30   Check in",
+    "x": 0.5,
+    "y": 0.445,
+    "w": 820,
+    "size": 46,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 14,
+    "bgRadius": 22,
+    "inA": "slideUp",
+    "outA": "fade"
+   }
+  },
+  {
+   "id": "o25",
+   "type": "obj",
+   "start": 14.3,
+   "duration": 4.1,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "10:00   Lezione in sala",
+    "x": 0.5,
+    "y": 0.51,
+    "w": 820,
+    "size": 46,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 14,
+    "bgRadius": 22,
+    "inA": "slideUp",
+    "outA": "fade"
+   }
+  },
+  {
+   "id": "o26",
+   "type": "obj",
+   "start": 14.8,
+   "duration": 3.6,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "12:30   Analisi tecnica della corsa",
+    "x": 0.5,
+    "y": 0.575,
+    "w": 820,
+    "size": 46,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 14,
+    "bgRadius": 22,
+    "inA": "slideUp",
+    "outA": "fade"
+   }
+  },
+  {
+   "id": "o27",
+   "type": "obj",
+   "start": 15.3,
+   "duration": 3.1,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "16:00   Piedi e postura",
+    "x": 0.5,
+    "y": 0.64,
+    "w": 820,
+    "size": 46,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 14,
+    "bgRadius": 22,
+    "inA": "slideUp",
+    "outA": "fade"
+   }
+  },
+  {
+   "id": "o28",
+   "type": "obj",
+   "start": 15.8,
+   "duration": 2.6,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "18:00   Running analysis",
+    "x": 0.5,
+    "y": 0.7050000000000001,
+    "w": 820,
+    "size": 46,
+    "weight": 800,
+    "color": "#49762E",
+    "align": "center",
+    "bg": "rgba(244,241,229,.96)",
+    "bgPad": 14,
+    "bgRadius": 22,
+    "inA": "slideUp",
+    "outA": "fade"
+   }
+  },
+  {
+   "id": "o29",
+   "type": "obj",
+   "start": 20.7,
+   "duration": 4.1,
+   "sfx": "scatto",
+   "anim": "cut",
+   "props": {
+    "kind": "image",
+    "src": "/progetti/cn-vlog_workshop/foto/p_IMG_0880.png",
+    "x": 0.6,
+    "y": 0.5,
+    "w": 680,
+    "rot": 6,
+    "shadow": "forte",
+    "inA": "pop",
+    "outA": "fade"
+   }
+  },
+  {
+   "id": "o30",
+   "type": "obj",
+   "start": 24.0,
+   "duration": 1.8,
+   "sfx": "scatto",
+   "anim": "cut",
+   "props": {
+    "kind": "image",
+    "src": "/progetti/cn-vlog_workshop/foto/p_b49c29cb.png",
+    "x": 0.42,
+    "y": 0.56,
+    "w": 680,
+    "rot": -7,
+    "shadow": "forte",
+    "inA": "pop",
+    "outA": "fade"
+   }
+  },
+  {
+   "id": "e32",
+   "type": "stamp",
+   "start": 48.867,
+   "duration": 3.8,
+   "props": {
+    "text": "«Ognuno corre *come vuole*»",
+    "stamp": "FALSO",
+    "stampAt": 2.3,
+    "y": 0.5
+   },
+   "sfx": "impatto",
+   "anim": "cut"
+  },
+  {
+   "id": "o33",
+   "type": "obj",
+   "start": 52.4,
+   "duration": 1.9,
+   "sfx": "scatto",
+   "anim": "cut",
+   "props": {
+    "kind": "image",
+    "src": "/progetti/cn-vlog_workshop/foto/p_IMG_0619.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 680,
+    "rot": -5,
+    "shadow": "forte",
+    "inA": "pop",
+    "outA": "fade"
+   }
+  },
+  {
+   "id": "e34",
+   "type": "statStack",
+   "start": 55.9,
+   "duration": 4.267,
+   "props": {
+    "big": "170-180",
+    "label": "al minuto",
+    "y": 0.52,
+    "chips": [
+     {
+      "text": "il ritmo giusto",
+      "at": 0.5
+     }
+    ]
+   },
+   "sfx": "pop",
+   "anim": "cut"
+  },
+  {
+   "id": "e36",
+   "type": "kinetic",
+   "start": 64.157,
+   "duration": 2.91,
+   "props": {
+    "mode": "replace",
+    "y": 0.5,
+    "size": 92,
+    "items": [
+     {
+      "text": "migliorando *l'essere umano*",
+      "at": 0
+     },
+     {
+      "text": "grazie alla *corsa*",
+      "at": 1.51
+     }
+    ]
+   },
+   "sfx": null,
+   "anim": "cut"
+  },
+  {
+   "id": "e37",
+   "type": "arrow",
+   "start": 96.4,
+   "duration": 0.9,
+   "props": {
+    "label": "le impronte",
+    "x": 0.47,
+    "y": 0.33,
+    "rotate": -20
+   },
+   "sfx": null,
+   "anim": "fade"
+  },
+  {
+   "id": "o38",
+   "type": "obj",
+   "start": 3.867,
+   "duration": -0.5,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "text",
+    "text": "running analysis",
+    "x": 0.3,
+    "y": 0.6,
+    "w": 640,
+    "size": 34,
+    "weight": 800,
+    "color": "#FFFFFF",
+    "upper": true,
+    "letter": 1,
+    "align": "center",
+    "bg": "#49762E",
+    "bgPad": 12,
+    "bgRadius": 18,
+    "rot": -8,
+    "inA": "pop",
+    "outA": "fade",
+    "shadow": "morbida"
+   }
+  },
+  {
+   "id": "e39",
+   "type": "lowerThird",
+   "start": 114.369,
+   "duration": 3.2,
+   "props": {
+    "name": "Daniela",
+    "role": "Partecipante al workshop"
+   },
+   "sfx": null,
+   "anim": "cut"
+  },
+  {
+   "id": "e40",
+   "type": "stageCard",
+   "start": 123.979,
+   "duration": 6.157,
+   "props": {
+    "kicker": "Nella mezza maratona",
+    "kickerFont": "brand",
+    "y": 0.08,
+    "size": 88,
+    "chart": false,
+    "lines": [
+     "LA DANIELA DI *60 ANNI*",
+     "BATTE QUELLA DI *50*",
+     "DI *20 MINUTI*"
+    ],
+    "at": [
+     1.23,
+     2.11,
+     4.61
+    ],
+    "win": {
+     "t": 128.31,
+     "x": 0.08,
+     "y": 0.43,
+     "w": 0.84,
+     "h": 0.34,
+     "px": 0.5,
+     "py": 0.3
+    },
+    "winLabel": "Daniela · 60 anni"
+   },
+   "sfx": null,
+   "anim": "cut"
+  },
+  {
+   "id": "e42",
+   "type": "kinetic",
+   "start": 130.836,
+   "duration": 9.967,
+   "props": {
+    "mode": "stack",
+    "y": 0.52,
+    "size": 80,
+    "items": [
+     {
+      "text": "tra *10 anni*",
+      "at": 0
+     },
+     {
+      "text": "tra *20 anni*",
+      "at": 2.3
+     },
+     {
+      "text": "*meglio* di adesso",
+      "at": 3.2
+     },
+     {
+      "text": "sfruttate la *corsa*",
+      "at": 6.94
+     }
+    ]
+   },
+   "sfx": null,
+   "anim": "cut"
+  },
+  {
+   "id": "o43",
+   "type": "obj",
+   "start": 5.533,
+   "duration": 128.303,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "image",
+    "src": "/progetti/cn-vlog_workshop/foto/logo_disco.png",
+    "x": 0.875,
+    "y": 0.085,
+    "w": 200,
+    "shadow": "no",
+    "inA": "fade",
+    "outA": "fade",
+    "opacity": 1
+   }
+  },
+  {
+   "id": "o44",
+   "type": "obj",
+   "start": 136.486,
+   "duration": 4.317,
+   "sfx": null,
+   "anim": "cut",
+   "props": {
+    "kind": "image",
+    "src": "/progetti/cn-vlog_workshop/foto/logo_disco.png",
+    "x": 0.875,
+    "y": 0.085,
+    "w": 200,
+    "shadow": "no",
+    "inA": "fade",
+    "outA": "fade",
+    "opacity": 1
+   }
+  }
+ ],
+ "audio": {
+  "music": "jalen_bed_vlog",
+  "musicVolume": 0.11,
+  "sfxVolume": 0.32,
+  "voiceVolume": 1,
+  "ducking": true,
+  "sfxOn": true,
+  "sfxOnCuts": false,
+  "voiceovers": [
+   {
+    "at": 0.25,
+    "src": "/progetti/cn-vlog_workshop/fx/vo_vigilia.mp3",
+    "dur": 4.68,
+    "volume": 1
+   }
+  ]
+ },
+ "caption": "",
+ "exports": []
+}

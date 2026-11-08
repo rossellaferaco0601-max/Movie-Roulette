@@ -1,0 +1,42 @@
+{
+ "id": "correre-naturale",
+ "name": "Correre Naturale",
+ "handle": "@correrenaturale",
+ "tagline": "Running Culture",
+ "colors": {
+  "primary": "#49762E",
+  "accent": "#B8D7EA",
+  "cream": "#F4F1E5",
+  "dark": "#000000",
+  "light": "#FFFFFF"
+ },
+ "fonts": {
+  "title": "Blinker",
+  "body": "Blinker"
+ },
+ "logos": {
+  "onDark": "logo-bianco.png",
+  "onLight": "logo-verde-nero.png",
+  "mono": "logo-verde.png",
+  "darkBrand": "logo-verde-bianco.png",
+  "pictogramOnLight": "pittogramma-verde.png",
+  "pictogramOnDark": "pittogramma-bianco.png",
+  "circular": "logo-circolare.png"
+ },
+ "rules": [
+  "Logo mai ruotato, deformato, con ombre o in azzurro",
+  "Su sfondo verde: testi bianchi/crema/azzurro",
+  "La & del Blinker va sostituita con quella del Lato quando possibile"
+ ],
+ "defaultCta": "Commenta CORRO e ti mando la guida",
+ "ctaKeywords": [
+  "CORRO",
+  "GUIDA",
+  "SCUOLA"
+ ],
+ "notificationApp": "Correre Naturale",
+ "speaker": {
+  "name": "Daniele Vecchioni",
+  "role": "Ideatore del metodo Correre Naturale®"
+ }
+}
