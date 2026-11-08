@@ -12,6 +12,7 @@ Claude è usato come motore grafico per montare video e reel. Mappa delle cartel
 - Remotion ufficiali: `remotion-best-practices`, `remotion-create`, `remotion-markup`, `remotion-render`, `remotion-studio`, `remotion-captions`, `remotion-multimedia`, `remotion-interactivity`, `remotion-maps`, `remotion-saas`, `remotion-docs`, `remotion-upgrade`, `remotion-license`.
 - Personalizzate: `kinetic-typography`, `motion-graphics`, `cinematic-animation`, `video-editing`, `compositing`, `audio-sync`, `subtitle-animation`, `broll-editing`, `web-animation-stack`, `cliente-correre-naturale`.
 - `effects` (Vibha, 51 effetti con tracciamento del volto, Python/mediapipe): prima dell'uso va eseguito `bash .claude/skills/effects/scripts/setup.sh` con il consenso di Ross (codice esterno). Le regole del cliente vincono sugli effetti (niente emoji, volto libero).
+- Dal PC di Ross (8/11): `after-effects`, `animation-principles`, `article-highlights`, `beat-sync-editing`, `captions-overlay`, `cinematic-camera`, `claude-video-reel-editor`, `color-motion`, `cut-the-curve`, `edit-video`. Sono skill generiche: le regole del cliente in `clienti/` vincono sempre.
 - HyperFrames (`npm hyperframes` in `video-engine`): render HTML→video alternativo a Remotion per grafiche da pagina web.
 
 ## Comandi

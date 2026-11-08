@@ -1,5 +1,0 @@
-.venv/
-__pycache__/
-*.pyc
-.DS_Store
-scripts/fx_private.py
