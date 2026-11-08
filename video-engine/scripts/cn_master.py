@@ -28,12 +28,14 @@ def crop_filter(zoom: float):
     return f"crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={OUT_W}:{OUT_H}:flags=lanczos,fps={FPS},setsar=1"
 
 # schede grafiche del sorgente (viola/verdi, non brand): coperte con un fermo immagine di Daniele + lento zoom
-CARDS = [(148.8, 162.3, 148.3), (180.2, 189.8, 179.6), (204.6, 219.3, 204.0)]  # (inizio, fine, fotogramma da congelare)
+# misurate al fotogramma l'8/11: la scheda 2 è un velo semitrasparente che appare da 180.0 e sparisce del tutto a 190.1
+CARDS = [(148.8, 162.3, 148.3), (179.95, 190.3, 179.6), (204.6, 219.3, 204.0)]  # (inizio, fine, fotogramma da congelare)
 
 def freeze_inputs(src, seg, zoom, tmp, i):
     extra_in, chains, k = [], [], 0
     for (a, b, t_img) in CARDS:
-        lo, hi = max(a, seg["from"]), min(b, seg["to"])
+        # la dissolvenza sta FUORI dai bordi della scheda: il fermo immagine è pieno per tutta la durata della scheda
+        lo, hi = max(a - CARD_FADE, seg["from"]), min(b + CARD_FADE, seg["to"])
         if hi - lo < 0.3: continue
         t_img = max(0.0, t_img)
         png = os.path.join(tmp, f"frz{i}_{k}.png")
@@ -42,7 +44,7 @@ def freeze_inputs(src, seg, zoom, tmp, i):
         nf = int(round((t1 - t0) * FPS)) + 2
         extra_in += ["-loop", "1", "-framerate", str(FPS), "-t", f"{(nf + 2) / FPS:.4f}", "-i", png]
         # niente dissolvenza se la scheda inizia/finisce col pezzo (si vedrebbe la scheda del sorgente in trasparenza)
-        chains.append((t0, t1, nf, lo > seg["from"] + 0.01, hi < seg["to"] - 0.01))
+        chains.append((t0, t1, nf, a - CARD_FADE > seg["from"] + 0.01, b + CARD_FADE < seg["to"] - 0.01))
         k += 1
     return extra_in, chains
 
