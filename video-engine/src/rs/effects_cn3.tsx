@@ -1,4 +1,4 @@
-// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi reelstudio-ref/
+// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi video-engine/reelstudio/
 // Effetti «stile reference» (5/11, Ross: reel zeeuiux «raw clip vs the edit» adattato a Correre Naturale).
 // Testo dietro la persona con font misti, pillola ruolo, parole cinetiche, pillole-interruttore, palco crema con finestrella.
 // Tutti i tempi nei props (at…) sono secondi dall'inizio dell'effetto.

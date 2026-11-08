@@ -1,4 +1,4 @@
-// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi reelstudio-ref/
+// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi video-engine/reelstudio/
 import React from 'react';
 import { spring, interpolate } from 'remotion';
 import { OutWord, groupWords, TITLE_FONTS } from './lib';

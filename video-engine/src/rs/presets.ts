@@ -1,4 +1,4 @@
-// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi reelstudio-ref/
+// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi video-engine/reelstudio/
 // Stili video pronti: ogni preset imposta più scelte insieme
 export const VIDEO_STYLES: Record<string, { name: string; desc: string; style: any; hook?: any; cta?: any; audio?: any; dynamism: number }> = {
   talking: {

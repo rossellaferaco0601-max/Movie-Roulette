@@ -50,8 +50,8 @@ Prima di montare qualsiasi cosa per questo cliente: leggere `REGOLE-MONTAGGIO.md
 - Consegna: MP4 + copertina (volto libero) + didascalia + checklist; controllare 6-8 fotogrammi prima.
 
 ## Cosa è stato portato nel repo dal PC (8/11/2026)
-- `clienti/correre-naturale/`: brand kit completo, guide, `CLAUDE-pc.md` (istruzioni del progetto PC), `consegne-precedenti/` (checklist e didascalie di longevità, YTCN 38, evento), `scripts-pc/` (pipeline Python/JS del PC), `reference/` (4 reel CN già pubblicati + reference-reel-01 + analisi reference).
-- `reelstudio-ref/`: codice Remotion di ReelStudio (Reel.tsx, effects*.tsx, captions, lib), `shared/`, `project.json` di tutti i 35 progetti costruiti, CLAUDE.md con lo schema di project.json e il catalogo dei 60+ effetti, REGOLE di ReelStudio.
+- `clienti/correre-naturale/`: brand kit completo, guide, `archivio-pc/CLAUDE-pc.md` (istruzioni del progetto PC), `consegne/` (checklist e didascalie di longevità, YTCN 38, evento), `archivio-pc/scripts/` (pipeline Python/JS del PC), `reference/` (4 reel CN già pubblicati + reference-reel-01 + analisi reference).
+- `video-engine/reelstudio/`: codice Remotion di ReelStudio (Reel.tsx, effects*.tsx, captions, lib), `shared/`, `project.json` di tutti i 35 progetti costruiti, CLAUDE.md con lo schema di project.json e il catalogo dei 60+ effetti, REGOLE di ReelStudio.
 - `video-engine/`: il motore ReelStudio gira anche nel cloud come composizione **RSReel** (asset in `public/rs/`: font, 29 suoni, 15 musiche, loghi). `scripts/rs_props.ts` converte un project.json nelle props. Quindi nel cloud si possono usare sia il motore nuovo (`CNReel`, con 3D e simulazioni) sia tutti gli effetti di ReelStudio (kinetic, stageCard, behindTitle, togglePills, glass widget, documentary, orbit, bento, ecc.).
 - Solo in locale/PC (non in git, troppo pesanti): «Nuove reference reel» (zip 69 MB), reference-reel-02/03, Reference Dashboard (596 MB), scontorni, sorgenti video, render.
 

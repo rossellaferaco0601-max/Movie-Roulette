@@ -1,4 +1,4 @@
-// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi reelstudio-ref/
+// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi video-engine/reelstudio/
 // Hook visivi «primi secondi» per i reel Correre Naturale (6/11/2026, idee di Ross dalle immagini generate: tachimetro
 // sopra la testa, corpo con le centrali energetiche, ciclo grassi/carboidrati/energia…), tradotti in SVG nei colori del
 // brand (verde #49762E, azzurro #B8D7EA, crema #F4F1E5, bianco; lime solo come accento) e senza mai coprire il volto.

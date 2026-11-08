@@ -1,4 +1,4 @@
-// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi reelstudio-ref/
+// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi video-engine/reelstudio/
 // Effetti aggiunti il 3/11 su richiesta di Ross (reference «7 effetti»): box che si illuminano,
 // post-it, widget in vetro, titolo documentario, schermo diviso con grafico, titolo spotlight, checklist in vetro.
 import React from 'react';

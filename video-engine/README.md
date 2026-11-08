@@ -17,10 +17,9 @@
 | Visual Studio Code | ❌ non installabile nel container | usa VS Code sul tuo PC con l'estensione Claude Code su questo repo |
 | Figma | ⚠️ solo via connettore/plugin Figma di Claude (il server MCP Figma non si è connesso in questa sessione) | esporta asset SVG/PNG in `public/` |
 
-## Composizioni di esempio (1080x1920, 30 fps)
-- `KineticTitle` — titolo kinetic typography (props: `words`, `accent`, `background`)
-- `SubtitledReel` — reel con sottotitoli word-by-word da Whisper (props: `video`, `audio`, `captions`)
-- `BRollMontage` — montaggio B-roll con Ken Burns e transizioni (props: `shots`, `transition`)
+## Composizioni (1080x1920, 30 fps)
+- `R1-fiatone` … `R8-dialogo` — gli 8 reel di YTCN 51 (motore CN, definizioni in `src/cn/reels51.ts`)
+- `RSReel` — motore ReelStudio: props da `scripts/rs_props.ts` a partire da un project.json
 
 ## Setup su una macchina nuova
 `./setup.sh`

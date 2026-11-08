@@ -4,7 +4,7 @@ Contesto, brand e regole di montaggio per ogni cliente. Claude legge la cartella
 
 | Cliente | Cartella | Note |
 |---|---|---|
-| Correre Naturale® (Daniele Vecchioni) | `correre-naturale/` | `CONTESTO.md` + `REGOLE-MONTAGGIO.md` (fonte di verità, da aggiornare a ogni correzione) |
+| Correre Naturale® (Daniele Vecchioni) | `correre-naturale/` | `REGOLE-MONTAGGIO.md` (fonte di verità), `CONTESTO.md`, `brand/`, `guide/`, `reference/`, `consegne/`, `archivio-pc/` |
 | Valentina Lezzi — @vale.fitcoach (lipedema) | `vale-fitcoach/` | Piano editoriale nel foglio Drive «CONTENUTI @valefitcoach» (calendario dal 19/10/2026, banco idee letto ogni lunedì, pronti, pubblicati, prima e dopo). Instagram collegato via Windsor.ai. Nessuna regola di montaggio ancora. |
 | Daniele Vecchioni (canali personali) | — | Documento Drive «Coordinamento SMM & Videomaker» (29/10/2026): min. 1 contenuto al giorno per piattaforma, YouTube, report mensile, meeting settimanali. |
 

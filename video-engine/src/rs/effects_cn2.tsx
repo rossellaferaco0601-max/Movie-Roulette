@@ -1,4 +1,4 @@
-// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi reelstudio-ref/
+// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi video-engine/reelstudio/
 // Effetti «firma» dei reel R2-R6 (3/11 notte, Ross: un'animazione diversa per ogni reel, Daniele protagonista).
 // Reference: glass-widget, documentary, orbit, bento, uninstall, jiggle-delete, prompt-bar, swipe, gravity-drop…
 // Tutti i tempi in props (at, doneAt, …) sono secondi dall'inizio dell'effetto.

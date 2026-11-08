@@ -1,4 +1,4 @@
-// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi reelstudio-ref/
+// @ts-nocheck — codice ReelStudio (PC di Ross) importato così com'è; vedi video-engine/reelstudio/
 import React from 'react';
 import { AbsoluteFill, Img, interpolate, spring, Freeze, OffthreadVideo, useVideoConfig, Easing, Sequence } from 'remotion';
 import { enterExit } from './anim';

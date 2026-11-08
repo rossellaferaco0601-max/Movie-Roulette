@@ -1,6 +1,6 @@
 # Movie-Roulette — motore grafico video/reel
 
-Claude è usato come motore grafico per montare video e reel. Il progetto Remotion vive in `video-engine/`.
+Claude è usato come motore grafico per montare video e reel. Mappa delle cartelle in `LEGGIMI.md`. Il progetto Remotion vive in `video-engine/` (motore `CNReel` in `src/cn`, motore ReelStudio `RSReel` in `src/rs`).
 
 ## Strumenti
 - Node 22 / npm / TypeScript, Python 3.13, FFmpeg 6, Git, Blender 4 (headless, Cycles CPU).
@@ -16,15 +16,17 @@ Claude è usato come motore grafico per montare video e reel. Il progetto Remoti
 ```bash
 cd video-engine
 npm run dev                                   # Remotion Studio (preview)
-npx remotion render KineticTitle out/a.mp4    # render
-npx remotion still SubtitledReel out/f.png --frame=75
+npx remotion render R1-fiatone out/a.mp4      # render di un reel CN
+npx remotion still R1-fiatone out/f.png --frame=75
+scripts/cn_finish.sh R1-fiatone v3            # render + loudness + copertina + didascalia + ritrascrizione
+scripts/rs_render.sh progetto.json ytcn51/ytcn51_src.mp4 out/x.mp4   # render di un project.json ReelStudio
 python3 scripts/transcribe.py public/clip.mp4 --lang it --out src/captions/clip.json
 scripts/ffmpeg-presets.sh                     # elenco preset FFmpeg
 blender -b -P scripts/blender_render.py -- "TITOLO" out/title.png
 ```
 
 ## Clienti
-`reelstudio-ref/` contiene il codice e i progetti di ReelStudio (la dashboard sul PC di Ross); nel cloud gira come composizione `RSReel` (asset in `video-engine/public/rs/`). Mai committare `impostazioni.json` (chiavi API).
+`video-engine/reelstudio/` contiene il codice e i progetti di ReelStudio (la dashboard sul PC di Ross); nel cloud gira come composizione `RSReel` (asset in `video-engine/public/rs/`). Schema project.json e catalogo effetti: `video-engine/reelstudio/CLAUDE.md`. Mai committare `impostazioni.json` (chiavi API).
 Le regole di montaggio e il contesto di ogni cliente stanno in `clienti/` (indice in `clienti/README.md`). Per Correre Naturale usa la skill `cliente-correre-naturale` prima di qualsiasi montaggio.
 
 ## Regole
