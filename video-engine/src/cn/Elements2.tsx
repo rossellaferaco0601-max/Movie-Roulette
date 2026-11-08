@@ -198,3 +198,67 @@ export const Road3D: React.FC<{ el: Extract<Element, { kind: "road3d" }>; start:
     </div>
   );
 };
+
+/* ---------- Grafico che sale con numero che conta (energia, capacità…) ---------- */
+export const Graph: React.FC<{ el: Extract<Element, { kind: "graph" }>; start: number }> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible } = useInOut(start, durF);
+  if (!visible) return null;
+  const prog = gsap.parseEase("power2.out")(Math.min(1, Math.max(0, (local - 6) / (durF - 26))));
+  const boxW = W - 140, boxH = GFX_H - 10;
+  const gx = 50, gy = 90, gw = boxW - 100, gh = boxH - 190;
+  const pts: string[] = [];
+  const n = 60;
+  for (let i = 0; i <= n; i++) {
+    const x = i / n;
+    const y = Math.pow(x, 1.6) * 0.55 + x * 0.45; // curva che accelera
+    if (x <= prog + 0.001) pts.push(`${(gx + x * gw).toFixed(1)},${(gy + gh - y * gh).toFixed(1)}`);
+  }
+  const value = Math.round(el.from + (el.to - el.from) * prog);
+  const lastY = gy + gh - (Math.pow(prog, 1.6) * 0.55 + prog * 0.45) * gh;
+  return (
+    <div style={{ position: "absolute", left: 70, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
+      <div style={{ position: "absolute", top: 18, left: 0, width: "100%", textAlign: "center", fontWeight: 800, fontSize: 38, textTransform: "uppercase", letterSpacing: 2, color: BRAND.lime }}>{el.title}</div>
+      <svg width={boxW} height={boxH} style={{ position: "absolute", top: 0, left: 0 }}>
+        <defs>
+          <linearGradient id="gfill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor={BRAND.lime} stopOpacity={0.35} /><stop offset="1" stopColor={BRAND.lime} stopOpacity={0} /></linearGradient>
+        </defs>
+        {[0.25, 0.5, 0.75, 1].map((f) => <line key={f} x1={gx} x2={gx + gw} y1={gy + gh - f * gh} y2={gy + gh - f * gh} stroke="rgba(255,255,255,0.1)" strokeWidth={2} />)}
+        {pts.length > 1 ? <polygon points={`${gx},${gy + gh} ${pts.join(" ")} ${pts[pts.length - 1].split(",")[0]},${gy + gh}`} fill="url(#gfill)" /> : null}
+        {pts.length > 1 ? <polyline points={pts.join(" ")} fill="none" stroke={BRAND.lime} strokeWidth={9} strokeLinecap="round" strokeLinejoin="round" style={{ filter: `drop-shadow(0 0 12px ${BRAND.lime})` }} /> : null}
+        {pts.length > 1 ? <circle cx={gx + prog * gw} cy={lastY} r={16} fill={BRAND.white} /> : null}
+        <line x1={gx} x2={gx + gw} y1={gy + gh} y2={gy + gh} stroke="rgba(255,255,255,0.35)" strokeWidth={3} />
+      </svg>
+      <div style={{ position: "absolute", left: 50, bottom: 24, fontWeight: 700, fontSize: 34, color: BRAND.cream }}>{el.label}</div>
+      <div style={{ position: "absolute", right: 50, bottom: 16, fontWeight: 900, fontSize: 84, color: BRAND.lime, lineHeight: 1 }}>{value}<span style={{ fontSize: 40, marginLeft: 4 }}>{el.unit ?? "%"}</span></div>
+    </div>
+  );
+};
+
+/* ---------- Interruttori: righe con switch che si accendono uno alla volta (stile impostazioni, colori brand) ---------- */
+export const Toggles: React.FC<{ el: Extract<Element, { kind: "toggles" }>; start: number }> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible } = useInOut(start, durF);
+  if (!visible) return null;
+  const boxW = W - 140, rowH = 96;
+  const boxH = 70 + el.items.length * rowH + 20;
+  return (
+    <div style={{ position: "absolute", left: 70, width: boxW, top: GFX_TOP + Math.max(0, (GFX_H - 10 - boxH) / 2), height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
+      <div style={{ position: "absolute", top: 18, left: 0, width: "100%", textAlign: "center", fontWeight: 800, fontSize: 38, textTransform: "uppercase", letterSpacing: 2, color: BRAND.lime }}>{el.title}</div>
+      {el.items.map((it, i) => {
+        const onF = Math.round((el.onAt?.[i] ?? 0.5 + i * 1.2) * fps);
+        const k = interpolate(local - onF, [0, 8], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+        return (
+          <div key={i} style={{ position: "absolute", left: 40, right: 40, top: 70 + i * rowH, height: rowH - 12, display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: i < el.items.length - 1 ? "2px solid rgba(255,255,255,0.1)" : "none" }}>
+            <div style={{ fontWeight: 700, fontSize: 44, color: k > 0.5 ? BRAND.white : "rgba(255,255,255,0.6)" }}>{it}</div>
+            <div style={{ width: 120, height: 66, borderRadius: 33, background: k > 0.5 ? BRAND.lime : "rgba(255,255,255,0.22)", position: "relative", transition: "none" }}>
+              <div style={{ position: "absolute", top: 6, left: 6 + 54 * k, width: 54, height: 54, borderRadius: 27, background: BRAND.white, boxShadow: "0 2px 8px rgba(0,0,0,0.4)" }} />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};

@@ -1,0 +1,12 @@
+{
+ "effects": [
+  {
+   "fx": "led-sign",
+   "start": 14.667,
+   "end": 17.267,
+   "text": "RESPIRA|DAL NASO",
+   "color": "#95FF00",
+   "push": 1
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "effects": [
+  {
+   "fx": "huge-strike",
+   "start": 6,
+   "end": 9.5,
+   "text": "SPINGERE DI PIÙ",
+   "at": 0.7
+  },
+  {
+   "fx": "backdrop-word",
+   "start": 9.667,
+   "end": 11.967,
+   "text": "PIANO",
+   "color": "#95FF00",
+   "font": "bold"
+  }
+ ]
+}

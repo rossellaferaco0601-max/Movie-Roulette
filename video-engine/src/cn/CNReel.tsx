@@ -9,7 +9,7 @@ import { Hook } from "./Hook";
 import { ElementView } from "./Elements";
 import { Text3D, Wave, Sphere3D, Gauge3D, ECG, Steps, Bars } from "./Elements3D";
 import { CTA } from "./CTA";
-import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D } from "./Elements2";
+import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
 
@@ -26,6 +26,8 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "split": return <SplitCard el={el} start={start} />;
     case "metronome": return <Metronome el={el} start={start} />;
     case "road3d": return <Road3D el={el} start={start} />;
+    case "graph": return <Graph el={el} start={start} />;
+    case "toggles": return <Toggles el={el} start={start} />;
     default: return <ElementView el={el} start={start} />;
   }
 };

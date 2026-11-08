@@ -64,10 +64,10 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
       hook: { lines: ["Il motore in quinta", "appena acceso"], keyword: "quinta", dur: 4.3 },
       fx: [
         { fx: "led-sign", at: 14.1, word: "naso", dur: 2.6, wide: true, text: "RESPIRA|DAL NASO", color: LIME, push: 1.0 },
-        { fx: "apple-toggles", at: 17.4, dur: 5.8, pos: "below", text: "Ritmo sostenibile|Ossigeno usato meglio|Controllo su corpo e mente", ticksRel: [0.6, 2.4, 4.2], color: LIME },
       ],
       elements: [
         { kind: "gauge3d", at: 4.8, dur: 8.3, title: "Le marce giuste", from: 5, to: 1, labels: ["1ª", "2ª", "3ª", "4ª", "5ª"] },
+        { kind: "toggles", at: 17.4, dur: 5.8, title: "Il naso è il regolatore", items: ["Ritmo sostenibile", "Ossigeno usato meglio", "Controllo su corpo e mente"], onAt: [0.6, 2.4, 4.2] },
         { kind: "wave", at: 23.6, dur: 5.5, title: "Respiro dal naso", mode: "calm" },
       ],
       cta: { word: "NASO", title: "Vuoi imparare a respirare bene quando corri?" },
@@ -93,12 +93,12 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
       hook: { lines: ["Durante la corsa", "chiudi la bocca"], keyword: "bocca", dur: 3.3 },
       fx: [
         { fx: "lean-in", at: 1.3, word: "chiudi", dur: 1.1, zoom: 1.35 },
-        { fx: "liquid-glass-graph", at: 21.0, word: "energia", dur: 3.1, text: "ENERGIA DOPO LA CORSA", from: "40%", to: "100%", color: LIME },
       ],
       elements: [
         { kind: "checklist", at: 4.2, word: "rallenta", dur: 4.3, items: ["Voglia di aprire la bocca?", "Rallenta o cammina"] },
         { kind: "widget", at: 9.9, dur: 5.3, title: "Respirazione nasale", lines: ["Stimola il diaframma", "Ossigena i tessuti", "Calma il sistema nervoso"] },
         { kind: "sphere3d", at: 15.8, dur: 4.7, phases: BREATH },
+        { kind: "graph", at: 21.0, word: "energia", dur: 3.1, title: "Energia dopo la corsa", label: "non meno, come spesso capita", from: 40, to: 100 },
       ],
       cta: { word: "ENERGIA", title: "Vuoi finire la corsa con più energia di prima?" },
     },
