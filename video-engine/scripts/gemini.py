@@ -14,9 +14,11 @@ import json, sys, time, base64, mimetypes, os, urllib.request, urllib.error
 
 BASE = "https://generativelanguage.googleapis.com"
 H = {"x-goog-api-key": "injected-by-proxy", "Content-Type": "application/json"}
-MODEL_TEXT = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-MODEL_IMG = os.environ.get("GEMINI_IMAGE_MODEL", "imagen-4.0-generate-001")
+MODELS_TEXT = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash,gemini-3.7-flash,gemini-3.5-flash,gemini-3-flash-preview").split(",")
+MODELS_IMG = os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3.1-flash-image,gemini-3-pro-image,gemini-3.1-flash-image-preview").split(",")
 MODEL_VIDEO = os.environ.get("GEMINI_VIDEO_MODEL", "veo-3.0-generate-001")
+
+class GeminiError(Exception): pass
 
 def call(method, path, body=None, raw=False):
     req = urllib.request.Request(BASE + path, method=method, headers=H, data=json.dumps(body).encode() if body is not None else None)
@@ -24,7 +26,7 @@ def call(method, path, body=None, raw=False):
         with urllib.request.urlopen(req, timeout=600) as r:
             data = r.read(); return data if raw else json.loads(data)
     except urllib.error.HTTPError as e:
-        raise SystemExit(f"Gemini {e.code}: {e.read().decode()[:800]}")
+        raise GeminiError(f"Gemini {e.code}: {e.read().decode()[:600]}")
 
 def upload(path):
     """File API (resumable) per video/immagini grandi; ritorna l'uri del file quando è ACTIVE."""
@@ -40,9 +42,16 @@ def upload(path):
     return info["uri"], mime
 
 def testo(prompt, parts_extra=None):
+    """Prova i modelli in ordine: se uno è saturo (503) o non disponibile (404) passa al successivo."""
     body = {"contents": [{"parts": (parts_extra or []) + [{"text": prompt}]}]}
-    out = call("POST", f"/v1beta/models/{MODEL_TEXT}:generateContent", body)
-    return "".join(p.get("text", "") for p in out["candidates"][0]["content"]["parts"])
+    err = None
+    for m in MODELS_TEXT:
+        try:
+            out = call("POST", f"/v1beta/models/{m}:generateContent", body)
+            return "".join(p.get("text", "") for p in out["candidates"][0]["content"]["parts"])
+        except GeminiError as e:
+            err = e; print(f"[{m}] {str(e)[:90]} → provo il successivo", file=sys.stderr); time.sleep(2)
+    raise SystemExit(err)
 
 def main():
     a = sys.argv[1:]
@@ -53,8 +62,16 @@ def main():
     elif cmd == "analizza":
         uri, mime = upload(a[1]); print(testo(a[2] if len(a) > 2 else "Descrivi il video con i tempi dei momenti chiave.", [{"file_data": {"file_uri": uri, "mime_type": mime}}]))
     elif cmd == "immagine":
-        out = call("POST", f"/v1beta/models/{MODEL_IMG}:predict", {"instances": [{"prompt": a[1]}], "parameters": {"sampleCount": 1, "aspectRatio": "9:16"}})
-        open(a[2], "wb").write(base64.b64decode(out["predictions"][0]["bytesBase64Encoded"])); print("salvata", a[2])
+        body = {"contents": [{"parts": [{"text": a[1]}]}], "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "9:16"}}}
+        out = None
+        for m in MODELS_IMG:
+            try: out = call("POST", f"/v1beta/models/{m}:generateContent", body); break
+            except GeminiError as e: print(f"[{m}] {str(e)[:120]} → provo il successivo", file=sys.stderr)
+        if out is None: raise SystemExit("nessun modello immagine disponibile")
+        for part in out["candidates"][0]["content"]["parts"]:
+            if "inlineData" in part:
+                open(a[2], "wb").write(base64.b64decode(part["inlineData"]["data"])); print("salvata", a[2]); break
+        else: print("nessuna immagine nella risposta:", json.dumps(out)[:400])
     elif cmd == "video":
         inst = {"prompt": a[1]}
         if "--immagine" in a:
@@ -69,4 +86,6 @@ def main():
         data = call("GET", vid.replace(BASE, ""), raw=True); open(a[2], "wb").write(data); print("salvato", a[2])
     else: print(__doc__)
 
-if __name__ == "__main__": main()
+if __name__ == "__main__":
+    try: main()
+    except GeminiError as e: raise SystemExit(str(e))
