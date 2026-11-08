@@ -24,6 +24,10 @@ export type Element = ElementBase &
 
 export type Hook = { lines: string[]; keyword: string; dur: number };
 
+/** Effetto della skill `effects` (fx.py) applicato al master prima di Remotion. `wide`: durante l'effetto il master
+ *  arretra (campo largo con sfondo sfocato) per lasciare spazio sopra la testa. Le altre chiavi passano a fx.py. */
+export type Fx = { fx: string; at: number; dur: number; word?: string; wide?: boolean; [k: string]: unknown };
+
 export type CTA = { word: string; title: string; sub?: string };
 
 export type CNReelProps = {
@@ -33,8 +37,10 @@ export type CNReelProps = {
   src: string;
   segments: Seg[];
   words: Caption[];
-  hook: Hook;
+  /** hook in scatola sotto il mento; null se l'hook è affidato a un effetto */
+  hook: Hook | null;
   elements: Element[];
+  fx?: Fx[];
   cta: CTA;
   wordFix: Record<string, string>;
   blendFrames: number;
@@ -53,6 +59,8 @@ export const BRAND = {
 };
 
 export const FPS = 30;
+/** coda del master: 0,5 s di fermo immagine muto, su cui entra la CTA */
+export const TAIL_FRAMES = 15;
 export const W = 1080;
 export const H = 1920;
 /** zone (frazioni dell'altezza): volto libero sopra 0,45; grafiche; sottotitoli */

@@ -1,6 +1,6 @@
 import type { Caption } from "@remotion/captions";
 import type { Seg, Element } from "./types";
-import { FPS } from "./types";
+import { FPS, TAIL_FRAMES } from "./types";
 
 export const secToFrames = (s: number) => Math.round(s * FPS);
 
@@ -14,7 +14,7 @@ export const layout = (segments: Seg[], blend: number) => {
     out.push({ start, len, seg });
     cursor = start + len;
   });
-  return { items: out, total: cursor };
+  return { items: out, total: cursor + TAIL_FRAMES };
 };
 
 export type RWord = { text: string; start: number; end: number };

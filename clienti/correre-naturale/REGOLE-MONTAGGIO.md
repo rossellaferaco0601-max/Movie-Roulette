@@ -238,3 +238,21 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 - **2026-11-07 sera (tecnica, reel YTCN 51)**: quando un reel inizia a metà di un tratto parlato, l'inizio va messo **dopo la fine (Whisper) dell'ultima parola della frase precedente + 0,05 s** e verificato ritrascrivendo il primo secondo del master (R6 partiva con «affanno», R8 con «quasi meditativo»). Sottotitoli: oltre alle 3 parole, massimo ~22 caratteri per pagina, così restano su una riga.
 - Consegna YTCN 51 (8 reel): `video-engine/out/ytcn51/consegna/` → `R1-fiatone_v3`, `R2-naso_v3`, `R3-bocca_v3`, `R4-piano_v3`, `R5-esercizio1_v3`, `R6-breathhold_v4`, `R7-ritmica_v3`, `R8-dialogo_v4` (+ `_copertina.jpg`, `_didascalia.txt`, `_anteprima.mp4`).
 - **2026-11-08 (kit importato dal PC)**: regole e brand kit sincronizzati con l'originale di ReelStudio. Dal manuale del marchio: logo mai con ombre né effetti, area di rispetto pari alla maiuscola di «CORRERE», azzurro e crema solo come accenti. Dove Ross ha deciso diversamente (logo circolare con ombra morbida cotta nel PNG nel vlog; niente logo nei reel) vale la decisione di Ross. Catalogo effetti ReelStudio e schema project.json: `video-engine/reelstudio/CLAUDE.md`.
+
+- **2026-11-08 (Ross, feedback YTCN 51 v3/v4)**: «ci sono parole che saltano ai tagli, le transizioni devono essere fluide, le animazioni sono tutte uguali
+  (la serie annoia), le parole 3D in grassetto che ruotano non piacciono, usare gli effetti installati e Gemini per visual hook diversi».
+  Correzioni applicate nel motore CN (`video-engine`):
+  - **Tagli sulle pause**: ogni bordo di segmento cade tra una parola e l'altra (verificato su `words51.json`); mai dentro una parola
+    (erano tagliate «passo.» in R1, «e quasi meditativo.» in R7, «le pause respiratorie» in R5). Dopo l'ultima parola il master ha una
+    **coda di 0,5 s** (fermo immagine muto) su cui entra la CTA: così il fade non mangia più l'ultima parola.
+  - **Fermo immagine sulle schede del sorgente** con dissolvenza di 0,25 s in entrata e uscita (prima era uno stacco secco).
+  - **Niente testi 3D rotanti** (`text3d` eliminato). Al loro posto effetti diversi per ogni reel.
+  - **Un motivo visivo per reel**: la serie deve alternare hook ed effetti (nessun effetto come hook in due reel). Direzione artistica
+    chiesta a Gemini (`scripts/gemini.py testo`) e adattata alle regole del brand.
+  - **Skill `effects` (fx.py) collegata al motore**: `props.fx` in `reels51.ts`, script `scripts/cn_fx.ts` → `masters/<id>_fx.mp4`.
+    Font del motore effetti sostituiti con Blinker. Effetti ammessi: quelli senza riferimenti a Instagram/Claude e senza emoji
+    (spotlight, reject-stamp, split-headline, headline-box, backdrop-word, huge-strike, led-sign, the-bill, messages, apple-toggles,
+    liquid-glass-graph, todo, countdown-flip, dot-reveal, slow-push, lean-in, scribble). Colore accenti sempre lime `#95FF00`.
+  - **Campo largo** (`wide: true`): per gli effetti sopra la testa il master arretra all'80 % con sfondo sfocato (rampa 0,45 s),
+    perché il sorgente non ha aria sopra la testa di Daniele. Con `split-headline` usare `push: 0.4, height: 0.28` così il volto
+    resta sopra la zona sottotitoli.

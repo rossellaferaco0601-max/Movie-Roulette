@@ -1,0 +1,32 @@
+{
+ "effects": [
+  {
+   "fx": "spotlight",
+   "start": 0,
+   "end": 3.4,
+   "text": "TI MANCA IL FIATO?",
+   "color": "#95FF00",
+   "font": "bold",
+   "push": 1
+  },
+  {
+   "fx": "reject-stamp",
+   "start": 10.1,
+   "end": 12.5,
+   "text": "SBAGLIATO",
+   "color": "#95FF00",
+   "y": 0.62
+  },
+  {
+   "fx": "split-headline",
+   "start": 33.8,
+   "end": 37.7,
+   "text": "NON È LA CORSA|È IL RESPIRO",
+   "hl": "RESPIRO",
+   "pill": "Correre Naturale",
+   "color": "#95FF00",
+   "push": 0.4,
+   "height": 0.28
+  }
+ ]
+}

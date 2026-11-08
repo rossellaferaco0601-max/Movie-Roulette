@@ -1,8 +1,9 @@
 import words from "./words51.json";
-import type { CNReelProps, Element } from "./types";
+import type { CNReelProps } from "./types";
 
 const SRC = "ytcn51/ytcn51_src.mp4";
-const master = (id: string) => `ytcn51/masters/${id}.mp4`;
+const master = (id: string, fx = false) => `ytcn51/masters/${id}${fx ? "_fx" : ""}.mp4`;
+const LIME = "#95FF00";
 
 const base = {
   src: SRC,
@@ -23,17 +24,22 @@ export const REELS: ReelDef[] = [
     title: "Non sei fatto per correre? Sbagliato",
     props: {
       ...base,
-      master: master("R1-fiatone"),
-      segments: [seg(0.0, 16.9), seg(23.75, 44.95)],
-      hook: { lines: ["Ti manca il fiato", "dopo pochi minuti?"], keyword: "fiato", dur: 4.3 },
+      master: master("R1-fiatone", true),
+      // tagli: la frase "e in questo video ti spiego perché" (16.9-23.8) è tolta; i bordi cadono nelle pause tra le parole
+      segments: [seg(0.0, 16.8), seg(23.88, 44.84)],
+      // motivo visivo del reel 1: allarme / frequenza (riflettore, ECG, timbro, titolo spezzato)
+      hook: null,
+      fx: [
+        { fx: "spotlight", at: 0, dur: 3.4, wide: true, text: "TI MANCA IL FIATO?", color: LIME, font: "bold", push: 1.0 },
+        { fx: "reject-stamp", at: 10.2, word: "sbagliato", dur: 2.4, text: "SBAGLIATO", color: LIME, y: 0.62 },
+        { fx: "split-headline", at: 32.8, word: "corsa", dur: 3.9, text: "NON È LA CORSA|È IL RESPIRO", hl: "RESPIRO", pill: "Correre Naturale", color: LIME, push: 0.4, height: 0.28 },
+      ],
       elements: [
         { kind: "ecg", at: 6.4, word: "cuore", dur: 3.2, title: "Il cuore in gola", bpmFrom: 148, bpmTo: 176 },
-        { kind: "text3d", at: 10.2, word: "sbagliato", dur: 2.4, word3d: "SBAGLIATO" },
         { kind: "widget", at: 12.9, dur: 3.6, title: "Il problema non è il corpo", lines: ["Nessuno ti ha insegnato", "a respirare nel modo giusto"] },
         { kind: "wave", at: 17.2, word: "fiatone", dur: 6.0, title: "Il fiatone", mode: "calm-to-chaos" },
         { kind: "pill", at: 24.4, dur: 2.6, text: "Il corpo si allena per gradi" },
         { kind: "widget", at: 27.7, word: "veloce", dur: 4.8, title: "Se parti troppo veloce", lines: ["il respiro si scompone", "il cervello va in allarme", "e ti ferma"] },
-        { kind: "kinetic", at: 32.8, word: "corsa", dur: 3.7, words: ["NON È LA CORSA", "È IL RESPIRO"], accentIndex: 1 },
       ],
       cta: { word: "FIATO", title: "Vuoi correre senza fiatone?" },
     },
@@ -53,7 +59,7 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
     props: {
       ...base,
       master: master("R2-naso"),
-      segments: [seg(44.9, 74.3)],
+      segments: [seg(44.82, 74.28)],
       hook: { lines: ["Il motore in quinta", "appena acceso"], keyword: "quinta", dur: 4.3 },
       elements: [
         { kind: "gauge3d", at: 4.8, dur: 8.3, title: "Le marce giuste", from: 5, to: 1, labels: ["1ª", "2ª", "3ª", "4ª", "5ª"] },
@@ -79,7 +85,7 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
     props: {
       ...base,
       master: master("R3-bocca"),
-      segments: [seg(74.35, 98.5)],
+      segments: [seg(74.26, 98.56)],
       hook: { lines: ["Durante la corsa", "chiudi la bocca"], keyword: "bocca", dur: 3.3 },
       elements: [
         { kind: "checklist", at: 4.2, word: "rallenta", dur: 4.3, items: ["Voglia di aprire la bocca?", "Rallenta o cammina"] },
@@ -103,7 +109,7 @@ Commenta ENERGIA e ti mando tutte le info sui percorsi di coaching personalizzat
     props: {
       ...base,
       master: master("R4-piano"),
-      segments: [seg(98.65, 130.7)],
+      segments: [seg(98.58, 130.74)],
       hook: { lines: ["Il secondo errore:", "corri troppo forte"], keyword: "forte", dur: 4.3 },
       elements: [
         { kind: "checklist", at: 4.9, word: "spingere", dur: 3.5, items: ["Spingere di più"], strike: true },
@@ -129,14 +135,14 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
     props: {
       ...base,
       master: master("R5-esercizio1"),
-      segments: [seg(130.65, 179.25)],
+      segments: [seg(130.7, 175.82)],
       hook: { lines: ["Correre bene", "dipende da come respiri"], keyword: "respiri", dur: 4.6 },
       elements: [
         { kind: "text3d", at: 6.4, word: "allenare", dur: 2.4, word3d: "RESPIRA", sub: "si allena come un muscolo" },
         { kind: "pill", at: 11.1, word: "tre", dur: 3.0, text: "3 esercizi semplici" },
         { kind: "stage", at: 18.75, dur: 14.6, title: "Esercizio 1 · respirazione nasale controllata", keyword: "controllata", steps: ["Bocca chiusa", "Inspira dal naso 3-4 s", "Espira dal naso 4-5 s", "10 respiri con calma"] },
         { kind: "sphere3d", at: 33.6, dur: 7.5, phases: BREATH },
-        { kind: "widget", at: 41.7, dur: 6.0, title: "Cosa allena", lines: ["Tolleranza alla CO₂", "Uso migliore dell'ossigeno", "Più resistenza, meno affanno"] },
+        { kind: "widget", at: 41.7, dur: 3.3, title: "Cosa allena", lines: ["Tolleranza alla CO₂", "Uso migliore dell'ossigeno", "Più resistenza, meno affanno"] },
       ],
       cta: { word: "ESERCIZI", title: "Vuoi tutti gli esercizi per respirare meglio?" },
     },
@@ -154,7 +160,7 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
     props: {
       ...base,
       master: master("R6-breathhold"),
-      segments: [seg(175.8, 205.1)],
+      segments: [seg(175.8, 205.06)],
       hook: { lines: ["Correre in controllo", "senza panico"], keyword: "controllo", dur: 4.0 },
       elements: [
         { kind: "stage", at: 4.55, dur: 9.4, title: "Esercizio 2 · le pause respiratorie", keyword: "pause", steps: ["Espira normalmente", "Trattieni qualche secondo", "Riprendi dal naso", "5-10 volte, senza forzare"] },
@@ -179,7 +185,7 @@ Commenta CONTROLLO e ti mando tutte le info sui percorsi di coaching personalizz
     props: {
       ...base,
       master: master("R7-ritmica"),
-      segments: [seg(205.05, 241.3)],
+      segments: [seg(205.02, 242.8)],
       hook: { lines: ["Inspira 3 passi,", "espira 4"], keyword: "3", dur: 3.6 },
       elements: [
         { kind: "stage", at: 4.5, word: "camminata", dur: 8.0, title: "Esercizio 3 · respirazione ritmica", keyword: "ritmica", steps: ["Cammina o corri piano, dal naso", "Inspira per 3 passi", "Espira per 4 passi"] },
@@ -205,7 +211,7 @@ Commenta RITMO e ti mando tutte le info sui percorsi di coaching personalizzato.
     props: {
       ...base,
       master: master("R8-dialogo"),
-      segments: [seg(242.78, 279.9)],
+      segments: [seg(242.78, 279.95)],
       hook: { lines: ["La corsa non è", "un test di resistenza"], keyword: "resistenza", dur: 4.4 },
       elements: [
         { kind: "kinetic", at: 4.2, word: "dialogo", dur: 2.6, words: ["UN DIALOGO", "CON IL CORPO"], accentIndex: 0 },

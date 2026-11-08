@@ -49,7 +49,7 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
         <AbsoluteFill style={{ opacity: videoFade }}>
           <Master src={p.master} total={total} />
         </AbsoluteFill>
-        <Hook hook={p.hook} />
+        {p.hook ? <Hook hook={p.hook} /> : null}
         {p.elements.map((el, i) => (
           <AnyElement key={i} el={el} start={starts[i]} />
         ))}
