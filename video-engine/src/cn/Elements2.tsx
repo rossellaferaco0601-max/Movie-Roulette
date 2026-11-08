@@ -2,7 +2,7 @@ import React from "react";
 import { useCurrentFrame, useVideoConfig, spring, interpolate, Easing } from "remotion";
 import { gsap } from "gsap";
 import { ThreeCanvas } from "@remotion/three";
-import { BRAND, GFX_H, GFX_TOP, H, W } from "./types";
+import { BRAND, GFX_H, GFX_TOP, H, W, PANEL_X, PANEL_W } from "./types";
 import type { Element } from "./types";
 import { useInOut } from "./Elements3D";
 
@@ -16,7 +16,7 @@ export const Stairs: React.FC<{ el: Extract<Element, { kind: "stairs" }>; start:
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
   const n = el.steps ?? 5;
-  const boxW = W - 140, boxH = GFX_H - 10;
+  const boxW = PANEL_W, boxH = GFX_H - 10;
   const padX = 60, baseY = boxH - 44, stepW = (boxW - padX * 2) / n, stepH = (boxH - 150) / n;
   const per = Math.max(6, Math.floor((durF - 30) / n)); // frame per gradino
   const k = (local - 10) / per; // gradino corrente (frazionario)
@@ -28,7 +28,7 @@ export const Stairs: React.FC<{ el: Extract<Element, { kind: "stairs" }>; start:
   return (
     <div
       style={{
-        position: "absolute", left: 70, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden",
+        position: "absolute", left: PANEL_X, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden",
         background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white,
         opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)`,
       }}
@@ -75,7 +75,7 @@ export const SplitCard: React.FC<{ el: Extract<Element, { kind: "split" }>; star
   const size = 100;
   return (
     <div style={{ position: "absolute", left: 0, top: ch * (k - 1), width: W, height: ch, background: BRAND.cream, borderBottom: `8px solid ${BRAND.green}`, fontFamily: FONT, overflow: "hidden" }}>
-      <div style={{ position: "absolute", left: 70, bottom: 34, display: "flex", flexDirection: "column", gap: 4 }}>
+      <div style={{ position: "absolute", left: PANEL_X, bottom: 34, display: "flex", flexDirection: "column", gap: 4 }}>
         {el.lines.map((ln, j) => {
           const kj = interpolate(local - 5 - j * 4, [0, 7], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
           return (
@@ -111,10 +111,10 @@ export const Metronome: React.FC<{ el: Extract<Element, { kind: "metronome" }>; 
   const idx = Math.floor(beat) % cycle;
   const inhaling = idx < el.inhale;
   const swing = Math.sin(beat * Math.PI) * 26; // gradi
-  const boxW = W - 140, boxH = GFX_H - 10;
+  const boxW = PANEL_W, boxH = GFX_H - 10;
   const cx = 230, pivotY = boxH - 70;
   return (
-    <div style={{ position: "absolute", left: 70, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
+    <div style={{ position: "absolute", left: PANEL_X, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
       <div style={{ position: "absolute", top: 18, left: 0, width: "100%", textAlign: "center", fontWeight: 800, fontSize: 38, textTransform: "uppercase", letterSpacing: 2, color: BRAND.lime }}>{el.title}</div>
       <svg width={boxW} height={boxH} style={{ position: "absolute", top: 0, left: 0 }}>
         <path d={`M ${cx - 120} ${pivotY + 20} L ${cx - 70} 90 L ${cx + 70} 90 L ${cx + 120} ${pivotY + 20} Z`} fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" strokeWidth={3} />
@@ -165,10 +165,6 @@ const RoadScene: React.FC<{ offset: number; speedNorm: number }> = ({ offset, sp
           </mesh>
         );
       })}
-      <mesh position={[0, 1.2, -26]}>
-        <planeGeometry args={[60, 6]} />
-        <meshBasicMaterial color={BRAND.az} transparent opacity={0.18} />
-      </mesh>
     </>
   );
 };
@@ -182,11 +178,11 @@ export const Road3D: React.FC<{ el: Extract<Element, { kind: "road3d" }>; start:
   const speedNorm = 1 - gsap.parseEase("power2.inOut")(prog); // 1 = troppo forte, 0 = piano
   // distanza percorsa: integrale della velocità (veloce all'inizio, lenta alla fine)
   const dist = t * 6 * (0.25 + 0.75 * (1 - prog * 0.5 * prog));
-  const boxW = W - 140, boxH = GFX_H - 10;
+  const boxW = PANEL_W, boxH = GFX_H - 10;
   const kmh = Math.round(el.fromSpeed + (el.toSpeed - el.fromSpeed) * (1 - speedNorm));
   const label = speedNorm > 0.5 ? el.fromLabel : el.toLabel;
   return (
-    <div style={{ position: "absolute", left: 70, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
+    <div style={{ position: "absolute", left: PANEL_X, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
       <div style={{ position: "absolute", top: 18, left: 0, width: "100%", textAlign: "center", fontWeight: 800, fontSize: 38, textTransform: "uppercase", letterSpacing: 2, color: BRAND.lime, zIndex: 2 }}>{el.title}</div>
       <div style={{ position: "absolute", left: 0, top: 50, width: boxW, height: boxH - 50 }}>
         <ThreeCanvas width={boxW} height={boxH - 50} camera={{ fov: 55, position: [0, 0.6, 2.5] }} style={{ background: "transparent" }}>
@@ -206,7 +202,7 @@ export const Graph: React.FC<{ el: Extract<Element, { kind: "graph" }>; start: n
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
   const prog = gsap.parseEase("power2.out")(Math.min(1, Math.max(0, (local - 6) / (durF - 26))));
-  const boxW = W - 140, boxH = GFX_H - 10;
+  const boxW = PANEL_W, boxH = GFX_H - 10;
   const gx = 50, gy = 90, gw = boxW - 100, gh = boxH - 190;
   const pts: string[] = [];
   const n = 60;
@@ -218,7 +214,7 @@ export const Graph: React.FC<{ el: Extract<Element, { kind: "graph" }>; start: n
   const value = Math.round(el.from + (el.to - el.from) * prog);
   const lastY = gy + gh - (Math.pow(prog, 1.6) * 0.55 + prog * 0.45) * gh;
   return (
-    <div style={{ position: "absolute", left: 70, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
+    <div style={{ position: "absolute", left: PANEL_X, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
       <div style={{ position: "absolute", top: 18, left: 0, width: "100%", textAlign: "center", fontWeight: 800, fontSize: 38, textTransform: "uppercase", letterSpacing: 2, color: BRAND.lime }}>{el.title}</div>
       <svg width={boxW} height={boxH} style={{ position: "absolute", top: 0, left: 0 }}>
         <defs>
@@ -242,10 +238,10 @@ export const Toggles: React.FC<{ el: Extract<Element, { kind: "toggles" }>; star
   const durF = Math.round(el.dur * fps);
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
-  const boxW = W - 140, rowH = 96;
+  const boxW = PANEL_W, rowH = 96;
   const boxH = 70 + el.items.length * rowH + 20;
   return (
-    <div style={{ position: "absolute", left: 70, width: boxW, top: GFX_TOP + Math.max(0, (GFX_H - 10 - boxH) / 2), height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
+    <div style={{ position: "absolute", left: PANEL_X, width: boxW, top: GFX_TOP + Math.max(0, (GFX_H - 10 - boxH) / 2), height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
       <div style={{ position: "absolute", top: 18, left: 0, width: "100%", textAlign: "center", fontWeight: 800, fontSize: 38, textTransform: "uppercase", letterSpacing: 2, color: BRAND.lime }}>{el.title}</div>
       {el.items.map((it, i) => {
         const onF = Math.round((el.onAt?.[i] ?? 0.5 + i * 1.2) * fps);

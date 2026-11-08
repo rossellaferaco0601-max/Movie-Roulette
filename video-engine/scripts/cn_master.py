@@ -87,8 +87,9 @@ def build(reel, src_dir, out_dir):
                 wins.append((a, (hi - start) / FPS))
         if wins:
             bw, bh = int(OUT_W * WIDE), int(OUT_H * WIDE)
-            fc += (f"{prev}split[wa][wb];[wa]scale={bw}:{bh},boxblur=28:8,eq=brightness=-0.12:saturation=0.85[bg];"
-                   f"[bg][wb]overlay=x=(W-w)/2:y=H-h[wide];"
+            # sfondo del campo largo: gradiente verde scuro del brand (niente video sfocato: lo stacco era troppo evidente)
+            fc += (f"gradients=s={bw}x{bh}:c0=0x1C3D15:c1=0x0B0F0A:x0={bw // 2}:y0=0:x1={bw // 2}:y1={bh}:r={FPS}[bg];"
+                   f"[bg]{prev}overlay=x=(W-w)/2:y=H-h:shortest=1[wide];"
                    f"[wide]zoompan=z='{WIDE}-{WIDE - 1:.3f}*{wide_expr(wins)}':x='iw/2-(iw/zoom/2)':y='ih-(ih/zoom)':d=1:s={OUT_W}x{OUT_H}:fps={FPS}[vw];")
             prev = "[vw]"
         # ultimo pezzo: coda di TAIL s in cui il video continua (muto) sotto la CTA; se il sorgente finisce, clona l'ultimo fotogramma

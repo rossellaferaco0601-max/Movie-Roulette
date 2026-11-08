@@ -24,6 +24,15 @@ export type Element = ElementBase &
     | { kind: "split"; lines: string[]; accent: string }
     | { kind: "graph"; title: string; label: string; from: number; to: number; unit?: string }
     | { kind: "toggles"; title: string; items: string[]; onAt?: number[] }
+    | { kind: "title"; lines: string[]; accent?: string }
+    | { kind: "mouth"; lines: string[] }
+    | { kind: "runner"; fast: string; slow: string; bpmFrom: number; bpmTo: number }
+    | { kind: "lungs"; title: string; sub?: string }
+    | { kind: "horizon"; title: string; kmTo: number }
+    | { kind: "chat"; sender: string; messages: string[] }
+    | { kind: "bigstrike"; text: string }
+    | { kind: "stack"; title: string; items: string[]; onAt: number[] }
+    | { kind: "guide"; mode: "ritmica" | "nasale" | "hold"; title?: string; titleSec?: number; inhale?: number; exhale?: number; hold?: number; breaths?: number }
     | { kind: "metronome"; title: string; inhale: number; exhale: number; bpm?: number }
     | { kind: "road3d"; title: string; fromLabel: string; toLabel: string; fromSpeed: number; toSpeed: number; unit?: string }
   );
@@ -72,6 +81,10 @@ export const TAIL_FRAMES = 15;
 export const W = 1080;
 export const H = 1920;
 /** zone (frazioni dell'altezza): volto libero sopra 0,45; grafiche; sottotitoli */
-export const ZONE = { faceBottom: 0.45, gfxTop: 0.47, gfxBottom: 0.74, capTop: 0.76, capBottom: 0.86 };
+/** Zone (frazioni dell'altezza), dentro l'area sicura dei Reel: sopra 0,80 niente di importante (comandi Instagram), a destra x < 0,90. */
+export const ZONE = { faceBottom: 0.42, gfxTop: 0.44, gfxBottom: 0.67, capTop: 0.69, capBottom: 0.78 };
+/** pannelli delle grafiche: margini simmetrici, lontani dalla colonna dei comandi a destra */
+export const PANEL_X = 100;
+export const PANEL_W = 880;
 export const GFX_TOP = Math.round(H * ZONE.gfxTop);
 export const GFX_H = Math.round(H * (ZONE.gfxBottom - ZONE.gfxTop));

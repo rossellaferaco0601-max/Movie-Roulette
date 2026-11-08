@@ -10,6 +10,7 @@ import { ElementView } from "./Elements";
 import { Text3D, Wave, Sphere3D, Gauge3D, ECG, Steps, Bars } from "./Elements3D";
 import { CTA } from "./CTA";
 import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
+import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide } from "./Elements4";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
 
@@ -28,6 +29,15 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "road3d": return <Road3D el={el} start={start} />;
     case "graph": return <Graph el={el} start={start} />;
     case "toggles": return <Toggles el={el} start={start} />;
+    case "title": return <Title el={el} start={start} />;
+    case "mouth": return <Mouth el={el} start={start} />;
+    case "runner": return <Runner el={el} start={start} />;
+    case "lungs": return <Lungs el={el} start={start} />;
+    case "horizon": return <Horizon el={el} start={start} />;
+    case "chat": return <Chat el={el} start={start} />;
+    case "bigstrike": return <BigStrike el={el} start={start} />;
+    case "stack": return <Stack el={el} start={start} />;
+    case "guide": return <Guide el={el} start={start} />;
     default: return <ElementView el={el} start={start} />;
   }
 };

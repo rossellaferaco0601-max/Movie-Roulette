@@ -1,5 +1,5 @@
 import { useCurrentFrame, useVideoConfig, spring, interpolate, Easing } from "remotion";
-import { BRAND, GFX_TOP, W } from "./types";
+import { BRAND, GFX_TOP, W, PANEL_X, PANEL_W } from "./types";
 import { Trail } from "@remotion/motion-blur";
 import { gsap } from "gsap";
 const easeBack = gsap.parseEase("back.out(1.6)");
@@ -157,8 +157,8 @@ export const Stage: React.FC<{ el: Extract<Element, { kind: "stage" }>; start: n
     <div
       style={{
         position: "absolute",
-        left: 70,
-        width: W - 140,
+        left: PANEL_X,
+        width: PANEL_W,
         top: ZONE_TOP - 10,
         transform: `translateY(${(1 - s) * 80}px)`,
         opacity: Math.min(1, s * 1.3) * out,

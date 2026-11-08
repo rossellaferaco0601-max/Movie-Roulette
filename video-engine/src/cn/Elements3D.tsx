@@ -5,7 +5,7 @@ import * as THREE from "three";
 import { noise2D } from "@remotion/noise";
 import { evolvePath } from "@remotion/paths";
 import { gsap } from "gsap";
-import { BRAND, GFX_H, GFX_TOP, W } from "./types";
+import { BRAND, GFX_H, GFX_TOP, W, PANEL_X, PANEL_W } from "./types";
 import type { Element } from "./types";
 
 const FONT = "Blinker, sans-serif";
@@ -26,8 +26,8 @@ const Panel: React.FC<{ title?: string; opacity: number; s: number; children: Re
   <div
     style={{
       position: "absolute",
-      left: 70,
-      width: W - 140,
+      left: PANEL_X,
+      width: PANEL_W,
       top: GFX_TOP,
       height,
       opacity,
@@ -76,7 +76,7 @@ export const Wave: React.FC<{ el: Extract<Element, { kind: "wave" }>; start: num
   const prog = Math.min(1, local / durF);
   const chaos =
     el.mode === "chaos" ? 1 : el.mode === "calm" ? 0 : el.mode === "chaos-to-calm" ? 1 - easeInOut(Math.min(1, prog * 1.4)) : easeInOut(Math.min(1, prog * 1.4));
-  const w = W - 140 - 60, h = 260, cx = 30, cy = 70 + h / 2;
+  const w = PANEL_W - 60, h = 260, cx = 30, cy = 70 + h / 2;
   const pts: string[] = [];
   const n = 160;
   for (let i = 0; i <= n; i++) {
@@ -91,7 +91,7 @@ export const Wave: React.FC<{ el: Extract<Element, { kind: "wave" }>; start: num
   const label = chaos > 0.5 ? "RESPIRO FUORI CONTROLLO" : "RITMO SOSTENIBILE";
   return (
     <Panel title={el.title} opacity={Math.min(1, s * 1.3) * out} s={s} height={420}>
-      <svg width={W - 140} height={400} style={{ position: "absolute", top: 40, left: 0 }}>
+      <svg width={PANEL_W} height={400} style={{ position: "absolute", top: 40, left: 0 }}>
         <line x1={cx} x2={cx + w} y1={cy} y2={cy} stroke="rgba(255,255,255,0.18)" strokeWidth={2} />
         <path d={pts.join(" ")} fill="none" stroke={color} strokeWidth={9} strokeLinecap="round" strokeLinejoin="round" style={{ filter: `drop-shadow(0 0 14px ${color})` }} />
       </svg>
@@ -130,21 +130,21 @@ export const Sphere3D: React.FC<{ el: Extract<Element, { kind: "sphere3d" }>; st
   const prog = tt / ph.sec;
   const scale = prev.scale + (ph.scale - prev.scale) * easeInOut(prog);
   const remaining = Math.ceil(ph.sec - tt);
-  const ringR = 150, circ = 2 * Math.PI * ringR;
+  const ringR = 128, circ = 2 * Math.PI * ringR;
   return (
     <Panel opacity={Math.min(1, s * 1.3) * out} s={s} height={GFX_H - 10}>
-      <div style={{ position: "absolute", left: 20, top: 20, width: 440, height: 440 }}>
-        <ThreeCanvas width={440} height={440} camera={{ fov: 40, position: [0, 0, 5] }} style={{ background: "transparent" }}>
-          <BreathSphere scale={0.9 + scale * 0.9} t={t} lime={ph.label.startsWith("INSP")} />
+      <div style={{ position: "absolute", left: 30, top: 26, width: 380, height: 380 }}>
+        <ThreeCanvas width={380} height={380} camera={{ fov: 40, position: [0, 0, 5] }} style={{ background: "transparent" }}>
+          <BreathSphere scale={0.55 + scale * 0.7} t={t} lime={ph.label.startsWith("INSP")} />
         </ThreeCanvas>
-        <svg width={440} height={440} style={{ position: "absolute", left: 0, top: 0 }}>
-          <circle cx={220} cy={220} r={ringR} fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth={10} />
-          <circle cx={220} cy={220} r={ringR} fill="none" stroke={BRAND.lime} strokeWidth={10} strokeLinecap="round" strokeDasharray={circ} strokeDashoffset={circ * (1 - prog)} transform="rotate(-90 220 220)" />
+        <svg width={380} height={380} style={{ position: "absolute", left: 0, top: 0 }}>
+          <circle cx={190} cy={190} r={ringR} fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth={10} />
+          <circle cx={190} cy={190} r={ringR} fill="none" stroke={BRAND.lime} strokeWidth={10} strokeLinecap="round" strokeDasharray={circ} strokeDashoffset={circ * (1 - prog)} transform="rotate(-90 190 190)" />
         </svg>
       </div>
-      <div style={{ position: "absolute", left: 480, top: 70, width: 420 }}>
-        <div style={{ fontWeight: 900, fontSize: 64, textTransform: "uppercase", color: BRAND.lime, lineHeight: 1 }}>{ph.label}</div>
-        <div style={{ fontWeight: 900, fontSize: 150, lineHeight: 1, color: BRAND.white }}>{remaining}</div>
+      <div style={{ position: "absolute", left: 440, top: 60, width: 400 }}>
+        <div style={{ fontWeight: 900, fontSize: 60, textTransform: "uppercase", color: BRAND.lime, lineHeight: 1 }}>{ph.label}</div>
+        <div style={{ fontWeight: 900, fontSize: 140, lineHeight: 1, color: BRAND.white }}>{remaining}</div>
         <div style={{ fontWeight: 700, fontSize: 34, color: BRAND.cream }}>secondi · dal naso</div>
       </div>
     </Panel>
@@ -226,7 +226,7 @@ export const ECG: React.FC<{ el: Extract<Element, { kind: "ecg" }>; start: numbe
   const { strokeDasharray, strokeDashoffset } = evolvePath(Math.min(1, local / 24), d);
   return (
     <Panel title={el.title} opacity={Math.min(1, s * 1.3) * out} s={s} height={420}>
-      <svg width={W - 140} height={330} style={{ position: "absolute", top: 60, left: 0 }}>
+      <svg width={PANEL_W} height={330} style={{ position: "absolute", top: 60, left: 0 }}>
         <g transform={`translate(${-((t * 180) % 160)} 0)`}>
           <path d={d} fill="none" stroke={BRAND.lime} strokeWidth={7} strokeLinejoin="round" strokeDasharray={strokeDasharray} strokeDashoffset={strokeDashoffset} style={{ filter: `drop-shadow(0 0 10px ${BRAND.lime})` }} />
         </g>
@@ -263,7 +263,7 @@ export const Steps: React.FC<{ el: Extract<Element, { kind: "steps" }>; start: n
       <div style={{ position: "absolute", top: 26, left: 0, width: "100%", textAlign: "center", fontWeight: 900, fontSize: 60, textTransform: "uppercase", color: inhale ? BRAND.lime : BRAND.az, lineHeight: 1 }}>
         {inhale ? "INSPIRA" : "ESPIRA"} <span style={{ color: BRAND.white }}>{count}</span>
       </div>
-      <svg width={W - 140} height={300} style={{ position: "absolute", top: 120, left: 0 }}>
+      <svg width={PANEL_W} height={300} style={{ position: "absolute", top: 120, left: 0 }}>
         {Array.from({ length: total }, (_, i) => (
           <Foot key={i} x={90 + i * 125} y={i % 2 === 0 ? 200 : 130} flip={i % 2 === 1} on={i <= k} color={i < el.inhale ? BRAND.lime : BRAND.az} />
         ))}
@@ -282,7 +282,7 @@ export const Bars: React.FC<{ el: Extract<Element, { kind: "bars" }>; start: num
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
   const n = el.values.length, maxV = Math.max(...el.values);
-  const bw = Math.min(150, (W - 140 - 80) / n - 24);
+  const bw = Math.min(150, (PANEL_W - 80) / n - 24);
   return (
     <Panel title={el.title} opacity={Math.min(1, s * 1.3) * out} s={s}>
       <div style={{ position: "absolute", left: 40, right: 40, top: 80, bottom: 30, display: "flex", alignItems: "flex-end", justifyContent: "space-around" }}>
