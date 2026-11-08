@@ -24,6 +24,7 @@ blender -b -P scripts/blender_render.py -- "TITOLO" out/title.png
 ```
 
 ## Clienti
+`reelstudio-ref/` contiene il codice e i progetti di ReelStudio (la dashboard sul PC di Ross); nel cloud gira come composizione `RSReel` (asset in `video-engine/public/rs/`). Mai committare `impostazioni.json` (chiavi API).
 Le regole di montaggio e il contesto di ogni cliente stanno in `clienti/` (indice in `clienti/README.md`). Per Correre Naturale usa la skill `cliente-correre-naturale` prima di qualsiasi montaggio.
 
 ## Regole

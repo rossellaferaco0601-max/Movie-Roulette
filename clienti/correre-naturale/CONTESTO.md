@@ -22,10 +22,18 @@ Prima di montare qualsiasi cosa per questo cliente: leggere `REGOLE-MONTAGGIO.md
 | Lime | `#95FF00` — SOLO parola detta nei sottotitoli / parola chiave del titolo |
 | Font | Blinker (400/600/700/800; ExtraBold per i titoli). Deroga solo per i cambi di stile della parola «workshop» nel reel condensato: DM Serif, Pacifico, Anton, Playfair, Caveat, Bebas, Lobster, Fraunces, Marker, Abril, Instrument, Righteous, Oswald, Bangers (da `FONT_FILES` in `src/remotion/lib.ts`) |
 | Velo sotto titolo | `rgba(73,118,46,0.62)` (verde brand, mai scuro) |
-| brand.json | `C:\Users\roxfe\Documents\ReelStudio\clients\correre-naturale\brand.json` (costanti LIME, GREEN, AZ, CREAM, INK; contenuto non recuperato dalle trascrizioni) |
+| brand.json | `clienti/correre-naturale/brand/brand.json` (importato dal PC l'8/11): colori primary/accent/cream/dark/light, font Blinker, 7 varianti di logo, CTA predefinita, speaker |
 | Logo | `ReelStudio/clients/correre-naturale/logo-circolare-bianco.png` (693×695, bianco su trasparente, ombra cotta nel PNG: blur 10, offset 8 px, 55 %, padding 48 px); circolare, scontornato; mai ruotato/deformato/azzurro; mai su disco o cartiglio; mai icona Instagram |
 | Prodotto | «percorsi di coaching **personalizzato** di Correre Naturale®» (singolare) |
 | Formato | 9:16, 1080×1920, 30 fps, MP4 H.264 |
+
+## Brand kit ufficiale (dal «Manuale d'uso del marchio», Sara Scionti — pagine in `brand/manuale/`)
+- Colori istituzionali: verde #49762E (Pantone 364 C), nero, bianco; accenti azzurro #B8D7EA (290 C) e crema #F4F1E5. Azzurro e crema sono fondi/pulsanti/pill, non colori da testo lungo.
+- Abbinamenti: su bianco → verde e nero; su verde → azzurro, crema, bianco; su nero → verde e bianco; su azzurro/crema → verde e nero.
+- Font unico Blinker (`brand/fonts/*.ttf`, woff2 in `video-engine/public/rs/assets/fonts/`); la «&» va presa dal Lato.
+- Logo: orizzontale (principale), verticale, circolare (sigillo/sticker); pittogramma da solo in verde/nero/bianco. Area di rispetto = altezza della maiuscola di «CORRERE». Mai azzurro, ruotato, deformato, con ombre, senza pittogramma, su foto senza contrasto. Nei reel il manuale prevede handle in alto a destra, ma Ross il 6/11 ha deciso: **niente logo né handle nei reel**, logo solo in copertina e CTA.
+- Lime #95FF00 non è nel manuale: è la convenzione dei reel per la parola detta.
+- File: `brand/logo/` (8 PNG), `brand/foto-stories/` (19 foto con descrizioni), `guide/guida-reel.md` (manuale operativo reel in 13 capitoli), `guide/guida-caroselli.md`, `guide/prompt-caroselli.md`, `guide/brand-caroselli.md`.
 
 ## Stile sintetico (dettagli nelle regole)
 - Sottotitoli sempre presenti, maiuscoli bianchi, parola attiva lime ingrandita max 7 % (`wordGap 0.26, activeBase 1.03, activeScale 0.04`), y 0,80, mai sul volto, mai sovrapposti a widget.
@@ -40,6 +48,12 @@ Prima di montare qualsiasi cosa per questo cliente: leggere `REGOLE-MONTAGGIO.md
 - Girato iPhone HDR (HLG/Dolby Vision): sempre tone mapping Hable → BT.709 prima di tutto.
 - Didascalia: tema → approfondimento non detto → conclusione → CTA con parola → pochi hashtag; niente engagement bait.
 - Consegna: MP4 + copertina (volto libero) + didascalia + checklist; controllare 6-8 fotogrammi prima.
+
+## Cosa è stato portato nel repo dal PC (8/11/2026)
+- `clienti/correre-naturale/`: brand kit completo, guide, `CLAUDE-pc.md` (istruzioni del progetto PC), `consegne-precedenti/` (checklist e didascalie di longevità, YTCN 38, evento), `scripts-pc/` (pipeline Python/JS del PC), `reference/` (4 reel CN già pubblicati + reference-reel-01 + analisi reference).
+- `reelstudio-ref/`: codice Remotion di ReelStudio (Reel.tsx, effects*.tsx, captions, lib), `shared/`, `project.json` di tutti i 35 progetti costruiti, CLAUDE.md con lo schema di project.json e il catalogo dei 60+ effetti, REGOLE di ReelStudio.
+- `video-engine/`: il motore ReelStudio gira anche nel cloud come composizione **RSReel** (asset in `public/rs/`: font, 29 suoni, 15 musiche, loghi). `scripts/rs_props.ts` converte un project.json nelle props. Quindi nel cloud si possono usare sia il motore nuovo (`CNReel`, con 3D e simulazioni) sia tutti gli effetti di ReelStudio (kinetic, stageCard, behindTitle, togglePills, glass widget, documentary, orbit, bento, ecc.).
+- Solo in locale/PC (non in git, troppo pesanti): «Nuove reference reel» (zip 69 MB), reference-reel-02/03, Reference Dashboard (596 MB), scontorni, sorgenti video, render.
 
 ## Dove sta il lavoro (PC Windows di Ross)
 - Progetto: `C:/Users/roxfe/Documents/reel_progetti/correre_naturale/` (`REGOLE-MONTAGGIO.md`, `PROPOSTE-VLOG-evento.md`, `scripts/`, `work/`, `input/evento/`, `output/ytcn38/`, `output/evento/` con `CHECKLIST.md`, `assets/brand`).
