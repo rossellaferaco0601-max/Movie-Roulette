@@ -1,0 +1,85 @@
+{
+  "name": "vintage-collage",
+  "label": "Vintage engraving collage: copperplate cut-outs, torn maps, green and gold circles",
+  "source": "refs/: plates and a frame from the author's own Tulip Mania run",
+  "canvas": {
+    "fps": 30
+  },
+  "palette": {
+    "paper": "#E9E4DA",
+    "paperShade": "#D9D1C2",
+    "ink": "#2B2A26",
+    "green": "#24442F",
+    "gold": "#C9A043",
+    "muted": "#8A857B",
+    "pill": "#F4F1EA"
+  },
+  "type": {
+    "headline": {
+      "font": "Space Mono",
+      "weight": 700,
+      "size": 64,
+      "tracking": 2,
+      "case": "upper",
+      "accentColor": "green",
+      "restColor": "muted",
+      "y": 150
+    },
+    "caption": {
+      "font": "Inter",
+      "weight": 500,
+      "size": 34,
+      "color": "ink",
+      "background": "pill",
+      "y": 1640
+    },
+    "title": {
+      "font": "EB Garamond",
+      "style": "italic"
+    }
+  },
+  "imagePrompt": "Vintage hand-engraved collage illustration, 19th-century copperplate etching cut-outs in sepia and grayscale, torn antique map paper fragments, flat forest-green (#24442F) and burnished gold-leaf (#C9A043) circles behind the subject, botanical engravings (tea leaves, camellia, poppies) framing the edges, thin gold orbit lines with small dots and four-point sparkles, warm cream textured paper background, centered composition with empty space at top and bottom, editorial, museum quality, no text, no watermark",
+  "elementPrompt": "single isolated vintage copperplate engraving cut-out of {subject}, sepia and grayscale etching, crisp paper cut edge, centered, plain pure white background, no shadow, no text",
+  "negative": "photo realism, neon, 3d render, gradients, glossy, text, letters, logo, watermark, cartoon",
+  "motion": {
+    "enter": "rise",
+    "stagger": 5,
+    "damping": 18,
+    "drift": 1,
+    "transition": "drift",
+    "headline": "word",
+    "fade": 8,
+    "rules": [
+      "Every scene is a stack of layers: paper, code-drawn circles, torn map plate, hero cut-out, 2-4 prop cut-outs, orbit ring, sparkles.",
+      "Layers enter staggered 4-6 frames apart with a soft spring (damping 18), never all at once.",
+      "Constant slow drift: hero scale 1.00->1.04 over the scene, props parallax 6-14 px in opposite directions, circles rotate 2-4 deg.",
+      "Orbit ring draws on (stroke-dashoffset) over 20 frames; planets ride the ring.",
+      "Sparkles twinkle (scale 0.6-1.1, opacity) on staggered sine phases.",
+      "Scene change: outgoing layers drift up 30 px and fade over 8 frames while new circles grow from 0 \u2014 no hard cuts, no slides, no zoom-punch.",
+      "Headline reveals word by word synced to VO, accent words in green, rest muted; caption pill shows the spoken phrase."
+    ],
+    "avoid": [
+      "whip pans",
+      "glitch",
+      "bouncy overshoot > 4%",
+      "drop shadows on cut-outs",
+      "camera shake"
+    ]
+  },
+  "layout": "orbit",
+  "background": {
+    "type": "radial",
+    "from": "paper",
+    "to": "paperShade"
+  },
+  "defaultCircles": [
+    "green",
+    "gold"
+  ],
+  "ornaments": {
+    "circles": true,
+    "ring": true,
+    "sparkles": true,
+    "color": "gold"
+  }
+}

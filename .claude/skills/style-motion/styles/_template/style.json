@@ -1,0 +1,27 @@
+{
+  "name": "_template",
+  "label": "One line: medium + mood (e.g. 'Risograph print collage, warm and loud')",
+  "source": "where the reference came from",
+  "canvas": {"fps": 30},
+  "palette": {
+    "paper": "#F2EFEC", "paperShade": "#E2DDD6", "ink": "#1E1B18",
+    "accent": "#7C3AED", "accent2": "#E8B04A", "muted": "#8A857B", "rule": "#7C3AED", "pill": "#FFFFFF"
+  },
+  "background": {"type": "radial", "from": "paper", "to": "paperShade"},
+  "layout": "orbit",
+  "defaultCircles": ["accent", "accent2"],
+  "ornaments": {"circles": true, "ring": true, "sparkles": true, "color": "accent2"},
+  "motion": {"enter": "rise", "stagger": 5, "damping": 18, "drift": 1, "transition": "drift", "headline": "word", "fade": 8,
+    "rules": ["Describe how things enter, hold and leave in the reference, in plain sentences."],
+    "avoid": ["list motion the reference never uses"]},
+  "type": {
+    "fonts": ["Inter:wght@500;800"],
+    "kicker": {"font": "Inter", "size": 28, "tracking": 6, "color": "muted", "y": 110},
+    "headline": {"font": "Inter", "weight": 800, "size": 72, "tracking": 0, "case": "title",
+      "accentColor": "accent", "restColor": "ink", "accentStyle": "normal", "y": 170},
+    "caption": {"font": "Inter", "weight": 500, "size": 36, "color": "ink", "background": "pill", "y": 1640}
+  },
+  "imagePrompt": "MEDIUM (e.g. flat vector, gouache, engraving, 3D clay), TEXTURE, RECURRING SHAPES, PALETTE in words and hex, COMPOSITION (subject centered, empty space top and bottom), WHAT IS ABSENT, no text, no watermark",
+  "elementPrompt": "single isolated {subject} in MEDIUM style, centered, plain pure white background, no shadow, no text",
+  "negative": "text, letters, logo, watermark, plus anything off-style"
+}
