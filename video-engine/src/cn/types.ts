@@ -20,6 +20,8 @@ export type Element = ElementBase &
     | { kind: "ecg"; title: string; bpmFrom: number; bpmTo: number }
     | { kind: "steps"; inhale: number; exhale: number }
     | { kind: "bars"; title: string; labels: string[]; values: number[] }
+    | { kind: "stairs"; title: string; steps?: number }
+    | { kind: "split"; lines: string[]; accent: string }
   );
 
 export type Hook = { lines: string[]; keyword: string; dur: number };

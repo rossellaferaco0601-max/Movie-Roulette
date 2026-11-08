@@ -15,18 +15,8 @@
    "end": 12.5,
    "text": "SBAGLIATO",
    "color": "#95FF00",
+   "bg": "#0B0F0A",
    "y": 0.62
-  },
-  {
-   "fx": "split-headline",
-   "start": 33.8,
-   "end": 37.7,
-   "text": "NON È LA CORSA|È IL RESPIRO",
-   "hl": "RESPIRO",
-   "pill": "Correre Naturale",
-   "color": "#95FF00",
-   "push": 0.4,
-   "height": 0.28
   }
  ]
 }

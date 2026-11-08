@@ -52,12 +52,12 @@ export const Captions: React.FC<{ words: RWord[]; size?: number; endFrame: numbe
         lineHeight: 1,
         textTransform: "uppercase",
         color: BRAND.white,
-        WebkitTextStroke: "1.5px rgba(0,0,0,0.9)",
-        textShadow: "0 3px 14px rgba(0,0,0,0.75), 0 0 2px #000",
+        textShadow: "0 2px 8px rgba(0,0,0,0.6)",
         padding: "0 60px",
         flexWrap: "wrap",
       }}
     >
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "0.34em", background: "rgba(11,15,10,0.78)", borderRadius: 20, padding: "12px 28px", boxShadow: "0 6px 24px rgba(0,0,0,0.35)" }}>
       {page.words.map((w, i) => {
         const active = frame >= w.start && frame < w.end;
         const s = active ? spring({ frame: frame - w.start, fps, config: { damping: 14, stiffness: 240 } }) : 0;
@@ -77,6 +77,7 @@ export const Captions: React.FC<{ words: RWord[]; size?: number; endFrame: numbe
           </span>
         );
       })}
+      </div>
     </div>
   );
 };

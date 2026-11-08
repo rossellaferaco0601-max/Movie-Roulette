@@ -256,3 +256,11 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - **Campo largo** (`wide: true`): per gli effetti sopra la testa il master arretra all'80 % con sfondo sfocato (rampa 0,45 s),
     perché il sorgente non ha aria sopra la testa di Daniele. Con `split-headline` usare `push: 0.4, height: 0.28` così il volto
     resta sopra la zona sottotitoli.
+- **2026-11-08 (Ross, seconda correzione su R1 v5)**: «i sottotitoli non si vedono bene: mettici uno sfondo; stessa cosa per SBAGLIATO
+  (sfondo o contorno a contrasto); nel titolo spezzato la testa di Daniele viene tagliata; su "il corpo si allena per gradi" metti
+  un'animazione che esprima il concetto». Applicato: **sottotitoli sempre su scatola scura** (rgba 11,15,10 al 78 %, raggio 20);
+  **timbro con sfondo pieno** (`bg` in `reject-stamp`, aggiunto a fx.py); il titolo spezzato ora è un elemento Remotion (`split`):
+  scheda crema dall'alto e **video ridotto al 70 % ancorato in basso**, così la testa non viene mai tagliata (l'effetto `split-headline`
+  di fx.py fa scorrere il video e taglia la testa: non usarlo); nuovo elemento **`stairs`** (gradini che si costruiscono uno alla volta
+  con pallina che sale) per i concetti di progressione. Regola generale: ogni concetto detto a voce (per gradi, marce, passi…) va
+  tradotto in un'animazione che lo rappresenta, non in una pillola di testo.

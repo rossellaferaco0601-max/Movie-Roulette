@@ -590,9 +590,11 @@ def fx_reject_stamp(c, e):
     def build():
         t = fit_text(word, c.W * 0.62, 'bold', 200, fill=col); pad = int(t.height * 0.12)
         im = Image.new('RGBA', (t.width + 4 * pad, t.height + 2 * pad), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
-        d.rounded_rectangle([3, 3, im.width - 4, im.height - 4], 18, outline=col + (255,), width=max(6, pad // 2))
+        bg = e.o.get('bg')  # sfondo pieno dietro il timbro (contrasto), es. bg=#0B0F0A
+        d.rounded_rectangle([3, 3, im.width - 4, im.height - 4], 18, fill=(rgb(bg, INK) + (225,)) if bg else None, outline=col + (255,), width=max(6, pad // 2))
         im.alpha_composite(t, (2 * pad, pad))
-        a = np.asarray(im.split()[3], np.float32) * np.clip(np.random.default_rng(3).uniform(0.55, 1.6, (im.height, im.width)), 0, 1)
+        lo = 0.9 if bg else 0.55
+        a = np.asarray(im.split()[3], np.float32) * np.clip(np.random.default_rng(3).uniform(lo, 1.6, (im.height, im.width)), 0, 1)
         im.putalpha(Image.fromarray(a.astype(np.uint8)))
         return im
     st = cached(e, 's', build)

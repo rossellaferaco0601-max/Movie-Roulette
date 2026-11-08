@@ -31,15 +31,15 @@ export const REELS: ReelDef[] = [
       hook: null,
       fx: [
         { fx: "spotlight", at: 0, dur: 3.4, wide: true, text: "TI MANCA IL FIATO?", color: LIME, font: "bold", push: 1.0 },
-        { fx: "reject-stamp", at: 10.2, word: "sbagliato", dur: 2.4, text: "SBAGLIATO", color: LIME, y: 0.62 },
-        { fx: "split-headline", at: 32.8, word: "corsa", dur: 3.9, text: "NON È LA CORSA|È IL RESPIRO", hl: "RESPIRO", pill: "Correre Naturale", color: LIME, push: 0.4, height: 0.28 },
+        { fx: "reject-stamp", at: 10.2, word: "sbagliato", dur: 2.4, text: "SBAGLIATO", color: LIME, bg: "#0B0F0A", y: 0.62 },
       ],
       elements: [
         { kind: "ecg", at: 6.4, word: "cuore", dur: 3.2, title: "Il cuore in gola", bpmFrom: 148, bpmTo: 176 },
         { kind: "widget", at: 12.9, dur: 3.6, title: "Il problema non è il corpo", lines: ["Nessuno ti ha insegnato", "a respirare nel modo giusto"] },
         { kind: "wave", at: 17.2, word: "fiatone", dur: 6.0, title: "Il fiatone", mode: "calm-to-chaos" },
-        { kind: "pill", at: 24.4, dur: 2.6, text: "Il corpo si allena per gradi" },
+        { kind: "stairs", at: 24.4, word: "gradi", dur: 2.8, title: "Il corpo si allena per gradi", steps: 5 },
         { kind: "widget", at: 27.7, word: "veloce", dur: 4.8, title: "Se parti troppo veloce", lines: ["il respiro si scompone", "il cervello va in allarme", "e ti ferma"] },
+        { kind: "split", at: 32.8, word: "corsa", dur: 3.9, lines: ["Non è la corsa", "è il respiro"], accent: "respiro" },
       ],
       cta: { word: "FIATO", title: "Vuoi correre senza fiatone?" },
     },

@@ -6,7 +6,7 @@ for (const r of REELS) {
   const p = r.props;
   const { items, total } = layout(p.segments, p.blendFrames);
   const words = remapWords(p.words, items, p.wordFix, p.wordOffset);
-  const iv: { name: string; a: number; b: number }[] = [{ name: "hook", a: 0, b: secToFrames(p.hook.dur) + 8 }];
+  const iv: { name: string; a: number; b: number }[] = p.hook ? [{ name: "hook", a: 0, b: secToFrames(p.hook.dur) + 8 }] : [];
   p.elements.forEach((el, i) => {
     const a = resolveStart(el, words);
     const anchored = el.word ? (Math.abs(a - secToFrames(el.at)) <= 60 && a !== secToFrames(el.at) ? "ancora" : "ancora NON trovata") : "";
