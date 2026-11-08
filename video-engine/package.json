@@ -32,6 +32,7 @@
     "@remotion/transitions": "^4.0.541",
     "elevenlabs": "^1.59.0",
     "gsap": "^3.15.1",
+    "hyperframes": "^0.9.23",
     "lottie-web": "^5.13.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

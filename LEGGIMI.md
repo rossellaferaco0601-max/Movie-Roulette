@@ -7,7 +7,7 @@ Tutto quello che serve per montare reel e video (oggi per Correre Naturale®) st
 Movie-Roulette/
 ├─ LEGGIMI.md                 ← questa mappa
 ├─ CLAUDE.md                  ← istruzioni per Claude (strumenti, regole di lavoro)
-├─ .claude/skills/            ← skill: regole del cliente, Remotion, tipografia, 3D, sottotitoli…
+├─ .claude/skills/            ← skill: regole del cliente, Remotion, tipografia, 3D, sottotitoli, effects (51 effetti volto)
 ├─ clienti/
 │  ├─ correre-naturale/
 │  │  ├─ REGOLE-MONTAGGIO.md  ← FONTE DI VERITÀ: brief, correzioni di Ross/Paola/Oscar, note tecniche

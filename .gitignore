@@ -16,3 +16,4 @@ video-engine/work/**/*.log
 video-engine/public/reference/
 reelstudio-ref/impostazioni.json
 **/impostazioni.json
+.claude/skills/effects/.venv/
