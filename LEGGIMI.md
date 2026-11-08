@@ -1,10 +1,10 @@
-# Movie-Roulette — studio di montaggio reel con Claude
+# Videoediting Correre Naturale — studio di montaggio reel con Claude
 
 Tutto quello che serve per montare reel e video (oggi per Correre Naturale®) sta in questa cartella. Parti da qui.
 
 ## Mappa
 ```
-Movie-Roulette/
+Videoediting-Correre-Naturale/   (su GitHub ancora «Movie-Roulette» finché l'account è sospeso)
 ├─ LEGGIMI.md                 ← questa mappa
 ├─ CLAUDE.md                  ← istruzioni per Claude (strumenti, regole di lavoro)
 ├─ .claude/skills/            ← skill: regole del cliente, Remotion, tipografia, 3D, sottotitoli, effects (51 effetti volto)
@@ -43,4 +43,4 @@ Movie-Roulette/
 - **ReelStudio** (`src/rs`): gli stessi effetti e stili della dashboard del PC, guidati da un `project.json`. Utile per rifare o ritoccare un reel già costruito sul PC: `scripts/rs_render.sh progetto.json video.mp4 out.mp4`.
 
 ## Ambiente cloud
-«video editing correre naturale»: installa da solo FFmpeg, Blender, Whisper e le librerie; rete aperta verso Drive, Hugging Face, Remotion, ElevenLabs e Runway. Le chiavi API non stanno mai nel repo (vanno nei secret dell'ambiente).
+«Videoediting Correre Naturale»: installa da solo FFmpeg, Blender, Whisper e le librerie; rete aperta verso Drive, Hugging Face, Remotion, ElevenLabs e Runway. Le chiavi API non stanno mai nel repo (vanno nei secret dell'ambiente).

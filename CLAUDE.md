@@ -1,4 +1,4 @@
-# Movie-Roulette — motore grafico video/reel
+# Videoediting Correre Naturale — motore grafico video/reel
 
 Claude è usato come motore grafico per montare video e reel. Mappa delle cartelle in `LEGGIMI.md`. Il progetto Remotion vive in `video-engine/` (motore `CNReel` in `src/cn`, motore ReelStudio `RSReel` in `src/rs`).
 

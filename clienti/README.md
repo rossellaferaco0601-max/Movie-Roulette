@@ -1,4 +1,4 @@
-# Clienti
+# Clienti — Videoediting Correre Naturale
 
 Contesto, brand e regole di montaggio per ogni cliente. Claude legge la cartella del cliente prima di montare.
 
