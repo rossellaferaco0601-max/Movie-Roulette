@@ -12,7 +12,7 @@ OUT_W, OUT_H = 1080, 1920
 TAIL = 0.5            # secondi di coda (fermo immagine + silenzio), = TAIL_FRAMES in types.ts
 WIDE = 1.25           # fattore di arretramento del campo largo (il video occupa l'80 % dell'altezza)
 WIDE_RAMP = 0.45      # secondi di animazione dentro/fuori dal campo largo
-CARD_FADE = 0.25      # dissolvenza del fermo immagine sulle schede
+CARD_FADE = 0.15      # dissolvenza del fermo immagine sulle schede (solo se il bordo cade dentro il pezzo)
 
 def run(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True)
@@ -41,7 +41,8 @@ def freeze_inputs(src, seg, zoom, tmp, i):
         t0, t1 = lo - seg["from"], hi - seg["from"]
         nf = int(round((t1 - t0) * FPS)) + 2
         extra_in += ["-loop", "1", "-framerate", str(FPS), "-t", f"{(nf + 2) / FPS:.4f}", "-i", png]
-        chains.append((t0, t1, nf))
+        # niente dissolvenza se la scheda inizia/finisce col pezzo (si vedrebbe la scheda del sorgente in trasparenza)
+        chains.append((t0, t1, nf, lo > seg["from"] + 0.01, hi < seg["to"] - 0.01))
         k += 1
     return extra_in, chains
 
@@ -68,9 +69,10 @@ def build(reel, src_dir, out_dir):
         extra_in, chains = freeze_inputs(src, s, zoom, tmp, i)
         fc = f"[0:v]{crop_filter(zoom)}[v0];"
         prev = "[v0]"
-        for j, (t0, t1, nf) in enumerate(chains):
+        for j, (t0, t1, nf, fin, fout) in enumerate(chains):
+            fades = (f",fade=t=in:st={t0:.4f}:d={CARD_FADE}:alpha=1" if fin else "") + (f",fade=t=out:st={t1 - CARD_FADE:.4f}:d={CARD_FADE}:alpha=1" if fout else "")
             fc += (f"[{j + 1}:v]scale=2160:3840,zoompan=z='1+0.06*on/{nf}':d=1:x='iw/2-(iw/zoom/2)':y='ih*0.35-(ih/zoom*0.35)':s={OUT_W}x{OUT_H}:fps={FPS},"
-                   f"setpts=PTS-STARTPTS+{t0:.4f}/TB,format=rgba,fade=t=in:st={t0:.4f}:d={CARD_FADE}:alpha=1,fade=t=out:st={t1 - CARD_FADE:.4f}:d={CARD_FADE}:alpha=1[f{j}];"
+                   f"setpts=PTS-STARTPTS+{t0:.4f}/TB,format=rgba{fades}[f{j}];"
                    f"{prev}[f{j}]overlay=enable='between(t,{t0:.4f},{t1:.4f})':eof_action=pass[v{j + 1}];")
             prev = f"[v{j + 1}]"
         # finestre di campo largo che cadono in questo pezzo (tempo locale del pezzo)

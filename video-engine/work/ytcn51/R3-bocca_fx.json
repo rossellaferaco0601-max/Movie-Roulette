@@ -5,15 +5,6 @@
    "start": 1.233,
    "end": 2.333,
    "zoom": 1.35
-  },
-  {
-   "fx": "liquid-glass-graph",
-   "start": 20.767,
-   "end": 23.867,
-   "text": "ENERGIA DOPO LA CORSA",
-   "from": "40%",
-   "to": "100%",
-   "color": "#95FF00"
   }
  ]
 }
