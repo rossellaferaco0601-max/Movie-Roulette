@@ -87,14 +87,18 @@ def build(reel, src_dir, out_dir):
                    f"[bg][wb]overlay=x=(W-w)/2:y=H-h[wide];"
                    f"[wide]zoompan=z='{WIDE}-{WIDE - 1:.3f}*{wide_expr(wins)}':x='iw/2-(iw/zoom/2)':y='ih-(ih/zoom)':d=1:s={OUT_W}x{OUT_H}:fps={FPS}[vw];")
             prev = "[vw]"
+        # ultimo pezzo: coda di TAIL s in cui il video continua (muto) sotto la CTA; se il sorgente finisce, clona l'ultimo fotogramma
+        last = i == len(segs) - 1
+        nv = n + (round(TAIL * FPS) if last else 0)
+        fc += f"{prev}tpad=stop_mode=clone:stop_duration={TAIL}[vend];" if last else ""
+        if last: prev = "[vend]"
         fc = fc.rstrip(";")
-        run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{s['from']:.3f}", "-i", src, *extra_in, "-t", f"{n / FPS:.4f}",
-             "-filter_complex", fc, "-map", prev, "-map", "0:a", "-frames:v", str(n), "-af", f"aresample=48000,atrim=0:{n / FPS:.4f},apad=whole_dur={n / FPS:.4f}",
+        af = f"aresample=48000,atrim=0:{n / FPS:.4f},afade=t=out:st={n / FPS - 0.08:.4f}:d=0.08,apad=whole_dur={nv / FPS:.4f}"
+        run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{s['from']:.3f}", "-i", src, *extra_in, "-t", f"{nv / FPS + 0.2:.4f}",
+             "-filter_complex", fc, "-map", prev, "-map", "0:a", "-frames:v", str(nv), "-af", af,
              "-c:v", "libx264", "-preset", "fast", "-crf", "14", "-pix_fmt", "yuv420p", "-c:a", "pcm_s16le", p])
-        parts.append((p, n))
+        parts.append((p, nv))
     out = os.path.join(out_dir, f"{rid}.mp4")
-    tail_v = f"tpad=stop_mode=clone:stop_duration={TAIL}"
-    tail_a = f"apad=pad_dur={TAIL}"
     inputs = []
     for p, _ in parts: inputs += ["-i", p]
     fv, fa = "", ""
@@ -108,8 +112,7 @@ def build(reel, src_dir, out_dir):
         fa += f"{prev_a}[{i}:a]acrossfade=d={d:.4f}:c1=tri:c2=tri{ao};"
         prev_v, prev_a = vo, ao
         total += parts[i][1] - blend
-    fc = fv + fa + f"{prev_v}{tail_v}[vt];{prev_a}{tail_a}[at]"
-    total += round(TAIL * FPS)
+    fc = fv + fa + f"{prev_v}null[vt];{prev_a}anull[at]"
     run(["ffmpeg", "-loglevel", "error", "-y", *inputs, "-filter_complex", fc, "-map", "[vt]", "-map", "[at]",
          "-r", str(FPS), "-c:v", "libx264", "-preset", "fast", "-crf", "14", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", out])
     pr = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v", "-count_frames", "-show_entries", "stream=nb_read_frames", "-of", "csv=p=0", out], capture_output=True, text=True)

@@ -16,8 +16,10 @@ const p = r.props;
 const { items } = layout(p.segments, p.blendFrames);
 const words = remapWords(p.words, items, p.wordFix, p.wordOffset);
 const effects = (p.fx ?? []).map((f) => {
-  const { fx, at, dur, word, wide, ...opts } = f;
+  const { fx, at, dur, word, wide, ticksRel, ...opts } = f as any;
   const s = resolveStart({ at, dur, word } as any, words) / FPS;
+  if (opts.at_strike !== undefined) { opts.at = opts.at_strike; delete opts.at_strike; } // huge-strike: 'at' = quando cade la riga
+  if (Array.isArray(ticksRel)) opts.ticks = ticksRel.map((x: number) => (s + x).toFixed(2)).join("|");
   return { fx, start: +s.toFixed(3), end: +(s + dur).toFixed(3), ...opts };
 });
 mkdirSync("work/ytcn51", { recursive: true });

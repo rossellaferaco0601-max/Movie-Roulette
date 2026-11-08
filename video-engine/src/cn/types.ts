@@ -22,6 +22,8 @@ export type Element = ElementBase &
     | { kind: "bars"; title: string; labels: string[]; values: number[] }
     | { kind: "stairs"; title: string; steps?: number }
     | { kind: "split"; lines: string[]; accent: string }
+    | { kind: "metronome"; title: string; inhale: number; exhale: number; bpm?: number }
+    | { kind: "road3d"; title: string; fromLabel: string; toLabel: string; fromSpeed: number; toSpeed: number; unit?: string }
   );
 
 export type Hook = { lines: string[]; keyword: string; dur: number };

@@ -1,6 +1,7 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig, spring, interpolate, Easing } from "remotion";
 import { gsap } from "gsap";
+import { ThreeCanvas } from "@remotion/three";
 import { BRAND, GFX_H, GFX_TOP, H, W } from "./types";
 import type { Element } from "./types";
 import { useInOut } from "./Elements3D";
@@ -61,8 +62,7 @@ export const splitCamera = (frame: number, start: number, durF: number) => {
   const kout = Math.min(1, Math.max(0, (durF - local) / 9));
   return kin * kout;
 };
-export const SPLIT_CARD_H = 0.3; // frazione dell'altezza
-export const SPLIT_SCALE = 0.7;
+export const SPLIT_CARD_H = 0.22; // frazione dell'altezza: il video scende di altrettanto, a tutta larghezza
 
 export const SplitCard: React.FC<{ el: Extract<Element, { kind: "split" }>; start: number }> = ({ el, start }) => {
   const frame = useCurrentFrame();
@@ -72,10 +72,10 @@ export const SplitCard: React.FC<{ el: Extract<Element, { kind: "split" }>; star
   if (k <= 0) return null;
   const ch = H * SPLIT_CARD_H;
   const local = frame - start;
-  const size = 108;
+  const size = 100;
   return (
     <div style={{ position: "absolute", left: 0, top: ch * (k - 1), width: W, height: ch, background: BRAND.cream, borderBottom: `8px solid ${BRAND.green}`, fontFamily: FONT, overflow: "hidden" }}>
-      <div style={{ position: "absolute", left: 70, top: ch * 0.16, display: "flex", flexDirection: "column", gap: 8 }}>
+      <div style={{ position: "absolute", left: 70, bottom: 34, display: "flex", flexDirection: "column", gap: 4 }}>
         {el.lines.map((ln, j) => {
           const kj = interpolate(local - 5 - j * 4, [0, 7], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
           return (
@@ -94,7 +94,107 @@ export const SplitCard: React.FC<{ el: Extract<Element, { kind: "split" }>; star
           );
         })}
       </div>
-      <div style={{ position: "absolute", right: 60, bottom: 22, fontWeight: 700, fontSize: 30, color: BRAND.green, letterSpacing: 1 }}>Correre Naturale®</div>
+      <div style={{ position: "absolute", right: 60, top: 26, fontWeight: 700, fontSize: 28, color: BRAND.green, letterSpacing: 1 }}>Correre Naturale®</div>
+    </div>
+  );
+};
+
+/* ---------- Metronomo: pendolo che oscilla, 3 battiti inspira / 4 espira (hook visivo del reel ritmica) ---------- */
+export const Metronome: React.FC<{ el: Extract<Element, { kind: "metronome" }>; start: number }> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible, t } = useInOut(start, durF);
+  if (!visible) return null;
+  const bpm = el.bpm ?? 160; // passi al minuto
+  const beat = (t * bpm) / 60;
+  const cycle = el.inhale + el.exhale;
+  const idx = Math.floor(beat) % cycle;
+  const inhaling = idx < el.inhale;
+  const swing = Math.sin(beat * Math.PI) * 26; // gradi
+  const boxW = W - 140, boxH = GFX_H - 10;
+  const cx = 230, pivotY = boxH - 70;
+  return (
+    <div style={{ position: "absolute", left: 70, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
+      <div style={{ position: "absolute", top: 18, left: 0, width: "100%", textAlign: "center", fontWeight: 800, fontSize: 38, textTransform: "uppercase", letterSpacing: 2, color: BRAND.lime }}>{el.title}</div>
+      <svg width={boxW} height={boxH} style={{ position: "absolute", top: 0, left: 0 }}>
+        <path d={`M ${cx - 120} ${pivotY + 20} L ${cx - 70} 90 L ${cx + 70} 90 L ${cx + 120} ${pivotY + 20} Z`} fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" strokeWidth={3} />
+        <g transform={`rotate(${swing} ${cx} ${pivotY})`}>
+          <line x1={cx} y1={pivotY} x2={cx} y2={110} stroke={BRAND.cream} strokeWidth={8} strokeLinecap="round" />
+          <rect x={cx - 34} y={150} width={68} height={34} rx={8} fill={inhaling ? BRAND.az : BRAND.lime} />
+        </g>
+        <circle cx={cx} cy={pivotY} r={16} fill={BRAND.lime} />
+        {Array.from({ length: cycle }).map((_, i) => {
+          const x = 470 + (i % 4) * 110 + (i >= el.inhale ? 0 : 0);
+          const row = i < el.inhale ? 0 : 1;
+          const col = i < el.inhale ? i : i - el.inhale;
+          const on = idx === i;
+          return <circle key={i} cx={470 + col * 100} cy={150 + row * 150} r={on ? 30 : 20} fill={row === 0 ? (on ? BRAND.az : "rgba(184,215,234,0.35)") : on ? BRAND.lime : "rgba(149,255,0,0.3)"} style={on ? { filter: `drop-shadow(0 0 12px ${row === 0 ? BRAND.az : BRAND.lime})` } : undefined} />;
+        })}
+        <text x={470 - 30} y={95} fontFamily={FONT} fontWeight={800} fontSize={30} fill={BRAND.az}>INSPIRA · {el.inhale} PASSI</text>
+        <text x={470 - 30} y={245} fontFamily={FONT} fontWeight={800} fontSize={30} fill={BRAND.lime}>ESPIRA · {el.exhale} PASSI</text>
+        <text x={470 - 30} y={pivotY + 16} fontFamily={FONT} fontWeight={900} fontSize={46} fill={inhaling ? BRAND.az : BRAND.lime}>{inhaling ? "INSPIRA" : "ESPIRA"}</text>
+      </svg>
+    </div>
+  );
+};
+
+/* ---------- Strada 3D in prospettiva che rallenta: da "troppo forte" a "piano" (Three.js) ---------- */
+
+const RoadScene: React.FC<{ offset: number; speedNorm: number }> = ({ offset, speedNorm }) => {
+  const dashes = 14;
+  return (
+    <>
+      <ambientLight intensity={0.9} />
+      <directionalLight position={[2, 5, 3]} intensity={1.4} />
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, -6]}>
+        <planeGeometry args={[6, 40]} />
+        <meshStandardMaterial color="#1b2a14" />
+      </mesh>
+      {[-2.6, 2.6].map((x) => (
+        <mesh key={x} rotation={[-Math.PI / 2, 0, 0]} position={[x, -0.99, -6]}>
+          <planeGeometry args={[0.18, 40]} />
+          <meshBasicMaterial color={BRAND.cream} />
+        </mesh>
+      ))}
+      {Array.from({ length: dashes }).map((_, i) => {
+        const z = -24 + ((i * 2.6 + offset) % (dashes * 2.6));
+        return (
+          <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.98, z]}>
+            <planeGeometry args={[0.22, 1.3]} />
+            <meshBasicMaterial color={speedNorm > 0.5 ? "#FF6B4A" : BRAND.lime} />
+          </mesh>
+        );
+      })}
+      <mesh position={[0, 1.2, -26]}>
+        <planeGeometry args={[60, 6]} />
+        <meshBasicMaterial color={BRAND.az} transparent opacity={0.18} />
+      </mesh>
+    </>
+  );
+};
+
+export const Road3D: React.FC<{ el: Extract<Element, { kind: "road3d" }>; start: number }> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible, t } = useInOut(start, durF);
+  if (!visible) return null;
+  const prog = Math.min(1, Math.max(0, (local - 8) / (durF - 24)));
+  const speedNorm = 1 - gsap.parseEase("power2.inOut")(prog); // 1 = troppo forte, 0 = piano
+  // distanza percorsa: integrale della velocità (veloce all'inizio, lenta alla fine)
+  const dist = t * 6 * (0.25 + 0.75 * (1 - prog * 0.5 * prog));
+  const boxW = W - 140, boxH = GFX_H - 10;
+  const kmh = Math.round(el.fromSpeed + (el.toSpeed - el.fromSpeed) * (1 - speedNorm));
+  const label = speedNorm > 0.5 ? el.fromLabel : el.toLabel;
+  return (
+    <div style={{ position: "absolute", left: 70, width: boxW, top: GFX_TOP, height: boxH, borderRadius: 30, overflow: "hidden", background: "rgba(11,15,10,0.88)", boxShadow: "0 16px 40px rgba(0,0,0,0.4)", fontFamily: FONT, color: BRAND.white, opacity: Math.min(1, s * 1.3) * out, transform: `translateY(${(1 - s) * 40}px)` }}>
+      <div style={{ position: "absolute", top: 18, left: 0, width: "100%", textAlign: "center", fontWeight: 800, fontSize: 38, textTransform: "uppercase", letterSpacing: 2, color: BRAND.lime, zIndex: 2 }}>{el.title}</div>
+      <div style={{ position: "absolute", left: 0, top: 50, width: boxW, height: boxH - 50 }}>
+        <ThreeCanvas width={boxW} height={boxH - 50} camera={{ fov: 55, position: [0, 0.6, 2.5] }} style={{ background: "transparent" }}>
+          <RoadScene offset={dist} speedNorm={speedNorm} />
+        </ThreeCanvas>
+      </div>
+      <div style={{ position: "absolute", left: 40, bottom: 26, fontWeight: 900, fontSize: 60, color: speedNorm > 0.5 ? "#FF6B4A" : BRAND.lime, textShadow: "0 2px 12px #000" }}>{label}</div>
+      <div style={{ position: "absolute", right: 40, bottom: 30, fontWeight: 800, fontSize: 44, color: BRAND.cream, textShadow: "0 2px 12px #000" }}>{kmh} <span style={{ fontSize: 26 }}>{el.unit ?? "bpm"}</span></div>
     </div>
   );
 };

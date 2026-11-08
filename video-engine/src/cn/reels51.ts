@@ -39,7 +39,7 @@ export const REELS: ReelDef[] = [
         { kind: "wave", at: 17.2, word: "fiatone", dur: 6.0, title: "Il fiatone", mode: "calm-to-chaos" },
         { kind: "stairs", at: 24.4, word: "gradi", dur: 2.8, title: "Il corpo si allena per gradi", steps: 5 },
         { kind: "widget", at: 27.7, word: "veloce", dur: 4.8, title: "Se parti troppo veloce", lines: ["il respiro si scompone", "il cervello va in allarme", "e ti ferma"] },
-        { kind: "split", at: 32.8, word: "corsa", dur: 3.9, lines: ["Non è la corsa", "è il respiro"], accent: "respiro" },
+        { kind: "split", at: 32.8, word: "corsa", dur: 4.3, lines: ["Non è la corsa", "è il respiro"], accent: "respiro" },
       ],
       cta: { word: "FIATO", title: "Vuoi correre senza fiatone?" },
     },
@@ -58,13 +58,16 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
     title: "Il primo passo: respira con il naso",
     props: {
       ...base,
-      master: master("R2-naso"),
+      master: master("R2-naso", true),
       segments: [seg(44.82, 74.28)],
+      // motivo visivo del reel 2: meccanica / cambio marce (contagiri 3D, insegna LED, interruttori)
       hook: { lines: ["Il motore in quinta", "appena acceso"], keyword: "quinta", dur: 4.3 },
+      fx: [
+        { fx: "led-sign", at: 14.1, word: "naso", dur: 2.6, wide: true, text: "RESPIRA|DAL NASO", color: LIME, push: 1.0 },
+        { fx: "apple-toggles", at: 17.4, dur: 5.8, pos: "below", text: "Ritmo sostenibile|Ossigeno usato meglio|Controllo su corpo e mente", ticksRel: [0.6, 2.4, 4.2], color: LIME },
+      ],
       elements: [
         { kind: "gauge3d", at: 4.8, dur: 8.3, title: "Le marce giuste", from: 5, to: 1, labels: ["1ª", "2ª", "3ª", "4ª", "5ª"] },
-        { kind: "text3d", at: 14.1, word: "naso", dur: 2.4, word3d: "NASO", sub: "il filtro naturale del respiro" },
-        { kind: "widget", at: 17.1, dur: 6.0, title: "Il naso è il regolatore", lines: ["Ti obbliga a un ritmo sostenibile", "Usa meglio l'ossigeno", "Mantiene il controllo"] },
         { kind: "wave", at: 23.6, dur: 5.5, title: "Respiro dal naso", mode: "calm" },
       ],
       cta: { word: "NASO", title: "Vuoi imparare a respirare bene quando corri?" },
@@ -84,14 +87,18 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
     title: "Chiudi la bocca e trova il tuo ritmo",
     props: {
       ...base,
-      master: master("R3-bocca"),
+      master: master("R3-bocca", true),
       segments: [seg(74.26, 98.56)],
+      // motivo visivo del reel 3: flusso ed energia (punch-in su "chiudi", sfera che respira, grafico di vetro che sale)
       hook: { lines: ["Durante la corsa", "chiudi la bocca"], keyword: "bocca", dur: 3.3 },
+      fx: [
+        { fx: "lean-in", at: 1.3, word: "chiudi", dur: 1.1, zoom: 1.35 },
+        { fx: "liquid-glass-graph", at: 21.0, word: "energia", dur: 3.1, text: "ENERGIA DOPO LA CORSA", from: "40%", to: "100%", color: LIME },
+      ],
       elements: [
         { kind: "checklist", at: 4.2, word: "rallenta", dur: 4.3, items: ["Voglia di aprire la bocca?", "Rallenta o cammina"] },
         { kind: "widget", at: 9.9, dur: 5.3, title: "Respirazione nasale", lines: ["Stimola il diaframma", "Ossigena i tessuti", "Calma il sistema nervoso"] },
         { kind: "sphere3d", at: 15.8, dur: 4.7, phases: BREATH },
-        { kind: "text3d", at: 21.0, word: "energia", dur: 3.0, word3d: "ENERGIA", sub: "dopo la corsa, non meno" },
       ],
       cta: { word: "ENERGIA", title: "Vuoi finire la corsa con più energia di prima?" },
     },
@@ -108,13 +115,16 @@ Commenta ENERGIA e ti mando tutte le info sui percorsi di coaching personalizzat
     title: "Il secondo errore: corri troppo forte",
     props: {
       ...base,
-      master: master("R4-piano"),
+      master: master("R4-piano", true),
       segments: [seg(98.58, 130.74)],
+      // motivo visivo del reel 4: strada e velocità (parola barrata gigante, PIANO dietro la testa, strada 3D che rallenta, barre)
       hook: { lines: ["Il secondo errore:", "corri troppo forte"], keyword: "forte", dur: 4.3 },
+      fx: [
+        { fx: "huge-strike", at: 4.9, word: "spingere", dur: 3.5, wide: true, text: "SPINGERE DI PIÙ", at_strike: 0.7 },
+        { fx: "backdrop-word", at: 9.65, word: "piano", dur: 2.3, wide: true, text: "PIANO", color: LIME, font: "bold" },
+      ],
       elements: [
-        { kind: "checklist", at: 4.9, word: "spingere", dur: 3.5, items: ["Spingere di più"], strike: true },
-        { kind: "text3d", at: 9.65, word: "piano", dur: 2.2, word3d: "PIANO", sub: "è così che si migliora" },
-        { kind: "widget", at: 12.1, dur: 4.9, title: "All'inizio l'obiettivo", lines: ["non è la velocità", "è costruire resistenza", "e gestire l'energia"] },
+        { kind: "road3d", at: 12.1, dur: 4.9, title: "All'inizio l'obiettivo", fromLabel: "TROPPO FORTE", toLabel: "PIANO", fromSpeed: 178, toSpeed: 138, unit: "bpm" },
         { kind: "stat", at: 18.4, word: "20", dur: 2.6, value: "20-30", label: "minuti di corsa" },
         { kind: "checklist", at: 21.4, dur: 5.5, items: ["Respira solo dal naso", "Perdi il controllo? Cammina", "Torna calmo? Riparti"] },
         { kind: "bars", at: 27.2, word: "alternanza", dur: 4.7, title: "Capacità aerobica", labels: ["Sett. 1", "Sett. 2", "Sett. 3", "Sett. 4"], values: [30, 48, 68, 92] },
@@ -134,12 +144,16 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
     title: "Allena il respiro: respirazione nasale controllata",
     props: {
       ...base,
-      master: master("R5-esercizio1"),
+      master: master("R5-esercizio1", true),
       segments: [seg(130.7, 175.82)],
+      // motivo visivo del reel 5: allenamento (apertura a punti, conto alla rovescia 3-2-1, scheda esercizio, sfera)
       hook: { lines: ["Correre bene", "dipende da come respiri"], keyword: "respiri", dur: 4.6 },
+      fx: [
+        { fx: "dot-reveal", at: 0, dur: 1.3, color: LIME },
+        { fx: "countdown-flip", at: 11.1, word: "tre", dur: 2.8, wide: true, from: 3 },
+      ],
       elements: [
-        { kind: "text3d", at: 6.4, word: "allenare", dur: 2.4, word3d: "RESPIRA", sub: "si allena come un muscolo" },
-        { kind: "pill", at: 11.1, word: "tre", dur: 3.0, text: "3 esercizi semplici" },
+        { kind: "kinetic", at: 6.4, word: "allenare", dur: 2.6, words: ["SI ALLENA", "COME UN MUSCOLO"], accentIndex: 1 },
         { kind: "stage", at: 18.75, dur: 14.6, title: "Esercizio 1 · respirazione nasale controllata", keyword: "controllata", steps: ["Bocca chiusa", "Inspira dal naso 3-4 s", "Espira dal naso 4-5 s", "10 respiri con calma"] },
         { kind: "sphere3d", at: 33.6, dur: 7.5, phases: BREATH },
         { kind: "widget", at: 41.7, dur: 3.3, title: "Cosa allena", lines: ["Tolleranza alla CO₂", "Uso migliore dell'ossigeno", "Più resistenza, meno affanno"] },
@@ -159,14 +173,16 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
     title: "Esercizio 2: le pause respiratorie",
     props: {
       ...base,
-      master: master("R6-breathhold"),
+      master: master("R6-breathhold", true),
       segments: [seg(175.8, 205.06)],
+      // motivo visivo del reel 6: controllo e pressione (push-in lento, barre della CO₂ che sale, parole cinetiche)
       hook: { lines: ["Correre in controllo", "senza panico"], keyword: "controllo", dur: 4.0 },
+      fx: [{ fx: "slow-push", at: 0, dur: 3.2, zoom: 1.35, blur: 0.004 }],
       elements: [
         { kind: "stage", at: 4.55, dur: 9.4, title: "Esercizio 2 · le pause respiratorie", keyword: "pause", steps: ["Espira normalmente", "Trattieni qualche secondo", "Riprendi dal naso", "5-10 volte, senza forzare"] },
         { kind: "sphere3d", at: 14.15, dur: 7.4, phases: [{ label: "ESPIRA", sec: 2, scale: 0.25 }, { label: "TRATTIENI", sec: 4, scale: 0.25 }, { label: "INSPIRA", sec: 3, scale: 1 }] },
-        { kind: "widget", at: 21.75, dur: 3.1, title: "Cosa insegna", lines: ["Restare calmo", "anche quando la CO₂ sale"] },
-        { kind: "text3d", at: 25.65, word: "controllo", dur: 2.2, word3d: "CONTROLLO", sub: "senza panico" },
+        { kind: "bars", at: 21.75, dur: 3.1, title: "La CO₂ sale, tu resti calmo", labels: ["0 s", "3 s", "6 s", "9 s"], values: [22, 46, 70, 94] },
+        { kind: "kinetic", at: 25.65, word: "controllo", dur: 1.9, words: ["IN CONTROLLO", "SENZA PANICO"], accentIndex: 0 },
         { kind: "wave", at: 27.65, dur: 1.5, title: "Senza iperventilare", mode: "calm" },
       ],
       cta: { word: "CONTROLLO", title: "Vuoi correre in controllo, senza affanno?" },
@@ -184,16 +200,18 @@ Commenta CONTROLLO e ti mando tutte le info sui percorsi di coaching personalizz
     title: "Esercizio 3: respirazione ritmica",
     props: {
       ...base,
-      master: master("R7-ritmica"),
+      master: master("R7-ritmica", true),
       segments: [seg(205.02, 242.8)],
-      hook: { lines: ["Inspira 3 passi,", "espira 4"], keyword: "3", dur: 3.6 },
+      // motivo visivo del reel 7: ritmo (metronomo come hook, passi 3/4, titolo con punch-in)
+      hook: null,
+      fx: [{ fx: "headline-box", at: 33.5, word: "naturale", dur: 3.5, wide: true, text: "RITMO NATURALE|LEGGERO, MEDITATIVO", zoom: 1.0 }],
       elements: [
+        { kind: "metronome", at: 0, dur: 3.9, title: "Inspira 3 passi · espira 4", inhale: 3, exhale: 4, bpm: 160 },
         { kind: "stage", at: 4.5, word: "camminata", dur: 8.0, title: "Esercizio 3 · respirazione ritmica", keyword: "ritmica", steps: ["Cammina o corri piano, dal naso", "Inspira per 3 passi", "Espira per 4 passi"] },
         { kind: "steps", at: 12.7, dur: 4.4, inhale: 3, exhale: 4 },
         { kind: "widget", at: 17.3, word: "sincronizzerai", dur: 5.0, title: "Risultato", lines: ["Respiro e movimento insieme", "Meno sforzo, più fluidità"] },
         { kind: "wave", at: 22.6, dur: 3.6, title: "Respiro e passo sincronizzati", mode: "calm" },
         { kind: "kinetic", at: 27.4, word: "cambiano", dur: 2.2, words: ["CAMBIANO", "TUTTO"], accentIndex: 1 },
-        { kind: "text3d", at: 33.5, word: "naturale", dur: 1.4, word3d: "RITMO", sub: "naturale, leggero, meditativo" },
       ],
       cta: { word: "RITMO", title: "Vuoi trovare il tuo ritmo naturale di corsa?" },
     },
@@ -210,17 +228,22 @@ Commenta RITMO e ti mando tutte le info sui percorsi di coaching personalizzato.
     title: "La corsa è un dialogo con il tuo corpo",
     props: {
       ...base,
-      master: master("R8-dialogo"),
+      master: master("R8-dialogo", true),
       segments: [seg(242.78, 279.95)],
-      hook: { lines: ["La corsa non è", "un test di resistenza"], keyword: "resistenza", dur: 4.4 },
+      // motivo visivo del reel 8: dialogo / manifesto (notifiche dal corpo come hook, scontrino con le regole, punch-in finale)
+      hook: null,
+      fx: [
+        { fx: "messages", at: 0, dur: 4.4, text: "La corsa non è un test di resistenza|È un dialogo tra te e me|Ascoltami", title: "Il tuo corpo", y: 0.6 },
+        { fx: "scribble", at: 15.22, word: "respirare", dur: 2.3, text: "respira meglio", color: LIME },
+        { fx: "the-bill", at: 18.77, dur: 7.4, wide: true, text: "SE TI MANCA IL FIATO|Non fermarti|Impara a respirare|Impara a rallentare|Ascolta il tuo corpo" },
+        { fx: "lean-in", at: 34.0, word: "lontano", dur: 1.0, zoom: 1.3 },
+      ],
       elements: [
-        { kind: "kinetic", at: 4.2, word: "dialogo", dur: 2.6, words: ["UN DIALOGO", "CON IL CORPO"], accentIndex: 0 },
+        { kind: "kinetic", at: 4.6, word: "dialogo", dur: 2.6, words: ["UN DIALOGO", "CON IL CORPO"], accentIndex: 0 },
         { kind: "widget", at: 8.07, dur: 4.8, title: "Quando impari ad ascoltarlo", lines: ["Smetti di soffrire", "Inizi a goderti ogni passo"] },
         { kind: "checklist", at: 13.7, word: "spingere", dur: 1.4, items: ["Spingere di più"], strike: true },
-        { kind: "text3d", at: 15.22, word: "respirare", dur: 2.3, word3d: "RESPIRA", sub: "meglio, non di più" },
-        { kind: "widget", at: 18.77, dur: 7.4, title: "Se ti manca il fiato", lines: ["Non fermarti", "Impara a respirare", "Impara a rallentare", "Ascolta il tuo corpo"] },
         { kind: "wave", at: 26.37, dur: 3.6, title: "Più lontano, meno sforzo", mode: "calm" },
-        { kind: "text3d", at: 34.0, word: "lontano", dur: 2.0, word3d: "LONTANO", sub: "ed essere sostenibili" },
+        { kind: "kinetic", at: 34.9, dur: 2.4, words: ["LONTANO", "E SOSTENIBILI"], accentIndex: 0 },
       ],
       cta: { word: "LONTANO", title: "Vuoi correre più lontano con meno sforzo?" },
     },
