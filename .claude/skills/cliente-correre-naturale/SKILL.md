@@ -6,6 +6,7 @@ description: Regole, brand e contesto del cliente Correre Naturale (Daniele Vecc
 # Cliente Correre Naturale®
 
 1. Leggi per intero `clienti/correre-naturale/REGOLE-MONTAGGIO.md` (fonte di verità) e `clienti/correre-naturale/CONTESTO.md`.
+   Memoria delle correzioni spiegate: `clienti/correre-naturale/memoria/` (leggi `feedback-*.md` prima di una revisione).
    Brand kit in `clienti/correre-naturale/brand/` (brand.json, loghi, manuale), guida ai reel in `guide/guida-reel.md`.
    Due motori disponibili: `CNReel` (video-engine/src/cn, master FFmpeg + 3D) e `RSReel` (motore ReelStudio del PC, catalogo effetti e schema project.json in `video-engine/reelstudio/CLAUDE.md`; props con `scripts/rs_props.ts`). Esempi reali di project.json in `video-engine/reelstudio/progetti/`.
 2. Per un montaggio nuovo: prima il piano in chat, poi il via. In revisione: tocca SOLO i punti elencati.

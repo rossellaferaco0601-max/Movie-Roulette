@@ -55,6 +55,9 @@ Prima di montare qualsiasi cosa per questo cliente: leggere `REGOLE-MONTAGGIO.md
 - `video-engine/`: il motore ReelStudio gira anche nel cloud come composizione **RSReel** (asset in `public/rs/`: font, 29 suoni, 15 musiche, loghi). `scripts/rs_props.ts` converte un project.json nelle props. Quindi nel cloud si possono usare sia il motore nuovo (`CNReel`, con 3D e simulazioni) sia tutti gli effetti di ReelStudio (kinetic, stageCard, behindTitle, togglePills, glass widget, documentary, orbit, bento, ecc.).
 - Solo in locale/PC (non in git, troppo pesanti): «Nuove reference reel» (zip 69 MB), reference-reel-02/03, Reference Dashboard (596 MB), scontorni, sorgenti video, render.
 
+## Memoria di Claude dal PC
+`memoria/` contiene le 16 note che Claude si era salvato sul PC (feedback di Ross spiegati, problemi tecnici risolti, strumenti). Da leggere insieme alle regole quando si riprende un lavoro vecchio.
+
 ## Dove sta il lavoro (PC Windows di Ross)
 - Progetto: `C:/Users/roxfe/Documents/reel_progetti/correre_naturale/` (`REGOLE-MONTAGGIO.md`, `PROPOSTE-VLOG-evento.md`, `scripts/`, `work/`, `input/evento/`, `output/ytcn38/`, `output/evento/` con `CHECKLIST.md`, `assets/brand`).
 - Renderer: **ReelStudio** (Remotion) in `C:/Users/roxfe/Documents/ReelStudio/` — `progetti/cn-*/project.json`, `clients/correre-naturale/brand.json`, `src/remotion/Reel.tsx`, `effects_cn*.tsx`, `captions.tsx`, render con `scripts/rs_render.js video|still <pid> <out>` (server porta 4399, node in `tools/node/node.exe`).

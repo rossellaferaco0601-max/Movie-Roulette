@@ -1,0 +1,15 @@
+- [Ross e ReelStudio](user-ross-reelstudio.md) — chi è Ross, italiano, dashboard Remotion, gusto «moderno e pulito»
+- [Piano prima in chat](feedback-piano-prima-in-chat.md) — per lavori nuovi: piano + strumenti installati in background, poi il via
+- [Strumenti Y9 v2](project-ytcn38-y9v2-strumenti.md) — scontorno RVM, voce Chatterbox (venv, setuptools<81), manca la clip vera di Daniele
+- [Skill video installati](project-skill-video-installati.md) — 56 skill in ~/.claude/skills, effects con venv, node solo in ReelStudio
+- [Niente emoji nelle animazioni](feedback-niente-emoji-animazioni.md) — mai emoji come icone/animazioni nei reel: SVG o forme brand
+- [Regole reel 5/11](feedback-regole-reel-5-11.md) — niente musica, CTA 7 s animata, sottotitoli leggibili senza sovrapposizioni, suoni discreti, animazioni diverse
+- [Vlog evento workshop](project-vlog-evento-workshop.md) — materiale in input/evento, pipeline master+ReelStudio, decisioni di Ross (consensi, musica, chiusura da IMG_0650)
+- [Volto sempre libero](feedback-volto-libero.md) — mai animazioni/box/titoli sopra il viso di Daniele, in nessun fotogramma
+- [Vlog dinamico (correzioni v1)](feedback-vlog-dinamico.md) — logo CN non IG, niente musica, sticker/polaroid/orari grandi, etichette, qualità girato, parole dei sottotitoli vicine
+- [Clip iPhone HDR → tone mapping](project-iphone-hdr-tonemap.md) — i .mov iPhone sono HLG/Dolby Vision: senza tone mapping il girato esce piatto e scuro («non si vede niente»)
+- [Concat AAC → deriva del master](project-master-concat-aac-drift.md) — concat -c copy di pezzi AAC slitta 25 ms a pezzo: parole mozzate; duration esplicita + audio PCM
+- [Carico macchina](feedback-carico-macchina.md) — un reel alla volta, niente parallelo, RS_CONC/RVM_THREADS bassi
+- [Hook: niente grafiche SVG disegnate](feedback-hook-niente-grafiche-svg.md) — 6/11: gli hook SVG (tachimetro, sagome, badge) bocciati «bruttissimi»; mostrare un fotogramma e aspettare l'ok
+- [Solo i punti richiesti](feedback-solo-punti-richiesti.md) — 6/11: toccare solo ciò che Ross elenca; niente logo nei reel; tagli netti tra inquadrature; box ridotte, titoli sopra la testa
+- [Reference = schema esatto](feedback-reference-schema-esatto.md) — 6/11: misurare la reference e replicarla; logo scontornato; 7/11: brano dato da Ross = solo quello, stacchi sui colpi misurati

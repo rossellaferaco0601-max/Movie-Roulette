@@ -12,6 +12,7 @@ Movie-Roulette/
 │  ├─ correre-naturale/
 │  │  ├─ REGOLE-MONTAGGIO.md  ← FONTE DI VERITÀ: brief, correzioni di Ross/Paola/Oscar, note tecniche
 │  │  ├─ CONTESTO.md          ← persone, brand, stile, stato dei progetti
+│  │  ├─ memoria/             ← note di Claude dal PC: ogni correzione spiegata (perché e come applicarla)
 │  │  ├─ brand/               ← brand.json, 8 loghi, manuale del marchio (PDF + pagine), font Blinker, foto stories
 │  │  ├─ guide/               ← guida ai reel (13 capitoli), guida e prompt dei caroselli, regole caroselli
 │  │  ├─ reference/           ← reel CN già pubblicati, reference reel, analisi del materiale di riferimento
