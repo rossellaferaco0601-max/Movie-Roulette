@@ -261,7 +261,7 @@ Commenta LONTANO e ti mando tutte le info sui percorsi di coaching personalizzat
       hook: null,
       elements: [
         { kind: "title", at: 0, dur: 3.5, lines: ["Dal divano", "alla mezza maratona", "a 60 anni"], accent: "60" },
-        { kind: "kinetic", at: 9.2, word: "miracolato.", dur: 1.15, words: ["MI HA", "MIRACOLATO"], accentIndex: 1 },
+        { kind: "kinetic", at: 9.2, word: "miracolato.", dur: 0.85, words: ["MI HA", "MIRACOLATO"], accentIndex: 1 },
         { kind: "kinetic", at: 12.2, word: "secondo", dur: 2.6, words: ["IL SECONDO", "MIRACOLO"], accentIndex: 1 },
         { kind: "kinetic", at: 30.7, word: "era", dur: 2.9, words: ["PRESO", "IN TEMPO"], accentIndex: 1 },
         { kind: "stat", at: 36.8, word: "tre", dur: 2.4, value: "3 settimane", label: "ed è tornata a correre" },
