@@ -293,3 +293,7 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   `clienti/correre-naturale/consegne/CLASSIFICA-SETTIMANALE.md`.
 - **2026-11-09 (Ross)**: insieme alla classifica settimanale, a ogni consegna va data anche la **trascrizione integrale del video
   YouTube originale** (file in `clienti/correre-naturale/consegne/trascrizioni/`, con i minuti, e riportata in chat).
+- **2026-11-09 (Ross, reel di Daniela)**: audio delle testimonianze da telefono: **solo pulizia leggera del brusio** (`afftdn` nr 10) e voce
+  alzata di poco (circa +3 dB sul girato, `LUFS=-18` in `cn_finish.sh`). Niente compressore, gate o equalizzazione spinta: la v4 era
+  «assordante». Sottotitoli: una pagina non finisce mai su una parolina (regola in `Captions.tsx`). Niente riquadri di testo che ripetono
+  quello che la persona sta dicendo.
