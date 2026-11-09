@@ -1,4 +1,5 @@
 import words from "./words51.json";
+import wordsDaniela from "./wordsDaniela.json";
 import type { CNReelProps } from "./types";
 
 const SRC = "ytcn51/ytcn51_src.mp4";
@@ -246,5 +247,42 @@ Non serve spingere di più, serve respirare meglio. Se ti manca il fiato non fer
 Commenta LONTANO e ti mando tutte le info sui percorsi di coaching personalizzato.
 
 #correrenaturale #corsa #running #ascoltailcorpo #sostenibile`,
+  },
+  {
+    id: "D1-daniela",
+    title: "Dal divano alla mezza maratona a 60 anni (testimonianza di Daniela, workshop 24/10)",
+    props: {
+      ...base,
+      src: "daniela/daniela_src.mp4",
+      words: wordsDaniela as CNReelProps["words"],
+      master: "daniela/D1-daniela.mp4",
+      // testimonianza: poche grafiche, grandi, mai sul volto; stacco sul gruppo che corre in "sono ritornata a correre"
+      segments: [seg(0.0, 10.6), seg(26.25, 31.6), seg(33.72, 48.8), seg(50.45, 53.85), seg(61.2, 68.8), seg(74.25, 76.15), seg(112.05, 116.3), seg(119.0, 126.85)],
+      hook: null,
+      elements: [
+        { kind: "title", at: 0, dur: 3.5, lines: ["Dal divano", "alla mezza maratona", "a 60 anni"], accent: "60" },
+        { kind: "kinetic", at: 9.2, word: "miracolato.", dur: 1.15, words: ["MI HA", "MIRACOLATO"], accentIndex: 1 },
+        { kind: "kinetic", at: 12.2, word: "secondo", dur: 2.6, words: ["IL SECONDO", "MIRACOLO"], accentIndex: 1 },
+        { kind: "widget", at: 20.6, word: "cura", dur: 4.6, title: "La cura del proprio corpo", lines: ["Ho fatto gli esami", "che dovevo fare"] },
+        { kind: "kinetic", at: 30.7, word: "era", dur: 2.9, words: ["PRESO", "IN TEMPO"], accentIndex: 1 },
+        { kind: "stat", at: 36.8, word: "tre", dur: 2.4, value: "3 settimane", label: "ed è tornata a correre" },
+        { kind: "kinetic", at: 41.5, word: "filosofia", dur: 1.25, words: ["UNA FILOSOFIA", "DI VITA"], accentIndex: 1 },
+        { kind: "stat", at: 43.6, word: "60", dur: 3.2, value: "60 anni", label: "la stessa mezza maratona" },
+        { kind: "kinetic", at: 49.0, word: "Daniela", dur: 3.7, words: ["LA DANIELA DI 60", "BATTE", "LA DANIELA DI 50"], accentIndex: 1 },
+        { kind: "stat", at: 53.0, word: "20", dur: 1.8, value: "−20 min", label: "dieci anni dopo" },
+      ],
+      cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
+    },
+    didascalia: `«Ero una che stava sul divano a guardare la televisione e non avevo mai corso.»
+
+Daniela ha iniziato con Correre Naturale® per dimagrire. Poi è arrivato quello che lei chiama il secondo miracolo: grazie alla filosofia della cura del proprio corpo ha fatto gli esami che doveva fare, e ha scoperto in tempo un brutto male. Dopo tre settimane era di nuovo a correre.
+
+E c'è un numero che dice tutto: nella mezza maratona la Daniela di 60 anni batte la Daniela di 50 di oltre 20 minuti.
+
+Non è solo correre: è una filosofia di vita. Tra dieci anni puoi stare meglio di adesso.
+
+Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #testimonianza #corsa #running #mezzamaratona`,
   },
 ];

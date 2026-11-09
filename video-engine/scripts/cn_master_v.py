@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+"""Master 1080x1920 da un sorgente GIÀ verticale (telefono): punch-in alternato centrato sul volto, xfade tra i pezzi,
+B-roll video (solo immagine) sopra un intervallo, coda muta di 0,5 s. Uso: python3 scripts/cn_master_v.py config.json
+config: {id, src, out, faceY, faceX, zooms:[..], blendFrames, segments:[{from,to}], broll:[{file, from, at, dur}]}  (at = secondi del master)
+"""
+import json, os, subprocess, sys
+FPS, W, H, TAIL = 30, 1080, 1920, 0.5
+def run(cmd):
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode: print(r.stderr[-2500:]); raise SystemExit("ffmpeg fallito")
+c = json.load(open(sys.argv[1]))
+tmp = f"public/daniela/tmp_{c['id']}"; os.makedirs(tmp, exist_ok=True)
+parts = []
+for i, s in enumerate(c["segments"]):
+    z = c["zooms"][i % len(c["zooms"])]
+    w, h = W / z, H / z
+    x = min(max(0, c["faceX"] * W - w / 2), W - w); y = min(max(0, c["faceY"] * H - h * 0.27), H - h)
+    n = round((s["to"] - s["from"]) * FPS); last = i == len(c["segments"]) - 1
+    nv = n + (round(TAIL * FPS) if last else 0)
+    vf = f"crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos,fps={FPS},setsar=1,unsharp=5:5:0.6" + (f",tpad=stop_mode=clone:stop_duration={TAIL}" if last else "")
+    af = f"aresample=48000,atrim=0:{n/FPS:.4f},afade=t=in:st=0:d=0.03,afade=t=out:st={n/FPS-0.06:.4f}:d=0.06,apad=whole_dur={nv/FPS:.4f}"
+    p = f"{tmp}/p{i}.mp4"
+    run(["ffmpeg","-loglevel","error","-y","-ss",f"{s['from']:.3f}","-i",c["src"],"-t",f"{nv/FPS+0.2:.4f}","-vf",vf,"-af",af,"-frames:v",str(nv),
+         "-c:v","libx264","-preset","fast","-crf","14","-pix_fmt","yuv420p","-c:a","pcm_s16le",p])
+    parts.append((p, nv))
+d = c["blendFrames"] / FPS
+inputs = []; fv = fa = ""; pv, pa = "[0:v]", "[0:a]"; off = 0.0; total = parts[0][1]
+for p, _ in parts: inputs += ["-i", p]
+for i in range(1, len(parts)):
+    off += parts[i-1][1] / FPS - d
+    fv += f"{pv}[{i}:v]xfade=transition=fade:duration={d:.4f}:offset={off:.4f}[v{i}];"; fa += f"{pa}[{i}:a]acrossfade=d={d:.4f}:c1=tri:c2=tri[a{i}];"
+    pv, pa = f"[v{i}]", f"[a{i}]"; total += parts[i][1] - c["blendFrames"]
+k = len(parts)
+for j, b in enumerate(c.get("broll", [])):
+    inputs += ["-ss", f"{b['from']:.3f}", "-t", f"{b['dur']:.3f}", "-i", b["file"]]
+    fv += (f"[{k+j}:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},format=rgba,fade=t=in:st=0:d=0.2:alpha=1,fade=t=out:st={b['dur']-0.2:.3f}:d=0.2:alpha=1,"
+           f"setpts=PTS-STARTPTS+{b['at']:.3f}/TB[b{j}];{pv}[b{j}]overlay=enable='between(t,{b['at']:.3f},{b['at']+b['dur']:.3f})':eof_action=pass[vb{j}];")
+    pv = f"[vb{j}]"
+fc = fv + fa + f"{pv}null[vo];{pa}anull[ao]"
+run(["ffmpeg","-loglevel","error","-y",*inputs,"-filter_complex",fc,"-map","[vo]","-map","[ao]","-r",str(FPS),"-frames:v",str(total),
+     "-c:v","libx264","-preset","fast","-crf","14","-pix_fmt","yuv420p","-c:a","aac","-b:a","256k","-movflags","+faststart",c["out"]])
+print(c["id"], "frame attesi", total)
