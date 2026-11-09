@@ -17,8 +17,11 @@ for i, s in enumerate(c["segments"]):
     x = min(max(0, c["faceX"] * W - w / 2), W - w); y = min(max(0, c["faceY"] * H - h * 0.27), H - h)
     n = round((s["to"] - s["from"]) * FPS); last = i == len(c["segments"]) - 1
     nv = n + (round(TAIL * FPS) if last else 0)
-    vf = f"crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos,fps={FPS},setsar=1,unsharp=5:5:0.6" + (f",tpad=stop_mode=clone:stop_duration={TAIL}" if last else "")
-    af = f"aresample=48000,atrim=0:{n/FPS:.4f},afade=t=in:st=0:d=0.03,afade=t=out:st={n/FPS-0.06:.4f}:d=0.06,apad=whole_dur={nv/FPS:.4f}"
+    # pulizia del girato da telefono: rumore via, ingrandimento lanczos, nitidezza adattiva, contrasto e colore leggeri
+    vf = f"hqdn3d=2:1.5:4:3,crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos+accurate_rnd,cas=0.55,eq=contrast=1.06:saturation=1.08:gamma=1.02,fps={FPS},setsar=1" + (f",tpad=stop_mode=clone:stop_duration={TAIL}" if last else "")
+    # voce in primo piano: via i bassi della sala, riduzione del brusio (afftdn), presenza 3 kHz, compressione, gate morbido tra le parole
+    VOICE = "highpass=f=120,lowpass=f=9500,afftdn=nr=18:nf=-38:tn=1,equalizer=f=250:t=q:w=1.2:g=-3,equalizer=f=3200:t=q:w=1.4:g=5,agate=threshold=0.02:ratio=2.5:attack=8:release=220,acompressor=threshold=0.09:ratio=3.5:attack=6:release=160:makeup=2.2,"
+    af = f"aresample=48000,{VOICE}atrim=0:{n/FPS:.4f},afade=t=in:st=0:d=0.03,afade=t=out:st={n/FPS-0.06:.4f}:d=0.06,apad=whole_dur={nv/FPS:.4f}"
     p = f"{tmp}/p{i}.mp4"
     run(["ffmpeg","-loglevel","error","-y","-ss",f"{s['from']:.3f}","-i",c["src"],"-t",f"{nv/FPS+0.2:.4f}","-vf",vf,"-af",af,"-frames:v",str(nv),
          "-c:v","libx264","-preset","fast","-crf","14","-pix_fmt","yuv420p","-c:a","pcm_s16le",p])

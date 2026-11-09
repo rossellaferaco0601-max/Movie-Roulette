@@ -2,6 +2,8 @@ import { useCurrentFrame, useVideoConfig, spring } from "remotion";
 import { BRAND, H, W, ZONE } from "./types";
 import type { RWord } from "./timeline";
 
+const STOP = new Set("a ad al alla alle allo ai agli e ed o il lo la i gli le un una uno di del della dei delle dello da dal dalla in nel nella con su sul sulla per tra fra che se non ho ha hai mi ti si ci vi è ma più c' l' all' quest'".split(" "));
+
 /** Pagine stile hormozi: max 3 parole, nuova pagina a pausa > 0.45 s o a fine frase. Ogni pagina resta fino alla successiva. */
 export const paginate = (words: RWord[], maxWords = 3, maxChars = 22) => {
   const pages: { words: RWord[]; start: number; end: number }[] = [];
@@ -15,9 +17,26 @@ export const paginate = (words: RWord[], maxWords = 3, maxChars = 22) => {
     const chars = cur.reduce((a, x) => a + x.text.length + 1, 0) + w.text.length;
     if (prev && (w.start - prev.end > 14 || /[.?!]$/.test(prev.text) || (cur.length > 0 && chars > maxChars))) flush();
     cur.push(w);
-    if (cur.length >= maxWords || /[.?!]$/.test(w.text)) flush();
+    if (/[.?!]$/.test(w.text)) flush();
+    else if (cur.length >= maxWords) {
+      // la pagina non finisce su una parolina: la porto all'inizio della pagina dopo
+      const last = cur[cur.length - 1];
+      if (cur.length > 1 && STOP.has(last.text.toLowerCase().replace(/[^a-zàèéìòù']/g, ""))) { cur.pop(); flush(); cur.push(last); }
+      else flush();
+    }
   });
   flush();
+  // seconda passata: nessuna pagina finisce su una parolina (la sposto in testa alla pagina seguente)
+  for (let i = 0; i < pages.length - 1; i++) {
+    const pg = pages[i], last = pg.words[pg.words.length - 1];
+    if (pg.words.length === 1 && !/[.?!,]$/.test(last.text) && STOP.has(last.text.toLowerCase().replace(/[^a-zàèéìòù']/g, "")) && pages[i + 1].words.length < 4) {
+      pages[i + 1].words.unshift(last); pages[i + 1].start = last.start; pages.splice(i, 1); i--; continue;
+    }
+    if (pg.words.length > 1 && !/[.?!,]$/.test(last.text) && STOP.has(last.text.toLowerCase().replace(/[^a-zàèéìòù']/g, ""))) {
+      pg.words.pop(); pg.end = pg.words[pg.words.length - 1].end;
+      pages[i + 1].words.unshift(last); pages[i + 1].start = last.start;
+    }
+  }
   for (let i = 0; i < pages.length; i++) {
     const next = pages[i + 1];
     pages[i].end = next ? Math.min(next.start, pages[i].end + 24) : pages[i].end + 12;
