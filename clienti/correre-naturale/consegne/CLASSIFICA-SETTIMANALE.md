@@ -90,6 +90,9 @@ Una giornata di workshop a Vicenza (24 ottobre) in un minuto: check-in, lezione 
 **VLOG workshop lungo · Venerdì Conversione · CTA WORKSHOP**
 Stessa giornata raccontata per esteso, dalle 9:30 alle 18:30: tutto quello che Correre Naturale insegna online, provato sul corpo, insieme.
 
-## Conteggio (25 contenuti)
-Scientifico 4 · Educativo 7 · Problem/Solution 5 · Pratico 8 · Conversione 2 (solo i vlog dell'evento).
+**D1 Daniela · Venerdì Conversione · CTA PERCORSO** (v2, 9/11)
+Testimonianza reale dal workshop di Vicenza. Daniela stava sul divano e non aveva mai corso; ha iniziato con Correre Naturale per dimagrire («mi ha miracolato»). Il «secondo miracolo»: grazie alla filosofia della cura del proprio corpo ha fatto gli esami, ha scoperto in tempo un brutto male all'intestino, dopo tre settimane era di nuovo a correre senza chemio. Chiusura sul numero: nella mezza maratona la Daniela di 60 anni batte quella di 50 di oltre 20 minuti. Sorgente: IMG_0650 (telefono di Paola), nessun video YouTube.
+
+## Conteggio (26 contenuti)
+Scientifico 4 · Educativo 7 · Problem/Solution 5 · Pratico 8 · Conversione 3 (due vlog dell'evento + Daniela).
 Buco da coprire: nelle serie YTCN non c'è nessun reel da venerdì (offerta + testimonianza reale); il più vicino è R8 «dialogo», che resta educativo.
