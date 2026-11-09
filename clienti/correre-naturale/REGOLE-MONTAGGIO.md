@@ -288,3 +288,6 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - **Parole dietro la testa** (backdrop-word) non si leggono: usare parole grandi nella zona grafiche. Campo largo su **sfondo brand**
     (gradiente verde scuro), non sul video sfocato. Conto alla rovescia veloce (1,5 s).
   - Frase finale di R8 voluta da Ross: «Correre bene = andare lontano ed essere sostenibili». Niente zoom che spinge le scritte sul volto.
+- **2026-11-09 (Ross)**: a ogni consegna di reel va fatta la **classifica secondo il piano settimanale** (Lun Scientifico, Mar Educativo,
+  Mer Problem/Solution, Gio Pratico, Ven Conversione) con tema in breve e CTA finale, in chat e in
+  `clienti/correre-naturale/consegne/CLASSIFICA-SETTIMANALE.md`.
