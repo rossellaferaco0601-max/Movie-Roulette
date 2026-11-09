@@ -291,3 +291,5 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 - **2026-11-09 (Ross)**: a ogni consegna di reel va fatta la **classifica secondo il piano settimanale** (Lun Scientifico, Mar Educativo,
   Mer Problem/Solution, Gio Pratico, Ven Conversione) con tema in breve e CTA finale, in chat e in
   `clienti/correre-naturale/consegne/CLASSIFICA-SETTIMANALE.md`.
+- **2026-11-09 (Ross)**: insieme alla classifica settimanale, a ogni consegna va data anche la **trascrizione integrale del video
+  YouTube originale** (file in `clienti/correre-naturale/consegne/trascrizioni/`, con i minuti, e riportata in chat).

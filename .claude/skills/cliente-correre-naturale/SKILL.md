@@ -18,4 +18,5 @@ Vincoli non negoziabili: volto di Daniele sempre libero · sottotitoli sempre pr
 ## Dopo ogni consegna
 Classifica i reel appena pronti secondo il piano settimanale di Ross (Lun Scientifico · Mar Educativo · Mer Problem/Solution ·
 Gio Pratico · Ven Conversione), con tema in breve e CTA finale: aggiorna `clienti/correre-naturale/consegne/CLASSIFICA-SETTIMANALE.md`
-e riporta la tabella in chat.
+e riporta la tabella in chat. Consegna anche la **trascrizione integrale del video YouTube originale** (salvata in
+`clienti/correre-naturale/consegne/trascrizioni/`, con i minuti) e riportala in chat.
