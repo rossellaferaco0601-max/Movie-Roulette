@@ -10,7 +10,7 @@ import { ElementView } from "./Elements";
 import { Text3D, Wave, Sphere3D, Gauge3D, ECG, Steps, Bars } from "./Elements3D";
 import { CTA } from "./CTA";
 import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
-import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide } from "./Elements4";
+import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide, Question, NameTag } from "./Elements4";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
 
@@ -38,6 +38,8 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "bigstrike": return <BigStrike el={el} start={start} />;
     case "stack": return <Stack el={el} start={start} />;
     case "guide": return <Guide el={el} start={start} />;
+    case "question": return <Question el={el} start={start} />;
+    case "nametag": return <NameTag el={el} start={start} />;
     default: return <ElementView el={el} start={start} />;
   }
 };

@@ -34,6 +34,8 @@ export type Element = ElementBase &
     | { kind: "stack"; title: string; items: string[]; onAt: number[] }
     | { kind: "guide"; mode: "ritmica" | "nasale" | "hold"; title?: string; titleSec?: number; inhale?: number; exhale?: number; hold?: number; breaths?: number }
     | { kind: "metronome"; title: string; inhale: number; exhale: number; bpm?: number }
+    | { kind: "question"; text: string; label?: string }
+    | { kind: "nametag"; name: string; sub?: string }
     | { kind: "road3d"; title: string; fromLabel: string; toLabel: string; fromSpeed: number; toSpeed: number; unit?: string }
   );
 

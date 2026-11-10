@@ -1,0 +1,77 @@
+{
+ "id": "T1-massimiliano",
+ "src": "public/testimonianze/massimiliano_src.mp4",
+ "out": "public/testimonianze/T1-massimiliano.mp4",
+ "faceX": 0.5,
+ "faceY": 0.24,
+ "zooms": [
+  1.0,
+  1.06
+ ],
+ "blendFrames": 5,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 56.17,
+   "to": 57.58
+  },
+  {
+   "from": 64.27,
+   "to": 68.38
+  },
+  {
+   "from": 73.9,
+   "to": 76.28
+  },
+  {
+   "from": 80.86,
+   "to": 86.33
+  },
+  {
+   "from": 91.52,
+   "to": 101.18
+  },
+  {
+   "from": 15.32,
+   "to": 16.48
+  },
+  {
+   "from": 17.22,
+   "to": 23.83
+  },
+  {
+   "from": 372.47,
+   "to": 375.13
+  },
+  {
+   "from": 283.42,
+   "to": 288.11
+  },
+  {
+   "from": 292.43,
+   "to": 297.43
+  },
+  {
+   "from": 312.54,
+   "to": 317.18
+  },
+  {
+   "from": 321.3,
+   "to": 326.78
+  },
+  {
+   "from": 332.32,
+   "to": 334.43
+  },
+  {
+   "from": 342.73,
+   "to": 347.42
+  },
+  {
+   "from": 348.2,
+   "to": 352.9
+  }
+ ],
+ "broll": []
+}

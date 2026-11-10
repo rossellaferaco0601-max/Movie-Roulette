@@ -10,7 +10,8 @@ def run(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode: print(r.stderr[-2500:]); raise SystemExit("ffmpeg fallito")
 c = json.load(open(sys.argv[1]))
-tmp = f"public/daniela/tmp_{c['id']}"; os.makedirs(tmp, exist_ok=True)
+if "size" in c: W, H = c["size"]  # es. [1920, 1080] per la versione lunga orizzontale
+tmp = os.path.join(os.path.dirname(c["out"]), f"tmp_{c['id']}"); os.makedirs(tmp, exist_ok=True)
 parts = []
 for i, s in enumerate(c["segments"]):
     z = c["zooms"][i % len(c["zooms"])]
@@ -19,10 +20,12 @@ for i, s in enumerate(c["segments"]):
     n = round((s["to"] - s["from"]) * FPS); last = i == len(c["segments"]) - 1
     nv = n + (round(TAIL * FPS) if last else 0)
     # pulizia del girato da telefono: rumore via, ingrandimento lanczos, nitidezza adattiva, contrasto e colore leggeri
-    vf = f"hqdn3d=2:1.5:4:3,crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos+accurate_rnd,cas=0.55,eq=contrast=1.06:saturation=1.08:gamma=1.02,fps={FPS},setsar=1" + (f",tpad=stop_mode=clone:stop_duration={TAIL}" if last else "")
+    LOOK = c.get("vf", "cas=0.55,eq=contrast=1.06:saturation=1.08:gamma=1.02"); DN = "" if "vf" in c else "hqdn3d=2:1.5:4:3,"
+    vf = f"{DN}crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos+accurate_rnd,{LOOK},fps={FPS},setsar=1" + (f",tpad=stop_mode=clone:stop_duration={TAIL}" if last else "")
     # audio delle testimonianze: toccare il meno possibile
     VOICE = "highpass=f=90,afftdn=nr=10:nf=-45:tn=1,"  # solo pulizia leggera del brusio: niente gate, compressore o equalizzazione (Ross 9/11: «assordante»)
     # taglio audio netto a metà dell'incrocio video (micro-incrocio di AX s): l'incrocio lungo si mangiava attacchi e code delle parole
+    VOICE = c.get("voice", VOICE)
     hb = c["blendFrames"] / 2 / FPS
     a0 = 0 if i == 0 else hb - AX / 2
     a1 = n / FPS if last else n / FPS - hb + AX / 2

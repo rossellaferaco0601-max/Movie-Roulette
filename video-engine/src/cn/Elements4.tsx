@@ -363,3 +363,41 @@ export const Guide: React.FC<{ el: Extract<Element, { kind: "guide" }>; start: n
     </AbsoluteFill>
   );
 };
+
+/* ---------- Testimonianze: domanda dell'intervistatore a schermo e cartellino con il nome ---------- */
+export const Question: React.FC<{ el: Extract<Element, { kind: "question" }>; start: number }> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible } = useInOut(start, durF);
+  if (!visible) return null;
+  const size = Math.min(76, Math.floor(1500 / Math.max(14, el.text.length / (el.text.length > 22 ? 2 : 1))));
+  const chars = Math.round(clamp01(local / Math.min(18, durF * 0.4)) * el.text.length);
+  return (
+    <div style={{ position: "absolute", left: PANEL_X, width: PANEL_W, top: GFX_TOP + 20, fontFamily: FONT, opacity: out, transform: `translateY(${(1 - s) * 40}px)` }}>
+      <div style={{ display: "inline-block", background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 34, letterSpacing: 2, textTransform: "uppercase", padding: "8px 22px", borderRadius: "14px 14px 0 0" }}>{el.label ?? "La domanda"}</div>
+      <div style={{ background: BRAND.cream, color: BRAND.ink, borderRadius: "0 22px 22px 22px", padding: "30px 38px", fontWeight: 800, fontSize: size, lineHeight: 1.12, boxShadow: "0 14px 34px rgba(0,0,0,0.4)", minHeight: size * 1.12 }}>
+        {el.text.slice(0, chars)}
+        <span style={{ opacity: chars < el.text.length ? 1 : 0, color: BRAND.green }}>|</span>
+      </div>
+    </div>
+  );
+};
+
+export const NameTag: React.FC<{ el: Extract<Element, { kind: "nametag" }>; start: number }> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible } = useInOut(start, durF);
+  if (!visible) return null;
+  const k = easeOut(clamp01((local - 6) / 10));
+  return (
+    <div style={{ position: "absolute", left: PANEL_X, top: GFX_TOP + 60, fontFamily: FONT, opacity: out }}>
+      <div style={{ display: "flex", alignItems: "stretch", transform: `translateX(${(1 - s) * -120}px)`, opacity: s }}>
+        <div style={{ width: 14, background: BRAND.lime, borderRadius: 7 }} />
+        <div style={{ marginLeft: 18 }}>
+          <div style={{ background: "rgba(11,15,10,0.9)", color: BRAND.white, fontWeight: 900, fontSize: 72, padding: "10px 30px", borderRadius: 14, width: "fit-content" }}>{el.name}</div>
+          {el.sub ? <div style={{ marginTop: 10, background: BRAND.cream, color: BRAND.green, fontWeight: 800, fontSize: 40, padding: "8px 24px", borderRadius: 12, width: "fit-content", opacity: k, transform: `translateY(${(1 - k) * -16}px)` }}>{el.sub}</div> : null}
+        </div>
+      </div>
+    </div>
+  );
+};

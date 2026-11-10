@@ -1,5 +1,6 @@
 import words from "./words51.json";
 import wordsDaniela from "./wordsDaniela.json";
+import wordsMassimiliano from "./wordsMassimiliano.json";
 import type { CNReelProps } from "./types";
 
 const SRC = "ytcn51/ytcn51_src.mp4";
@@ -284,5 +285,49 @@ Non è solo correre: è una filosofia di vita. Tra dieci anni puoi stare meglio 
 Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
 
 #correrenaturale #testimonianza #corsa #running #mezzamaratona`,
+  },
+  {
+    id: "T1-massimiliano",
+    title: "Una vita di infortuni, poi la svolta a 54 anni (testimonianza di Massimiliano)",
+    props: {
+      ...base,
+      src: "testimonianze/massimiliano_src.mp4",
+      words: wordsMassimiliano as CNReelProps["words"],
+      master: "testimonianze/T1-massimiliano.mp4",
+      // testimonianza da intervista: tagli misurati sull'audio, domande dell'intervistatore a schermo (fuori microfono nel girato)
+      segments: [seg(56.17, 57.58), seg(64.27, 68.38), seg(73.9, 76.28), seg(80.86, 86.33), seg(91.52, 101.18), seg(15.32, 16.48), seg(17.22, 23.83), seg(372.47, 375.13), seg(283.42, 288.11), seg(292.43, 297.43), seg(312.54, 317.18), seg(321.3, 326.78), seg(332.32, 334.43), seg(342.73, 347.42), seg(348.2, 352.9)],
+      hook: null,
+      elements: [
+        { kind: "title", at: 0, dur: 3.0, lines: ["Una vita di infortuni", "poi la svolta", "a 54 anni"], accent: "54" },
+        { kind: "nametag", at: 3.2, dur: 2.4, name: "Massimiliano", sub: "54 anni · Pavia" },
+        { kind: "kinetic", at: 6.2, word: "fatto", dur: 1.3, words: ["HO FATTO IL", "FAI DA TE"], accentIndex: 1 },
+        { kind: "kinetic", at: 10.5, word: "fatto", dur: 2.1, words: ["MI SONO FATTO MALE", "TANTE VOLTE"], accentIndex: 1 },
+        { kind: "kinetic", at: 13.2, word: "riprendevo", dur: 2.6, words: ["RIPRENDEVO", "MOLLAVO"], accentIndex: 1 },
+        { kind: "kinetic", at: 19.9, word: "consapevolezza", dur: 1.6, words: ["AVEVO BISOGNO DI", "UNA GUIDA"], accentIndex: 1 },
+        { kind: "question", at: 22.15, dur: 1.5, text: "Cosa è cambiato?" },
+        { kind: "stack", at: 23.9, dur: 5.55, title: "È cambiato tutto", items: ["Il fisico", "La mente", "L'energia", "La disciplina"], onAt: [0.1, 1.2, 2.75, 4.5] },
+        { kind: "kinetic", at: 30.8, word: "ben", dur: 1.25, words: ["BEN OLTRE", "LE ASPETTATIVE"], accentIndex: 0 },
+        { kind: "question", at: 32.15, dur: 2.3, text: "Cosa diresti a chi è indeciso?" },
+        { kind: "stat", at: 35.5, word: "54", dur: 1.5, value: "54 anni", label: "non aspettare quanto me" },
+        { kind: "kinetic", at: 38.0, word: "scelta", dur: 2.6, words: ["LA SCELTA PIÙ", "IMPORTANTE"], accentIndex: 1 },
+        { kind: "kinetic", at: 41.65, word: "sentirti", dur: 3.2, words: ["SENTIRTI MEGLIO", "STARE MEGLIO"], accentIndex: 1 },
+        { kind: "stack", at: 46.33, dur: 4.6, title: "Lo trasmetti", items: ["in casa", "alla tua famiglia", "ai tuoi figli"], onAt: [1.4, 2.45, 4.1] },
+        { kind: "kinetic", at: 52.33, word: "non", dur: 1.0, words: ["NON HA", "PREZZO"], accentIndex: 1 },
+        { kind: "kinetic", at: 56.93, word: "prima", dur: 1.1, words: ["IL PRIMA", "POSSIBILE"], accentIndex: 1 },
+        { kind: "kinetic", at: 59.93, word: "svolta", dur: 2.3, words: ["TI SVOLTA", "LA VITA"], accentIndex: 1 },
+      ],
+      cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
+    },
+    didascalia: `«Una vita di infortuni.»
+
+Massimiliano correva anche dieci volte a settimana, con il fai da te. Si è fatto male tante volte, ha ripreso e mollato per anni, finché ha capito di avere bisogno di una guida.
+
+Con il percorso Correre Naturale® è cambiato tutto: il fisico, la mente, l'energia e soprattutto la disciplina. «È andato ben oltre le mie aspettative.»
+
+Il suo consiglio a chi è indeciso: non aspettare i 54 anni. Stare meglio lo trasmetti in casa, alla tua famiglia, ai tuoi figli. E questo non ha prezzo.
+
+Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #testimonianza #corsa #running #infortuni`,
   },
 ];
