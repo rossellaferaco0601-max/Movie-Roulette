@@ -3,10 +3,9 @@
  "src": "public/testimonianze/massimiliano_src.mp4",
  "out": "public/testimonianze/T1-massimiliano.mp4",
  "faceX": 0.5,
- "faceY": 0.24,
+ "faceY": 0.0,
  "zooms": [
-  1.0,
-  1.06
+  1.0
  ],
  "blendFrames": 5,
  "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
@@ -73,5 +72,9 @@
    "to": 352.9
   }
  ],
- "broll": []
+ "broll": [],
+ "srcs": [
+  "public/testimonianze/massimiliano_srcA.mp4",
+  "public/testimonianze/massimiliano_srcB.mp4"
+ ]
 }
