@@ -20,3 +20,8 @@ Classifica i reel appena pronti secondo il piano settimanale di Ross (Lun Scient
 Gio Pratico · Ven Conversione), con tema in breve e CTA finale: aggiorna `clienti/correre-naturale/consegne/CLASSIFICA-SETTIMANALE.md`
 e riporta la tabella in chat. Consegna anche la **trascrizione integrale del video YouTube originale** (salvata in
 `clienti/correre-naturale/consegne/trascrizioni/`, con i minuti) e riportala in chat.
+
+## Regola fissa: il volto non si copre MAI (Ross, 10/11/2026)
+Nessuna grafica, titolo, domanda o sottotitolo può stare sul volto, nemmeno per un fotogramma e nemmeno quando la persona abbassa la testa.
+Prima di ogni render: `../.claude/skills/effects/.venv/bin/python scripts/cn_facecheck.py <master> 0.44` (da `video-engine/`). Se fallisce, si allarga
+l'inquadratura (ritaglio largo + fascia brand in basso) o si spostano le grafiche; non si consegna.

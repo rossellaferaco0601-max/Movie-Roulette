@@ -307,3 +307,9 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   Solo il **nome**, mai il cognome (anche se lo dice a voce: quel pezzo non si usa). Le domande dell'intervistatore sono fuori microfono:
   si tagliano dall'audio e si mettono **a schermo** (elemento `question`; nel reel al massimo 2-3, nella lunga come titoli di capitolo).
   Per leggerle si alza l'audio (`dynaudnorm`) e si ritrascrive. Il girato è Full HD orizzontale: nel verticale zoom al minimo (1,0 / 1,06).
+- **2026-11-10 (Ross, REGOLA FISSA): «le grafiche non devono coprire il volto, mai».** Vale per ogni reel e ogni versione lunga, anche per un solo
+  fotogramma e anche quando la persona abbassa la testa. Prima di ogni render si misura il mento su tutto il master con
+  `scripts/cn_facecheck.py master.mp4` (YuNet): se il mento supera il bordo alto delle grafiche (0,44) **non si renderizza**: si allarga
+  l'inquadratura o si spostano le grafiche. Nei girati orizzontali stretti (interviste Full HD) il ritaglio verticale pieno fa il viso troppo
+  grande: si usa il ritaglio largo (760x1020 → 1080x1449 in alto) con **fascia verde brand sfumata in basso** per i sottotitoli
+  (`fascia.png`, due sorgenti A/B al posto del punch-in, chiave `srcs` in `cn_master_v.py`).

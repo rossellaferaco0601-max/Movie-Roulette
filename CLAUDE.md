@@ -25,6 +25,7 @@ scripts/cn_finish.sh R1-fiatone v7            # render + loudness + copertina + 
 scripts/cn_queue.sh v7 R2-naso R3-bocca       # coda: master (se manca) → effetti skill (cn_fx) → finitura, un reel alla volta
 npx tsx scripts/cn_fx.ts R1-fiatone --still   # fotogrammi di controllo degli effetti della skill `effects` sul master
 npx tsx scripts/validate-reels.ts             # sovrapposizioni e ancore di hook/elementi/effetti
+../.claude/skills/effects/.venv/bin/python scripts/cn_facecheck.py public/x/master.mp4 0.44   # il volto non si copre MAI: mento sotto il bordo grafiche
 scripts/rs_render.sh progetto.json ytcn51/ytcn51_src.mp4 out/x.mp4   # render di un project.json ReelStudio
 python3 scripts/transcribe.py public/clip.mp4 --lang it --out src/captions/clip.json
 scripts/ffmpeg-presets.sh                     # elenco preset FFmpeg

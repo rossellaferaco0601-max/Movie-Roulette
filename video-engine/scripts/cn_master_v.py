@@ -34,7 +34,7 @@ for i, s in enumerate(c["segments"]):
     # ripresa: un pezzo già completo non si rifà
     pr = subprocess.run(["ffprobe","-v","error","-select_streams","v","-show_entries","stream=nb_frames","-of","csv=p=0",p], capture_output=True, text=True) if os.path.exists(p) else None
     if pr and pr.stdout.strip() == str(nv): parts.append((p, nv)); continue
-    run(["ffmpeg","-loglevel","error","-y","-ss",f"{s['from']:.3f}","-i",c["src"],"-t",f"{nv/FPS+0.2:.4f}","-vf",vf,"-af",af,"-frames:v",str(nv),
+    run(["ffmpeg","-loglevel","error","-y","-ss",f"{s['from']:.3f}","-i",(c["srcs"][i % len(c["srcs"])] if "srcs" in c else c["src"]),"-t",f"{nv/FPS+0.2:.4f}","-vf",vf,"-af",af,"-frames:v",str(nv),
          "-c:v","libx264","-preset","fast","-crf","14","-pix_fmt","yuv420p","-c:a","pcm_s16le",p])
     parts.append((p, nv))
 d = c["blendFrames"] / FPS
