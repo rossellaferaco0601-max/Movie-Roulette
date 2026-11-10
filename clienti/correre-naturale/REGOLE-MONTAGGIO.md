@@ -297,3 +297,8 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   alzata di poco (circa +3 dB sul girato, `LUFS=-18` in `cn_finish.sh`). Niente compressore, gate o equalizzazione spinta: la v4 era
   «assordante». Sottotitoli: una pagina non finisce mai su una parolina (regola in `Captions.tsx`). Niente riquadri di testo che ripetono
   quello che la persona sta dicendo.
+- **2026-11-10 (Ross, reel di Daniela: «ci sono ancora dei tagli fatti male»)**: nei girati da telefono i tempi di Whisper non bastano
+  per tagliare. Ogni punto di taglio va **misurato sull'audio** (spettrogramma + prova di ascolto a passi di 0,05 s con il riconoscitore)
+  e messo in una pausa vera: mai un resto di parola (il «ché» di «perché», un «e…» trascinato) e mai un attacco mangiato.
+  L'audio si taglia **netto a metà dell'incrocio video** (micro-incrocio di 0,04 s, `AX` in `cn_master_v.py`): l'incrocio audio lungo
+  5 fotogrammi sfumava attacchi e code. Se una frase parte attaccata alla precedente, si prende la frase intera dalla pausa prima.

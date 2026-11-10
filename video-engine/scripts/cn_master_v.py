@@ -5,6 +5,7 @@ config: {id, src, out, faceY, faceX, zooms:[..], blendFrames, segments:[{from,to
 """
 import json, os, subprocess, sys
 FPS, W, H, TAIL = 30, 1080, 1920, 0.5
+AX = 0.04  # micro-incrocio dell'audio ai tagli
 def run(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode: print(r.stderr[-2500:]); raise SystemExit("ffmpeg fallito")
@@ -21,7 +22,11 @@ for i, s in enumerate(c["segments"]):
     vf = f"hqdn3d=2:1.5:4:3,crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos+accurate_rnd,cas=0.55,eq=contrast=1.06:saturation=1.08:gamma=1.02,fps={FPS},setsar=1" + (f",tpad=stop_mode=clone:stop_duration={TAIL}" if last else "")
     # audio delle testimonianze: toccare il meno possibile
     VOICE = "highpass=f=90,afftdn=nr=10:nf=-45:tn=1,"  # solo pulizia leggera del brusio: niente gate, compressore o equalizzazione (Ross 9/11: «assordante»)
-    af = f"aresample=48000,{VOICE}atrim=0:{n/FPS:.4f},afade=t=in:st=0:d=0.03,afade=t=out:st={n/FPS-0.06:.4f}:d=0.06,apad=whole_dur={nv/FPS:.4f}"
+    # taglio audio netto a metà dell'incrocio video (micro-incrocio di AX s): l'incrocio lungo si mangiava attacchi e code delle parole
+    hb = c["blendFrames"] / 2 / FPS
+    a0 = 0 if i == 0 else hb - AX / 2
+    a1 = n / FPS if last else n / FPS - hb + AX / 2
+    af = f"aresample=48000,{VOICE}atrim={a0:.4f}:{a1:.4f},asetpts=PTS-STARTPTS" + (f",afade=t=out:st={a1-a0-0.08:.4f}:d=0.08,apad=whole_dur={a1-a0+TAIL:.4f}" if last else "")
     p = f"{tmp}/p{i}.mp4"
     run(["ffmpeg","-loglevel","error","-y","-ss",f"{s['from']:.3f}","-i",c["src"],"-t",f"{nv/FPS+0.2:.4f}","-vf",vf,"-af",af,"-frames:v",str(nv),
          "-c:v","libx264","-preset","fast","-crf","14","-pix_fmt","yuv420p","-c:a","pcm_s16le",p])
@@ -31,7 +36,7 @@ inputs = []; fv = fa = ""; pv, pa = "[0:v]", "[0:a]"; off = 0.0; total = parts[0
 for p, _ in parts: inputs += ["-i", p]
 for i in range(1, len(parts)):
     off += parts[i-1][1] / FPS - d
-    fv += f"{pv}[{i}:v]xfade=transition=fade:duration={d:.4f}:offset={off:.4f}[v{i}];"; fa += f"{pa}[{i}:a]acrossfade=d={d:.4f}:c1=tri:c2=tri[a{i}];"
+    fv += f"{pv}[{i}:v]xfade=transition=fade:duration={d:.4f}:offset={off:.4f}[v{i}];"; fa += f"{pa}[{i}:a]acrossfade=d={AX}:c1=tri:c2=tri[a{i}];"
     pv, pa = f"[v{i}]", f"[a{i}]"; total += parts[i][1] - c["blendFrames"]
 k = len(parts)
 for j, b in enumerate(c.get("broll", [])):
