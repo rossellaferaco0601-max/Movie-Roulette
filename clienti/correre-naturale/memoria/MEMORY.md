@@ -6,6 +6,7 @@
 - [Regole reel 5/11](feedback-regole-reel-5-11.md) — niente musica, CTA 7 s animata, sottotitoli leggibili senza sovrapposizioni, suoni discreti, animazioni diverse
 - [Vlog evento workshop](project-vlog-evento-workshop.md) — materiale in input/evento, pipeline master+ReelStudio, decisioni di Ross (consensi, musica, chiusura da IMG_0650)
 - [Volto sempre libero](feedback-volto-libero.md) — mai animazioni/box/titoli sopra il viso di Daniele, in nessun fotogramma
+- [Formato schede](feedback-formato-schede.md) — 10/11: «le schede» = modello classifica settimanale: serie, riga «ID nome · Giorno Categoria · CTA PAROLA», un paragrafo; mai elenchi
 - [Vlog dinamico (correzioni v1)](feedback-vlog-dinamico.md) — logo CN non IG, niente musica, sticker/polaroid/orari grandi, etichette, qualità girato, parole dei sottotitoli vicine
 - [Clip iPhone HDR → tone mapping](project-iphone-hdr-tonemap.md) — i .mov iPhone sono HLG/Dolby Vision: senza tone mapping il girato esce piatto e scuro («non si vede niente»)
 - [Concat AAC → deriva del master](project-master-concat-aac-drift.md) — concat -c copy di pezzi AAC slitta 25 ms a pezzo: parole mozzate; duration esplicita + audio PCM

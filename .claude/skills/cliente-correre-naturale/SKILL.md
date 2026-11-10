@@ -21,7 +21,13 @@ Gio Pratico · Ven Conversione), con tema in breve e CTA finale: aggiorna `clien
 e riporta la tabella in chat. Consegna anche la **trascrizione integrale del video YouTube originale** (salvata in
 `clienti/correre-naturale/consegne/trascrizioni/`, con i minuti) e riportala in chat.
 
+## Formato delle schede (Ross, 10/11/2026): sempre questo, quando chiede «le schede»
+Un titolo `##` per serie, poi per ogni reel la riga in grassetto **«ID nome · Giorno Categoria · CTA PAROLA»** e sotto un solo paragrafo
+con il tema (per Problem/Solution e testimonianze: «Il problema: … La risposta: … Chiusura: …»). Mai schede a elenco puntato.
+Esempio e dettagli: `clienti/correre-naturale/memoria/feedback-formato-schede.md`; modello vivo: `consegne/CLASSIFICA-SETTIMANALE.md`.
+
 ## Regola fissa: il volto non si copre MAI (Ross, 10/11/2026)
 Nessuna grafica, titolo, domanda o sottotitolo può stare sul volto, nemmeno per un fotogramma e nemmeno quando la persona abbassa la testa.
 Prima di ogni render: `../.claude/skills/effects/.venv/bin/python scripts/cn_facecheck.py <master> 0.44` (da `video-engine/`). Se fallisce, si allarga
-l'inquadratura (ritaglio largo + fascia brand in basso) o si spostano le grafiche; non si consegna.
+si abbassano e si rimpiccioliscono le grafiche (`gfxShift`/`gfxScale`, sempre sopra 0,80 per la zona sicura di Instagram); la fascia verde in
+basso è bocciata (10/11). Non si consegna finché il controllo non passa.
