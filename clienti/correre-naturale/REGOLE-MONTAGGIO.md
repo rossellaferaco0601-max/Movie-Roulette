@@ -318,3 +318,6 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   (niente sotto 0,80) e mai sul volto: il controllo del mento si fa **grafica per grafica** sulla serie `*_mento.json` di `cn_facecheck.py`.
 - **2026-11-10 (Ross, versione lunga)**: «transizioni poco fluide, continui scatti» = troppi tagli con cambio di zoom. Nella lunga si tagliano
   **solo le pause oltre 1,6 s**, **una sola inquadratura per capitolo** (lo zoom cambia solo al cambio di domanda) e dissolvenza di 8 fotogrammi.
+- **2026-11-10 (Ross)**: le **schede** si scrivono sempre con il modello della classifica settimanale: titolo della serie, poi per ogni reel la riga
+  in grassetto **«ID nome · Giorno Categoria · CTA PAROLA»** e sotto un paragrafo con il tema (Il problema / La risposta / Chiusura per i
+  Problem/Solution e le testimonianze). Niente schede a elenco puntato.

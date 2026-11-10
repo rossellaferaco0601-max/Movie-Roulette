@@ -95,11 +95,11 @@ Testimonianza reale dal workshop di Vicenza. Daniela stava sul divano e non avev
 
 ## Testimonianze (cartella Drive «Testimonianze CN»)
 
-**T1 Massimiliano, reel · Venerdì Conversione · CTA PERCORSO** (v1, 10/11)
-Testimonianza da intervista. Massimiliano, 54 anni, di Pavia: «una vita di infortuni». Correva anche dieci volte a settimana con il fai da te, si è fatto male tante volte, per anni ha ripreso e mollato, finché ha capito di avere bisogno di una guida. Con il percorso è cambiato tutto (fisico, mente, energia e soprattutto disciplina), «ben oltre le mie aspettative». Il consiglio a chi è indeciso: non aspettare i 54 anni, perché stare meglio lo trasmetti in casa, alla famiglia, ai figli, e «questo non ha prezzo». Domande dell'intervistatore a schermo. Sorgente: C3498-009.
+**T1 Massimiliano reel · Venerdì Conversione · CTA PERCORSO** (v3, 10/11)
+Il problema: una vita di infortuni. Massimiliano correva anche dieci volte a settimana con il fai da te, ha sempre tirato al limite il suo fisico e si è fatto male tante volte; per anni ha ripreso e mollato. La svolta: capire di avere bisogno di una guida. Con il percorso è cambiato tutto, il fisico, la mente, l'energia e soprattutto la disciplina, «ben oltre le mie aspettative». Chiusura: non aspettare i 54 anni, perché stare meglio lo trasmetti in casa, alla famiglia, ai figli, e questo non ha prezzo.
 
-**T1 Massimiliano, versione lunga (5 min, orizzontale) · Venerdì Conversione · chiusura «Vuoi scrivere anche tu la tua storia?»**
-L'intervista completa in nove domande usate come titoli di capitolo: quanto è migliorato, gli obiettivi (diventare disciplinato), gli infortuni e l'ego dei vent'anni, il beneficio più grande (energia e costanza), la disciplina negli altri ambiti della vita (le priorità imprescindibili), le resistenze (è arrivato a Bologna già convinto), il consiglio a chi tentenna, la completezza del percorso (piedi, mobilità, audio experience, incontri settimanali, masterclass) e la parola finale: «Completezza».
+**T1 Massimiliano versione lunga · Venerdì Conversione · CTA PERCORSO** (v2, 10/11)
+L'intervista completa in nove domande (5:25, orizzontale, per YouTube e il sito). Dagli anni di fai da te e dall'ego dei vent'anni alla decisione di farsi guidare; il beneficio più grande, più energia e la costanza che gli era sempre mancata; la disciplina che entra nella vita di tutti i giorni, con priorità imprescindibili; nessuna resistenza, solo il coraggio di partire sapendo che non sarebbe tornato indietro. Chiusura: il consiglio di non aspettare e la parola che riassume il percorso, «Completezza».
 
 ## Conteggio (28 contenuti)
 Scientifico 4 · Educativo 7 · Problem/Solution 5 · Pratico 8 · Conversione 5 (due vlog dell'evento, Daniela, Massimiliano reel e lunga).
