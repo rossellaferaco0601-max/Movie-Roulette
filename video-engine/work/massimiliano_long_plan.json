@@ -1,11 +1,91 @@
-{"blendFrames": 4, "chapters": [
- {"q": "Quanto sei migliorato rispetto a prima del percorso?", "ranges": [[15.38, 23.8]]},
- {"q": "Quali erano i tuoi obiettivi prima di iniziare?", "ranges": [[29.42, 45.7]]},
- {"q": "Avevi avuto infortuni o stop forzati?", "ranges": [[54.58, 118.15]]},
- {"q": "Qual è il miglior beneficio che hai ottenuto?", "ranges": [[126.05, 127.25], [132.2, 177.85]]},
- {"q": "La disciplina ha migliorato anche altri ambiti della tua vita?", "ranges": [[188.12, 223.9]]},
- {"q": "Avevi delle resistenze prima di cominciare?", "ranges": [[240.03, 273.95]]},
- {"q": "Cosa diresti a chi è indeciso?", "ranges": [[283.48, 352.92]]},
- {"q": "Qualcosa da aggiungere sul percorso?", "ranges": [[366.4, 411.95]]},
- {"q": "La tua esperienza in una sola parola?", "ranges": [[423.5, 424.9]]}
-]}
+{
+ "blendFrames": 8,
+ "chapters": [
+  {
+   "q": "Quanto sei migliorato rispetto a prima del percorso?",
+   "ranges": [
+    [
+     15.38,
+     23.8
+    ]
+   ]
+  },
+  {
+   "q": "Quali erano i tuoi obiettivi prima di iniziare?",
+   "ranges": [
+    [
+     29.42,
+     45.7
+    ]
+   ]
+  },
+  {
+   "q": "Avevi avuto infortuni o stop forzati?",
+   "ranges": [
+    [
+     54.58,
+     118.15
+    ]
+   ]
+  },
+  {
+   "q": "Qual è il miglior beneficio che hai ottenuto?",
+   "ranges": [
+    [
+     126.05,
+     127.25
+    ],
+    [
+     132.2,
+     177.85
+    ]
+   ]
+  },
+  {
+   "q": "La disciplina ha migliorato anche altri ambiti della tua vita?",
+   "ranges": [
+    [
+     188.12,
+     223.9
+    ]
+   ]
+  },
+  {
+   "q": "Avevi delle resistenze prima di cominciare?",
+   "ranges": [
+    [
+     240.03,
+     273.95
+    ]
+   ]
+  },
+  {
+   "q": "Cosa diresti a chi è indeciso?",
+   "ranges": [
+    [
+     283.48,
+     352.92
+    ]
+   ]
+  },
+  {
+   "q": "Qualcosa da aggiungere sul percorso?",
+   "ranges": [
+    [
+     366.4,
+     411.95
+    ]
+   ]
+  },
+  {
+   "q": "La tua esperienza in una sola parola?",
+   "ranges": [
+    [
+     423.5,
+     424.9
+    ]
+   ]
+  }
+ ],
+ "gap": 1.6
+}

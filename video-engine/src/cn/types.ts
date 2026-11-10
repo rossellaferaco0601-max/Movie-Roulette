@@ -66,6 +66,10 @@ export type CNReelProps = {
   wordOffset: number;
   /** push-in lento della camera durante l'hook (es. 1.12), poi rientro morbido */
   hookZoom?: number;
+  /** volto grande (interviste strette): grafiche più in basso (px) e più piccole, sottotitoli più in basso (px), per non coprire mai il volto */
+  gfxShift?: number;
+  gfxScale?: number;
+  capShift?: number;
 };
 
 export const BRAND = {

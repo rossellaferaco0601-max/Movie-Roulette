@@ -14,7 +14,7 @@ if "size" in c: W, H = c["size"]  # es. [1920, 1080] per la versione lunga orizz
 tmp = os.path.join(os.path.dirname(c["out"]), f"tmp_{c['id']}"); os.makedirs(tmp, exist_ok=True)
 parts = []
 for i, s in enumerate(c["segments"]):
-    z = c["zooms"][i % len(c["zooms"])]
+    z = s.get("zoom", c["zooms"][i % len(c["zooms"])])
     w, h = W / z, H / z
     x = min(max(0, c["faceX"] * W - w / 2), W - w); y = min(max(0, c["faceY"] * H - h * 0.27), H - h)
     n = round((s["to"] - s["from"]) * FPS); last = i == len(c["segments"]) - 1

@@ -10,6 +10,7 @@ model = os.path.join(os.path.dirname(__file__), "..", "..", ".claude", "skills",
 cap = cv2.VideoCapture(path); W, H = int(cap.get(3)), int(cap.get(4))
 det = cv2.FaceDetectorYN.create(model, "", (W // 2, H // 2), 0.6)
 worst, worst_t, n, i, bad = 0.0, 0.0, 0, 0, 0
+serie = []
 while True:
     ok, fr = cap.read()
     if not ok: break
@@ -17,9 +18,10 @@ while True:
         _, faces = det.detect(cv2.resize(fr, (W // 2, H // 2)))
         if faces is not None and len(faces):
             f = max(faces, key=lambda r: r[2] * r[3])  # il volto più grande
-            chin = (f[1] + f[3]) * 2 / H; n += 1
+            chin = (f[1] + f[3]) * 2 / H; n += 1; serie.append([round(i / 30, 2), round(float(chin), 4)])
             if chin > top: bad += 1
             if chin > worst: worst, worst_t = chin, i / 30
     i += 1
 print(f"{os.path.basename(path)}: mento al massimo a {worst:.3f} dell'altezza (a {worst_t:.1f} s), grafiche da {top:.3f}; fotogrammi oltre il bordo: {bad}/{n}")
+import json; json.dump(serie, open(os.path.splitext(path)[0] + "_mento.json", "w"))  # serie tempo/mento, per il controllo elemento per elemento
 sys.exit(1 if bad else 0)

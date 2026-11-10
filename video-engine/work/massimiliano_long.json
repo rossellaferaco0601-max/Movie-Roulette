@@ -2,171 +2,63 @@
  "segments": [
   {
    "from": 15.38,
-   "to": 16.6
+   "to": 23.94,
+   "zoom": 1.0
   },
   {
-   "from": 17.17,
-   "to": 23.87
+   "from": 29.29,
+   "to": 45.83,
+   "zoom": 1.06
   },
   {
-   "from": 29.35,
-   "to": 31.39
+   "from": 54.45,
+   "to": 118.28,
+   "zoom": 1.0
   },
   {
-   "from": 31.88,
-   "to": 35.05
+   "from": 125.92,
+   "to": 127.38,
+   "zoom": 1.06
   },
   {
-   "from": 35.54,
-   "to": 41.93
+   "from": 132.07,
+   "to": 177.98,
+   "zoom": 1.06
   },
   {
-   "from": 42.31,
-   "to": 43.15
+   "from": 187.99,
+   "to": 224.03,
+   "zoom": 1.0
   },
   {
-   "from": 44.12,
-   "to": 45.78
+   "from": 239.9,
+   "to": 253.9,
+   "zoom": 1.06
   },
   {
-   "from": 54.51,
-   "to": 55.57
+   "from": 255.06,
+   "to": 274.09,
+   "zoom": 1.06
   },
   {
-   "from": 56.02,
-   "to": 68.53
+   "from": 283.35,
+   "to": 297.04,
+   "zoom": 1.0
   },
   {
-   "from": 68.88,
-   "to": 70.91
+   "from": 298.05,
+   "to": 353.05,
+   "zoom": 1.0
   },
   {
-   "from": 71.83,
-   "to": 73.23
+   "from": 366.27,
+   "to": 412.08,
+   "zoom": 1.06
   },
   {
-   "from": 73.84,
-   "to": 86.14
-  },
-  {
-   "from": 86.92,
-   "to": 96.66
-  },
-  {
-   "from": 97.03,
-   "to": 105.29
-  },
-  {
-   "from": 105.64,
-   "to": 108.63
-  },
-  {
-   "from": 109.14,
-   "to": 114.9
-  },
-  {
-   "from": 115.22,
-   "to": 118.22
-  },
-  {
-   "from": 125.98,
-   "to": 127.32
-  },
-  {
-   "from": 132.13,
-   "to": 136.7
-  },
-  {
-   "from": 137.42,
-   "to": 164.91
-  },
-  {
-   "from": 165.41,
-   "to": 166.5
-  },
-  {
-   "from": 167.0,
-   "to": 172.36
-  },
-  {
-   "from": 173.36,
-   "to": 177.92
-  },
-  {
-   "from": 188.05,
-   "to": 196.62
-  },
-  {
-   "from": 196.96,
-   "to": 198.12
-  },
-  {
-   "from": 198.81,
-   "to": 223.97
-  },
-  {
-   "from": 239.96,
-   "to": 251.52
-  },
-  {
-   "from": 252.01,
-   "to": 253.84
-  },
-  {
-   "from": 255.12,
-   "to": 270.75
-  },
-  {
-   "from": 271.5,
-   "to": 274.03
-  },
-  {
-   "from": 283.41,
-   "to": 296.98
-  },
-  {
-   "from": 298.11,
-   "to": 303.47
-  },
-  {
-   "from": 304.24,
-   "to": 308.57
-  },
-  {
-   "from": 309.05,
-   "to": 318.25
-  },
-  {
-   "from": 319.27,
-   "to": 320.56
-  },
-  {
-   "from": 321.21,
-   "to": 326.87
-  },
-  {
-   "from": 327.52,
-   "to": 331.85
-  },
-  {
-   "from": 332.18,
-   "to": 352.99
-  },
-  {
-   "from": 366.33,
-   "to": 382.17
-  },
-  {
-   "from": 383.07,
-   "to": 405.23
-  },
-  {
-   "from": 405.66,
-   "to": 412.02
-  },
-  {
-   "from": 423.43,
-   "to": 424.9
+   "from": 423.37,
+   "to": 424.9,
+   "zoom": 1.0
   }
  ],
  "chapters": [
@@ -177,45 +69,45 @@
   },
   {
    "q": "Quali erano i tuoi obiettivi prima di iniziare?",
-   "seg": 2,
-   "at": 7.67
+   "seg": 1,
+   "at": 8.3
   },
   {
    "q": "Avevi avuto infortuni o stop forzati?",
-   "seg": 7,
-   "at": 21.1
+   "seg": 2,
+   "at": 24.57
   },
   {
    "q": "Qual è il miglior beneficio che hai ottenuto?",
-   "seg": 17,
-   "at": 78.83
+   "seg": 3,
+   "at": 88.13
   },
   {
    "q": "La disciplina ha migliorato anche altri ambiti della tua vita?",
-   "seg": 23,
-   "at": 122.47
+   "seg": 5,
+   "at": 134.97
   },
   {
    "q": "Avevi delle resistenze prima di cominciare?",
-   "seg": 26,
-   "at": 156.97
+   "seg": 6,
+   "at": 170.73
   },
   {
    "q": "Cosa diresti a chi è indeciso?",
-   "seg": 30,
-   "at": 188.0
+   "seg": 8,
+   "at": 203.23
   },
   {
    "q": "Qualcosa da aggiungere sul percorso?",
-   "seg": 38,
-   "at": 251.5
+   "seg": 10,
+   "at": 271.4
   },
   {
    "q": "La tua esperienza in una sola parola?",
-   "seg": 41,
-   "at": 295.47
+   "seg": 11,
+   "at": 316.93
   }
  ],
- "blendFrames": 4,
- "total": 296.93333333333334
+ "blendFrames": 8,
+ "total": 318.46666666666664
 }

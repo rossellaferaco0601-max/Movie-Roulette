@@ -77,10 +77,14 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
           <Master src={p.master} total={total} />
         </AbsoluteFill>
         {p.hook ? <Hook hook={p.hook} /> : null}
-        {p.elements.map((el, i) => (
-          <AnyElement key={i} el={el} start={starts[i]} />
-        ))}
-        <Captions words={words} endFrame={total - 4} />
+        <AbsoluteFill style={{ transform: `translateY(${p.gfxShift ?? 0}px) scale(${p.gfxScale ?? 1})`, transformOrigin: `50% ${H * 0.44}px` }}>
+          {p.elements.map((el, i) => (
+            <AnyElement key={i} el={el} start={starts[i]} />
+          ))}
+        </AbsoluteFill>
+        <AbsoluteFill style={{ transform: `translateY(${p.capShift ?? 0}px)` }}>
+          <Captions words={words} endFrame={total - 4} />
+        </AbsoluteFill>
       </Sequence>
       <Sequence from={total - xfade} durationInFrames={ctaFrames + xfade} layout="none">
         <CTA cta={p.cta} frames={ctaFrames} />

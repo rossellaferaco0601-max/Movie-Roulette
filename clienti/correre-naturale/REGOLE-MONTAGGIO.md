@@ -313,3 +313,8 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   l'inquadratura o si spostano le grafiche. Nei girati orizzontali stretti (interviste Full HD) il ritaglio verticale pieno fa il viso troppo
   grande: si usa il ritaglio largo (760x1020 → 1080x1449 in alto) con **fascia verde brand sfumata in basso** per i sottotitoli
   (`fascia.png`, due sorgenti A/B al posto del punch-in, chiave `srcs` in `cn_master_v.py`).
+- **2026-11-10 (Ross, correzione)**: la **fascia verde in basso è bocciata** («orribile»): il video resta **a tutto schermo**. Con il volto grande le
+  grafiche si abbassano e si rimpiccioliscono (`gfxShift`, `gfxScale`, `capShift` nelle props del reel), sempre **dentro la zona sicura di Instagram**
+  (niente sotto 0,80) e mai sul volto: il controllo del mento si fa **grafica per grafica** sulla serie `*_mento.json` di `cn_facecheck.py`.
+- **2026-11-10 (Ross, versione lunga)**: «transizioni poco fluide, continui scatti» = troppi tagli con cambio di zoom. Nella lunga si tagliano
+  **solo le pause oltre 1,6 s**, **una sola inquadratura per capitolo** (lo zoom cambia solo al cambio di domanda) e dissolvenza di 8 fotogrammi.

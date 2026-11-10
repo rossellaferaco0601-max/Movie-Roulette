@@ -294,6 +294,10 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
       src: "testimonianze/massimiliano_src.mp4",
       words: wordsMassimiliano as CNReelProps["words"],
       master: "testimonianze/T1-massimiliano.mp4",
+      // volto grande (intervista stretta): grafiche sotto il mento (da 0,53) e più piccole, tutto sopra 0,80 (zona sicura Instagram)
+      gfxShift: 173,
+      gfxScale: 0.8,
+      capShift: 30,
       // testimonianza da intervista: tagli misurati sull'audio, domande dell'intervistatore a schermo (fuori microfono nel girato)
       segments: [seg(56.17, 57.58), seg(64.27, 68.38), seg(73.9, 76.28), seg(80.86, 86.33), seg(91.52, 101.18), seg(15.32, 16.48), seg(17.22, 23.83), seg(372.47, 375.13), seg(283.42, 288.11), seg(292.43, 297.43), seg(312.54, 317.18), seg(321.3, 326.78), seg(332.32, 334.43), seg(342.73, 347.42), seg(348.2, 352.9)],
       hook: null,
