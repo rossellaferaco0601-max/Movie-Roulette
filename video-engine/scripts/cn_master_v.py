@@ -31,6 +31,9 @@ for i, s in enumerate(c["segments"]):
     a1 = n / FPS if last else n / FPS - hb + AX / 2
     af = f"aresample=48000,{VOICE}atrim={a0:.4f}:{a1:.4f},asetpts=PTS-STARTPTS" + (f",afade=t=out:st={a1-a0-0.08:.4f}:d=0.08,apad=whole_dur={a1-a0+TAIL:.4f}" if last else "")
     p = f"{tmp}/p{i}.mp4"
+    # ripresa: un pezzo già completo non si rifà
+    pr = subprocess.run(["ffprobe","-v","error","-select_streams","v","-show_entries","stream=nb_frames","-of","csv=p=0",p], capture_output=True, text=True) if os.path.exists(p) else None
+    if pr and pr.stdout.strip() == str(nv): parts.append((p, nv)); continue
     run(["ffmpeg","-loglevel","error","-y","-ss",f"{s['from']:.3f}","-i",c["src"],"-t",f"{nv/FPS+0.2:.4f}","-vf",vf,"-af",af,"-frames:v",str(nv),
          "-c:v","libx264","-preset","fast","-crf","14","-pix_fmt","yuv420p","-c:a","pcm_s16le",p])
     parts.append((p, nv))
