@@ -8,11 +8,12 @@ export const LONGS: { id: string; props: CNLongProps }[] = [
     id: "T1-massimiliano-lungo",
     props: {
       master: "testimonianze/T1-massimiliano-lungo.mp4",
-      segments: planMassimiliano.segments,
-      blendFrames: planMassimiliano.blendFrames,
+      // le parole sono ritrascritte sul master montato: un solo pezzo lungo quanto il master
+      segments: [{ from: 0, to: planMassimiliano.total }],
+      blendFrames: 0,
       words: wordsMassimilianoLong as CNLongProps["words"],
       wordFix: {},
-      wordOffset: -0.08,
+      wordOffset: -0.05,
       chapters: planMassimiliano.chapters,
       name: "Massimiliano",
       sub: "54 anni · Pavia",

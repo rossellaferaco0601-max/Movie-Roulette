@@ -62,7 +62,7 @@ const Chapter: React.FC<{ q: string; n: number; start: number }> = ({ q, n, star
   if (local < 0 || local >= dur) return null;
   const s = spring({ frame: local, fps, config: { damping: 14, stiffness: 170, mass: 0.7 } });
   const out = interpolate(local, [dur - 10, dur], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.in(Easing.quad) });
-  const chars = Math.round(Math.min(1, local / 22) * q.length);
+  const chars = Math.round(Math.min(1, local / 12) * q.length);
   return (
     <div style={{ position: "absolute", right: 90, top: 120, width: 640, fontFamily: FONT, opacity: out, transform: `translateX(${(1 - s) * 80}px)` }}>
       <div style={{ display: "inline-block", background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 28, letterSpacing: 2, padding: "6px 18px", borderRadius: "12px 12px 0 0" }}>DOMANDA {n}</div>

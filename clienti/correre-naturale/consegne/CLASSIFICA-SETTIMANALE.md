@@ -93,6 +93,14 @@ Stessa giornata raccontata per esteso, dalle 9:30 alle 18:30: tutto quello che C
 **D1 Daniela · Venerdì Conversione · CTA PERCORSO** (v2, 9/11)
 Testimonianza reale dal workshop di Vicenza. Daniela stava sul divano e non aveva mai corso; ha iniziato con Correre Naturale per dimagrire («mi ha miracolato»). Il «secondo miracolo»: grazie alla filosofia della cura del proprio corpo ha fatto gli esami, ha scoperto in tempo un brutto male all'intestino, dopo tre settimane era di nuovo a correre senza chemio. Chiusura sul numero: nella mezza maratona la Daniela di 60 anni batte quella di 50 di oltre 20 minuti. Sorgente: IMG_0650 (telefono di Paola), nessun video YouTube.
 
-## Conteggio (26 contenuti)
-Scientifico 4 · Educativo 7 · Problem/Solution 5 · Pratico 8 · Conversione 3 (due vlog dell'evento + Daniela).
+## Testimonianze (cartella Drive «Testimonianze CN»)
+
+**T1 Massimiliano, reel · Venerdì Conversione · CTA PERCORSO** (v1, 10/11)
+Testimonianza da intervista. Massimiliano, 54 anni, di Pavia: «una vita di infortuni». Correva anche dieci volte a settimana con il fai da te, si è fatto male tante volte, per anni ha ripreso e mollato, finché ha capito di avere bisogno di una guida. Con il percorso è cambiato tutto (fisico, mente, energia e soprattutto disciplina), «ben oltre le mie aspettative». Il consiglio a chi è indeciso: non aspettare i 54 anni, perché stare meglio lo trasmetti in casa, alla famiglia, ai figli, e «questo non ha prezzo». Domande dell'intervistatore a schermo. Sorgente: C3498-009.
+
+**T1 Massimiliano, versione lunga (5 min, orizzontale) · Venerdì Conversione · chiusura «Vuoi scrivere anche tu la tua storia?»**
+L'intervista completa in nove domande usate come titoli di capitolo: quanto è migliorato, gli obiettivi (diventare disciplinato), gli infortuni e l'ego dei vent'anni, il beneficio più grande (energia e costanza), la disciplina negli altri ambiti della vita (le priorità imprescindibili), le resistenze (è arrivato a Bologna già convinto), il consiglio a chi tentenna, la completezza del percorso (piedi, mobilità, audio experience, incontri settimanali, masterclass) e la parola finale: «Completezza».
+
+## Conteggio (28 contenuti)
+Scientifico 4 · Educativo 7 · Problem/Solution 5 · Pratico 8 · Conversione 5 (due vlog dell'evento, Daniela, Massimiliano reel e lunga).
 Buco da coprire: nelle serie YTCN non c'è nessun reel da venerdì (offerta + testimonianza reale); il più vicino è R8 «dialogo», che resta educativo.

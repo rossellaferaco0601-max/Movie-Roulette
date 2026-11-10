@@ -302,3 +302,8 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   e messo in una pausa vera: mai un resto di parola (il «ché» di «perché», un «e…» trascinato) e mai un attacco mangiato.
   L'audio si taglia **netto a metà dell'incrocio video** (micro-incrocio di 0,04 s, `AX` in `cn_master_v.py`): l'incrocio audio lungo
   5 fotogrammi sfumava attacchi e code. Se una frase parte attaccata alla precedente, si prende la frase intera dalla pausa prima.
+- **2026-11-10 (Ross, testimonianze da intervista, cartella Drive «Testimonianze CN»)**: per ogni girato un **reel verticale di massimo 1 minuto e mezzo**
+  e, se la storia regge, una **versione lunga orizzontale** (composizione `CNLong`, piano dei tagli con `scripts/cn_long_plan.py`).
+  Solo il **nome**, mai il cognome (anche se lo dice a voce: quel pezzo non si usa). Le domande dell'intervistatore sono fuori microfono:
+  si tagliano dall'audio e si mettono **a schermo** (elemento `question`; nel reel al massimo 2-3, nella lunga come titoli di capitolo).
+  Per leggerle si alza l'audio (`dynaudnorm`) e si ritrascrive. Il girato è Full HD orizzontale: nel verticale zoom al minimo (1,0 / 1,06).
