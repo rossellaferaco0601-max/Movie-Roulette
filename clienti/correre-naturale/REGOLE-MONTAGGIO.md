@@ -370,3 +370,6 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - Scritte dentro i riquadri **grandi quanto il riquadro** (chat di R8); barre di cancellatura **centrate sulla parola** (ruotano attorno al centro);
     illustrazioni tutte dentro il riquadro, senza etichette che non c'entrano col parlato (polmoni di R8 rifatti, tolto «inspira/espira»).
   - Guide: «5-10 volte» subito sotto l'intestazione dell'esercizio.
+- **2026-11-11 sera (Ross)**: la CTA «deve solo essere chiara»: **nessuna ombra** (né sul pannello né sotto campo e notifica) e nessuna
+  attenuazione. R5 può superare di poco il minuto e mezzo. Le **testimonianze non si toccano** (Daniela v6 e Massimiliano restano come sono,
+  anche nella CTA) finché Ross non lo chiede.

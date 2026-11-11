@@ -6,7 +6,7 @@ const FONT = "Blinker, sans-serif";
 
 /** CTA coaching: chiara e ordinata (Ross 11/11: «troppo incasinata, troppe cose da leggere in troppo poco tempo»).
  *  Tre passi, uno alla volta, dall'alto in basso: 1) la domanda + «coaching personalizzato di Correre Naturale®» evidenziato;
- *  2) «Commenta» + la parola, scritta e pubblicata (con il suono del tocco); 3) la notifica con il logo. Niente coriandoli, niente «Segui». */
+ *  2) «Commenta» + la parola, scritta e pubblicata (con il suono del tocco); 3) la notifica con il logo. Niente coriandoli, niente «Segui», niente ombre né attenuazioni: tutto pieno e nitido. */
 export const CTA: React.FC<{ cta: CTAT; frames: number }> = ({ cta, frames }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -22,7 +22,7 @@ export const CTA: React.FC<{ cta: CTAT; frames: number }> = ({ cta, frames }) =>
   const tap = s(T_TAP, { damping: 9, stiffness: 260 });
   const hl = s(T_HL, { damping: 20, stiffness: 90 });
   return (
-    <AbsoluteFill style={{ background: BRAND.green, transform: `translateY(${(1 - up) * 100}%)`, boxShadow: "0 -24px 60px rgba(0,0,0,0.45)", fontFamily: FONT, color: BRAND.white }}>
+    <AbsoluteFill style={{ background: BRAND.green, transform: `translateY(${(1 - up) * 100}%)`, fontFamily: FONT, color: BRAND.white }}>
       {/* suono del tocco su «Pubblica» (unico suono della CTA, discreto) */}
       <Sequence from={T_TAP + 4} layout="none"><Audio src={staticFile("sfx/click.wav")} volume={0.8} /></Sequence>
 
@@ -43,7 +43,7 @@ export const CTA: React.FC<{ cta: CTAT; frames: number }> = ({ cta, frames }) =>
         <div style={{ fontWeight: 900, fontSize: 170, lineHeight: 1, color: BRAND.lime }}>{cta.word}</div>
       </div>
       <div style={{ position: "absolute", top: 1070, left: 90, width: W - 180, transform: `translateY(${(1 - s(T_BOX)) * 50}px)`, opacity: s(T_BOX) }}>
-        <div style={{ background: BRAND.white, borderRadius: 999, height: 112, display: "flex", alignItems: "center", padding: "0 20px 0 36px", boxShadow: "0 16px 40px rgba(0,0,0,0.3)" }}>
+        <div style={{ background: BRAND.white, borderRadius: 999, height: 112, display: "flex", alignItems: "center", padding: "0 20px 0 36px" }}>
           <div style={{ flex: 1, textAlign: "left", fontSize: 48, fontWeight: 700, color: typed ? BRAND.ink : "#9aa" }}>
             {typed || "Aggiungi un commento…"}
             {frame >= T_TYPE && frame < T_PUB && Math.floor(frame / 8) % 2 === 0 ? <span style={{ color: BRAND.green }}>|</span> : null}
@@ -59,7 +59,7 @@ export const CTA: React.FC<{ cta: CTAT; frames: number }> = ({ cta, frames }) =>
 
       {/* 3 · notifica con il logo */}
       <div style={{ position: "absolute", top: 1250, left: 90, width: W - 180, transform: `translateY(${(1 - s(T_DM)) * 70}px)`, opacity: s(T_DM) }}>
-        <div style={{ background: "rgba(11,15,10,0.92)", borderRadius: 30, padding: "24px 30px", display: "flex", gap: 24, alignItems: "center", boxShadow: "0 16px 40px rgba(0,0,0,0.35)" }}>
+        <div style={{ background: "rgba(11,15,10,0.92)", borderRadius: 30, padding: "24px 30px", display: "flex", gap: 24, alignItems: "center" }}>
           <div style={{ width: 116, height: 116, borderRadius: 58, background: BRAND.green, border: `3px solid ${BRAND.lime}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
             <Img src={staticFile("brand/logo-cn-bianco.png")} style={{ width: 104, height: 104 }} />
           </div>
