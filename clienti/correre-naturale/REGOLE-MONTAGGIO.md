@@ -375,3 +375,5 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   anche nella CTA) finché Ross non lo chiede.
 - **2026-11-11 (clic della CTA)**: la normalizzazione del volume alza il clic di «Pubblica» fino al picco del parlato (la CTA è quasi muta):
   `cn_finish.sh` lo riporta giù dopo la normalizzazione (finestra attorno a 4,73 s dall'inizio della CTA, guadagno 0,3 → picco circa −12 dB).
+- **2026-11-11 (Ross)**: YTCN 51 chiuso alla **v11** (R1, R2, R3, R4, R5 tre esercizi, R8). Su sua richiesta in `out/ytcn51/consegna/` restano
+  **solo le ultime versioni** (anche di Daniela v6 e Massimiliano reel v3 / lunga v2): le vecchie sono state cancellate per fare spazio.

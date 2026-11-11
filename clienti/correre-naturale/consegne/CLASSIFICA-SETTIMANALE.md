@@ -7,25 +7,25 @@ Schema di Ross (9/11): **Lunedì Scientifico** (cosa dice la ricerca, autorevole
 Regola: a ogni consegna di nuovi reel, aggiornare questa tabella (giorno, descrizione del tema, CTA finale) e riportarla in chat.
 Tutte le CTA «Commenta …» rimandano in DM alle info sui percorsi di coaching personalizzato, tranne WORKSHOP (date del prossimo workshop dal vivo).
 
-## YTCN 51 · respirazione nella corsa (v8, 8/11)
+## YTCN 51 · respirazione nella corsa (v11, 11/11)
 
 **R1 fiatone · Mercoledì Problem/Solution · CTA FIATO**
-Il problema: inizi a correre e dopo pochi minuti non respiri più, ti viene da pensare di non essere fatto per correre. La risposta di Daniele: il fiatone non è un segno di scarso allenamento ma di corsa fuori controllo. Parti troppo veloce, il respiro si scompone, il cervello va in allarme e ti ferma. Il corpo si allena per gradi, non per forza di volontà. Chiusura: non è la corsa che ti stanca, è la respirazione.
+Il problema: inizi a correre e dopo pochi minuti non respiri più, ti manca il fiato, senti il cuore in gola e pensi di non essere fatto per correre. La risposta di Daniele: non è il tuo corpo che non è adatto, è che nessuno ti ha insegnato a respirare nel modo giusto. Il fiatone è il segnale che stai correndo fuori controllo: parti troppo veloce, il respiro si scompone, il cervello va in allarme e ti ferma. Il corpo si allena per gradi, non per forza di volontà. Chiusura: non è la corsa che ti stanca, è la respirazione che ti sta sabotando.
 
 **R2 naso · Martedì Educativo · CTA NASO**
-Il primo passo per eliminare il fiatone è respirare con il naso. Il naso è il filtro e il regolatore naturale del respiro: ti obbliga a un ritmo sostenibile, ti fa usare meglio l'ossigeno e ti tiene in controllo su corpo e mente.
+Il primo passo per eliminare il fiatone quando corri è imparare a respirare con il naso. Il naso è il filtro e il regolatore naturale del respiro: ti obbliga a mantenere un ritmo sostenibile, ti aiuta a usare l'ossigeno in modo efficiente e a mantenere il controllo sul corpo e sulla mente.
 
 **R3 bocca · Giovedì Pratico · CTA ENERGIA**
-Il consiglio da applicare alla prossima uscita: bocca chiusa, e se viene voglia di aprirla si rallenta o si cammina, così il corpo trova da solo il suo ritmo. Perché funziona: la respirazione nasale stimola il diaframma, ossigena meglio i tessuti e calma il sistema nervoso. Risultato: più energia dopo la corsa, non meno.
+Il consiglio da applicare alla prossima uscita: durante la corsa chiudi la bocca, e se ti viene voglia di aprirla rallenta o cammina; così il corpo impara mano a mano a trovare il suo ritmo naturale. Perché funziona: la respirazione nasale stimola il diaframma, ossigena meglio i tessuti e calma il sistema nervoso. Chiusura: non solo respiri meglio, senti più energia dopo la corsa, e non meno come spesso capita.
 
 **R4 piano · Mercoledì Problem/Solution · CTA PIANO**
-Il secondo errore di chi inizia: correre troppo forte perché pensa che per migliorare bisogna spingere. La soluzione è correre più piano: all'inizio l'obiettivo non è la velocità ma costruire resistenza e gestire l'energia. Il protocollo: 20-30 minuti respirando solo dal naso, cammini quando perdi il controllo, riparti quando torni calmo. Questa alternanza costruisce la capacità aerobica.
+Il problema: molti pensano che per migliorare bisogna spingere di più. La risposta: bisogna imparare a correre più piano, perché all'inizio l'obiettivo non è la velocità ma costruire resistenza e insegnare al corpo a gestire l'energia. Il protocollo: una corsa di 20-30 minuti respirando solo dal naso; ogni volta che senti di perdere il controllo cammini, quando torni a respirare con calma riparti. Chiusura: questa alternanza è l'allenamento perfetto per costruire capacità aerobica.
 
-**R5 tre esercizi · Giovedì Pratico · CTA ESERCIZI** (v9, 11/11: sostituisce R5, R6 e R7 della v8, scartati)
-Correre bene dipende da come respiri, e il respiro si allena come un muscolo. Tre esercizi da iniziare oggi stesso. Uno, respirazione nasale controllata: bocca chiusa, inspira dal naso 3-4 secondi, espira 4-5, dieci respiri con calma; più resistenza, meno affanno. Due, pause respiratorie: dopo una normale espirazione trattieni qualche secondo, poi riprendi dal naso, 5-10 volte senza forzare; impari a correre in controllo, senza panico. Tre, respirazione ritmica: cammina o corri piano, inspira per tre passi ed espira per quattro; respiro e movimento insieme, meno sforzo e più fluidità. Chiusura: sembrano semplici ma cambiano tutto, impari a gestire il respiro invece di subirlo.
+**R5 tre esercizi · Giovedì Pratico · CTA ESERCIZI**
+Correre bene dipende da come respiri, e la respirazione si allena proprio come un muscolo: tre esercizi semplici da iniziare oggi stesso. Uno, respirazione nasale controllata: bocca chiusa, inspira lentamente dal naso per 3-4 secondi, espira per 4-5, dieci respiri mantenendo la calma; risultato, più resistenza e meno affanno. Due, pause respiratorie: dopo una normale espirazione trattieni il respiro qualche secondo e riprendi dal naso, 5-10 volte senza forzare; impari a correre in controllo, senza panico. Tre, respirazione ritmica: cammina o corri piano, inspira per tre passi ed espira per quattro, trova il ritmo che ti fa sentire in equilibrio; meno sforzo, più fluidità. Chiusura: sembrano semplici ma cambiano tutto, ti insegnano a gestire il respiro invece di subirlo.
 
 **R8 dialogo · Martedì Educativo · CTA LONTANO**
-Il concetto chiave: la corsa non è un test di resistenza ma un dialogo con il corpo. Quando lo ascolti smetti di soffrire e ti godi ogni passo; non serve spingere di più, serve respirare meglio. Se manca il fiato non ti fermi: impari a respirare, a rallentare, ad ascoltarti. Chiusura: correre bene = andare lontano ed essere sostenibili.
+La corsa non è un test di resistenza: è un dialogo tra te e il tuo corpo, e quando impari ad ascoltarlo smetti di soffrire e inizi a goderti ogni passo. Non serve spingere di più, serve respirare meglio: se ti manca il fiato non fermarti, impara a respirare, a rallentare e ad ascoltare il tuo corpo, e in poco tempo correrai più lontano con più energia e meno sforzo. Chiusura: correre bene non significa andare forte, significa andare lontano ed essere sostenibili.
 
 ## Longevità (6 reel)
 
