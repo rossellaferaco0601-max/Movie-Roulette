@@ -1,0 +1,11 @@
+{"blendFrames": 8, "gap": 1.6, "chapters": [
+ {"q": "Quali miglioramenti hai avuto con il percorso?", "ranges": [[22.57, 49.1]]},
+ {"q": "Quali erano i tuoi obiettivi?", "ranges": [[54.6, 126.3]]},
+ {"q": "Qual è il risultato più bello che hai raggiunto?", "ranges": [[157.1, 190.95]]},
+ {"q": "Il percorso ha migliorato anche altri ambiti della tua vita?", "ranges": [[204.4, 240.5]]},
+ {"q": "Avevi delle resistenze prima di cominciare?", "ranges": [[249.1, 329.0]]},
+ {"q": "Cosa diresti a chi è indeciso?", "ranges": [[332.3, 360.35]]},
+ {"q": "Come hai conosciuto Daniele?", "ranges": [[362.15, 386.6]]},
+ {"q": "Cosa ti piace di Daniele?", "ranges": [[396.9, 435.8]]},
+ {"q": "La tua esperienza in una parola?", "ranges": [[447.15, 452.6]]}
+]}

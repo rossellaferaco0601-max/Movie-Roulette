@@ -95,6 +95,15 @@ Il problema: una vita di infortuni. Massimiliano correva anche dieci volte a set
 **T1 Massimiliano versione lunga · Venerdì Conversione · CTA PERCORSO** (v2, 10/11)
 L'intervista completa in nove domande (5:25, orizzontale, per YouTube e il sito). Dagli anni di fai da te e dall'ego dei vent'anni alla decisione di farsi guidare; il beneficio più grande, più energia e la costanza che gli era sempre mancata; la disciplina che entra nella vita di tutti i giorni, con priorità imprescindibili; nessuna resistenza, solo il coraggio di partire sapendo che non sarebbe tornato indietro. Chiusura: il consiglio di non aspettare e la parola che riassume il percorso, «Completezza».
 
-## Conteggio (26 contenuti)
-Scientifico 3 · Educativo 7 · Problem/Solution 5 · Pratico 6 · Conversione 5 (due vlog dell'evento, Daniela, Massimiliano reel e lunga).
+**T2 Laura reel · Venerdì Conversione · CTA PERCORSO** (v1, 11/11)
+Il problema: prima di essere seguita Laura aveva magari più soddisfazioni cronometriche, ma anche infortuni, e girava tra fisioterapisti e osteopati; e la frenava il tempo, perché sapeva che il percorso le avrebbe chiesto impegni che temeva di non poter mantenere. La svolta: con Correre Naturale dal 2016, da quando è seguita dal team non ha più avuto infortuni e ha smesso di frequentare fisioterapisti e osteopati; il suo obiettivo non è più rincorrere una performance cronometrica ma il benessere a 360 gradi, e il percorso l'ha resa più centrata, più motivata, più attenta a se stessa e agli altri. Sul tempo ha trovato «un buon compromesso». Chiusura: «Se ti vuoi bene devi assolutamente aderire: non aspettare che loro vengano da te, cercali.»
+
+**T2 Laura versione lunga · Venerdì Conversione · CTA PERCORSO** (v1, 11/11)
+L'intervista completa in otto domande (4:25, orizzontale, per YouTube e il sito). Con Correre Naturale dal 2016, la Superhuman Academy come occasione per ritrovare motivazione e un obiettivo da non perdere di vista: il benessere a 360 gradi, non il cronometro. La performance migliorata «parlando di salute», niente più infortuni né fisioterapisti; una persona più centrata e meno distratta; la resistenza del tempo e il compromesso trovato, «un buon 80%» degli impegni; il consiglio a chi è indeciso; il prossimo obiettivo, rifare la mezza maratona d'Islanda in tempi «un pochettino più umani». Chiusura: Daniele, il team e la sua famiglia come esempio di coerenza.
+
+**T3 Taddeo reel · Venerdì Conversione · CTA PERCORSO** (v1, 11/11)
+Il problema: Taddeo andava oltre le sue potenzialità, superava i suoi limiti, e questo gli era controproducente: mal di stomaco, mal di testa, in diverse occasioni dopo una corsa non stava bene. La svolta: seguendo i consigli del percorso oggi finisce una gara e sta bene, anzi meglio di quando è partito; sono migliorati l'energia, il benessere e soprattutto la testa, con più sicurezza, fiducia in se stesso e disciplina. L'unica resistenza era quella economica, superata con un ragionamento: «la salute viene cento volte prima dei soldi». Chiusura: «Se non lo fai tu nessuno lo fa al posto tuo: inizia subito, non aspettare, cogli l'opportunità al volo»; la sua esperienza in una parola, «vitalità».
+
+## Conteggio (29 contenuti)
+Scientifico 3 · Educativo 7 · Problem/Solution 5 · Pratico 6 · Conversione 8 (due vlog dell'evento, Daniela, Massimiliano reel e lunga, Laura reel e lunga, Taddeo reel).
 Buco da coprire: nelle serie YTCN non c'è nessun reel da venerdì (offerta + testimonianza reale); il più vicino è R8 «dialogo», che resta educativo.

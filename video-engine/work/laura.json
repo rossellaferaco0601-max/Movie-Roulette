@@ -1,0 +1,72 @@
+{
+ "id": "T2-laura",
+ "src": "public/testimonianze/laura_src.mp4",
+ "out": "public/testimonianze/T2-laura.mp4",
+ "faceX": 0.5,
+ "faceY": 0.25,
+ "zooms": [
+  1,
+  1.04
+ ],
+ "blendFrames": 5,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 119.82,
+   "to": 128.4533
+  },
+  {
+   "from": 133.697,
+   "to": 138.1303
+  },
+  {
+   "from": 138.437,
+   "to": 139.737
+  },
+  {
+   "from": 51.067,
+   "to": 55.767
+  },
+  {
+   "from": 57.197,
+   "to": 60.1303
+  },
+  {
+   "from": 72.387,
+   "to": 74.0537
+  },
+  {
+   "from": 74.097,
+   "to": 78.997
+  },
+  {
+   "from": 163.977,
+   "to": 171.2103
+  },
+  {
+   "from": 172.037,
+   "to": 177.2703
+  },
+  {
+   "from": 178.107,
+   "to": 182.507
+  },
+  {
+   "from": 200.977,
+   "to": 204.1103
+  },
+  {
+   "from": 222.767,
+   "to": 237.467
+  },
+  {
+   "from": 272.617,
+   "to": 277.0837
+  },
+  {
+   "from": 277.417,
+   "to": 282.5837
+  }
+ ]
+}

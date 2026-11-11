@@ -1,0 +1,71 @@
+{
+ "id": "T3-taddeo-lungo",
+ "src": "public/testimonianze/C3499-008.MP4",
+ "out": "public/testimonianze/T3-taddeo-lungo.mp4",
+ "size": [
+  1920,
+  1080
+ ],
+ "faceX": 0.5125,
+ "faceY": 0.3747,
+ "zooms": [
+  1.0,
+  1.07
+ ],
+ "blendFrames": 8,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 22.57,
+   "to": 49.23,
+   "zoom": 1.0
+  },
+  {
+   "from": 54.47,
+   "to": 126.43,
+   "zoom": 1.06
+  },
+  {
+   "from": 156.97,
+   "to": 191.08,
+   "zoom": 1.0
+  },
+  {
+   "from": 204.27,
+   "to": 240.63,
+   "zoom": 1.06
+  },
+  {
+   "from": 248.97,
+   "to": 329.13,
+   "zoom": 1.0
+  },
+  {
+   "from": 332.17,
+   "to": 360.48,
+   "zoom": 1.06
+  },
+  {
+   "from": 362.02,
+   "to": 386.73,
+   "zoom": 1.0
+  },
+  {
+   "from": 396.77,
+   "to": 435.93,
+   "zoom": 1.06
+  },
+  {
+   "from": 447.02,
+   "to": 449.92,
+   "zoom": 1.0
+  },
+  {
+   "from": 450.85,
+   "to": 452.61,
+   "zoom": 1.0
+  }
+ ],
+ "broll": []
+}

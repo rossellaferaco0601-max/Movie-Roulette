@@ -1,0 +1,103 @@
+{
+ "segments": [
+  {
+   "from": 22.57,
+   "to": 49.23,
+   "zoom": 1.0
+  },
+  {
+   "from": 54.47,
+   "to": 126.43,
+   "zoom": 1.06
+  },
+  {
+   "from": 156.97,
+   "to": 191.08,
+   "zoom": 1.0
+  },
+  {
+   "from": 204.27,
+   "to": 240.63,
+   "zoom": 1.06
+  },
+  {
+   "from": 248.97,
+   "to": 329.13,
+   "zoom": 1.0
+  },
+  {
+   "from": 332.17,
+   "to": 360.48,
+   "zoom": 1.06
+  },
+  {
+   "from": 362.02,
+   "to": 386.73,
+   "zoom": 1.0
+  },
+  {
+   "from": 396.77,
+   "to": 435.93,
+   "zoom": 1.06
+  },
+  {
+   "from": 447.02,
+   "to": 449.92,
+   "zoom": 1.0
+  },
+  {
+   "from": 450.85,
+   "to": 452.61,
+   "zoom": 1.0
+  }
+ ],
+ "chapters": [
+  {
+   "q": "Quali miglioramenti hai avuto con il percorso?",
+   "seg": 0,
+   "at": 0.0
+  },
+  {
+   "q": "Quali erano i tuoi obiettivi?",
+   "seg": 1,
+   "at": 26.4
+  },
+  {
+   "q": "Qual è il risultato più bello che hai raggiunto?",
+   "seg": 2,
+   "at": 98.1
+  },
+  {
+   "q": "Il percorso ha migliorato anche altri ambiti della tua vita?",
+   "seg": 3,
+   "at": 131.93
+  },
+  {
+   "q": "Avevi delle resistenze prima di cominciare?",
+   "seg": 4,
+   "at": 168.03
+  },
+  {
+   "q": "Cosa diresti a chi è indeciso?",
+   "seg": 5,
+   "at": 247.93
+  },
+  {
+   "q": "Come hai conosciuto Daniele?",
+   "seg": 6,
+   "at": 275.97
+  },
+  {
+   "q": "Cosa ti piace di Daniele?",
+   "seg": 7,
+   "at": 300.4
+  },
+  {
+   "q": "La tua esperienza in una parola?",
+   "seg": 8,
+   "at": 339.3
+  }
+ ],
+ "blendFrames": 8,
+ "total": 343.7
+}

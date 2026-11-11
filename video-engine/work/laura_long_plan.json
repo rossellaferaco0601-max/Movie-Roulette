@@ -1,0 +1,10 @@
+{"blendFrames": 8, "gap": 1.6, "chapters": [
+ {"q": "Quanto sei migliorata rispetto a prima del percorso?", "ranges": [[17.6, 47.95]]},
+ {"q": "Qual è il tuo obiettivo?", "ranges": [[51.2, 85.5]]},
+ {"q": "E la performance, prima di Correre Naturale?", "ranges": [[100.22, 139.8]]},
+ {"q": "Cosa è cambiato in te con il percorso?", "ranges": [[163.95, 187.3]]},
+ {"q": "Avevi delle resistenze prima di cominciare?", "ranges": [[200.95, 265.2]]},
+ {"q": "Cosa diresti a chi è indeciso?", "ranges": [[273.4, 282.6]]},
+ {"q": "Hai un prossimo obiettivo?", "ranges": [[290.0, 312.45], [321.6, 331.95]]},
+ {"q": "Qualcosa da aggiungere su Daniele o sul percorso?", "ranges": [[353.8, 382.35]]}
+]}

@@ -1,6 +1,8 @@
 import words from "./words51.json";
 import wordsDaniela from "./wordsDaniela.json";
 import wordsMassimiliano from "./wordsMassimiliano.json";
+import wordsLaura from "./wordsLaura.json";
+import wordsTaddeo from "./wordsTaddeo.json";
 import wordsLongevita from "./wordsLongevita.json";
 import type { CNReelProps } from "./types";
 
@@ -647,5 +649,104 @@ Nel metodo Correre Naturale® lo squat è uno dei gesti più potenti per rimette
 Commenta DOMANI e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
 
 #correrenaturale #longevità #camminare #squat #running`,
+  },
+  {
+    id: "T2-laura",
+    title: "«Non ho avuto più infortuni» (testimonianza di Laura)",
+    props: {
+      ...base,
+      src: "testimonianze/laura_src.mp4",
+      words: wordsLaura as CNReelProps["words"],
+      master: "testimonianze/T2-laura.mp4",
+      gfxShift: 50, // con l'avvicinamento dei pezzi alterni il mento arriva a 0,45: grafiche da 0,466
+      capShift: 30,
+      // intervista: tagli nei punti più silenziosi delle pause (misurati sull'energia dell'audio), domande a schermo (l'intervistatore è fuori microfono)
+      segments: cut([119.82, 128.37], [133.78, 138.05], [138.52, 139.66], [51.15, 55.7], [57.28, 60.05], [72.47, 73.97], [74.18, 78.9], [164.06, 171.14], [172.12, 177.19], [178.19, 182.42], [201.06, 204.03], [222.85, 237.4], [272.7, 277.0], [277.5, 282.6]),
+      hook: null,
+      elements: [
+        { kind: "nametag", at: 0.4, dur: 2.5, name: "Laura", sub: "Roma · con Correre Naturale dal 2016" },
+        { kind: "pill", at: 3.14, word: "CN", dur: 2.6, text: "CN = Correre Naturale®" },
+        { kind: "kinetic", at: 7.28, word: "non", dur: 1.8, words: ["NON HO AVUTO PIÙ", "INFORTUNI"], accentIndex: 1 },
+        { kind: "checklist", at: 9.33, word: "frequentare", dur: 4.3, big: true, cross: true, cues: ["fisioterapisti", "osteopati"], items: ["Fisioterapisti", "Osteopati"] },
+        { kind: "kinetic", at: 14.92, word: "benessere", dur: 2.9, words: ["BENESSERE", "A 360 GRADI"], accentIndex: 0 },
+        { kind: "bigstrike", at: 18.64, word: "rincorrere", dur: 2.3, text: "Performance cronometrica" },
+        { kind: "title", at: 21.47, word: "Superhuman", dur: 3.2, lines: ["Superhuman Academy", "percorso di Correre Naturale®"], accent: "Superhuman" },
+        { kind: "kinetic", at: 26.18, word: "sta", dur: 1.1, words: ["STA", "FUNZIONANDO"], accentIndex: 1 },
+        { kind: "question", at: 27.5, dur: 2.6, text: "Cosa è cambiato in te?" },
+        { kind: "stack", at: 34.88, word: "fatto", dur: 8.7, cues: ["centrata", "motivata", "attenta", "ma"], title: "Il percorso ha fatto di me", items: ["Più centrata", "Più motivata", "Più attenta a se stessa", "E agli altri"] },
+        { kind: "question", at: 43.92, dur: 1.9, text: "Cosa ti frenava?" },
+        { kind: "kinetic", at: 47.73, word: "gravoso", dur: 1.6, words: ["UN IMPEGNO GRAVOSO", "DI TEMPO"], accentIndex: 1 },
+        { kind: "kinetic", at: 51.29, word: "non", dur: 2.4, words: ["NON HO TUTTO", "QUESTO TEMPO"], accentIndex: 1 },
+        { kind: "kinetic", at: 54.35, word: "lui", dur: 2.1, words: ["PER DANIELE", "VOLERE", "È POTERE"], accentIndex: 2 },
+        { kind: "kinetic", at: 58.25, word: "bella", dur: 1.45, words: ["UNA BELLA", "SORPRESA"], accentIndex: 1 },
+        { kind: "kinetic", at: 59.89, word: "buon", dur: 1.2, words: ["UN BUON", "COMPROMESSO"], accentIndex: 1 },
+        { kind: "question", at: 61.35, dur: 2.1, text: "Cosa diresti a chi è indeciso?" },
+        { kind: "kinetic", at: 63.64, word: "devi", dur: 1.9, words: ["SE TI VUOI BENE", "DEVI ADERIRE"], accentIndex: 1 },
+        { kind: "kinetic", at: 67.82, word: "non", dur: 2.5, words: ["NON ASPETTARE", "CERCALI"], accentIndex: 1 },
+      ],
+      cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
+    },
+    didascalia: `«Da quando sono seguita da Correre Naturale non ho avuto più infortuni.»
+
+Laura corre con Correre Naturale® dal 2016. Ha smesso di frequentare fisioterapisti e osteopati, e oggi il suo obiettivo non è rincorrere una performance cronometrica: è il benessere, a 360 gradi.
+
+Il percorso l'ha resa più centrata, più motivata, più attenta a se stessa e agli altri. La resistenza più grande era il tempo: «non ho tutto questo tempo a disposizione». La sorpresa è stata trovare un buon compromesso.
+
+Il suo consiglio a chi è indeciso: «Se ti vuoi bene devi assolutamente aderire. Non aspettare che loro vengano da te: cercali.»
+
+Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #testimonianza #corsa #running #benessere`,
+  },
+  {
+    id: "T3-taddeo",
+    title: "«La salute viene cento volte prima dei soldi» (testimonianza di Taddeo)",
+    props: {
+      ...base,
+      src: "testimonianze/C3499-008.MP4",
+      words: wordsTaddeo as CNReelProps["words"],
+      master: "testimonianze/T3-taddeo.mp4",
+      gfxShift: 50,
+      capShift: 30,
+      // tagli solo nei silenzi veri (scripts/cn_pauses.py): parla fitto e spesso lega le frasi, i tempi delle parole da soli non bastano
+      segments: cut([95.2, 104.96], [106.08, 123.1], [23.52, 39.6], [283.15, 296.93], [340.9, 349.19], [354.8, 360.39], [447.15, 452.6]),
+      hook: null,
+      elements: [
+        { kind: "title", at: 0, dur: 3.5, lines: ["Dopo le gare stava male", "oggi finisce meglio", "di come è partito"], accent: "meglio" },
+        { kind: "nametag", at: 3.7, dur: 2.4, name: "Taddeo", sub: "Vicenza" },
+        { kind: "checklist", at: 10.43, word: "mal", dur: 3.0, big: true, cross: true, cues: ["stomaco", "testa"], items: ["Mal di stomaco", "Mal di testa"] },
+        { kind: "kinetic", at: 14.61, word: "non", dur: 1.9, words: ["NON SONO STATO BENE", "DOPO", "UNA CORSA"], accentIndex: 2 },
+        { kind: "title", at: 20.09, word: "finisco", dur: 3.95, cues: ["finisco", "sto"], lines: ["Adesso finisco una gara", "e sto bene"], accent: "bene" },
+        { kind: "kinetic", at: 24.43, word: "meglio", dur: 1.9, words: ["MEGLIO DI QUANDO", "SONO PARTITO"], accentIndex: 1 },
+        { kind: "question", at: 26.78, dur: 2.3, text: "Cosa è cambiato?" },
+        { kind: "stack", at: 30.26, word: "energia", dur: 4.9, cues: ["energia", "benessere", "mentale"], title: "I miglioramenti", items: ["L'energia", "Il benessere", "Soprattutto la mente"] },
+        { kind: "checklist", at: 38.68, word: "sicurezza", dur: 3.9, big: true, cues: ["sicurezza", "fiducia", "disciplina"], items: ["Sicurezza", "Fiducia in me stesso", "Disciplina"] },
+        { kind: "question", at: 42.88, dur: 2.1, text: "Avevi delle resistenze?" },
+        { kind: "kinetic", at: 45.28, word: "sotto", dur: 2.0, words: ["LA RESISTENZA?", "ECONOMICA"], accentIndex: 1 },
+        { kind: "title", at: 48.34, word: "salute", dur: 5.1, cues: ["salute", "cento", "dei"], lines: ["La salute viene", "cento volte prima", "dei soldi"], accent: "soldi" },
+        { kind: "kinetic", at: 53.74, word: "faccio", dur: 2.5, words: ["LO FACCIO", "MI FA BENE"], accentIndex: 1 },
+        { kind: "question", at: 56.6, dur: 2.0, text: "Cosa diresti a chi è indeciso?" },
+        { kind: "kinetic", at: 58.94, word: "nessuno", dur: 1.6, words: ["SE NON LO FAI TU", "NESSUNO LO FA", "AL POSTO TUO"], accentIndex: 1 },
+        { kind: "kinetic", at: 62.02, word: "salute", dur: 2.5, words: ["LA SALUTE", "LA COSA PIÙ", "IMPORTANTE"], accentIndex: 0 },
+        { kind: "kinetic", at: 66.02, word: "inizia", dur: 2.3, words: ["INIZIA SUBITO", "NON ASPETTARE"], accentIndex: 0 },
+        { kind: "kinetic", at: 68.66, word: "cogli", dur: 1.6, words: ["COGLI L'OPPORTUNITÀ", "AL VOLO"], accentIndex: 1 },
+        { kind: "question", at: 70.5, dur: 2.2, text: "La tua esperienza in una parola?" },
+        { kind: "kinetic", at: 74.55, word: "vitalità", dur: 1.4, words: ["VITALITÀ"], accentIndex: 0 },
+      ],
+      cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
+    },
+    didascalia: `«La salute viene cento volte prima dei soldi.»
+
+Taddeo, da Vicenza, andava oltre le sue potenzialità: superava i suoi limiti e spesso dopo una corsa stava male, tra mal di stomaco e mal di testa. Oggi finisce una gara e sta bene, anzi meglio di quando è partito.
+
+Con il percorso Correre Naturale® sono migliorati l'energia, il benessere e soprattutto la testa: sicurezza, fiducia in se stesso, disciplina.
+
+L'unica resistenza era quella economica. Poi il ragionamento: è un investimento sulla salute, e lo ha fatto.
+
+Il suo consiglio a chi è indeciso: «Se non lo fai tu, nessuno lo fa al posto tuo. Inizia subito, non aspettare.» La sua esperienza in una parola: vitalità.
+
+Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #testimonianza #corsa #running #salute`,
   },
 ];

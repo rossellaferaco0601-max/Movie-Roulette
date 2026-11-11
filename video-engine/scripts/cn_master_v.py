@@ -21,7 +21,8 @@ for i, s in enumerate(c["segments"]):
     nv = n + (round(TAIL * FPS) if last else 0)
     # pulizia del girato da telefono: rumore via, ingrandimento lanczos, nitidezza adattiva, contrasto e colore leggeri
     LOOK = c.get("vf", "cas=0.55,eq=contrast=1.06:saturation=1.08:gamma=1.02"); DN = "" if "vf" in c else "hqdn3d=2:1.5:4:3,"
-    vf = f"{DN}crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos+accurate_rnd,{LOOK},fps={FPS},setsar=1" + (f",trim=end_frame={n},tpad=stop_mode=clone:stop_duration={TAIL}" if last else "")
+    PRE = f"fps={FPS}," + c["pre"] + "," if c.get("pre") else ""   # ritaglio del girato grezzo (scripts/cn_testi_prep.py): il sorgente non va riconvertito tutto
+    vf = f"{PRE}{DN}crop={int(w)}:{int(h)}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos+accurate_rnd,{LOOK},fps={FPS},setsar=1" + (f",trim=end_frame={n},tpad=stop_mode=clone:stop_duration={TAIL}" if last else "")
     # audio delle testimonianze: toccare il meno possibile
     VOICE = "highpass=f=90,afftdn=nr=10:nf=-45:tn=1,"  # solo pulizia leggera del brusio: niente gate, compressore o equalizzazione (Ross 9/11: «assordante»)
     # taglio audio netto a metà dell'incrocio video (micro-incrocio di AX s): l'incrocio lungo si mangiava attacchi e code delle parole

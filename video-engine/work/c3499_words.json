@@ -1,0 +1,6762 @@
+[
+ {
+  "text": " Sono",
+  "startMs": 13000,
+  "endMs": 13240,
+  "timestampMs": 13120,
+  "confidence": 0.042564939707517624,
+  "whisperStartMs": 12790
+ },
+ {
+  "text": " Tadeo,",
+  "startMs": 13380,
+  "endMs": 13900,
+  "timestampMs": 13640,
+  "confidence": 0.9088664650917053,
+  "whisperStartMs": 13390
+ },
+ {
+  "text": " vengo",
+  "startMs": 14020,
+  "endMs": 14220,
+  "timestampMs": 14120,
+  "confidence": 0.986680656671524,
+  "whisperStartMs": 14010
+ },
+ {
+  "text": " da",
+  "startMs": 14280,
+  "endMs": 14360,
+  "timestampMs": 14320,
+  "confidence": 0.9740756750106812,
+  "whisperStartMs": 14290
+ },
+ {
+  "text": " Vicenza.",
+  "startMs": 14400,
+  "endMs": 14880,
+  "timestampMs": 14640,
+  "confidence": 0.9944638609886169,
+  "whisperStartMs": 14430
+ },
+ {
+  "text": " Ok,",
+  "startMs": 22440,
+  "endMs": 22560,
+  "timestampMs": 22500,
+  "confidence": 0.5587835311889648,
+  "whisperStartMs": 22090
+ },
+ {
+  "text": " allora",
+  "startMs": 22880,
+  "endMs": 23160,
+  "timestampMs": 23020,
+  "confidence": 0.9304302930831909,
+  "whisperStartMs": 23030
+ },
+ {
+  "text": " i",
+  "startMs": 23320,
+  "endMs": 23360,
+  "timestampMs": 23330,
+  "confidence": 0.7058270573616028,
+  "whisperStartMs": 23270
+ },
+ {
+  "text": " principali",
+  "startMs": 23540,
+  "endMs": 24080,
+  "timestampMs": 23810,
+  "confidence": 0.9975453913211823,
+  "whisperStartMs": 23670
+ },
+ {
+  "text": " miglioramenti",
+  "startMs": 24220,
+  "endMs": 24820,
+  "timestampMs": 24520,
+  "confidence": 0.998403537273407,
+  "whisperStartMs": 24170
+ },
+ {
+  "text": " che",
+  "startMs": 24860,
+  "endMs": 24920,
+  "timestampMs": 24890,
+  "confidence": 0.9777297973632812,
+  "whisperStartMs": 24890
+ },
+ {
+  "text": " ho",
+  "startMs": 24960,
+  "endMs": 25000,
+  "timestampMs": 24980,
+  "confidence": 0.9962669014930725,
+  "whisperStartMs": 25030
+ },
+ {
+  "text": " avuto",
+  "startMs": 25040,
+  "endMs": 25340,
+  "timestampMs": 25190,
+  "confidence": 0.9995022714138031,
+  "whisperStartMs": 25050
+ },
+ {
+  "text": " sono",
+  "startMs": 25440,
+  "endMs": 25520,
+  "timestampMs": 25480,
+  "confidence": 0.8519948124885559,
+  "whisperStartMs": 25410
+ },
+ {
+  "text": " stati",
+  "startMs": 25560,
+  "endMs": 25820,
+  "timestampMs": 25690,
+  "confidence": 0.9965603947639465,
+  "whisperStartMs": 25610
+ },
+ {
+  "text": " a",
+  "startMs": 25880,
+  "endMs": 25920,
+  "timestampMs": 25900,
+  "confidence": 0.9869201183319092,
+  "whisperStartMs": 25910
+ },
+ {
+  "text": " livello",
+  "startMs": 25960,
+  "endMs": 26260,
+  "timestampMs": 26110,
+  "confidence": 0.9989327192306519,
+  "whisperStartMs": 26050
+ },
+ {
+  "text": " di",
+  "startMs": 26340,
+  "endMs": 26440,
+  "timestampMs": 26390,
+  "confidence": 0.9951470494270325,
+  "whisperStartMs": 26870
+ },
+ {
+  "text": " energia,",
+  "startMs": 27000,
+  "endMs": 27560,
+  "timestampMs": 27280,
+  "confidence": 0.9586235880851746,
+  "whisperStartMs": 27070
+ },
+ {
+  "text": " di",
+  "startMs": 28320,
+  "endMs": 28440,
+  "timestampMs": 28380,
+  "confidence": 0.9920670986175537,
+  "whisperStartMs": 28730
+ },
+ {
+  "text": " benessere,",
+  "startMs": 28860,
+  "endMs": 29480,
+  "timestampMs": 29170,
+  "confidence": 0.9834116101264954,
+  "whisperStartMs": 28970
+ },
+ {
+  "text": " ma",
+  "startMs": 29580,
+  "endMs": 29660,
+  "timestampMs": 29620,
+  "confidence": 0.9936244487762451,
+  "whisperStartMs": 29690
+ },
+ {
+  "text": " soprattutto",
+  "startMs": 29720,
+  "endMs": 30180,
+  "timestampMs": 29950,
+  "confidence": 0.9958339929580688,
+  "whisperStartMs": 29810
+ },
+ {
+  "text": " a",
+  "startMs": 30200,
+  "endMs": 30240,
+  "timestampMs": 30220,
+  "confidence": 0.990401566028595,
+  "whisperStartMs": 30210
+ },
+ {
+  "text": " livello",
+  "startMs": 30280,
+  "endMs": 30500,
+  "timestampMs": 30390,
+  "confidence": 0.9995974004268646,
+  "whisperStartMs": 30370
+ },
+ {
+  "text": " mentale",
+  "startMs": 30580,
+  "endMs": 31060,
+  "timestampMs": 30820,
+  "confidence": 0.994470626115799,
+  "whisperStartMs": 30670
+ },
+ {
+  "text": " perché",
+  "startMs": 31220,
+  "endMs": 31560,
+  "timestampMs": 31390,
+  "confidence": 0.5132161974906921,
+  "whisperStartMs": 31210
+ },
+ {
+  "text": " fare",
+  "startMs": 32240,
+  "endMs": 32439,
+  "timestampMs": 32339,
+  "confidence": 0.9851550459861755,
+  "whisperStartMs": 32110
+ },
+ {
+  "text": " il",
+  "startMs": 32479,
+  "endMs": 32520,
+  "timestampMs": 32499,
+  "confidence": 0.9908395409584045,
+  "whisperStartMs": 32490
+ },
+ {
+  "text": " percorso",
+  "startMs": 32560,
+  "endMs": 33060,
+  "timestampMs": 32810,
+  "confidence": 0.9988064169883728,
+  "whisperStartMs": 32729
+ },
+ {
+  "text": " con",
+  "startMs": 33140,
+  "endMs": 33360,
+  "timestampMs": 33250,
+  "confidence": 0.9926256537437439,
+  "whisperStartMs": 33150
+ },
+ {
+  "text": " Daniele",
+  "startMs": 33580,
+  "endMs": 33920,
+  "timestampMs": 33750,
+  "confidence": 0.9778255820274353,
+  "whisperStartMs": 33590
+ },
+ {
+  "text": " e",
+  "startMs": 33960,
+  "endMs": 34000,
+  "timestampMs": 33970,
+  "confidence": 0.7757985591888428,
+  "whisperStartMs": 33990
+ },
+ {
+  "text": " tutti",
+  "startMs": 34040,
+  "endMs": 34220,
+  "timestampMs": 34130,
+  "confidence": 0.9721404910087585,
+  "whisperStartMs": 34110
+ },
+ {
+  "text": " voi",
+  "startMs": 34300,
+  "endMs": 34460,
+  "timestampMs": 34380,
+  "confidence": 0.9986761212348938,
+  "whisperStartMs": 34310
+ },
+ {
+  "text": " mi",
+  "startMs": 34480,
+  "endMs": 34540,
+  "timestampMs": 34510,
+  "confidence": 0.9604961276054382,
+  "whisperStartMs": 34490
+ },
+ {
+  "text": " ha",
+  "startMs": 34560,
+  "endMs": 34620,
+  "timestampMs": 34590,
+  "confidence": 0.9662516117095947,
+  "whisperStartMs": 34610
+ },
+ {
+  "text": " dato",
+  "startMs": 34640,
+  "endMs": 34960,
+  "timestampMs": 34800,
+  "confidence": 0.9990839958190918,
+  "whisperStartMs": 34670
+ },
+ {
+  "text": " sicurezza,",
+  "startMs": 35420,
+  "endMs": 36100,
+  "timestampMs": 35760,
+  "confidence": 0.998639722665151,
+  "whisperStartMs": 35330
+ },
+ {
+  "text": " fiducia",
+  "startMs": 36660,
+  "endMs": 36980,
+  "timestampMs": 36820,
+  "confidence": 0.9949367642402649,
+  "whisperStartMs": 36770
+ },
+ {
+  "text": " in",
+  "startMs": 37020,
+  "endMs": 37060,
+  "timestampMs": 37040,
+  "confidence": 0.9962718486785889,
+  "whisperStartMs": 37050
+ },
+ {
+  "text": " me",
+  "startMs": 37100,
+  "endMs": 37160,
+  "timestampMs": 37130,
+  "confidence": 0.9993892908096313,
+  "whisperStartMs": 37150
+ },
+ {
+  "text": " stesso",
+  "startMs": 37240,
+  "endMs": 37700,
+  "timestampMs": 37470,
+  "confidence": 0.9982840418815613,
+  "whisperStartMs": 37370
+ },
+ {
+  "text": " e",
+  "startMs": 37840,
+  "endMs": 37880,
+  "timestampMs": 37850,
+  "confidence": 0.9233816266059875,
+  "whisperStartMs": 37730
+ },
+ {
+  "text": " anche",
+  "startMs": 37940,
+  "endMs": 38100,
+  "timestampMs": 38020,
+  "confidence": 0.9971690773963928,
+  "whisperStartMs": 37990
+ },
+ {
+  "text": " disciplina",
+  "startMs": 38160,
+  "endMs": 38660,
+  "timestampMs": 38410,
+  "confidence": 0.9974987506866455,
+  "whisperStartMs": 38250
+ },
+ {
+  "text": " chiaramente.",
+  "startMs": 38720,
+  "endMs": 39280,
+  "timestampMs": 39000,
+  "confidence": 0.7833988070487976,
+  "whisperStartMs": 38730
+ },
+ {
+  "text": " Quindi",
+  "startMs": 41000,
+  "endMs": 41180,
+  "timestampMs": 41090,
+  "confidence": 0.8501742482185364,
+  "whisperStartMs": 41050
+ },
+ {
+  "text": " l",
+  "startMs": 41220,
+  "endMs": 41260,
+  "timestampMs": 41230,
+  "confidence": 0.9789555072784424,
+  "whisperStartMs": 41210
+ },
+ {
+  "text": "'aspetto",
+  "startMs": 41280,
+  "endMs": 41840,
+  "timestampMs": 41560,
+  "confidence": 0.9984482526779175,
+  "whisperStartMs": 41330
+ },
+ {
+  "text": " più",
+  "startMs": 42000,
+  "endMs": 42080,
+  "timestampMs": 42040,
+  "confidence": 0.9976325035095215,
+  "whisperStartMs": 41950
+ },
+ {
+  "text": " importante",
+  "startMs": 42120,
+  "endMs": 42720,
+  "timestampMs": 42420,
+  "confidence": 0.9990671277046204,
+  "whisperStartMs": 42230
+ },
+ {
+  "text": " sia",
+  "startMs": 43100,
+  "endMs": 43300,
+  "timestampMs": 43200,
+  "confidence": 0.9838047623634338,
+  "whisperStartMs": 42950
+ },
+ {
+  "text": " lato",
+  "startMs": 43340,
+  "endMs": 43560,
+  "timestampMs": 43450,
+  "confidence": 0.7042726874351501,
+  "whisperStartMs": 43350
+ },
+ {
+  "text": " benessere,",
+  "startMs": 43660,
+  "endMs": 44320,
+  "timestampMs": 43990,
+  "confidence": 0.9485807220141093,
+  "whisperStartMs": 43690
+ },
+ {
+  "text": " quindi",
+  "startMs": 44580,
+  "endMs": 44740,
+  "timestampMs": 44660,
+  "confidence": 0.9943390488624573,
+  "whisperStartMs": 44590
+ },
+ {
+  "text": " a",
+  "startMs": 44760,
+  "endMs": 44800,
+  "timestampMs": 44770,
+  "confidence": 0.16276815533638,
+  "whisperStartMs": 44810
+ },
+ {
+  "text": " livello",
+  "startMs": 44820,
+  "endMs": 45040,
+  "timestampMs": 44930,
+  "confidence": 0.9519904851913452,
+  "whisperStartMs": 44950
+ },
+ {
+  "text": " fisico,",
+  "startMs": 45100,
+  "endMs": 45540,
+  "timestampMs": 45320,
+  "confidence": 0.9941841959953308,
+  "whisperStartMs": 45130
+ },
+ {
+  "text": " ma",
+  "startMs": 46200,
+  "endMs": 46260,
+  "timestampMs": 46230,
+  "confidence": 0.9956879019737244,
+  "whisperStartMs": 46350
+ },
+ {
+  "text": " anche",
+  "startMs": 46340,
+  "endMs": 46520,
+  "timestampMs": 46430,
+  "confidence": 0.912047803401947,
+  "whisperStartMs": 46450
+ },
+ {
+  "text": " soprattutto",
+  "startMs": 46580,
+  "endMs": 46960,
+  "timestampMs": 46770,
+  "confidence": 0.9285978078842163,
+  "whisperStartMs": 46630
+ },
+ {
+  "text": " a",
+  "startMs": 46980,
+  "endMs": 47020,
+  "timestampMs": 47000,
+  "confidence": 0.9860471487045288,
+  "whisperStartMs": 47010
+ },
+ {
+  "text": " livello",
+  "startMs": 47040,
+  "endMs": 47380,
+  "timestampMs": 47210,
+  "confidence": 0.998368501663208,
+  "whisperStartMs": 47130
+ },
+ {
+  "text": " mentale",
+  "startMs": 47560,
+  "endMs": 48000,
+  "timestampMs": 47780,
+  "confidence": 0.9827496707439423,
+  "whisperStartMs": 47590
+ },
+ {
+  "text": " e",
+  "startMs": 48020,
+  "endMs": 48060,
+  "timestampMs": 48030,
+  "confidence": 0.5900366306304932,
+  "whisperStartMs": 48050
+ },
+ {
+  "text": " di",
+  "startMs": 48080,
+  "endMs": 48140,
+  "timestampMs": 48110,
+  "confidence": 0.9869738817214966,
+  "whisperStartMs": 48130
+ },
+ {
+  "text": " atteggiamento.",
+  "startMs": 48180,
+  "endMs": 48860,
+  "timestampMs": 48520,
+  "confidence": 0.996947169303894,
+  "whisperStartMs": 48270
+ },
+ {
+  "text": " Allora,",
+  "startMs": 54780,
+  "endMs": 55100,
+  "timestampMs": 54940,
+  "confidence": 0.9223631024360657,
+  "whisperStartMs": 54900
+ },
+ {
+  "text": " l",
+  "startMs": 55160,
+  "endMs": 55200,
+  "timestampMs": 55170,
+  "confidence": 0.9960548877716064,
+  "whisperStartMs": 55200
+ },
+ {
+  "text": "'obiettivo",
+  "startMs": 55200,
+  "endMs": 55780,
+  "timestampMs": 55490,
+  "confidence": 0.9955720424652099,
+  "whisperStartMs": 55260
+ },
+ {
+  "text": " principale",
+  "startMs": 56140,
+  "endMs": 56760,
+  "timestampMs": 56450,
+  "confidence": 0.9952430725097656,
+  "whisperStartMs": 56220
+ },
+ {
+  "text": " era",
+  "startMs": 56840,
+  "endMs": 56960,
+  "timestampMs": 56900,
+  "confidence": 0.9885380268096924,
+  "whisperStartMs": 56860
+ },
+ {
+  "text": " quello",
+  "startMs": 57020,
+  "endMs": 57240,
+  "timestampMs": 57130,
+  "confidence": 0.9853201508522034,
+  "whisperStartMs": 57060
+ },
+ {
+  "text": " di",
+  "startMs": 57300,
+  "endMs": 57400,
+  "timestampMs": 57350,
+  "confidence": 0.9984819293022156,
+  "whisperStartMs": 57300
+ },
+ {
+  "text": " utilizzare",
+  "startMs": 58460,
+  "endMs": 58920,
+  "timestampMs": 58690,
+  "confidence": 0.9946473240852356,
+  "whisperStartMs": 58480
+ },
+ {
+  "text": " la",
+  "startMs": 59000,
+  "endMs": 59040,
+  "timestampMs": 59020,
+  "confidence": 0.9972056746482849,
+  "whisperStartMs": 58980
+ },
+ {
+  "text": " corsa",
+  "startMs": 59100,
+  "endMs": 59440,
+  "timestampMs": 59270,
+  "confidence": 0.9933597445487976,
+  "whisperStartMs": 59220
+ },
+ {
+  "text": " come",
+  "startMs": 59540,
+  "endMs": 59840,
+  "timestampMs": 59690,
+  "confidence": 0.9965357780456543,
+  "whisperStartMs": 59520
+ },
+ {
+  "text": " un",
+  "startMs": 60120,
+  "endMs": 60200,
+  "timestampMs": 60160,
+  "confidence": 0.9912862181663513,
+  "whisperStartMs": 60040
+ },
+ {
+  "text": " divertimento",
+  "startMs": 60240,
+  "endMs": 61040,
+  "timestampMs": 60640,
+  "confidence": 0.9997835755348206,
+  "whisperStartMs": 60400
+ },
+ {
+  "text": " e",
+  "startMs": 61720,
+  "endMs": 61760,
+  "timestampMs": 61730,
+  "confidence": 0.781840980052948,
+  "whisperStartMs": 61200
+ },
+ {
+  "text": " non",
+  "startMs": 61800,
+  "endMs": 61960,
+  "timestampMs": 61880,
+  "confidence": 0.99813312292099,
+  "whisperStartMs": 61880
+ },
+ {
+  "text": " come",
+  "startMs": 62040,
+  "endMs": 62300,
+  "timestampMs": 62170,
+  "confidence": 0.9926698207855225,
+  "whisperStartMs": 62100
+ },
+ {
+  "text": " il",
+  "startMs": 62420,
+  "endMs": 62560,
+  "timestampMs": 62490,
+  "confidence": 0.5575686693191528,
+  "whisperStartMs": 62520
+ },
+ {
+  "text": " raggiungere,",
+  "startMs": 62960,
+  "endMs": 63560,
+  "timestampMs": 63260,
+  "confidence": 0.8765382915735245,
+  "whisperStartMs": 63020
+ },
+ {
+  "text": " fare",
+  "startMs": 63660,
+  "endMs": 63800,
+  "timestampMs": 63730,
+  "confidence": 0.9559957981109619,
+  "whisperStartMs": 63680
+ },
+ {
+  "text": " una",
+  "startMs": 63840,
+  "endMs": 63920,
+  "timestampMs": 63880,
+  "confidence": 0.9974134564399719,
+  "whisperStartMs": 63840
+ },
+ {
+  "text": " corsa",
+  "startMs": 63980,
+  "endMs": 64280,
+  "timestampMs": 64130,
+  "confidence": 0.9987948536872864,
+  "whisperStartMs": 64019
+ },
+ {
+  "text": " per",
+  "startMs": 64360,
+  "endMs": 64599,
+  "timestampMs": 64479,
+  "confidence": 0.9454630017280579,
+  "whisperStartMs": 64360
+ },
+ {
+  "text": " raggiungere",
+  "startMs": 64739,
+  "endMs": 65280,
+  "timestampMs": 65009,
+  "confidence": 0.9965792894363403,
+  "whisperStartMs": 64780
+ },
+ {
+  "text": " un",
+  "startMs": 65400,
+  "endMs": 65459,
+  "timestampMs": 65429,
+  "confidence": 0.9823232293128967,
+  "whisperStartMs": 65400
+ },
+ {
+  "text": " determinato",
+  "startMs": 65500,
+  "endMs": 66000,
+  "timestampMs": 65750,
+  "confidence": 0.9988086521625519,
+  "whisperStartMs": 65580
+ },
+ {
+  "text": " tempo",
+  "startMs": 66080,
+  "endMs": 66440,
+  "timestampMs": 66260,
+  "confidence": 0.9994723200798035,
+  "whisperStartMs": 66160
+ },
+ {
+  "text": " ad",
+  "startMs": 66520,
+  "endMs": 66560,
+  "timestampMs": 66540,
+  "confidence": 0.47134172916412354,
+  "whisperStartMs": 66460
+ },
+ {
+  "text": " esempio.",
+  "startMs": 66620,
+  "endMs": 67040,
+  "timestampMs": 66830,
+  "confidence": 0.9998878240585327,
+  "whisperStartMs": 66720
+ },
+ {
+  "text": " Adesso",
+  "startMs": 68820,
+  "endMs": 69360,
+  "timestampMs": 69090,
+  "confidence": 0.844202995300293,
+  "whisperStartMs": 68780
+ },
+ {
+  "text": " quello",
+  "startMs": 69520,
+  "endMs": 69700,
+  "timestampMs": 69610,
+  "confidence": 0.7462490797042847,
+  "whisperStartMs": 69520
+ },
+ {
+  "text": " che",
+  "startMs": 69720,
+  "endMs": 69800,
+  "timestampMs": 69760,
+  "confidence": 0.9994377493858337,
+  "whisperStartMs": 69720
+ },
+ {
+  "text": " faccio",
+  "startMs": 69860,
+  "endMs": 70120,
+  "timestampMs": 69990,
+  "confidence": 0.9970442652702332,
+  "whisperStartMs": 69960
+ },
+ {
+  "text": " è",
+  "startMs": 70160,
+  "endMs": 70200,
+  "timestampMs": 70170,
+  "confidence": 0.9935021996498108,
+  "whisperStartMs": 70180
+ },
+ {
+  "text": " uscire,",
+  "startMs": 70300,
+  "endMs": 70680,
+  "timestampMs": 70490,
+  "confidence": 0.9972711801528931,
+  "whisperStartMs": 70260
+ },
+ {
+  "text": " divertirmi",
+  "startMs": 70800,
+  "endMs": 71360,
+  "timestampMs": 71080,
+  "confidence": 0.98167285323143,
+  "whisperStartMs": 70820
+ },
+ {
+  "text": " e",
+  "startMs": 71500,
+  "endMs": 71540,
+  "timestampMs": 71510,
+  "confidence": 0.9004509449005127,
+  "whisperStartMs": 71440
+ },
+ {
+  "text": " godermi",
+  "startMs": 71580,
+  "endMs": 71980,
+  "timestampMs": 71780,
+  "confidence": 0.9159998893737793,
+  "whisperStartMs": 71620
+ },
+ {
+  "text": " la",
+  "startMs": 72040,
+  "endMs": 72080,
+  "timestampMs": 72060,
+  "confidence": 0.9953392744064331,
+  "whisperStartMs": 72040
+ },
+ {
+  "text": " corsa",
+  "startMs": 72140,
+  "endMs": 72580,
+  "timestampMs": 72360,
+  "confidence": 0.9989401698112488,
+  "whisperStartMs": 72220
+ },
+ {
+  "text": " senza",
+  "startMs": 73100,
+  "endMs": 73340,
+  "timestampMs": 73220,
+  "confidence": 0.7845523357391357,
+  "whisperStartMs": 72980
+ },
+ {
+  "text": " guardare",
+  "startMs": 73400,
+  "endMs": 73820,
+  "timestampMs": 73610,
+  "confidence": 0.9871695935726166,
+  "whisperStartMs": 73400
+ },
+ {
+  "text": " chiaramente",
+  "startMs": 74080,
+  "endMs": 74540,
+  "timestampMs": 74310,
+  "confidence": 0.9327745139598846,
+  "whisperStartMs": 74120
+ },
+ {
+  "text": " l",
+  "startMs": 74700,
+  "endMs": 74740,
+  "timestampMs": 74710,
+  "confidence": 0.04345427453517914,
+  "whisperStartMs": 74680
+ },
+ {
+  "text": "'orologio,",
+  "startMs": 75200,
+  "endMs": 75760,
+  "timestampMs": 75480,
+  "confidence": 0.9516875743865967,
+  "whisperStartMs": 74740
+ },
+ {
+  "text": " ma",
+  "startMs": 75820,
+  "endMs": 75940,
+  "timestampMs": 75880,
+  "confidence": 0.9334425330162048,
+  "whisperStartMs": 76180
+ },
+ {
+  "text": " andando",
+  "startMs": 76500,
+  "endMs": 76780,
+  "timestampMs": 76640,
+  "confidence": 0.977413535118103,
+  "whisperStartMs": 76580
+ },
+ {
+  "text": " semplicemente",
+  "startMs": 76840,
+  "endMs": 77400,
+  "timestampMs": 77120,
+  "confidence": 0.9950555165608724,
+  "whisperStartMs": 76860
+ },
+ {
+  "text": " a",
+  "startMs": 77440,
+  "endMs": 77480,
+  "timestampMs": 77450,
+  "confidence": 0.8850114941596985,
+  "whisperStartMs": 77420
+ },
+ {
+  "text": " sensazione",
+  "startMs": 77500,
+  "endMs": 78220,
+  "timestampMs": 77860,
+  "confidence": 0.9847452044487,
+  "whisperStartMs": 77560
+ },
+ {
+  "text": " e",
+  "startMs": 79060,
+  "endMs": 79100,
+  "timestampMs": 79070,
+  "confidence": 0.8796631097793579,
+  "whisperStartMs": 78820
+ },
+ {
+  "text": " divertendomi,",
+  "startMs": 80020,
+  "endMs": 80780,
+  "timestampMs": 80400,
+  "confidence": 0.9781431754430135,
+  "whisperStartMs": 80120
+ },
+ {
+  "text": " godendomi",
+  "startMs": 81040,
+  "endMs": 81580,
+  "timestampMs": 81310,
+  "confidence": 0.984819253285726,
+  "whisperStartMs": 81080
+ },
+ {
+  "text": " e",
+  "startMs": 81860,
+  "endMs": 81900,
+  "timestampMs": 81870,
+  "confidence": 0.6520946621894836,
+  "whisperStartMs": 81740
+ },
+ {
+  "text": " respirando",
+  "startMs": 82760,
+  "endMs": 83460,
+  "timestampMs": 83110,
+  "confidence": 0.7895665168762207,
+  "whisperStartMs": 82360
+ },
+ {
+  "text": " ed",
+  "startMs": 83680,
+  "endMs": 83760,
+  "timestampMs": 83720,
+  "confidence": 0.7590227127075195,
+  "whisperStartMs": 83660
+ },
+ {
+  "text": " essendo",
+  "startMs": 83820,
+  "endMs": 84100,
+  "timestampMs": 83960,
+  "confidence": 0.9832599461078644,
+  "whisperStartMs": 83860
+ },
+ {
+  "text": " vivo",
+  "startMs": 84180,
+  "endMs": 84380,
+  "timestampMs": 84280,
+  "confidence": 0.9885554909706116,
+  "whisperStartMs": 84200
+ },
+ {
+  "text": " anche",
+  "startMs": 84500,
+  "endMs": 84760,
+  "timestampMs": 84630,
+  "confidence": 0.9494075179100037,
+  "whisperStartMs": 84480
+ },
+ {
+  "text": " grazie",
+  "startMs": 86060,
+  "endMs": 86300,
+  "timestampMs": 86180,
+  "confidence": 0.8276698291301727,
+  "whisperStartMs": 85680
+ },
+ {
+  "text": " alla",
+  "startMs": 86340,
+  "endMs": 86460,
+  "timestampMs": 86400,
+  "confidence": 0.9612898230552673,
+  "whisperStartMs": 86380
+ },
+ {
+  "text": " corsa.",
+  "startMs": 86480,
+  "endMs": 86800,
+  "timestampMs": 86640,
+  "confidence": 0.9873815178871155,
+  "whisperStartMs": 86540
+ },
+ {
+  "text": " Poi",
+  "startMs": 87920,
+  "endMs": 88120,
+  "timestampMs": 88020,
+  "confidence": 0.7628618776798248,
+  "whisperStartMs": 87900
+ },
+ {
+  "text": " un",
+  "startMs": 88360,
+  "endMs": 88420,
+  "timestampMs": 88390,
+  "confidence": 0.889062225818634,
+  "whisperStartMs": 88340
+ },
+ {
+  "text": " altro",
+  "startMs": 88480,
+  "endMs": 88620,
+  "timestampMs": 88550,
+  "confidence": 0.9869490265846252,
+  "whisperStartMs": 88520
+ },
+ {
+  "text": " obiettivo",
+  "startMs": 88660,
+  "endMs": 89020,
+  "timestampMs": 88840,
+  "confidence": 0.9976004064083099,
+  "whisperStartMs": 88700
+ },
+ {
+  "text": " era",
+  "startMs": 89080,
+  "endMs": 89180,
+  "timestampMs": 89130,
+  "confidence": 0.9837703704833984,
+  "whisperStartMs": 89100
+ },
+ {
+  "text": " quello",
+  "startMs": 89240,
+  "endMs": 89440,
+  "timestampMs": 89340,
+  "confidence": 0.9552333354949951,
+  "whisperStartMs": 89280
+ },
+ {
+  "text": " di",
+  "startMs": 89500,
+  "endMs": 89600,
+  "timestampMs": 89550,
+  "confidence": 0.9982263445854187,
+  "whisperStartMs": 89520
+ },
+ {
+  "text": " terminare",
+  "startMs": 89860,
+  "endMs": 90320,
+  "timestampMs": 90090,
+  "confidence": 0.9958769977092743,
+  "whisperStartMs": 89900
+ },
+ {
+  "text": " le",
+  "startMs": 90400,
+  "endMs": 90440,
+  "timestampMs": 90420,
+  "confidence": 0.9941733479499817,
+  "whisperStartMs": 90400
+ },
+ {
+  "text": " gare",
+  "startMs": 90500,
+  "endMs": 90820,
+  "timestampMs": 90660,
+  "confidence": 0.988256961107254,
+  "whisperStartMs": 90580
+ },
+ {
+  "text": " e",
+  "startMs": 91020,
+  "endMs": 91060,
+  "timestampMs": 91030,
+  "confidence": 0.9769935011863708,
+  "whisperStartMs": 90900
+ },
+ {
+  "text": " stare",
+  "startMs": 91080,
+  "endMs": 91280,
+  "timestampMs": 91180,
+  "confidence": 0.994006872177124,
+  "whisperStartMs": 91120
+ },
+ {
+  "text": " bene",
+  "startMs": 91340,
+  "endMs": 91580,
+  "timestampMs": 91460,
+  "confidence": 0.9980877041816711,
+  "whisperStartMs": 91320
+ },
+ {
+  "text": " perché",
+  "startMs": 91680,
+  "endMs": 91880,
+  "timestampMs": 91780,
+  "confidence": 0.42985180020332336,
+  "whisperStartMs": 91640
+ },
+ {
+  "text": " spesso",
+  "startMs": 92240,
+  "endMs": 92600,
+  "timestampMs": 92420,
+  "confidence": 0.9975371956825256,
+  "whisperStartMs": 92200
+ },
+ {
+  "text": " mi",
+  "startMs": 92680,
+  "endMs": 92720,
+  "timestampMs": 92700,
+  "confidence": 0.9951961636543274,
+  "whisperStartMs": 92660
+ },
+ {
+  "text": " succedeva",
+  "startMs": 92780,
+  "endMs": 93260,
+  "timestampMs": 93020,
+  "confidence": 0.9952661196390787,
+  "whisperStartMs": 92860
+ },
+ {
+  "text": " che",
+  "startMs": 94280,
+  "endMs": 94360,
+  "timestampMs": 94320,
+  "confidence": 0.9606963992118835,
+  "whisperStartMs": 94180
+ },
+ {
+  "text": " magari",
+  "startMs": 94420,
+  "endMs": 94720,
+  "timestampMs": 94570,
+  "confidence": 0.9310763478279114,
+  "whisperStartMs": 94460
+ },
+ {
+  "text": " andavo",
+  "startMs": 95280,
+  "endMs": 95700,
+  "timestampMs": 95490,
+  "confidence": 0.9907856285572052,
+  "whisperStartMs": 95260
+ },
+ {
+  "text": " troppo",
+  "startMs": 96000,
+  "endMs": 96460,
+  "timestampMs": 96230,
+  "confidence": 0.992894172668457,
+  "whisperStartMs": 96000
+ },
+ {
+  "text": " rispetto",
+  "startMs": 97120,
+  "endMs": 97540,
+  "timestampMs": 97330,
+  "confidence": 0.9266257882118225,
+  "whisperStartMs": 96940
+ },
+ {
+  "text": " alle",
+  "startMs": 97580,
+  "endMs": 97700,
+  "timestampMs": 97640,
+  "confidence": 0.9800742268562317,
+  "whisperStartMs": 97600
+ },
+ {
+  "text": " mie",
+  "startMs": 97740,
+  "endMs": 97980,
+  "timestampMs": 97860,
+  "confidence": 0.9979931116104126,
+  "whisperStartMs": 97760
+ },
+ {
+  "text": " potenzialità,",
+  "startMs": 98100,
+  "endMs": 98720,
+  "timestampMs": 98410,
+  "confidence": 0.9944152683019638,
+  "whisperStartMs": 98100
+ },
+ {
+  "text": " superavo",
+  "startMs": 98980,
+  "endMs": 99420,
+  "timestampMs": 99200,
+  "confidence": 0.9735192954540253,
+  "whisperStartMs": 99100
+ },
+ {
+  "text": " i",
+  "startMs": 99460,
+  "endMs": 99500,
+  "timestampMs": 99480,
+  "confidence": 0.9940576553344727,
+  "whisperStartMs": 99500
+ },
+ {
+  "text": " miei",
+  "startMs": 99540,
+  "endMs": 99680,
+  "timestampMs": 99610,
+  "confidence": 0.9976053833961487,
+  "whisperStartMs": 99620
+ },
+ {
+  "text": " limiti,",
+  "startMs": 99720,
+  "endMs": 100100,
+  "timestampMs": 99910,
+  "confidence": 0.994377613067627,
+  "whisperStartMs": 99880
+ },
+ {
+  "text": " ma",
+  "startMs": 100760,
+  "endMs": 100840,
+  "timestampMs": 100800,
+  "confidence": 0.9951713681221008,
+  "whisperStartMs": 100860
+ },
+ {
+  "text": " questo",
+  "startMs": 100900,
+  "endMs": 101080,
+  "timestampMs": 100990,
+  "confidence": 0.9450254440307617,
+  "whisperStartMs": 100960
+ },
+ {
+  "text": " superare",
+  "startMs": 101160,
+  "endMs": 101520,
+  "timestampMs": 101340,
+  "confidence": 0.9884836971759796,
+  "whisperStartMs": 101260
+ },
+ {
+  "text": " i",
+  "startMs": 101580,
+  "endMs": 101620,
+  "timestampMs": 101590,
+  "confidence": 0.9899419546127319,
+  "whisperStartMs": 101640
+ },
+ {
+  "text": " miei",
+  "startMs": 101640,
+  "endMs": 101780,
+  "timestampMs": 101710,
+  "confidence": 0.9982200860977173,
+  "whisperStartMs": 101740
+ },
+ {
+  "text": " limiti",
+  "startMs": 101840,
+  "endMs": 102220,
+  "timestampMs": 102030,
+  "confidence": 0.9977893531322479,
+  "whisperStartMs": 101980
+ },
+ {
+  "text": " mi",
+  "startMs": 102460,
+  "endMs": 102500,
+  "timestampMs": 102480,
+  "confidence": 0.11523560434579849,
+  "whisperStartMs": 102740
+ },
+ {
+  "text": " era",
+  "startMs": 102760,
+  "endMs": 102860,
+  "timestampMs": 102810,
+  "confidence": 0.7900493144989014,
+  "whisperStartMs": 102740
+ },
+ {
+  "text": " controproducente",
+  "startMs": 102920,
+  "endMs": 103820,
+  "timestampMs": 103370,
+  "confidence": 0.9027106285095214,
+  "whisperStartMs": 102940
+ },
+ {
+  "text": " perché",
+  "startMs": 103860,
+  "endMs": 104040,
+  "timestampMs": 103950,
+  "confidence": 0.707848846912384,
+  "whisperStartMs": 103880
+ },
+ {
+  "text": " mi",
+  "startMs": 104120,
+  "endMs": 104220,
+  "timestampMs": 104170,
+  "confidence": 0.9312894344329834,
+  "whisperStartMs": 104120
+ },
+ {
+  "text": " generava",
+  "startMs": 106300,
+  "endMs": 106680,
+  "timestampMs": 106490,
+  "confidence": 0.7261402010917664,
+  "whisperStartMs": 106380
+ },
+ {
+  "text": " mal",
+  "startMs": 106760,
+  "endMs": 106880,
+  "timestampMs": 106820,
+  "confidence": 0.9323047995567322,
+  "whisperStartMs": 106800
+ },
+ {
+  "text": " di",
+  "startMs": 106920,
+  "endMs": 106980,
+  "timestampMs": 106950,
+  "confidence": 0.9953826069831848,
+  "whisperStartMs": 106900
+ },
+ {
+  "text": " stomaco",
+  "startMs": 107020,
+  "endMs": 107520,
+  "timestampMs": 107270,
+  "confidence": 0.9905099272727966,
+  "whisperStartMs": 107180
+ },
+ {
+  "text": " piuttosto",
+  "startMs": 107640,
+  "endMs": 108020,
+  "timestampMs": 107830,
+  "confidence": 0.9408938686052958,
+  "whisperStartMs": 107640
+ },
+ {
+  "text": " che",
+  "startMs": 108060,
+  "endMs": 108140,
+  "timestampMs": 108100,
+  "confidence": 0.9639447927474976,
+  "whisperStartMs": 108100
+ },
+ {
+  "text": " mal",
+  "startMs": 108200,
+  "endMs": 108300,
+  "timestampMs": 108250,
+  "confidence": 0.9923392534255981,
+  "whisperStartMs": 108240
+ },
+ {
+  "text": " di",
+  "startMs": 108340,
+  "endMs": 108400,
+  "timestampMs": 108370,
+  "confidence": 0.9995214939117432,
+  "whisperStartMs": 108360
+ },
+ {
+  "text": " testa",
+  "startMs": 108440,
+  "endMs": 108880,
+  "timestampMs": 108660,
+  "confidence": 0.9981590509414673,
+  "whisperStartMs": 108600
+ },
+ {
+  "text": " e",
+  "startMs": 109140,
+  "endMs": 109180,
+  "timestampMs": 109150,
+  "confidence": 0.5759194493293762,
+  "whisperStartMs": 109640
+ },
+ {
+  "text": " in",
+  "startMs": 109880,
+  "endMs": 109980,
+  "timestampMs": 109930,
+  "confidence": 0.887584924697876,
+  "whisperStartMs": 110180
+ },
+ {
+  "text": " diverse",
+  "startMs": 110060,
+  "endMs": 110400,
+  "timestampMs": 110230,
+  "confidence": 0.9850051403045654,
+  "whisperStartMs": 110180
+ },
+ {
+  "text": " occasioni",
+  "startMs": 110440,
+  "endMs": 110860,
+  "timestampMs": 110650,
+  "confidence": 0.9938486814498901,
+  "whisperStartMs": 110440
+ },
+ {
+  "text": " non",
+  "startMs": 110940,
+  "endMs": 111040,
+  "timestampMs": 110990,
+  "confidence": 0.8450227975845337,
+  "whisperStartMs": 110920
+ },
+ {
+  "text": " sono",
+  "startMs": 111080,
+  "endMs": 111240,
+  "timestampMs": 111160,
+  "confidence": 0.9768040776252747,
+  "whisperStartMs": 111140
+ },
+ {
+  "text": " stato",
+  "startMs": 111300,
+  "endMs": 111480,
+  "timestampMs": 111390,
+  "confidence": 0.9989907145500183,
+  "whisperStartMs": 111320
+ },
+ {
+  "text": " bene",
+  "startMs": 111560,
+  "endMs": 111780,
+  "timestampMs": 111670,
+  "confidence": 0.995290994644165,
+  "whisperStartMs": 111560
+ },
+ {
+  "text": " dopo",
+  "startMs": 111820,
+  "endMs": 111960,
+  "timestampMs": 111890,
+  "confidence": 0.972481369972229,
+  "whisperStartMs": 111820
+ },
+ {
+  "text": " una",
+  "startMs": 112020,
+  "endMs": 112100,
+  "timestampMs": 112060,
+  "confidence": 0.99031001329422,
+  "whisperStartMs": 112000
+ },
+ {
+  "text": " corsa.",
+  "startMs": 112140,
+  "endMs": 112500,
+  "timestampMs": 112320,
+  "confidence": 0.9943246245384216,
+  "whisperStartMs": 112240
+ },
+ {
+  "text": " Per",
+  "startMs": 113180,
+  "endMs": 113280,
+  "timestampMs": 113230,
+  "confidence": 0.6974096894264221,
+  "whisperStartMs": 113380
+ },
+ {
+  "text": " cui",
+  "startMs": 113320,
+  "endMs": 113620,
+  "timestampMs": 113470,
+  "confidence": 0.9933492541313171,
+  "whisperStartMs": 113380
+ },
+ {
+  "text": " adesso",
+  "startMs": 113960,
+  "endMs": 114240,
+  "timestampMs": 114100,
+  "confidence": 0.8665425181388855,
+  "whisperStartMs": 113940
+ },
+ {
+  "text": " seguendo",
+  "startMs": 114340,
+  "endMs": 114680,
+  "timestampMs": 114510,
+  "confidence": 0.93839892745018,
+  "whisperStartMs": 114380
+ },
+ {
+  "text": " anche",
+  "startMs": 114760,
+  "endMs": 114880,
+  "timestampMs": 114820,
+  "confidence": 0.9512822031974792,
+  "whisperStartMs": 114780
+ },
+ {
+  "text": " i",
+  "startMs": 114900,
+  "endMs": 114940,
+  "timestampMs": 114920,
+  "confidence": 0.9838001132011414,
+  "whisperStartMs": 114940
+ },
+ {
+  "text": " vostri",
+  "startMs": 114960,
+  "endMs": 115180,
+  "timestampMs": 115070,
+  "confidence": 0.9983786940574646,
+  "whisperStartMs": 115040
+ },
+ {
+  "text": " consigli",
+  "startMs": 115240,
+  "endMs": 115720,
+  "timestampMs": 115480,
+  "confidence": 0.9973709285259247,
+  "whisperStartMs": 115300
+ },
+ {
+  "text": " finisco",
+  "startMs": 116420,
+  "endMs": 116900,
+  "timestampMs": 116660,
+  "confidence": 0.9646411836147308,
+  "whisperStartMs": 116380
+ },
+ {
+  "text": " quella",
+  "startMs": 116960,
+  "endMs": 117160,
+  "timestampMs": 117060,
+  "confidence": 0.9456910490989685,
+  "whisperStartMs": 116980
+ },
+ {
+  "text": " che",
+  "startMs": 117180,
+  "endMs": 117240,
+  "timestampMs": 117210,
+  "confidence": 0.9977800250053406,
+  "whisperStartMs": 117200
+ },
+ {
+  "text": " è",
+  "startMs": 117300,
+  "endMs": 117340,
+  "timestampMs": 117310,
+  "confidence": 0.9796726703643799,
+  "whisperStartMs": 117320
+ },
+ {
+  "text": " una",
+  "startMs": 117360,
+  "endMs": 117460,
+  "timestampMs": 117410,
+  "confidence": 0.9977825284004211,
+  "whisperStartMs": 117400
+ },
+ {
+  "text": " gara",
+  "startMs": 117520,
+  "endMs": 117880,
+  "timestampMs": 117700,
+  "confidence": 0.9942004680633545,
+  "whisperStartMs": 117600
+ },
+ {
+  "text": " o",
+  "startMs": 117960,
+  "endMs": 118000,
+  "timestampMs": 117970,
+  "confidence": 0.808052659034729,
+  "whisperStartMs": 117920
+ },
+ {
+  "text": " semplicemente",
+  "startMs": 118040,
+  "endMs": 118560,
+  "timestampMs": 118300,
+  "confidence": 0.9752528866132101,
+  "whisperStartMs": 118160
+ },
+ {
+  "text": " una",
+  "startMs": 118620,
+  "endMs": 118700,
+  "timestampMs": 118660,
+  "confidence": 0.996917724609375,
+  "whisperStartMs": 118580
+ },
+ {
+  "text": " corsa",
+  "startMs": 118760,
+  "endMs": 119160,
+  "timestampMs": 118960,
+  "confidence": 0.9988106191158295,
+  "whisperStartMs": 118840
+ },
+ {
+  "text": " e",
+  "startMs": 119240,
+  "endMs": 119280,
+  "timestampMs": 119250,
+  "confidence": 0.9570825099945068,
+  "whisperStartMs": 119200
+ },
+ {
+  "text": " sto",
+  "startMs": 119300,
+  "endMs": 119420,
+  "timestampMs": 119360,
+  "confidence": 0.9409729242324829,
+  "whisperStartMs": 119360
+ },
+ {
+  "text": " bene",
+  "startMs": 119480,
+  "endMs": 119780,
+  "timestampMs": 119630,
+  "confidence": 0.9981604218482971,
+  "whisperStartMs": 119540
+ },
+ {
+  "text": " e",
+  "startMs": 120380,
+  "endMs": 120420,
+  "timestampMs": 120390,
+  "confidence": 0.5669940114021301,
+  "whisperStartMs": 120220
+ },
+ {
+  "text": " anzi",
+  "startMs": 120480,
+  "endMs": 120680,
+  "timestampMs": 120580,
+  "confidence": 0.9956109821796417,
+  "whisperStartMs": 120520
+ },
+ {
+  "text": " meglio",
+  "startMs": 120760,
+  "endMs": 121180,
+  "timestampMs": 120970,
+  "confidence": 0.9714409112930298,
+  "whisperStartMs": 120800
+ },
+ {
+  "text": " di",
+  "startMs": 121280,
+  "endMs": 121340,
+  "timestampMs": 121310,
+  "confidence": 0.9792457818984985,
+  "whisperStartMs": 121240
+ },
+ {
+  "text": " quando",
+  "startMs": 121380,
+  "endMs": 121540,
+  "timestampMs": 121460,
+  "confidence": 0.99809330701828,
+  "whisperStartMs": 121440
+ },
+ {
+  "text": " sono",
+  "startMs": 121600,
+  "endMs": 121740,
+  "timestampMs": 121670,
+  "confidence": 0.9938110709190369,
+  "whisperStartMs": 121580
+ },
+ {
+  "text": " partito.",
+  "startMs": 121820,
+  "endMs": 122220,
+  "timestampMs": 122020,
+  "confidence": 0.9965110123157501,
+  "whisperStartMs": 121800
+ },
+ {
+  "text": " Questo",
+  "startMs": 123660,
+  "endMs": 123920,
+  "timestampMs": 123790,
+  "confidence": 0.24697457253932953,
+  "whisperStartMs": 123460
+ },
+ {
+  "text": " penso",
+  "startMs": 124100,
+  "endMs": 124320,
+  "timestampMs": 124210,
+  "confidence": 0.9228684902191162,
+  "whisperStartMs": 123980
+ },
+ {
+  "text": " sia",
+  "startMs": 124400,
+  "endMs": 124540,
+  "timestampMs": 124470,
+  "confidence": 0.9804511666297913,
+  "whisperStartMs": 124380
+ },
+ {
+  "text": " la",
+  "startMs": 125040,
+  "endMs": 125080,
+  "timestampMs": 125060,
+  "confidence": 0.9413684606552124,
+  "whisperStartMs": 124740
+ },
+ {
+  "text": " cosa",
+  "startMs": 125140,
+  "endMs": 125320,
+  "timestampMs": 125230,
+  "confidence": 0.9893823862075806,
+  "whisperStartMs": 125160
+ },
+ {
+  "text": " anche",
+  "startMs": 125380,
+  "endMs": 125520,
+  "timestampMs": 125450,
+  "confidence": 0.8505189418792725,
+  "whisperStartMs": 125380
+ },
+ {
+  "text": " più",
+  "startMs": 125560,
+  "endMs": 125660,
+  "timestampMs": 125610,
+  "confidence": 0.9982896447181702,
+  "whisperStartMs": 125580
+ },
+ {
+  "text": " bella.",
+  "startMs": 125700,
+  "endMs": 126000,
+  "timestampMs": 125850,
+  "confidence": 0.9988560080528259,
+  "whisperStartMs": 125800
+ },
+ {
+  "text": " Allora",
+  "startMs": 157320,
+  "endMs": 157720,
+  "timestampMs": 157520,
+  "confidence": 0.5468289591372013,
+  "whisperStartMs": 157140
+ },
+ {
+  "text": " il",
+  "startMs": 157780,
+  "endMs": 157840,
+  "timestampMs": 157810,
+  "confidence": 0.24856148660182953,
+  "whisperStartMs": 157760
+ },
+ {
+  "text": " miglior",
+  "startMs": 157880,
+  "endMs": 158120,
+  "timestampMs": 158000,
+  "confidence": 0.9735478361447653,
+  "whisperStartMs": 157940
+ },
+ {
+  "text": " risultato",
+  "startMs": 158160,
+  "endMs": 158620,
+  "timestampMs": 158390,
+  "confidence": 0.9926085273424784,
+  "whisperStartMs": 158220
+ },
+ {
+  "text": " obiettivo",
+  "startMs": 158680,
+  "endMs": 159020,
+  "timestampMs": 158850,
+  "confidence": 0.9323490858078003,
+  "whisperStartMs": 158680
+ },
+ {
+  "text": " che",
+  "startMs": 159060,
+  "endMs": 159120,
+  "timestampMs": 159090,
+  "confidence": 0.97529137134552,
+  "whisperStartMs": 159080
+ },
+ {
+  "text": " ho",
+  "startMs": 159140,
+  "endMs": 159180,
+  "timestampMs": 159160,
+  "confidence": 0.5034967660903931,
+  "whisperStartMs": 159220
+ },
+ {
+  "text": " raggiunto,",
+  "startMs": 159200,
+  "endMs": 159820,
+  "timestampMs": 159510,
+  "confidence": 0.9974173506100973,
+  "whisperStartMs": 159260
+ },
+ {
+  "text": " direi",
+  "startMs": 161240,
+  "endMs": 161620,
+  "timestampMs": 161430,
+  "confidence": 0.8220425844192505,
+  "whisperStartMs": 161400
+ },
+ {
+  "text": " aver",
+  "startMs": 161820,
+  "endMs": 162060,
+  "timestampMs": 161940,
+  "confidence": 0.805247962474823,
+  "whisperStartMs": 161840
+ },
+ {
+  "text": " terminato",
+  "startMs": 162560,
+  "endMs": 163040,
+  "timestampMs": 162800,
+  "confidence": 0.994952380657196,
+  "whisperStartMs": 162540
+ },
+ {
+  "text": " una",
+  "startMs": 163100,
+  "endMs": 163200,
+  "timestampMs": 163150,
+  "confidence": 0.9908005595207214,
+  "whisperStartMs": 163120
+ },
+ {
+  "text": " mezza",
+  "startMs": 163260,
+  "endMs": 163480,
+  "timestampMs": 163370,
+  "confidence": 0.9573163986206055,
+  "whisperStartMs": 163340
+ },
+ {
+  "text": " maratona",
+  "startMs": 163520,
+  "endMs": 164060,
+  "timestampMs": 163790,
+  "confidence": 0.9819899996121725,
+  "whisperStartMs": 163580
+ },
+ {
+  "text": " e",
+  "startMs": 164900,
+  "endMs": 164940,
+  "timestampMs": 164910,
+  "confidence": 0.5389457941055298,
+  "whisperStartMs": 164720
+ },
+ {
+  "text": " in",
+  "startMs": 165180,
+  "endMs": 165220,
+  "timestampMs": 165200,
+  "confidence": 0.9838171005249023,
+  "whisperStartMs": 165240
+ },
+ {
+  "text": " questo",
+  "startMs": 165240,
+  "endMs": 165460,
+  "timestampMs": 165350,
+  "confidence": 0.997961163520813,
+  "whisperStartMs": 165360
+ },
+ {
+  "text": " caso",
+  "startMs": 165520,
+  "endMs": 165740,
+  "timestampMs": 165630,
+  "confidence": 0.9971309900283813,
+  "whisperStartMs": 165560
+ },
+ {
+  "text": " l",
+  "startMs": 165780,
+  "endMs": 165820,
+  "timestampMs": 165790,
+  "confidence": 0.8536385893821716,
+  "whisperStartMs": 165820
+ },
+ {
+  "text": "'ho",
+  "startMs": 165820,
+  "endMs": 165880,
+  "timestampMs": 165850,
+  "confidence": 0.9836103022098541,
+  "whisperStartMs": 165920
+ },
+ {
+  "text": " corsa",
+  "startMs": 165960,
+  "endMs": 166280,
+  "timestampMs": 166120,
+  "confidence": 0.8286536335945129,
+  "whisperStartMs": 166080
+ },
+ {
+  "text": " a",
+  "startMs": 166320,
+  "endMs": 166360,
+  "timestampMs": 166340,
+  "confidence": 0.9259451031684875,
+  "whisperStartMs": 166340
+ },
+ {
+  "text": " Cittadella",
+  "startMs": 166400,
+  "endMs": 167100,
+  "timestampMs": 166750,
+  "confidence": 0.9048889428377151,
+  "whisperStartMs": 166600
+ },
+ {
+  "text": " l",
+  "startMs": 167800,
+  "endMs": 167840,
+  "timestampMs": 167810,
+  "confidence": 0.8082357048988342,
+  "whisperStartMs": 167660
+ },
+ {
+  "text": "'anno",
+  "startMs": 167860,
+  "endMs": 168060,
+  "timestampMs": 167960,
+  "confidence": 0.9978464841842651,
+  "whisperStartMs": 167960
+ },
+ {
+  "text": " scorso",
+  "startMs": 168160,
+  "endMs": 168540,
+  "timestampMs": 168350,
+  "confidence": 0.9984453916549683,
+  "whisperStartMs": 168200
+ },
+ {
+  "text": " a",
+  "startMs": 168580,
+  "endMs": 168620,
+  "timestampMs": 168590,
+  "confidence": 0.9522562623023987,
+  "whisperStartMs": 168620
+ },
+ {
+  "text": " dicembre",
+  "startMs": 168640,
+  "endMs": 169200,
+  "timestampMs": 168920,
+  "confidence": 0.9524609843889872,
+  "whisperStartMs": 168760
+ },
+ {
+  "text": " e",
+  "startMs": 169500,
+  "endMs": 169540,
+  "timestampMs": 169510,
+  "confidence": 0.8492808938026428,
+  "whisperStartMs": 169440
+ },
+ {
+  "text": " letteralmente",
+  "startMs": 169640,
+  "endMs": 170460,
+  "timestampMs": 170050,
+  "confidence": 0.9941908121109009,
+  "whisperStartMs": 169760
+ },
+ {
+  "text": " sono",
+  "startMs": 170660,
+  "endMs": 170820,
+  "timestampMs": 170740,
+  "confidence": 0.9746675491333008,
+  "whisperStartMs": 170660
+ },
+ {
+  "text": " finito",
+  "startMs": 170900,
+  "endMs": 171160,
+  "timestampMs": 171030,
+  "confidence": 0.996645599603653,
+  "whisperStartMs": 170880
+ },
+ {
+  "text": " increscendo",
+  "startMs": 171200,
+  "endMs": 171900,
+  "timestampMs": 171550,
+  "confidence": 0.8241326908270518,
+  "whisperStartMs": 171220
+ },
+ {
+  "text": " anche",
+  "startMs": 172440,
+  "endMs": 172580,
+  "timestampMs": 172510,
+  "confidence": 0.880218505859375,
+  "whisperStartMs": 172320
+ },
+ {
+  "text": " a",
+  "startMs": 172620,
+  "endMs": 172660,
+  "timestampMs": 172630,
+  "confidence": 0.9536641240119934,
+  "whisperStartMs": 172700
+ },
+ {
+  "text": " livello",
+  "startMs": 172680,
+  "endMs": 172920,
+  "timestampMs": 172800,
+  "confidence": 0.9992836713790894,
+  "whisperStartMs": 172740
+ },
+ {
+  "text": " di",
+  "startMs": 172960,
+  "endMs": 173020,
+  "timestampMs": 172990,
+  "confidence": 0.9909622073173523,
+  "whisperStartMs": 172980
+ },
+ {
+  "text": " ritmo",
+  "startMs": 173060,
+  "endMs": 173420,
+  "timestampMs": 173240,
+  "confidence": 0.997391015291214,
+  "whisperStartMs": 173220
+ },
+ {
+  "text": " e",
+  "startMs": 174460,
+  "endMs": 174500,
+  "timestampMs": 174470,
+  "confidence": 0.6401911973953247,
+  "whisperStartMs": 173900
+ },
+ {
+  "text": " per",
+  "startMs": 176500,
+  "endMs": 176600,
+  "timestampMs": 176550,
+  "confidence": 0.2800189256668091,
+  "whisperStartMs": 175980
+ },
+ {
+  "text": " cui",
+  "startMs": 176660,
+  "endMs": 176900,
+  "timestampMs": 176780,
+  "confidence": 0.9837502837181091,
+  "whisperStartMs": 176660
+ },
+ {
+  "text": " avere",
+  "startMs": 178040,
+  "endMs": 178260,
+  "timestampMs": 178150,
+  "confidence": 0.9335524439811707,
+  "whisperStartMs": 177720
+ },
+ {
+  "text": " anche",
+  "startMs": 178340,
+  "endMs": 178520,
+  "timestampMs": 178430,
+  "confidence": 0.9138777256011963,
+  "whisperStartMs": 178320
+ },
+ {
+  "text": " la",
+  "startMs": 178580,
+  "endMs": 178620,
+  "timestampMs": 178600,
+  "confidence": 0.9948194622993469,
+  "whisperStartMs": 178580
+ },
+ {
+  "text": " consapevolezza",
+  "startMs": 178660,
+  "endMs": 179480,
+  "timestampMs": 179070,
+  "confidence": 0.9988448739051818,
+  "whisperStartMs": 178820
+ },
+ {
+  "text": " di",
+  "startMs": 179540,
+  "endMs": 179620,
+  "timestampMs": 179580,
+  "confidence": 0.9802842736244202,
+  "whisperStartMs": 179540
+ },
+ {
+  "text": " dire",
+  "startMs": 179660,
+  "endMs": 179880,
+  "timestampMs": 179770,
+  "confidence": 0.9813217520713806,
+  "whisperStartMs": 179760
+ },
+ {
+  "text": " posso",
+  "startMs": 180060,
+  "endMs": 180680,
+  "timestampMs": 180370,
+  "confidence": 0.32886335253715515,
+  "whisperStartMs": 179940
+ },
+ {
+  "text": " un",
+  "startMs": 180760,
+  "endMs": 180820,
+  "timestampMs": 180790,
+  "confidence": 0.9273792505264282,
+  "whisperStartMs": 180740
+ },
+ {
+  "text": " attimino",
+  "startMs": 180860,
+  "endMs": 181240,
+  "timestampMs": 181050,
+  "confidence": 0.9927786389986674,
+  "whisperStartMs": 180960
+ },
+ {
+  "text": " spingere",
+  "startMs": 181340,
+  "endMs": 181740,
+  "timestampMs": 181540,
+  "confidence": 0.9956942200660706,
+  "whisperStartMs": 181380
+ },
+ {
+  "text": " di",
+  "startMs": 181800,
+  "endMs": 181860,
+  "timestampMs": 181830,
+  "confidence": 0.9888275861740112,
+  "whisperStartMs": 181840
+ },
+ {
+  "text": " più",
+  "startMs": 181920,
+  "endMs": 182100,
+  "timestampMs": 182010,
+  "confidence": 0.9871159195899963,
+  "whisperStartMs": 182040
+ },
+ {
+  "text": " e",
+  "startMs": 183060,
+  "endMs": 183100,
+  "timestampMs": 183070,
+  "confidence": 0.9356071949005127,
+  "whisperStartMs": 182660
+ },
+ {
+  "text": " finirla",
+  "startMs": 183420,
+  "endMs": 183940,
+  "timestampMs": 183680,
+  "confidence": 0.9950743516286215,
+  "whisperStartMs": 183600
+ },
+ {
+  "text": " in",
+  "startMs": 184260,
+  "endMs": 184320,
+  "timestampMs": 184290,
+  "confidence": 0.9951967597007751,
+  "whisperStartMs": 184260
+ },
+ {
+  "text": " tranquillità",
+  "startMs": 184340,
+  "endMs": 184860,
+  "timestampMs": 184600,
+  "confidence": 0.9963872035344442,
+  "whisperStartMs": 184440
+ },
+ {
+  "text": " senza",
+  "startMs": 185060,
+  "endMs": 185260,
+  "timestampMs": 185160,
+  "confidence": 0.7414734363555908,
+  "whisperStartMs": 185060
+ },
+ {
+  "text": " problemi",
+  "startMs": 185320,
+  "endMs": 185760,
+  "timestampMs": 185540,
+  "confidence": 0.9981964528560638,
+  "whisperStartMs": 185340
+ },
+ {
+  "text": " questo",
+  "startMs": 185860,
+  "endMs": 186140,
+  "timestampMs": 186000,
+  "confidence": 0.4983530342578888,
+  "whisperStartMs": 185880
+ },
+ {
+  "text": " per",
+  "startMs": 186300,
+  "endMs": 186440,
+  "timestampMs": 186370,
+  "confidence": 0.9769113659858704,
+  "whisperStartMs": 186320
+ },
+ {
+  "text": " me",
+  "startMs": 186500,
+  "endMs": 186580,
+  "timestampMs": 186540,
+  "confidence": 0.9985923171043396,
+  "whisperStartMs": 186520
+ },
+ {
+  "text": " è",
+  "startMs": 186700,
+  "endMs": 186740,
+  "timestampMs": 186710,
+  "confidence": 0.9772652983665466,
+  "whisperStartMs": 186800
+ },
+ {
+  "text": " stato",
+  "startMs": 186780,
+  "endMs": 187020,
+  "timestampMs": 186900,
+  "confidence": 0.9365163445472717,
+  "whisperStartMs": 186920
+ },
+ {
+  "text": " il",
+  "startMs": 187100,
+  "endMs": 187140,
+  "timestampMs": 187120,
+  "confidence": 0.7202092409133911,
+  "whisperStartMs": 187200
+ },
+ {
+  "text": " risultato",
+  "startMs": 187180,
+  "endMs": 187680,
+  "timestampMs": 187430,
+  "confidence": 0.9980858564376831,
+  "whisperStartMs": 187280
+ },
+ {
+  "text": " più",
+  "startMs": 187940,
+  "endMs": 188060,
+  "timestampMs": 188000,
+  "confidence": 0.998778760433197,
+  "whisperStartMs": 187940
+ },
+ {
+  "text": " bello",
+  "startMs": 188120,
+  "endMs": 188380,
+  "timestampMs": 188250,
+  "confidence": 0.9968272745609283,
+  "whisperStartMs": 188200
+ },
+ {
+  "text": " e",
+  "startMs": 188420,
+  "endMs": 188460,
+  "timestampMs": 188430,
+  "confidence": 0.8998086452484131,
+  "whisperStartMs": 188440
+ },
+ {
+  "text": " la",
+  "startMs": 188500,
+  "endMs": 188560,
+  "timestampMs": 188530,
+  "confidence": 0.9904159307479858,
+  "whisperStartMs": 188560
+ },
+ {
+  "text": " soddisfazione",
+  "startMs": 188600,
+  "endMs": 189100,
+  "timestampMs": 188850,
+  "confidence": 0.9962696135044098,
+  "whisperStartMs": 188640
+ },
+ {
+  "text": " più",
+  "startMs": 189140,
+  "endMs": 189240,
+  "timestampMs": 189190,
+  "confidence": 0.9942862391471863,
+  "whisperStartMs": 189140
+ },
+ {
+  "text": " grande",
+  "startMs": 189280,
+  "endMs": 189640,
+  "timestampMs": 189460,
+  "confidence": 0.997717022895813,
+  "whisperStartMs": 189420
+ },
+ {
+  "text": " mai",
+  "startMs": 190120,
+  "endMs": 190260,
+  "timestampMs": 190190,
+  "confidence": 0.9913630485534668,
+  "whisperStartMs": 189800
+ },
+ {
+  "text": " avuta.",
+  "startMs": 190320,
+  "endMs": 190620,
+  "timestampMs": 190470,
+  "confidence": 0.9928945899009705,
+  "whisperStartMs": 190340
+ },
+ {
+  "text": " Allora",
+  "startMs": 204560,
+  "endMs": 205040,
+  "timestampMs": 204800,
+  "confidence": 0.9132295250892639,
+  "whisperStartMs": 204820
+ },
+ {
+  "text": " sì",
+  "startMs": 205980,
+  "endMs": 206100,
+  "timestampMs": 206040,
+  "confidence": 0.7093731164932251,
+  "whisperStartMs": 205540
+ },
+ {
+  "text": " perché",
+  "startMs": 206940,
+  "endMs": 207320,
+  "timestampMs": 207130,
+  "confidence": 0.5560396313667297,
+  "whisperStartMs": 206360
+ },
+ {
+  "text": " il",
+  "startMs": 207760,
+  "endMs": 207800,
+  "timestampMs": 207780,
+  "confidence": 0.9977061748504639,
+  "whisperStartMs": 207520
+ },
+ {
+  "text": " percorso",
+  "startMs": 207860,
+  "endMs": 208280,
+  "timestampMs": 208070,
+  "confidence": 0.9973188638687134,
+  "whisperStartMs": 208000
+ },
+ {
+  "text": " mi",
+  "startMs": 208340,
+  "endMs": 208400,
+  "timestampMs": 208370,
+  "confidence": 0.9934011101722717,
+  "whisperStartMs": 208380
+ },
+ {
+  "text": " ha",
+  "startMs": 208420,
+  "endMs": 208460,
+  "timestampMs": 208440,
+  "confidence": 0.9949759244918823,
+  "whisperStartMs": 208500
+ },
+ {
+  "text": " dato",
+  "startMs": 208540,
+  "endMs": 208900,
+  "timestampMs": 208720,
+  "confidence": 0.9991680383682251,
+  "whisperStartMs": 208640
+ },
+ {
+  "text": " più",
+  "startMs": 209780,
+  "endMs": 209900,
+  "timestampMs": 209840,
+  "confidence": 0.9978187084197998,
+  "whisperStartMs": 209320
+ },
+ {
+  "text": " fiducia",
+  "startMs": 209960,
+  "endMs": 210300,
+  "timestampMs": 210130,
+  "confidence": 0.9929531812667847,
+  "whisperStartMs": 209960
+ },
+ {
+  "text": " in",
+  "startMs": 210340,
+  "endMs": 210400,
+  "timestampMs": 210370,
+  "confidence": 0.9928427934646606,
+  "whisperStartMs": 210380
+ },
+ {
+  "text": " me",
+  "startMs": 210420,
+  "endMs": 210500,
+  "timestampMs": 210460,
+  "confidence": 0.9995645880699158,
+  "whisperStartMs": 210500
+ },
+ {
+  "text": " stesso",
+  "startMs": 210560,
+  "endMs": 211080,
+  "timestampMs": 210820,
+  "confidence": 0.99617600440979,
+  "whisperStartMs": 210720
+ },
+ {
+  "text": " e",
+  "startMs": 211280,
+  "endMs": 211320,
+  "timestampMs": 211290,
+  "confidence": 0.8879473209381104,
+  "whisperStartMs": 211200
+ },
+ {
+  "text": " nelle",
+  "startMs": 211340,
+  "endMs": 211480,
+  "timestampMs": 211410,
+  "confidence": 0.9961678385734558,
+  "whisperStartMs": 211420
+ },
+ {
+  "text": " mie",
+  "startMs": 211500,
+  "endMs": 211600,
+  "timestampMs": 211550,
+  "confidence": 0.9976287484169006,
+  "whisperStartMs": 211520
+ },
+ {
+  "text": " capacità",
+  "startMs": 211640,
+  "endMs": 212100,
+  "timestampMs": 211870,
+  "confidence": 0.9984917342662811,
+  "whisperStartMs": 211640
+ },
+ {
+  "text": " e",
+  "startMs": 213080,
+  "endMs": 213120,
+  "timestampMs": 213090,
+  "confidence": 0.9602285027503967,
+  "whisperStartMs": 212620
+ },
+ {
+  "text": " questo",
+  "startMs": 213160,
+  "endMs": 213520,
+  "timestampMs": 213340,
+  "confidence": 0.09345880150794983,
+  "whisperStartMs": 213320
+ },
+ {
+  "text": " l",
+  "startMs": 213620,
+  "endMs": 213660,
+  "timestampMs": 213630,
+  "confidence": 0.6751053929328918,
+  "whisperStartMs": 213540
+ },
+ {
+  "text": "'ho",
+  "startMs": 214080,
+  "endMs": 214160,
+  "timestampMs": 214120,
+  "confidence": 0.9924030005931854,
+  "whisperStartMs": 213780
+ },
+ {
+  "text": " riportato",
+  "startMs": 214200,
+  "endMs": 214680,
+  "timestampMs": 214440,
+  "confidence": 0.9902960062026978,
+  "whisperStartMs": 214220
+ },
+ {
+  "text": " anche",
+  "startMs": 214760,
+  "endMs": 215080,
+  "timestampMs": 214920,
+  "confidence": 0.9905597567558289,
+  "whisperStartMs": 214780
+ },
+ {
+  "text": " nelle",
+  "startMs": 215240,
+  "endMs": 215420,
+  "timestampMs": 215330,
+  "confidence": 0.9929590225219727,
+  "whisperStartMs": 215320
+ },
+ {
+  "text": " relazioni",
+  "startMs": 215480,
+  "endMs": 216120,
+  "timestampMs": 215800,
+  "confidence": 0.9983728726704916,
+  "whisperStartMs": 215460
+ },
+ {
+  "text": " nel",
+  "startMs": 216320,
+  "endMs": 216440,
+  "timestampMs": 216380,
+  "confidence": 0.36941444873809814,
+  "whisperStartMs": 216300
+ },
+ {
+  "text": " mio",
+  "startMs": 216480,
+  "endMs": 216560,
+  "timestampMs": 216520,
+  "confidence": 0.9956342577934265,
+  "whisperStartMs": 216500
+ },
+ {
+  "text": " lavoro",
+  "startMs": 216620,
+  "endMs": 217040,
+  "timestampMs": 216830,
+  "confidence": 0.9989235997200012,
+  "whisperStartMs": 216660
+ },
+ {
+  "text": " e",
+  "startMs": 217940,
+  "endMs": 217980,
+  "timestampMs": 217950,
+  "confidence": 0.804047703742981,
+  "whisperStartMs": 217200
+ },
+ {
+  "text": " in",
+  "startMs": 219020,
+  "endMs": 219060,
+  "timestampMs": 219040,
+  "confidence": 0.8978139758110046,
+  "whisperStartMs": 219100
+ },
+ {
+  "text": " quella",
+  "startMs": 219100,
+  "endMs": 219280,
+  "timestampMs": 219190,
+  "confidence": 0.9938107132911682,
+  "whisperStartMs": 219200
+ },
+ {
+  "text": " che",
+  "startMs": 219320,
+  "endMs": 219400,
+  "timestampMs": 219360,
+  "confidence": 0.9984173774719238,
+  "whisperStartMs": 219360
+ },
+ {
+  "text": " è",
+  "startMs": 219560,
+  "endMs": 219600,
+  "timestampMs": 219570,
+  "confidence": 0.9882243871688843,
+  "whisperStartMs": 219560
+ },
+ {
+  "text": " la",
+  "startMs": 219720,
+  "endMs": 219780,
+  "timestampMs": 219750,
+  "confidence": 0.9859958291053772,
+  "whisperStartMs": 219740
+ },
+ {
+  "text": " mia",
+  "startMs": 219820,
+  "endMs": 219900,
+  "timestampMs": 219860,
+  "confidence": 0.9992859959602356,
+  "whisperStartMs": 219860
+ },
+ {
+  "text": " vita",
+  "startMs": 219940,
+  "endMs": 220080,
+  "timestampMs": 220010,
+  "confidence": 0.9986996650695801,
+  "whisperStartMs": 219940
+ },
+ {
+  "text": " quotidiana",
+  "startMs": 220140,
+  "endMs": 220680,
+  "timestampMs": 220410,
+  "confidence": 0.9950141608715057,
+  "whisperStartMs": 220140
+ },
+ {
+  "text": " perché",
+  "startMs": 220740,
+  "endMs": 220980,
+  "timestampMs": 220860,
+  "confidence": 0.7602887749671936,
+  "whisperStartMs": 220740
+ },
+ {
+  "text": " nel",
+  "startMs": 221160,
+  "endMs": 221260,
+  "timestampMs": 221210,
+  "confidence": 0.8945622444152832,
+  "whisperStartMs": 221180
+ },
+ {
+  "text": " momento",
+  "startMs": 221280,
+  "endMs": 221560,
+  "timestampMs": 221420,
+  "confidence": 0.9990170001983643,
+  "whisperStartMs": 221300
+ },
+ {
+  "text": " in",
+  "startMs": 221600,
+  "endMs": 221660,
+  "timestampMs": 221630,
+  "confidence": 0.997771143913269,
+  "whisperStartMs": 221620
+ },
+ {
+  "text": " cui",
+  "startMs": 221700,
+  "endMs": 221900,
+  "timestampMs": 221800,
+  "confidence": 0.9993608593940735,
+  "whisperStartMs": 221860
+ },
+ {
+  "text": " tu",
+  "startMs": 222040,
+  "endMs": 222200,
+  "timestampMs": 222120,
+  "confidence": 0.9174448847770691,
+  "whisperStartMs": 222060
+ },
+ {
+  "text": " hai",
+  "startMs": 223140,
+  "endMs": 223240,
+  "timestampMs": 223190,
+  "confidence": 0.9919426441192627,
+  "whisperStartMs": 222880
+ },
+ {
+  "text": " degli",
+  "startMs": 223280,
+  "endMs": 223440,
+  "timestampMs": 223360,
+  "confidence": 0.9958413243293762,
+  "whisperStartMs": 223340
+ },
+ {
+  "text": " strumenti",
+  "startMs": 223500,
+  "endMs": 224100,
+  "timestampMs": 223800,
+  "confidence": 0.998177727063497,
+  "whisperStartMs": 223580
+ },
+ {
+  "text": " dove",
+  "startMs": 224180,
+  "endMs": 224340,
+  "timestampMs": 224260,
+  "confidence": 0.8479927778244019,
+  "whisperStartMs": 224180
+ },
+ {
+  "text": " non",
+  "startMs": 224480,
+  "endMs": 224580,
+  "timestampMs": 224530,
+  "confidence": 0.9932819604873657,
+  "whisperStartMs": 224480
+ },
+ {
+  "text": " solo",
+  "startMs": 224620,
+  "endMs": 224760,
+  "timestampMs": 224690,
+  "confidence": 0.9944682121276855,
+  "whisperStartMs": 224640
+ },
+ {
+  "text": " puoi",
+  "startMs": 224820,
+  "endMs": 224920,
+  "timestampMs": 224870,
+  "confidence": 0.9871684610843658,
+  "whisperStartMs": 224840
+ },
+ {
+  "text": " stare",
+  "startMs": 224940,
+  "endMs": 225140,
+  "timestampMs": 225040,
+  "confidence": 0.9697883129119873,
+  "whisperStartMs": 225000
+ },
+ {
+  "text": " bene",
+  "startMs": 225200,
+  "endMs": 225400,
+  "timestampMs": 225300,
+  "confidence": 0.9996950626373291,
+  "whisperStartMs": 225160
+ },
+ {
+  "text": " ma",
+  "startMs": 225460,
+  "endMs": 225540,
+  "timestampMs": 225500,
+  "confidence": 0.9113641977310181,
+  "whisperStartMs": 225460
+ },
+ {
+  "text": " anche",
+  "startMs": 225620,
+  "endMs": 225780,
+  "timestampMs": 225700,
+  "confidence": 0.9794802665710449,
+  "whisperStartMs": 225700
+ },
+ {
+  "text": " acquisisci",
+  "startMs": 225840,
+  "endMs": 226300,
+  "timestampMs": 226070,
+  "confidence": 0.7307069897651672,
+  "whisperStartMs": 225960
+ },
+ {
+  "text": " più",
+  "startMs": 226380,
+  "endMs": 226560,
+  "timestampMs": 226470,
+  "confidence": 0.9923732876777649,
+  "whisperStartMs": 226420
+ },
+ {
+  "text": " fiducia",
+  "startMs": 227700,
+  "endMs": 228120,
+  "timestampMs": 227910,
+  "confidence": 0.9896366397539774,
+  "whisperStartMs": 227580
+ },
+ {
+  "text": " e",
+  "startMs": 228200,
+  "endMs": 228240,
+  "timestampMs": 228210,
+  "confidence": 0.9703068137168884,
+  "whisperStartMs": 228200
+ },
+ {
+  "text": " consapevolezza",
+  "startMs": 228260,
+  "endMs": 228920,
+  "timestampMs": 228590,
+  "confidence": 0.9946720123291015,
+  "whisperStartMs": 228360
+ },
+ {
+  "text": " in",
+  "startMs": 228960,
+  "endMs": 229020,
+  "timestampMs": 228990,
+  "confidence": 0.9910644292831421,
+  "whisperStartMs": 228980
+ },
+ {
+  "text": " te",
+  "startMs": 229060,
+  "endMs": 229180,
+  "timestampMs": 229120,
+  "confidence": 0.996932864189148,
+  "whisperStartMs": 229180
+ },
+ {
+  "text": " puoi",
+  "startMs": 229380,
+  "endMs": 229580,
+  "timestampMs": 229480,
+  "confidence": 0.792602151632309,
+  "whisperStartMs": 229420
+ },
+ {
+  "text": " anche",
+  "startMs": 229680,
+  "endMs": 229960,
+  "timestampMs": 229820,
+  "confidence": 0.9915191531181335,
+  "whisperStartMs": 229700
+ },
+ {
+  "text": " replicare",
+  "startMs": 230800,
+  "endMs": 231280,
+  "timestampMs": 231040,
+  "confidence": 0.9863532781600952,
+  "whisperStartMs": 230780
+ },
+ {
+  "text": " queste",
+  "startMs": 231360,
+  "endMs": 232360,
+  "timestampMs": 231860,
+  "confidence": 0.9827114939689636,
+  "whisperStartMs": 231440
+ },
+ {
+  "text": " capacità",
+  "startMs": 232560,
+  "endMs": 232960,
+  "timestampMs": 232760,
+  "confidence": 0.9689374268054962,
+  "whisperStartMs": 232520
+ },
+ {
+  "text": " che",
+  "startMs": 233040,
+  "endMs": 233100,
+  "timestampMs": 233070,
+  "confidence": 0.99302738904953,
+  "whisperStartMs": 233060
+ },
+ {
+  "text": " hai",
+  "startMs": 233120,
+  "endMs": 233180,
+  "timestampMs": 233150,
+  "confidence": 0.8789446949958801,
+  "whisperStartMs": 233220
+ },
+ {
+  "text": " sviluppato",
+  "startMs": 233220,
+  "endMs": 233780,
+  "timestampMs": 233500,
+  "confidence": 0.9988000243902206,
+  "whisperStartMs": 233220
+ },
+ {
+  "text": " anche",
+  "startMs": 233880,
+  "endMs": 234040,
+  "timestampMs": 233960,
+  "confidence": 0.9719359278678894,
+  "whisperStartMs": 233860
+ },
+ {
+  "text": " in",
+  "startMs": 234080,
+  "endMs": 234120,
+  "timestampMs": 234100,
+  "confidence": 0.9938336610794067,
+  "whisperStartMs": 234120
+ },
+ {
+  "text": " altri",
+  "startMs": 234180,
+  "endMs": 234360,
+  "timestampMs": 234270,
+  "confidence": 0.9964867830276489,
+  "whisperStartMs": 234300
+ },
+ {
+  "text": " settori",
+  "startMs": 234420,
+  "endMs": 234800,
+  "timestampMs": 234610,
+  "confidence": 0.9946323931217194,
+  "whisperStartMs": 234420
+ },
+ {
+  "text": " nella",
+  "startMs": 235540,
+  "endMs": 235660,
+  "timestampMs": 235600,
+  "confidence": 0.8704652190208435,
+  "whisperStartMs": 235500
+ },
+ {
+  "text": " tua",
+  "startMs": 235700,
+  "endMs": 235760,
+  "timestampMs": 235730,
+  "confidence": 0.9979696869850159,
+  "whisperStartMs": 235720
+ },
+ {
+  "text": " vita",
+  "startMs": 235780,
+  "endMs": 235920,
+  "timestampMs": 235850,
+  "confidence": 0.9995631575584412,
+  "whisperStartMs": 235840
+ },
+ {
+  "text": " in",
+  "startMs": 235980,
+  "endMs": 236020,
+  "timestampMs": 236000,
+  "confidence": 0.8696036338806152,
+  "whisperStartMs": 236000
+ },
+ {
+  "text": " particolare",
+  "startMs": 236040,
+  "endMs": 236580,
+  "timestampMs": 236310,
+  "confidence": 0.9977613091468811,
+  "whisperStartMs": 236260
+ },
+ {
+  "text": " nel",
+  "startMs": 237300,
+  "endMs": 237420,
+  "timestampMs": 237360,
+  "confidence": 0.8581026196479797,
+  "whisperStartMs": 236680
+ },
+ {
+  "text": " lavoro",
+  "startMs": 237480,
+  "endMs": 237900,
+  "timestampMs": 237690,
+  "confidence": 0.9888043999671936,
+  "whisperStartMs": 237460
+ },
+ {
+  "text": " e",
+  "startMs": 238500,
+  "endMs": 238540,
+  "timestampMs": 238510,
+  "confidence": 0.9923960566520691,
+  "whisperStartMs": 238020
+ },
+ {
+  "text": " nelle",
+  "startMs": 238640,
+  "endMs": 238800,
+  "timestampMs": 238720,
+  "confidence": 0.9958434700965881,
+  "whisperStartMs": 238740
+ },
+ {
+  "text": " relazioni",
+  "startMs": 238860,
+  "endMs": 239280,
+  "timestampMs": 239070,
+  "confidence": 0.9996151328086853,
+  "whisperStartMs": 238860
+ },
+ {
+  "text": " con",
+  "startMs": 239320,
+  "endMs": 239400,
+  "timestampMs": 239360,
+  "confidence": 0.9964081645011902,
+  "whisperStartMs": 239320
+ },
+ {
+  "text": " le",
+  "startMs": 239440,
+  "endMs": 239480,
+  "timestampMs": 239460,
+  "confidence": 0.9956654906272888,
+  "whisperStartMs": 239500
+ },
+ {
+  "text": " altre",
+  "startMs": 239520,
+  "endMs": 239680,
+  "timestampMs": 239600,
+  "confidence": 0.9971537590026855,
+  "whisperStartMs": 239600
+ },
+ {
+  "text": " persone.",
+  "startMs": 239720,
+  "endMs": 240180,
+  "timestampMs": 239950,
+  "confidence": 0.9993329644203186,
+  "whisperStartMs": 239740
+ },
+ {
+  "text": " Allora",
+  "startMs": 249280,
+  "endMs": 249640,
+  "timestampMs": 249460,
+  "confidence": 0.5919027253985405,
+  "whisperStartMs": 249140
+ },
+ {
+  "text": " a",
+  "startMs": 249700,
+  "endMs": 249740,
+  "timestampMs": 249710,
+  "confidence": 0.38985246419906616,
+  "whisperStartMs": 249740
+ },
+ {
+  "text": " dire",
+  "startMs": 249760,
+  "endMs": 249900,
+  "timestampMs": 249830,
+  "confidence": 0.9931897521018982,
+  "whisperStartMs": 249820
+ },
+ {
+  "text": " la",
+  "startMs": 250000,
+  "endMs": 250040,
+  "timestampMs": 250020,
+  "confidence": 0.9890409111976624,
+  "whisperStartMs": 249940
+ },
+ {
+  "text": " verità",
+  "startMs": 250080,
+  "endMs": 250380,
+  "timestampMs": 250230,
+  "confidence": 0.9978280365467072,
+  "whisperStartMs": 250140
+ },
+ {
+  "text": " non",
+  "startMs": 250620,
+  "endMs": 250740,
+  "timestampMs": 250680,
+  "confidence": 0.8644624352455139,
+  "whisperStartMs": 250620
+ },
+ {
+  "text": " avevo",
+  "startMs": 250800,
+  "endMs": 251080,
+  "timestampMs": 250940,
+  "confidence": 0.9973188042640686,
+  "whisperStartMs": 250840
+ },
+ {
+  "text": " tanti",
+  "startMs": 251360,
+  "endMs": 251660,
+  "timestampMs": 251510,
+  "confidence": 0.9930782914161682,
+  "whisperStartMs": 251400
+ },
+ {
+  "text": " dubbi",
+  "startMs": 251720,
+  "endMs": 252060,
+  "timestampMs": 251890,
+  "confidence": 0.9978574216365814,
+  "whisperStartMs": 251780
+ },
+ {
+  "text": " se",
+  "startMs": 252220,
+  "endMs": 252340,
+  "timestampMs": 252280,
+  "confidence": 0.9727762937545776,
+  "whisperStartMs": 252220
+ },
+ {
+  "text": " fare",
+  "startMs": 252460,
+  "endMs": 252660,
+  "timestampMs": 252560,
+  "confidence": 0.9966170191764832,
+  "whisperStartMs": 252480
+ },
+ {
+  "text": " il",
+  "startMs": 252700,
+  "endMs": 252740,
+  "timestampMs": 252720,
+  "confidence": 0.9796341061592102,
+  "whisperStartMs": 252700
+ },
+ {
+  "text": " percorso",
+  "startMs": 252780,
+  "endMs": 253260,
+  "timestampMs": 253020,
+  "confidence": 0.9990696708361307,
+  "whisperStartMs": 252940
+ },
+ {
+  "text": " o",
+  "startMs": 253300,
+  "endMs": 253340,
+  "timestampMs": 253310,
+  "confidence": 0.9686225056648254,
+  "whisperStartMs": 253360
+ },
+ {
+  "text": " non",
+  "startMs": 253360,
+  "endMs": 253460,
+  "timestampMs": 253410,
+  "confidence": 0.9783785343170166,
+  "whisperStartMs": 253420
+ },
+ {
+  "text": " fare",
+  "startMs": 253520,
+  "endMs": 253660,
+  "timestampMs": 253590,
+  "confidence": 0.9896360039710999,
+  "whisperStartMs": 253540
+ },
+ {
+  "text": " il",
+  "startMs": 253700,
+  "endMs": 253740,
+  "timestampMs": 253720,
+  "confidence": 0.9872576594352722,
+  "whisperStartMs": 253700
+ },
+ {
+  "text": " percorso",
+  "startMs": 253780,
+  "endMs": 254300,
+  "timestampMs": 254040,
+  "confidence": 0.9989798267682394,
+  "whisperStartMs": 253920
+ },
+ {
+  "text": " perché",
+  "startMs": 254360,
+  "endMs": 254580,
+  "timestampMs": 254470,
+  "confidence": 0.8389064073562622,
+  "whisperStartMs": 254380
+ },
+ {
+  "text": " sapevo",
+  "startMs": 254680,
+  "endMs": 255140,
+  "timestampMs": 254910,
+  "confidence": 0.9983086983362833,
+  "whisperStartMs": 254700
+ },
+ {
+  "text": " indubbiamente",
+  "startMs": 255280,
+  "endMs": 255960,
+  "timestampMs": 255620,
+  "confidence": 0.9565483331680298,
+  "whisperStartMs": 255300
+ },
+ {
+  "text": " che",
+  "startMs": 256040,
+  "endMs": 256200,
+  "timestampMs": 256120,
+  "confidence": 0.9951266050338745,
+  "whisperStartMs": 256019
+ },
+ {
+  "text": " poteva",
+  "startMs": 256880,
+  "endMs": 257180,
+  "timestampMs": 257030,
+  "confidence": 0.9753353595733643,
+  "whisperStartMs": 256940
+ },
+ {
+  "text": " essere",
+  "startMs": 257279,
+  "endMs": 257540,
+  "timestampMs": 257409,
+  "confidence": 0.9991788268089294,
+  "whisperStartMs": 257339
+ },
+ {
+  "text": " qualcosa",
+  "startMs": 257600,
+  "endMs": 257940,
+  "timestampMs": 257770,
+  "confidence": 0.9820418357849121,
+  "whisperStartMs": 257660
+ },
+ {
+  "text": " di",
+  "startMs": 257959,
+  "endMs": 258000,
+  "timestampMs": 257979,
+  "confidence": 0.8789331912994385,
+  "whisperStartMs": 257920
+ },
+ {
+  "text": " importante",
+  "startMs": 258019,
+  "endMs": 258560,
+  "timestampMs": 258289,
+  "confidence": 0.9885011911392212,
+  "whisperStartMs": 258260
+ },
+ {
+  "text": " utile",
+  "startMs": 258660,
+  "endMs": 258880,
+  "timestampMs": 258770,
+  "confidence": 0.7617010176181793,
+  "whisperStartMs": 258579
+ },
+ {
+  "text": " per",
+  "startMs": 258920,
+  "endMs": 259040,
+  "timestampMs": 258980,
+  "confidence": 0.9977914094924927,
+  "whisperStartMs": 258920
+ },
+ {
+  "text": " me",
+  "startMs": 259100,
+  "endMs": 259200,
+  "timestampMs": 259150,
+  "confidence": 0.9985859394073486,
+  "whisperStartMs": 259120
+ },
+ {
+  "text": " quindi",
+  "startMs": 259839,
+  "endMs": 260160,
+  "timestampMs": 259999,
+  "confidence": 0.5706347227096558,
+  "whisperStartMs": 259779
+ },
+ {
+  "text": " magari",
+  "startMs": 260740,
+  "endMs": 261000,
+  "timestampMs": 260870,
+  "confidence": 0.9627754092216492,
+  "whisperStartMs": 260740
+ },
+ {
+  "text": " avevo",
+  "startMs": 261060,
+  "endMs": 261220,
+  "timestampMs": 261140,
+  "confidence": 0.9745722711086273,
+  "whisperStartMs": 261079
+ },
+ {
+  "text": " un",
+  "startMs": 261279,
+  "endMs": 261320,
+  "timestampMs": 261299,
+  "confidence": 0.9296072125434875,
+  "whisperStartMs": 261360
+ },
+ {
+  "text": " po'",
+  "startMs": 261380,
+  "endMs": 261519,
+  "timestampMs": 261449,
+  "confidence": 0.9868157505989075,
+  "whisperStartMs": 261440
+ },
+ {
+  "text": " la",
+  "startMs": 261600,
+  "endMs": 261640,
+  "timestampMs": 261620,
+  "confidence": 0.9580163955688477,
+  "whisperStartMs": 261640
+ },
+ {
+  "text": " resistenza",
+  "startMs": 261680,
+  "endMs": 262360,
+  "timestampMs": 262020,
+  "confidence": 0.962855726480484,
+  "whisperStartMs": 261760
+ },
+ {
+  "text": " dall",
+  "startMs": 262400,
+  "endMs": 262540,
+  "timestampMs": 262470,
+  "confidence": 0.9516230821609497,
+  "whisperStartMs": 262440
+ },
+ {
+  "text": "'aspetto",
+  "startMs": 262580,
+  "endMs": 263020,
+  "timestampMs": 262800,
+  "confidence": 0.997725248336792,
+  "whisperStartMs": 262580
+ },
+ {
+  "text": " economico",
+  "startMs": 263060,
+  "endMs": 263660,
+  "timestampMs": 263360,
+  "confidence": 0.9948854446411133,
+  "whisperStartMs": 263080
+ },
+ {
+  "text": " ma",
+  "startMs": 263740,
+  "endMs": 263840,
+  "timestampMs": 263790,
+  "confidence": 0.8620644807815552,
+  "whisperStartMs": 263780
+ },
+ {
+  "text": " ho",
+  "startMs": 265180,
+  "endMs": 265260,
+  "timestampMs": 265220,
+  "confidence": 0.917037308216095,
+  "whisperStartMs": 264900
+ },
+ {
+  "text": " fatto",
+  "startMs": 265320,
+  "endMs": 265500,
+  "timestampMs": 265410,
+  "confidence": 0.9960557222366333,
+  "whisperStartMs": 265340
+ },
+ {
+  "text": " anche",
+  "startMs": 265560,
+  "endMs": 265720,
+  "timestampMs": 265640,
+  "confidence": 0.9953298568725586,
+  "whisperStartMs": 265580
+ },
+ {
+  "text": " ragionamento",
+  "startMs": 265820,
+  "endMs": 266560,
+  "timestampMs": 266190,
+  "confidence": 0.894343912601471,
+  "whisperStartMs": 265840
+ },
+ {
+  "text": " la",
+  "startMs": 266880,
+  "endMs": 266960,
+  "timestampMs": 266920,
+  "confidence": 0.4471026659011841,
+  "whisperStartMs": 266720
+ },
+ {
+  "text": " salute",
+  "startMs": 267020,
+  "endMs": 267380,
+  "timestampMs": 267200,
+  "confidence": 0.9900688529014587,
+  "whisperStartMs": 267100
+ },
+ {
+  "text": " viene",
+  "startMs": 267460,
+  "endMs": 267600,
+  "timestampMs": 267530,
+  "confidence": 0.9657712578773499,
+  "whisperStartMs": 267440
+ },
+ {
+  "text": " prima",
+  "startMs": 267660,
+  "endMs": 267820,
+  "timestampMs": 267740,
+  "confidence": 0.9977928400039673,
+  "whisperStartMs": 267640
+ },
+ {
+  "text": " dei",
+  "startMs": 267880,
+  "endMs": 267980,
+  "timestampMs": 267930,
+  "confidence": 0.8654149174690247,
+  "whisperStartMs": 267900
+ },
+ {
+  "text": " soldi",
+  "startMs": 268020,
+  "endMs": 268400,
+  "timestampMs": 268210,
+  "confidence": 0.9981122314929962,
+  "whisperStartMs": 268080
+ },
+ {
+  "text": " per",
+  "startMs": 268480,
+  "endMs": 268620,
+  "timestampMs": 268550,
+  "confidence": 0.5909968614578247,
+  "whisperStartMs": 268500
+ },
+ {
+  "text": " cui",
+  "startMs": 268680,
+  "endMs": 268960,
+  "timestampMs": 268820,
+  "confidence": 0.9987485408782959,
+  "whisperStartMs": 268760
+ },
+ {
+  "text": " il",
+  "startMs": 270240,
+  "endMs": 270280,
+  "timestampMs": 270260,
+  "confidence": 0.8534876108169556,
+  "whisperStartMs": 269460
+ },
+ {
+  "text": " ragionamento",
+  "startMs": 270340,
+  "endMs": 270800,
+  "timestampMs": 270570,
+  "confidence": 0.9988277157147726,
+  "whisperStartMs": 270400
+ },
+ {
+  "text": " che",
+  "startMs": 270820,
+  "endMs": 270900,
+  "timestampMs": 270860,
+  "confidence": 0.9919610619544983,
+  "whisperStartMs": 270860
+ },
+ {
+  "text": " ho",
+  "startMs": 270920,
+  "endMs": 270980,
+  "timestampMs": 270950,
+  "confidence": 0.9975649118423462,
+  "whisperStartMs": 271000
+ },
+ {
+  "text": " fatto",
+  "startMs": 271040,
+  "endMs": 271300,
+  "timestampMs": 271170,
+  "confidence": 0.9994856119155884,
+  "whisperStartMs": 271040
+ },
+ {
+  "text": " è",
+  "startMs": 271440,
+  "endMs": 271480,
+  "timestampMs": 271450,
+  "confidence": 0.9321967363357544,
+  "whisperStartMs": 271340
+ },
+ {
+  "text": " sì",
+  "startMs": 272180,
+  "endMs": 272300,
+  "timestampMs": 272240,
+  "confidence": 0.7873547077178955,
+  "whisperStartMs": 272240
+ },
+ {
+  "text": " faccio",
+  "startMs": 272440,
+  "endMs": 272660,
+  "timestampMs": 272550,
+  "confidence": 0.8274542987346649,
+  "whisperStartMs": 272440
+ },
+ {
+  "text": " l",
+  "startMs": 272720,
+  "endMs": 272760,
+  "timestampMs": 272730,
+  "confidence": 0.9461792707443237,
+  "whisperStartMs": 272740
+ },
+ {
+  "text": "'investimento",
+  "startMs": 272760,
+  "endMs": 273480,
+  "timestampMs": 273120,
+  "confidence": 0.9978379209836324,
+  "whisperStartMs": 272860
+ },
+ {
+  "text": " ma",
+  "startMs": 273620,
+  "endMs": 273740,
+  "timestampMs": 273680,
+  "confidence": 0.969863772392273,
+  "whisperStartMs": 273580
+ },
+ {
+  "text": " è",
+  "startMs": 273960,
+  "endMs": 274000,
+  "timestampMs": 273970,
+  "confidence": 0.994621753692627,
+  "whisperStartMs": 273940
+ },
+ {
+  "text": " un",
+  "startMs": 274060,
+  "endMs": 274120,
+  "timestampMs": 274090,
+  "confidence": 0.9945542812347412,
+  "whisperStartMs": 274100
+ },
+ {
+  "text": " investimento",
+  "startMs": 274160,
+  "endMs": 274840,
+  "timestampMs": 274500,
+  "confidence": 0.9838281869888306,
+  "whisperStartMs": 274300
+ },
+ {
+  "text": " a",
+  "startMs": 274860,
+  "endMs": 274900,
+  "timestampMs": 274880,
+  "confidence": 0.9331211447715759,
+  "whisperStartMs": 274920
+ },
+ {
+  "text": " livello",
+  "startMs": 274920,
+  "endMs": 275160,
+  "timestampMs": 275040,
+  "confidence": 0.9985661208629608,
+  "whisperStartMs": 275000
+ },
+ {
+  "text": " di",
+  "startMs": 275200,
+  "endMs": 275260,
+  "timestampMs": 275230,
+  "confidence": 0.9968783855438232,
+  "whisperStartMs": 275260
+ },
+ {
+  "text": " salute",
+  "startMs": 275320,
+  "endMs": 275720,
+  "timestampMs": 275520,
+  "confidence": 0.9874299168586731,
+  "whisperStartMs": 275460
+ },
+ {
+  "text": " di",
+  "startMs": 275800,
+  "endMs": 275860,
+  "timestampMs": 275830,
+  "confidence": 0.42088815569877625,
+  "whisperStartMs": 275760
+ },
+ {
+  "text": " essere",
+  "startMs": 275980,
+  "endMs": 276380,
+  "timestampMs": 276180,
+  "confidence": 0.025095105171203613,
+  "whisperStartMs": 276020
+ },
+ {
+  "text": " di",
+  "startMs": 276440,
+  "endMs": 276500,
+  "timestampMs": 276470,
+  "confidence": 0.417113333940506,
+  "whisperStartMs": 276400
+ },
+ {
+  "text": " stare",
+  "startMs": 276520,
+  "endMs": 276700,
+  "timestampMs": 276610,
+  "confidence": 0.978960394859314,
+  "whisperStartMs": 276620
+ },
+ {
+  "text": " bene",
+  "startMs": 276760,
+  "endMs": 276940,
+  "timestampMs": 276850,
+  "confidence": 0.9985148310661316,
+  "whisperStartMs": 276740
+ },
+ {
+  "text": " per",
+  "startMs": 277040,
+  "endMs": 277120,
+  "timestampMs": 277080,
+  "confidence": 0.28829362988471985,
+  "whisperStartMs": 277020
+ },
+ {
+  "text": " cui",
+  "startMs": 277180,
+  "endMs": 277340,
+  "timestampMs": 277260,
+  "confidence": 0.9867767691612244,
+  "whisperStartMs": 277220
+ },
+ {
+  "text": " quell",
+  "startMs": 277880,
+  "endMs": 278040,
+  "timestampMs": 277960,
+  "confidence": 0.9635080993175507,
+  "whisperStartMs": 277900
+ },
+ {
+  "text": "'investimento",
+  "startMs": 278060,
+  "endMs": 278700,
+  "timestampMs": 278380,
+  "confidence": 0.9921276370684305,
+  "whisperStartMs": 278120
+ },
+ {
+  "text": " lì",
+  "startMs": 278880,
+  "endMs": 278980,
+  "timestampMs": 278930,
+  "confidence": 0.9346544742584229,
+  "whisperStartMs": 278860
+ },
+ {
+  "text": " poi",
+  "startMs": 279200,
+  "endMs": 279360,
+  "timestampMs": 279280,
+  "confidence": 0.9545280337333679,
+  "whisperStartMs": 279240
+ },
+ {
+  "text": " è",
+  "startMs": 279420,
+  "endMs": 279460,
+  "timestampMs": 279430,
+  "confidence": 0.9920132756233215,
+  "whisperStartMs": 279420
+ },
+ {
+  "text": " stato",
+  "startMs": 279500,
+  "endMs": 279700,
+  "timestampMs": 279600,
+  "confidence": 0.9986761212348938,
+  "whisperStartMs": 279600
+ },
+ {
+  "text": " ripagato",
+  "startMs": 279780,
+  "endMs": 280380,
+  "timestampMs": 280080,
+  "confidence": 0.992380420366923,
+  "whisperStartMs": 279780
+ },
+ {
+  "text": " al",
+  "startMs": 280540,
+  "endMs": 280720,
+  "timestampMs": 280630,
+  "confidence": 0.7913477420806885,
+  "whisperStartMs": 280540
+ },
+ {
+  "text": " mille",
+  "startMs": 280880,
+  "endMs": 281140,
+  "timestampMs": 281010,
+  "confidence": 0.7864545583724976,
+  "whisperStartMs": 280980
+ },
+ {
+  "text": " per",
+  "startMs": 281200,
+  "endMs": 281320,
+  "timestampMs": 281260,
+  "confidence": 0.9911534190177917,
+  "whisperStartMs": 281280
+ },
+ {
+  "text": " mille",
+  "startMs": 281400,
+  "endMs": 281720,
+  "timestampMs": 281560,
+  "confidence": 0.9966703653335571,
+  "whisperStartMs": 281460
+ },
+ {
+  "text": " per",
+  "startMs": 282320,
+  "endMs": 282420,
+  "timestampMs": 282370,
+  "confidence": 0.8586294651031494,
+  "whisperStartMs": 282280
+ },
+ {
+  "text": " cui",
+  "startMs": 282460,
+  "endMs": 282700,
+  "timestampMs": 282580,
+  "confidence": 0.9975825548171997,
+  "whisperStartMs": 282560
+ },
+ {
+  "text": " avevo",
+  "startMs": 283360,
+  "endMs": 283560,
+  "timestampMs": 283460,
+  "confidence": 0.884041041135788,
+  "whisperStartMs": 283220
+ },
+ {
+  "text": " un",
+  "startMs": 283600,
+  "endMs": 283640,
+  "timestampMs": 283620,
+  "confidence": 0.9886822700500488,
+  "whisperStartMs": 283640
+ },
+ {
+  "text": " pochino",
+  "startMs": 283680,
+  "endMs": 283980,
+  "timestampMs": 283830,
+  "confidence": 0.9973904490470886,
+  "whisperStartMs": 283760
+ },
+ {
+  "text": " appunto",
+  "startMs": 284100,
+  "endMs": 284340,
+  "timestampMs": 284220,
+  "confidence": 0.9533587396144867,
+  "whisperStartMs": 284120
+ },
+ {
+  "text": " la",
+  "startMs": 284420,
+  "endMs": 284460,
+  "timestampMs": 284440,
+  "confidence": 0.98701012134552,
+  "whisperStartMs": 284380
+ },
+ {
+  "text": " resistenza",
+  "startMs": 284500,
+  "endMs": 285020,
+  "timestampMs": 284760,
+  "confidence": 0.9871203601360321,
+  "whisperStartMs": 284540
+ },
+ {
+  "text": " sotto",
+  "startMs": 285580,
+  "endMs": 285760,
+  "timestampMs": 285670,
+  "confidence": 0.5706865787506104,
+  "whisperStartMs": 285200
+ },
+ {
+  "text": " il",
+  "startMs": 285800,
+  "endMs": 285860,
+  "timestampMs": 285830,
+  "confidence": 0.9851213693618774,
+  "whisperStartMs": 285860
+ },
+ {
+  "text": " punto",
+  "startMs": 285900,
+  "endMs": 286060,
+  "timestampMs": 285980,
+  "confidence": 0.998205304145813,
+  "whisperStartMs": 285980
+ },
+ {
+  "text": " di",
+  "startMs": 286100,
+  "endMs": 286140,
+  "timestampMs": 286120,
+  "confidence": 0.9967252612113953,
+  "whisperStartMs": 286140
+ },
+ {
+  "text": " vista",
+  "startMs": 286160,
+  "endMs": 286320,
+  "timestampMs": 286240,
+  "confidence": 0.9983772039413452,
+  "whisperStartMs": 286200
+ },
+ {
+  "text": " economico",
+  "startMs": 286380,
+  "endMs": 286940,
+  "timestampMs": 286660,
+  "confidence": 0.9921126663684845,
+  "whisperStartMs": 286360
+ },
+ {
+  "text": " ma",
+  "startMs": 287460,
+  "endMs": 287520,
+  "timestampMs": 287490,
+  "confidence": 0.9022646546363831,
+  "whisperStartMs": 287360
+ },
+ {
+  "text": " poi",
+  "startMs": 287560,
+  "endMs": 287700,
+  "timestampMs": 287630,
+  "confidence": 0.9972459077835083,
+  "whisperStartMs": 287620
+ },
+ {
+  "text": " ho",
+  "startMs": 287740,
+  "endMs": 287800,
+  "timestampMs": 287770,
+  "confidence": 0.9219040870666504,
+  "whisperStartMs": 287740
+ },
+ {
+  "text": " detto",
+  "startMs": 287840,
+  "endMs": 288100,
+  "timestampMs": 287970,
+  "confidence": 0.9978391528129578,
+  "whisperStartMs": 287920
+ },
+ {
+  "text": " la",
+  "startMs": 288520,
+  "endMs": 288580,
+  "timestampMs": 288550,
+  "confidence": 0.9018734097480774,
+  "whisperStartMs": 288200
+ },
+ {
+  "text": " salute",
+  "startMs": 288640,
+  "endMs": 289020,
+  "timestampMs": 288830,
+  "confidence": 0.9877340793609619,
+  "whisperStartMs": 288700
+ },
+ {
+  "text": " viene",
+  "startMs": 289140,
+  "endMs": 289340,
+  "timestampMs": 289240,
+  "confidence": 0.9672702550888062,
+  "whisperStartMs": 289100
+ },
+ {
+  "text": " cento",
+  "startMs": 290400,
+  "endMs": 290700,
+  "timestampMs": 290550,
+  "confidence": 0.7455026507377625,
+  "whisperStartMs": 290000
+ },
+ {
+  "text": " volte",
+  "startMs": 290760,
+  "endMs": 291020,
+  "timestampMs": 290890,
+  "confidence": 0.9976760745048523,
+  "whisperStartMs": 290860
+ },
+ {
+  "text": " prima",
+  "startMs": 291100,
+  "endMs": 291460,
+  "timestampMs": 291280,
+  "confidence": 0.9988045692443848,
+  "whisperStartMs": 291080
+ },
+ {
+  "text": " dei",
+  "startMs": 292600,
+  "endMs": 292720,
+  "timestampMs": 292660,
+  "confidence": 0.9606630802154541,
+  "whisperStartMs": 291920
+ },
+ {
+  "text": " soldi",
+  "startMs": 292780,
+  "endMs": 293080,
+  "timestampMs": 292930,
+  "confidence": 0.9951019585132599,
+  "whisperStartMs": 292780
+ },
+ {
+  "text": " per",
+  "startMs": 293120,
+  "endMs": 293220,
+  "timestampMs": 293170,
+  "confidence": 0.9634333252906799,
+  "whisperStartMs": 293140
+ },
+ {
+  "text": " cui",
+  "startMs": 293240,
+  "endMs": 293360,
+  "timestampMs": 293300,
+  "confidence": 0.998722493648529,
+  "whisperStartMs": 293320
+ },
+ {
+  "text": " ho",
+  "startMs": 293400,
+  "endMs": 293480,
+  "timestampMs": 293440,
+  "confidence": 0.8425417542457581,
+  "whisperStartMs": 293420
+ },
+ {
+  "text": " detto",
+  "startMs": 293500,
+  "endMs": 293740,
+  "timestampMs": 293620,
+  "confidence": 0.9981243014335632,
+  "whisperStartMs": 293540
+ },
+ {
+  "text": " lo",
+  "startMs": 293900,
+  "endMs": 293980,
+  "timestampMs": 293940,
+  "confidence": 0.7206366062164307,
+  "whisperStartMs": 293760
+ },
+ {
+  "text": " faccio",
+  "startMs": 294040,
+  "endMs": 294520,
+  "timestampMs": 294280,
+  "confidence": 0.9952458143234253,
+  "whisperStartMs": 294140
+ },
+ {
+  "text": " mi",
+  "startMs": 295000,
+  "endMs": 295080,
+  "timestampMs": 295040,
+  "confidence": 0.9033814668655396,
+  "whisperStartMs": 294900
+ },
+ {
+  "text": " farà",
+  "startMs": 295140,
+  "endMs": 295320,
+  "timestampMs": 295230,
+  "confidence": 0.9909217953681946,
+  "whisperStartMs": 295180
+ },
+ {
+  "text": " bene",
+  "startMs": 295400,
+  "endMs": 295720,
+  "timestampMs": 295560,
+  "confidence": 0.9967041611671448,
+  "whisperStartMs": 295500
+ },
+ {
+  "text": " mi",
+  "startMs": 295820,
+  "endMs": 295900,
+  "timestampMs": 295860,
+  "confidence": 0.8604874014854431,
+  "whisperStartMs": 295800
+ },
+ {
+  "text": " fa",
+  "startMs": 295980,
+  "endMs": 296080,
+  "timestampMs": 296030,
+  "confidence": 0.99748694896698,
+  "whisperStartMs": 296020
+ },
+ {
+  "text": " bene",
+  "startMs": 296160,
+  "endMs": 296520,
+  "timestampMs": 296340,
+  "confidence": 0.9990103244781494,
+  "whisperStartMs": 296220
+ },
+ {
+  "text": " e",
+  "startMs": 297220,
+  "endMs": 297260,
+  "timestampMs": 297230,
+  "confidence": 0.7660164833068848,
+  "whisperStartMs": 296760
+ },
+ {
+  "text": " quindi",
+  "startMs": 297540,
+  "endMs": 297800,
+  "timestampMs": 297670,
+  "confidence": 0.9976522326469421,
+  "whisperStartMs": 297680
+ },
+ {
+  "text": " non",
+  "startMs": 297960,
+  "endMs": 298060,
+  "timestampMs": 298010,
+  "confidence": 0.9923580288887024,
+  "whisperStartMs": 297980
+ },
+ {
+  "text": " ho",
+  "startMs": 298100,
+  "endMs": 298180,
+  "timestampMs": 298140,
+  "confidence": 0.9656639695167542,
+  "whisperStartMs": 298220
+ },
+ {
+  "text": " non",
+  "startMs": 298620,
+  "endMs": 298720,
+  "timestampMs": 298670,
+  "confidence": 0.5941054224967957,
+  "whisperStartMs": 298760
+ },
+ {
+  "text": " ho",
+  "startMs": 298760,
+  "endMs": 298820,
+  "timestampMs": 298790,
+  "confidence": 0.990791916847229,
+  "whisperStartMs": 298760
+ },
+ {
+  "text": " avuto",
+  "startMs": 298860,
+  "endMs": 299040,
+  "timestampMs": 298950,
+  "confidence": 0.9983305633068085,
+  "whisperStartMs": 298900
+ },
+ {
+  "text": " altri",
+  "startMs": 299120,
+  "endMs": 299300,
+  "timestampMs": 299210,
+  "confidence": 0.9987931251525879,
+  "whisperStartMs": 299140
+ },
+ {
+  "text": " dubbi",
+  "startMs": 299360,
+  "endMs": 299660,
+  "timestampMs": 299510,
+  "confidence": 0.998835563659668,
+  "whisperStartMs": 299380
+ },
+ {
+  "text": " poi",
+  "startMs": 299780,
+  "endMs": 300020,
+  "timestampMs": 299900,
+  "confidence": 0.9637142419815063,
+  "whisperStartMs": 299800
+ },
+ {
+  "text": " si",
+  "startMs": 301060,
+  "endMs": 301120,
+  "timestampMs": 301090,
+  "confidence": 0.9549266695976257,
+  "whisperStartMs": 300620
+ },
+ {
+  "text": " è",
+  "startMs": 301160,
+  "endMs": 301200,
+  "timestampMs": 301170,
+  "confidence": 0.9918198585510254,
+  "whisperStartMs": 301220
+ },
+ {
+  "text": " riconfermato",
+  "startMs": 301240,
+  "endMs": 301900,
+  "timestampMs": 301570,
+  "confidence": 0.9593361496925354,
+  "whisperStartMs": 301300
+ },
+ {
+  "text": " il",
+  "startMs": 301960,
+  "endMs": 302000,
+  "timestampMs": 301980,
+  "confidence": 0.9868407249450684,
+  "whisperStartMs": 302000
+ },
+ {
+  "text": " percorso",
+  "startMs": 302040,
+  "endMs": 302460,
+  "timestampMs": 302250,
+  "confidence": 0.9988457957903544,
+  "whisperStartMs": 302220
+ },
+ {
+  "text": " per",
+  "startMs": 302520,
+  "endMs": 302620,
+  "timestampMs": 302570,
+  "confidence": 0.9976603984832764,
+  "whisperStartMs": 302540
+ },
+ {
+  "text": " quello",
+  "startMs": 302640,
+  "endMs": 302820,
+  "timestampMs": 302730,
+  "confidence": 0.9990794658660889,
+  "whisperStartMs": 302740
+ },
+ {
+  "text": " che",
+  "startMs": 302860,
+  "endMs": 302980,
+  "timestampMs": 302920,
+  "confidence": 0.9972720742225647,
+  "whisperStartMs": 302940
+ },
+ {
+  "text": " è",
+  "startMs": 303080,
+  "endMs": 303120,
+  "timestampMs": 303090,
+  "confidence": 0.952531099319458,
+  "whisperStartMs": 303120
+ },
+ {
+  "text": " super",
+  "startMs": 303660,
+  "endMs": 303920,
+  "timestampMs": 303790,
+  "confidence": 0.9804074168205261,
+  "whisperStartMs": 303700
+ },
+ {
+  "text": " valido",
+  "startMs": 303960,
+  "endMs": 304300,
+  "timestampMs": 304130,
+  "confidence": 0.9803275167942047,
+  "whisperStartMs": 304020
+ },
+ {
+  "text": " super",
+  "startMs": 304420,
+  "endMs": 304680,
+  "timestampMs": 304550,
+  "confidence": 0.9397444128990173,
+  "whisperStartMs": 304420
+ },
+ {
+  "text": " utile",
+  "startMs": 304740,
+  "endMs": 305060,
+  "timestampMs": 304900,
+  "confidence": 0.9954659938812256,
+  "whisperStartMs": 304780
+ },
+ {
+  "text": " e",
+  "startMs": 305580,
+  "endMs": 305620,
+  "timestampMs": 305590,
+  "confidence": 0.9343755841255188,
+  "whisperStartMs": 305440
+ },
+ {
+  "text": " che",
+  "startMs": 305640,
+  "endMs": 305720,
+  "timestampMs": 305680,
+  "confidence": 0.9977772831916809,
+  "whisperStartMs": 305720
+ },
+ {
+  "text": " secondo",
+  "startMs": 305800,
+  "endMs": 306020,
+  "timestampMs": 305910,
+  "confidence": 0.050445493310689926,
+  "whisperStartMs": 305880
+ },
+ {
+  "text": " me",
+  "startMs": 306080,
+  "endMs": 306140,
+  "timestampMs": 306110,
+  "confidence": 0.996274471282959,
+  "whisperStartMs": 306060
+ },
+ {
+  "text": " dovrebbero",
+  "startMs": 306220,
+  "endMs": 306540,
+  "timestampMs": 306380,
+  "confidence": 0.9483978947003683,
+  "whisperStartMs": 306220
+ },
+ {
+  "text": " fare",
+  "startMs": 306600,
+  "endMs": 306760,
+  "timestampMs": 306680,
+  "confidence": 0.7656710147857666,
+  "whisperStartMs": 306580
+ },
+ {
+  "text": " tutti",
+  "startMs": 306820,
+  "endMs": 307060,
+  "timestampMs": 306940,
+  "confidence": 0.9845542311668396,
+  "whisperStartMs": 306820
+ },
+ {
+  "text": " indipendentemente",
+  "startMs": 307100,
+  "endMs": 307840,
+  "timestampMs": 307470,
+  "confidence": 0.9453758835792542,
+  "whisperStartMs": 307120
+ },
+ {
+  "text": " che",
+  "startMs": 307880,
+  "endMs": 307940,
+  "timestampMs": 307910,
+  "confidence": 0.3082018792629242,
+  "whisperStartMs": 307900
+ },
+ {
+  "text": " una",
+  "startMs": 307980,
+  "endMs": 308060,
+  "timestampMs": 308020,
+  "confidence": 0.9854405522346497,
+  "whisperStartMs": 308020
+ },
+ {
+  "text": " persona",
+  "startMs": 308100,
+  "endMs": 308400,
+  "timestampMs": 308250,
+  "confidence": 0.9992928504943848,
+  "whisperStartMs": 308120
+ },
+ {
+  "text": " corra",
+  "startMs": 308460,
+  "endMs": 308800,
+  "timestampMs": 308630,
+  "confidence": 0.9060511887073517,
+  "whisperStartMs": 308460
+ },
+ {
+  "text": " oppure",
+  "startMs": 308860,
+  "endMs": 309100,
+  "timestampMs": 308980,
+  "confidence": 0.5831423103809357,
+  "whisperStartMs": 308860
+ },
+ {
+  "text": " no",
+  "startMs": 309140,
+  "endMs": 309220,
+  "timestampMs": 309180,
+  "confidence": 0.9934448003768921,
+  "whisperStartMs": 309200
+ },
+ {
+  "text": " perché",
+  "startMs": 309720,
+  "endMs": 309900,
+  "timestampMs": 309810,
+  "confidence": 0.4864930212497711,
+  "whisperStartMs": 309660
+ },
+ {
+  "text": " appunto",
+  "startMs": 309960,
+  "endMs": 310220,
+  "timestampMs": 310090,
+  "confidence": 0.8622951209545135,
+  "whisperStartMs": 309960
+ },
+ {
+  "text": " ti",
+  "startMs": 310260,
+  "endMs": 310320,
+  "timestampMs": 310290,
+  "confidence": 0.9534900188446045,
+  "whisperStartMs": 310260
+ },
+ {
+  "text": " dà",
+  "startMs": 310380,
+  "endMs": 310440,
+  "timestampMs": 310410,
+  "confidence": 0.8893575370311737,
+  "whisperStartMs": 310440
+ },
+ {
+  "text": " strumenti",
+  "startMs": 310540,
+  "endMs": 311100,
+  "timestampMs": 310820,
+  "confidence": 0.9983622630437216,
+  "whisperStartMs": 310580
+ },
+ {
+  "text": " sì",
+  "startMs": 312080,
+  "endMs": 312180,
+  "timestampMs": 312130,
+  "confidence": 0.7572034001350403,
+  "whisperStartMs": 312060
+ },
+ {
+  "text": " è",
+  "startMs": 312560,
+  "endMs": 312600,
+  "timestampMs": 312570,
+  "confidence": 0.661621630191803,
+  "whisperStartMs": 312460
+ },
+ {
+  "text": " vero",
+  "startMs": 312620,
+  "endMs": 312840,
+  "timestampMs": 312730,
+  "confidence": 0.9986198842525482,
+  "whisperStartMs": 312700
+ },
+ {
+  "text": " per",
+  "startMs": 312940,
+  "endMs": 313100,
+  "timestampMs": 313020,
+  "confidence": 0.9363477826118469,
+  "whisperStartMs": 312960
+ },
+ {
+  "text": " le",
+  "startMs": 313180,
+  "endMs": 313240,
+  "timestampMs": 313210,
+  "confidence": 0.9972635507583618,
+  "whisperStartMs": 313220
+ },
+ {
+  "text": " persone",
+  "startMs": 313300,
+  "endMs": 313620,
+  "timestampMs": 313460,
+  "confidence": 0.9987514019012451,
+  "whisperStartMs": 313420
+ },
+ {
+  "text": " che",
+  "startMs": 313660,
+  "endMs": 313740,
+  "timestampMs": 313700,
+  "confidence": 0.9935617446899414,
+  "whisperStartMs": 313660
+ },
+ {
+  "text": " in",
+  "startMs": 313780,
+  "endMs": 313840,
+  "timestampMs": 313810,
+  "confidence": 0.958332359790802,
+  "whisperStartMs": 313880
+ },
+ {
+  "text": " primi",
+  "startMs": 313880,
+  "endMs": 314120,
+  "timestampMs": 314000,
+  "confidence": 0.6490824818611145,
+  "whisperStartMs": 314020
+ },
+ {
+  "text": " scorrono",
+  "startMs": 314200,
+  "endMs": 314700,
+  "timestampMs": 314450,
+  "confidence": 0.9183069666226705,
+  "whisperStartMs": 314240
+ },
+ {
+  "text": " ma",
+  "startMs": 314880,
+  "endMs": 314980,
+  "timestampMs": 314930,
+  "confidence": 0.9617378115653992,
+  "whisperStartMs": 314900
+ },
+ {
+  "text": " anche",
+  "startMs": 315360,
+  "endMs": 315620,
+  "timestampMs": 315490,
+  "confidence": 0.9958011507987976,
+  "whisperStartMs": 315400
+ },
+ {
+  "text": " per",
+  "startMs": 315660,
+  "endMs": 315760,
+  "timestampMs": 315710,
+  "confidence": 0.9912940859794617,
+  "whisperStartMs": 315700
+ },
+ {
+  "text": " le",
+  "startMs": 315800,
+  "endMs": 315860,
+  "timestampMs": 315830,
+  "confidence": 0.9973124265670776,
+  "whisperStartMs": 315860
+ },
+ {
+  "text": " persone",
+  "startMs": 315900,
+  "endMs": 316280,
+  "timestampMs": 316090,
+  "confidence": 0.9993215799331665,
+  "whisperStartMs": 316060
+ },
+ {
+  "text": " che",
+  "startMs": 316360,
+  "endMs": 316500,
+  "timestampMs": 316430,
+  "confidence": 0.9922979474067688,
+  "whisperStartMs": 316340
+ },
+ {
+  "text": " non",
+  "startMs": 317140,
+  "endMs": 317260,
+  "timestampMs": 317200,
+  "confidence": 0.9949904084205627,
+  "whisperStartMs": 317160
+ },
+ {
+  "text": " corrono",
+  "startMs": 317340,
+  "endMs": 317760,
+  "timestampMs": 317550,
+  "confidence": 0.9699488878250122,
+  "whisperStartMs": 317420
+ },
+ {
+  "text": " e",
+  "startMs": 317840,
+  "endMs": 317880,
+  "timestampMs": 317850,
+  "confidence": 0.9821813702583313,
+  "whisperStartMs": 317860
+ },
+ {
+  "text": " che",
+  "startMs": 317900,
+  "endMs": 317980,
+  "timestampMs": 317940,
+  "confidence": 0.9717087149620056,
+  "whisperStartMs": 317980
+ },
+ {
+  "text": " vogliono",
+  "startMs": 318020,
+  "endMs": 318260,
+  "timestampMs": 318140,
+  "confidence": 0.9963229298591614,
+  "whisperStartMs": 318120
+ },
+ {
+  "text": " stare",
+  "startMs": 318320,
+  "endMs": 318500,
+  "timestampMs": 318410,
+  "confidence": 0.9775371551513672,
+  "whisperStartMs": 318340
+ },
+ {
+  "text": " bene",
+  "startMs": 318580,
+  "endMs": 318760,
+  "timestampMs": 318670,
+  "confidence": 0.9975212216377258,
+  "whisperStartMs": 318540
+ },
+ {
+  "text": " sentirsi",
+  "startMs": 318900,
+  "endMs": 319280,
+  "timestampMs": 319090,
+  "confidence": 0.5947207510471344,
+  "whisperStartMs": 318880
+ },
+ {
+  "text": " meglio",
+  "startMs": 319340,
+  "endMs": 319740,
+  "timestampMs": 319540,
+  "confidence": 0.9954513907432556,
+  "whisperStartMs": 319400
+ },
+ {
+  "text": " sentirsi",
+  "startMs": 320320,
+  "endMs": 320740,
+  "timestampMs": 320530,
+  "confidence": 0.9056278169155121,
+  "whisperStartMs": 320200
+ },
+ {
+  "text": " più",
+  "startMs": 320820,
+  "endMs": 320980,
+  "timestampMs": 320900,
+  "confidence": 0.9931642413139343,
+  "whisperStartMs": 320880
+ },
+ {
+  "text": " vive",
+  "startMs": 321280,
+  "endMs": 321500,
+  "timestampMs": 321390,
+  "confidence": 0.8681105971336365,
+  "whisperStartMs": 321260
+ },
+ {
+  "text": " durante",
+  "startMs": 321540,
+  "endMs": 321860,
+  "timestampMs": 321700,
+  "confidence": 0.9964897036552429,
+  "whisperStartMs": 321540
+ },
+ {
+  "text": " il",
+  "startMs": 321900,
+  "endMs": 321940,
+  "timestampMs": 321920,
+  "confidence": 0.9982525706291199,
+  "whisperStartMs": 321920
+ },
+ {
+  "text": " giorno",
+  "startMs": 321980,
+  "endMs": 322420,
+  "timestampMs": 322200,
+  "confidence": 0.999580442905426,
+  "whisperStartMs": 322160
+ },
+ {
+  "text": " avere",
+  "startMs": 322660,
+  "endMs": 322880,
+  "timestampMs": 322770,
+  "confidence": 0.9051640629768372,
+  "whisperStartMs": 322520
+ },
+ {
+  "text": " più",
+  "startMs": 322920,
+  "endMs": 323000,
+  "timestampMs": 322960,
+  "confidence": 0.9991045594215393,
+  "whisperStartMs": 322900
+ },
+ {
+  "text": " energia",
+  "startMs": 323040,
+  "endMs": 323560,
+  "timestampMs": 323300,
+  "confidence": 0.9972092509269714,
+  "whisperStartMs": 323080
+ },
+ {
+  "text": " quindi",
+  "startMs": 324140,
+  "endMs": 324380,
+  "timestampMs": 324260,
+  "confidence": 0.9491637945175171,
+  "whisperStartMs": 323860
+ },
+ {
+  "text": " ecco",
+  "startMs": 324780,
+  "endMs": 324920,
+  "timestampMs": 324850,
+  "confidence": 0.8978465795516968,
+  "whisperStartMs": 324800
+ },
+ {
+  "text": " lo",
+  "startMs": 324960,
+  "endMs": 325020,
+  "timestampMs": 324990,
+  "confidence": 0.9323858022689819,
+  "whisperStartMs": 325020
+ },
+ {
+  "text": " consiglio",
+  "startMs": 325060,
+  "endMs": 325560,
+  "timestampMs": 325310,
+  "confidence": 0.9980080127716064,
+  "whisperStartMs": 325220
+ },
+ {
+  "text": " a",
+  "startMs": 326240,
+  "endMs": 326280,
+  "timestampMs": 326250,
+  "confidence": 0.9754089713096619,
+  "whisperStartMs": 325820
+ },
+ {
+  "text": " tutti",
+  "startMs": 326320,
+  "endMs": 326620,
+  "timestampMs": 326470,
+  "confidence": 0.9873954653739929,
+  "whisperStartMs": 326380
+ },
+ {
+  "text": " indipendentemente",
+  "startMs": 326680,
+  "endMs": 327460,
+  "timestampMs": 327070,
+  "confidence": 0.9935997486114502,
+  "whisperStartMs": 326680
+ },
+ {
+  "text": " che",
+  "startMs": 327480,
+  "endMs": 327560,
+  "timestampMs": 327520,
+  "confidence": 0.768600344657898,
+  "whisperStartMs": 327500
+ },
+ {
+  "text": " una",
+  "startMs": 327580,
+  "endMs": 327640,
+  "timestampMs": 327610,
+  "confidence": 0.9553835988044739,
+  "whisperStartMs": 327660
+ },
+ {
+  "text": " persona",
+  "startMs": 327680,
+  "endMs": 327980,
+  "timestampMs": 327830,
+  "confidence": 0.9991971850395203,
+  "whisperStartMs": 327720
+ },
+ {
+  "text": " corra",
+  "startMs": 328060,
+  "endMs": 328340,
+  "timestampMs": 328200,
+  "confidence": 0.923821896314621,
+  "whisperStartMs": 328060
+ },
+ {
+  "text": " oppure",
+  "startMs": 328360,
+  "endMs": 328580,
+  "timestampMs": 328470,
+  "confidence": 0.8328432738780975,
+  "whisperStartMs": 328420
+ },
+ {
+  "text": " no",
+  "startMs": 328640,
+  "endMs": 328720,
+  "timestampMs": 328680,
+  "confidence": 0.9916170239448547,
+  "whisperStartMs": 328680
+ },
+ {
+  "text": " inizia",
+  "startMs": 332440,
+  "endMs": 332740,
+  "timestampMs": 332590,
+  "confidence": 0.8611642320950826,
+  "whisperStartMs": 332340
+ },
+ {
+  "text": " subito",
+  "startMs": 332800,
+  "endMs": 333180,
+  "timestampMs": 332990,
+  "confidence": 0.9992424249649048,
+  "whisperStartMs": 332860
+ },
+ {
+  "text": " perché",
+  "startMs": 333260,
+  "endMs": 333540,
+  "timestampMs": 333400,
+  "confidence": 0.9803654551506042,
+  "whisperStartMs": 333300
+ },
+ {
+  "text": " non",
+  "startMs": 333860,
+  "endMs": 334000,
+  "timestampMs": 333930,
+  "confidence": 0.9962687492370605,
+  "whisperStartMs": 333840
+ },
+ {
+  "text": " c",
+  "startMs": 334040,
+  "endMs": 334080,
+  "timestampMs": 334050,
+  "confidence": 0.9956432580947876,
+  "whisperStartMs": 334140
+ },
+ {
+  "text": "'è",
+  "startMs": 334120,
+  "endMs": 334200,
+  "timestampMs": 334160,
+  "confidence": 0.9950997531414032,
+  "whisperStartMs": 334340
+ },
+ {
+  "text": " aspetto",
+  "startMs": 334980,
+  "endMs": 335320,
+  "timestampMs": 335150,
+  "confidence": 0.9841309487819672,
+  "whisperStartMs": 335040
+ },
+ {
+  "text": " migliore",
+  "startMs": 335420,
+  "endMs": 335840,
+  "timestampMs": 335630,
+  "confidence": 0.9968554973602295,
+  "whisperStartMs": 335400
+ },
+ {
+  "text": " del",
+  "startMs": 335940,
+  "endMs": 336180,
+  "timestampMs": 336060,
+  "confidence": 0.9741830229759216,
+  "whisperStartMs": 335980
+ },
+ {
+  "text": " lavorare",
+  "startMs": 336460,
+  "endMs": 336840,
+  "timestampMs": 336650,
+  "confidence": 0.9960678517818451,
+  "whisperStartMs": 336500
+ },
+ {
+  "text": " sulla",
+  "startMs": 336900,
+  "endMs": 337080,
+  "timestampMs": 336990,
+  "confidence": 0.9953775405883789,
+  "whisperStartMs": 336960
+ },
+ {
+  "text": " tua",
+  "startMs": 337120,
+  "endMs": 337220,
+  "timestampMs": 337170,
+  "confidence": 0.9933859705924988,
+  "whisperStartMs": 337120
+ },
+ {
+  "text": " salute",
+  "startMs": 337280,
+  "endMs": 337640,
+  "timestampMs": 337460,
+  "confidence": 0.9965838193893433,
+  "whisperStartMs": 337300
+ },
+ {
+  "text": " sul",
+  "startMs": 337740,
+  "endMs": 337840,
+  "timestampMs": 337790,
+  "confidence": 0.25661659240722656,
+  "whisperStartMs": 337680
+ },
+ {
+  "text": " tuo",
+  "startMs": 337880,
+  "endMs": 337980,
+  "timestampMs": 337930,
+  "confidence": 0.9811933040618896,
+  "whisperStartMs": 337880
+ },
+ {
+  "text": " benessere",
+  "startMs": 338020,
+  "endMs": 338620,
+  "timestampMs": 338320,
+  "confidence": 0.9949403405189514,
+  "whisperStartMs": 338060
+ },
+ {
+  "text": " e",
+  "startMs": 339320,
+  "endMs": 339360,
+  "timestampMs": 339330,
+  "confidence": 0.9061436057090759,
+  "whisperStartMs": 339160
+ },
+ {
+  "text": " su",
+  "startMs": 339440,
+  "endMs": 339540,
+  "timestampMs": 339490,
+  "confidence": 0.64471036195755,
+  "whisperStartMs": 339560
+ },
+ {
+  "text": " quella",
+  "startMs": 339600,
+  "endMs": 339780,
+  "timestampMs": 339690,
+  "confidence": 0.9893229603767395,
+  "whisperStartMs": 339680
+ },
+ {
+  "text": " che",
+  "startMs": 339820,
+  "endMs": 339900,
+  "timestampMs": 339860,
+  "confidence": 0.9978187084197998,
+  "whisperStartMs": 339860
+ },
+ {
+  "text": " è",
+  "startMs": 339940,
+  "endMs": 339980,
+  "timestampMs": 339950,
+  "confidence": 0.9555860161781311,
+  "whisperStartMs": 340000
+ },
+ {
+  "text": " la",
+  "startMs": 340000,
+  "endMs": 340060,
+  "timestampMs": 340030,
+  "confidence": 0.9888555407524109,
+  "whisperStartMs": 340040
+ },
+ {
+  "text": " tua",
+  "startMs": 340080,
+  "endMs": 340180,
+  "timestampMs": 340130,
+  "confidence": 0.9958859086036682,
+  "whisperStartMs": 340140
+ },
+ {
+  "text": " energia",
+  "startMs": 340220,
+  "endMs": 340640,
+  "timestampMs": 340430,
+  "confidence": 0.9970043301582336,
+  "whisperStartMs": 340220
+ },
+ {
+  "text": " se",
+  "startMs": 341520,
+  "endMs": 341600,
+  "timestampMs": 341560,
+  "confidence": 0.10031221061944962,
+  "whisperStartMs": 340840
+ },
+ {
+  "text": " non",
+  "startMs": 341640,
+  "endMs": 341720,
+  "timestampMs": 341680,
+  "confidence": 0.9915274977684021,
+  "whisperStartMs": 341660
+ },
+ {
+  "text": " lo",
+  "startMs": 341760,
+  "endMs": 341800,
+  "timestampMs": 341780,
+  "confidence": 0.9848957061767578,
+  "whisperStartMs": 341760
+ },
+ {
+  "text": " fai",
+  "startMs": 341860,
+  "endMs": 342000,
+  "timestampMs": 341930,
+  "confidence": 0.9990042746067047,
+  "whisperStartMs": 341960
+ },
+ {
+  "text": " tu",
+  "startMs": 342060,
+  "endMs": 342200,
+  "timestampMs": 342130,
+  "confidence": 0.9915034770965576,
+  "whisperStartMs": 342080
+ },
+ {
+  "text": " nessuno",
+  "startMs": 343220,
+  "endMs": 343520,
+  "timestampMs": 343370,
+  "confidence": 0.9133206605911255,
+  "whisperStartMs": 342880
+ },
+ {
+  "text": " lo",
+  "startMs": 343580,
+  "endMs": 343640,
+  "timestampMs": 343610,
+  "confidence": 0.9806051254272461,
+  "whisperStartMs": 343580
+ },
+ {
+  "text": " fa",
+  "startMs": 343680,
+  "endMs": 343740,
+  "timestampMs": 343710,
+  "confidence": 0.9936019778251648,
+  "whisperStartMs": 343720
+ },
+ {
+  "text": " al",
+  "startMs": 343800,
+  "endMs": 343860,
+  "timestampMs": 343830,
+  "confidence": 0.9684600234031677,
+  "whisperStartMs": 343800
+ },
+ {
+  "text": " posto",
+  "startMs": 343880,
+  "endMs": 344100,
+  "timestampMs": 343990,
+  "confidence": 0.9943637847900391,
+  "whisperStartMs": 343940
+ },
+ {
+  "text": " tuo",
+  "startMs": 344160,
+  "endMs": 344440,
+  "timestampMs": 344300,
+  "confidence": 0.9335072040557861,
+  "whisperStartMs": 344280
+ },
+ {
+  "text": " per",
+  "startMs": 344580,
+  "endMs": 344680,
+  "timestampMs": 344630,
+  "confidence": 0.8468598127365112,
+  "whisperStartMs": 344520
+ },
+ {
+  "text": " cui",
+  "startMs": 344740,
+  "endMs": 344960,
+  "timestampMs": 344850,
+  "confidence": 0.9988144636154175,
+  "whisperStartMs": 344800
+ },
+ {
+  "text": " la",
+  "startMs": 346180,
+  "endMs": 346240,
+  "timestampMs": 346210,
+  "confidence": 0.9498260021209717,
+  "whisperStartMs": 345860
+ },
+ {
+  "text": " salute",
+  "startMs": 346300,
+  "endMs": 346600,
+  "timestampMs": 346450,
+  "confidence": 0.9969697594642639,
+  "whisperStartMs": 346400
+ },
+ {
+  "text": " penso",
+  "startMs": 346680,
+  "endMs": 346940,
+  "timestampMs": 346810,
+  "confidence": 0.9818275570869446,
+  "whisperStartMs": 346660
+ },
+ {
+  "text": " che",
+  "startMs": 347000,
+  "endMs": 347080,
+  "timestampMs": 347040,
+  "confidence": 0.9855964779853821,
+  "whisperStartMs": 346980
+ },
+ {
+  "text": " sia",
+  "startMs": 347120,
+  "endMs": 347220,
+  "timestampMs": 347170,
+  "confidence": 0.9980415105819702,
+  "whisperStartMs": 347180
+ },
+ {
+  "text": " la",
+  "startMs": 347260,
+  "endMs": 347320,
+  "timestampMs": 347290,
+  "confidence": 0.9973933696746826,
+  "whisperStartMs": 347280
+ },
+ {
+  "text": " cosa",
+  "startMs": 347360,
+  "endMs": 347520,
+  "timestampMs": 347440,
+  "confidence": 0.9988558292388916,
+  "whisperStartMs": 347420
+ },
+ {
+  "text": " più",
+  "startMs": 347620,
+  "endMs": 347780,
+  "timestampMs": 347700,
+  "confidence": 0.9990277290344238,
+  "whisperStartMs": 347600
+ },
+ {
+  "text": " importante",
+  "startMs": 347820,
+  "endMs": 348240,
+  "timestampMs": 348030,
+  "confidence": 0.9984227418899536,
+  "whisperStartMs": 347900
+ },
+ {
+  "text": " che",
+  "startMs": 348280,
+  "endMs": 348340,
+  "timestampMs": 348310,
+  "confidence": 0.9979261159896851,
+  "whisperStartMs": 348260
+ },
+ {
+  "text": " abbiamo",
+  "startMs": 348380,
+  "endMs": 348760,
+  "timestampMs": 348570,
+  "confidence": 0.9989461302757263,
+  "whisperStartMs": 348500
+ },
+ {
+  "text": " e",
+  "startMs": 349580,
+  "endMs": 349620,
+  "timestampMs": 349590,
+  "confidence": 0.9363477826118469,
+  "whisperStartMs": 348900
+ },
+ {
+  "text": " se",
+  "startMs": 350320,
+  "endMs": 350400,
+  "timestampMs": 350360,
+  "confidence": 0.9683830142021179,
+  "whisperStartMs": 350320
+ },
+ {
+  "text": " non",
+  "startMs": 350420,
+  "endMs": 350540,
+  "timestampMs": 350480,
+  "confidence": 0.9991718530654907,
+  "whisperStartMs": 350480
+ },
+ {
+  "text": " abbiamo",
+  "startMs": 350580,
+  "endMs": 350820,
+  "timestampMs": 350700,
+  "confidence": 0.9961389899253845,
+  "whisperStartMs": 350640
+ },
+ {
+  "text": " quella",
+  "startMs": 350880,
+  "endMs": 351100,
+  "timestampMs": 350990,
+  "confidence": 0.9905824661254883,
+  "whisperStartMs": 350880
+ },
+ {
+  "text": " poi",
+  "startMs": 351160,
+  "endMs": 351280,
+  "timestampMs": 351220,
+  "confidence": 0.9761338233947754,
+  "whisperStartMs": 351160
+ },
+ {
+  "text": " non",
+  "startMs": 351320,
+  "endMs": 351400,
+  "timestampMs": 351360,
+  "confidence": 0.9940896034240723,
+  "whisperStartMs": 351340
+ },
+ {
+  "text": " riusciamo",
+  "startMs": 351420,
+  "endMs": 351720,
+  "timestampMs": 351570,
+  "confidence": 0.9967491428057352,
+  "whisperStartMs": 351460
+ },
+ {
+  "text": " a",
+  "startMs": 351760,
+  "endMs": 351800,
+  "timestampMs": 351770,
+  "confidence": 0.9948193430900574,
+  "whisperStartMs": 351760
+ },
+ {
+  "text": " fare",
+  "startMs": 351840,
+  "endMs": 352060,
+  "timestampMs": 351950,
+  "confidence": 0.998781144618988,
+  "whisperStartMs": 352020
+ },
+ {
+  "text": " tutte",
+  "startMs": 352400,
+  "endMs": 352580,
+  "timestampMs": 352490,
+  "confidence": 0.9924522042274475,
+  "whisperStartMs": 352380
+ },
+ {
+  "text": " le",
+  "startMs": 352620,
+  "endMs": 352680,
+  "timestampMs": 352650,
+  "confidence": 0.9989413619041443,
+  "whisperStartMs": 352640
+ },
+ {
+  "text": " altre",
+  "startMs": 352720,
+  "endMs": 352880,
+  "timestampMs": 352800,
+  "confidence": 0.9973472356796265,
+  "whisperStartMs": 352800
+ },
+ {
+  "text": " attività",
+  "startMs": 353000,
+  "endMs": 353340,
+  "timestampMs": 353170,
+  "confidence": 0.8411590854326884,
+  "whisperStartMs": 352980
+ },
+ {
+  "text": " della",
+  "startMs": 353460,
+  "endMs": 353620,
+  "timestampMs": 353540,
+  "confidence": 0.9708340167999268,
+  "whisperStartMs": 353480
+ },
+ {
+  "text": " nostra",
+  "startMs": 353660,
+  "endMs": 353880,
+  "timestampMs": 353770,
+  "confidence": 0.9992904663085938,
+  "whisperStartMs": 353680
+ },
+ {
+  "text": " quotidianità",
+  "startMs": 353920,
+  "endMs": 354480,
+  "timestampMs": 354200,
+  "confidence": 0.984020988146464,
+  "whisperStartMs": 353960
+ },
+ {
+  "text": " per",
+  "startMs": 355040,
+  "endMs": 355140,
+  "timestampMs": 355090,
+  "confidence": 0.877124011516571,
+  "whisperStartMs": 354920
+ },
+ {
+  "text": " cui",
+  "startMs": 355180,
+  "endMs": 355380,
+  "timestampMs": 355280,
+  "confidence": 0.9972932934761047,
+  "whisperStartMs": 355260
+ },
+ {
+  "text": " inizia",
+  "startMs": 355900,
+  "endMs": 356200,
+  "timestampMs": 356050,
+  "confidence": 0.9711386362711588,
+  "whisperStartMs": 355900
+ },
+ {
+  "text": " subito",
+  "startMs": 356260,
+  "endMs": 356640,
+  "timestampMs": 356450,
+  "confidence": 0.9989682137966156,
+  "whisperStartMs": 356300
+ },
+ {
+  "text": " non",
+  "startMs": 356760,
+  "endMs": 356880,
+  "timestampMs": 356820,
+  "confidence": 0.7605690956115723,
+  "whisperStartMs": 356740
+ },
+ {
+  "text": " aspettare",
+  "startMs": 356940,
+  "endMs": 357480,
+  "timestampMs": 357210,
+  "confidence": 0.9980628490447998,
+  "whisperStartMs": 356960
+ },
+ {
+  "text": " e",
+  "startMs": 357940,
+  "endMs": 357980,
+  "timestampMs": 357950,
+  "confidence": 0.8770983219146729,
+  "whisperStartMs": 357900
+ },
+ {
+  "text": " cogli",
+  "startMs": 358540,
+  "endMs": 358800,
+  "timestampMs": 358670,
+  "confidence": 0.808202713727951,
+  "whisperStartMs": 358700
+ },
+ {
+  "text": " l",
+  "startMs": 358820,
+  "endMs": 358860,
+  "timestampMs": 358830,
+  "confidence": 0.9892519116401672,
+  "whisperStartMs": 358820
+ },
+ {
+  "text": "'opportunità",
+  "startMs": 358860,
+  "endMs": 359420,
+  "timestampMs": 359140,
+  "confidence": 0.9980183243751526,
+  "whisperStartMs": 358940
+ },
+ {
+  "text": " al",
+  "startMs": 359660,
+  "endMs": 359720,
+  "timestampMs": 359690,
+  "confidence": 0.9885304570198059,
+  "whisperStartMs": 359640
+ },
+ {
+  "text": " volo",
+  "startMs": 359780,
+  "endMs": 360020,
+  "timestampMs": 359900,
+  "confidence": 0.9959801435470581,
+  "whisperStartMs": 359880
+ },
+ {
+  "text": " allora",
+  "startMs": 362340,
+  "endMs": 362600,
+  "timestampMs": 362470,
+  "confidence": 0.425934761762619,
+  "whisperStartMs": 362240
+ },
+ {
+  "text": " ho",
+  "startMs": 362620,
+  "endMs": 362680,
+  "timestampMs": 362650,
+  "confidence": 0.8030242323875427,
+  "whisperStartMs": 362680
+ },
+ {
+  "text": " conosciuto",
+  "startMs": 362720,
+  "endMs": 363060,
+  "timestampMs": 362890,
+  "confidence": 0.996126671632131,
+  "whisperStartMs": 362840
+ },
+ {
+  "text": " Daniele",
+  "startMs": 363120,
+  "endMs": 363520,
+  "timestampMs": 363320,
+  "confidence": 0.8645997047424316,
+  "whisperStartMs": 363180
+ },
+ {
+  "text": " circa",
+  "startMs": 363640,
+  "endMs": 364040,
+  "timestampMs": 363840,
+  "confidence": 0.109164759516716,
+  "whisperStartMs": 363600
+ },
+ {
+  "text": " due",
+  "startMs": 364540,
+  "endMs": 364740,
+  "timestampMs": 364640,
+  "confidence": 0.9223060607910156,
+  "whisperStartMs": 364440
+ },
+ {
+  "text": " anni",
+  "startMs": 364800,
+  "endMs": 364960,
+  "timestampMs": 364880,
+  "confidence": 0.9989277720451355,
+  "whisperStartMs": 364820
+ },
+ {
+  "text": " fa",
+  "startMs": 365040,
+  "endMs": 365180,
+  "timestampMs": 365110,
+  "confidence": 0.9914535284042358,
+  "whisperStartMs": 365060
+ },
+ {
+  "text": " tramite",
+  "startMs": 365380,
+  "endMs": 365680,
+  "timestampMs": 365530,
+  "confidence": 0.899536669254303,
+  "whisperStartMs": 365400
+ },
+ {
+  "text": " i",
+  "startMs": 365740,
+  "endMs": 365780,
+  "timestampMs": 365760,
+  "confidence": 0.8292189836502075,
+  "whisperStartMs": 365740
+ },
+ {
+  "text": " social",
+  "startMs": 365840,
+  "endMs": 366320,
+  "timestampMs": 366080,
+  "confidence": 0.8689310550689697,
+  "whisperStartMs": 365980
+ },
+ {
+  "text": " e",
+  "startMs": 367180,
+  "endMs": 367220,
+  "timestampMs": 367190,
+  "confidence": 0.5960299968719482,
+  "whisperStartMs": 366460
+ },
+ {
+  "text": " poi",
+  "startMs": 367440,
+  "endMs": 367580,
+  "timestampMs": 367510,
+  "confidence": 0.9816011190414429,
+  "whisperStartMs": 367480
+ },
+ {
+  "text": " un",
+  "startMs": 367640,
+  "endMs": 367700,
+  "timestampMs": 367670,
+  "confidence": 0.9680192470550537,
+  "whisperStartMs": 367660
+ },
+ {
+  "text": " anno",
+  "startMs": 367760,
+  "endMs": 367900,
+  "timestampMs": 367830,
+  "confidence": 0.9859090447425842,
+  "whisperStartMs": 367820
+ },
+ {
+  "text": " fa",
+  "startMs": 367960,
+  "endMs": 368100,
+  "timestampMs": 368030,
+  "confidence": 0.9980822801589966,
+  "whisperStartMs": 367960
+ },
+ {
+  "text": " appunto",
+  "startMs": 368340,
+  "endMs": 368720,
+  "timestampMs": 368530,
+  "confidence": 0.7739633321762085,
+  "whisperStartMs": 368340
+ },
+ {
+  "text": " ho",
+  "startMs": 368840,
+  "endMs": 368880,
+  "timestampMs": 368860,
+  "confidence": 0.9802584648132324,
+  "whisperStartMs": 368780
+ },
+ {
+  "text": " preso",
+  "startMs": 368920,
+  "endMs": 369120,
+  "timestampMs": 369020,
+  "confidence": 0.9986423552036285,
+  "whisperStartMs": 369020
+ },
+ {
+  "text": " la",
+  "startMs": 369180,
+  "endMs": 369240,
+  "timestampMs": 369210,
+  "confidence": 0.9923039078712463,
+  "whisperStartMs": 369140
+ },
+ {
+  "text": " decisione",
+  "startMs": 369280,
+  "endMs": 369700,
+  "timestampMs": 369490,
+  "confidence": 0.993448406457901,
+  "whisperStartMs": 369360
+ },
+ {
+  "text": " di",
+  "startMs": 369760,
+  "endMs": 369840,
+  "timestampMs": 369800,
+  "confidence": 0.9933114051818848,
+  "whisperStartMs": 369780
+ },
+ {
+  "text": " iniziare",
+  "startMs": 370100,
+  "endMs": 370460,
+  "timestampMs": 370280,
+  "confidence": 0.9812007347742716,
+  "whisperStartMs": 370200
+ },
+ {
+  "text": " il",
+  "startMs": 370500,
+  "endMs": 370540,
+  "timestampMs": 370520,
+  "confidence": 0.9445886015892029,
+  "whisperStartMs": 370560
+ },
+ {
+  "text": " percorso",
+  "startMs": 370580,
+  "endMs": 371160,
+  "timestampMs": 370870,
+  "confidence": 0.9989810585975647,
+  "whisperStartMs": 370740
+ },
+ {
+  "text": " semplicemente",
+  "startMs": 372220,
+  "endMs": 372840,
+  "timestampMs": 372530,
+  "confidence": 0.9861461718877157,
+  "whisperStartMs": 372200
+ },
+ {
+  "text": " perché",
+  "startMs": 372920,
+  "endMs": 373240,
+  "timestampMs": 373080,
+  "confidence": 0.9492109417915344,
+  "whisperStartMs": 372920
+ },
+ {
+  "text": " avevo",
+  "startMs": 373920,
+  "endMs": 374160,
+  "timestampMs": 374040,
+  "confidence": 0.9899179637432098,
+  "whisperStartMs": 373780
+ },
+ {
+  "text": " quella",
+  "startMs": 374220,
+  "endMs": 374420,
+  "timestampMs": 374320,
+  "confidence": 0.9808709025382996,
+  "whisperStartMs": 374300
+ },
+ {
+  "text": " voglia",
+  "startMs": 374460,
+  "endMs": 374740,
+  "timestampMs": 374600,
+  "confidence": 0.9995098114013672,
+  "whisperStartMs": 374480
+ },
+ {
+  "text": " di",
+  "startMs": 375200,
+  "endMs": 375280,
+  "timestampMs": 375240,
+  "confidence": 0.9987502098083496,
+  "whisperStartMs": 374820
+ },
+ {
+  "text": " migliorare",
+  "startMs": 375340,
+  "endMs": 375900,
+  "timestampMs": 375620,
+  "confidence": 0.9929020702838898,
+  "whisperStartMs": 375380
+ },
+ {
+  "text": " di",
+  "startMs": 376040,
+  "endMs": 376140,
+  "timestampMs": 376090,
+  "confidence": 0.3954765796661377,
+  "whisperStartMs": 376060
+ },
+ {
+  "text": " mettermi",
+  "startMs": 376400,
+  "endMs": 376700,
+  "timestampMs": 376550,
+  "confidence": 0.9690937995910645,
+  "whisperStartMs": 376400
+ },
+ {
+  "text": " in",
+  "startMs": 376760,
+  "endMs": 376800,
+  "timestampMs": 376780,
+  "confidence": 0.9909694790840149,
+  "whisperStartMs": 376820
+ },
+ {
+  "text": " gioco",
+  "startMs": 376840,
+  "endMs": 377180,
+  "timestampMs": 377010,
+  "confidence": 0.9995976686477661,
+  "whisperStartMs": 376980
+ },
+ {
+  "text": " di",
+  "startMs": 377240,
+  "endMs": 377300,
+  "timestampMs": 377270,
+  "confidence": 0.575819194316864,
+  "whisperStartMs": 377240
+ },
+ {
+  "text": " crescere",
+  "startMs": 377360,
+  "endMs": 377840,
+  "timestampMs": 377600,
+  "confidence": 0.9969212412834167,
+  "whisperStartMs": 377440
+ },
+ {
+  "text": " e",
+  "startMs": 378620,
+  "endMs": 378660,
+  "timestampMs": 378630,
+  "confidence": 0.9622136950492859,
+  "whisperStartMs": 378040
+ },
+ {
+  "text": " quindi",
+  "startMs": 378720,
+  "endMs": 379020,
+  "timestampMs": 378870,
+  "confidence": 0.9966323971748352,
+  "whisperStartMs": 378820
+ },
+ {
+  "text": " ho",
+  "startMs": 379060,
+  "endMs": 379140,
+  "timestampMs": 379100,
+  "confidence": 0.9946210384368896,
+  "whisperStartMs": 379060
+ },
+ {
+  "text": " detto",
+  "startMs": 379160,
+  "endMs": 379480,
+  "timestampMs": 379320,
+  "confidence": 0.9985482096672058,
+  "whisperStartMs": 379220
+ },
+ {
+  "text": " perché",
+  "startMs": 379840,
+  "endMs": 380100,
+  "timestampMs": 379970,
+  "confidence": 0.7104891538619995,
+  "whisperStartMs": 379720
+ },
+ {
+  "text": " no",
+  "startMs": 380200,
+  "endMs": 380280,
+  "timestampMs": 380240,
+  "confidence": 0.9897234439849854,
+  "whisperStartMs": 380200
+ },
+ {
+  "text": " se",
+  "startMs": 380660,
+  "endMs": 380740,
+  "timestampMs": 380700,
+  "confidence": 0.6915717124938965,
+  "whisperStartMs": 380560
+ },
+ {
+  "text": " è",
+  "startMs": 380800,
+  "endMs": 380840,
+  "timestampMs": 380810,
+  "confidence": 0.6125805377960205,
+  "whisperStartMs": 380860
+ },
+ {
+  "text": " qualcosa",
+  "startMs": 380880,
+  "endMs": 381280,
+  "timestampMs": 381080,
+  "confidence": 0.9975851774215698,
+  "whisperStartMs": 381020
+ },
+ {
+  "text": " che",
+  "startMs": 381320,
+  "endMs": 381400,
+  "timestampMs": 381360,
+  "confidence": 0.9992082715034485,
+  "whisperStartMs": 381300
+ },
+ {
+  "text": " mi",
+  "startMs": 381440,
+  "endMs": 381500,
+  "timestampMs": 381470,
+  "confidence": 0.9985472559928894,
+  "whisperStartMs": 381480
+ },
+ {
+  "text": " può",
+  "startMs": 381560,
+  "endMs": 381740,
+  "timestampMs": 381650,
+  "confidence": 0.9982573390007019,
+  "whisperStartMs": 381620
+ },
+ {
+  "text": " essere",
+  "startMs": 382060,
+  "endMs": 382340,
+  "timestampMs": 382200,
+  "confidence": 0.999537467956543,
+  "whisperStartMs": 382020
+ },
+ {
+  "text": " utile",
+  "startMs": 382440,
+  "endMs": 382700,
+  "timestampMs": 382570,
+  "confidence": 0.99933260679245,
+  "whisperStartMs": 382420
+ },
+ {
+  "text": " nella",
+  "startMs": 382800,
+  "endMs": 382960,
+  "timestampMs": 382880,
+  "confidence": 0.9988434314727783,
+  "whisperStartMs": 382800
+ },
+ {
+  "text": " mia",
+  "startMs": 383000,
+  "endMs": 383100,
+  "timestampMs": 383050,
+  "confidence": 0.9993483424186707,
+  "whisperStartMs": 383000
+ },
+ {
+  "text": " vita",
+  "startMs": 383140,
+  "endMs": 383420,
+  "timestampMs": 383280,
+  "confidence": 0.9993996620178223,
+  "whisperStartMs": 383200
+ },
+ {
+  "text": " lo",
+  "startMs": 383980,
+  "endMs": 384040,
+  "timestampMs": 384010,
+  "confidence": 0.8624232411384583,
+  "whisperStartMs": 383560
+ },
+ {
+  "text": " faccio",
+  "startMs": 384080,
+  "endMs": 384440,
+  "timestampMs": 384260,
+  "confidence": 0.9962573051452637,
+  "whisperStartMs": 384180
+ },
+ {
+  "text": " e",
+  "startMs": 384920,
+  "endMs": 384960,
+  "timestampMs": 384930,
+  "confidence": 0.9444331526756287,
+  "whisperStartMs": 384820
+ },
+ {
+  "text": " quindi",
+  "startMs": 384980,
+  "endMs": 385260,
+  "timestampMs": 385120,
+  "confidence": 0.9924345016479492,
+  "whisperStartMs": 385120
+ },
+ {
+  "text": " così",
+  "startMs": 385720,
+  "endMs": 385880,
+  "timestampMs": 385800,
+  "confidence": 0.9643899202346802,
+  "whisperStartMs": 385620
+ },
+ {
+  "text": " è",
+  "startMs": 385920,
+  "endMs": 385960,
+  "timestampMs": 385930,
+  "confidence": 0.9939640164375305,
+  "whisperStartMs": 385940
+ },
+ {
+  "text": " stato",
+  "startMs": 385980,
+  "endMs": 386260,
+  "timestampMs": 386120,
+  "confidence": 0.8372220993041992,
+  "whisperStartMs": 386120
+ },
+ {
+  "text": " beh",
+  "startMs": 397040,
+  "endMs": 397300,
+  "timestampMs": 397170,
+  "confidence": 0.24773356318473816,
+  "whisperStartMs": 396680
+ },
+ {
+  "text": " un",
+  "startMs": 397900,
+  "endMs": 397940,
+  "timestampMs": 397920,
+  "confidence": 0.8679845333099365,
+  "whisperStartMs": 397440
+ },
+ {
+  "text": " aspetto",
+  "startMs": 398000,
+  "endMs": 398560,
+  "timestampMs": 398280,
+  "confidence": 0.9850184917449951,
+  "whisperStartMs": 398080
+ },
+ {
+  "text": " in",
+  "startMs": 398960,
+  "endMs": 399020,
+  "timestampMs": 398990,
+  "confidence": 0.9976332187652588,
+  "whisperStartMs": 398680
+ },
+ {
+  "text": " particolare",
+  "startMs": 399080,
+  "endMs": 399620,
+  "timestampMs": 399350,
+  "confidence": 0.9991976916790009,
+  "whisperStartMs": 399320
+ },
+ {
+  "text": " che",
+  "startMs": 399660,
+  "endMs": 399740,
+  "timestampMs": 399700,
+  "confidence": 0.9962430000305176,
+  "whisperStartMs": 399660
+ },
+ {
+  "text": " mi",
+  "startMs": 399780,
+  "endMs": 399840,
+  "timestampMs": 399810,
+  "confidence": 0.9986910223960876,
+  "whisperStartMs": 399800
+ },
+ {
+  "text": " piace",
+  "startMs": 399900,
+  "endMs": 400180,
+  "timestampMs": 400040,
+  "confidence": 0.9981244206428528,
+  "whisperStartMs": 399940
+ },
+ {
+  "text": " di",
+  "startMs": 400280,
+  "endMs": 400380,
+  "timestampMs": 400330,
+  "confidence": 0.9967638254165649,
+  "whisperStartMs": 400240
+ },
+ {
+  "text": " Daniele",
+  "startMs": 400920,
+  "endMs": 401280,
+  "timestampMs": 401100,
+  "confidence": 0.7785470187664032,
+  "whisperStartMs": 401020
+ },
+ {
+  "text": " la",
+  "startMs": 401400,
+  "endMs": 401480,
+  "timestampMs": 401440,
+  "confidence": 0.15643349289894104,
+  "whisperStartMs": 401340
+ },
+ {
+  "text": " coerenza",
+  "startMs": 401580,
+  "endMs": 402200,
+  "timestampMs": 401890,
+  "confidence": 0.9693944652875265,
+  "whisperStartMs": 401600
+ },
+ {
+  "text": " perché",
+  "startMs": 402900,
+  "endMs": 403200,
+  "timestampMs": 403050,
+  "confidence": 0.5974102020263672,
+  "whisperStartMs": 402800
+ },
+ {
+  "text": " chiaramente",
+  "startMs": 403660,
+  "endMs": 404220,
+  "timestampMs": 403940,
+  "confidence": 0.9358309209346771,
+  "whisperStartMs": 403640
+ },
+ {
+  "text": " quando",
+  "startMs": 404960,
+  "endMs": 405180,
+  "timestampMs": 405070,
+  "confidence": 0.8806095123291016,
+  "whisperStartMs": 404660
+ },
+ {
+  "text": " lo",
+  "startMs": 405240,
+  "endMs": 405320,
+  "timestampMs": 405280,
+  "confidence": 0.9921892881393433,
+  "whisperStartMs": 405220
+ },
+ {
+  "text": " vedo",
+  "startMs": 405380,
+  "endMs": 405720,
+  "timestampMs": 405550,
+  "confidence": 0.9973132312297821,
+  "whisperStartMs": 405480
+ },
+ {
+  "text": " o",
+  "startMs": 406180,
+  "endMs": 406220,
+  "timestampMs": 406190,
+  "confidence": 0.17885245382785797,
+  "whisperStartMs": 406100
+ },
+ {
+  "text": " dal",
+  "startMs": 406280,
+  "endMs": 406400,
+  "timestampMs": 406340,
+  "confidence": 0.9941341280937195,
+  "whisperStartMs": 406380
+ },
+ {
+  "text": " vivo",
+  "startMs": 406460,
+  "endMs": 406800,
+  "timestampMs": 406630,
+  "confidence": 0.9932553768157959,
+  "whisperStartMs": 406540
+ },
+ {
+  "text": " nelle",
+  "startMs": 406920,
+  "endMs": 407100,
+  "timestampMs": 407010,
+  "confidence": 0.9750705361366272,
+  "whisperStartMs": 406880
+ },
+ {
+  "text": " storie",
+  "startMs": 407140,
+  "endMs": 407580,
+  "timestampMs": 407360,
+  "confidence": 0.9938504993915558,
+  "whisperStartMs": 407160
+ },
+ {
+  "text": " cioè",
+  "startMs": 408220,
+  "endMs": 408360,
+  "timestampMs": 408290,
+  "confidence": 0.5348315238952637,
+  "whisperStartMs": 408160
+ },
+ {
+  "text": " lui",
+  "startMs": 408420,
+  "endMs": 408560,
+  "timestampMs": 408490,
+  "confidence": 0.9935320615768433,
+  "whisperStartMs": 408420
+ },
+ {
+  "text": " è",
+  "startMs": 408640,
+  "endMs": 408680,
+  "timestampMs": 408650,
+  "confidence": 0.981444239616394,
+  "whisperStartMs": 408660
+ },
+ {
+  "text": " l",
+  "startMs": 408720,
+  "endMs": 408760,
+  "timestampMs": 408730,
+  "confidence": 0.9911792874336243,
+  "whisperStartMs": 408760
+ },
+ {
+  "text": "'esempio",
+  "startMs": 408760,
+  "endMs": 409320,
+  "timestampMs": 409040,
+  "confidence": 0.9923407733440399,
+  "whisperStartMs": 408860
+ },
+ {
+  "text": " in",
+  "startMs": 409720,
+  "endMs": 409840,
+  "timestampMs": 409780,
+  "confidence": 0.9884823560714722,
+  "whisperStartMs": 409740
+ },
+ {
+  "text": " persona",
+  "startMs": 409900,
+  "endMs": 410420,
+  "timestampMs": 410160,
+  "confidence": 0.9987667798995972,
+  "whisperStartMs": 410000
+ },
+ {
+  "text": " che",
+  "startMs": 410540,
+  "endMs": 410660,
+  "timestampMs": 410600,
+  "confidence": 0.9616752862930298,
+  "whisperStartMs": 410500
+ },
+ {
+  "text": " non",
+  "startMs": 411800,
+  "endMs": 411920,
+  "timestampMs": 411860,
+  "confidence": 0.7306995987892151,
+  "whisperStartMs": 411520
+ },
+ {
+  "text": " solo",
+  "startMs": 412000,
+  "endMs": 412340,
+  "timestampMs": 412170,
+  "confidence": 0.9949665665626526,
+  "whisperStartMs": 412060
+ },
+ {
+  "text": " se",
+  "startMs": 412640,
+  "endMs": 412700,
+  "timestampMs": 412670,
+  "confidence": 0.979446291923523,
+  "whisperStartMs": 412520
+ },
+ {
+  "text": " ti",
+  "startMs": 412760,
+  "endMs": 412820,
+  "timestampMs": 412790,
+  "confidence": 0.9948261380195618,
+  "whisperStartMs": 412780
+ },
+ {
+  "text": " poni",
+  "startMs": 412880,
+  "endMs": 413060,
+  "timestampMs": 412970,
+  "confidence": 0.927839070558548,
+  "whisperStartMs": 412980
+ },
+ {
+  "text": " degli",
+  "startMs": 413100,
+  "endMs": 413260,
+  "timestampMs": 413180,
+  "confidence": 0.9919551014900208,
+  "whisperStartMs": 413160
+ },
+ {
+  "text": " obiettivi",
+  "startMs": 413300,
+  "endMs": 413680,
+  "timestampMs": 413490,
+  "confidence": 0.9934455901384354,
+  "whisperStartMs": 413320
+ },
+ {
+  "text": " in",
+  "startMs": 413740,
+  "endMs": 413780,
+  "timestampMs": 413760,
+  "confidence": 0.9969622492790222,
+  "whisperStartMs": 413740
+ },
+ {
+  "text": " testa",
+  "startMs": 413820,
+  "endMs": 414140,
+  "timestampMs": 413980,
+  "confidence": 0.9971694052219391,
+  "whisperStartMs": 413920
+ },
+ {
+  "text": " poi",
+  "startMs": 414200,
+  "endMs": 414320,
+  "timestampMs": 414260,
+  "confidence": 0.24293775856494904,
+  "whisperStartMs": 414280
+ },
+ {
+  "text": " raggiungerli",
+  "startMs": 414360,
+  "endMs": 414900,
+  "timestampMs": 414630,
+  "confidence": 0.9285606741905212,
+  "whisperStartMs": 414380
+ },
+ {
+  "text": " quando",
+  "startMs": 414960,
+  "endMs": 415160,
+  "timestampMs": 415060,
+  "confidence": 0.9921181797981262,
+  "whisperStartMs": 415000
+ },
+ {
+  "text": " vuoi",
+  "startMs": 415220,
+  "endMs": 415560,
+  "timestampMs": 415390,
+  "confidence": 0.9959836900234222,
+  "whisperStartMs": 415260
+ },
+ {
+  "text": " vedo",
+  "startMs": 416020,
+  "endMs": 416240,
+  "timestampMs": 416130,
+  "confidence": 0.7981770932674408,
+  "whisperStartMs": 416000
+ },
+ {
+  "text": " ad",
+  "startMs": 416320,
+  "endMs": 416380,
+  "timestampMs": 416350,
+  "confidence": 0.9778712391853333,
+  "whisperStartMs": 416340
+ },
+ {
+  "text": " esempio",
+  "startMs": 416400,
+  "endMs": 416660,
+  "timestampMs": 416530,
+  "confidence": 0.9998001456260681,
+  "whisperStartMs": 416520
+ },
+ {
+  "text": " quando",
+  "startMs": 416720,
+  "endMs": 416880,
+  "timestampMs": 416800,
+  "confidence": 0.9921054840087891,
+  "whisperStartMs": 416700
+ },
+ {
+  "text": " fa",
+  "startMs": 416940,
+  "endMs": 417020,
+  "timestampMs": 416980,
+  "confidence": 0.7959150671958923,
+  "whisperStartMs": 416900
+ },
+ {
+  "text": " gli",
+  "startMs": 417040,
+  "endMs": 417140,
+  "timestampMs": 417090,
+  "confidence": 0.9899360537528992,
+  "whisperStartMs": 417080
+ },
+ {
+  "text": " Ironman",
+  "startMs": 417300,
+  "endMs": 417560,
+  "timestampMs": 417430,
+  "confidence": 0.751226931810379,
+  "whisperStartMs": 417320
+ },
+ {
+  "text": " che",
+  "startMs": 417660,
+  "endMs": 417760,
+  "timestampMs": 417710,
+  "confidence": 0.9538524746894836,
+  "whisperStartMs": 417640
+ },
+ {
+  "text": " insomma",
+  "startMs": 418440,
+  "endMs": 418800,
+  "timestampMs": 418620,
+  "confidence": 0.949617862701416,
+  "whisperStartMs": 418580
+ },
+ {
+  "text": " si",
+  "startMs": 419360,
+  "endMs": 419420,
+  "timestampMs": 419390,
+  "confidence": 0.9568739533424377,
+  "whisperStartMs": 419240
+ },
+ {
+  "text": " prefigge",
+  "startMs": 419480,
+  "endMs": 419780,
+  "timestampMs": 419630,
+  "confidence": 0.7298062145709991,
+  "whisperStartMs": 419580
+ },
+ {
+  "text": " un",
+  "startMs": 419820,
+  "endMs": 419860,
+  "timestampMs": 419840,
+  "confidence": 0.9095417261123657,
+  "whisperStartMs": 419840
+ },
+ {
+  "text": " obiettivo",
+  "startMs": 419900,
+  "endMs": 420220,
+  "timestampMs": 420060,
+  "confidence": 0.9948369562625885,
+  "whisperStartMs": 419960
+ },
+ {
+  "text": " lo",
+  "startMs": 420280,
+  "endMs": 420340,
+  "timestampMs": 420310,
+  "confidence": 0.14369526505470276,
+  "whisperStartMs": 420280
+ },
+ {
+  "text": " raggiunte",
+  "startMs": 420400,
+  "endMs": 420940,
+  "timestampMs": 420670,
+  "confidence": 0.959522545337677,
+  "whisperStartMs": 420420
+ },
+ {
+  "text": " ma",
+  "startMs": 421560,
+  "endMs": 421640,
+  "timestampMs": 421600,
+  "confidence": 0.9263279438018799,
+  "whisperStartMs": 421400
+ },
+ {
+  "text": " anche",
+  "startMs": 421740,
+  "endMs": 421980,
+  "timestampMs": 421860,
+  "confidence": 0.9952937960624695,
+  "whisperStartMs": 421760
+ },
+ {
+  "text": " porta",
+  "startMs": 422140,
+  "endMs": 422360,
+  "timestampMs": 422250,
+  "confidence": 0.9453174471855164,
+  "whisperStartMs": 422120
+ },
+ {
+  "text": " avanti",
+  "startMs": 422400,
+  "endMs": 422680,
+  "timestampMs": 422540,
+  "confidence": 0.9983599185943604,
+  "whisperStartMs": 422440
+ },
+ {
+  "text": " un",
+  "startMs": 422760,
+  "endMs": 422800,
+  "timestampMs": 422780,
+  "confidence": 0.9953758716583252,
+  "whisperStartMs": 422740
+ },
+ {
+  "text": " movimento",
+  "startMs": 422840,
+  "endMs": 423400,
+  "timestampMs": 423120,
+  "confidence": 0.9974828362464905,
+  "whisperStartMs": 422940
+ },
+ {
+  "text": " che",
+  "startMs": 423500,
+  "endMs": 423620,
+  "timestampMs": 423560,
+  "confidence": 0.9860519170761108,
+  "whisperStartMs": 423440
+ },
+ {
+  "text": " è",
+  "startMs": 424780,
+  "endMs": 424820,
+  "timestampMs": 424790,
+  "confidence": 0.9779102206230164,
+  "whisperStartMs": 424660
+ },
+ {
+  "text": " quello",
+  "startMs": 425060,
+  "endMs": 425260,
+  "timestampMs": 425160,
+  "confidence": 0.9051623940467834,
+  "whisperStartMs": 425100
+ },
+ {
+  "text": " di",
+  "startMs": 425340,
+  "endMs": 425440,
+  "timestampMs": 425390,
+  "confidence": 0.9983722567558289,
+  "whisperStartMs": 425300
+ },
+ {
+  "text": " portare",
+  "startMs": 425680,
+  "endMs": 426040,
+  "timestampMs": 425860,
+  "confidence": 0.9976479113101959,
+  "whisperStartMs": 425720
+ },
+ {
+  "text": " appunto",
+  "startMs": 426100,
+  "endMs": 426520,
+  "timestampMs": 426310,
+  "confidence": 0.9811750054359436,
+  "whisperStartMs": 426160
+ },
+ {
+  "text": " benessere",
+  "startMs": 428360,
+  "endMs": 428980,
+  "timestampMs": 428670,
+  "confidence": 0.7602358559767405,
+  "whisperStartMs": 427980
+ },
+ {
+  "text": " a",
+  "startMs": 429180,
+  "endMs": 429220,
+  "timestampMs": 429190,
+  "confidence": 0.9648086428642273,
+  "whisperStartMs": 429140
+ },
+ {
+  "text": " più",
+  "startMs": 429440,
+  "endMs": 429540,
+  "timestampMs": 429490,
+  "confidence": 0.9979128241539001,
+  "whisperStartMs": 429480
+ },
+ {
+  "text": " persone",
+  "startMs": 429600,
+  "endMs": 429900,
+  "timestampMs": 429750,
+  "confidence": 0.9991807341575623,
+  "whisperStartMs": 429600
+ },
+ {
+  "text": " possibili",
+  "startMs": 429960,
+  "endMs": 430400,
+  "timestampMs": 430180,
+  "confidence": 0.686187262336413,
+  "whisperStartMs": 429960
+ },
+ {
+  "text": " per",
+  "startMs": 430460,
+  "endMs": 430560,
+  "timestampMs": 430510,
+  "confidence": 0.4616038203239441,
+  "whisperStartMs": 430460
+ },
+ {
+  "text": " cui",
+  "startMs": 430600,
+  "endMs": 430800,
+  "timestampMs": 430700,
+  "confidence": 0.9982434511184692,
+  "whisperStartMs": 430700
+ },
+ {
+  "text": " vedo",
+  "startMs": 431840,
+  "endMs": 432000,
+  "timestampMs": 431920,
+  "confidence": 0.9802299439907074,
+  "whisperStartMs": 431320
+ },
+ {
+  "text": " in",
+  "startMs": 432060,
+  "endMs": 432100,
+  "timestampMs": 432080,
+  "confidence": 0.9906466007232666,
+  "whisperStartMs": 432100
+ },
+ {
+  "text": " lui",
+  "startMs": 432140,
+  "endMs": 432380,
+  "timestampMs": 432260,
+  "confidence": 0.992345929145813,
+  "whisperStartMs": 432180
+ },
+ {
+  "text": " appunto",
+  "startMs": 432640,
+  "endMs": 432940,
+  "timestampMs": 432790,
+  "confidence": 0.8865301311016083,
+  "whisperStartMs": 432620
+ },
+ {
+  "text": " un",
+  "startMs": 433360,
+  "endMs": 433420,
+  "timestampMs": 433390,
+  "confidence": 0.9970507621765137,
+  "whisperStartMs": 433260
+ },
+ {
+  "text": " esempio",
+  "startMs": 433480,
+  "endMs": 433960,
+  "timestampMs": 433720,
+  "confidence": 0.9926720857620239,
+  "whisperStartMs": 433560
+ },
+ {
+  "text": " da",
+  "startMs": 434020,
+  "endMs": 434140,
+  "timestampMs": 434080,
+  "confidence": 0.9969514608383179,
+  "whisperStartMs": 433980
+ },
+ {
+  "text": " da",
+  "startMs": 434980,
+  "endMs": 435040,
+  "timestampMs": 435010,
+  "confidence": 0.5787954330444336,
+  "whisperStartMs": 435100
+ },
+ {
+  "text": " seguire",
+  "startMs": 435100,
+  "endMs": 435480,
+  "timestampMs": 435290,
+  "confidence": 0.9959674775600433,
+  "whisperStartMs": 435240
+ },
+ {
+  "text": " Bisogna",
+  "startMs": 443300,
+  "endMs": 443620,
+  "timestampMs": 443460,
+  "confidence": 0.5940933264791965,
+  "whisperStartMs": 443450
+ },
+ {
+  "text": " usare",
+  "startMs": 444200,
+  "endMs": 444500,
+  "timestampMs": 444350,
+  "confidence": 0.9695702195167542,
+  "whisperStartMs": 443900
+ },
+ {
+  "text": " dieci",
+  "startMs": 444660,
+  "endMs": 444980,
+  "timestampMs": 444820,
+  "confidence": 0.7802419066429138,
+  "whisperStartMs": 444680
+ },
+ {
+  "text": " parole",
+  "startMs": 445040,
+  "endMs": 445380,
+  "timestampMs": 445210,
+  "confidence": 0.9954806566238403,
+  "whisperStartMs": 445140
+ },
+ {
+  "text": " anche",
+  "startMs": 445440,
+  "endMs": 445600,
+  "timestampMs": 445520,
+  "confidence": 0.7500995397567749,
+  "whisperStartMs": 445420
+ },
+ {
+  "text": " di",
+  "startMs": 445660,
+  "endMs": 445720,
+  "timestampMs": 445690,
+  "confidence": 0.9951819777488708,
+  "whisperStartMs": 445660
+ },
+ {
+  "text": " più",
+  "startMs": 445780,
+  "endMs": 445960,
+  "timestampMs": 445870,
+  "confidence": 0.9956335425376892,
+  "whisperStartMs": 445900
+ },
+ {
+  "text": " allora",
+  "startMs": 447340,
+  "endMs": 447560,
+  "timestampMs": 447450,
+  "confidence": 0.15904030203819275,
+  "whisperStartMs": 447160
+ },
+ {
+  "text": " in",
+  "startMs": 447600,
+  "endMs": 447660,
+  "timestampMs": 447630,
+  "confidence": 0.9755777716636658,
+  "whisperStartMs": 447600
+ },
+ {
+  "text": " una",
+  "startMs": 447720,
+  "endMs": 447820,
+  "timestampMs": 447770,
+  "confidence": 0.9976388216018677,
+  "whisperStartMs": 447780
+ },
+ {
+  "text": " parola",
+  "startMs": 447880,
+  "endMs": 448240,
+  "timestampMs": 448060,
+  "confidence": 0.9568552374839783,
+  "whisperStartMs": 447980
+ },
+ {
+  "text": " secondo",
+  "startMs": 448360,
+  "endMs": 448660,
+  "timestampMs": 448510,
+  "confidence": 0.6214352250099182,
+  "whisperStartMs": 448340
+ },
+ {
+  "text": " me",
+  "startMs": 448760,
+  "endMs": 448860,
+  "timestampMs": 448810,
+  "confidence": 0.9979865550994873,
+  "whisperStartMs": 448740
+ },
+ {
+  "text": " vitalità",
+  "startMs": 451180,
+  "endMs": 451700,
+  "timestampMs": 451440,
+  "confidence": 0.7904485464096069,
+  "whisperStartMs": 450600
+ },
+ {
+  "text": " grazie",
+  "startMs": 454120,
+  "endMs": 454380,
+  "timestampMs": 454250,
+  "confidence": 0.8761225044727325,
+  "whisperStartMs": 453850
+ },
+ {
+  "text": " a",
+  "startMs": 454440,
+  "endMs": 454480,
+  "timestampMs": 454460,
+  "confidence": 0.9249907732009888,
+  "whisperStartMs": 454530
+ },
+ {
+  "text": " voi",
+  "startMs": 454520,
+  "endMs": 454680,
+  "timestampMs": 454600,
+  "confidence": 0.9963220357894897,
+  "whisperStartMs": 454530
+ }
+]

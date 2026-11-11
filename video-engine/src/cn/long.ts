@@ -1,6 +1,8 @@
 import type { CNLongProps } from "./CNLong";
 import wordsMassimilianoLong from "./wordsMassimilianoLong.json";
 import planMassimiliano from "../../work/massimiliano_long.json";
+import wordsLauraLong from "./wordsLauraLong.json";
+import planLaura from "../../work/laura_long.json";
 
 /** Versioni lunghe orizzontali delle testimonianze (piano dei tagli: scripts/cn_long_plan.py). */
 export const LONGS: { id: string; props: CNLongProps }[] = [
@@ -17,6 +19,22 @@ export const LONGS: { id: string; props: CNLongProps }[] = [
       chapters: planMassimiliano.chapters,
       name: "Massimiliano",
       sub: "54 anni · Pavia",
+      end: { title: "Vuoi scrivere anche tu la tua storia?", sub: "Scopri i percorsi di coaching personalizzato" },
+      endSeconds: 6,
+    },
+  },
+  {
+    id: "T2-laura-lungo",
+    props: {
+      master: "testimonianze/T2-laura-lungo.mp4",
+      segments: [{ from: 0, to: planLaura.total }],
+      blendFrames: 0,
+      words: wordsLauraLong as CNLongProps["words"],
+      wordFix: {},
+      wordOffset: -0.05,
+      chapters: planLaura.chapters,
+      name: "Laura",
+      sub: "Roma · con Correre Naturale dal 2016",
       end: { title: "Vuoi scrivere anche tu la tua storia?", sub: "Scopri i percorsi di coaching personalizzato" },
       endSeconds: 6,
     },

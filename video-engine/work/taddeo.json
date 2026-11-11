@@ -1,0 +1,45 @@
+{
+ "id": "T3-taddeo",
+ "src": "public/testimonianze/C3499-008.MP4",
+ "pre": "crop=510:908:728:170,scale=1080:1920:flags=lanczos+accurate_rnd",
+ "out": "public/testimonianze/T3-taddeo.mp4",
+ "faceX": 0.5,
+ "faceY": 0.25,
+ "zooms": [
+  1,
+  1.04
+ ],
+ "blendFrames": 5,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 95.2,
+   "to": 105.0333
+  },
+  {
+   "from": 105.997,
+   "to": 123.197
+  },
+  {
+   "from": 23.437,
+   "to": 39.6703
+  },
+  {
+   "from": 283.067,
+   "to": 297.0003
+  },
+  {
+   "from": 340.817,
+   "to": 349.2837
+  },
+  {
+   "from": 354.717,
+   "to": 360.4837
+  },
+  {
+   "from": 447.067,
+   "to": 452.6003
+  }
+ ]
+}
