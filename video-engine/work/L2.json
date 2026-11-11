@@ -1,0 +1,36 @@
+{
+ "id": "L2-farmaco",
+ "src": "public/longevita/longevita.webm",
+ "out": "public/longevita/masters/L2-farmaco.mp4",
+ "shots": "work/longevita_shots.json",
+ "blendFrames": 2,
+ "tail": 0.5,
+ "tailLive": 0,
+ "segments": [
+  {
+   "from": 126.42,
+   "to": 130.2867
+  },
+  {
+   "from": 162.567,
+   "to": 163.9337
+  },
+  {
+   "from": 169.107,
+   "to": 174.0403
+  },
+  {
+   "from": 178.087,
+   "to": 198.4537
+  },
+  {
+   "from": 198.447,
+   "to": 201.6803
+  },
+  {
+   "from": 204.147,
+   "to": 241.747
+  }
+ ],
+ "crops": {}
+}

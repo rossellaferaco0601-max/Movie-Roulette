@@ -14,7 +14,7 @@ export type Element = ElementBase &
     | { kind: "stat"; value: string; label: string }
     | { kind: "pill"; text: string }
     | { kind: "stage"; title: string; keyword: string; steps: string[] }
-    | { kind: "checklist"; items: string[]; strike?: boolean; big?: boolean }
+    | { kind: "checklist"; items: string[]; strike?: boolean; cross?: boolean; big?: boolean }
     | { kind: "text3d"; word3d: string; sub?: string }
     | { kind: "wave"; title: string; mode: "chaos" | "calm" | "chaos-to-calm" | "calm-to-chaos" }
     | { kind: "sphere3d"; phases: { label: string; sec: number; scale: number }[] }
@@ -38,6 +38,12 @@ export type Element = ElementBase &
     | { kind: "metronome"; title: string; inhale: number; exhale: number; bpm?: number }
     | { kind: "pair"; title: string; sub: string; items: [{ def: string; name: string }, { def: string; name: string }]; fadeIn?: number; fadeOut?: number }
     | { kind: "lifebar"; place: string; title: string; total: number; healthy: number; decline: string; declineSub: string; focus: string; focusNot: string; focusIs: string; fadeIn?: number; fadeOut?: number }
+    | { kind: "slides"; header?: string; source?: string; fadeIn?: number; fadeOut?: number; steps: { g: number; kind: "stat" | "text" | "chip"; value?: string; label?: string; lines?: string[]; accent?: number; color?: "lime" | "coral" }[] }
+    | { kind: "flow"; title: string; sub: string; inputs: [string, string]; output: string; outSub?: string }
+    | { kind: "renew"; term: string; sub: string; oldLabel: string; newLabel: string; fadeIn?: number; fadeOut?: number }
+    | { kind: "versus"; header: string; title: string; a: { label: string; value: string }; b: { label: string; value: string }; final: string[]; finalAccent?: number; source?: string; fadeIn?: number; fadeOut?: number }
+    | { kind: "grid4"; items: string[]; foot: string }
+    | { kind: "plan"; n: number; kicker: string; pre?: string; title: string[]; points: string[]; foot?: string; art: "walk" | "run" | "timer"; fadeIn?: number; fadeOut?: number }
     | { kind: "fulltext"; lines: string[]; accentIndex?: number; fadeIn?: number; fadeOut?: number }
     | { kind: "clip"; src: string; from?: number; tag: string; text: string; posY?: number }
     | { kind: "step"; n: string; label: string; sub: string; strike: string }

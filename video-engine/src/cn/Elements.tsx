@@ -203,7 +203,7 @@ export const Checklist: React.FC<{ el: Extract<Element, { kind: "checklist" }>; 
         const struck = el.strike && local > d + 20;
         return (
           <div key={i} style={{ display: "flex", alignItems: "center", gap: el.big ? 22 : 18, marginBottom: el.big ? 18 : 12, transform: `translateX(${(1 - ls) * -60}px)`, opacity: ls }}>
-            <div style={{ width: el.big ? 72 : 54, height: el.big ? 72 : 54, flexShrink: 0, borderRadius: el.big ? 18 : 14, background: struck ? "#C2412E" : BRAND.green, display: "flex", alignItems: "center", justifyContent: "center", color: BRAND.white, fontWeight: 900, fontSize: el.big ? 48 : 36 }}>{struck ? "✕" : "✓"}</div>
+            <div style={{ width: el.big ? 72 : 54, height: el.big ? 72 : 54, flexShrink: 0, borderRadius: el.big ? 18 : 14, background: struck || el.cross ? "#C2412E" : BRAND.green, display: "flex", alignItems: "center", justifyContent: "center", color: BRAND.white, fontWeight: 900, fontSize: el.big ? 48 : 36 }}>{struck || el.cross ? "✕" : "✓"}</div>
             <div style={{ background: "rgba(11,15,10,0.9)", color: BRAND.white, padding: el.big ? "14px 30px" : "10px 26px", borderRadius: el.big ? 18 : 14, fontWeight: 800, fontSize: el.big ? 66 : 50, lineHeight: 1.05, textDecoration: struck ? "line-through" : "none" }}>{it}</div>
           </div>
         );

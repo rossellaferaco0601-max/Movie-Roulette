@@ -1,3 +1,5 @@
+> **11/11/2026**: i sei reel sono stati rifatti da capo con il motore `CNReel` (`L1-ventanni` v2, `L2`–`L6` v1): schede in `SCHEDE.md`, didascalie e copertine in questa cartella. Quello che segue è lo storico della vecchia versione 4.
+
 # Versione 4 (3-4/11, notte) — tutti e 6 i reel
 
 I video in `output/` sono ora la versione 4. Le precedenti sono in `output/v3/`, `v2/`, `v1/`.

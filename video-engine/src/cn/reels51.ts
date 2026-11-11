@@ -370,4 +370,282 @@ Vuoi costruire il tuo piano? Commenta PIANO e ti mando tutte le info sui percors
 
 #correrenaturale #longevità #healthspan #corsa #running`,
   },
+  {
+    id: "L2-farmaco",
+    title: "Nessun farmaco ha questo effetto",
+    props: {
+      ...base,
+      src: "longevita/longevita.webm",
+      words: wordsLongevita as CNReelProps["words"],
+      master: "longevita/masters/L2-farmaco.mp4",
+      gfxShift: 30,
+      capShift: 20,
+      blendFrames: 2,
+      tailLive: 0,
+      // quasi tutto il tratto, nel video YouTube, è fatto di schede di dati: qui sono rifatte a tutto schermo, un gruppo alla volta sulle parole
+      segments: cutN(2, [126.42, 130.24], [162.6, 163.9], [169.14, 174.02], [178.12, 198.42], [198.48, 201.66], [204.18, 241.74]),
+      hook: null,
+      elements: [
+        { kind: "kinetic", at: 0.2, word: "segnale", dur: 1.6, words: ["IL SEGNALE", "PIÙ POTENTE"], accentIndex: 1 },
+        { kind: "fulltext", at: 2.0, dur: 1.85, fadeIn: 0, fadeOut: 0, lines: ["Il movimento", "aerobico"] },
+        { kind: "slides", at: 5.1, dur: 20.95, fadeIn: 0, fadeOut: 4, cues: ["100.000", "misurando", "risultato", "ogni", "13%", "15%"], header: "Meta-analisi", source: "Kodama et al. (2009), JAMA", steps: [
+          { g: 0, kind: "stat", value: "100.000", label: "persone sane seguite nel tempo" },
+          { g: 0, kind: "chip", label: "misurata la capacità aerobica" },
+          { g: 1, kind: "text", lines: ["Il risultato?"], accent: 0 },
+          { g: 2, kind: "text", lines: ["Ogni piccolo incremento", "del motore aerobico"] },
+          { g: 2, kind: "stat", value: "−13%", label: "rischio di morire per qualsiasi causa" },
+          { g: 2, kind: "stat", value: "−15%", label: "rischio di evento cardiovascolare" },
+        ] },
+        { kind: "kinetic", at: 26.25, dur: 3.2, words: ["NESSUN FARMACO", "HA QUESTO EFFETTO"], accentIndex: 0 },
+        { kind: "fulltext", at: 29.57, dur: 1.0, fadeIn: 0, fadeOut: 0, lines: ["Nessuno"] },
+        { kind: "question", at: 30.7, dur: 2.6, label: "La domanda", text: "Quanto devo correre?" },
+        { kind: "kinetic", at: 33.68, word: "studio", dur: 2.45, words: ["UNO STUDIO", "DI 15 ANNI"], accentIndex: 1 },
+        { kind: "slides", at: 36.33, dur: 35.1, fadeIn: 0, fadeOut: 0, cues: ["155.000", "confrontato", "51", "sotto", "meno", "30%", "45%", "10", "non", "tenere", "questo"], header: "Studio americano", source: "Lee et al. (2014), Journal of the American College of Cardiology", steps: [
+          { g: 0, kind: "stat", value: "155.000", label: "adulti seguiti per 15 anni" },
+          { g: 1, kind: "text", lines: ["Chi corre", "contro chi no"], accent: 0 },
+          { g: 2, kind: "stat", value: "< 51 min", label: "di corsa a settimana" },
+          { g: 2, kind: "chip", label: "anche sotto i 10 km/h" },
+          { g: 2, kind: "chip", label: "anche meno di 10 km totali" },
+          { g: 3, kind: "stat", value: "−30%", label: "mortalità per tutte le cause" },
+          { g: 3, kind: "stat", value: "−45%", label: "mortalità cardiovascolare" },
+          { g: 4, kind: "text", lines: ["10 minuti", "al giorno"], accent: 0 },
+          { g: 4, kind: "chip", label: "non una maratona" },
+          { g: 5, kind: "text", lines: ["Tenere accesa", "la macchina biologica"], accent: 1 },
+          { g: 5, kind: "chip", label: "è questo che sposta l'ago" },
+        ] },
+      ],
+      cta: { word: "MOTORE", title: "Vuoi costruire il tuo motore aerobico?" },
+    },
+    didascalia: `Il segnale più potente che esista per vivere a lungo e bene è uno: il movimento aerobico.
+
+Una meta-analisi su 100.000 persone sane ha misurato la capacità aerobica: ogni piccolo incremento del motore aerobico abbassa del 13% il rischio di morire per qualsiasi causa e del 15% quello di un evento cardiovascolare. Non esiste farmaco al mondo con questo effetto sulla longevità.
+
+E quanto devi correre? Uno studio americano ha seguito per 15 anni più di 155.000 adulti: bastano meno di 51 minuti a settimana, anche piano, per ridurre del 30% la mortalità per tutte le cause e del 45% quella cardiovascolare.
+
+10 minuti al giorno, non una maratona.
+
+Commenta MOTORE e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #longevità #motoreaerobico #corsa #running`,
+  },
+  {
+    id: "L3-cellule",
+    title: "Cosa succede nelle tue cellule quando corri",
+    props: {
+      ...base,
+      src: "longevita/longevita.webm",
+      words: wordsLongevita as CNReelProps["words"],
+      master: "longevita/masters/L3-cellule.mp4",
+      gfxShift: 30,
+      capShift: 20,
+      blendFrames: 2,
+      tailLive: 0.3,
+      // hook sulla ripresa del corridore (rallentata di un soffio: la frase finisce 4 fotogrammi dopo lo stacco del sorgente), poi tutto il discorso sui mitocondri di fila; salta la ripetizione «lo dico in modo diverso»
+      segments: cutN(2, [243.21, 246.54], [252.74, 315.5], [327.0, 334.0]),
+      hook: null,
+      elements: [
+        { kind: "kinetic", at: 0.1, word: "cosa", dur: 3.05, words: ["COSA SUCCEDE", "NELLE CELLULE", "QUANDO CORRI?"], accentIndex: 1 },
+        { kind: "title", at: 3.49, word: "risposta", dur: 2.4, cues: ["risposta", "mitocondri"], lines: ["La risposta", "Mitocondri"], accent: "Mitocondri" },
+        { kind: "flow", at: 6.01, word: "sono", dur: 7.15, cues: ["ossigeno", "nutrienti", "ATP"], title: "Mitocondri", sub: "le centrali energetiche delle cellule", inputs: ["Ossigeno", "Nutrienti"], output: "ATP", outSub: "energia" },
+        { kind: "slides", at: 14.93, dur: 4.8, fadeIn: 0, fadeOut: 0, cues: ["paga", "battito", "pensiero", "passo"], header: "ATP · la moneta del corpo", steps: [
+          { g: 0, kind: "text", lines: ["Paga ogni cosa"], accent: 0 },
+          { g: 0, kind: "chip", label: "ogni battito del cuore" },
+          { g: 0, kind: "chip", label: "ogni pensiero" },
+          { g: 0, kind: "chip", label: "ogni passo" },
+        ] },
+        { kind: "checklist", at: 21.65, word: "corpo", dur: 2.95, big: true, cues: ["ripara", "rinnova", "resta"], items: ["Il corpo si ripara", "Si rinnova", "Resta giovane"] },
+        { kind: "kinetic", at: 26.43, word: "sistema", dur: 1.45, words: ["IL SISTEMA", "DECADE"], accentIndex: 1 },
+        { kind: "slides", at: 28.07, dur: 4.6, fadeIn: 0, fadeOut: 0, cues: ["questo", "invecchiamento", "non"], steps: [
+          { g: 0, kind: "chip", label: "questo è quello che chiamiamo" },
+          { g: 0, kind: "text", lines: ["Invecchiamento"], accent: 0 },
+          { g: 1, kind: "text", lines: ["Non è", "il tempo che passa"], accent: 0 },
+        ] },
+        { kind: "kinetic", at: 35.17, word: "smettono", dur: 1.9, words: ["SMETTONO", "DI LAVORARE"], accentIndex: 0 },
+        { kind: "kinetic", at: 38.37, word: "ecco", dur: 1.6, words: ["IL FATTO CHE", "CAMBIA TUTTO"], accentIndex: 1 },
+        { kind: "fulltext", at: 40.13, dur: 2.04, fadeIn: 0, fadeOut: 0, cues: ["mitocondri", "non"], lines: ["I mitocondri", "non sono statici"] },
+        { kind: "kinetic", at: 42.27, word: "rispondono", dur: 2.0, words: ["RISPONDONO", "AI SEGNALI"], accentIndex: 1 },
+        { kind: "checklist", at: 44.61, word: "segnali", dur: 4.25, big: true, cues: ["movimento", "respirazione", "intensità"], items: ["Movimento aerobico", "Respirazione nasale", "Intensità controllata"] },
+        { kind: "kinetic", at: 49.65, word: "più", dur: 1.9, words: ["PIÙ MITOCONDRI", "E PIÙ", "EFFICIENTI"], accentIndex: 2 },
+        { kind: "renew", at: 54.4, dur: 7.53, cues: ["mitofagia", "corpo", "vecchi", "sostituisce"], term: "Mitofagia", sub: "il rinnovo dei mitocondri", oldLabel: "Vecchi e malfunzionanti", newLabel: "Sostituiti con nuovi" },
+        { kind: "title", at: 62.35, word: "aggiornamento", dur: 3.55, cues: ["aggiornamento", "hardware", "rinnovamento"], lines: ["Un aggiornamento", "dell'hardware", "Rinnovamento cellulare"], accent: "cellulare" },
+        { kind: "stat", at: 66.87, word: "90%", dur: 2.4, value: "90%", label: "del valore della corsa" },
+        { kind: "kinetic", at: 69.55, word: "quasi", dur: 1.5, words: ["QUASI NESSUNO", "LO CONOSCE"], accentIndex: 1 },
+        { kind: "kinetic", at: 71.33, word: "attento", dur: 1.6, words: ["ATTENTO:", "DEVI CORRERE", "BENE"], accentIndex: 2 },
+      ],
+      cta: { word: "RINNOVO", title: "Vuoi correre per rinnovare le tue cellule?" },
+    },
+    didascalia: `Cosa succede dentro le tue cellule quando corri?
+
+La risposta si chiama mitocondri: sono le centrali energetiche delle tue cellule. Prendono ossigeno e nutrienti e li trasformano in ATP, la moneta con cui il corpo paga ogni cosa: ogni battito del cuore, ogni pensiero, ogni passo.
+
+Quando queste centrali funzionano bene il corpo si ripara, si rinnova, resta giovane. Quando funzionano male il sistema decade: è quello che chiamiamo invecchiamento. Non è il tempo che passa, sono le centrali che smettono di fare il loro lavoro.
+
+Ma i mitocondri non sono statici: rispondono ai segnali che gli mandi. Movimento aerobico, respirazione nasale, intensità controllata producono più mitocondri e più efficienti. E attivano la mitofagia: il corpo riconosce quelli vecchi e malfunzionanti e li sostituisce con nuovi.
+
+Questo è il 90% del valore della corsa, e quasi nessuno lo conosce. Ma attento: devi correre bene.
+
+Commenta RINNOVO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #longevità #mitocondri #corsa #running`,
+  },
+  {
+    id: "L4-cervello",
+    title: "Camminare fa crescere il cervello",
+    props: {
+      ...base,
+      src: "longevita/longevita.webm",
+      words: wordsLongevita as CNReelProps["words"],
+      master: "longevita/masters/L4-cervello.mp4",
+      gfxShift: 30,
+      capShift: 20,
+      blendFrames: 2,
+      tailLive: 0.25,
+      // un solo pezzo: il discorso sul cervello fila senza tagli; la scheda dello studio (37 s nel video YouTube) è rifatta a tutto schermo
+      segments: cutN(2, [473.95, 534.35]),
+      hook: null,
+      elements: [
+        { kind: "kinetic", at: 0.3, word: "nostro", dur: 2.9, words: ["IL CERVELLO", "SI È EVOLUTO", "CON IL MOVIMENTO"], accentIndex: 0 },
+        { kind: "bigstrike", at: 3.67, word: "sta", dur: 1.5, text: "Sta bene se ti muovi" },
+        { kind: "title", at: 5.33, word: "non", dur: 4.45, cues: ["non", "senza", "corpo"], lines: ["Non può funzionare", "senza un corpo", "in movimento"], accent: "movimento" },
+        { kind: "slides", at: 9.93, dur: 23.76, fadeIn: 0, fadeOut: 0, cues: ["esperimento", "120", "metà", "3", "anno", "partendo", "altra", "solo", "prima", "ippocampo", "struttura", "gestisce", "2%"], header: "Lo studio", source: "Erickson et al. (2011), PNAS", steps: [
+          { g: 0, kind: "text", lines: ["Un esperimento"] },
+          { g: 0, kind: "stat", value: "120", label: "anziani sedentari" },
+          { g: 1, kind: "text", lines: ["Metà", "ha camminato"], accent: 1 },
+          { g: 1, kind: "chip", label: "3 volte a settimana" },
+          { g: 1, kind: "chip", label: "per un anno" },
+          { g: 1, kind: "chip", label: "da 10 a 40 minuti" },
+          { g: 2, kind: "text", lines: ["L'altra metà"] },
+          { g: 2, kind: "chip", label: "solo stretching leggero" },
+          { g: 3, kind: "text", lines: ["Prima e dopo:", "risonanza magnetica"], accent: 1 },
+          { g: 3, kind: "chip", label: "dell'ippocampo" },
+          { g: 4, kind: "text", lines: ["Ippocampo"], accent: 0 },
+          { g: 4, kind: "chip", label: "gestisce la memoria" },
+          { g: 4, kind: "stat", value: "−2%", label: "all'anno, con l'età", color: "coral" },
+        ] },
+        { kind: "versus", at: 33.69, dur: 15.72, cues: ["cresciuto", "diminuito", "chi", "ha", "indietro"], header: "Dopo un anno", title: "L'ippocampo", a: { label: "Chi ha camminato", value: "+2%" }, b: { label: "Solo stretching", value: "−1,4%" }, final: ["Chi si è mosso", "ha fatto tornare", "indietro l'orologio", "del cervello"], source: "Erickson et al. (2011), PNAS" },
+        { kind: "grid4", at: 49.55, dur: 7.22, onAt: [0, 0.02, 0.92, 1.78, 5.0], items: ["Motore", "Muscoli", "Tendini", "Cervello"], foot: "4 capitoli di un'unica storia" },
+        { kind: "kinetic", at: 58.41, word: "ogni", dur: 1.9, words: ["OGNI PEZZO", "AMPLIFICA", "GLI ALTRI"], accentIndex: 1 },
+      ],
+      cta: { word: "CAMMINA", title: "Vuoi muoverti nel modo giusto?" },
+    },
+    didascalia: `Il nostro cervello si è coevoluto con il movimento. Non è che sta bene se ti muovi: è che non può funzionare correttamente senza un corpo in movimento.
+
+Un esperimento ha preso 120 anziani sedentari. Metà ha camminato 3 volte a settimana per un anno, partendo da 10 minuti fino ad arrivare a 40. L'altra metà ha fatto solo stretching leggero.
+
+Prima e dopo, risonanza magnetica dell'ippocampo: la struttura del cervello che gestisce la memoria e che normalmente si riduce con l'età.
+
+Il risultato? Nel gruppo che aveva camminato l'ippocampo era cresciuto del 2%. Nel gruppo di controllo era diminuito.
+
+Chi si è mosso ha letteralmente fatto tornare indietro l'orologio del cervello.
+
+Commenta CAMMINA e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #longevità #cervello #camminare #running`,
+  },
+  {
+    id: "L5-bugia",
+    title: "La bugia più diffusa del running",
+    props: {
+      ...base,
+      src: "longevita/longevita.webm",
+      words: wordsLongevita as CNReelProps["words"],
+      master: "longevita/masters/L5-bugia.mp4",
+      gfxShift: 30,
+      capShift: 20,
+      blendFrames: 2,
+      tailLive: 0.25,
+      // un taglio solo: salta il passaggio sulla zona aerobica (già nel reel sulle cellule) e va dritto al principio cardine
+      segments: cutN(2, [537.8, 583.1], [593.95, 609.95]),
+      hook: null,
+      elements: [
+        { kind: "kinetic", at: 0.12, word: "non", dur: 1.95, words: ["NON BASTA", "USCIRE A CORRERE"], accentIndex: 0 },
+        { kind: "kinetic", at: 2.28, word: "quella", dur: 2.85, words: ["LA BUGIA", "PIÙ DIFFUSA", "DEL RUNNING"], accentIndex: 0 },
+        { kind: "checklist", at: 6.06, word: "correre", dur: 5.0, big: true, cross: true, cues: ["male", "pronto", "allenare"], items: ["Correre male", "Corpo non pronto", "Non sapersi allenare"] },
+        { kind: "title", at: 11.26, word: "non", dur: 4.04, cues: ["non", "quando"], lines: ["Non è se ti farai male", "È quando"], accent: "quando" },
+        { kind: "title", at: 18.4, word: "segnale", dur: 4.04, cues: ["segnale", "manda", "direzione"], lines: ["Un segnale sbagliato", "manda la biologia", "nella direzione sbagliata"], accent: "sbagliata" },
+        { kind: "slides", at: 22.55, dur: 9.34, fadeIn: 4, fadeOut: 0, cues: ["troppo", "bocca", "fiatone", "senza", "rinnovando", "stressando"], header: "Segnali sbagliati", steps: [
+          { g: 0, kind: "chip", label: "correre troppo forte", color: "coral" },
+          { g: 0, kind: "chip", label: "con la bocca aperta", color: "coral" },
+          { g: 0, kind: "chip", label: "col fiatone", color: "coral" },
+          { g: 0, kind: "chip", label: "senza saper correre", color: "coral" },
+          { g: 1, kind: "text", lines: ["Non stai rinnovando", "i mitocondri"] },
+          { g: 1, kind: "text", lines: ["Stai stressando", "un sistema non pronto"], accent: 0 },
+        ] },
+        { kind: "kinetic", at: 33.16, word: "naso", dur: 2.3, words: ["IL NASO", "LIMITATORE", "NATURALE"], accentIndex: 0 },
+        { kind: "question", at: 35.88, word: "se", dur: 2.6, label: "Il test", text: "Riesci a respirare solo dal naso?" },
+        { kind: "kinetic", at: 38.88, word: "probabilmente", dur: 2.05, words: ["STAI ANDANDO", "TROPPO FORTE"], accentIndex: 1 },
+        { kind: "kinetic", at: 41.26, word: "rallenta", dur: 1.5, words: ["RALLENTA", "O CAMMINA"], accentIndex: 0 },
+        { kind: "kinetic", at: 42.96, word: "non", dur: 2.24, words: ["NON È DEBOLEZZA", "È INTELLIGENZA", "BIOLOGICA"], accentIndex: 2 },
+        { kind: "slides", at: 45.27, dur: 3.59, fadeIn: 0, fadeOut: 0, cues: ["principio", "metodo"], steps: [
+          { g: 0, kind: "text", lines: ["Il principio", "cardine"], accent: 1 },
+          { g: 0, kind: "chip", label: "del metodo Correre Naturale®" },
+        ] },
+        { kind: "bigstrike", at: 49.87, word: "correre", dur: 1.75, text: "Correre di più o più veloce" },
+        { kind: "kinetic", at: 52.29, word: "mandare", dur: 1.65, words: ["I SEGNALI", "GIUSTI"], accentIndex: 1 },
+        { kind: "checklist", at: 54.15, word: "con", dur: 5.6, big: true, cues: ["tecnica", "corpo", "intensità"], items: ["Tecnica corretta", "Corpo preparato", "Intensità sostenibile"] },
+        { kind: "kinetic", at: 60.01, word: "resto", dur: 1.25, words: ["IL RESTO È UNA", "CONSEGUENZA"], accentIndex: 1 },
+      ],
+      cta: { word: "TECNICA", title: "Vuoi imparare a correre bene?" },
+    },
+    didascalia: `Non basta uscire a correre. Quella è la bugia più diffusa nel mondo del running.
+
+Se esci a correre male, con un corpo non pronto e senza saperti allenare, la questione non è se ti farai male. È quando.
+
+Il corpo risponde ai segnali che gli mandi, e un segnale sbagliato manda la biologia nella direzione sbagliata. Correre troppo forte, con la bocca aperta, col fiatone, senza saper correre: non stai rinnovando i mitocondri, stai stressando un sistema che non è pronto.
+
+Il naso è il limitatore naturale dell'essere umano: se mentre corri non riesci a respirare solo dal naso, molto probabilmente stai andando troppo forte. Rallentare o camminare non è debolezza, è intelligenza biologica.
+
+Questo è il principio cardine del metodo Correre Naturale®: non si tratta di correre di più o più veloce, ma di mandare al corpo i segnali giusti. Con la tecnica corretta, con un corpo preparato, con un'intensità che il tuo sistema può gestire. Il resto è una conseguenza.
+
+Commenta TECNICA e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #longevità #tecnicadicorsa #corsa #running`,
+  },
+  {
+    id: "L6-domani",
+    title: "Tre cose da fare da domani",
+    props: {
+      ...base,
+      src: "longevita/longevita.webm",
+      words: wordsLongevita as CNReelProps["words"],
+      master: "longevita/masters/L6-domani.mp4",
+      gfxShift: 30,
+      capShift: 20,
+      blendFrames: 2,
+      tailLive: 0.3,
+      // nel video YouTube qui ci sono 40 s di schede: sotto la voce vanno le riprese di copertura del video stesso (work/L6.json), le tre istruzioni sono schede nuove a tutto schermo
+      segments: cutN(2, [610.8, 660.9]),
+      hook: null,
+      elements: [
+        { kind: "kinetic", at: 0.2, word: "cosa", dur: 1.7, words: ["COSA PUOI FARE", "DA DOMANI?"], accentIndex: 1 },
+        { kind: "plan", at: 2.0, dur: 5.0, cues: ["esci", "almeno", "respirando"], n: 1, kicker: "Prima cosa", title: ["Esci", "e cammina"], points: ["almeno 10 minuti", "respirando solo dal naso"], art: "walk" },
+        { kind: "title", at: 7.28, word: "pranzo", dur: 2.55, cues: ["pranzo", "momenti"], lines: ["Dopo pranzo", "uno dei momenti migliori"], accent: "pranzo" },
+        { kind: "kinetic", at: 10.56, word: "segnale", dur: 1.9, words: ["UN SEGNALE", "POTENTISSIMO"], accentIndex: 1 },
+        { kind: "kinetic", at: 12.78, word: "motore", dur: 2.1, words: ["ACCENDI", "IL MOTORE", "AEROBICO"], accentIndex: 1 },
+        { kind: "kinetic", at: 15.02, word: "mitocondri", dur: 2.4, words: ["MITOCONDRI", "AL LAVORO"], accentIndex: 0 },
+        { kind: "kinetic", at: 17.72, word: "inizia", dur: 1.03, words: ["INIZIA", "DA QUI"], accentIndex: 1 },
+        { kind: "plan", at: 18.8, dur: 7.0, cues: ["se", "inserire", "dire"], n: 2, kicker: "Seconda cosa", pre: "se già cammini", title: ["Qualche minuto", "di corsa facile"], points: ["facile = il naso basta"], art: "run" },
+        { kind: "title", at: 26.06, word: "naso", dur: 2.05, cues: ["naso", "torni"], lines: ["Il naso non basta?", "Torna a camminare"], accent: "camminare" },
+        { kind: "kinetic", at: 28.7, word: "senza", dur: 1.3, words: ["SENZA FRETTA", "SENZA EGO"], accentIndex: 1 },
+        { kind: "plan", at: 30.1, dur: 10.03, cues: ["squat", "talloni", "restaci", "riesci"], n: 3, kicker: "Terza cosa", title: ["Squat", "completo"], points: ["talloni a terra", "resta giù 30 secondi"], foot: "Non ci riesci senza dolore? Hai trovato il tuo primo esercizio", art: "timer" },
+        { kind: "kinetic", at: 41.44, word: "manutenzione", dur: 1.4, words: ["MANUTENZIONE", "QUOTIDIANA"], accentIndex: 1 },
+        { kind: "kinetic", at: 44.48, word: "squat", dur: 2.0, words: ["LO SQUAT", "UNO DEI GESTI", "PIÙ POTENTI"], accentIndex: 0 },
+        { kind: "kinetic", at: 46.76, word: "rimettere", dur: 3.1, words: ["RIMETTE", "IN FUNZIONE", "IL CORPO"], accentIndex: 2 },
+      ],
+      cta: { word: "DOMANI", title: "Vuoi iniziare nel modo giusto?" },
+    },
+    didascalia: `Cosa puoi fare da domani? Tre cose.
+
+1. Esci e cammina almeno 10 minuti, respirando solo dal naso. Dopo pranzo è uno dei momenti migliori. Sembra poco, ma è un segnale potentissimo: stai accendendo il motore aerobico e stai dicendo ai tuoi mitocondri di mettersi al lavoro.
+
+2. Se già cammini, inserisci qualche minuto di corsa facile. Facile vuol dire che respirare dal naso basta. Se il naso non basta, torni a camminare: senza fretta e senza ascoltare l'ego.
+
+3. Inizia con lo squat: squat completo, talloni a terra, e restaci per 30 secondi. Se non ci riesci senza dolore, hai appena trovato il tuo primo esercizio di manutenzione quotidiana.
+
+Nel metodo Correre Naturale® lo squat è uno dei gesti più potenti per rimettere in funzione il corpo.
+
+Commenta DOMANI e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #longevità #camminare #squat #running`,
+  },
 ];

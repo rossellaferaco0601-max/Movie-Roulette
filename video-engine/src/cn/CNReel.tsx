@@ -11,10 +11,14 @@ import { Text3D, Wave, Sphere3D, Gauge3D, ECG, Steps, Bars } from "./Elements3D"
 import { CTA } from "./CTA";
 import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
 import { Clip, Compare, Step, Airflow, Filter, Beats, Ring, Duo, Slam, Orbit, Drill, slamImpact, slamShake, orbitCam } from "./Elements5";
-import { Pair, Lifebar, Fulltext } from "./Elements6";
+import { Pair, Lifebar, Fulltext, Slides } from "./Elements6";
+import { Flow, Renew, Versus, Grid4, Plan } from "./Elements7";
 import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide, Question, NameTag } from "./Elements4";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
+
+/** elementi che occupano tutto il fotogramma: fuori dallo spostamento/scala della zona grafiche */
+const FULLSCREEN = new Set<Element["kind"]>(["orbit", "drill", "guide", "pair", "lifebar", "fulltext", "slides", "renew", "versus", "plan"]);
 
 const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => {
   switch (el.kind) {
@@ -44,6 +48,12 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "pair": return <Pair el={el} start={start} />;
     case "lifebar": return <Lifebar el={el} start={start} />;
     case "fulltext": return <Fulltext el={el} start={start} />;
+    case "slides": return <Slides el={el} start={start} />;
+    case "flow": return <Flow el={el} start={start} />;
+    case "renew": return <Renew el={el} start={start} />;
+    case "versus": return <Versus el={el} start={start} />;
+    case "grid4": return <Grid4 el={el} start={start} />;
+    case "plan": return <Plan el={el} start={start} />;
     case "clip": return <Clip el={el} start={start} />;
     case "compare": return <Compare el={el} start={start} />;
     case "step": return <Step el={el} start={start} />;
@@ -108,10 +118,14 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
         </AbsoluteFill>
         {p.hook ? <Hook hook={p.hook} /> : null}
         <AbsoluteFill style={{ transform: `translateY(${p.gfxShift ?? 0}px) scale(${p.gfxScale ?? 1})`, transformOrigin: `50% ${H * 0.44}px` }}>
-          {p.elements.map((el, i) => (
+          {p.elements.map((el, i) => (FULLSCREEN.has(el.kind) ? null : (
             <AnyElement key={i} el={{ ...el, onAt: resolveCues(el, starts[i], words) } as Element} start={starts[i]} />
-          ))}
+          )))}
         </AbsoluteFill>
+        {/* le grafiche a tutto schermo non si spostano né si rimpiccioliscono: devono coprire tutto il fotogramma (Ross 11/11: banda in alto) */}
+        {p.elements.map((el, i) => (FULLSCREEN.has(el.kind) ? (
+          <AnyElement key={i} el={{ ...el, onAt: resolveCues(el, starts[i], words) } as Element} start={starts[i]} />
+        ) : null))}
         <AbsoluteFill style={{ transform: `translateY(${p.capShift ?? 0}px)` }}>
           <Captions words={words} endFrame={total - 4} />
         </AbsoluteFill>

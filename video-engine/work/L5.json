@@ -1,0 +1,30 @@
+{
+ "id": "L5-bugia",
+ "src": "public/longevita/longevita.webm",
+ "out": "public/longevita/masters/L5-bugia.mp4",
+ "shots": "work/longevita_shots.json",
+ "blendFrames": 2,
+ "tail": 0.5,
+ "tailLive": 0.25,
+ "segments": [
+  {
+   "from": 537.8,
+   "to": 583.1333
+  },
+  {
+   "from": 593.917,
+   "to": 609.9503
+  }
+ ],
+ "lead": {
+  "0": 538.03
+ },
+ "crops": {
+  "538.00": [
+   1428,
+   0,
+   1214,
+   2160
+  ]
+ }
+}

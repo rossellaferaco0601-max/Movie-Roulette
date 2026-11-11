@@ -34,7 +34,7 @@ for (const r of REELS) {
     if (x.name.includes("NON basta")) problems.push("l'ultima scritta resta a schermo meno di 1 s");
     for (let j = 0; j < i; j++) {
       const y = iv[j];
-      const full = (n: string) => /\.(orbit|drill|guide|pair|lifebar|fulltext)/.test(n);
+      const full = (n: string) => /\.(orbit|drill|guide|pair|lifebar|fulltext|slides|renew|versus|plan)/.test(n);
       if (!(full(x.name) && full(y.name)) && x.a < y.b + 3 && y.a < x.b + 3) problems.push(`si sovrappone a ${y.name} (${(y.a / 30).toFixed(2)}-${(y.b / 30).toFixed(2)})`);
     }
     console.log(`  ${(x.a / 30).toFixed(2).padStart(6)}-${(x.b / 30).toFixed(2).padStart(6)}  ${x.name}${problems.length ? "  ✗ " + problems.join("; ") : ""}`);

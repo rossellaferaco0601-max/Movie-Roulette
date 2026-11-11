@@ -383,3 +383,18 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   `scripts/cn_master_shots.py` (mappa delle inquadrature in `work/longevita_shots.json`, un ritaglio verticale per inquadratura con il volto
   in alto) e le schede del sorgente si coprono con grafiche a tutto schermo (`pair`, `lifebar`, `fulltext`, in `Elements6.tsx`).
   Sulle riprese di repertorio con volti grandi niente grafiche, solo sottotitoli.
+- **2026-11-11 notte (Ross su L1: «mi piace molto, unica cosa sopra vedo una banda da cui si vede il video sottostante: correggila e prosegui con gli altri»)**:
+  - Le grafiche **a tutto schermo** non seguono lo spostamento `gfxShift` (stanno fuori dal contenitore spostato): coprono sempre tutto il fotogramma.
+  - Serie Longevità completata con lo stesso metodo: `L2-farmaco`, `L3-cellule`, `L4-cervello`, `L5-bugia`, `L6-domani` (v1), `L1-ventanni` v2.
+    Componenti nuovi in `Elements7.tsx`: `flow` (ossigeno + nutrienti → ATP), `renew` (mitofagia), `versus` (due gruppi a confronto + orologio che
+    torna indietro), `grid4`, `plan` (scheda «cosa fare» con numero e disegno animato). `slides` accetta etichette color corallo; `checklist` ha `cross`
+    (crocette rosse da subito, per gli elenchi di errori).
+  - `cn_master_shots.py`: `stretch` e `lead` (la frase che sconfina di pochi fotogrammi nell'inquadratura vicina non mostra mai un lampo di un'altra
+    ripresa: la ripresa viene rallentata di un soffio), carrellata del ritaglio per chi attraversa l'inquadratura, `broll` (riprese di copertura
+    sotto la voce quando il sorgente ha solo schede: L6), e ritaglio più stretto quando il volto è basso nel sorgente (fronte sempre a 0,10).
+  - **Le riprese di repertorio con un volto grande si coprono** con una grafica a tutto schermo se serve testo (coppia di anziani in L4, corridore
+    stanco in L5); altrimenti restano pulite con i soli sottotitoli.
+  - Trascrizione: corretti a mano gli errori che cambiano il senso nei sottotitoli («no, stai rinnovando» → «non stai rinnovando», «riesce» → «riesci»,
+    «modero» → «moderno», «motor» → «motore»). Da controllare sempre rileggendo i sottotitoli nei fotogrammi di controllo.
+  - Audio in un solo passaggio in `cn_finish.sh`: normalizzazione, clic della CTA attenuato, limitatore sui picchi, 48 kHz (prima usciva a 96 kHz
+    con qualche picco sopra 0 dB); il volume finale resta attorno a −15 LUFS come nei v11.

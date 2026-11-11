@@ -111,3 +111,44 @@ export const Fulltext: React.FC<P<"fulltext">> = ({ el, start }) => {
     </Full>
   );
 };
+
+/* ---------- dati a tutto schermo, un gruppo alla volta: numeri, frasi ed etichette entrano sulle parole; il gruppo cambia quando cambia l'argomento ---------- */
+export const Slides: React.FC<P<"slides">> = ({ el, start }) => {
+  const u = useFull(el, start);
+  if (!u.visible) return null;
+  const cues = el.steps.map((_, i) => cueF(el, i, u.fps, 1 + i * 2));
+  let cur = el.steps[0].g;
+  el.steps.forEach((st, i) => { if (u.local >= cues[i]) cur = st.g; });
+  const shown = el.steps.map((st, i) => ({ st, i })).filter((x) => x.st.g === cur);
+  const sizeOf = (lines: string[]) => Math.min(132, Math.floor(1560 / Math.max(...lines.map((l) => l.length))));
+  const hOf = (st: (typeof el.steps)[number]) => (st.kind === "stat" ? 318 : st.kind === "chip" ? 104 : (st.lines ?? []).length * sizeOf(st.lines ?? [""]) * 1.06 + 16);
+  const gap = 30, totalH = shown.reduce((a, x) => a + hOf(x.st), 0) + gap * (shown.length - 1);
+  let y = 790 - totalH / 2;
+  return (
+    <Full fade={u.fade}>
+      {el.header ? <Chip top={236} k={u.pop(3)}>{el.header}</Chip> : null}
+      {shown.map(({ st, i }) => {
+        const k = u.pop(cues[i]), top = y; y += hOf(st) + gap;
+        if (u.local < cues[i]) return null;
+        if (st.kind === "stat") return (
+          <div key={i} style={{ position: "absolute", left: 0, width: W, top, textAlign: "center", transform: `scale(${0.7 + 0.3 * k})`, opacity: k }}>
+            <div style={{ fontWeight: 900, fontSize: (st.value ?? "").length > 6 ? 190 : 230, lineHeight: 1, color: st.color === "coral" ? CORAL : BRAND.lime }}>{st.value}</div>
+            <div style={{ fontWeight: 800, fontSize: 58, lineHeight: 1.1, color: BRAND.white, marginTop: 8, padding: "0 70px" }}>{st.label}</div>
+          </div>
+        );
+        if (st.kind === "chip") return (
+          <div key={i} style={{ position: "absolute", left: 0, width: W, top, textAlign: "center", opacity: k, transform: `translateY(${(1 - k) * 30}px)` }}>
+            <div style={{ display: "inline-block", background: "rgba(11,15,10,0.92)", border: `4px solid ${st.color === "coral" ? CORAL : BRAND.lime}`, color: BRAND.white, fontWeight: 800, fontSize: 60, lineHeight: 1, padding: "18px 38px", borderRadius: 999 }}>{st.label}</div>
+          </div>
+        );
+        const size = sizeOf(st.lines ?? [""]);
+        return (
+          <div key={i} style={{ position: "absolute", left: 0, width: W, top, textAlign: "center", transform: `scale(${0.75 + 0.25 * k})`, opacity: k }}>
+            {(st.lines ?? []).map((l, j) => <div key={j} style={{ fontWeight: 900, fontSize: size, lineHeight: 1.06, textTransform: "uppercase", color: j === (st.accent ?? -1) ? BRAND.lime : BRAND.white }}>{l}</div>)}
+          </div>
+        );
+      })}
+      {el.source ? <div style={{ position: "absolute", top: 1262, left: 0, width: W, textAlign: "center", fontWeight: 700, fontSize: 34, color: "rgba(244,241,229,0.75)" }}>{el.source}</div> : null}
+    </Full>
+  );
+};

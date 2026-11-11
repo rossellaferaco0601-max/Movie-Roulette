@@ -5,7 +5,14 @@ sul volto (volto in alto, mento sopra la zona grafiche); le riprese senza volto 
 Audio tagliato netto ai punti di taglio (micro-incrocio), coda come in cn_master.py.
 Uso: python3 scripts/cn_master_shots.py config.json
 config: {id, src, out, shots: "work/x_shots.json", blendFrames, tail, tailLive, segments: [{from, to}],
-         crops: {"<inizio inquadratura>": [x, y, w, h]}}   (crops = ritagli a mano, in pixel del sorgente)
+         crops: {"<inizio inquadratura>": [x, y, w, h]},   (crops = ritagli a mano, in pixel del sorgente;
+                 [x0, y, w, h, x1, secondi] = carrellata: il ritaglio scorre da x0 a x1 in quei secondi, per seguire chi attraversa l'inquadratura)
+         stretch: {"<indice del pezzo>": fine_video}}   (il video del pezzo finisce a quel tempo del sorgente e viene rallentato
+                 di poco per durare quanto l'audio: serve quando la frase sconfina di qualche fotogramma nell'inquadratura dopo)
+         broll: {"<indice del pezzo>": {"until": t, "clips": [[da, a, secondi], ...]}}   (fino al tempo t del sorgente il video del pezzo
+                 è fatto di riprese di copertura prese da altri punti, ognuna a schermo per quei secondi; l'audio resta quello del pezzo)
+         lead: {"<indice del pezzo>": inizio_video}   (la prima inquadratura del pezzo parte da quel tempo del sorgente, appena rallentata:
+                 serve quando la frase comincia qualche fotogramma prima dello stacco e non si vuole un lampo dell'inquadratura precedente)
 Stampa anche la mappa dei pezzi (tempo nel master di ogni inquadratura): serve per coprire le schede grafiche del sorgente."""
 import json, os, subprocess, sys
 
@@ -26,7 +33,8 @@ def crop_of(shot):
     if key in c.get("crops", {}): return c["crops"][key]
     f = shot.get("face")
     if not f: return [(SW - SH * 9 / 16) / 2, 0, SH * 9 / 16, SH]
-    ch = min(SH, max(1250, f[3] * SH / 0.25)); cw = ch * 9 / 16
+    ch = min(SH, max(1250, f[3] * SH / 0.25))
+    ch = max(1250, min(ch, (SH - f[1] * SH) / 0.9)); cw = ch * 9 / 16   # se il volto è basso nel sorgente si stringe un po': la fronte resta a 0,10
     x = min(max(0, (f[0] + f[2] / 2) * SW - cw / 2), SW - cw); y = min(max(0, f[1] * SH - 0.10 * ch), SH - ch)
     return [x, y, cw, ch]
 
@@ -36,16 +44,38 @@ for i, s in enumerate(segs):
     start = 0 if i == 0 else cursor - blend; cursor = start + n
     cuts = [s["from"]] + [sh["from"] for sh in shots if s["from"] + 0.05 < sh["from"] < s["to"] - 0.05] + [s["to"]]
     live = min(round(c.get("tailLive", TAIL) * FPS), round(TAIL * FPS)) if last else 0
-    inputs, fc, labels = [], "", []
+    vend = c.get("stretch", {}).get(str(i))
+    if vend: cuts = [s["from"], s["to"]]
+    vlead = c.get("lead", {}).get(str(i))
+    if vlead: cuts = [s["from"]] + [x for x in cuts[1:] if x > vlead]
+    # pezzi video: (inizio sorgente, fine sorgente o None, primo fotogramma, ultimo fotogramma) dentro il pezzo audio
+    pieces = []
+    br = c.get("broll", {}).get(str(i))
+    if br:   # riprese di copertura sotto la voce: [da, a, secondi a schermo], fino al tempo `until` del sorgente
+        fu, acc = round((br["until"] - s["from"]) * FPS), 0
+        for j, (ca, cb, sec) in enumerate(br["clips"]):
+            nfk = fu - acc if j == len(br["clips"]) - 1 else round(sec * FPS)
+            pieces.append((ca, cb, acc, acc + nfk)); acc += nfk
+        cuts = [br["until"]] + [x for x in cuts[1:] if x > br["until"] + 0.05]
     for k, (a, b) in enumerate(zip(cuts[:-1], cuts[1:])):
-        sh = next(x for x in shots if x["from"] - 0.001 <= (a + b) / 2 < x["to"])
-        f0, f1 = round((a - s["from"]) * FPS), round((b - s["from"]) * FPS)
-        nf = f1 - f0 + (live if k == len(cuts) - 2 else 0)
-        x, y, w, h = [int(v) // 2 * 2 for v in crop_of(sh)]
-        inputs += ["-ss", f"{a:.3f}", "-t", f"{nf / FPS + 0.4:.3f}", "-i", c["src"]]
-        fc += f"[{k}:v]crop={w}:{h}:{x}:{y},scale={OW}:{OH}:flags=lanczos,fps={FPS}:round=down,trim=end_frame={nf},setpts=PTS-STARTPTS,setsar=1[v{k}];"
+        first = k == 0 and not br
+        pieces.append(((vlead if vlead and first else a), (vend if vend else (b if vlead and first else None)), round((a - s["from"]) * FPS), round((b - s["from"]) * FPS)))
+    inputs, fc, labels = [], "", []
+    for k, (va, vb, f0, f1) in enumerate(pieces):
+        b = vb or s["from"] + f1 / FPS
+        sh = next(x for x in shots if x["from"] - 0.001 <= (va + b) / 2 < x["to"])
+        nf = f1 - f0 + (live if k == len(pieces) - 1 else 0)
+        cr = crop_of(sh); x, y, w, h = [int(v) // 2 * 2 for v in cr[:4]]
+        if len(cr) > 4: x = f"'min({max(x, int(cr[4]))},max({min(x, int(cr[4]))},{x}+({int(cr[4]) - x})*t/{cr[5]}))'"
+        if vb:
+            fac = (nf / FPS) / (vb - va - 0.02)
+            inputs += ["-ss", f"{va:.3f}", "-t", f"{vb - va - 0.02:.3f}", "-i", c["src"]]
+            fc += f"[{k}:v]crop={w}:{h}:{x}:{y},scale={OW}:{OH}:flags=lanczos,setpts={fac:.5f}*(PTS-STARTPTS),fps={FPS}:round=down,tpad=stop_mode=clone:stop_duration=0.3,trim=end_frame={nf},setpts=PTS-STARTPTS,setsar=1[v{k}];"
+        else:
+            inputs += ["-ss", f"{va:.3f}", "-t", f"{nf / FPS + 0.4:.3f}", "-i", c["src"]]
+            fc += f"[{k}:v]crop={w}:{h}:{x}:{y},scale={OW}:{OH}:flags=lanczos,fps={FPS}:round=down,trim=end_frame={nf},setpts=PTS-STARTPTS,setsar=1[v{k}];"
         labels.append(f"[v{k}]")
-        pieces_map.append({"seg": i, "src": [round(a, 3), round(b, 3)], "master": [round((start + f0) / FPS, 3), round((start + f1) / FPS, 3)], "face": bool(sh.get("face")), "shot": sh["from"]})
+        pieces_map.append({"seg": i, "src": [round(va, 3), round(b, 3)], "master": [round((start + f0) / FPS, 3), round((start + f1) / FPS, 3)], "face": bool(sh.get("face")), "shot": sh["from"]})
     nv = n + (round(TAIL * FPS) if last else 0)
     fc += "".join(labels) + f"concat=n={len(labels)}:v=1:a=0[vc];[vc]" + (f"tpad=stop_mode=clone:stop_duration={TAIL}," if last else "") + f"trim=end_frame={nv},setpts=PTS-STARTPTS[vo]"
     hb = blend / 2 / FPS

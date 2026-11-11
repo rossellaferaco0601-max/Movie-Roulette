@@ -25,6 +25,7 @@ scripts/cn_finish.sh R1-fiatone v7            # render + loudness + copertina + 
 scripts/cn_queue.sh v7 R2-naso R3-bocca       # coda: master (se manca) → effetti skill (cn_fx) → finitura, un reel alla volta
 npx tsx scripts/cn_fx.ts R1-fiatone --still   # fotogrammi di controllo degli effetti della skill `effects` sul master
 python3 scripts/cn_align.py public/x/src.mp4 src/cn/words.json src/cn/words.json   # tempi reali di ogni parola (allineamento fonetico): da fare prima di agganciare grafiche e tagli
+python3 scripts/cn_master_shots.py work/L3.json    # master verticale da un video GIÀ montato (longevità): un ritaglio per inquadratura, riprese di copertura, schede da coprire
 npx tsx scripts/validate-reels.ts             # sovrapposizioni e ancore di hook/elementi/effetti
 python3 scripts/cn_facecheck_elements.py R2-naso public/ytcn51/masters/R2-naso_mento.json   # volto libero grafica per grafica (dopo cn_facecheck.py)
 ../.claude/skills/effects/.venv/bin/python scripts/cn_facecheck.py public/x/master.mp4 0.44   # il volto non si copre MAI: mento sotto il bordo grafiche

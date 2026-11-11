@@ -1,0 +1,23 @@
+{
+ "id": "L4-cervello",
+ "src": "public/longevita/longevita.webm",
+ "out": "public/longevita/masters/L4-cervello.mp4",
+ "shots": "work/longevita_shots.json",
+ "blendFrames": 2,
+ "tail": 0.5,
+ "tailLive": 0.25,
+ "segments": [
+  {
+   "from": 473.95,
+   "to": 534.35
+  }
+ ],
+ "crops": {
+  "473.51": [
+   1850,
+   0,
+   1214,
+   2160
+  ]
+ }
+}

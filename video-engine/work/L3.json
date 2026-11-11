@@ -1,0 +1,48 @@
+{
+ "id": "L3-cellule",
+ "src": "public/longevita/longevita.webm",
+ "out": "public/longevita/masters/L3-cellule.mp4",
+ "shots": "work/longevita_shots.json",
+ "blendFrames": 2,
+ "tail": 0.5,
+ "tailLive": 0.3,
+ "segments": [
+  {
+   "from": 243.21,
+   "to": 246.5767
+  },
+  {
+   "from": 252.707,
+   "to": 315.5403
+  },
+  {
+   "from": 326.967,
+   "to": 334.0003
+  }
+ ],
+ "stretch": {
+  "0": 246.3
+ },
+ "crops": {
+  "243.20": [
+   1774,
+   0,
+   1214,
+   2160
+  ],
+  "294.96": [
+   622,
+   0,
+   1214,
+   2160,
+   2626,
+   1.2
+  ],
+  "297.17": [
+   1534,
+   250,
+   1068,
+   1900
+  ]
+ }
+}
