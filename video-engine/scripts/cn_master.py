@@ -12,6 +12,7 @@ OUT_W, OUT_H = 1080, 1920
 TAIL = 0.5            # secondi di coda (fermo immagine + silenzio), = TAIL_FRAMES in types.ts
 WIDE = 1.25           # fattore di arretramento del campo largo (il video occupa l'80 % dell'altezza)
 WIDE_RAMP = 0.45      # secondi di animazione dentro/fuori dal campo largo
+AX = 0.04             # micro-incrocio dell'audio ai tagli
 CARD_FADE = 0.10      # dissolvenza del fermo immagine sulle schede (solo se il bordo cade dentro il pezzo)
 
 def run(cmd):
@@ -95,10 +96,14 @@ def build(reel, src_dir, out_dir):
         # ultimo pezzo: coda di TAIL s in cui il video continua (muto) sotto la CTA; se il sorgente finisce, clona l'ultimo fotogramma
         last = i == len(segs) - 1
         nv = n + (round(TAIL * FPS) if last else 0)
-        fc += f"{prev}tpad=stop_mode=clone:stop_duration={TAIL}[vend];" if last else ""
+        fc += f"{prev}trim=end_frame={n},tpad=stop_mode=clone:stop_duration={TAIL}[vend];" if last else ""  # coda = fermo sull'ultimo fotogramma: il seguito del sorgente può saltare a un'altra posa (il «lampo» prima della CTA, Ross 11/11)
         if last: prev = "[vend]"
         fc = fc.rstrip(";")
-        af = f"aresample=48000,atrim=0:{n / FPS:.4f},afade=t=out:st={n / FPS - 0.08:.4f}:d=0.08,apad=whole_dur={nv / FPS:.4f}"
+        # taglio audio netto a metà dell'incrocio video (micro-incrocio di AX s): l'incrocio lungo si mangiava attacchi e code delle parole
+        hb = blend / 2 / FPS
+        a0 = 0 if i == 0 else hb - AX / 2
+        a1 = n / FPS if last else n / FPS - hb + AX / 2
+        af = f"aresample=48000,atrim={a0:.4f}:{a1:.4f},asetpts=PTS-STARTPTS" + (f",afade=t=out:st={a1 - a0 - 0.08:.4f}:d=0.08,apad=whole_dur={a1 - a0 + TAIL:.4f}" if last else "")
         run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{s['from']:.3f}", "-i", src, *extra_in, "-t", f"{nv / FPS + 0.2:.4f}",
              "-filter_complex", fc, "-map", prev, "-map", "0:a", "-frames:v", str(nv), "-af", af,
              "-c:v", "libx264", "-preset", "fast", "-crf", "14", "-pix_fmt", "yuv420p", "-c:a", "pcm_s16le", p])
@@ -114,7 +119,7 @@ def build(reel, src_dir, out_dir):
         offset += parts[i - 1][1] / FPS - d
         vo, ao = f"[v{i}]", f"[a{i}]"
         fv += f"{prev_v}[{i}:v]xfade=transition=fade:duration={d:.4f}:offset={offset:.4f}{vo};"
-        fa += f"{prev_a}[{i}:a]acrossfade=d={d:.4f}:c1=tri:c2=tri{ao};"
+        fa += f"{prev_a}[{i}:a]acrossfade=d={AX}:c1=tri:c2=tri{ao};"
         prev_v, prev_a = vo, ao
         total += parts[i][1] - blend
     fc = fv + fa + f"{prev_v}null[vt];{prev_a}anull[at]"

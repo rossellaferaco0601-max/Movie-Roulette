@@ -321,3 +321,18 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 - **2026-11-10 (Ross)**: le **schede** si scrivono sempre con il modello della classifica settimanale: titolo della serie, poi per ogni reel la riga
   in grassetto **«ID nome · Giorno Categoria · CTA PAROLA»** e sotto un paragrafo con il tema (Il problema / La risposta / Chiusura per i
   Problem/Solution e le testimonianze). Niente schede a elenco puntato.
+- **2026-11-11 (Ross, revisione YTCN 51 v8): «i tagli devono essere puliti e deve essere tutto sincronizzato».**
+  - **Sincronia**: i tempi di Whisper sbagliano fino a 0,3 s sulle parole chiave. Prima di montare si allineano le parole con
+    `scripts/cn_align.py` (riconoscitore fonetico italiano, modello in `~/.cache/cn_align`): dà inizio e fine reali di ogni parola.
+    Ogni grafica parte sulla parola detta (`word`) e **anche le sue parti interne** (righe di un elenco, cambi di stato) con `cues`.
+    Controllo: `validate-reels.ts` segnala gli agganci non trovati.
+  - **Tagli**: si scrivono come punti di taglio dell'audio nelle pause tra fine e inizio parola (`cut([...])` in `reels51.ts`), audio netto a metà
+    dell'incrocio anche in `cn_master.py`. Dopo il master si ritrascrive per verificare che non resti e non manchi nulla.
+  - **Coda prima della CTA**: sempre **fermo sull'ultimo fotogramma** del pezzo. Il seguito del sorgente può saltare a un'altra posa: era il
+    «lampo» prima della CTA di R2.
+  - **Animazioni «sempre le stesse»** (R2 bocciato): ogni grafica di un reel deve essere diversa dalle altre e illustrare proprio la frase detta.
+  - **Illustrazioni disegnate a mano in SVG** (la bocca di R3): «dozzinali». Per soggetti realistici servono immagini o clip fotorealistiche
+    generate (Canva: funziona da qui; Gemini: serve la fatturazione) o girato vero, non disegni.
+  - **«Effetto schianto»** = elemento `slam`: la parola piomba sullo schermo sull'attacco della parola detta, con urto e scossa della camera.
+  - **Orbita con fermo immagine** = elemento `orbit`: il video si ferma e arretra, i titoli girano sopra la testa e si impilano (mai sul volto).
+  - R5 ora contiene **tutti e tre gli esercizi** (`R5-esercizi`); **R6 e R7 scartati**. R8: tolto «di questo video» da «Il concetto chiave è che…».

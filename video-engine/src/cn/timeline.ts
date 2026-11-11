@@ -38,6 +38,11 @@ export const remapWords = (words: Caption[], items: ReturnType<typeof layout>["i
 };
 
 const clean = (t: string) => t.toLowerCase().replace(/[.,?!;:«»"']/g, "");
+/** la parola detta corrisponde all'aggancio? Vale anche la parte dopo l'apostrofo ("l'ossigeno" ↔ "ossigeno"). */
+export const sameWord = (said: string, target: string) => {
+  const t = clean(target), raw = said.toLowerCase().replace(/[.,?!;:«»"]/g, "");
+  return clean(raw) === t || raw.split("'").pop() === t;
+};
 
 /** Frame di inizio di un elemento: se ha `word`, si aggancia alla parola detta più vicina ad `at` (±2 s). */
 export const resolveStart = (el: Element, words: RWord[]) => {
@@ -46,8 +51,21 @@ export const resolveStart = (el: Element, words: RWord[]) => {
   const target = clean(el.word);
   let best: RWord | null = null;
   for (const w of words) {
-    if (clean(w.text) !== target) continue;
+    if (!sameWord(w.text, target)) continue;
     if (Math.abs(w.start - approx) <= 60 && (!best || Math.abs(w.start - approx) < Math.abs(best.start - approx))) best = w;
   }
   return best ? best.start : approx;
+};
+
+/** `cues` → secondi dall'inizio dell'elemento: per ogni parola-aggancio, la prima occorrenza detta dopo la precedente (da 4 fotogrammi prima dell'inizio). */
+export const resolveCues = (el: Element, start: number, words: RWord[]): number[] | undefined => {
+  if (!el.cues) return el.onAt;
+  let from = start - 4; const res: number[] = [];
+  for (const c of el.cues) {
+    const target = clean(c);
+    const w = words.find((x) => x.start >= from && sameWord(x.text, target));
+    if (!w) { res.push(res.length ? res[res.length - 1] + 1 : 0); continue; }
+    res.push(Math.max(0, (w.start - start) / FPS)); from = w.start + 1;
+  }
+  return res;
 };

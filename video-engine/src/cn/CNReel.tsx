@@ -3,13 +3,14 @@ import { loadFont } from "@remotion/google-fonts/Blinker";
 import { useMemo } from "react";
 import type { CNReelProps, Element } from "./types";
 import { FPS, TAIL_FRAMES, H } from "./types";
-import { layout, remapWords, resolveStart, secToFrames } from "./timeline";
+import { layout, remapWords, resolveStart, resolveCues, secToFrames } from "./timeline";
 import { Captions } from "./Captions";
 import { Hook } from "./Hook";
 import { ElementView } from "./Elements";
 import { Text3D, Wave, Sphere3D, Gauge3D, ECG, Steps, Bars } from "./Elements3D";
 import { CTA } from "./CTA";
 import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
+import { Step, Airflow, Filter, Beats, Ring, Duo, Slam, Orbit, Drill, slamImpact, slamShake } from "./Elements5";
 import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide, Question, NameTag } from "./Elements4";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
@@ -39,6 +40,15 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "stack": return <Stack el={el} start={start} />;
     case "guide": return <Guide el={el} start={start} />;
     case "question": return <Question el={el} start={start} />;
+    case "step": return <Step el={el} start={start} />;
+    case "airflow": return <Airflow el={el} start={start} />;
+    case "filter": return <Filter el={el} start={start} />;
+    case "beats": return <Beats el={el} start={start} />;
+    case "ring": return <Ring el={el} start={start} />;
+    case "duo": return <Duo el={el} start={start} />;
+    case "slam": return <Slam el={el} start={start} />;
+    case "orbit": return <Orbit el={el} start={start} />;
+    case "drill": return <Drill el={el} start={start} />;
     case "nametag": return <NameTag el={el} start={start} />;
     default: return <ElementView el={el} start={start} />;
   }
@@ -69,17 +79,21 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
   const hookF = p.hook ? Math.round(p.hook.dur * fps) : 0;
   const hookZoom = p.hookZoom && hookF ? interpolate(frame, [0, hookF, hookF + 15], [1, p.hookZoom, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.quad) }) : 1;
 
+  // schianto: scossa della camera sull'urto della parola
+  let shake = { dx: 0, dy: 0, sc: 1 };
+  p.elements.forEach((el, i) => { if (el.kind === "slam") { const sh = slamShake(frame, slamImpact({ ...el, onAt: resolveCues(el, starts[i], words) } as Extract<Element, { kind: "slam" }>, starts[i], fps)); if (sh.sc !== 1) shake = sh; } });
+
   return (
     <AbsoluteFill style={{ background: "#2F4D1E", fontFamily: "Blinker, sans-serif" }}>
       <Sequence from={0} durationInFrames={total} layout="none">
         {cam > 0 ? <AbsoluteFill style={{ background: "#E9E4D2", opacity: cam }} /> : null}
-        <AbsoluteFill style={{ opacity: videoFade, transform: `translateY(${camShift}px) scale(${hookZoom})`, transformOrigin: "50% 30%" }}>
+        <AbsoluteFill style={{ opacity: videoFade, transform: `translate(${shake.dx}px, ${camShift + shake.dy}px) scale(${hookZoom * shake.sc})`, transformOrigin: "50% 30%" }}>
           <Master src={p.master} total={total} />
         </AbsoluteFill>
         {p.hook ? <Hook hook={p.hook} /> : null}
         <AbsoluteFill style={{ transform: `translateY(${p.gfxShift ?? 0}px) scale(${p.gfxScale ?? 1})`, transformOrigin: `50% ${H * 0.44}px` }}>
           {p.elements.map((el, i) => (
-            <AnyElement key={i} el={el} start={starts[i]} />
+            <AnyElement key={i} el={{ ...el, onAt: resolveCues(el, starts[i], words) } as Element} start={starts[i]} />
           ))}
         </AbsoluteFill>
         <AbsoluteFill style={{ transform: `translateY(${p.capShift ?? 0}px)` }}>

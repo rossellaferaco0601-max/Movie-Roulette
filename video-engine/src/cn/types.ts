@@ -3,7 +3,9 @@ import type { Caption } from "@remotion/captions";
 export type Seg = { from: number; to: number };
 
 /** Ogni elemento vive nella zona grafiche (y 0,47-0,74), uno alla volta. `word` aggancia l'inizio alla parola detta più vicina ad `at`. */
-export type ElementBase = { at: number; dur: number; word?: string };
+/** `cues`: parole dette (in ordine) a cui agganciare le parti interne della grafica (righe di un elenco, cambio di stato): diventano `onAt`
+ *  (secondi dall'inizio dell'elemento), calcolati sui tempi reali delle parole. */
+export type ElementBase = { at: number; dur: number; word?: string; cues?: string[]; onAt?: number[] };
 
 export type Element = ElementBase &
   (
@@ -23,7 +25,7 @@ export type Element = ElementBase &
     | { kind: "stairs"; title: string; steps?: number }
     | { kind: "split"; lines: string[]; accent: string }
     | { kind: "graph"; title: string; label: string; from: number; to: number; unit?: string }
-    | { kind: "toggles"; title: string; items: string[]; onAt?: number[] }
+    | { kind: "toggles"; title: string; items: string[] }
     | { kind: "title"; lines: string[]; accent?: string }
     | { kind: "mouth"; lines: string[] }
     | { kind: "runner"; fast: string; slow: string; bpmFrom: number; bpmTo: number }
@@ -31,9 +33,18 @@ export type Element = ElementBase &
     | { kind: "horizon"; title: string; kmTo: number }
     | { kind: "chat"; sender: string; messages: string[] }
     | { kind: "bigstrike"; text: string }
-    | { kind: "stack"; title: string; items: string[]; onAt: number[] }
+    | { kind: "stack"; title: string; items: string[] }
     | { kind: "guide"; mode: "ritmica" | "nasale" | "hold"; title?: string; titleSec?: number; inhale?: number; exhale?: number; hold?: number; breaths?: number }
     | { kind: "metronome"; title: string; inhale: number; exhale: number; bpm?: number }
+    | { kind: "step"; n: string; label: string; sub: string; strike: string }
+    | { kind: "airflow"; lines: [string, string] }
+    | { kind: "filter" }
+    | { kind: "beats"; words: [string, string] }
+    | { kind: "ring"; words: [string, string] }
+    | { kind: "duo"; title: string; words: [string, string] }
+    | { kind: "slam"; lead: string[]; text: string }
+    | { kind: "orbit"; src: string; titles: string[]; headX: number; headTop: number; back?: number }
+    | { kind: "drill"; n: number; title: string; fadeIn?: number; fadeOut?: number; steps: { label: string; sub: string; shape: "hold" | "grow" | "shrink" | "ring" | "feet" | "pulse" | "count"; color?: "lime" | "az" | "cream"; n?: number; big?: string }[] }
     | { kind: "question"; text: string; label?: string }
     | { kind: "nametag"; name: string; sub?: string }
     | { kind: "road3d"; title: string; fromLabel: string; toLabel: string; fromSpeed: number; toSpeed: number; unit?: string }

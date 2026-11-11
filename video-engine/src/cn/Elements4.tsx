@@ -30,7 +30,7 @@ export const Title: React.FC<{ el: Extract<Element, { kind: "title" }>; start: n
   return (
     <div style={{ position: "absolute", left: 0, width: W, top: GFX_TOP + 10, display: "flex", flexDirection: "column", alignItems: "center", gap: 14, opacity: out, fontFamily: FONT }}>
       {el.lines.map((line, li) => {
-        const k = easeOut(clamp01((local - li * 5) / 12));
+        const k = easeOut(clamp01((local - (el.onAt ? Math.round(el.onAt[li] * fps) : li * 5)) / 12));
         return (
           <div key={li} style={{ transform: `translateY(${(1 - k) * 50}px) scale(${0.85 + 0.15 * k})`, opacity: k, background: "rgba(11,15,10,0.86)", borderLeft: `12px solid ${BRAND.green}`, borderRadius: 16, padding: "12px 36px", fontWeight: 900, fontSize: size, lineHeight: 1.02, textTransform: "uppercase", color: BRAND.white, letterSpacing: -1, whiteSpace: "nowrap" }}>
             {line.split(" ").map((w, wi) => <span key={wi} style={{ color: el.accent && w.toLowerCase() === el.accent.toLowerCase() ? BRAND.lime : BRAND.white }}>{w} </span>)}
@@ -91,7 +91,8 @@ export const Runner: React.FC<{ el: Extract<Element, { kind: "runner" }>; start:
   const durF = Math.round(el.dur * fps);
   const { local, s, out, visible, t } = useInOut(start, durF);
   if (!visible) return null;
-  const k = easeInOut(clamp01((local - durF * 0.45) / (durF * 0.25))); // 0 = veloce, 1 = piano
+  const k0 = el.onAt ? el.onAt[0] * fps : durF * 0.45, k1 = el.onAt && el.onAt[1] !== undefined ? el.onAt[1] * fps : k0 + durF * 0.25;
+  const k = easeInOut(clamp01((local - k0) / Math.max(1, k1 - k0))); // 0 = veloce, 1 = piano (passaggio agganciato alle parole se ci sono `cues`)
   const hz = 4.2 - 2.4 * k;
   const phase = t * hz * Math.PI * 2;
   const color = k < 0.5 ? CORAL : BRAND.lime;
@@ -207,7 +208,7 @@ export const Chat: React.FC<{ el: Extract<Element, { kind: "chat" }>; start: num
         <div style={{ width: 14, height: 14, borderRadius: 7, background: BRAND.lime, marginLeft: 6 }} />
       </div>
       {el.messages.map((msg, i) => {
-        const k = easeOut(clamp01((local - 8 - i * per) / 9));
+        const k = easeOut(clamp01((local - (el.onAt ? Math.round(el.onAt[i] * fps) : 8 + i * per)) / 9));
         if (k <= 0) return null;
         return (
           <div key={i} style={{ position: "absolute", left: 30, top: 90 + i * 108, maxWidth: PANEL_W - 120, background: BRAND.green, color: BRAND.white, borderRadius: 26, borderTopLeftRadius: 8, padding: "18px 30px", fontWeight: 700, fontSize: 42, lineHeight: 1.15, transform: `translateX(${(1 - k) * -60}px) scale(${0.9 + 0.1 * k})`, transformOrigin: "left center", opacity: k }}>
@@ -249,7 +250,7 @@ export const Stack: React.FC<{ el: Extract<Element, { kind: "stack" }>; start: n
     <div style={{ position: "absolute", left: PANEL_X, width: PANEL_W, top: GFX_TOP, fontFamily: FONT, opacity: out }}>
       <div style={{ display: "inline-block", background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 40, textTransform: "uppercase", padding: "10px 26px", borderRadius: 14, transform: `translateX(${(1 - s) * -80}px)`, opacity: s }}>{el.title}</div>
       {el.items.map((it, i) => {
-        const k = easeOut(clamp01((local - Math.round(el.onAt[i] * fps)) / 9));
+        const k = easeOut(clamp01((local - Math.round((el.onAt?.[i] ?? i * 1.2) * fps)) / 9));
         return (
           <div key={i} style={{ marginTop: 12, height: rowH - 12, display: "flex", alignItems: "center", background: "rgba(11,15,10,0.9)", borderLeft: `12px solid ${BRAND.lime}`, borderRadius: 14, padding: "0 28px", fontWeight: 800, fontSize: 48, color: BRAND.white, width: "fit-content", maxWidth: PANEL_W - 60, transform: `translateX(${(1 - k) * -120}px)`, opacity: k }}>
             {it}

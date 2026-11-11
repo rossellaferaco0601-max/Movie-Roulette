@@ -17,7 +17,9 @@ while True:
     if i % STEP == 0:
         _, faces = det.detect(cv2.resize(fr, (W // 2, H // 2)))
         if faces is not None and len(faces):
-            f = max(faces, key=lambda r: r[2] * r[3])  # il volto più grande
+            faces = [r for r in faces if r[1] * 2 / H < 0.38 and r[3] * 2 / H > 0.12]  # solo volti veri: in alto e grandi (mani e logo della maglietta ingannano il rilevatore)
+            if not len(faces): i += 1; continue
+            f = max(faces, key=lambda r: r[-1])  # il più sicuro
             chin = (f[1] + f[3]) * 2 / H; n += 1; serie.append([round(i / 30, 2), round(float(chin), 4)])
             if chin > top: bad += 1
             if chin > worst: worst, worst_t = chin, i / 30

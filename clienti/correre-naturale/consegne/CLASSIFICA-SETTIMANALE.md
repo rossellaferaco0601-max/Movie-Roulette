@@ -21,14 +21,8 @@ Il consiglio da applicare alla prossima uscita: bocca chiusa, e se viene voglia 
 **R4 piano · Mercoledì Problem/Solution · CTA PIANO**
 Il secondo errore di chi inizia: correre troppo forte perché pensa che per migliorare bisogna spingere. La soluzione è correre più piano: all'inizio l'obiettivo non è la velocità ma costruire resistenza e gestire l'energia. Il protocollo: 20-30 minuti respirando solo dal naso, cammini quando perdi il controllo, riparti quando torni calmo. Questa alternanza costruisce la capacità aerobica.
 
-**R5 esercizio 1 · Giovedì Pratico · CTA ESERCIZI**
-La respirazione si allena come un muscolo. Primo dei tre esercizi: respirazione nasale controllata, bocca chiusa, inspira dal naso 3-4 secondi, espira dal naso 4-5 secondi, dieci respiri con calma. Allena la tolleranza alla CO₂ e quindi un uso migliore dell'ossigeno: più resistenza, meno affanno.
-
-**R6 breath hold · Giovedì Pratico · CTA CONTROLLO**
-Secondo esercizio: le pause respiratorie. Dopo una normale espirazione trattieni il respiro qualche secondo, poi riprendi dal naso; 5-10 volte senza forzare. Insegna al corpo a restare calmo quando la CO₂ sale, come succede in corsa: si corre in controllo, senza panico e senza iperventilare.
-
-**R7 ritmica · Giovedì Pratico · CTA RITMO**
-Terzo esercizio: la respirazione ritmica. Camminando o correndo piano, dal naso, inspiri per tre passi ed espiri per quattro e cerchi il ritmo che ti fa sentire in equilibrio, una meditazione in movimento. Sincronizzi respiro e passo: meno sforzo, più fluidità. Esercizi semplici che cambiano tutto: correre diventa naturale, leggero, quasi meditativo.
+**R5 tre esercizi · Giovedì Pratico · CTA ESERCIZI** (v9, 11/11: sostituisce R5, R6 e R7 della v8, scartati)
+Correre bene dipende da come respiri, e il respiro si allena come un muscolo. Tre esercizi da iniziare oggi stesso. Uno, respirazione nasale controllata: bocca chiusa, inspira dal naso 3-4 secondi, espira 4-5, dieci respiri con calma; più resistenza, meno affanno. Due, pause respiratorie: dopo una normale espirazione trattieni qualche secondo, poi riprendi dal naso, 5-10 volte senza forzare; impari a correre in controllo, senza panico. Tre, respirazione ritmica: cammina o corri piano, inspira per tre passi ed espira per quattro; respiro e movimento insieme, meno sforzo e più fluidità. Chiusura: sembrano semplici ma cambiano tutto, impari a gestire il respiro invece di subirlo.
 
 **R8 dialogo · Martedì Educativo · CTA LONTANO**
 Il concetto chiave: la corsa non è un test di resistenza ma un dialogo con il corpo. Quando lo ascolti smetti di soffrire e ti godi ogni passo; non serve spingere di più, serve respirare meglio. Se manca il fiato non ti fermi: impari a respirare, a rallentare, ad ascoltarti. Chiusura: correre bene = andare lontano ed essere sostenibili.
@@ -101,6 +95,6 @@ Il problema: una vita di infortuni. Massimiliano correva anche dieci volte a set
 **T1 Massimiliano versione lunga · Venerdì Conversione · CTA PERCORSO** (v2, 10/11)
 L'intervista completa in nove domande (5:25, orizzontale, per YouTube e il sito). Dagli anni di fai da te e dall'ego dei vent'anni alla decisione di farsi guidare; il beneficio più grande, più energia e la costanza che gli era sempre mancata; la disciplina che entra nella vita di tutti i giorni, con priorità imprescindibili; nessuna resistenza, solo il coraggio di partire sapendo che non sarebbe tornato indietro. Chiusura: il consiglio di non aspettare e la parola che riassume il percorso, «Completezza».
 
-## Conteggio (28 contenuti)
-Scientifico 4 · Educativo 7 · Problem/Solution 5 · Pratico 8 · Conversione 5 (due vlog dell'evento, Daniela, Massimiliano reel e lunga).
+## Conteggio (26 contenuti)
+Scientifico 4 · Educativo 7 · Problem/Solution 5 · Pratico 6 · Conversione 5 (due vlog dell'evento, Daniela, Massimiliano reel e lunga).
 Buco da coprire: nelle serie YTCN non c'è nessun reel da venerdì (offerta + testimonianza reale); il più vicino è R8 «dialogo», che resta educativo.

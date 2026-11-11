@@ -25,17 +25,12 @@
   "src": "ytcn51/ytcn51_src.mp4",
   "segments": [
    {
-    "from": 53.66,
-    "to": 74.28
+    "from": 53.8,
+    "to": 74.2
    }
   ],
   "blendFrames": 5,
-  "wide": [
-   [
-    5.7,
-    8.85
-   ]
-  ]
+  "wide": []
  },
  {
   "id": "R3-bocca",
@@ -54,66 +49,172 @@
   "src": "ytcn51/ytcn51_src.mp4",
   "segments": [
    {
-    "from": 101.78,
-    "to": 130.74
+    "from": 101.71,
+    "to": 130.61
    }
   ],
   "blendFrames": 5,
   "wide": []
  },
  {
-  "id": "R5-esercizio1",
+  "id": "R5-esercizi",
   "src": "ytcn51/ytcn51_src.mp4",
   "segments": [
    {
-    "from": 130.7,
-    "to": 175.82
-   }
-  ],
-  "blendFrames": 5,
-  "wide": [
-   [
-    10.966666666666667,
-    13.016666666666666
-   ]
-  ]
- },
- {
-  "id": "R6-breathhold",
-  "src": "ytcn51/ytcn51_src.mp4",
-  "segments": [
+    "from": 131.26,
+    "to": 132.0267
+   },
    {
-    "from": 175.8,
-    "to": 205.06
+    "from": 133.527,
+    "to": 134.127
+   },
+   {
+    "from": 134.437,
+    "to": 146.737
+   },
+   {
+    "from": 149.307,
+    "to": 165.5403
+   },
+   {
+    "from": 172.487,
+    "to": 190.9203
+   },
+   {
+    "from": 198.947,
+    "to": 205.047
+   },
+   {
+    "from": 205.047,
+    "to": 218.847
+   },
+   {
+    "from": 221.507,
+    "to": 235.4737
    }
   ],
-  "blendFrames": 5,
+  "blendFrames": 2,
   "wide": []
- },
- {
-  "id": "R7-ritmica",
-  "src": "ytcn51/ytcn51_src.mp4",
-  "segments": [
-   {
-    "from": 208.62,
-    "to": 242.8
-   }
-  ],
-  "blendFrames": 5,
-  "wide": [
-   [
-    31,
-    34.45
-   ]
-  ]
  },
  {
   "id": "R8-dialogo",
   "src": "ytcn51/ytcn51_src.mp4",
   "segments": [
    {
-    "from": 242.78,
-    "to": 279.95
+    "from": 242.7,
+    "to": 243.7
+   },
+   {
+    "from": 244.357,
+    "to": 279.7903
+   }
+  ],
+  "blendFrames": 5,
+  "wide": []
+ },
+ {
+  "id": "D1-daniela",
+  "src": "daniela/daniela_src.mp4",
+  "segments": [
+   {
+    "from": 0,
+    "to": 10.83
+   },
+   {
+    "from": 26.36,
+    "to": 31.52
+   },
+   {
+    "from": 33.72,
+    "to": 48.96
+   },
+   {
+    "from": 50.27,
+    "to": 53.83
+   },
+   {
+    "from": 62.27,
+    "to": 68.93
+   },
+   {
+    "from": 72.72,
+    "to": 76.21
+   },
+   {
+    "from": 112.3,
+    "to": 116.42
+   },
+   {
+    "from": 118.96,
+    "to": 126.9
+   }
+  ],
+  "blendFrames": 5,
+  "wide": []
+ },
+ {
+  "id": "T1-massimiliano",
+  "src": "testimonianze/massimiliano_src.mp4",
+  "segments": [
+   {
+    "from": 56.17,
+    "to": 57.58
+   },
+   {
+    "from": 64.27,
+    "to": 68.38
+   },
+   {
+    "from": 73.9,
+    "to": 76.28
+   },
+   {
+    "from": 80.86,
+    "to": 86.33
+   },
+   {
+    "from": 91.52,
+    "to": 101.18
+   },
+   {
+    "from": 15.32,
+    "to": 16.48
+   },
+   {
+    "from": 17.22,
+    "to": 23.83
+   },
+   {
+    "from": 372.47,
+    "to": 375.13
+   },
+   {
+    "from": 283.42,
+    "to": 288.11
+   },
+   {
+    "from": 292.43,
+    "to": 297.43
+   },
+   {
+    "from": 312.54,
+    "to": 317.18
+   },
+   {
+    "from": 321.3,
+    "to": 326.78
+   },
+   {
+    "from": 332.32,
+    "to": 334.43
+   },
+   {
+    "from": 342.73,
+    "to": 347.42
+   },
+   {
+    "from": 348.2,
+    "to": 352.9
    }
   ],
   "blendFrames": 5,

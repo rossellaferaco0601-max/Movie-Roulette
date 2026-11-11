@@ -83,7 +83,7 @@ export const Widget: React.FC<{ el: Extract<Element, { kind: "widget" }>; start:
     >
       <div style={{ fontWeight: 900, fontSize: 44, textTransform: "uppercase", color: BRAND.lime, letterSpacing: 1, marginBottom: 12, lineHeight: 1.05 }}>{el.title}</div>
       {el.lines.map((l, i) => {
-        const ls = spring({ frame: local - 6 - i * 5, fps, config: { damping: 14, stiffness: 200 } });
+        const ls = spring({ frame: local - (el.onAt ? Math.round(el.onAt[i] * fps) : 6 + i * 5), fps, config: { damping: 14, stiffness: 200 } });
         return (
           <div key={i} style={{ fontWeight: 700, fontSize: 52, lineHeight: 1.22, opacity: ls, transform: `translateX(${(1 - ls) * 30}px)`, textShadow: "0 2px 6px rgba(0,0,0,0.6)" }}>
             <span style={{ color: BRAND.az, marginRight: 16 }}>▸</span>
@@ -198,8 +198,9 @@ export const Checklist: React.FC<{ el: Extract<Element, { kind: "checklist" }>; 
   return (
     <div style={{ position: "absolute", left: 120, width: W - 240, top: ZONE_TOP, opacity: Math.min(1, s * 1.3) * out, fontFamily: FONT, display: "flex", flexDirection: "column", alignItems: "center" }}>
       {el.items.map((it, i) => {
-        const ls = spring({ frame: local - i * 9, fps, config: { damping: 13, stiffness: 210 } });
-        const struck = el.strike && local > i * 9 + 20;
+        const d = el.onAt ? Math.round(el.onAt[i] * fps) : i * 9; // riga agganciata alla parola detta, se ci sono `cues`
+        const ls = spring({ frame: local - d, fps, config: { damping: 13, stiffness: 210 } });
+        const struck = el.strike && local > d + 20;
         return (
           <div key={i} style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 12, transform: `translateX(${(1 - ls) * -60}px)`, opacity: ls }}>
             <div style={{ width: 54, height: 54, borderRadius: 14, background: struck ? "#C2412E" : BRAND.green, display: "flex", alignItems: "center", justifyContent: "center", color: BRAND.white, fontWeight: 900, fontSize: 36 }}>{struck ? "✕" : "✓"}</div>
