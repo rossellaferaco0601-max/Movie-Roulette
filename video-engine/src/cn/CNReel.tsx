@@ -11,6 +11,7 @@ import { Text3D, Wave, Sphere3D, Gauge3D, ECG, Steps, Bars } from "./Elements3D"
 import { CTA } from "./CTA";
 import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
 import { Clip, Compare, Step, Airflow, Filter, Beats, Ring, Duo, Slam, Orbit, Drill, slamImpact, slamShake, orbitCam } from "./Elements5";
+import { Pair, Lifebar, Fulltext } from "./Elements6";
 import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide, Question, NameTag } from "./Elements4";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
@@ -40,6 +41,9 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "stack": return <Stack el={el} start={start} />;
     case "guide": return <Guide el={el} start={start} />;
     case "question": return <Question el={el} start={start} />;
+    case "pair": return <Pair el={el} start={start} />;
+    case "lifebar": return <Lifebar el={el} start={start} />;
+    case "fulltext": return <Fulltext el={el} start={start} />;
     case "clip": return <Clip el={el} start={start} />;
     case "compare": return <Compare el={el} start={start} />;
     case "step": return <Step el={el} start={start} />;

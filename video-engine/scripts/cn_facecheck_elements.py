@@ -8,7 +8,7 @@ out = subprocess.run(["npx", "tsx", "scripts/validate-reels.ts"], capture_output
 block = out.split(f"\n{rid}:")[1].split("\n\n")[0]; bad = 0
 for m in re.finditer(r"^\s*([\d.]+)-\s*([\d.]+)\s+(\S+)", block, re.M):
     a, b, name = float(m.group(1)), float(m.group(2)), m.group(3)
-    if re.search(r"orbit|drill|guide", name): continue
+    if re.search(r"orbit|drill|guide|pair|lifebar|fulltext", name): continue
     c = [y for t, y in serie if a <= t <= b]
     if not c: continue
     ok = max(c) < top; bad += not ok

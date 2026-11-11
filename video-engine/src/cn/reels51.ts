@@ -1,6 +1,7 @@
 import words from "./words51.json";
 import wordsDaniela from "./wordsDaniela.json";
 import wordsMassimiliano from "./wordsMassimiliano.json";
+import wordsLongevita from "./wordsLongevita.json";
 import type { CNReelProps } from "./types";
 
 const SRC = "ytcn51/ytcn51_src.mp4";
@@ -325,5 +326,48 @@ Il suo consiglio a chi è indeciso: non aspettare i 54 anni. Stare meglio lo tra
 Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
 
 #correrenaturale #testimonianza #corsa #running #infortuni`,
+  },
+  // ---------- LONGEVITÀ («Ho letto 5 studi sulla longevità», video YouTube già montato) ----------
+  // Master con scripts/cn_master_shots.py (un ritaglio per inquadratura); le schede grafiche del sorgente sono coperte da grafiche a tutto schermo.
+  {
+    id: "L1-ventanni",
+    title: "Gli ultimi 20 anni",
+    props: {
+      ...base,
+      src: "longevita/longevita.webm",
+      words: wordsLongevita as CNReelProps["words"],
+      master: "longevita/masters/L1-ventanni.mp4",
+      gfxShift: 30, // grafiche e sottotitoli un filo più in basso (sempre sopra 0,80): margine sul mento quando Daniele si muove
+      capShift: 20,
+      blendFrames: 2,
+      tailLive: 0.2,
+      segments: cutN(2, [0.0, 12.9], [58.72, 69.34], [76.7, 113.95], [661.7, 666.74]),
+      hook: null,
+      elements: [
+        { kind: "kinetic", at: 1.8, word: "30", dur: 2.2, words: ["30 ANNI", "DI VITA IN PIÙ"], accentIndex: 0 },
+        { kind: "kinetic", at: 4.9, word: "tutti", dur: 1.25, words: ["TUTTI", "ALLA FINE"], accentIndex: 1 },
+        { kind: "kinetic", at: 10.4, word: "quanti", dur: 2.3, words: ["QUANTI ANNI IN SALUTE", "TI AGGIUNGE CORRERE?"], accentIndex: 1 },
+        { kind: "pair", at: 12.87, dur: 10.7, fadeIn: 0, fadeOut: 0, cues: ["primo", "lifespan", "secondo", "healthspan"], title: "Due numeri", sub: "definiscono la tua vita", items: [{ def: "Quanti anni vivi", name: "Lifespan" }, { def: "Quanti anni vivi bene", name: "Healthspan" }] },
+        { kind: "kinetic", at: 26.8, word: "non", dur: 1.4, words: ["NON VANNO", "PIÙ INSIEME"], accentIndex: 1 },
+        { kind: "lifebar", at: 28.3, word: "in", dur: 16.45, fadeOut: 0, cues: ["83", "60", "20", "pensa", "mesi", "due"], place: "In Italia", title: "Aspettativa di vita media", total: 83, healthy: 60, decline: "Ultimi 20 anni", declineSub: "in declino", focus: "20 anni", focusNot: "non sono pochi mesi", focusIs: "Due decenni" },
+        { kind: "kinetic", at: 45.8, word: "spegne", dur: 1.3, words: ["IL CORPO", "SI SPEGNE"], accentIndex: 1 },
+        { kind: "bigstrike", at: 53.45, word: "quanto", dur: 1.35, text: "Quanto a lungo vivo?" },
+        { kind: "question", at: 55.05, word: "vera", dur: 3.75, label: "La domanda vera", text: "Quando il mio corpo smetterà di funzionare?" },
+        { kind: "fulltext", at: 59.0, dur: 1.85, fadeIn: 0, fadeOut: 0, lines: ["E perderò", "la mia libertà"] },
+        { kind: "title", at: 60.97, dur: 4.75, cues: ["non", "perché", "ma", "perché"], lines: ["Non si smette di correre", "perché si invecchia.", "Si invecchia perché", "si smette di correre."], accent: "invecchia" },
+      ],
+      cta: { word: "PIANO", title: "Vuoi vivere più anni in salute?" },
+    },
+    didascalia: `La medicina moderna ci ha regalato 30 anni di vita in più. Ma c'è un problema: ce li ha messi tutti alla fine.
+
+Due numeri definiscono la tua vita: il lifespan, quanti anni vivi, e l'healthspan, quanti anni vivi bene. In Italia l'aspettativa di vita è circa 83 anni, ma quella in salute si ferma intorno ai 60: in media passiamo gli ultimi 20 anni in declino. Dolori cronici, fiato corto, perdita di autonomia.
+
+La domanda vera non è «quanto a lungo vivo», ma «a che punto il mio corpo smetterà di funzionare come dovrebbe».
+
+Non si smette di correre perché si invecchia: si invecchia perché si smette di correre.
+
+Vuoi costruire il tuo piano? Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #longevità #healthspan #corsa #running`,
   },
 ];

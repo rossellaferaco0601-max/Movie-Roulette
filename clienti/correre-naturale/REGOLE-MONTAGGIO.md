@@ -377,3 +377,9 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   `cn_finish.sh` lo riporta giù dopo la normalizzazione (finestra attorno a 4,73 s dall'inizio della CTA, guadagno 0,3 → picco circa −12 dB).
 - **2026-11-11 (Ross)**: YTCN 51 chiuso alla **v11** (R1, R2, R3, R4, R5 tre esercizi, R8). Su sua richiesta in `out/ytcn51/consegna/` restano
   **solo le ultime versioni** (anche di Daniela v6 e Massimiliano reel v3 / lunga v2): le vecchie sono state cancellate per fare spazio.
+- **2026-11-11 (Ross: «in questi ultimi video hai fatto un lavoro magistrale, questo è il livello che mi serve al primo colpo»)**: i sei reel
+  YTCN 51 v11 sono il **riferimento di qualità**. Su richiesta di Ross si rifanno così i reel della **longevità** (pilota `L1-ventanni`), poi le
+  altre testimonianze del Drive. Il video della longevità è già montato (stacchi, repertorio, schede grafiche): si usa
+  `scripts/cn_master_shots.py` (mappa delle inquadrature in `work/longevita_shots.json`, un ritaglio verticale per inquadratura con il volto
+  in alto) e le schede del sorgente si coprono con grafiche a tutto schermo (`pair`, `lifebar`, `fulltext`, in `Elements6.tsx`).
+  Sulle riprese di repertorio con volti grandi niente grafiche, solo sottotitoli.

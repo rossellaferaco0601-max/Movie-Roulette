@@ -1,0 +1,28 @@
+{
+ "id": "L1-ventanni",
+ "src": "public/longevita/longevita.webm",
+ "out": "public/longevita/masters/L1-ventanni.mp4",
+ "shots": "work/longevita_shots.json",
+ "blendFrames": 2,
+ "tail": 0.5,
+ "tailLive": 0.2,
+ "segments": [
+  {
+   "from": 0.0,
+   "to": 12.9333
+  },
+  {
+   "from": 58.687,
+   "to": 69.387
+  },
+  {
+   "from": 76.667,
+   "to": 113.967
+  },
+  {
+   "from": 661.667,
+   "to": 666.7337
+  }
+ ],
+ "crops": {}
+}

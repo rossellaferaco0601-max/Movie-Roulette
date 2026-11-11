@@ -36,6 +36,9 @@ export type Element = ElementBase &
     | { kind: "stack"; title: string; items: string[] }
     | { kind: "guide"; mode: "ritmica" | "nasale" | "hold"; title?: string; titleSec?: number; inhale?: number; exhale?: number; hold?: number; breaths?: number }
     | { kind: "metronome"; title: string; inhale: number; exhale: number; bpm?: number }
+    | { kind: "pair"; title: string; sub: string; items: [{ def: string; name: string }, { def: string; name: string }]; fadeIn?: number; fadeOut?: number }
+    | { kind: "lifebar"; place: string; title: string; total: number; healthy: number; decline: string; declineSub: string; focus: string; focusNot: string; focusIs: string; fadeIn?: number; fadeOut?: number }
+    | { kind: "fulltext"; lines: string[]; accentIndex?: number; fadeIn?: number; fadeOut?: number }
     | { kind: "clip"; src: string; from?: number; tag: string; text: string; posY?: number }
     | { kind: "step"; n: string; label: string; sub: string; strike: string }
     | { kind: "airflow"; lines: [string, string] }

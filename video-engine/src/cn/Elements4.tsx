@@ -235,7 +235,7 @@ export const BigStrike: React.FC<{ el: Extract<Element, { kind: "bigstrike" }>; 
   return (
     <Box s={s} out={out} height={260}>
       <div style={{ position: "absolute", left: 0, width: "100%", top: 0, height: 260, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ position: "relative", display: "inline-block", fontWeight: 900, fontSize: 96, lineHeight: 1, textTransform: "uppercase", color: BRAND.cream, letterSpacing: -1, whiteSpace: "nowrap" }}>
+        <div style={{ position: "relative", display: "inline-block", fontWeight: 900, fontSize: Math.min(96, Math.floor(1560 / el.text.length)), lineHeight: 1, textTransform: "uppercase", color: BRAND.cream, letterSpacing: -1, whiteSpace: "nowrap" }}>
           {el.text}
           {/* la barra ruota attorno al proprio centro (resta centrata sulla parola) e si stende da sinistra */}
           <div style={{ position: "absolute", left: -20, right: -20, top: STRIKE_Y, height: 14, marginTop: -7, transform: "rotate(-2deg)", transformOrigin: "center center" }}>
