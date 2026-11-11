@@ -72,9 +72,9 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
   const words = useMemo(() => remapWords(p.words, items, p.wordFix, p.wordOffset), [p.words, items, p.wordFix, p.wordOffset]);
   const starts = useMemo(() => p.elements.map((el) => resolveStart(el, words)), [p.elements, words]);
   const ctaFrames = Math.round(p.ctaSeconds * fps);
-  const xfade = Math.min(tailF, 22); // la CTA entra in dissolvenza alla fine della coda
-  const tailPush = tailF > TAIL_FRAMES ? 1 + 0.03 * interpolate(frame, [total - tailF, total], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 1; // coda lunga: il fermo immagine avanza piano, non resta immobile
-  const videoFade = interpolate(frame, [total - xfade, total], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const xfade = tailF; // la CTA parte al taglio e sale dal basso mentre il video (coda) continua sotto
+  const tailPush = 1;
+  const videoFade = 1; // niente dissolvenza verde sul video: il pannello della CTA lo copre salendo
   // camera del titolo spezzato: il video scende sotto la scheda a tutta larghezza (la testa resta intera)
   let cam = 0;
   p.elements.forEach((el, i) => { if (el.kind === "split") cam = Math.max(cam, splitCamera(frame, starts[i], Math.round(el.dur * fps))); });

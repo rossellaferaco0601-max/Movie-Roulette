@@ -11,25 +11,23 @@ export const CTA: React.FC<{ cta: CTAT; frames: number }> = ({ cta, frames }) =>
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = (delay: number, cfg = { damping: 16, stiffness: 130 }) => spring({ frame: frame - delay, fps, config: cfg });
-  const fadeIn = interpolate(frame, [0, 10], [0, 1], { extrapolateRight: "clamp" });
+  // ingresso: il pannello sale dal basso in 9 fotogrammi (niente dissolvenza: nessun velo verde sul video)
+  const WIPE = 9;
+  const up = 1 - Math.pow(1 - Math.min(1, frame / WIPE), 3);
 
   // tempi (fotogrammi): ogni blocco ha il tempo di essere letto prima del successivo
-  const T_TITLE = 6, T_HL = 34, T_WORD = 72, T_BOX = 96, T_TYPE = 108, T_TAP = 138, T_PUB = 146, T_DM = 166;
+  const T_TITLE = 8, T_HL = 34, T_WORD = 72, T_BOX = 96, T_TYPE = 108, T_TAP = 138, T_PUB = 146, T_DM = 166;
   const typed = cta.word.slice(0, Math.floor(interpolate(frame, [T_TYPE, T_TYPE + 22], [0, cta.word.length], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })));
   const published = frame >= T_PUB;
   const tap = s(T_TAP, { damping: 9, stiffness: 260 });
   const hl = s(T_HL, { damping: 20, stiffness: 90 });
-  // quando parte il passo successivo, quello sopra si attenua: l'occhio va su una cosa sola
-  const dim1 = interpolate(frame, [T_WORD, T_WORD + 12], [1, 0.55], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-
   return (
-    <AbsoluteFill style={{ background: BRAND.green, opacity: fadeIn, fontFamily: FONT, color: BRAND.white }}>
-      <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 22%, rgba(149,255,0,0.16), transparent 55%)` }} />
+    <AbsoluteFill style={{ background: BRAND.green, transform: `translateY(${(1 - up) * 100}%)`, boxShadow: "0 -24px 60px rgba(0,0,0,0.45)", fontFamily: FONT, color: BRAND.white }}>
       {/* suono del tocco su «Pubblica» (unico suono della CTA, discreto) */}
       <Sequence from={T_TAP + 4} layout="none"><Audio src={staticFile("sfx/click.wav")} volume={0.8} /></Sequence>
 
       {/* 1 · domanda + frase evidenziata */}
-      <div style={{ position: "absolute", top: 250, left: 0, width: W, textAlign: "center", padding: "0 80px", boxSizing: "border-box", opacity: s(T_TITLE) * dim1, transform: `translateY(${(1 - s(T_TITLE)) * 40}px)` }}>
+      <div style={{ position: "absolute", top: 250, left: 0, width: W, textAlign: "center", padding: "0 80px", boxSizing: "border-box", opacity: s(T_TITLE), transform: `translateY(${(1 - s(T_TITLE)) * 40}px)` }}>
         <div style={{ fontWeight: 900, fontSize: cta.title.length > 44 ? 74 : 84, lineHeight: 1.04, textTransform: "uppercase" }}>{cta.title}</div>
         <div style={{ marginTop: 40, opacity: hl, transform: `scale(${0.9 + 0.1 * hl})` }}>
           <div style={{ fontWeight: 600, fontSize: 44, color: BRAND.cream, marginBottom: 12 }}>{cta.sub ?? "Te lo insegniamo con il"}</div>

@@ -361,3 +361,12 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - **CTA chiara e ordinata**: tre passi uno alla volta, dall'alto in basso, e quello sopra si attenua quando parte il successivo:
     1) domanda + «coaching personalizzato di Correre Naturale®» in una fascia lime; 2) «Commenta» + parola, campo che si scrive e «Pubblica»
     con il suono; 3) notifica con il logo («Ti mando tutte le info»). Tolti: frase lunga di sottotitolo, coriandoli, bottone «Segui». Durata 8 s.
+- **2026-11-11 sera (Ross su v10: «fermo immagine prima della CTA che non va bene assolutamente», «tutte le CTA hanno una patina verde»)**:
+  - **Passaggio alla CTA**: mai dissolvenza (era la «patina verde» sul video) e mai fermo immagine visibile. La CTA parte al taglio e **sale dal
+    basso in 9 fotogrammi** (pannello pieno, senza trasparenze). La coda del master continua dal vivo solo se il sorgente non cambia inquadratura
+    subito dopo (`tailLive`); se cambia (YTCN 51: 74,20 · 98,60 · 130,62 · fine a 279,93) si taglia prima e il pannello copre il fermo.
+    Prima di fissare un taglio finale si misura la differenza tra fotogrammi del sorgente attorno al taglio.
+  - **CTA nitida**: nessuna attenuazione dei testi, nessuna sfumatura di fondo: bianco pieno su verde brand.
+  - Scritte dentro i riquadri **grandi quanto il riquadro** (chat di R8); barre di cancellatura **centrate sulla parola** (ruotano attorno al centro);
+    illustrazioni tutte dentro il riquadro, senza etichette che non c'entrano col parlato (polmoni di R8 rifatti, tolto «inspira/espira»).
+  - Guide: «5-10 volte» subito sotto l'intestazione dell'esercizio.

@@ -126,27 +126,28 @@ export const Runner: React.FC<{ el: Extract<Element, { kind: "runner" }>; start:
 export const Lungs: React.FC<{ el: Extract<Element, { kind: "lungs" }>; start: number }> = ({ el, start }) => {
   const { fps } = useVideoConfig();
   const durF = Math.round(el.dur * fps);
-  const { s, out, visible, t } = useInOut(start, durF);
+  const { local, s, out, visible, t } = useInOut(start, durF);
   if (!visible) return null;
-  const br = 0.5 + 0.5 * Math.sin(t * Math.PI / 1.6 - Math.PI / 2); // 0..1 respiro lento (3,2 s)
-  const sc = 0.9 + 0.16 * br;
-  const cx = 210, top = 60;
-  const lobe = (dir: number) => `M ${cx + dir * 18} ${top + 70} C ${cx + dir * 30} ${top + 40} ${cx + dir * 150} ${top + 60} ${cx + dir * 160} ${top + 190} C ${cx + dir * 165} ${top + 290} ${cx + dir * 120} ${top + 330} ${cx + dir * 60} ${top + 320} C ${cx + dir * 25} ${top + 310} ${cx + dir * 18} ${top + 260} ${cx + dir * 18} ${top + 200} Z`;
+  // polmoni tutti dentro il riquadro, respiro lento e regolare; testo grande centrato in verticale (11/11: niente scritte inspira/espira)
+  const br = 0.5 - 0.5 * Math.cos(t * Math.PI * 2 / 2.4);
+  const sc = 0.93 + 0.1 * br, boxH = GFX_H - 10, cx = 200, cy = boxH / 2 + 26;
+  const lobe = (d: number) => `M ${d * 16} -112 C ${d * 30} -150 ${d * 96} -150 ${d * 124} -86 C ${d * 152} -22 ${d * 156} 62 ${d * 138} 104 C ${d * 120} 134 ${d * 52} 132 ${d * 26} 104 C ${d * 12} 84 ${d * 16} -40 ${d * 16} -112 Z`;
+  const k1 = easeOut(clamp01((local - 4) / 12)), k2 = easeOut(clamp01((local - 12) / 12));
   return (
     <Box s={s} out={out}>
-      <svg width={420} height={GFX_H - 10} style={{ position: "absolute", left: 20, top: 0 }}>
-        <g transform={`translate(${cx} ${top + 190}) scale(${sc}) translate(${-cx} ${-(top + 190)})`}>
-          <path d={lobe(-1)} fill={BRAND.green} stroke={BRAND.lime} strokeWidth={5} opacity={0.75 + 0.25 * br} />
-          <path d={lobe(1)} fill={BRAND.green} stroke={BRAND.lime} strokeWidth={5} opacity={0.75 + 0.25 * br} />
+      <svg width={400} height={boxH} style={{ position: "absolute", left: 20, top: 0 }}>
+        <g transform={`translate(${cx} ${cy})`}>
+          <g transform={`scale(${sc})`}>
+            <path d={lobe(-1)} fill={BRAND.green} stroke={BRAND.lime} strokeWidth={6} opacity={0.8 + 0.2 * br} />
+            <path d={lobe(1)} fill={BRAND.green} stroke={BRAND.lime} strokeWidth={6} opacity={0.8 + 0.2 * br} />
+            {[-1, 1].map((d) => <path key={d} d={`M ${d * 20} -64 C ${d * 50} -40 ${d * 70} -10 ${d * 84} 30 M ${d * 46} -40 C ${d * 76} -44 ${d * 96} -30 ${d * 108} -6 M ${d * 62} -10 C ${d * 60} 20 ${d * 54} 46 ${d * 46} 68`} fill="none" stroke={BRAND.lime} strokeWidth={4} strokeLinecap="round" opacity={0.55} />)}
+          </g>
+          <path d="M 0 -176 L 0 -96 M 0 -96 C -6 -80 -14 -72 -22 -64 M 0 -96 C 6 -80 14 -72 22 -64" stroke={BRAND.cream} strokeWidth={13} strokeLinecap="round" fill="none" />
         </g>
-        <path d={`M ${cx} ${top} L ${cx} ${top + 90} M ${cx} ${top + 90} L ${cx - 40} ${top + 130} M ${cx} ${top + 90} L ${cx + 40} ${top + 130}`} stroke={BRAND.cream} strokeWidth={12} strokeLinecap="round" fill="none" />
-        {/* aria che entra/esce */}
-        {[0, 1, 2].map((i) => <circle key={i} cx={cx} cy={top - 10 - ((t * 60 + i * 24) % 70)} r={6 + i * 2} fill={BRAND.az} opacity={br > 0.5 ? 0.8 : 0.25} />)}
       </svg>
-      <div style={{ position: "absolute", left: 460, top: 90, width: 400 }}>
-        <div style={{ fontWeight: 900, fontSize: 66, textTransform: "uppercase", color: BRAND.lime, lineHeight: 1 }}>{el.title}</div>
-        {el.sub ? <div style={{ fontWeight: 700, fontSize: 40, color: BRAND.cream, marginTop: 16, lineHeight: 1.15 }}>{el.sub}</div> : null}
-        <div style={{ marginTop: 26, fontWeight: 800, fontSize: 34, color: br > 0.5 ? BRAND.az : BRAND.lime }}>{br > 0.5 ? "INSPIRA" : "ESPIRA"}</div>
+      <div style={{ position: "absolute", left: 430, right: 30, top: 0, height: boxH, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        <div style={{ fontWeight: 900, fontSize: 84, textTransform: "uppercase", color: BRAND.lime, lineHeight: 0.98, transform: `translateX(${(1 - k1) * 40}px)`, opacity: k1 }}>{el.title}</div>
+        {el.sub ? <div style={{ fontWeight: 800, fontSize: 56, color: BRAND.white, marginTop: 18, lineHeight: 1.05, opacity: k2 }}>{el.sub}</div> : null}
       </div>
     </Box>
   );
@@ -204,16 +205,16 @@ export const Chat: React.FC<{ el: Extract<Element, { kind: "chat" }>; start: num
   const per = Math.max(10, Math.floor((durF - 24) / n));
   return (
     <Box s={s} out={out}>
-      <div style={{ position: "absolute", top: 16, left: 30, display: "flex", alignItems: "center", gap: 14 }}>
-        <div style={{ width: 54, height: 54, borderRadius: 27, background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 26, display: "flex", alignItems: "center", justifyContent: "center" }}>C</div>
-        <div style={{ fontWeight: 800, fontSize: 34, color: BRAND.cream }}>{el.sender}</div>
+      <div style={{ position: "absolute", top: 20, left: 34, display: "flex", alignItems: "center", gap: 16 }}>
+        <div style={{ width: 66, height: 66, borderRadius: 33, background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 34, display: "flex", alignItems: "center", justifyContent: "center" }}>C</div>
+        <div style={{ fontWeight: 800, fontSize: 46, color: BRAND.cream }}>{el.sender}</div>
         <div style={{ width: 14, height: 14, borderRadius: 7, background: BRAND.lime, marginLeft: 6 }} />
       </div>
       {el.messages.map((msg, i) => {
         const k = easeOut(clamp01((local - (el.onAt ? Math.round(el.onAt[i] * fps) : 8 + i * per)) / 9));
         if (k <= 0) return null;
         return (
-          <div key={i} style={{ position: "absolute", left: 30, top: 90 + i * 108, maxWidth: PANEL_W - 120, background: BRAND.green, color: BRAND.white, borderRadius: 26, borderTopLeftRadius: 8, padding: "18px 30px", fontWeight: 700, fontSize: 42, lineHeight: 1.15, transform: `translateX(${(1 - k) * -60}px) scale(${0.9 + 0.1 * k})`, transformOrigin: "left center", opacity: k }}>
+          <div key={i} style={{ position: "absolute", left: 34, top: 108 + i * 150, maxWidth: PANEL_W - 68, background: BRAND.green, color: BRAND.white, borderRadius: 26, borderTopLeftRadius: 8, padding: "24px 36px", fontWeight: 800, fontSize: 66, lineHeight: 1.1, whiteSpace: "nowrap", transform: `translateX(${(1 - k) * -60}px) scale(${0.9 + 0.1 * k})`, transformOrigin: "left center", opacity: k }}>
             {msg}
           </div>
         );
@@ -223,6 +224,8 @@ export const Chat: React.FC<{ el: Extract<Element, { kind: "chat" }>; start: num
 };
 
 /* ---------- Parola grande barrata ---------- */
+/** centro ottico delle maiuscole di Blinker in una riga con lineHeight 1 (misurato sui fotogrammi) */
+const STRIKE_Y = "57%";
 export const BigStrike: React.FC<{ el: Extract<Element, { kind: "bigstrike" }>; start: number }> = ({ el, start }) => {
   const { fps } = useVideoConfig();
   const durF = Math.round(el.dur * fps);
@@ -232,9 +235,12 @@ export const BigStrike: React.FC<{ el: Extract<Element, { kind: "bigstrike" }>; 
   return (
     <Box s={s} out={out} height={260}>
       <div style={{ position: "absolute", left: 0, width: "100%", top: 0, height: 260, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ position: "relative", fontWeight: 900, fontSize: 96, textTransform: "uppercase", color: BRAND.cream, letterSpacing: -1, whiteSpace: "nowrap" }}>
+        <div style={{ position: "relative", display: "inline-block", fontWeight: 900, fontSize: 96, lineHeight: 1, textTransform: "uppercase", color: BRAND.cream, letterSpacing: -1, whiteSpace: "nowrap" }}>
           {el.text}
-          <div style={{ position: "absolute", left: -20, right: -20, top: "50%", height: 14, marginTop: -7, background: CORAL, borderRadius: 7, transform: `scaleX(${k}) rotate(-3deg)`, transformOrigin: "left center", boxShadow: `0 0 18px ${CORAL}` }} />
+          {/* la barra ruota attorno al proprio centro (resta centrata sulla parola) e si stende da sinistra */}
+          <div style={{ position: "absolute", left: -20, right: -20, top: STRIKE_Y, height: 14, marginTop: -7, transform: "rotate(-2deg)", transformOrigin: "center center" }}>
+            <div style={{ width: "100%", height: "100%", background: CORAL, borderRadius: 7, transform: `scaleX(${k})`, transformOrigin: "left center", boxShadow: `0 0 18px ${CORAL}` }} />
+          </div>
         </div>
       </div>
     </Box>

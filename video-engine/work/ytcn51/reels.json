@@ -19,7 +19,8 @@
     3.85
    ]
   ],
-  "tail": 0.5
+  "tail": 0.5,
+  "tailLive": 0.5
  },
  {
   "id": "R2-naso",
@@ -27,12 +28,13 @@
   "segments": [
    {
     "from": 53.8,
-    "to": 74.2
+    "to": 74.1667
    }
   ],
   "blendFrames": 5,
   "wide": [],
-  "tail": 1.3
+  "tail": 0.5,
+  "tailLive": 0
  },
  {
   "id": "R3-bocca",
@@ -45,7 +47,8 @@
   ],
   "blendFrames": 5,
   "wide": [],
-  "tail": 0.5
+  "tail": 0.5,
+  "tailLive": 0.06
  },
  {
   "id": "R4-piano",
@@ -53,12 +56,13 @@
   "segments": [
    {
     "from": 101.71,
-    "to": 130.61
+    "to": 130.5767
    }
   ],
   "blendFrames": 5,
   "wide": [],
-  "tail": 0.5
+  "tail": 0.5,
+  "tailLive": 0
  },
  {
   "id": "R5-esercizi",
@@ -94,12 +98,13 @@
    },
    {
     "from": 221.507,
-    "to": 235.507
+    "to": 235.4737
    }
   ],
   "blendFrames": 2,
   "wide": [],
-  "tail": 1.2
+  "tail": 0.5,
+  "tailLive": 0.5
  },
  {
   "id": "R8-dialogo",
@@ -112,7 +117,8 @@
   ],
   "blendFrames": 5,
   "wide": [],
-  "tail": 1
+  "tail": 0.5,
+  "tailLive": 0.1
  },
  {
   "id": "D1-daniela",
@@ -153,7 +159,8 @@
   ],
   "blendFrames": 5,
   "wide": [],
-  "tail": 0.5
+  "tail": 0.5,
+  "tailLive": 0.5
  },
  {
   "id": "T1-massimiliano",
@@ -222,6 +229,7 @@
   ],
   "blendFrames": 5,
   "wide": [],
-  "tail": 0.5
+  "tail": 0.5,
+  "tailLive": 0.5
  }
 ]

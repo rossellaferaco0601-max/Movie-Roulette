@@ -14,7 +14,7 @@ const out = REELS.map((r) => {
       const s = resolveStart({ at: f.at, dur: f.dur, word: f.word } as any, words);
       return [s / FPS - 0.1, (s + Math.round(f.dur * FPS)) / FPS + 0.45];
     });
-  return { id: r.id, src: p.src, segments: p.segments, blendFrames: p.blendFrames, wide, tail: p.tailSeconds ?? 0.5 };
+  return { id: r.id, src: p.src, segments: p.segments, blendFrames: p.blendFrames, wide, tail: p.tailSeconds ?? 0.5, tailLive: p.tailLive ?? (p.tailSeconds ?? 0.5) };
 });
 writeFileSync("work/ytcn51/reels.json", JSON.stringify(out, null, 1));
 console.log("reels:", out.map((r) => `${r.id}${r.wide.length ? ` (largo: ${r.wide.map((w) => w.map((x) => x.toFixed(1)).join("-")).join(", ")})` : ""}`).join(" "));

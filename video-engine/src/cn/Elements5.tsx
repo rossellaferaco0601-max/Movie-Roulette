@@ -291,10 +291,10 @@ export const Drill: React.FC<P<"drill">> = ({ el, start }) => {
     const circ = 2 * Math.PI * 290, feet = st.n ?? 3;
     body = st.shape === "count" ? (
       <>
-        {/* una sola scritta grande al centro dello schermo */}
-        <div style={{ ...big, top: 760, fontSize: 300, color: BRAND.white, transform: `scale(${k})` }}>{st.big}</div>
-        <div style={{ ...big, top: 1050, fontSize: 130, color: BRAND.lime, opacity: k }}>{st.label}</div>
-        <div style={{ ...big, top: 1200, fontSize: 54, color: BRAND.cream, fontWeight: 700, textTransform: "none", opacity: k }}>{st.sub}</div>
+        {/* una sola scritta grande, subito sotto l'intestazione dell'esercizio */}
+        <div style={{ ...big, top: 400, fontSize: 320, color: BRAND.white, transform: `scale(${k})` }}>{st.big}</div>
+        <div style={{ ...big, top: 716, fontSize: 150, color: BRAND.lime, opacity: k }}>{st.label}</div>
+        <div style={{ ...big, top: 890, fontSize: 58, color: BRAND.cream, fontWeight: 700, textTransform: "none", opacity: k }}>{st.sub}</div>
       </>
     ) : (
       <>

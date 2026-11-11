@@ -82,6 +82,8 @@ export type CNReelProps = {
   /** volto grande (interviste strette): grafiche più in basso (px) e più piccole, sottotitoli più in basso (px), per non coprire mai il volto */
   /** coda prima della CTA (s, default 0,5): fermo sull'ultimo fotogramma con leggerissimo avvicinamento; più lunga = la CTA entra più tardi e più morbida */
   tailSeconds?: number;
+  /** secondi di coda in cui il sorgente continua dal vivo (default: tutta la coda). Se subito dopo il taglio il sorgente cambia inquadratura, va messo a 0: la coda tiene l'ultimo fotogramma mentre il pannello della CTA sale */
+  tailLive?: number;
   gfxShift?: number;
   gfxScale?: number;
   capShift?: number;

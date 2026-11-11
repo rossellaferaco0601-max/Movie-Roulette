@@ -71,8 +71,8 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
       master: master("R2-naso"),
       // 11/11 (Ross: «le animazioni non seguono le parole e sono sempre le stesse, cambialo completamente»): sei grafiche tutte diverse,
       // ognuna con le parti interne agganciate alle parole dette; niente effetti sul master, coda ferma (niente salto prima della CTA)
-      segments: cut([53.8, 74.2]),
-      tailSeconds: 1.3, // la grafica corpo + mente resta un attimo in più prima della CTA, senza pausa lunga
+      segments: cut([53.8, 74.16]), // il sorgente cambia inquadratura a 74,20
+      tailLive: 0,
       hook: null,
       elements: [
         { kind: "step", at: 0.2, word: "primo", dur: 4.0, cues: ["passo", "fiatone", "quando"], n: "1", label: "Il primo passo", sub: "per eliminare il", strike: "Fiatone" },
@@ -80,7 +80,7 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
         { kind: "filter", at: 7.16, word: "filtro", dur: 3.3, cues: ["filtro", "regolatore"] },
         { kind: "beats", at: 10.9, word: "obbliga", dur: 3.6, cues: ["ritmo", "sostenibile"], words: ["Ritmo", "sostenibile"] },
         { kind: "ring", at: 14.7, word: "usare", dur: 2.95, cues: ["ossigeno", "efficiente"], words: ["Ossigeno", "efficiente"] },
-        { kind: "duo", at: 17.85, word: "controllo", dur: 3.1, cues: ["corpo", "mente"], title: "Controllo", words: ["Corpo", "Mente"] },
+        { kind: "duo", at: 17.85, word: "controllo", dur: 2.75, cues: ["corpo", "e"], title: "Controllo", words: ["Corpo", "Mente"] },
       ],
       cta: { word: "NASO", title: "Vuoi imparare a respirare bene quando corri?" },
     },
@@ -103,6 +103,7 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
       // 11/11: la bocca disegnata («dozzinale») è sostituita da una clip realistica generata (Canva), che chiude la bocca su «chiudi»;
       // le altre grafiche sono le stesse della v8, agganciate alle parole
       segments: cut([74.2, 98.5]),
+      tailLive: 0.06,
       hook: null,
       // 11/11 sera (Ross: «troppo veloci e discordanti»): meno grafiche e più lunghe; tolta la sfera inspira/espira che non c'entrava col parlato
       elements: [
@@ -129,7 +130,8 @@ Commenta ENERGIA e ti mando tutte le info sui percorsi di coaching personalizzat
       master: master("R4-piano"),
       // audio e Daniele partono da "molti pensano…"; il titolo grande "Correre troppo forte" apre il reel (Ross 8/11)
       // 11/11: ogni grafica entra sulla parola detta (tempi allineati), righe degli elenchi comprese
-      segments: cut([101.71, 130.62]),
+      segments: cut([101.71, 130.58]),
+      tailLive: 0,
       hook: null,
       elements: [
         { kind: "title", at: 0, dur: 2.6, lines: ["Correre", "troppo forte"], accent: "forte" },
@@ -157,12 +159,11 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
       ...base,
       master: master("R5-esercizi"),
       blendFrames: 2,
-      tailSeconds: 1.2, // chiusura più morbida prima della CTA
       capShift: 34,     // sottotitoli più in basso (sempre sopra 0,80): la palla delle guide sta al centro dello schermo
       // 11/11 (Ross): apertura tagliata su «correre bene / dipende / da come respiri» con lo schianto su «respiri»; i tre esercizi tutti in un
       // reel (R6 e R7 scartati); su «tre esercizi» fermo immagine con i titoli in orbita sopra la testa. Le schede grafiche del sorgente
       // (148,8-162,3 · 179,95-190,3 · 204,6-219,3) sono coperte dalle guide a tutto schermo, a tappe agganciate alle parole.
-      segments: cutN(2, [131.26, 131.98], [133.56, 134.09], [134.47, 146.71], [149.34, 165.5], [172.52, 190.89], [198.98, 205.0], [205.08, 218.8], [221.54, 235.5]),
+      segments: cutN(2, [131.26, 131.98], [133.56, 134.09], [134.47, 146.71], [149.34, 165.5], [172.52, 190.89], [198.98, 205.0], [205.08, 218.8], [221.54, 235.48]),
       hook: null,
       elements: [
         { kind: "slam", at: 0, dur: 3.5, cues: ["correre", "dipende", "respiri"], lead: ["Correre bene", "dipende da come"], text: "Respiri" },
@@ -218,7 +219,7 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
       // 11/11: «Il concetto chiave [di questo video] è che…»: tolto "di questo video" con un taglio nelle pause; grafiche agganciate alle parole
       // 11/11 sera: parte direttamente da «la corsa non è un test di resistenza»
       segments: cut([244.68, 279.8]),
-      tailSeconds: 1.0,
+      tailLive: 0.1,
       hook: null,
       elements: [
         { kind: "chat", at: 0.06, word: "corsa", dur: 2.6, cues: ["corsa", "test"], sender: "Il tuo corpo", messages: ["La corsa non è", "un test di resistenza"] },
@@ -228,7 +229,7 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
         { kind: "lungs", at: 12.82, word: "respirare", dur: 2.2, title: "Respirare meglio", sub: "non di più" },
         { kind: "stack", at: 15.2, word: "fiato", dur: 7.4, cues: ["fermarti", "respirare", "rallentare", "ascoltare"], title: "Se ti manca il fiato", items: ["Non fermarti", "Impara a respirare", "Impara a rallentare", "Ascolta il tuo corpo"] },
         { kind: "horizon", at: 24.32, word: "correrai", dur: 3.5, title: "Più lontano, meno sforzo", kmTo: 10 },
-        { kind: "title", at: 32.02, word: "significa", dur: 3.4, cues: ["significa", "lontano", "sostenibili"], lines: ["Correre bene =", "Andare lontano", "ed essere sostenibili"], accent: "lontano" },
+        { kind: "title", at: 32.02, word: "significa", dur: 3.4, cues: ["significa", "lontano", "ed"], lines: ["Correre bene =", "Andare lontano", "ed essere sostenibili"], accent: "lontano" },
       ],
       cta: { word: "LONTANO", title: "Vuoi correre più lontano con meno sforzo?" },
     },
