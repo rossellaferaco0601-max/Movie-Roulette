@@ -93,9 +93,10 @@ export const Runner: React.FC<{ el: Extract<Element, { kind: "runner" }>; start:
   if (!visible) return null;
   const k0 = el.onAt ? el.onAt[0] * fps : durF * 0.45, k1 = el.onAt && el.onAt[1] !== undefined ? el.onAt[1] * fps : k0 + durF * 0.25;
   const k = easeInOut(clamp01((local - k0) / Math.max(1, k1 - k0))); // 0 = veloce, 1 = piano (passaggio agganciato alle parole se ci sono `cues`)
+  const sw = el.onAt ? 0.93 : 0.5; // con gli agganci, scritta e colore cambiano solo quando la parola viene detta
   const hz = 4.2 - 2.4 * k;
   const phase = t * hz * Math.PI * 2;
-  const color = k < 0.5 ? CORAL : BRAND.lime;
+  const color = k < sw ? CORAL : BRAND.lime;
   const bpm = Math.round(el.bpmFrom + (el.bpmTo - el.bpmFrom) * k);
   const ground = GFX_H - 10 - 70;
   return (
@@ -113,9 +114,9 @@ export const Runner: React.FC<{ el: Extract<Element, { kind: "runner" }>; start:
         <ellipse cx={330} cy={ground + 6} rx={60 + Math.abs(Math.sin(phase)) * 20} ry={8} fill="rgba(0,0,0,0.4)" />
       </svg>
       <div style={{ position: "absolute", left: 470, top: 70, width: 380 }}>
-        <div style={{ fontWeight: 900, fontSize: 60, textTransform: "uppercase", color, lineHeight: 1 }}>{k < 0.5 ? el.fast : el.slow}</div>
+        <div style={{ fontWeight: 900, fontSize: 60, textTransform: "uppercase", color, lineHeight: 1 }}>{k < sw ? el.fast : el.slow}</div>
         <div style={{ fontWeight: 900, fontSize: 120, lineHeight: 1, color: BRAND.white, marginTop: 10 }}>{bpm}<span style={{ fontSize: 40, marginLeft: 8, color: BRAND.cream }}>bpm</span></div>
-        <div style={{ fontWeight: 700, fontSize: 32, color: BRAND.cream, marginTop: 6 }}>{k < 0.5 ? "fiato corto, cervello in allarme" : "respiro in controllo"}</div>
+        <div style={{ fontWeight: 700, fontSize: 32, color: BRAND.cream, marginTop: 6 }}>{k < sw ? "fiato corto, cervello in allarme" : "respiro in controllo"}</div>
       </div>
     </Box>
   );
