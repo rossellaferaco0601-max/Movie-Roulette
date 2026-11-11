@@ -73,7 +73,7 @@ export const Mouth: React.FC<{ el: Extract<Element, { kind: "mouth" }>; start: n
 };
 
 /* ---------- Corridore stilizzato: da "spingere di più" (veloce, rosso) a "più piano" (lento, lime) ---------- */
-const RunnerFig: React.FC<{ phase: number; color: string; x: number; y: number }> = ({ phase, color, x, y }) => {
+export const RunnerFig: React.FC<{ phase: number; color: string; x: number; y: number }> = ({ phase, color, x, y }) => {
   const a = Math.sin(phase) * 0.9, b = Math.sin(phase + Math.PI) * 0.9;
   const leg = (ang: number, k: number) => `M ${x} ${y + 60} L ${x + Math.sin(ang) * 55} ${y + 60 + Math.cos(ang) * 55 * k} L ${x + Math.sin(ang) * 55 + Math.sin(ang - 0.9) * 50} ${y + 60 + Math.cos(ang) * 55 * k + Math.cos(ang - 0.9) * 50}`;
   const arm = (ang: number) => `M ${x} ${y - 10} L ${x + Math.sin(ang) * 45} ${y - 10 + Math.cos(ang) * 45} L ${x + Math.sin(ang) * 45 + Math.sin(ang + 1.6) * 40} ${y - 10 + Math.cos(ang) * 45 + Math.cos(ang + 1.6) * 40}`;
@@ -113,10 +113,10 @@ export const Runner: React.FC<{ el: Extract<Element, { kind: "runner" }>; start:
         {/* ombra che "respira" col ritmo */}
         <ellipse cx={330} cy={ground + 6} rx={60 + Math.abs(Math.sin(phase)) * 20} ry={8} fill="rgba(0,0,0,0.4)" />
       </svg>
-      <div style={{ position: "absolute", left: 470, top: 70, width: 380 }}>
-        <div style={{ fontWeight: 900, fontSize: 60, textTransform: "uppercase", color, lineHeight: 1 }}>{k < sw ? el.fast : el.slow}</div>
+      <div style={{ position: "absolute", left: 450, top: 56, width: 410 }}>
+        <div style={{ fontWeight: 900, fontSize: 68, textTransform: "uppercase", color, lineHeight: 1 }}>{k < sw ? el.fast : el.slow}</div>
         <div style={{ fontWeight: 900, fontSize: 120, lineHeight: 1, color: BRAND.white, marginTop: 10 }}>{bpm}<span style={{ fontSize: 40, marginLeft: 8, color: BRAND.cream }}>bpm</span></div>
-        <div style={{ fontWeight: 700, fontSize: 32, color: BRAND.cream, marginTop: 6 }}>{k < sw ? "fiato corto, cervello in allarme" : "respiro in controllo"}</div>
+        <div style={{ fontWeight: 700, fontSize: 36, color: BRAND.cream, marginTop: 6, lineHeight: 1.1 }}>{k < sw ? "fiato corto, cervello in allarme" : "respiro in controllo"}</div>
       </div>
     </Box>
   );
@@ -159,7 +159,7 @@ export const Horizon: React.FC<{ el: Extract<Element, { kind: "horizon" }>; star
   const { local, s, out, visible, t } = useInOut(start, durF);
   if (!visible) return null;
   const prog = easeInOut(clamp01((local - 8) / (durF - 24)));
-  const hzn = 150, bottom = GFX_H - 10 - 90, vx = PANEL_W * 0.42;
+  const hzn = 150, bottom = GFX_H - 10 - 90, vx = PANEL_W * 0.5;
   const ry = bottom - (bottom - hzn) * prog * 0.92;
   const rs = 1 - 0.8 * prog;
   const km = (1 + (el.kmTo - 1) * prog).toFixed(1);
@@ -173,21 +173,22 @@ export const Horizon: React.FC<{ el: Extract<Element, { kind: "horizon" }>; star
         </defs>
         <rect x={0} y={60} width={PANEL_W} height={hzn - 60} fill="url(#sky)" />
         <rect x={0} y={hzn} width={PANEL_W} height={bottom + 90 - hzn} fill="url(#grd)" />
-        <circle cx={PANEL_W * 0.72} cy={hzn - 8} r={34} fill={BRAND.lime} opacity={0.9} />
-        <path d={`M ${vx - 260} ${bottom + 90} L ${vx - 6} ${hzn} L ${vx + 6} ${hzn} L ${vx + 260} ${bottom + 90} Z`} fill={BRAND.cream} opacity={0.85} />
-        {[0.15, 0.35, 0.6].map((f, i) => { const y = hzn + (bottom + 90 - hzn) * f; const hw = 6 + 254 * f; return <line key={i} x1={vx - hw + 20} x2={vx + hw - 20} y1={y} y2={y} stroke={BRAND.green} strokeWidth={2 + 4 * f} opacity={0.5} />; })}
+        <circle cx={PANEL_W * 0.5 + 120} cy={hzn - 8} r={34} fill={BRAND.lime} opacity={0.9} />
+        <path d={`M ${vx - 170} ${bottom + 90} L ${vx - 6} ${hzn} L ${vx + 6} ${hzn} L ${vx + 170} ${bottom + 90} Z`} fill={BRAND.cream} opacity={0.85} />
+        {[0.15, 0.35, 0.6].map((f, i) => { const y = hzn + (bottom + 90 - hzn) * f; const hw = 6 + 164 * f; return <line key={i} x1={vx - hw + 20} x2={vx + hw - 20} y1={y} y2={y} stroke={BRAND.green} strokeWidth={2 + 4 * f} opacity={0.5} />; })}
         <g transform={`translate(${vx} ${ry}) scale(${rs})`}>
           <circle cx={0} cy={-150} r={26} fill={BRAND.ink} />
           <path d={`M 0 -120 L 0 -40 M 0 -40 L ${-30 + Math.sin(t * 8) * 25} 20 M 0 -40 L ${30 - Math.sin(t * 8) * 25} 20 M 0 -100 L ${-35 * Math.sin(t * 8)} -60 M 0 -100 L ${35 * Math.sin(t * 8)} -60`} stroke={BRAND.ink} strokeWidth={14} strokeLinecap="round" fill="none" />
         </g>
       </svg>
-      <div style={{ position: "absolute", left: 40, bottom: 20, display: "flex", alignItems: "flex-end", gap: 10 }}>
-        <div style={{ fontWeight: 900, fontSize: 80, lineHeight: 1, color: BRAND.lime }}>{km}</div>
-        <div style={{ fontWeight: 700, fontSize: 32, color: BRAND.cream, paddingBottom: 10 }}>km</div>
+      <div style={{ position: "absolute", left: 22, top: 176, width: 232, background: "rgba(11,15,10,0.9)", border: `3px solid ${BRAND.lime}`, borderRadius: 20, padding: "12px 0 14px", textAlign: "center" }}>
+        <div style={{ fontWeight: 800, fontSize: 30, color: BRAND.cream, letterSpacing: 2 }}>DISTANZA</div>
+        <div style={{ fontWeight: 900, fontSize: 92, lineHeight: 1, color: BRAND.lime }}>{km}<span style={{ fontSize: 40, marginLeft: 6, color: BRAND.cream }}>km</span></div>
       </div>
-      <div style={{ position: "absolute", right: 40, bottom: 28, width: 300 }}>
-        <div style={{ fontWeight: 800, fontSize: 28, color: BRAND.cream, letterSpacing: 2 }}>SFORZO</div>
-        <div style={{ height: 22, borderRadius: 11, background: "rgba(255,255,255,0.15)", marginTop: 8 }}><div style={{ width: `${effort * 100}%`, height: 22, borderRadius: 11, background: effort > 0.6 ? CORAL : BRAND.lime }} /></div>
+      <div style={{ position: "absolute", right: 22, top: 176, width: 232, background: "rgba(11,15,10,0.9)", border: `3px solid ${effort > 0.6 ? CORAL : BRAND.lime}`, borderRadius: 20, padding: "12px 18px 18px", boxSizing: "border-box", textAlign: "center" }}>
+        <div style={{ fontWeight: 800, fontSize: 30, color: BRAND.cream, letterSpacing: 2 }}>SFORZO</div>
+        <div style={{ fontWeight: 900, fontSize: 58, lineHeight: 1.1, color: effort > 0.6 ? CORAL : BRAND.lime }}>{effort > 0.6 ? "ALTO" : effort > 0.4 ? "MEDIO" : "BASSO"}</div>
+        <div style={{ height: 22, borderRadius: 11, background: "rgba(255,255,255,0.18)", marginTop: 6 }}><div style={{ width: `${effort * 100}%`, height: 22, borderRadius: 11, background: effort > 0.6 ? CORAL : BRAND.lime }} /></div>
       </div>
     </Box>
   );

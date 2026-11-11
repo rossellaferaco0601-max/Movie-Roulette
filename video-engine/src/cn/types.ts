@@ -14,7 +14,7 @@ export type Element = ElementBase &
     | { kind: "stat"; value: string; label: string }
     | { kind: "pill"; text: string }
     | { kind: "stage"; title: string; keyword: string; steps: string[] }
-    | { kind: "checklist"; items: string[]; strike?: boolean }
+    | { kind: "checklist"; items: string[]; strike?: boolean; big?: boolean }
     | { kind: "text3d"; word3d: string; sub?: string }
     | { kind: "wave"; title: string; mode: "chaos" | "calm" | "chaos-to-calm" | "calm-to-chaos" }
     | { kind: "sphere3d"; phases: { label: string; sec: number; scale: number }[] }
@@ -44,7 +44,8 @@ export type Element = ElementBase &
     | { kind: "ring"; words: [string, string] }
     | { kind: "duo"; title: string; words: [string, string] }
     | { kind: "slam"; lead: string[]; text: string }
-    | { kind: "orbit"; src: string; titles: string[]; headX: number; headTop: number; back?: number }
+    | { kind: "orbit"; titles: string[]; headX: number; headTop: number; back?: number }
+    | { kind: "compare"; sides: [{ q: string; a: string }, { q: string; a: string }] }
     | { kind: "drill"; n: number; title: string; fadeIn?: number; fadeOut?: number; steps: { label: string; sub: string; shape: "hold" | "grow" | "shrink" | "ring" | "feet" | "pulse" | "count"; color?: "lime" | "az" | "cream"; n?: number; big?: string }[] }
     | { kind: "question"; text: string; label?: string }
     | { kind: "nametag"; name: string; sub?: string }
@@ -79,6 +80,8 @@ export type CNReelProps = {
   /** push-in lento della camera durante l'hook (es. 1.12), poi rientro morbido */
   hookZoom?: number;
   /** volto grande (interviste strette): grafiche più in basso (px) e più piccole, sottotitoli più in basso (px), per non coprire mai il volto */
+  /** coda prima della CTA (s, default 0,5): fermo sull'ultimo fotogramma con leggerissimo avvicinamento; più lunga = la CTA entra più tardi e più morbida */
+  tailSeconds?: number;
   gfxShift?: number;
   gfxScale?: number;
   capShift?: number;

@@ -59,6 +59,7 @@ def wide_expr(windows):
 
 def build(reel, src_dir, out_dir):
     rid, segs, blend = reel["id"], reel["segments"], reel["blendFrames"]
+    TAIL = reel.get("tail", 0.5)  # coda del reel (s): fermo sull'ultimo fotogramma, muto; = tailSeconds nelle props
     wide_master = reel.get("wide", [])  # finestre in secondi del master
     src = os.path.join(src_dir, reel["src"])
     tmp = os.path.join(out_dir, "tmp", rid); os.makedirs(tmp, exist_ok=True)
@@ -103,7 +104,7 @@ def build(reel, src_dir, out_dir):
         hb = blend / 2 / FPS
         a0 = 0 if i == 0 else hb - AX / 2
         a1 = n / FPS if last else n / FPS - hb + AX / 2
-        af = f"aresample=48000,atrim={a0:.4f}:{a1:.4f},asetpts=PTS-STARTPTS" + (f",afade=t=out:st={a1 - a0 - 0.08:.4f}:d=0.08,apad=whole_dur={a1 - a0 + TAIL:.4f}" if last else "")
+        af = f"aresample=48000,atrim={a0:.4f}:{a1:.4f},asetpts=PTS-STARTPTS" + (f",afade=t=out:st={a1 - a0 - 0.14:.4f}:d=0.14,apad=whole_dur={a1 - a0 + TAIL:.4f}" if last else "")
         run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{s['from']:.3f}", "-i", src, *extra_in, "-t", f"{nv / FPS + 0.2:.4f}",
              "-filter_complex", fc, "-map", prev, "-map", "0:a", "-frames:v", str(nv), "-af", af,
              "-c:v", "libx264", "-preset", "fast", "-crf", "14", "-pix_fmt", "yuv420p", "-c:a", "pcm_s16le", p])

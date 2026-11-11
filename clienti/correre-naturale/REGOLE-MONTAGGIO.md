@@ -340,3 +340,16 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   ogni generazione va chiesta a Ross prima (consuma il suo limite AI). Si scaricano da `media.canva.com` (host aggiunto all'ambiente) e si
   montano con l'elemento `clip` (scheda sotto il mento, movimento agganciato alla parola). Prima clip: `public/ytcn51/b3d/runner_naso.mp4`
   (runner che chiude la bocca a 2,4 s), usata in R3 al posto della bocca disegnata.
+- **2026-11-11 sera (Ross, revisione v9)**:
+  - **CTA (tutti i video)**: un **suono** quando si preme «Pubblica» (`public/sfx/click.wav`, unico suono, discreto); nella notifica il **logo
+    Correre Naturale** (`public/brand/logo-cn-bianco.png`) al posto della sigla «CN»; la frase **«coaching personalizzato di Correre Naturale®»
+    evidenziata** (fascia lime). L'ingresso della CTA non deve coprire troppo presto l'ultima grafica né essere «troppo netto»: coda più lunga
+    con `tailSeconds` (R2 1,6 s, R5 1,2 s) e dissolvenza di 22 fotogrammi.
+  - **Niente fermo immagine sul volto di Daniele** («davvero brutto»): nell'orbita il video continua a scorrere mentre arretra (`orbitCam`).
+  - **Guide degli esercizi**: intestazione su due righe («Esercizio 1» / «Respirazione nasale controllata»), palla **al centro dello schermo**,
+    sottotitoli più in basso ma sopra 0,80 (`capShift`), un solo «5-10 volte» grande al centro.
+  - **Scritte mai sopra una grafica**: etichette e contatori vanno **ai lati** su fondo scuro (strada «Obiettivo iniziale», orizzonte «km/sforzo»).
+  - **Ritmo**: poche grafiche e lunghe; niente grafiche che non c'entrano col parlato (tolta la sfera inspira/espira di R3, «qualcosa che stona»).
+    Le scritte degli elenchi devono essere grandi (`big`). La clip realistica in un riquadro grande e luminoso.
+  - **Due situazioni a confronto** («Perdi il controllo? Cammina» / «Torni calmo? Riparti»): elemento `compare`, con la domanda visibile.
+  - L'omino di R4 deve correre **piano più a lungo**. R8 parte da «La corsa non è un test di resistenza».

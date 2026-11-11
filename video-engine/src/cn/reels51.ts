@@ -72,6 +72,7 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
       // 11/11 (Ross: «le animazioni non seguono le parole e sono sempre le stesse, cambialo completamente»): sei grafiche tutte diverse,
       // ognuna con le parti interne agganciate alle parole dette; niente effetti sul master, coda ferma (niente salto prima della CTA)
       segments: cut([53.8, 74.2]),
+      tailSeconds: 1.6, // 11/11 sera: la grafica corpo + mente resta a schermo più a lungo prima della CTA
       hook: null,
       elements: [
         { kind: "step", at: 0.2, word: "primo", dur: 3.2, cues: ["passo", "fiatone", "quando"], n: "1", label: "Il primo passo", sub: "per eliminare il", strike: "Fiatone" },
@@ -79,7 +80,7 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
         { kind: "filter", at: 6.2, word: "naso", dur: 4.1, cues: ["filtro", "regolatore"] },
         { kind: "beats", at: 10.9, word: "obbliga", dur: 2.75, cues: ["ritmo", "sostenibile"], words: ["Ritmo", "sostenibile"] },
         { kind: "ring", at: 14.7, word: "usare", dur: 2.3, cues: ["ossigeno", "efficiente"], words: ["Ossigeno", "efficiente"] },
-        { kind: "duo", at: 17.85, word: "controllo", dur: 2.45, cues: ["corpo", "mente"], title: "Controllo", words: ["Corpo", "Mente"] },
+        { kind: "duo", at: 17.85, word: "controllo", dur: 3.35, cues: ["corpo", "mente"], title: "Controllo", words: ["Corpo", "Mente"] },
       ],
       cta: { word: "NASO", title: "Vuoi imparare a respirare bene quando corri?" },
     },
@@ -103,12 +104,12 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
       // le altre grafiche sono le stesse della v8, agganciate alle parole
       segments: cut([74.2, 98.5]),
       hook: null,
+      // 11/11 sera (Ross: «troppo veloci e discordanti»): meno grafiche e più lunghe; tolta la sfera inspira/espira che non c'entrava col parlato
       elements: [
-        { kind: "clip", at: 0.1, word: "durante", dur: 2.3, cues: ["chiudi"], src: "ytcn51/b3d/runner_naso.mp4", from: 1.0, posY: 0.05, tag: "Durante la corsa", text: "Chiudi la bocca" },
-        { kind: "checklist", at: 2.98, word: "voglia", dur: 5.2, cues: ["voglia", "rallenta"], items: ["Voglia di aprire la bocca?", "Rallenta o cammina"] },
+        { kind: "clip", at: 0.1, word: "durante", dur: 2.7, cues: ["chiudi"], src: "ytcn51/b3d/runner_naso_chiaro.mp4", from: 1.0, posY: 0.12, tag: "Durante la corsa", text: "Chiudi la bocca" },
+        { kind: "checklist", at: 2.98, word: "voglia", dur: 6.5, big: true, cues: ["voglia", "rallenta"], items: ["Voglia di aprire la bocca?", "Rallenta o cammina"] },
         { kind: "widget", at: 9.96, word: "respirazione", dur: 5.55, cues: ["stimola", "ossigena", "calma"], title: "Respirazione nasale", lines: ["Stimola il diaframma", "Ossigena i tessuti", "Calma il sistema nervoso"] },
-        { kind: "sphere3d", at: 15.86, word: "correre", dur: 4.6, phases: BREATH },
-        { kind: "graph", at: 20.86, word: "energia", dur: 3.2, title: "Energia dopo la corsa", label: "non meno, come spesso capita", from: 40, to: 100 },
+        { kind: "graph", at: 20.02, word: "sentire", dur: 3.95, title: "Energia dopo la corsa", label: "non meno, come spesso capita", from: 40, to: 100 },
       ],
       cta: { word: "ENERGIA", title: "Vuoi finire la corsa con più energia di prima?" },
     },
@@ -132,11 +133,11 @@ Commenta ENERGIA e ti mando tutte le info sui percorsi di coaching personalizzat
       hook: null,
       elements: [
         { kind: "title", at: 0, dur: 2.6, lines: ["Correre", "troppo forte"], accent: "forte" },
-        { kind: "runner", at: 2.75, word: "spingere", dur: 3.62, cues: ["realtà", "più"], fast: "Spingere di più", slow: "Più piano", bpmFrom: 182, bpmTo: 142 },
-        { kind: "kinetic", at: 6.59, word: "piano", dur: 1.45, words: ["PIANO", "SI MIGLIORA COSÌ"], accentIndex: 0 },
+        { kind: "runner", at: 2.75, word: "spingere", dur: 5.2, cues: ["imparare", "più"], fast: "Spingere di più", slow: "Più piano", bpmFrom: 182, bpmTo: 142 },
         { kind: "road3d", at: 8.17, word: "obiettivo", dur: 5.6, title: "Obiettivo iniziale", fromLabel: "TROPPO FORTE", toLabel: "PIANO", fromSpeed: 178, toSpeed: 138, unit: "bpm" },
         { kind: "stat", at: 14.89, word: "20", dur: 1.3, value: "20-30", label: "minuti di corsa" },
-        { kind: "checklist", at: 16.29, word: "respira", dur: 7.5, cues: ["respira", "perdere", "torni"], items: ["Respira solo dal naso", "Perdi il controllo? Cammina", "Torna calmo? Riparti"] },
+        { kind: "checklist", at: 16.29, word: "respira", dur: 1.9, big: true, cues: ["respira"], items: ["Respira solo dal naso"] },
+        { kind: "compare", at: 18.4, word: "senti", dur: 5.45, cues: ["perdere", "cammina", "torni", "riparti"], sides: [{ q: "Perdi il controllo?", a: "Cammina" }, { q: "Torni calmo?", a: "Riparti" }] },
         { kind: "bars", at: 24.09, word: "alternanza", dur: 4.6, title: "Capacità aerobica", labels: ["Sett. 1", "Sett. 2", "Sett. 3", "Sett. 4"], values: [30, 48, 68, 92] },
       ],
       cta: { word: "PIANO", title: "Vuoi costruire resistenza senza farti male?" },
@@ -156,15 +157,17 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
       ...base,
       master: master("R5-esercizi"),
       blendFrames: 2,
+      tailSeconds: 1.2, // chiusura più morbida prima della CTA
+      capShift: 34,     // sottotitoli più in basso (sempre sopra 0,80): la palla delle guide sta al centro dello schermo
       // 11/11 (Ross): apertura tagliata su «correre bene / dipende / da come respiri» con lo schianto su «respiri»; i tre esercizi tutti in un
       // reel (R6 e R7 scartati); su «tre esercizi» fermo immagine con i titoli in orbita sopra la testa. Le schede grafiche del sorgente
       // (148,8-162,3 · 179,95-190,3 · 204,6-219,3) sono coperte dalle guide a tutto schermo, a tappe agganciate alle parole.
-      segments: cutN(2, [131.26, 131.98], [133.56, 134.09], [134.47, 146.71], [149.34, 165.5], [172.52, 190.89], [198.98, 205.0], [205.08, 218.8], [221.54, 235.48]),
+      segments: cutN(2, [131.26, 131.98], [133.56, 134.09], [134.47, 146.71], [149.34, 165.5], [172.52, 190.89], [198.98, 205.0], [205.08, 218.8], [221.54, 235.5]),
       hook: null,
       elements: [
         { kind: "slam", at: 0, dur: 2.2, cues: ["correre", "dipende", "respiri"], lead: ["Correre bene", "dipende da come"], text: "Respiri" },
         { kind: "kinetic", at: 3.9, word: "allenare", dur: 2.9, words: ["SI ALLENA", "COME UN MUSCOLO"], accentIndex: 1 },
-        { kind: "orbit", at: 8.7, word: "tre", dur: 5.0, cues: ["semplici"], src: master("R5-esercizi"), titles: ["Nasale controllata", "Pause respiratorie", "Respirazione ritmica"], headX: 0.55, headTop: 0.05 },
+        { kind: "orbit", at: 8.7, word: "tre", dur: 5.0, cues: ["semplici"], titles: ["Nasale controllata", "Pause respiratorie", "Respirazione ritmica"], headX: 0.55, headTop: 0.05, back: 0.68 },
         { kind: "drill", at: 13.4, dur: 13.3, fadeIn: 0, cues: ["chiudi", "inspira", "espira"], n: 1, title: "Respirazione|nasale controllata", steps: [
           { label: "Bocca chiusa", sub: "molto semplice", shape: "hold", color: "cream" },
           { label: "Inspira", sub: "lentamente dal naso · 3-4 secondi", shape: "grow", color: "az" },
@@ -177,7 +180,7 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
           { label: "Espira", sub: "una normale espirazione", shape: "shrink", color: "lime" },
           { label: "Trattieni", sub: "il respiro per qualche secondo", shape: "ring", color: "cream" },
           { label: "Riprendi", sub: "a respirare dal naso", shape: "grow", color: "az" },
-          { label: "5-10 volte", sub: "mi raccomando, senza forzare", shape: "count", big: "5-10" },
+          { label: "volte", sub: "mi raccomando, senza forzare", shape: "count", big: "5-10" },
         ] },
         { kind: "kinetic", at: 50.1, word: "controllo", dur: 2.6, words: ["IN CONTROLLO", "SENZA PANICO"], accentIndex: 0 },
         { kind: "drill", at: 53.43, dur: 14.57, fadeIn: 5, fadeOut: 4, cues: ["cammina", "inspira", "espira", "trova"], n: 3, title: "Respirazione|ritmica", steps: [
@@ -213,18 +216,18 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
       ...base,
       master: master("R8-dialogo"),
       // 11/11: «Il concetto chiave [di questo video] è che…»: tolto "di questo video" con un taglio nelle pause; grafiche agganciate alle parole
-      segments: cut([242.7, 243.6], [244.44, 279.8]),
-      // motivo visivo del reel 8: dialogo (chat dal corpo, polmoni illustrati, pillole che entrano, orizzonte, titolo finale)
+      // 11/11 sera: parte direttamente da «la corsa non è un test di resistenza»
+      segments: cut([244.68, 279.8]),
       hook: null,
       elements: [
-        { kind: "chat", at: 1.2, word: "corsa", dur: 3.1, cues: ["corsa", "test"], sender: "Il tuo corpo", messages: ["La corsa non è", "un test di resistenza"] },
-        { kind: "kinetic", at: 4.5, word: "dialogo", dur: 2.6, words: ["UN DIALOGO", "CON IL TUO CORPO"], accentIndex: 0 },
-        { kind: "widget", at: 7.26, word: "ascoltarlo", dur: 4.4, cues: ["smetti", "inizi"], title: "Quando impari ad ascoltarlo", lines: ["Smetti di soffrire", "Inizi a goderti ogni passo"] },
-        { kind: "bigstrike", at: 12.38, word: "spingere", dur: 1.4, text: "Spingere di più" },
-        { kind: "lungs", at: 13.96, word: "respirare", dur: 1.55, title: "Respirare meglio", sub: "non di più" },
-        { kind: "stack", at: 15.68, word: "se", dur: 8.1, cues: ["fermarti", "respirare", "rallentare", "ascoltare"], title: "Se ti manca il fiato", items: ["Non fermarti", "Impara a respirare", "Impara a rallentare", "Ascolta il tuo corpo"] },
-        { kind: "horizon", at: 25.46, word: "correrai", dur: 3.5, title: "Più lontano, meno sforzo", kmTo: 10 },
-        { kind: "title", at: 33.16, word: "significa", dur: 3.0, cues: ["significa", "lontano", "sostenibili"], lines: ["Correre bene =", "Andare lontano", "ed essere sostenibili"], accent: "lontano" },
+        { kind: "chat", at: 0.06, word: "corsa", dur: 2.6, cues: ["corsa", "test"], sender: "Il tuo corpo", messages: ["La corsa non è", "un test di resistenza"] },
+        { kind: "kinetic", at: 3.4, word: "dialogo", dur: 2.6, words: ["UN DIALOGO", "CON IL TUO CORPO"], accentIndex: 0 },
+        { kind: "widget", at: 6.12, word: "ascoltarlo", dur: 4.4, cues: ["smetti", "inizi"], title: "Quando impari ad ascoltarlo", lines: ["Smetti di soffrire", "Inizi a goderti ogni passo"] },
+        { kind: "bigstrike", at: 11.24, word: "spingere", dur: 1.4, text: "Spingere di più" },
+        { kind: "lungs", at: 12.82, word: "respirare", dur: 1.55, title: "Respirare meglio", sub: "non di più" },
+        { kind: "stack", at: 14.54, word: "se", dur: 8.1, cues: ["fermarti", "respirare", "rallentare", "ascoltare"], title: "Se ti manca il fiato", items: ["Non fermarti", "Impara a respirare", "Impara a rallentare", "Ascolta il tuo corpo"] },
+        { kind: "horizon", at: 24.32, word: "correrai", dur: 3.5, title: "Più lontano, meno sforzo", kmTo: 10 },
+        { kind: "title", at: 32.02, word: "significa", dur: 3.0, cues: ["significa", "lontano", "sostenibili"], lines: ["Correre bene =", "Andare lontano", "ed essere sostenibili"], accent: "lontano" },
       ],
       cta: { word: "LONTANO", title: "Vuoi correre più lontano con meno sforzo?" },
     },

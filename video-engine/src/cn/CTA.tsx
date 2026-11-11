@@ -1,4 +1,4 @@
-import { AbsoluteFill, useCurrentFrame, useVideoConfig, spring, interpolate, Easing } from "remotion";
+import { AbsoluteFill, Audio, Img, Sequence, staticFile, useCurrentFrame, useVideoConfig, spring, interpolate, Easing } from "remotion";
 import { BRAND, W } from "./types";
 import type { CTA as CTAT } from "./types";
 
@@ -19,8 +19,12 @@ export const CTA: React.FC<{ cta: CTAT; frames: number }> = ({ cta, frames }) =>
   const confetti = Array.from({ length: 26 }, (_, i) => i);
   const followed = frame >= T_FOLLOW + 18;
 
+  // evidenziatore sulla frase chiave: fascia lime che si stende dietro al testo
+  const HL: React.CSSProperties = { color: BRAND.ink, fontWeight: 800, padding: "2px 10px", borderRadius: 10, backgroundImage: `linear-gradient(${BRAND.lime}, ${BRAND.lime})`, backgroundRepeat: "no-repeat", boxDecorationBreak: "clone", WebkitBoxDecorationBreak: "clone" };
   return (
     <AbsoluteFill style={{ background: BRAND.green, opacity: fadeIn, fontFamily: FONT, color: BRAND.white }}>
+      {/* suono del tocco su "Pubblica" (unico suono della CTA, discreto) */}
+      <Sequence from={T_TAP + 4} layout="none"><Audio src={staticFile("sfx/click.wav")} volume={0.8} /></Sequence>
       {/* motivo di fondo */}
       <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 20%, rgba(149,255,0,0.18), transparent 55%)` }} />
 
@@ -28,7 +32,11 @@ export const CTA: React.FC<{ cta: CTAT; frames: number }> = ({ cta, frames }) =>
       <div style={{ position: "absolute", top: 230, left: 0, width: W, textAlign: "center", padding: "0 70px", transform: `translateY(${(1 - s(T_TITLE)) * 40}px)`, opacity: s(T_TITLE) }}>
         <div style={{ fontWeight: 900, fontSize: 86, lineHeight: 1.02, textTransform: "uppercase" }}>{cta.title}</div>
         <div style={{ fontWeight: 600, fontSize: 44, marginTop: 22, color: BRAND.cream, lineHeight: 1.2 }}>
-          {cta.sub ?? "Nei percorsi di coaching personalizzato di Correre Naturale® ti insegniamo a farlo passo dopo passo."}
+          {cta.sub ?? (
+            <>
+              Nei percorsi di <span style={{ ...HL, backgroundSize: `${100 * s(T_TITLE + 14, { damping: 20, stiffness: 90 })}% 100%` }}>coaching personalizzato di Correre Naturale®</span> ti insegniamo a farlo passo dopo passo.
+            </>
+          )}
         </div>
       </div>
 
@@ -81,10 +89,10 @@ export const CTA: React.FC<{ cta: CTAT; frames: number }> = ({ cta, frames }) =>
       {/* notifica DM */}
       <div style={{ position: "absolute", top: 1100, left: 90, width: W - 180, transform: `translateY(${(1 - s(T_DM)) * 80}px)`, opacity: s(T_DM) }}>
         <div style={{ background: "rgba(11,15,10,0.9)", borderRadius: 28, padding: "24px 30px", display: "flex", gap: 22, alignItems: "center", boxShadow: "0 16px 40px rgba(0,0,0,0.35)" }}>
-          <div style={{ width: 84, height: 84, borderRadius: 42, background: BRAND.lime, display: "flex", alignItems: "center", justifyContent: "center", color: BRAND.ink, fontWeight: 900, fontSize: 34 }}>CN</div>
+          <div style={{ width: 104, height: 104, borderRadius: 52, background: BRAND.green, border: `3px solid ${BRAND.lime}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}><Img src={staticFile("brand/logo-cn-bianco.png")} style={{ width: 92, height: 92 }} /></div>
           <div style={{ flex: 1 }}>
             <div style={{ fontWeight: 800, fontSize: 34, color: BRAND.lime }}>Correre Naturale® · messaggio</div>
-            <div style={{ fontWeight: 600, fontSize: 38, lineHeight: 1.2 }}>Ecco tutte le info sui percorsi di coaching personalizzato</div>
+            <div style={{ fontWeight: 600, fontSize: 38, lineHeight: 1.2 }}>Ecco tutte le info sui percorsi di <span style={{ color: BRAND.lime, fontWeight: 800 }}>coaching personalizzato</span></div>
           </div>
         </div>
       </div>

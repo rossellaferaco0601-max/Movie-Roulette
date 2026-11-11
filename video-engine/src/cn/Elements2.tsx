@@ -189,8 +189,12 @@ export const Road3D: React.FC<{ el: Extract<Element, { kind: "road3d" }>; start:
           <RoadScene offset={dist} speedNorm={speedNorm} />
         </ThreeCanvas>
       </div>
-      <div style={{ position: "absolute", left: 40, bottom: 26, fontWeight: 900, fontSize: 60, color: speedNorm > 0.5 ? "#FF6B4A" : BRAND.lime, textShadow: "0 2px 12px #000" }}>{label}</div>
-      <div style={{ position: "absolute", right: 40, bottom: 30, fontWeight: 800, fontSize: 44, color: BRAND.cream, textShadow: "0 2px 12px #000" }}>{kmh} <span style={{ fontSize: 26 }}>{el.unit ?? "bpm"}</span></div>
+      {/* etichetta e contatore ai lati della strada, su fondo scuro: sulla strada non si leggevano */}
+      <div style={{ position: "absolute", left: 20, top: 150, width: 250, background: "rgba(11,15,10,0.92)", border: `3px solid ${speedNorm > 0.5 ? "#FF6B4A" : BRAND.lime}`, borderRadius: 20, padding: "14px 10px", boxSizing: "border-box", textAlign: "center", fontWeight: 900, fontSize: label.length > 8 ? 46 : 64, lineHeight: 1.02, color: speedNorm > 0.5 ? "#FF6B4A" : BRAND.lime }}>{label}</div>
+      <div style={{ position: "absolute", right: 20, top: 150, width: 250, background: "rgba(11,15,10,0.92)", border: "3px solid rgba(244,241,229,0.6)", borderRadius: 20, padding: "8px 10px 12px", boxSizing: "border-box", textAlign: "center" }}>
+        <div style={{ fontWeight: 900, fontSize: 86, lineHeight: 1, color: BRAND.white }}>{kmh}</div>
+        <div style={{ fontWeight: 800, fontSize: 32, color: BRAND.cream, letterSpacing: 2 }}>{el.unit ?? "bpm"}</div>
+      </div>
     </div>
   );
 };

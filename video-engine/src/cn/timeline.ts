@@ -5,7 +5,8 @@ import { FPS, TAIL_FRAMES } from "./types";
 export const secToFrames = (s: number) => Math.round(s * FPS);
 
 /** Posizione di ogni pezzo nel master (in frame): identica a scripts/cn_master.py (xfade di `blend` frame). */
-export const layout = (segments: Seg[], blend: number) => {
+export const tailFrames = (tailSeconds?: number) => (tailSeconds === undefined ? TAIL_FRAMES : Math.round(tailSeconds * FPS));
+export const layout = (segments: Seg[], blend: number, tail: number = TAIL_FRAMES) => {
   const out: { start: number; len: number; seg: Seg }[] = [];
   let cursor = 0;
   segments.forEach((seg, i) => {
@@ -14,7 +15,7 @@ export const layout = (segments: Seg[], blend: number) => {
     out.push({ start, len, seg });
     cursor = start + len;
   });
-  return { items: out, total: cursor + TAIL_FRAMES };
+  return { items: out, total: cursor + tail };
 };
 
 export type RWord = { text: string; start: number; end: number };

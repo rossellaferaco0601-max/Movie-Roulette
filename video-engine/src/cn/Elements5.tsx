@@ -2,6 +2,7 @@ import { AbsoluteFill, Freeze, OffthreadVideo, Sequence, staticFile, useCurrentF
 import type { Element } from "./types";
 import { BRAND, W, H, PANEL_X, PANEL_W, GFX_TOP, GFX_H } from "./types";
 import { useInOut } from "./Elements3D";
+import { RunnerFig } from "./Elements4";
 
 /* Grafiche dell'11/11: ogni parte entra sulla parola detta (`cues` → `el.onAt`, secondi dall'inizio dell'elemento).
    R2 (naso): Step, Airflow, Filter, Beats, Ring, Duo. R5 (tre esercizi): Slam, Orbit, Drill. */
@@ -212,37 +213,39 @@ export const Slam: React.FC<P<"slam">> = ({ el, start }) => {
   );
 };
 
-/* ---------- R5 · orbita con fermo immagine: il video si ferma e arretra, i titoli girano sopra la testa e poi si impilano ---------- */
+/* ---------- R5 · orbita: il video (che continua a scorrere) arretra, i titoli girano sopra la testa e poi si impilano ----------
+   Il video non si ferma (Ross 11/11: il fermo immagine «è davvero brutto»): l'arretramento è applicato al master in CNReel con orbitCam(). */
+export const orbitCam = (el: Extract<Element, { kind: "orbit" }>, start: number, frame: number, fps: number) => {
+  const local = frame - start, durF = Math.round(el.dur * fps);
+  if (local < 0 || local >= durF) return 0;
+  return easeInOut(local / 12) * easeInOut((durF - local) / 10); // 0 = pieno schermo, 1 = arretrato
+};
 export const Orbit: React.FC<P<"orbit">> = ({ el, start }) => {
   const { fps } = useVideoConfig();
+  const frame = useCurrentFrame();
   const durF = Math.round(el.dur * fps);
-  const { local, visible, t } = useInOut(start, durF);
+  const { local, visible } = useInOut(start, durF);
   if (!visible) return null;
   const back = el.back ?? 0.72;
-  const z = easeInOut(local / 10);
+  const z = orbitCam(el, start, frame, fps);
   const sc = 1 - (1 - back) * z;
-  // punto sopra i capelli, nel fotogramma arretrato (ancorato in basso al centro)
+  // punto sopra i capelli, nel video arretrato (ancorato in basso al centro)
   const hx = W / 2 + (el.headX - 0.5) * W * sc, hy = H - (1 - el.headTop) * H * sc;
   const spinEnd = cueF(el, 0, fps, 1.7), n = el.titles.length;
   const travel = Math.PI * 2 * 1.25 * easeOut(local / Math.max(1, spinEnd));
-  const cardW = 620, cardH = 112, stackTop = Math.max(215, hy - 40 - n * (cardH + 16));
+  const cardW = 620, cardH = 112, stackTop = Math.max(215, H - (1 - el.headTop) * H * back - 40 - n * (cardH + 16));
+  const leave = easeInOut((durF - local) / 8);
   return (
-    <AbsoluteFill style={{ background: "linear-gradient(180deg,#1C3D15 0%,#0B0F0A 100%)", fontFamily: FONT }}>
-      <AbsoluteFill style={{ transform: `scale(${sc})`, transformOrigin: "50% 100%", borderRadius: 40 * z, overflow: "hidden", boxShadow: "0 -20px 80px rgba(0,0,0,0.6)" }}>
-        <Freeze frame={start}>
-          <OffthreadVideo src={staticFile(el.src)} muted style={{ width: "100%", height: "100%" }} />
-        </Freeze>
-      </AbsoluteFill>
+    <AbsoluteFill style={{ fontFamily: FONT, opacity: leave }}>
       {el.titles.map((title, i) => {
         const ang = travel + (i / n) * Math.PI * 2, depth = Math.cos(ang);         // depth > 0 = davanti
         const ox = hx + Math.sin(ang) * 300, oy = hy - 170 + depth * 62, osc = 0.62 + 0.2 * (depth + 1) / 2;
         const k = spring({ frame: local - spinEnd - i * 4, fps, config: { damping: 15, stiffness: 150 } });  // dall'orbita alla pila
         const x = ox + (W / 2 - ox) * k, y = oy + (stackTop + i * (cardH + 16) + cardH / 2 - oy) * k, s2 = osc + (1 - osc) * k;
-        const on = el.onAt && el.onAt[i + 1] !== undefined ? clamp01((local - Math.round(el.onAt[i + 1] * fps)) / 6) : k;
         return (
-          <div key={i} style={{ position: "absolute", left: x - cardW / 2, top: y - cardH / 2, width: cardW, height: cardH, zIndex: Math.round(50 + depth * 10 * (1 - k)), display: "flex", alignItems: "center", gap: 22, padding: "0 26px", boxSizing: "border-box", background: on > 0.5 ? BRAND.lime : "rgba(11,15,10,0.92)", border: `4px solid ${BRAND.lime}`, borderRadius: 26, transform: `scale(${s2 * easeOut(local / 8)})`, opacity: (0.6 + 0.4 * (depth + 1) / 2) * (1 - k) + k, boxShadow: "0 14px 34px rgba(0,0,0,0.55)" }}>
-            <div style={{ width: 72, height: 72, borderRadius: 36, background: on > 0.5 ? BRAND.ink : BRAND.lime, color: on > 0.5 ? BRAND.lime : BRAND.ink, fontWeight: 900, fontSize: 56, lineHeight: "72px", textAlign: "center", flexShrink: 0 }}>{i + 1}</div>
-            <div style={{ fontWeight: 900, fontSize: 50, lineHeight: 1, textTransform: "uppercase", color: on > 0.5 ? BRAND.ink : BRAND.white }}>{title}</div>
+          <div key={i} style={{ position: "absolute", left: x - cardW / 2, top: y - cardH / 2, width: cardW, height: cardH, zIndex: Math.round(50 + depth * 10 * (1 - k)), display: "flex", alignItems: "center", gap: 22, padding: "0 26px", boxSizing: "border-box", background: k > 0.5 ? BRAND.lime : "rgba(11,15,10,0.92)", border: `4px solid ${BRAND.lime}`, borderRadius: 26, transform: `scale(${s2 * easeOut(local / 8)})`, opacity: (0.6 + 0.4 * (depth + 1) / 2) * (1 - k) + k, boxShadow: "0 14px 34px rgba(0,0,0,0.55)" }}>
+            <div style={{ width: 72, height: 72, borderRadius: 36, background: k > 0.5 ? BRAND.ink : BRAND.lime, color: k > 0.5 ? BRAND.lime : BRAND.ink, fontWeight: 900, fontSize: 56, lineHeight: "72px", textAlign: "center", flexShrink: 0 }}>{i + 1}</div>
+            <div style={{ fontWeight: 900, fontSize: 50, lineHeight: 1, textTransform: "uppercase", color: k > 0.5 ? BRAND.ink : BRAND.white }}>{title}</div>
           </div>
         );
       })}
@@ -260,7 +263,7 @@ const Foot: React.FC<{ x: number; y: number; color: string; flip: boolean; k: nu
 export const Drill: React.FC<P<"drill">> = ({ el, start }) => {
   const { fps } = useVideoConfig();
   const durF = Math.round(el.dur * fps);
-  const { local, visible, t } = useInOut(start, durF);
+  const { local, visible } = useInOut(start, durF);
   if (!visible) return null;
   const fin = el.fadeIn ?? 6, fout = el.fadeOut ?? 5;
   const fade = Math.min(fin ? clamp01(local / fin) : 1, fout ? clamp01((durF - local) / fout) : 1);
@@ -268,10 +271,11 @@ export const Drill: React.FC<P<"drill">> = ({ el, start }) => {
   let stage = -1;
   cues.forEach((c, i) => { if (local >= c) stage = i; });
   const big: React.CSSProperties = { fontFamily: FONT, fontWeight: 900, textTransform: "uppercase", lineHeight: 1, textAlign: "center", position: "absolute", left: 0, width: W };
+  const CY = 960 - 590; // centro della palla = centro dello schermo (y 960)
   let body: React.ReactNode;
   if (stage < 0) {
     body = (
-      <div style={{ position: "absolute", top: 560, left: 0, width: W, padding: "0 70px", boxSizing: "border-box", textAlign: "center" }}>
+      <div style={{ position: "absolute", top: 620, left: 0, width: W, padding: "0 70px", boxSizing: "border-box", textAlign: "center" }}>
         <div style={{ display: "inline-block", background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 54, letterSpacing: 4, padding: "10px 34px", borderRadius: 18, transform: `scale(${pop(local, 0, fps)})` }}>ESERCIZIO {el.n}</div>
         {el.title.split("|").map((l, i) => {
           const k = easeOut((local - 5 - i * 6) / 12);
@@ -283,32 +287,33 @@ export const Drill: React.FC<P<"drill">> = ({ el, start }) => {
     const st = el.steps[stage], f0 = cues[stage], f1 = stage + 1 < cues.length ? cues[stage + 1] : durF - fout;
     const p = clamp01((local - f0) / Math.max(1, f1 - f0)), k = pop(local, f0, fps), sl = (local - f0) / fps;
     const color = st.color === "az" ? BRAND.az : st.color === "cream" ? BRAND.cream : BRAND.lime;
-    const r = st.shape === "grow" ? 150 + 230 * easeInOut(p) : st.shape === "shrink" ? 380 - 230 * easeInOut(p) : st.shape === "pulse" ? 240 + 50 * Math.sin(sl * Math.PI * 2 * 1.1) : 170 + 8 * Math.sin(sl * 4);
-    const circ = 2 * Math.PI * 300, feet = st.n ?? 3;
-    body = (
+    const r = st.shape === "grow" ? 130 + 205 * easeInOut(p) : st.shape === "shrink" ? 335 - 205 * easeInOut(p) : st.shape === "pulse" ? 220 + 46 * Math.sin(sl * Math.PI * 2 * 1.1) : 160 + 8 * Math.sin(sl * 4);
+    const circ = 2 * Math.PI * 290, feet = st.n ?? 3;
+    body = st.shape === "count" ? (
       <>
-        <div style={{ ...big, top: 215, fontSize: st.label.length > 12 ? 104 : 144, color, transform: `scale(${0.8 + 0.2 * k})`, opacity: k }}>{st.label}</div>
-        <div style={{ ...big, top: 372, fontSize: 54, color: BRAND.cream, fontWeight: 700, textTransform: "none", opacity: k }}>{st.sub}</div>
+        {/* una sola scritta grande al centro dello schermo */}
+        <div style={{ ...big, top: 760, fontSize: 300, color: BRAND.white, transform: `scale(${k})` }}>{st.big}</div>
+        <div style={{ ...big, top: 1050, fontSize: 130, color: BRAND.lime, opacity: k }}>{st.label}</div>
+        <div style={{ ...big, top: 1200, fontSize: 54, color: BRAND.cream, fontWeight: 700, textTransform: "none", opacity: k }}>{st.sub}</div>
+      </>
+    ) : (
+      <>
+        <div style={{ ...big, top: 372, fontSize: st.label.length > 12 ? 100 : 136, color, transform: `scale(${0.8 + 0.2 * k})`, opacity: k }}>{st.label}</div>
+        <div style={{ ...big, top: 520, fontSize: 52, color: BRAND.cream, fontWeight: 700, textTransform: "none", opacity: k }}>{st.sub}</div>
         {st.shape === "feet" ? (
-          <svg width={W} height={760} style={{ position: "absolute", top: 480, left: 0 }}>
-            <path d="M 540 740 L 540 20" stroke="rgba(255,255,255,0.12)" strokeWidth={6} strokeDasharray="20 24" />
-            {Array.from({ length: feet }).map((_, i) => <Foot key={i} x={540 + (i % 2 === 0 ? -95 : 95)} y={660 - i * (560 / Math.max(3, feet - 1)) * 0.9} color={color} flip={i % 2 === 1} k={easeOut((p * feet - i) / 0.5)} />)}
+          <svg width={W} height={720} style={{ position: "absolute", top: 600, left: 0 }}>
+            <path d="M 540 700 L 540 20" stroke="rgba(255,255,255,0.12)" strokeWidth={6} strokeDasharray="20 24" />
+            {Array.from({ length: feet }).map((_, i) => <Foot key={i} x={540 + (i % 2 === 0 ? -95 : 95)} y={630 - i * (540 / Math.max(3, feet - 1)) * 0.9} color={color} flip={i % 2 === 1} k={easeOut((p * feet - i) / 0.5)} />)}
           </svg>
-        ) : st.shape === "count" ? (
-          <div style={{ ...big, top: 640, fontSize: 330, color: BRAND.white, transform: `scale(${k})` }}>{st.big}</div>
         ) : (
-          <svg width={W} height={820} style={{ position: "absolute", top: 440, left: 0 }}>
-            <circle cx={540} cy={410} r={390} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth={4} />
-            {st.shape === "ring" ? <circle cx={540} cy={410} r={300} fill="none" stroke={BRAND.lime} strokeWidth={18} strokeLinecap="round" strokeDasharray={circ} strokeDashoffset={circ * (1 - p)} transform="rotate(-90 540 410)" /> : null}
-            <circle cx={540} cy={410} r={r} fill={color} opacity={0.22} />
-            <circle cx={540} cy={410} r={r * 0.78} fill={color} opacity={0.35} />
-            <circle cx={540} cy={410} r={r * 0.5} fill={color} />
-            {st.big ? <text x={540} y={470} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={170} fill={BRAND.ink}>{st.big}</text> : null}
+          <svg width={W} height={740} style={{ position: "absolute", top: 590, left: 0 }}>
+            <circle cx={540} cy={CY} r={350} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth={4} />
+            {st.shape === "ring" ? <circle cx={540} cy={CY} r={290} fill="none" stroke={BRAND.lime} strokeWidth={18} strokeLinecap="round" strokeDasharray={circ} strokeDashoffset={circ * (1 - p)} transform={`rotate(-90 540 ${CY})`} /> : null}
+            <circle cx={540} cy={CY} r={r} fill={color} opacity={0.22} />
+            <circle cx={540} cy={CY} r={r * 0.78} fill={color} opacity={0.35} />
+            <circle cx={540} cy={CY} r={r * 0.5} fill={color} />
           </svg>
         )}
-        <div style={{ position: "absolute", top: 1290, left: 0, width: W, display: "flex", justifyContent: "center", gap: 16 }}>
-          {el.steps.map((_, i) => <div key={i} style={{ width: i === stage ? 96 : 54, height: 16, borderRadius: 8, background: i <= stage ? BRAND.lime : "rgba(255,255,255,0.22)" }} />)}
-        </div>
       </>
     );
   }
@@ -316,8 +321,19 @@ export const Drill: React.FC<P<"drill">> = ({ el, start }) => {
     <AbsoluteFill style={{ background: "linear-gradient(180deg,#1C3D15 0%,#0B0F0A 70%)", opacity: fade, fontFamily: FONT }}>
       {/* durante le dissolvenze si vede solo il fondo: il contenuto non passa mai in trasparenza sul volto */}
       <AbsoluteFill style={{ opacity: fade < 1 ? 0 : 1 }}>
-      {stage >= 0 ? <div style={{ position: "absolute", top: 150, left: 0, width: W, textAlign: "center", fontWeight: 800, fontSize: 38, letterSpacing: 5, color: BRAND.lime, textTransform: "uppercase" }}>Esercizio {el.n} · {el.title.replace("|", " ")}</div> : null}
-      {body}
+        {stage >= 0 ? (
+          <div style={{ position: "absolute", top: 196, left: 0, width: W, textAlign: "center" }}>
+            {/* intestazione su due righe: «Esercizio n» / titolo */}
+            <div style={{ display: "inline-block", background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 40, letterSpacing: 4, padding: "6px 26px", borderRadius: 14, textTransform: "uppercase" }}>Esercizio {el.n}</div>
+            <div style={{ marginTop: 12, fontWeight: 800, fontSize: 46, letterSpacing: 2, color: BRAND.white, textTransform: "uppercase" }}>{el.title.replace("|", " ")}</div>
+          </div>
+        ) : null}
+        {body}
+        {stage >= 0 ? (
+          <div style={{ position: "absolute", top: 1322, left: 0, width: W, display: "flex", justifyContent: "center", gap: 16 }}>
+            {el.steps.map((_, i) => <div key={i} style={{ width: i === stage ? 96 : 54, height: 14, borderRadius: 7, background: i <= stage ? BRAND.lime : "rgba(255,255,255,0.22)" }} />)}
+          </div>
+        ) : null}
       </AbsoluteFill>
     </AbsoluteFill>
   );
@@ -329,16 +345,41 @@ export const Clip: React.FC<P<"clip">> = ({ el, start }) => {
   const durF = Math.round(el.dur * fps);
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
-  const b = pop(local, cueF(el, 0, fps, 1.2), fps), cardH = 300;
+  const b = pop(local, cueF(el, 0, fps, 1.2), fps), cardH = GFX_H - 6;
   return (
     <Zone out={out}>
-      <div style={{ position: "absolute", left: 0, top: 0, width: PANEL_W, height: cardH, borderRadius: 30, overflow: "hidden", border: `5px solid ${BRAND.lime}`, boxSizing: "border-box", boxShadow: "0 18px 44px rgba(0,0,0,0.55)", transform: `translateY(${(1 - s) * 50}px) scale(${0.9 + 0.1 * s})`, opacity: Math.min(1, s * 1.4), background: BRAND.ink }}>
+      <div style={{ position: "absolute", left: -30, top: 0, width: PANEL_W + 60, height: cardH, borderRadius: 34, overflow: "hidden", border: `6px solid ${BRAND.lime}`, boxSizing: "border-box", boxShadow: "0 18px 44px rgba(0,0,0,0.55)", transform: `translateY(${(1 - s) * 50}px) scale(${0.9 + 0.1 * s})`, opacity: Math.min(1, s * 1.4), background: BRAND.ink }}>
         <Sequence from={start} durationInFrames={durF} layout="none">
-          <OffthreadVideo src={staticFile(el.src)} muted startFrom={Math.round((el.from ?? 0) * fps)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: `50% ${(el.posY ?? 0.35) * 100}%`, transform: `scale(${1.04 + 0.04 * (local / durF)})` }} />
+          <OffthreadVideo src={staticFile(el.src)} muted startFrom={Math.round((el.from ?? 0) * fps)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: `50% ${(el.posY ?? 0.35) * 100}%`, transform: `scale(${1.03 + 0.04 * (local / durF)})` }} />
         </Sequence>
-        <div style={{ position: "absolute", left: 18, top: 16, background: "rgba(11,15,10,0.85)", color: BRAND.white, fontWeight: 800, fontSize: 38, padding: "6px 20px", borderRadius: 14, textTransform: "uppercase" }}>{el.tag}</div>
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 190, background: "linear-gradient(180deg, rgba(11,15,10,0) 0%, rgba(11,15,10,0.82) 70%)" }} />
+        <div style={{ position: "absolute", left: 20, top: 18, background: "rgba(11,15,10,0.85)", color: BRAND.white, fontWeight: 800, fontSize: 40, padding: "6px 22px", borderRadius: 14, textTransform: "uppercase" }}>{el.tag}</div>
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 16, textAlign: "center", fontWeight: 900, fontSize: 108, lineHeight: 1, textTransform: "uppercase", color: BRAND.lime, textShadow: SHADOW, transform: `scale(${0.6 + 0.4 * b})`, opacity: b }}>{el.text}</div>
       </div>
-      <div style={{ position: "absolute", left: 0, top: cardH + 14, width: PANEL_W, textAlign: "center", fontWeight: 900, fontSize: 112, lineHeight: 1, textTransform: "uppercase", color: BRAND.lime, textShadow: SHADOW, transform: `scale(${0.6 + 0.4 * b})`, opacity: b }}>{el.text}</div>
     </Zone>
   );
+};
+
+/* ---------- R4 · confronto tra due situazioni: domanda → risposta, a sinistra e a destra, agganciate alle parole ---------- */
+export const Compare: React.FC<P<"compare">> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const { local, s, out, visible, t } = useInOut(start, Math.round(el.dur * fps));
+  if (!visible) return null;
+  const f = [0, 1, 2, 3].map((i) => cueF(el, i, fps, 0.4 + i * 1.2));
+  const cw = (PANEL_W - 24) / 2, ch = GFX_H - 16;
+  const side = (i: number) => {
+    const d = el.sides[i], q = pop(local, f[i * 2], fps), a = pop(local, f[i * 2 + 1], fps);
+    const active = i === 0 ? local < f[2] : local >= f[2];
+    const color = i === 0 ? CORAL : BRAND.lime, hz = i === 0 ? 1.5 : 3.1;
+    return (
+      <div key={i} style={{ position: "absolute", left: i * (cw + 24), top: 0, width: cw, height: ch, borderRadius: 30, background: "rgba(11,15,10,0.9)", border: `5px solid ${a > 0.5 ? color : "rgba(255,255,255,0.18)"}`, boxSizing: "border-box", boxShadow: "0 16px 40px rgba(0,0,0,0.45)", opacity: q * (active ? 1 : 0.8), transform: `translateY(${(1 - q) * 40}px) scale(${active ? 1 : 0.96})` }}>
+        <div style={{ position: "absolute", left: 14, right: 14, top: 22, textAlign: "center", fontWeight: 800, fontSize: 46, lineHeight: 1.05, color: BRAND.white }}>{d.q}</div>
+        <svg width={cw} height={178} viewBox="-190 -112 380 300" style={{ position: "absolute", left: 0, top: 128 }}>
+          <RunnerFig phase={t * hz * Math.PI * 2} color={a > 0.5 ? color : "rgba(255,255,255,0.45)"} x={0} y={0} />
+        </svg>
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 18, textAlign: "center", fontWeight: 900, fontSize: 78, lineHeight: 1, textTransform: "uppercase", color, transform: `scale(${0.5 + 0.5 * a})`, opacity: a }}>{d.a}</div>
+      </div>
+    );
+  };
+  return <Zone out={out}><div style={{ opacity: s }}>{side(0)}{side(1)}</div></Zone>;
 };

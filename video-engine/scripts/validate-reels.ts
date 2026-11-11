@@ -1,10 +1,10 @@
 // Controlla per ogni reel: hook ed elementi non si sovrappongono nel tempo, stanno dentro il video, ancore risolte.
 import { REELS } from "../src/cn/reels51";
-import { layout, remapWords, resolveStart, secToFrames, sameWord } from "../src/cn/timeline";
+import { layout, remapWords, resolveStart, secToFrames, sameWord, tailFrames } from "../src/cn/timeline";
 let errors = 0;
 for (const r of REELS) {
   const p = r.props;
-  const { items, total } = layout(p.segments, p.blendFrames);
+  const { items, total } = layout(p.segments, p.blendFrames, tailFrames(p.tailSeconds));
   const words = remapWords(p.words, items, p.wordFix, p.wordOffset);
   const clean = (t: string) => t.toLowerCase().replace(/[.,?!;:«»"']/g, "");
   const found = (word: string, at: number) => words.some((w) => sameWord(w.text, word) && Math.abs(w.start - secToFrames(at)) <= 60);

@@ -196,15 +196,15 @@ export const Checklist: React.FC<{ el: Extract<Element, { kind: "checklist" }>; 
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
   return (
-    <div style={{ position: "absolute", left: 120, width: W - 240, top: ZONE_TOP, opacity: Math.min(1, s * 1.3) * out, fontFamily: FONT, display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <div style={{ position: "absolute", left: el.big ? 70 : 120, width: el.big ? W - 140 : W - 240, top: ZONE_TOP, opacity: Math.min(1, s * 1.3) * out, fontFamily: FONT, display: "flex", flexDirection: "column", alignItems: "center" }}>
       {el.items.map((it, i) => {
         const d = el.onAt ? Math.round(el.onAt[i] * fps) : i * 9; // riga agganciata alla parola detta, se ci sono `cues`
         const ls = spring({ frame: local - d, fps, config: { damping: 13, stiffness: 210 } });
         const struck = el.strike && local > d + 20;
         return (
-          <div key={i} style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 12, transform: `translateX(${(1 - ls) * -60}px)`, opacity: ls }}>
-            <div style={{ width: 54, height: 54, borderRadius: 14, background: struck ? "#C2412E" : BRAND.green, display: "flex", alignItems: "center", justifyContent: "center", color: BRAND.white, fontWeight: 900, fontSize: 36 }}>{struck ? "✕" : "✓"}</div>
-            <div style={{ background: "rgba(11,15,10,0.9)", color: BRAND.white, padding: "10px 26px", borderRadius: 14, fontWeight: 800, fontSize: 50, textDecoration: struck ? "line-through" : "none" }}>{it}</div>
+          <div key={i} style={{ display: "flex", alignItems: "center", gap: el.big ? 22 : 18, marginBottom: el.big ? 18 : 12, transform: `translateX(${(1 - ls) * -60}px)`, opacity: ls }}>
+            <div style={{ width: el.big ? 72 : 54, height: el.big ? 72 : 54, flexShrink: 0, borderRadius: el.big ? 18 : 14, background: struck ? "#C2412E" : BRAND.green, display: "flex", alignItems: "center", justifyContent: "center", color: BRAND.white, fontWeight: 900, fontSize: el.big ? 48 : 36 }}>{struck ? "✕" : "✓"}</div>
+            <div style={{ background: "rgba(11,15,10,0.9)", color: BRAND.white, padding: el.big ? "14px 30px" : "10px 26px", borderRadius: el.big ? 18 : 14, fontWeight: 800, fontSize: el.big ? 66 : 50, lineHeight: 1.05, textDecoration: struck ? "line-through" : "none" }}>{it}</div>
           </div>
         );
       })}

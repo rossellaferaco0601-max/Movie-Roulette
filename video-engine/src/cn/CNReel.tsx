@@ -3,14 +3,14 @@ import { loadFont } from "@remotion/google-fonts/Blinker";
 import { useMemo } from "react";
 import type { CNReelProps, Element } from "./types";
 import { FPS, TAIL_FRAMES, H } from "./types";
-import { layout, remapWords, resolveStart, resolveCues, secToFrames } from "./timeline";
+import { layout, remapWords, resolveStart, resolveCues, secToFrames, tailFrames } from "./timeline";
 import { Captions } from "./Captions";
 import { Hook } from "./Hook";
 import { ElementView } from "./Elements";
 import { Text3D, Wave, Sphere3D, Gauge3D, ECG, Steps, Bars } from "./Elements3D";
 import { CTA } from "./CTA";
 import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
-import { Clip, Step, Airflow, Filter, Beats, Ring, Duo, Slam, Orbit, Drill, slamImpact, slamShake } from "./Elements5";
+import { Clip, Compare, Step, Airflow, Filter, Beats, Ring, Duo, Slam, Orbit, Drill, slamImpact, slamShake, orbitCam } from "./Elements5";
 import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide, Question, NameTag } from "./Elements4";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
@@ -41,6 +41,7 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "guide": return <Guide el={el} start={start} />;
     case "question": return <Question el={el} start={start} />;
     case "clip": return <Clip el={el} start={start} />;
+    case "compare": return <Compare el={el} start={start} />;
     case "step": return <Step el={el} start={start} />;
     case "airflow": return <Airflow el={el} start={start} />;
     case "filter": return <Filter el={el} start={start} />;
@@ -66,11 +67,13 @@ const Master: React.FC<{ src: string; total: number }> = ({ src, total }) => {
 export const CNReel: React.FC<CNReelProps> = (p) => {
   const { fps } = useVideoConfig();
   const frame = useCurrentFrame();
-  const { items, total } = useMemo(() => layout(p.segments, p.blendFrames), [p.segments, p.blendFrames]);
+  const tailF = tailFrames(p.tailSeconds);
+  const { items, total } = useMemo(() => layout(p.segments, p.blendFrames, tailF), [p.segments, p.blendFrames, tailF]);
   const words = useMemo(() => remapWords(p.words, items, p.wordFix, p.wordOffset), [p.words, items, p.wordFix, p.wordOffset]);
   const starts = useMemo(() => p.elements.map((el) => resolveStart(el, words)), [p.elements, words]);
   const ctaFrames = Math.round(p.ctaSeconds * fps);
-  const xfade = TAIL_FRAMES;
+  const xfade = Math.min(tailF, 22); // la CTA entra in dissolvenza alla fine della coda
+  const tailPush = tailF > TAIL_FRAMES ? 1 + 0.03 * interpolate(frame, [total - tailF, total], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 1; // coda lunga: il fermo immagine avanza piano, non resta immobile
   const videoFade = interpolate(frame, [total - xfade, total], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   // camera del titolo spezzato: il video scende sotto la scheda a tutta larghezza (la testa resta intera)
   let cam = 0;
@@ -84,12 +87,20 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
   let shake = { dx: 0, dy: 0, sc: 1 };
   p.elements.forEach((el, i) => { if (el.kind === "slam") { const sh = slamShake(frame, slamImpact({ ...el, onAt: resolveCues(el, starts[i], words) } as Extract<Element, { kind: "slam" }>, starts[i], fps)); if (sh.sc !== 1) shake = sh; } });
 
+  // orbita: il video continua a scorrere ma arretra (ancorato in basso), su fondo brand
+  let orb = 0, orbBack = 0.72;
+  p.elements.forEach((el, i) => { if (el.kind === "orbit") { const z = orbitCam(el, starts[i], frame, fps); if (z > orb) { orb = z; orbBack = el.back ?? 0.72; } } });
+  const orbScale = 1 - (1 - orbBack) * orb;
+
   return (
     <AbsoluteFill style={{ background: "#2F4D1E", fontFamily: "Blinker, sans-serif" }}>
       <Sequence from={0} durationInFrames={total} layout="none">
         {cam > 0 ? <AbsoluteFill style={{ background: "#E9E4D2", opacity: cam }} /> : null}
-        <AbsoluteFill style={{ opacity: videoFade, transform: `translate(${shake.dx}px, ${camShift + shake.dy}px) scale(${hookZoom * shake.sc})`, transformOrigin: "50% 30%" }}>
+        {orb > 0 ? <AbsoluteFill style={{ background: "linear-gradient(180deg,#1C3D15 0%,#0B0F0A 100%)" }} /> : null}
+        <AbsoluteFill style={{ transform: `scale(${orbScale})`, transformOrigin: "50% 100%", borderRadius: 44 * orb, overflow: "hidden", boxShadow: orb > 0 ? "0 -20px 80px rgba(0,0,0,0.6)" : "none" }}>
+        <AbsoluteFill style={{ opacity: videoFade, transform: `translate(${shake.dx}px, ${camShift + shake.dy}px) scale(${hookZoom * shake.sc * tailPush})`, transformOrigin: "50% 30%" }}>
           <Master src={p.master} total={total} />
+        </AbsoluteFill>
         </AbsoluteFill>
         {p.hook ? <Hook hook={p.hook} /> : null}
         <AbsoluteFill style={{ transform: `translateY(${p.gfxShift ?? 0}px) scale(${p.gfxScale ?? 1})`, transformOrigin: `50% ${H * 0.44}px` }}>
@@ -108,4 +119,4 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
   );
 };
 
-export const reelDuration = (p: CNReelProps) => layout(p.segments, p.blendFrames).total + Math.round(p.ctaSeconds * FPS);
+export const reelDuration = (p: CNReelProps) => layout(p.segments, p.blendFrames, tailFrames(p.tailSeconds)).total + Math.round(p.ctaSeconds * FPS);
