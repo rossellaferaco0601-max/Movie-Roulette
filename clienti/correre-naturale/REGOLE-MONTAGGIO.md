@@ -353,3 +353,11 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
     Le scritte degli elenchi devono essere grandi (`big`). La clip realistica in un riquadro grande e luminoso.
   - **Due situazioni a confronto** («Perdi il controllo? Cammina» / «Torni calmo? Riparti»): elemento `compare`, con la domanda visibile.
   - L'omino di R4 deve correre **piano più a lungo**. R8 parte da «La corsa non è un test di resistenza».
+- **2026-11-11 pomeriggio (Ross su R2 v10: «animazioni troppo veloci, non riesco neanche a leggere», «pausa lunga prima della CTA», «CTA troppo
+  incasinata, troppe cose da leggere in troppo poco tempo»)**:
+  - **Tempo di lettura**: ogni scritta resta a schermo **almeno 1 secondo** dopo essere comparsa (meglio 1,2-1,5). `validate-reels.ts` lo
+    controlla sull'ultimo aggancio di ogni grafica («LETTURA … NON basta»). Se la frase successiva incalza, si sposta l'inizio della grafica dopo.
+  - **Coda prima della CTA**: mai più di ~1,3 s e solo se a schermo c'è ancora una grafica che si sta leggendo; 1,6 s di fermo era «una pausa lunga».
+  - **CTA chiara e ordinata**: tre passi uno alla volta, dall'alto in basso, e quello sopra si attenua quando parte il successivo:
+    1) domanda + «coaching personalizzato di Correre Naturale®» in una fascia lime; 2) «Commenta» + parola, campo che si scrive e «Pubblica»
+    con il suono; 3) notifica con il logo («Ti mando tutte le info»). Tolti: frase lunga di sottotitolo, coriandoli, bottone «Segui». Durata 8 s.

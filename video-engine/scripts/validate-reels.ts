@@ -12,8 +12,10 @@ for (const r of REELS) {
   p.elements.forEach((el, i) => {
     const a = resolveStart(el, words);
     const anchored = el.word ? (found(el.word, el.at) ? "ancora" : "ancora NON trovata") : "";
+    let lastCue = a; { let fr = a - 4; for (const c of el.cues ?? []) { const w = words.find((x) => x.start >= fr && sameWord(x.text, c)); if (w) { lastCue = w.start; fr = w.start + 1; } } }
+    const readS = (a + secToFrames(el.dur) - lastCue) / 30; const fast = !/drill|orbit|guide/.test(el.kind) && readS < 1.0 ? ` LETTURA ${readS.toFixed(2)} s NON basta` : "";
     let from = a - 4; const missing = (el.cues ?? []).filter((c) => { const w = words.find((x) => x.start >= from && x.start <= a + secToFrames(el.dur) && sameWord(x.text, c)); if (w) from = w.start + 1; return !w; });
-    iv.push({ name: `${i + 1}.${el.kind}${anchored ? " (" + anchored + ")" : ""}${missing.length ? " aggancio NON trovato: " + missing.join(",") : ""}`, a, b: a + secToFrames(el.dur) });
+    iv.push({ name: `${i + 1}.${el.kind}${anchored ? " (" + anchored + ")" : ""}${missing.length ? " aggancio NON trovato: " + missing.join(",") : ""}${fast}`, a, b: a + secToFrames(el.dur) });
   });
   const CAMERA_FX = new Set(["lean-in", "slow-push", "dot-reveal", "moody"]); // effetti di camera: non occupano la zona grafiche
   (p.fx ?? []).forEach((f, i) => {
@@ -28,7 +30,8 @@ for (const r of REELS) {
     const x = iv[i];
     const problems: string[] = [];
     if (x.b > total - 2 && !x.name.includes("split")) problems.push(`finisce dopo il video (${(x.b / 30).toFixed(2)} > ${(total / 30).toFixed(2)})`);
-    if (x.name.includes("NON")) problems.push("parola ancora non trovata");
+    if (x.name.includes("NON trovat")) problems.push("parola non trovata");
+    if (x.name.includes("NON basta")) problems.push("l'ultima scritta resta a schermo meno di 1 s");
     for (let j = 0; j < i; j++) {
       const y = iv[j];
       const full = (n: string) => /\.(orbit|drill|guide)/.test(n);
