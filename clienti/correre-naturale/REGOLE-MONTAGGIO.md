@@ -373,3 +373,5 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 - **2026-11-11 sera (Ross)**: la CTA «deve solo essere chiara»: **nessuna ombra** (né sul pannello né sotto campo e notifica) e nessuna
   attenuazione. R5 può superare di poco il minuto e mezzo. Le **testimonianze non si toccano** (Daniela v6 e Massimiliano restano come sono,
   anche nella CTA) finché Ross non lo chiede.
+- **2026-11-11 (clic della CTA)**: la normalizzazione del volume alza il clic di «Pubblica» fino al picco del parlato (la CTA è quasi muta):
+  `cn_finish.sh` lo riporta giù dopo la normalizzazione (finestra attorno a 4,73 s dall'inizio della CTA, guadagno 0,3 → picco circa −12 dB).
