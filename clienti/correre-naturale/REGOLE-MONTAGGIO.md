@@ -336,3 +336,7 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - **«Effetto schianto»** = elemento `slam`: la parola piomba sullo schermo sull'attacco della parola detta, con urto e scossa della camera.
   - **Orbita con fermo immagine** = elemento `orbit`: il video si ferma e arretra, i titoli girano sopra la testa e si impilano (mai sul volto).
   - R5 ora contiene **tutti e tre gli esercizi** (`R5-esercizi`); **R6 e R7 scartati**. R8: tolto «di questo video» da «Il concetto chiave è che…».
+- **2026-11-11 (Ross: «vai con la clip video»)**: per i soggetti realistici si usano **clip generate con Canva** (strumento `create-video`, 5-30 s, 720p):
+  ogni generazione va chiesta a Ross prima (consuma il suo limite AI). Si scaricano da `media.canva.com` (host aggiunto all'ambiente) e si
+  montano con l'elemento `clip` (scheda sotto il mento, movimento agganciato alla parola). Prima clip: `public/ytcn51/b3d/runner_naso.mp4`
+  (runner che chiude la bocca a 2,4 s), usata in R3 al posto della bocca disegnata.

@@ -99,15 +99,16 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
     props: {
       ...base,
       master: master("R3-bocca"),
-      segments: [seg(74.26, 98.56)],
-      // motivo visivo del reel 3: bocca chiusa / energia (bocca illustrata che si chiude, lista, sfera, grafico)
+      // 11/11: la bocca disegnata («dozzinale») è sostituita da una clip realistica generata (Canva), che chiude la bocca su «chiudi»;
+      // le altre grafiche sono le stesse della v8, agganciate alle parole
+      segments: cut([74.2, 98.5]),
       hook: null,
       elements: [
-        { kind: "mouth", at: 0, dur: 3.4, lines: ["Durante la corsa", "Chiudi la bocca"] },
-        { kind: "checklist", at: 4.2, word: "rallenta", dur: 4.3, items: ["Voglia di aprire la bocca?", "Rallenta o cammina"] },
-        { kind: "widget", at: 9.9, dur: 5.3, title: "Respirazione nasale", lines: ["Stimola il diaframma", "Ossigena i tessuti", "Calma il sistema nervoso"] },
-        { kind: "sphere3d", at: 15.8, dur: 4.7, phases: BREATH },
-        { kind: "graph", at: 21.0, word: "energia", dur: 3.1, title: "Energia dopo la corsa", label: "non meno, come spesso capita", from: 40, to: 100 },
+        { kind: "clip", at: 0.1, word: "durante", dur: 2.3, cues: ["chiudi"], src: "ytcn51/b3d/runner_naso.mp4", from: 1.0, posY: 0.05, tag: "Durante la corsa", text: "Chiudi la bocca" },
+        { kind: "checklist", at: 2.98, word: "voglia", dur: 5.2, cues: ["voglia", "rallenta"], items: ["Voglia di aprire la bocca?", "Rallenta o cammina"] },
+        { kind: "widget", at: 9.96, word: "respirazione", dur: 5.55, cues: ["stimola", "ossigena", "calma"], title: "Respirazione nasale", lines: ["Stimola il diaframma", "Ossigena i tessuti", "Calma il sistema nervoso"] },
+        { kind: "sphere3d", at: 15.86, word: "correre", dur: 4.6, phases: BREATH },
+        { kind: "graph", at: 20.86, word: "energia", dur: 3.2, title: "Energia dopo la corsa", label: "non meno, come spesso capita", from: 40, to: 100 },
       ],
       cta: { word: "ENERGIA", title: "Vuoi finire la corsa con più energia di prima?" },
     },

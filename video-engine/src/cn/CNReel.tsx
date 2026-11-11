@@ -10,7 +10,7 @@ import { ElementView } from "./Elements";
 import { Text3D, Wave, Sphere3D, Gauge3D, ECG, Steps, Bars } from "./Elements3D";
 import { CTA } from "./CTA";
 import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
-import { Step, Airflow, Filter, Beats, Ring, Duo, Slam, Orbit, Drill, slamImpact, slamShake } from "./Elements5";
+import { Clip, Step, Airflow, Filter, Beats, Ring, Duo, Slam, Orbit, Drill, slamImpact, slamShake } from "./Elements5";
 import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide, Question, NameTag } from "./Elements4";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
@@ -40,6 +40,7 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "stack": return <Stack el={el} start={start} />;
     case "guide": return <Guide el={el} start={start} />;
     case "question": return <Question el={el} start={start} />;
+    case "clip": return <Clip el={el} start={start} />;
     case "step": return <Step el={el} start={start} />;
     case "airflow": return <Airflow el={el} start={start} />;
     case "filter": return <Filter el={el} start={start} />;

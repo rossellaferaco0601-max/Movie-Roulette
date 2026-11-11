@@ -1,4 +1,4 @@
-import { AbsoluteFill, Freeze, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig, spring, interpolate, Easing, random } from "remotion";
+import { AbsoluteFill, Freeze, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig, spring, interpolate, Easing, random } from "remotion";
 import type { Element } from "./types";
 import { BRAND, W, H, PANEL_X, PANEL_W, GFX_TOP, GFX_H } from "./types";
 import { useInOut } from "./Elements3D";
@@ -320,5 +320,25 @@ export const Drill: React.FC<P<"drill">> = ({ el, start }) => {
       {body}
       </AbsoluteFill>
     </AbsoluteFill>
+  );
+};
+
+/* ---------- R3 · clip realistica (girato generato) in una scheda sotto il mento: etichetta all'inizio, scritta grande sull'aggancio ---------- */
+export const Clip: React.FC<P<"clip">> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible } = useInOut(start, durF);
+  if (!visible) return null;
+  const b = pop(local, cueF(el, 0, fps, 1.2), fps), cardH = 300;
+  return (
+    <Zone out={out}>
+      <div style={{ position: "absolute", left: 0, top: 0, width: PANEL_W, height: cardH, borderRadius: 30, overflow: "hidden", border: `5px solid ${BRAND.lime}`, boxSizing: "border-box", boxShadow: "0 18px 44px rgba(0,0,0,0.55)", transform: `translateY(${(1 - s) * 50}px) scale(${0.9 + 0.1 * s})`, opacity: Math.min(1, s * 1.4), background: BRAND.ink }}>
+        <Sequence from={start} durationInFrames={durF} layout="none">
+          <OffthreadVideo src={staticFile(el.src)} muted startFrom={Math.round((el.from ?? 0) * fps)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: `50% ${(el.posY ?? 0.35) * 100}%`, transform: `scale(${1.04 + 0.04 * (local / durF)})` }} />
+        </Sequence>
+        <div style={{ position: "absolute", left: 18, top: 16, background: "rgba(11,15,10,0.85)", color: BRAND.white, fontWeight: 800, fontSize: 38, padding: "6px 20px", borderRadius: 14, textTransform: "uppercase" }}>{el.tag}</div>
+      </div>
+      <div style={{ position: "absolute", left: 0, top: cardH + 14, width: PANEL_W, textAlign: "center", fontWeight: 900, fontSize: 112, lineHeight: 1, textTransform: "uppercase", color: BRAND.lime, textShadow: SHADOW, transform: `scale(${0.6 + 0.4 * b})`, opacity: b }}>{el.text}</div>
+    </Zone>
   );
 };
