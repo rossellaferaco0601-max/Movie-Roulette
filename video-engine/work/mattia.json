@@ -1,0 +1,57 @@
+{
+ "id": "T4-mattia",
+ "src": "public/testimonianze/C3497-006.MP4",
+ "pre": "crop=540:960:708:88,scale=1080:1920:flags=lanczos+accurate_rnd",
+ "out": "public/testimonianze/T4-mattia.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1.03
+ ],
+ "blendFrames": 5,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 42.98,
+   "to": 55.88
+  },
+  {
+   "from": 126.177,
+   "to": 138.8103
+  },
+  {
+   "from": 172.337,
+   "to": 179.9703
+  },
+  {
+   "from": 399.477,
+   "to": 408.8103
+  },
+  {
+   "from": 411.017,
+   "to": 420.4503
+  },
+  {
+   "from": 447.737,
+   "to": 450.0703
+  },
+  {
+   "from": 461.757,
+   "to": 464.857
+  },
+  {
+   "from": 465.977,
+   "to": 471.077
+  },
+  {
+   "from": 479.827,
+   "to": 493.827
+  },
+  {
+   "from": 554.217,
+   "to": 557.2837
+  }
+ ]
+}

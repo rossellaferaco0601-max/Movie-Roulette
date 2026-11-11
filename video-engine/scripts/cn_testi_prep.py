@@ -28,8 +28,13 @@ info = {"raw": raw, "duration": round(dur, 2), "face": {"cx": round(cx), "top": 
 wav = f"work/{name}.wav"
 subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", raw, "-vn", "-ac", "1", "-ar", "16000", wav], check=True)
 subprocess.run(["python3", "scripts/transcribe.py", wav, "--model", "medium", "--lang", "it", "--out", f"work/{name}_whisper.json"], check=True, stdout=subprocess.DEVNULL)
-r = subprocess.run(["python3", "scripts/cn_align.py", wav, f"work/{name}_whisper.json", f"work/{name}_words.json", "25"], capture_output=True, text=True)
-info["align"] = r.stdout.strip().split("\n")[-1]
+# l'allineamento con una banda troppo stretta non trova un percorso e sbaglia tutto (scarto mediano = banda): si allarga finché torna
+import re
+for band in ("8", "25", "60", "120"):
+    r = subprocess.run(["python3", "scripts/cn_align.py", wav, f"work/{name}_whisper.json", f"work/{name}_words.json", band], capture_output=True, text=True)
+    info["align"] = r.stdout.strip().split("\n")[-1]
+    m = re.search(r"mediana (-?\d+) ms", info["align"])
+    if m and abs(int(m.group(1))) < 300: break
 ws = json.load(open(f"work/{name}_words.json")); out = []
 for x in ws:
     if x["text"].strip().startswith("'") and out:

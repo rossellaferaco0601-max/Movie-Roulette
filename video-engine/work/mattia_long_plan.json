@@ -1,0 +1,10 @@
+{"blendFrames": 8, "gap": 1.6, "chapters": [
+ {"q": "Quanto sei migliorato rispetto a prima del percorso?", "ranges": [[42.9, 64.5]]},
+ {"q": "Quali erano i tuoi obiettivi prima?", "ranges": [[69.8, 101.9], [113.93, 160.0]]},
+ {"q": "Qual è il miglior beneficio che hai ottenuto?", "ranges": [[172.3, 258.95]]},
+ {"q": "Il percorso ha migliorato anche altri ambiti della tua vita?", "ranges": [[270.73, 392.5]]},
+ {"q": "Avevi delle resistenze prima di cominciare?", "ranges": [[399.56, 450.1]]},
+ {"q": "Cosa diresti a chi è indeciso?", "ranges": [[459.05, 493.75]]},
+ {"q": "Qualcosa da aggiungere sul percorso?", "ranges": [[504.95, 543.2]]},
+ {"q": "La tua esperienza in una parola?", "ranges": [[554.9, 557.3]]}
+]}

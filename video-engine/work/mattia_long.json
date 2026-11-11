@@ -1,0 +1,93 @@
+{
+ "segments": [
+  {
+   "from": 42.9,
+   "to": 64.63,
+   "zoom": 1.0
+  },
+  {
+   "from": 69.67,
+   "to": 102.03,
+   "zoom": 1.06
+  },
+  {
+   "from": 113.8,
+   "to": 160.13,
+   "zoom": 1.06
+  },
+  {
+   "from": 172.17,
+   "to": 259.08,
+   "zoom": 1.0
+  },
+  {
+   "from": 270.6,
+   "to": 392.63,
+   "zoom": 1.06
+  },
+  {
+   "from": 399.43,
+   "to": 450.23,
+   "zoom": 1.0
+  },
+  {
+   "from": 458.92,
+   "to": 493.88,
+   "zoom": 1.06
+  },
+  {
+   "from": 504.82,
+   "to": 543.33,
+   "zoom": 1.0
+  },
+  {
+   "from": 554.77,
+   "to": 557.3,
+   "zoom": 1.06
+  }
+ ],
+ "chapters": [
+  {
+   "q": "Quanto sei migliorato rispetto a prima del percorso?",
+   "seg": 0,
+   "at": 0.0
+  },
+  {
+   "q": "Quali erano i tuoi obiettivi prima?",
+   "seg": 1,
+   "at": 21.47
+  },
+  {
+   "q": "Qual è il miglior beneficio che hai ottenuto?",
+   "seg": 3,
+   "at": 99.63
+  },
+  {
+   "q": "Il percorso ha migliorato anche altri ambiti della tua vita?",
+   "seg": 4,
+   "at": 186.27
+  },
+  {
+   "q": "Avevi delle resistenze prima di cominciare?",
+   "seg": 5,
+   "at": 308.03
+  },
+  {
+   "q": "Cosa diresti a chi è indeciso?",
+   "seg": 6,
+   "at": 358.57
+  },
+  {
+   "q": "Qualcosa da aggiungere sul percorso?",
+   "seg": 7,
+   "at": 393.27
+  },
+  {
+   "q": "La tua esperienza in una parola?",
+   "seg": 8,
+   "at": 431.5
+  }
+ ],
+ "blendFrames": 8,
+ "total": 434.03333333333336
+}

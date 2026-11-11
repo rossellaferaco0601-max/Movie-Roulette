@@ -3,6 +3,8 @@ import wordsMassimilianoLong from "./wordsMassimilianoLong.json";
 import planMassimiliano from "../../work/massimiliano_long.json";
 import wordsLauraLong from "./wordsLauraLong.json";
 import planLaura from "../../work/laura_long.json";
+import wordsTaddeoLong from "./wordsTaddeoLong.json";
+import planTaddeo from "../../work/taddeo_long.json";
 
 /** Versioni lunghe orizzontali delle testimonianze (piano dei tagli: scripts/cn_long_plan.py). */
 export const LONGS: { id: string; props: CNLongProps }[] = [
@@ -35,6 +37,22 @@ export const LONGS: { id: string; props: CNLongProps }[] = [
       chapters: planLaura.chapters,
       name: "Laura",
       sub: "Roma · con Correre Naturale dal 2016",
+      end: { title: "Vuoi scrivere anche tu la tua storia?", sub: "Scopri i percorsi di coaching personalizzato" },
+      endSeconds: 6,
+    },
+  },
+  {
+    id: "T3-taddeo-lungo",
+    props: {
+      master: "testimonianze/T3-taddeo-lungo.mp4",
+      segments: [{ from: 0, to: planTaddeo.total }],
+      blendFrames: 0,
+      words: wordsTaddeoLong as CNLongProps["words"],
+      wordFix: {},
+      wordOffset: -0.05,
+      chapters: planTaddeo.chapters,
+      name: "Taddeo",
+      sub: "Vicenza",
       end: { title: "Vuoi scrivere anche tu la tua storia?", sub: "Scopri i percorsi di coaching personalizzato" },
       endSeconds: 6,
     },

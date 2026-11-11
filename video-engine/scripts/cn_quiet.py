@@ -1,23 +1,32 @@
 #!/usr/bin/env python3
-"""Punti di taglio dell'audio nelle pause, per i pezzi di un'intervista.
-Per ogni pezzo «inizio prima parola - fine ultima parola» (tempi delle parole allineate) cerca il punto più silenzioso
-nella pausa che precede la prima parola (ultimi 0,35 s) e in quella che segue l'ultima (primi 0,45 s, o fino alla parola dopo).
-Uso: python3 scripts/cn_quiet.py audio16k.wav parole.json "a1-b1,a2-b2,..."
-Stampa i pezzi pronti per cut([...]) e segnala le pause strette (< 0,12 s) o non silenziose (> -55 dB), da controllare a orecchio/trascrizione."""
-import json, sys, wave, numpy as np
+"""Punti di taglio dell'audio nei SILENZI VERI attorno ai pezzi di un'intervista.
+Per ogni pezzo «inizio prima parola - fine ultima parola» (tempi indicativi delle parole allineate) cerca il silenzio che
+precede l'attacco e quello che segue la chiusura (intervalli di almeno 60 ms sotto soglia; soglia = rumore di fondo + 7 dB)
+e mette il taglio 0,12 s prima dell'attacco e 0,16 s dopo la chiusura (o al centro del silenzio, se è più corto).
+Uso: python3 scripts/cn_quiet.py audio16k.wav "a1-b1,a2-b2,..."
+Stampa i pezzi pronti per cut([...]); ⚠ se entro 0,7 s non c'è un silenzio (frasi legate: scegliere un altro punto)."""
+import sys, wave, numpy as np
 w = wave.open(sys.argv[1]); sr = w.getframerate(); a = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32) / 32768
-ws = json.load(open(sys.argv[2])); S = [x["startMs"] / 1000 for x in ws]; E = [x["endMs"] / 1000 for x in ws]
-def db(t, win=0.03): return 20 * np.log10(float(np.sqrt(np.mean(a[max(0, int((t - win / 2) * sr)):int((t + win / 2) * sr)] ** 2))) + 1e-9)
-def quiet(t0, t1):
-    xs = np.arange(t0 + 0.015, max(t0 + 0.02, t1 - 0.015), 0.005); return min(xs, key=db)
+hop = int(0.01 * sr); E = np.array([20 * np.log10(float(np.sqrt(np.mean(a[i:i + 2 * hop] ** 2))) + 1e-9) for i in range(0, len(a) - 2 * hop, hop)])
+thr = float(np.percentile(E, 10)) + 7
+q = E < thr; sil = []; st = None
+for i, v in enumerate(q):
+    if v and st is None: st = i
+    if not v and st is not None:
+        if i - st >= 6: sil.append((st / 100, i / 100))
+        st = None
 out = []
-for piece in sys.argv[3].split(","):
+for piece in sys.argv[2].split(","):
     f, t = [float(v) for v in piece.split("-")]
-    i = min(range(len(ws)), key=lambda k: abs(S[k] - f)); j = min(range(len(ws)), key=lambda k: abs(E[k] - t))
-    p0 = E[i - 1] if i else 0.0; n1 = S[j + 1] if j + 1 < len(ws) else E[j] + 2
-    cin = quiet(max(p0, S[i] - 0.35), S[i]); cout = quiet(E[j], min(n1, E[j] + 0.45))
-    warn = ("  ⚠ pausa stretta prima" if S[i] - p0 < 0.12 else "") + ("  ⚠ pausa stretta dopo" if n1 - E[j] < 0.12 else "") + ("  ⚠ non silenzioso" if max(db(cin), db(cout)) > -55 else "")
-    out.append((round(float(cin), 2), round(float(cout), 2), f"«{ws[i]['text'].strip()} … {ws[j]['text'].strip()}»  {db(cin):.0f} / {db(cout):.0f} dB{warn}"))
+    before = [s for s in sil if s[1] <= f + 0.12 and s[1] >= f - 0.7]
+    after = [s for s in sil if s[0] >= t - 0.12 and s[0] <= t + 0.7]
+    warn = ""
+    if before: s0, s1 = before[-1]; cin = max(s0 + 0.02, s1 - 0.12) if s1 - s0 > 0.16 else (s0 + s1) / 2
+    else: cin = f - 0.08; warn += "  ⚠ nessun silenzio prima"
+    if after: s0, s1 = after[0]; cout = min(s1 - 0.02, s0 + 0.16) if s1 - s0 > 0.2 else (s0 + s1) / 2
+    else: cout = t + 0.1; warn += "  ⚠ nessun silenzio dopo"
+    out.append((round(cin, 2), round(cout, 2), warn))
+print(f"soglia {thr:.0f} dB")
 print(", ".join(f"[{a_}, {b_}]" for a_, b_, _ in out))
-for a_, b_, m in out: print(f"  {a_:7.2f} → {b_:7.2f}  ({b_ - a_:5.2f} s)  {m}")
+for (a_, b_, m), piece in zip(out, sys.argv[2].split(",")): print(f"  {piece:>16s}  →  {a_:7.2f} - {b_:7.2f}  ({b_ - a_:5.2f} s){m}")
 print("totale", round(sum(b_ - a_ for a_, b_, _ in out), 2))

@@ -1,0 +1,66 @@
+{
+ "id": "T4-mattia-lungo",
+ "src": "public/testimonianze/C3497-006.MP4",
+ "out": "public/testimonianze/T4-mattia-lungo.mp4",
+ "size": [
+  1920,
+  1080
+ ],
+ "faceX": 0.51,
+ "faceY": 0.347,
+ "zooms": [
+  1.0,
+  1.06
+ ],
+ "blendFrames": 8,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 42.9,
+   "to": 64.63,
+   "zoom": 1.0
+  },
+  {
+   "from": 69.67,
+   "to": 102.03,
+   "zoom": 1.06
+  },
+  {
+   "from": 113.8,
+   "to": 160.13,
+   "zoom": 1.06
+  },
+  {
+   "from": 172.17,
+   "to": 259.08,
+   "zoom": 1.0
+  },
+  {
+   "from": 270.6,
+   "to": 392.63,
+   "zoom": 1.06
+  },
+  {
+   "from": 399.43,
+   "to": 450.23,
+   "zoom": 1.0
+  },
+  {
+   "from": 458.92,
+   "to": 493.88,
+   "zoom": 1.06
+  },
+  {
+   "from": 504.82,
+   "to": 543.33,
+   "zoom": 1.0
+  },
+  {
+   "from": 554.77,
+   "to": 557.3,
+   "zoom": 1.06
+  }
+ ],
+ "broll": []
+}

@@ -398,3 +398,13 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
     «modero» → «moderno», «motor» → «motore»). Da controllare sempre rileggendo i sottotitoli nei fotogrammi di controllo.
   - Audio in un solo passaggio in `cn_finish.sh`: normalizzazione, clic della CTA attenuato, limitatore sui picchi, 48 kHz (prima usciva a 96 kHz
     con qualche picco sopra 0 dB); il volume finale resta attorno a −15 LUFS come nei v11.
+- **2026-11-11 notte (testimonianze del Drive, su richiesta di Ross: «edita le altre testimonianze che trovi nel drive»)**:
+  - Stesso schema di Massimiliano: reel verticale ≤ 1 min e mezzo con solo il nome, domande a schermo, CTA PERCORSO; versione lunga orizzontale
+    con le domande come capitoli. Fatti: Laura (T2), Taddeo (T3), Mattia (T4). Restano C3500, C3501, C3502, C3504.
+  - Preparazione automatica: `scripts/cn_testi_prep.py` (volto → ritaglio verticale con la fronte a 0,10, trascrizione, allineamento con banda che si
+    allarga da sola, parole per i sottotitoli). Il master legge il girato grezzo solo nei pezzi che servono (`pre` in `cn_master_v.py`).
+  - **I tagli si mettono nei silenzi veri misurati sull'audio** (`scripts/cn_pauses.py`, `scripts/cn_quiet.py`), non sui tempi delle parole:
+    chi parla fitto lega le frasi e trascina le vocali, e l'allineamento lì sbaglia anche di mezzo secondo. Mai tagliare dove non c'è silenzio.
+  - Volto medio (Laura, Taddeo): `gfxShift: 50`, `capShift: 30`, avvicinamento alterno 1,04. Volto grande (Mattia, come Massimiliano):
+    `gfxShift: 173`, `gfxScale: 0.8`, `capShift: 30`, avvicinamento 1,03; controllo del volto con bordo a 0,53.
+  - Spazio su disco: un girato grezzo alla volta (3-4,7 GB l'uno); dopo reel e versione lunga la copia locale si cancella (gli originali restano sul Drive).

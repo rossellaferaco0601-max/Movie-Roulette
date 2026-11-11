@@ -3,6 +3,7 @@ import wordsDaniela from "./wordsDaniela.json";
 import wordsMassimiliano from "./wordsMassimiliano.json";
 import wordsLaura from "./wordsLaura.json";
 import wordsTaddeo from "./wordsTaddeo.json";
+import wordsMattia from "./wordsMattia.json";
 import wordsLongevita from "./wordsLongevita.json";
 import type { CNReelProps } from "./types";
 
@@ -748,5 +749,55 @@ Il suo consiglio a chi è indeciso: «Se non lo fai tu, nessuno lo fa al posto t
 Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
 
 #correrenaturale #testimonianza #corsa #running #salute`,
+  },
+  {
+    id: "T4-mattia",
+    title: "«Ero sempre fermo, bloccato dagli infortuni» (testimonianza di Mattia)",
+    props: {
+      ...base,
+      src: "testimonianze/C3497-006.MP4",
+      words: wordsMattia as CNReelProps["words"],
+      master: "testimonianze/T4-mattia.mp4",
+      // volto grande (inquadratura stretta, come Massimiliano): grafiche sotto il mento (da 0,53) e più piccole, tutto sopra 0,80
+      gfxShift: 173,
+      gfxScale: 0.8,
+      capShift: 30,
+      segments: cut([42.98, 55.8], [126.26, 138.74], [172.42, 179.88], [399.56, 408.72], [411.1, 420.38], [447.82, 449.98], [461.84, 464.77], [466.06, 470.98], [479.91, 493.75], [554.3, 557.3]),
+      hook: null,
+      elements: [
+        { kind: "title", at: 0, dur: 3.4, lines: ["Sempre fermo", "bloccato dagli infortuni", "poi la svolta"], accent: "svolta" },
+        { kind: "nametag", at: 3.6, dur: 2.4, name: "Mattia", sub: "Milano" },
+        { kind: "kinetic", at: 9.72, word: "rimaneva", dur: 2.6, words: ["TANTA VOGLIA", "CHE RIMANEVA", "SOLO VOGLIA"], accentIndex: 2 },
+        { kind: "kinetic", at: 17.98, word: "amare", dur: 2.2, words: ["HO INIZIATO AD", "AMARE LA CORSA"], accentIndex: 1 },
+        { kind: "kinetic", at: 23.22, word: "veicolo", dur: 1.85, words: ["UN VEICOLO PER", "MIGLIORARE", "LA MIA VITA"], accentIndex: 1 },
+        { kind: "question", at: 25.3, dur: 2.4, text: "Il beneficio più grande?" },
+        { kind: "kinetic", at: 31.1, word: "capacità", dur: 1.45, words: ["LA CAPACITÀ DI", "ASCOLTARMI"], accentIndex: 1 },
+        { kind: "question", at: 32.77, dur: 2.3, text: "Avevi delle resistenze?" },
+        { kind: "kinetic", at: 37.41, word: "seguito", dur: 2.3, words: ["GIÀ SEGUITO DA", "ALTRI COACH"], accentIndex: 1 },
+        { kind: "kinetic", at: 44.9, word: "portato", dur: 2.4, words: ["MI AVEVA PORTATO A", "INFORTUNARMI"], accentIndex: 1 },
+        { kind: "title", at: 48.98, word: "perché", dur: 1.95, cues: ["perché", "dovrebbe"], lines: ["Perché questa volta", "dovrebbe essere diverso?"], accent: "diverso?" },
+        { kind: "kinetic", at: 51.59, word: "veramente", dur: 1.5, words: ["VERAMENTE", "FELICE"], accentIndex: 1 },
+        { kind: "question", at: 53.32, dur: 2.2, text: "Cosa diresti a chi è indeciso?" },
+        { kind: "kinetic", at: 55.69, word: "prova", dur: 1.1, words: ["PROVA"], accentIndex: 0 },
+        { kind: "kinetic", at: 57.19, word: "massimo", dur: 1.7, words: ["COSA PUÒ", "SUCCEDERE?"], accentIndex: 1 },
+        { kind: "kinetic", at: 59.45, word: "investito", dur: 1.6, words: ["HAI INVESTITO", "PER TE STESSO"], accentIndex: 1 },
+        { kind: "kinetic", at: 65.77, word: "netto", dur: 1.7, words: ["UN NETTO", "MIGLIORAMENTO"], accentIndex: 1 },
+        { kind: "kinetic", at: 72.73, word: "andare", dur: 2.0, words: ["VERSO L'ALTO", "ESPONENZIALE"], accentIndex: 1 },
+        { kind: "question", at: 75.07, dur: 1.35, text: "In una parola?" },
+        { kind: "title", at: 76.63, word: "consapevolezza", dur: 1.3, lines: ["Consapevolezza"], accent: "Consapevolezza" },
+      ],
+      cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
+    },
+    didascalia: `«Ero sostanzialmente fermo, sempre bloccato da infortuni.»
+
+Mattia, da Milano, aveva tanta voglia di fare, ma rimaneva solo voglia. Con il percorso Correre Naturale® ha iniziato ad amare la corsa per la sua essenza: un veicolo per migliorare la sua vita. Il beneficio più grande: la capacità di ascoltarsi.
+
+Prima di iniziare aveva una resistenza: era già stato seguito da altri coach, e seguire i loro consigli lo aveva portato a infortunarsi. «Perché questa volta dovrebbe essere diverso?» Oggi è veramente felice di averlo intrapreso.
+
+Il suo consiglio a chi è indeciso: «Prova. Al massimo cosa può succedere? Hai investito per te stesso.» La sua esperienza in una parola: consapevolezza.
+
+Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #testimonianza #corsa #running #infortuni`,
   },
 ];
