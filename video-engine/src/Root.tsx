@@ -18,7 +18,7 @@ export const RemotionRoot: React.FC = () => (
     {/* copertine: stesso formato per tutti i reel che hanno `cover` (id del reel + «-copertina»). Composition a 30 fps e non Still (che va a 1 fps): così `frame` è il fotogramma del master */}
     {REELS.filter((r) => r.cover).map((r) => (
 
-      <Composition key={`${r.id}-copertina`} id={`${r.id}-copertina`} component={CNCover} width={1080} height={1920} fps={30} durationInFrames={1} defaultProps={{ master: r.props.master.replace("_fx.mp4", ".mp4"), ...r.cover! }} />
+      <Composition key={`${r.id}-copertina`} id={`${r.id}-copertina`} component={CNCover} width={1080} height={1920} fps={30} durationInFrames={1} defaultProps={{ ...r.cover!, master: (r.cover!.master ?? r.props.master).replace("_fx.mp4", ".mp4").replace("C6-metronomo-manuale", "C6-metronomo"), frame: r.cover!.frame ?? 60 }} />
     ))}
     {LONGS.map((r) => (
       <Composition key={r.id} id={r.id} component={CNLong} durationInFrames={longDuration(r.props)} width={1920} height={1080} fps={30} defaultProps={r.props} />

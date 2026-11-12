@@ -31,8 +31,9 @@ const base = {
   wordFix: {} as Record<string, string>,
 };
 
-/** `cover`: copertina nel formato unico (CNCover): fotogramma pulito del master, occhiello della serie, titolo, parola in lime */
-export type ReelDef = { id: string; title: string; props: CNReelProps; didascalia: string; cover?: { frame: number; kicker: string; lines: string[]; accent?: string } };
+/** `cover`: copertina nel formato unico (CNCover): fotogramma pulito del master, occhiello della serie, titolo, parola in lime.
+ *  `frame` a mano oppure scelto da scripts/cn_smile.py (sorriso, occhi aperti); `shiftY` alza il video nei selfie (il mento arriverebbe sotto il titolo). */
+export type ReelDef = { id: string; title: string; props: CNReelProps; didascalia: string; cover?: { frame?: number; kicker: string; lines: string[]; accent?: string; shiftY?: number; master?: string } };
 const seg = (from: number, to: number) => ({ from, to });
 /** Pezzi a partire dai PUNTI DI TAGLIO DELL'AUDIO (misurati con scripts/cn_align.py, nelle pause tra le parole): il video sborda di mezzo
  *  incrocio (0,083 s) sui tagli interni e ogni pezzo dura un numero intero di fotogrammi. */
@@ -101,7 +102,7 @@ export const REELS: ReelDef[] = [
   {
     id: "R1-fiatone",
     title: "Non sei fatto per correre? Sbagliato",
-    cover: { frame: 552, kicker: "Respirazione nella corsa", lines: ["Ti manca", "il fiato?"], accent: "il fiato?" },
+    cover: { kicker: "Respirazione nella corsa", lines: ["Ti manca", "il fiato?"], accent: "il fiato?" },
     props: {
       ...base,
       master: master("R1-fiatone", true),
@@ -137,7 +138,7 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
   {
     id: "R2-naso",
     title: "Il primo passo: respira con il naso",
-    cover: { frame: 390, kicker: "Respirazione nella corsa", lines: ["Respira", "con il naso"], accent: "naso" },
+    cover: { kicker: "Respirazione nella corsa", lines: ["Respira", "con il naso"], accent: "naso" },
     props: {
       ...base,
       master: master("R2-naso"),
@@ -170,7 +171,7 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
   {
     id: "R3-bocca",
     title: "Chiudi la bocca e trova il tuo ritmo",
-    cover: { frame: 594, kicker: "Respirazione nella corsa", lines: ["Chiudi", "la bocca"], accent: "la bocca" },
+    cover: { kicker: "Respirazione nella corsa", lines: ["Chiudi", "la bocca"], accent: "la bocca" },
     props: {
       ...base,
       master: master("R3-bocca"),
@@ -200,7 +201,7 @@ Commenta ENERGIA e ti mando tutte le info sui percorsi di coaching personalizzat
   {
     id: "R4-piano",
     title: "Il secondo errore: corri troppo forte",
-    cover: { frame: 546, kicker: "Respirazione nella corsa", lines: ["Corri", "troppo forte?"], accent: "troppo forte?" },
+    cover: { kicker: "Respirazione nella corsa", lines: ["Corri", "troppo forte?"], accent: "troppo forte?" },
     props: {
       ...base,
       master: master("R4-piano"),
@@ -232,7 +233,7 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
   {
     id: "R5-esercizi",
     title: "Tre esercizi per allenare il respiro",
-    cover: { frame: 120, kicker: "Respirazione nella corsa", lines: ["3 esercizi", "per il respiro"], accent: "3 esercizi" },
+    cover: { kicker: "Respirazione nella corsa", lines: ["3 esercizi", "per il respiro"], accent: "3 esercizi" },
     props: {
       ...base,
       master: master("R5-esercizi"),
@@ -292,7 +293,7 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
   {
     id: "R8-dialogo",
     title: "La corsa è un dialogo con il tuo corpo",
-    cover: { frame: 594, kicker: "Respirazione nella corsa", lines: ["Un dialogo", "con il tuo corpo"], accent: "dialogo" },
+    cover: { kicker: "Respirazione nella corsa", lines: ["Un dialogo", "con il tuo corpo"], accent: "dialogo" },
     props: {
       ...base,
       master: master("R8-dialogo"),
@@ -325,6 +326,7 @@ Commenta LONTANO e ti mando tutte le info sui percorsi di coaching personalizzat
   {
     id: "D1-daniela",
     title: "Dal divano alla mezza maratona a 60 anni (testimonianza di Daniela, workshop 24/10)",
+    cover: { kicker: "Testimonianza", lines: ["Daniela", "la mezza a 60 anni"], accent: "Daniela" },
     props: {
       ...base,
       src: "daniela/daniela_src.mp4",
@@ -362,6 +364,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
   {
     id: "T1-massimiliano",
     title: "Una vita di infortuni, poi la svolta a 54 anni (testimonianza di Massimiliano)",
+    cover: { kicker: "Testimonianza", lines: ["Massimiliano", "la svolta a 54 anni"], accent: "Massimiliano" },
     props: {
       ...base,
       src: "testimonianze/massimiliano_src.mp4",
@@ -412,6 +415,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
   {
     id: "L1-ventanni",
     title: "Gli ultimi 20 anni",
+    cover: { kicker: "Longevità", lines: ["Gli ultimi", "20 anni"], accent: "20 anni" },
     props: {
       ...base,
       src: "longevita/longevita.webm",
@@ -453,6 +457,7 @@ Vuoi costruire il tuo piano? Commenta PIANO e ti mando tutte le info sui percors
   {
     id: "L2-farmaco",
     title: "Nessun farmaco ha questo effetto",
+    cover: { kicker: "Longevità", lines: ["Nessun farmaco", "ha questo effetto"], accent: "farmaco" },
     props: {
       ...base,
       src: "longevita/longevita.webm",
@@ -511,6 +516,7 @@ Commenta MOTORE e ti mando tutte le info sui percorsi di coaching personalizzato
   {
     id: "L3-cellule",
     title: "Cosa succede nelle tue cellule quando corri",
+    cover: { kicker: "Longevità", lines: ["Le tue cellule", "quando corri"], accent: "cellule" },
     props: {
       ...base,
       src: "longevita/longevita.webm",
@@ -571,6 +577,7 @@ Commenta RINNOVO e ti mando tutte le info sui percorsi di coaching personalizzat
   {
     id: "L4-cervello",
     title: "Camminare fa crescere il cervello",
+    cover: { kicker: "Longevità", lines: ["Il cervello", "cresce camminando"], accent: "cervello" },
     props: {
       ...base,
       src: "longevita/longevita.webm",
@@ -625,6 +632,7 @@ Commenta CAMMINA e ti mando tutte le info sui percorsi di coaching personalizzat
   {
     id: "L5-bugia",
     title: "La bugia più diffusa del running",
+    cover: { kicker: "Longevità", lines: ["La bugia", "del running"], accent: "bugia" },
     props: {
       ...base,
       src: "longevita/longevita.webm",
@@ -684,6 +692,7 @@ Commenta TECNICA e ti mando tutte le info sui percorsi di coaching personalizzat
   {
     id: "L6-domani",
     title: "Tre cose da fare da domani",
+    cover: { kicker: "Longevità", lines: ["3 cose", "da fare domani"], accent: "3 cose" },
     props: {
       ...base,
       src: "longevita/longevita.webm",
@@ -731,6 +740,7 @@ Commenta DOMANI e ti mando tutte le info sui percorsi di coaching personalizzato
   {
     id: "T2-laura",
     title: "«Non ho avuto più infortuni» (testimonianza di Laura)",
+    cover: { kicker: "Testimonianza", lines: ["Laura", "mai più infortuni"], accent: "Laura" },
     props: {
       ...base,
       src: "testimonianze/laura_src.mp4",
@@ -780,6 +790,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
   {
     id: "T3-taddeo",
     title: "«La salute viene cento volte prima dei soldi» (testimonianza di Taddeo)",
+    cover: { kicker: "Testimonianza", lines: ["Taddeo", "prima la salute"], accent: "Taddeo" },
     props: {
       ...base,
       src: "testimonianze/C3499-008.MP4",
@@ -831,6 +842,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
   {
     id: "T4-mattia",
     title: "«Ero sempre fermo, bloccato dagli infortuni» (testimonianza di Mattia)",
+    cover: { kicker: "Testimonianza", lines: ["Mattia", "di nuovo in corsa"], accent: "Mattia" },
     props: {
       ...base,
       src: "testimonianze/C3497-006.MP4",
@@ -881,6 +893,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
   {
     id: "T5-seiore",
     title: "«Mi sono messo alla guida del mio corpo» (testimonianza: la sei ore)",
+    cover: { kicker: "Testimonianza", lines: ["Franco", "la sei ore"], accent: "Franco" },
     props: {
       ...base,
       src: "testimonianze/C3500-007.MP4",
@@ -927,6 +940,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
   {
     id: "T6-giancarlo",
     title: "«Arrivi a casa nervoso per il tempo? Questo non esiste più» (testimonianza di Giancarlo)",
+    cover: { kicker: "Testimonianza", lines: ["Giancarlo", "oltre il cronometro"], accent: "Giancarlo" },
     props: {
       ...base,
       src: "testimonianze/C3501-003.MP4",
@@ -974,6 +988,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
   {
     id: "C1-runner",
     title: "Il runner che sapeva troppo",
+    cover: { kicker: "Tecnica di corsa", lines: ["Il runner che", "sapeva troppo"], accent: "troppo", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v1_runner.mov",
@@ -1018,6 +1033,7 @@ Non è colpa tua: dentro di te ci sono due cervelli, quello pensante e quello mo
   {
     id: "C2-namibia",
     title: "Quello che ho visto in Namibia",
+    cover: { kicker: "Tecnica di corsa", lines: ["Cosa ho visto", "in Namibia"], accent: "Namibia", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v1_namibia.mov",
@@ -1065,6 +1081,7 @@ Poi sono tornato in Italia, e al parco ognuno correva a modo suo. Non è questio
   {
     id: "C3-ricetta",
     title: "La ricetta della corsa",
+    cover: { kicker: "Tecnica di corsa", lines: ["La ricetta", "della corsa"], accent: "ricetta", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_ricetta.mov",
@@ -1110,6 +1127,7 @@ La corsa ne ha sette: postura, ritmo, relax, appoggio del piede, posizione della
   {
     id: "C4-zoo",
     title: "Esseri umani da zoo",
+    cover: { kicker: "Tecnica di corsa", lines: ["Esseri umani", "da zoo"], accent: "da zoo", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_ritrova.mov",
@@ -1154,6 +1172,7 @@ La buona notizia è che si può tornare indietro. Le sette fondamenta della cors
   {
     id: "C5-muro",
     title: "Il test del muro",
+    cover: { kicker: "Tecnica di corsa", lines: ["Il test", "del muro"], accent: "muro", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_ritrova.mov",
@@ -1195,6 +1214,7 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
   {
     id: "C6-metronomo",
     title: "Il test del metronomo",
+    cover: { kicker: "Tecnica di corsa", lines: ["Il test", "del metronomo"], accent: "metronomo", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_sentendo.mov",
@@ -1242,6 +1262,7 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
   {
     id: "C7-tecnica",
     title: "Esercizi che tatuano la tecnica",
+    cover: { kicker: "Tecnica di corsa", lines: ["Esercizi che", "tatuano la tecnica"], accent: "tatuano", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_sentendo.mov",
@@ -1285,6 +1306,7 @@ Un po' alla volta tatuano la tecnica giusta nel tuo corpo. Lascia a casa le rego
   {
     id: "T7-bilancio",
     title: "«Da 10 che pensavo potesse fare, il mio corpo sa fare 100» (testimonianza: bilancio di metà percorso)",
+    cover: { kicker: "Testimonianza", lines: ["Davide", "da 10 a 100"], accent: "Davide" },
     props: {
       ...base,
       src: "testimonianze/C3502-001.MP4",
@@ -1328,6 +1350,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
   {
     id: "T8-trail",
     title: "«Quattro anni di fascite plantare, e ora il mio primo trail» (testimonianza)",
+    cover: { kicker: "Testimonianza", lines: ["Giulia", "il primo trail"], accent: "Giulia" },
     props: {
       ...base,
       src: "testimonianze/C3504-010.MP4",
@@ -1381,11 +1404,11 @@ const ccb = (id: string) => REELS.find((r) => r.id === id)!;
 const fr = (...f: [number, number][]): [number, number][] => f.map(([a, b]) => [+(a / 30).toFixed(4), +(b / 30).toFixed(4)]);
 const PERCORSO: { from: string; ranges: [number, number][]; title: string }[] = [
   // 58 s: scena del runner → pensa a ogni passo → torna a casa più rigido → non è colpa tua, due cervelli → «va insegnata al corpo»
-  { from: "C1-runner", ranges: fr([0, 392], [647, 821], [1000, 1980], [2260, 2456]), title: "Vuoi insegnare la tecnica al tuo corpo?" },
+  { from: "C1-runner", ranges: fr([0, 392], [647, 821], [1000, 1975], [2268, 2456]), title: "Vuoi insegnare la tecnica al tuo corpo?" },
   // 62 s: i Boscimani corrono tutti allo stesso modo → in Italia ognuno a modo suo → abbiamo perso qualcosa → «va solo ritrovata»
   { from: "C2-namibia", ranges: fr([0, 781], [873, 1303], [1591, 1908], [2089, 2417]), title: "Vuoi ritrovare la tua corsa naturale?" },
   // 50 s: il pane e i 7 ingredienti → le domande per capire se ne manca uno → «nella tua ricetta qualcosa non va»
-  { from: "C3-ricetta", ranges: fr([0, 872], [1055, 1668]), title: "Vuoi scoprire quale ingrediente ti manca?" },
+  { from: "C3-ricetta", ranges: fr([0, 872], [1053, 1668]), title: "Vuoi scoprire quale ingrediente ti manca?" },
   // 41 s: la giornata da zoo → il corpo si adatta → la gabbia → «si può tornare indietro, ma bisogna sapere cosa c'è da ritrovare»
   { from: "C4-zoo", ranges: fr([0, 1229]), title: "Vuoi tornare a correre secondo natura?" },
   // 44 s: l'87% → il test del muro → «quella sensazione è la misura di quanto il tuo corpo si è abituato a qualcos'altro»
@@ -1402,6 +1425,7 @@ for (const v of PERCORSO) {
   REELS.push({
     id,
     title: `${r.title} (versione percorso)`,
+    cover: r.cover ? { ...r.cover, master: r.props.master } : undefined,
     props: { ...r.props, master: `ccb/masters/${id}.mp4`, segments: cutRanges(r.props.segments, 1, v.ranges), elements: keepEls(r.props.elements, v.ranges, 1), ctaSeconds: 8, cta: { word: "PERCORSO", title: v.title } },
     didascalia: r.didascalia.replace(/\n\n(#[^\n]*)$/, `\n\n${PERCORSO_CTA}\n\n$1`),
   });
