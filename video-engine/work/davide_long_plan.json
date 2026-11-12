@@ -1,0 +1,46 @@
+{
+ "blendFrames": 8,
+ "gap": 1.6,
+ "chapters": [
+  {
+   "q": "Come stai?",
+   "ranges": [
+    [
+     9.1,
+     38.5
+    ]
+   ]
+  },
+  {
+   "q": "Il bilancio di metà percorso?",
+   "ranges": [
+    [
+     48.4,
+     173.0
+    ]
+   ]
+  },
+  {
+   "q": "Un momento che ha spostato l'asticella?",
+   "ranges": [
+    [
+     208.12,
+     220.69
+    ],
+    [
+     240.2,
+     295.6
+    ]
+   ]
+  },
+  {
+   "q": "E il secondo momento?",
+   "ranges": [
+    [
+     393.0,
+     473.0
+    ]
+   ]
+  }
+ ]
+}

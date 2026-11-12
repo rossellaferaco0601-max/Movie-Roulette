@@ -1,0 +1,68 @@
+{
+ "segments": [
+  {
+   "from": 9.1,
+   "to": 32.99,
+   "zoom": 1.0
+  },
+  {
+   "from": 34.05,
+   "to": 38.64,
+   "zoom": 1.0
+  },
+  {
+   "from": 48.27,
+   "to": 166.91,
+   "zoom": 1.06
+  },
+  {
+   "from": 168.92,
+   "to": 173.13,
+   "zoom": 1.06
+  },
+  {
+   "from": 207.99,
+   "to": 220.82,
+   "zoom": 1.0
+  },
+  {
+   "from": 240.07,
+   "to": 295.73,
+   "zoom": 1.0
+  },
+  {
+   "from": 392.87,
+   "to": 464.93,
+   "zoom": 1.06
+  },
+  {
+   "from": 465.86,
+   "to": 473.0,
+   "zoom": 1.06
+  }
+ ],
+ "chapters": [
+  {
+   "q": "Come stai?",
+   "seg": 0,
+   "at": 0.0
+  },
+  {
+   "q": "Il bilancio di metà percorso?",
+   "seg": 2,
+   "at": 27.97
+  },
+  {
+   "q": "Un momento che ha spostato l'asticella?",
+   "seg": 4,
+   "at": 150.27
+  },
+  {
+   "q": "E il secondo momento?",
+   "seg": 6,
+   "at": 218.23
+  }
+ ],
+ "blendFrames": 8,
+ "total": 297.1666666666667
+}

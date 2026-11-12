@@ -1,0 +1,73 @@
+{
+ "blendFrames": 8,
+ "gap": 1.6,
+ "chapters": [
+  {
+   "q": "Partiamo dalla maglietta",
+   "ranges": [
+    [
+     43.6,
+     78.0
+    ],
+    [
+     111.0,
+     122.6
+    ]
+   ]
+  },
+  {
+   "q": "Cos'è successo tra le due gare?",
+   "ranges": [
+    [
+     126.2,
+     176.2
+    ]
+   ]
+  },
+  {
+   "q": "Come sei cambiato in questi anni?",
+   "ranges": [
+    [
+     222.4,
+     264.2
+    ]
+   ]
+  },
+  {
+   "q": "Cos'hai provato al traguardo?",
+   "ranges": [
+    [
+     267.6,
+     306.3
+    ]
+   ]
+  },
+  {
+   "q": "Qual è stato il momento più duro?",
+   "ranges": [
+    [
+     370.3,
+     433.4
+    ]
+   ]
+  },
+  {
+   "q": "E l'ultimo giro?",
+   "ranges": [
+    [
+     436.3,
+     511.2
+    ]
+   ]
+  },
+  {
+   "q": "Cosa ti porti a casa?",
+   "ranges": [
+    [
+     511.4,
+     550.6
+    ]
+   ]
+  }
+ ]
+}

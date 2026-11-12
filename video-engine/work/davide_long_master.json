@@ -1,0 +1,61 @@
+{
+ "id": "T7-bilancio-lungo",
+ "src": "public/testimonianze/C3502-001.MP4",
+ "out": "public/testimonianze/T7-bilancio-lungo.mp4",
+ "size": [
+  1920,
+  1080
+ ],
+ "faceX": 0.515,
+ "faceY": 0.355,
+ "zooms": [
+  1.0,
+  1.06
+ ],
+ "blendFrames": 8,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 9.1,
+   "to": 32.99,
+   "zoom": 1.0
+  },
+  {
+   "from": 34.05,
+   "to": 38.64,
+   "zoom": 1.0
+  },
+  {
+   "from": 48.27,
+   "to": 166.91,
+   "zoom": 1.06
+  },
+  {
+   "from": 168.92,
+   "to": 173.13,
+   "zoom": 1.06
+  },
+  {
+   "from": 207.99,
+   "to": 220.82,
+   "zoom": 1.0
+  },
+  {
+   "from": 240.07,
+   "to": 295.73,
+   "zoom": 1.0
+  },
+  {
+   "from": 392.87,
+   "to": 464.93,
+   "zoom": 1.06
+  },
+  {
+   "from": 465.86,
+   "to": 473.0,
+   "zoom": 1.06
+  }
+ ],
+ "broll": []
+}

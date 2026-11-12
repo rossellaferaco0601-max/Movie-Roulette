@@ -1,0 +1,113 @@
+{
+ "segments": [
+  {
+   "from": 43.91,
+   "to": 48.71,
+   "zoom": 1.0
+  },
+  {
+   "from": 64.47,
+   "to": 82.13,
+   "zoom": 1.0
+  },
+  {
+   "from": 82.87,
+   "to": 96.13,
+   "zoom": 1.0
+  },
+  {
+   "from": 96.67,
+   "to": 106.93,
+   "zoom": 1.0
+  },
+  {
+   "from": 107.27,
+   "to": 110.93,
+   "zoom": 1.0
+  },
+  {
+   "from": 112.67,
+   "to": 115.03,
+   "zoom": 1.0
+  },
+  {
+   "from": 132.77,
+   "to": 134.83,
+   "zoom": 1.0
+  },
+  {
+   "from": 146.68,
+   "to": 168.41,
+   "zoom": 1.06
+  },
+  {
+   "from": 191.85,
+   "to": 204.44,
+   "zoom": 1.06
+  },
+  {
+   "from": 280.07,
+   "to": 288.93,
+   "zoom": 1.0
+  },
+  {
+   "from": 290.37,
+   "to": 295.63,
+   "zoom": 1.0
+  },
+  {
+   "from": 299.91,
+   "to": 336.8,
+   "zoom": 1.0
+  },
+  {
+   "from": 351.77,
+   "to": 360.73,
+   "zoom": 1.0
+  },
+  {
+   "from": 439.47,
+   "to": 462.03,
+   "zoom": 1.06
+  },
+  {
+   "from": 463.87,
+   "to": 506.53,
+   "zoom": 1.06
+  },
+  {
+   "from": 535.87,
+   "to": 572.8,
+   "zoom": 1.0
+  }
+ ],
+ "chapters": [
+  {
+   "q": "Come sono andati questi sei mesi?",
+   "seg": 0,
+   "at": 0.0
+  },
+  {
+   "q": "E adesso?",
+   "seg": 7,
+   "at": 52.23
+  },
+  {
+   "q": "Quando hai capito di potercela fare?",
+   "seg": 9,
+   "at": 86.03
+  },
+  {
+   "q": "Cosa ti porti a casa da questo percorso?",
+   "seg": 13,
+   "at": 144.97
+  },
+  {
+   "q": "La cosa che ti piace di più?",
+   "seg": 15,
+   "at": 209.67
+  }
+ ],
+ "blendFrames": 8,
+ "total": 246.6
+}
