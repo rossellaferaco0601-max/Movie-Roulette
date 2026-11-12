@@ -97,6 +97,8 @@ export type CNReelProps = {
   tailSeconds?: number;
   /** secondi di coda in cui il sorgente continua dal vivo (default: tutta la coda). Se subito dopo il taglio il sorgente cambia inquadratura, va messo a 0: la coda tiene l'ultimo fotogramma mentre il pannello della CTA sale */
   tailLive?: number;
+  /** secondi iniziali senza sottotitoli (Oscar 12/11: «la parte iniziale dove c'è l'hook visivo togliamo i sottotitoli»): ripartono dalla prima pagina intera dopo questo tempo */
+  capFrom?: number;
   gfxShift?: number;
   gfxScale?: number;
   capShift?: number;

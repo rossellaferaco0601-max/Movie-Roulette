@@ -131,7 +131,7 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
           <AnyElement key={i} el={{ ...el, onAt: resolveCues(el, starts[i], words) } as Element} start={starts[i]} />
         ) : null))}
         <AbsoluteFill style={{ transform: `translateY(${p.capShift ?? 0}px)` }}>
-          <Captions words={words} endFrame={total - 4} />
+          <Captions words={words} endFrame={total - 4} startFrame={Math.round((p.capFrom ?? 0) * fps)} />
         </AbsoluteFill>
       </Sequence>
       {/* ctaSeconds: 0 = reel senza pannello finale (video «spontanei»: la chiusa la dice chi parla) */}

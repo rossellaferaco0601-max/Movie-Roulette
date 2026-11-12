@@ -31,7 +31,8 @@ const base = {
   wordFix: {} as Record<string, string>,
 };
 
-export type ReelDef = { id: string; title: string; props: CNReelProps; didascalia: string };
+/** `cover`: copertina nel formato unico (CNCover): fotogramma pulito del master, occhiello della serie, titolo, parola in lime */
+export type ReelDef = { id: string; title: string; props: CNReelProps; didascalia: string; cover?: { frame: number; kicker: string; lines: string[]; accent?: string } };
 const seg = (from: number, to: number) => ({ from, to });
 /** Pezzi a partire dai PUNTI DI TAGLIO DELL'AUDIO (misurati con scripts/cn_align.py, nelle pause tra le parole): il video sborda di mezzo
  *  incrocio (0,083 s) sui tagli interni e ogni pezzo dura un numero intero di fotogrammi. */
@@ -64,9 +65,11 @@ export const REELS: ReelDef[] = [
   {
     id: "R1-fiatone",
     title: "Non sei fatto per correre? Sbagliato",
+    cover: { frame: 150, kicker: "Respirazione nella corsa", lines: ["Ti manca", "il fiato?"], accent: "il fiato?" },
     props: {
       ...base,
       master: master("R1-fiatone", true),
+      capFrom: 3.85, // niente sottotitoli finché dura l'hook visivo (Oscar 12/11)
       // tagli: la frase "e in questo video ti spiego perché" (16.9-23.8) è tolta; i bordi cadono nelle pause tra le parole
       segments: [seg(0.0, 16.8), seg(23.88, 44.84)],
       // motivo visivo del reel 1: allarme / frequenza (riflettore, ECG, timbro, titolo spezzato)
@@ -98,9 +101,11 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
   {
     id: "R2-naso",
     title: "Il primo passo: respira con il naso",
+    cover: { frame: 60, kicker: "Respirazione nella corsa", lines: ["Respira", "con il naso"], accent: "naso" },
     props: {
       ...base,
       master: master("R2-naso"),
+      capFrom: 4.2, // niente sottotitoli finché dura l'hook visivo (Oscar 12/11)
       // 11/11 (Ross: «le animazioni non seguono le parole e sono sempre le stesse, cambialo completamente»): sei grafiche tutte diverse,
       // ognuna con le parti interne agganciate alle parole dette; niente effetti sul master, coda ferma (niente salto prima della CTA)
       segments: cut([53.8, 74.16]), // il sorgente cambia inquadratura a 74,20
@@ -129,9 +134,11 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
   {
     id: "R3-bocca",
     title: "Chiudi la bocca e trova il tuo ritmo",
+    cover: { frame: 120, kicker: "Respirazione nella corsa", lines: ["Chiudi", "la bocca"], accent: "la bocca" },
     props: {
       ...base,
       master: master("R3-bocca"),
+      capFrom: 2.73, // niente sottotitoli finché dura l'hook visivo (Oscar 12/11)
       // 11/11: la bocca disegnata («dozzinale») è sostituita da una clip realistica generata (Canva), che chiude la bocca su «chiudi»;
       // le altre grafiche sono le stesse della v8, agganciate alle parole
       segments: cut([74.2, 98.5]),
@@ -157,9 +164,11 @@ Commenta ENERGIA e ti mando tutte le info sui percorsi di coaching personalizzat
   {
     id: "R4-piano",
     title: "Il secondo errore: corri troppo forte",
+    cover: { frame: 100, kicker: "Respirazione nella corsa", lines: ["Corri", "troppo forte?"], accent: "troppo forte?" },
     props: {
       ...base,
       master: master("R4-piano"),
+      capFrom: 2.6, // niente sottotitoli finché dura l'hook visivo (Oscar 12/11)
       // audio e Daniele partono da "molti pensano…"; il titolo grande "Correre troppo forte" apre il reel (Ross 8/11)
       // 11/11: ogni grafica entra sulla parola detta (tempi allineati), righe degli elenchi comprese
       segments: cut([101.71, 130.58]),
@@ -187,9 +196,11 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
   {
     id: "R5-esercizi",
     title: "Tre esercizi per allenare il respiro",
+    cover: { frame: 200, kicker: "Respirazione nella corsa", lines: ["3 esercizi", "per il respiro"], accent: "3 esercizi" },
     props: {
       ...base,
       master: master("R5-esercizi"),
+      capFrom: 3.5, // niente sottotitoli finché dura l'hook visivo (Oscar 12/11)
       blendFrames: 2,
       capShift: 34,     // sottotitoli più in basso (sempre sopra 0,80): la palla delle guide sta al centro dello schermo
       // 11/11 (Ross): apertura tagliata su «correre bene / dipende / da come respiri» con lo schianto su «respiri»; i tre esercizi tutti in un
@@ -245,9 +256,11 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
   {
     id: "R8-dialogo",
     title: "La corsa è un dialogo con il tuo corpo",
+    cover: { frame: 120, kicker: "Respirazione nella corsa", lines: ["Un dialogo", "con il tuo corpo"], accent: "dialogo" },
     props: {
       ...base,
       master: master("R8-dialogo"),
+      capFrom: 2.67, // niente sottotitoli finché dura l'hook visivo (Oscar 12/11)
       // 11/11: «Il concetto chiave [di questo video] è che…»: tolto "di questo video" con un taglio nelle pause; grafiche agganciate alle parole
       // 11/11 sera: parte direttamente da «la corsa non è un test di resistenza»
       segments: cut([244.68, 279.8]),

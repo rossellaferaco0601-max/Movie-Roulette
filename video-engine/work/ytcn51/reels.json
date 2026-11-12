@@ -231,5 +231,755 @@
   "wide": [],
   "tail": 0.5,
   "tailLive": 0.5
+ },
+ {
+  "id": "L1-ventanni",
+  "src": "longevita/longevita.webm",
+  "segments": [
+   {
+    "from": 0,
+    "to": 12.9333
+   },
+   {
+    "from": 58.687,
+    "to": 69.387
+   },
+   {
+    "from": 76.667,
+    "to": 113.967
+   },
+   {
+    "from": 661.667,
+    "to": 666.7337
+   }
+  ],
+  "blendFrames": 2,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.2
+ },
+ {
+  "id": "L2-farmaco",
+  "src": "longevita/longevita.webm",
+  "segments": [
+   {
+    "from": 126.42,
+    "to": 130.2867
+   },
+   {
+    "from": 162.567,
+    "to": 163.9337
+   },
+   {
+    "from": 169.107,
+    "to": 174.0403
+   },
+   {
+    "from": 178.087,
+    "to": 198.4537
+   },
+   {
+    "from": 198.447,
+    "to": 201.6803
+   },
+   {
+    "from": 204.147,
+    "to": 241.747
+   }
+  ],
+  "blendFrames": 2,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0
+ },
+ {
+  "id": "L3-cellule",
+  "src": "longevita/longevita.webm",
+  "segments": [
+   {
+    "from": 243.21,
+    "to": 246.5767
+   },
+   {
+    "from": 252.707,
+    "to": 315.5403
+   },
+   {
+    "from": 326.967,
+    "to": 334.0003
+   }
+  ],
+  "blendFrames": 2,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.3
+ },
+ {
+  "id": "L4-cervello",
+  "src": "longevita/longevita.webm",
+  "segments": [
+   {
+    "from": 473.95,
+    "to": 534.35
+   }
+  ],
+  "blendFrames": 2,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.25
+ },
+ {
+  "id": "L5-bugia",
+  "src": "longevita/longevita.webm",
+  "segments": [
+   {
+    "from": 537.8,
+    "to": 583.1333
+   },
+   {
+    "from": 593.917,
+    "to": 609.9503
+   }
+  ],
+  "blendFrames": 2,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.25
+ },
+ {
+  "id": "L6-domani",
+  "src": "longevita/longevita.webm",
+  "segments": [
+   {
+    "from": 610.8,
+    "to": 660.9
+   }
+  ],
+  "blendFrames": 2,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.3
+ },
+ {
+  "id": "T2-laura",
+  "src": "testimonianze/laura_src.mp4",
+  "segments": [
+   {
+    "from": 119.82,
+    "to": 128.4533
+   },
+   {
+    "from": 133.697,
+    "to": 138.1303
+   },
+   {
+    "from": 138.437,
+    "to": 139.737
+   },
+   {
+    "from": 51.067,
+    "to": 55.767
+   },
+   {
+    "from": 57.197,
+    "to": 60.1303
+   },
+   {
+    "from": 72.387,
+    "to": 74.0537
+   },
+   {
+    "from": 74.097,
+    "to": 78.997
+   },
+   {
+    "from": 163.977,
+    "to": 171.2103
+   },
+   {
+    "from": 172.037,
+    "to": 177.2703
+   },
+   {
+    "from": 178.107,
+    "to": 182.507
+   },
+   {
+    "from": 200.977,
+    "to": 204.1103
+   },
+   {
+    "from": 222.767,
+    "to": 237.467
+   },
+   {
+    "from": 272.617,
+    "to": 277.0837
+   },
+   {
+    "from": 277.417,
+    "to": 282.5837
+   }
+  ],
+  "blendFrames": 5,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "T3-taddeo",
+  "src": "testimonianze/C3499-008.MP4",
+  "segments": [
+   {
+    "from": 95.2,
+    "to": 105.0333
+   },
+   {
+    "from": 105.997,
+    "to": 123.197
+   },
+   {
+    "from": 23.437,
+    "to": 39.6703
+   },
+   {
+    "from": 283.067,
+    "to": 297.0003
+   },
+   {
+    "from": 340.817,
+    "to": 349.2837
+   },
+   {
+    "from": 354.717,
+    "to": 360.4837
+   },
+   {
+    "from": 447.067,
+    "to": 452.6003
+   }
+  ],
+  "blendFrames": 5,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "T4-mattia",
+  "src": "testimonianze/C3497-006.MP4",
+  "segments": [
+   {
+    "from": 42.98,
+    "to": 55.88
+   },
+   {
+    "from": 126.177,
+    "to": 138.8103
+   },
+   {
+    "from": 172.337,
+    "to": 179.9703
+   },
+   {
+    "from": 399.477,
+    "to": 408.8103
+   },
+   {
+    "from": 411.017,
+    "to": 420.4503
+   },
+   {
+    "from": 447.737,
+    "to": 450.0703
+   },
+   {
+    "from": 461.757,
+    "to": 464.857
+   },
+   {
+    "from": 465.977,
+    "to": 471.077
+   },
+   {
+    "from": 479.827,
+    "to": 493.827
+   },
+   {
+    "from": 554.217,
+    "to": 557.2837
+   }
+  ],
+  "blendFrames": 5,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "T5-seiore",
+  "src": "testimonianze/C3500-007.MP4",
+  "segments": [
+   {
+    "from": 267.9,
+    "to": 277.6
+   },
+   {
+    "from": 378.457,
+    "to": 429.257
+   },
+   {
+    "from": 458.277,
+    "to": 467.0437
+   },
+   {
+    "from": 481.407,
+    "to": 486.007
+   },
+   {
+    "from": 546.227,
+    "to": 550.4937
+   }
+  ],
+  "blendFrames": 5,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "T6-giancarlo",
+  "src": "testimonianze/C3501-003.MP4",
+  "segments": [
+   {
+    "from": 310.52,
+    "to": 332.22
+   },
+   {
+    "from": 52.217,
+    "to": 66.1837
+   },
+   {
+    "from": 192.577,
+    "to": 205.8437
+   },
+   {
+    "from": 372.407,
+    "to": 384.9737
+   },
+   {
+    "from": 510.437,
+    "to": 517.6703
+   },
+   {
+    "from": 551.977,
+    "to": 557.7437
+   }
+  ],
+  "blendFrames": 5,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C1-runner",
+  "src": "ccb/v1_runner.mov",
+  "segments": [
+   {
+    "from": 6.08,
+    "to": 54.7133
+   },
+   {
+    "from": 60.783,
+    "to": 69.7497
+   },
+   {
+    "from": 71.293,
+    "to": 79.793
+   },
+   {
+    "from": 85.323,
+    "to": 94.9563
+   },
+   {
+    "from": 99.713,
+    "to": 109.1797
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C2-namibia",
+  "src": "ccb/v1_namibia.mov",
+  "segments": [
+   {
+    "from": 11.89,
+    "to": 64.9567
+   },
+   {
+    "from": 87.403,
+    "to": 92.8697
+   },
+   {
+    "from": 97.823,
+    "to": 125.8563
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C3-ricetta",
+  "src": "ccb/v2_ricetta.mov",
+  "segments": [
+   {
+    "from": 3.88,
+    "to": 38.98
+   },
+   {
+    "from": 60.063,
+    "to": 80.663
+   },
+   {
+    "from": 109.903,
+    "to": 131.0363
+   },
+   {
+    "from": 142.933,
+    "to": 148.6663
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C4-zoo",
+  "src": "ccb/v2_ritrova.mov",
+  "segments": [
+   {
+    "from": 2.82,
+    "to": 43.82
+   },
+   {
+    "from": 47.293,
+    "to": 71.9597
+   },
+   {
+    "from": 164.073,
+    "to": 170.273
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C5-muro",
+  "src": "ccb/v2_ritrova.mov",
+  "segments": [
+   {
+    "from": 71.93,
+    "to": 88.03
+   },
+   {
+    "from": 90.693,
+    "to": 118.893
+   },
+   {
+    "from": 142.143,
+    "to": 153.143
+   },
+   {
+    "from": 154.823,
+    "to": 170.2563
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C6-metronomo",
+  "src": "ccb/v2_sentendo.mov",
+  "segments": [
+   {
+    "from": 17.61,
+    "to": 45.01
+   },
+   {
+    "from": 53.153,
+    "to": 96.953
+   },
+   {
+    "from": 116.543,
+    "to": 121.5763
+   },
+   {
+    "from": 270.0997,
+    "to": 275.233
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C7-tecnica",
+  "src": "ccb/v2_sentendo.mov",
+  "segments": [
+   {
+    "from": 0.5,
+    "to": 17.3333
+   },
+   {
+    "from": 231.833,
+    "to": 275.233
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "T7-bilancio",
+  "src": "testimonianze/C3502-001.MP4",
+  "segments": [
+   {
+    "from": 142.05,
+    "to": 152.45
+   },
+   {
+    "from": 48.457,
+    "to": 50.6903
+   },
+   {
+    "from": 52.867,
+    "to": 69.4337
+   },
+   {
+    "from": 76.767,
+    "to": 88.4003
+   },
+   {
+    "from": 117.227,
+    "to": 132.127
+   },
+   {
+    "from": 153.387,
+    "to": 165.7203
+   }
+  ],
+  "blendFrames": 5,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "T8-trail",
+  "src": "testimonianze/C3504-010.MP4",
+  "segments": [
+   {
+    "from": 43.91,
+    "to": 48.5767
+   },
+   {
+    "from": 83.167,
+    "to": 95.8337
+   },
+   {
+    "from": 300.037,
+    "to": 303.137
+   },
+   {
+    "from": 308.247,
+    "to": 319.6137
+   },
+   {
+    "from": 321.577,
+    "to": 324.677
+   },
+   {
+    "from": 330.137,
+    "to": 336.6703
+   },
+   {
+    "from": 146.807,
+    "to": 157.9403
+   },
+   {
+    "from": 162.947,
+    "to": 168.2803
+   },
+   {
+    "from": 191.977,
+    "to": 204.3103
+   }
+  ],
+  "blendFrames": 5,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C1-runner-percorso",
+  "src": "ccb/v1_runner.mov",
+  "segments": [
+   {
+    "from": 6.08,
+    "to": 54.7133
+   },
+   {
+    "from": 60.783,
+    "to": 69.7497
+   },
+   {
+    "from": 71.293,
+    "to": 79.793
+   },
+   {
+    "from": 85.323,
+    "to": 94.9563
+   },
+   {
+    "from": 99.713,
+    "to": 107.0797
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C2-namibia-percorso",
+  "src": "ccb/v1_namibia.mov",
+  "segments": [
+   {
+    "from": 11.89,
+    "to": 64.9567
+   },
+   {
+    "from": 87.403,
+    "to": 92.8697
+   },
+   {
+    "from": 97.823,
+    "to": 119.923
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C3-ricetta-percorso",
+  "src": "ccb/v2_ricetta.mov",
+  "segments": [
+   {
+    "from": 3.88,
+    "to": 38.98
+   },
+   {
+    "from": 60.063,
+    "to": 80.663
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C4-zoo-percorso",
+  "src": "ccb/v2_ritrova.mov",
+  "segments": [
+   {
+    "from": 2.82,
+    "to": 43.82
+   },
+   {
+    "from": 47.293,
+    "to": 71.9597
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C5-muro-percorso",
+  "src": "ccb/v2_ritrova.mov",
+  "segments": [
+   {
+    "from": 71.93,
+    "to": 88.03
+   },
+   {
+    "from": 90.693,
+    "to": 118.893
+   },
+   {
+    "from": 142.143,
+    "to": 144.4763
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C6-metronomo-percorso",
+  "src": "ccb/v2_sentendo.mov",
+  "segments": [
+   {
+    "from": 17.61,
+    "to": 45.01
+   },
+   {
+    "from": 53.153,
+    "to": 96.953
+   },
+   {
+    "from": 116.543,
+    "to": 121.5763
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
+ },
+ {
+  "id": "C7-tecnica-percorso",
+  "src": "ccb/v2_sentendo.mov",
+  "segments": [
+   {
+    "from": 0.5,
+    "to": 17.3333
+   },
+   {
+    "from": 231.833,
+    "to": 246.5663
+   },
+   {
+    "from": 272.133,
+    "to": 275.233
+   }
+  ],
+  "blendFrames": 1,
+  "wide": [],
+  "tail": 0.5,
+  "tailLive": 0.5
  }
 ]

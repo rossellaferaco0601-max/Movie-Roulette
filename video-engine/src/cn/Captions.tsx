@@ -45,11 +45,13 @@ export const paginate = (words: RWord[], maxWords = 3, maxChars = 22) => {
 };
 
 /** Sottotitoli sempre presenti: bianchi, in lime SOLO la parola che viene detta in quel momento. */
-export const Captions: React.FC<{ words: RWord[]; size?: number; endFrame: number }> = ({ words, size = 64, endFrame }) => {
+export const Captions: React.FC<{ words: RWord[]; size?: number; endFrame: number; startFrame?: number }> = ({ words, size = 64, endFrame, startFrame = 0 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   if (frame >= endFrame) return null;
-  const pages = paginate(words);
+  if (frame < startFrame) return null;
+  // niente sottotitoli sull'hook visivo: si riparte dalla prima pagina che comincia dopo (mai da metà pagina)
+  const pages = paginate(words).filter((p) => p.start >= startFrame);
   const page = pages.find((p) => frame >= p.start && frame < p.end) ?? pages.find((p) => frame < p.start && p.start - frame < 6);
   if (!page) return null;
   const top = H * ZONE.capTop;

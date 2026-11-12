@@ -265,20 +265,25 @@ export const Drill: React.FC<P<"drill">> = ({ el, start }) => {
   const durF = Math.round(el.dur * fps);
   const { local, visible } = useInOut(start, durF);
   if (!visible) return null;
-  const fin = el.fadeIn ?? 6, fout = el.fadeOut ?? 5;
-  const fade = Math.min(fin ? clamp01(local / fin) : 1, fout ? clamp01((durF - local) / fout) : 1);
+  // Oscar 12/11 («flash neri e tagli netti»): niente più dissolvenza sul fondo scuro vuoto. La scheda sale dal basso in 9 fotogrammi
+  // (come il pannello della CTA) con il contenuto già presente, e a fine esercizio riscende; le tappe si incrociano in dissolvenza.
+  const IN = 9, OUT = 9, fout = OUT;
+  const up = 1 - Math.pow(1 - clamp01(local / IN), 3), down = Math.pow(1 - clamp01((durF - local) / OUT), 3);
+  const slide = (1 - up) * 100 + down * 100;
   const cues = el.steps.map((_, i) => cueF(el, i, fps, 2.4 + i * 3));
   let stage = -1;
   cues.forEach((c, i) => { if (local >= c) stage = i; });
   const big: React.CSSProperties = { fontFamily: FONT, fontWeight: 900, textTransform: "uppercase", lineHeight: 1, textAlign: "center", position: "absolute", left: 0, width: W };
   const CY = 960 - 590; // centro della palla = centro dello schermo (y 960)
+  const XF = 6; // fotogrammi di dissolvenza incrociata tra una tappa e la successiva
+  const renderStage = (stage: number): React.ReactNode => {
   let body: React.ReactNode;
   if (stage < 0) {
     body = (
       <div style={{ position: "absolute", top: 620, left: 0, width: W, padding: "0 70px", boxSizing: "border-box", textAlign: "center" }}>
-        <div style={{ display: "inline-block", background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 54, letterSpacing: 4, padding: "10px 34px", borderRadius: 18, transform: `scale(${pop(local, 0, fps)})` }}>ESERCIZIO {el.n}</div>
+        <div style={{ display: "inline-block", background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 54, letterSpacing: 4, padding: "10px 34px", borderRadius: 18, transform: `scale(${pop(local + 5, 0, fps)})` }}>ESERCIZIO {el.n}</div>
         {el.title.split("|").map((l, i) => {
-          const k = easeOut((local - 5 - i * 6) / 12);
+          const k = easeOut((local + 3 - i * 5) / 10);
           return <div key={i} style={{ fontFamily: FONT, fontWeight: 900, textTransform: "uppercase", lineHeight: 1, fontSize: 118, color: BRAND.white, marginTop: i ? 6 : 34, transform: `translateY(${(1 - k) * 50}px)`, opacity: k }}>{l}</div>;
         })}
       </div>
@@ -318,9 +323,7 @@ export const Drill: React.FC<P<"drill">> = ({ el, start }) => {
     );
   }
   return (
-    <AbsoluteFill style={{ background: "linear-gradient(180deg,#1C3D15 0%,#0B0F0A 70%)", opacity: fade, fontFamily: FONT }}>
-      {/* durante le dissolvenze si vede solo il fondo: il contenuto non passa mai in trasparenza sul volto */}
-      <AbsoluteFill style={{ opacity: fade < 1 ? 0 : 1 }}>
+      <>
         {stage >= 0 ? (
           <div style={{ position: "absolute", top: 196, left: 0, width: W, textAlign: "center" }}>
             {/* intestazione su due righe: «Esercizio n» / titolo */}
@@ -334,7 +337,14 @@ export const Drill: React.FC<P<"drill">> = ({ el, start }) => {
             {el.steps.map((_, i) => <div key={i} style={{ width: i === stage ? 96 : 54, height: 14, borderRadius: 7, background: i <= stage ? BRAND.lime : "rgba(255,255,255,0.22)" }} />)}
           </div>
         ) : null}
-      </AbsoluteFill>
+      </>
+  );
+  };
+  const xf = stage >= 0 ? clamp01((local - cues[stage]) / XF) : 1;
+  return (
+    <AbsoluteFill style={{ background: "linear-gradient(180deg,#1C3D15 0%,#0B0F0A 70%)", transform: `translateY(${slide}%)`, fontFamily: FONT }}>
+      {xf < 1 ? <AbsoluteFill style={{ opacity: 1 - xf }}>{renderStage(stage - 1)}</AbsoluteFill> : null}
+      <AbsoluteFill style={{ opacity: xf }}>{renderStage(stage)}</AbsoluteFill>
     </AbsoluteFill>
   );
 };

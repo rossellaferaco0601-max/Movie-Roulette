@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # Finitura e QA di un reel: loudness -14 LUFS, anteprima leggera, copertina, didascalia, foglio fotogrammi, ritrascrizione.
-# sospensione temporanea: con out/HOLD_CCB i reel CCB (C…) non partono (12/11: vanno prima rifatti con le animazioni)
-[ -f out/HOLD_CCB ] && case "$1" in C*) echo "$1: sospeso (out/HOLD_CCB)"; exit 0;; esac
 # Uso: scripts/cn_finish.sh R1-fiatone [versione]
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -12,7 +10,12 @@ RAW="$OUT/${ID}_${V}_raw.mp4"; FIN="$OUT/consegna/${ID}_${V}.mp4"
 D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$RAW"); CA=$(python3 -c "print(round($D-${CTA_S:-8}-0.5+142/30-0.03,3))"); CB=$(python3 -c "print(round($D-${CTA_S:-8}-0.5+142/30+0.3,3))")
 ffmpeg -loglevel error -y -i "$RAW" -af "loudnorm=I=${LUFS:--13}:TP=-1.5:LRA=11,volume=volume=0.3:enable='between(t,$CA,$CB)',alimiter=limit=0.75:level=disabled:attack=3:release=40,aresample=48000" -c:v copy -c:a aac -b:a 256k -movflags +faststart "$FIN"
 ffmpeg -loglevel error -y -i "$FIN" -vf scale=540:-2 -c:v libx264 -crf 28 -preset fast -c:a aac -b:a 96k -movflags +faststart "$OUT/consegna/${ID}_${V}_anteprima.mp4"
-npx remotion still "$ID" "$OUT/consegna/${ID}_copertina.jpg" --frame=40 --log=error
+# copertina: formato unico con logo (composizione «ID-copertina», se il reel ha `cover`), altrimenti il fotogramma 40 come prima
+if npx tsx -e "import {REELS} from './src/cn/reels51'; process.exit(REELS.find(x=>x.id==='$ID')?.cover ? 0 : 1)"; then
+  npx remotion still "${ID}-copertina" "$OUT/consegna/${ID}_copertina.jpg" --image-format=jpeg --jpeg-quality=92 --log=error
+else
+  npx remotion still "$ID" "$OUT/consegna/${ID}_copertina.jpg" --frame=40 --log=error
+fi
 npx tsx -e "import {REELS} from './src/cn/reels51'; const r=REELS.find(x=>x.id==='$ID')!; require('fs').writeFileSync('$OUT/consegna/${ID}_didascalia.txt', r.didascalia+'\n')"
 ffmpeg -loglevel error -y -i "$FIN" -vf "fps=1/3,scale=270:-1,tile=8x2" -frames:v 1 "$OUT/check/${ID}_${V}_sheet.jpg"
 echo "== $ID $V"; ffprobe -v error -show_entries format=duration -of csv=p=0 "$FIN" | sed 's/^/durata /'

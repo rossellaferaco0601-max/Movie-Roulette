@@ -449,3 +449,20 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - **Stories**: restano solo con i sottotitoli.
   - Errore mio da non ripetere: ho modificato `cn_finish.sh` mentre girava e la finitura di T8 v2 è saltata (bash rilegge il file mentre lo esegue).
     Mai toccare uno script in esecuzione.
+- **2026-11-12 pomeriggio (Oscar via Ross, YTCN 51 v11)**: «ci sono ancora le transizioni che non mi convincono, flash neri e tagli netti, e la parte
+  iniziale dove c'è l'hook visivo togliamo i sottotitoli, poi serve una copertina con logo con stesso format e layout uguale per tutti i reel così da
+  rendere ordinato il feed». Fatto nella v12:
+  - **Tagli netti** = gli stacchi GIÀ presenti nel video YouTube di partenza (43 in YTCN 51): la grandezza del volto è costante ma la testa salta di
+    lato fino a 150 px, in più i miei pezzi alternavano lo zoom (1,0 / 1,08). Ora `scripts/cn_shots.py` misura inquadrature e volto fotogramma per
+    fotogramma (`work/shots/<sorgente>.json`) e `cn_master.py`, se trova quel file, dà a ogni inquadratura lo **stesso ritaglio sul volto** (stessa
+    grandezza e posizione), allinea il volto al taglio (il ritaglio poi scivola alla sua posizione in 1,2 s) e trasforma ogni stacco in una
+    **dissolvenza di 5 fotogrammi** dal fermo dell'ultimo fotogramma. Niente più punch-in alternato. I tempi del master restano identici (stessi
+    fotogrammi, stesso audio): grafiche e sottotitoli non si spostano.
+  - **Flash neri** = le schede a tutto schermo degli esercizi (R5, `drill`) entravano e uscivano in dissolvenza sul fondo scuro VUOTO e tra una tappa
+    e l'altra c'era un fotogramma scuro senza contenuto. Ora la scheda **sale dal basso in 9 fotogrammi** (come il pannello della CTA) con il contenuto
+    già presente, a fine esercizio riscende, e le tappe si incrociano in dissolvenza (6 fotogrammi). Regola: una scheda a tutto schermo non passa mai
+    per un fotogramma scuro vuoto.
+  - **Niente sottotitoli sull'hook visivo**: `capFrom` (secondi) nelle props; i sottotitoli ripartono dalla prima pagina intera dopo la fine dell'hook.
+  - **Copertina unica con logo** (`CNCover`, composizione «ID-copertina», campo `cover` del reel): fotogramma pulito di Daniele, occhiello della serie,
+    titolo sempre nella stessa posizione e con lo stesso stile, logo orizzontale bianco in basso; tutto dentro il ritaglio 4:5 della griglia.
+    `cn_finish.sh` la usa per ogni reel che ha `cover`. Da estendere alle altre serie quando Ross dà l'ok.
