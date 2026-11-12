@@ -17,7 +17,7 @@ while True:
     t = i / 30
     g = cv2.resize(cv2.cvtColor(fr, cv2.COLOR_BGR2GRAY), (96, 170)).astype(np.int16)
     move = 0.0 if prev is None else float(np.mean(np.abs(g - prev))); prev = g
-    if i % 4 == 0 and t0 <= t <= min(t1, n / 30 - 1.2):
+    if i % 2 == 0 and t0 <= t <= min(t1, n / 30 - 1.2):
         small = cv2.resize(fr, (540, 960))
         r = fl.detect(mp.Image(image_format=mp.ImageFormat.SRGB, data=cv2.cvtColor(small, cv2.COLOR_BGR2RGB)))
         if r.face_blendshapes:
@@ -26,12 +26,13 @@ while True:
             yaw = abs(float(np.degrees(np.arctan2(m[0, 2], m[2, 2])))); pitch = abs(float(np.degrees(np.arcsin(-m[1, 2]))))
             smile = (b["mouthSmileLeft"] + b["mouthSmileRight"]) / 2; blink = max(b["eyeBlinkLeft"], b["eyeBlinkRight"]); jaw = b["jawOpen"]
             odd = max(b.get("mouthPucker", 0), b.get("mouthFunnel", 0), b.get("browDownLeft", 0), b.get("mouthFrownLeft", 0), b.get("eyeSquintLeft", 0) * 0.5)
-            score = smile - 1.3 * max(0, blink - 0.25) - 0.9 * max(0, jaw - 0.22) - 0.02 * max(0, yaw - 8) - 0.02 * max(0, pitch - 10) - 0.6 * odd - 0.02 * move
+            brow = max(b.get("browInnerUp", 0), b.get("browOuterUpLeft", 0), b.get("browOuterUpRight", 0))   # sopracciglia alzate = faccia «strana»
+            score = smile - 0.6 * max(0, brow - 0.25) - 1.3 * max(0, blink - 0.25) - 0.9 * max(0, jaw - 0.22) - 0.02 * max(0, yaw - 8) - 0.02 * max(0, pitch - 10) - 0.6 * odd - 0.02 * move
             res.append((round(score, 3), i, round(smile, 2), round(blink, 2), round(jaw, 2), round(yaw, 1)))
     i += 1
 res.sort(reverse=True); best = []
 for s in res:
     if all(abs(s[1] - b[1]) > 45 for b in best): best.append(s)
-    if len(best) == 6: break
+    if len(best) == 8: break
 json.dump([{"frame": b[1], "score": b[0], "smile": b[2], "blink": b[3], "jaw": b[4], "yaw": b[5]} for b in best], open(os.path.splitext(path)[0] + "_sorriso.json", "w"))
 print(os.path.basename(path), " ".join(f"f{b[1]}(p{b[0]} sorr{b[2]} occhi{b[3]} bocca{b[4]})" for b in best))
