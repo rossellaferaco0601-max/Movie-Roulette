@@ -39,8 +39,8 @@ Il cervello si è coevoluto con il movimento: non può funzionare correttamente 
 **L5 bugia del running · Mercoledì Problem/Solution · CTA TECNICA**
 Il problema: «basta uscire a correre» è la bugia più diffusa nel mondo del running. Se corri male, con un corpo non pronto e senza saperti allenare, la questione non è se ti farai male ma quando: troppo forte, a bocca aperta, col fiatone, stai stressando un sistema che non è pronto. La risposta: il naso come limitatore naturale; se mentre corri non riesci a respirare solo dal naso stai andando troppo forte, e rallentare o camminare non è debolezza, è intelligenza biologica. Chiusura: il principio cardine del metodo Correre Naturale, non correre di più o più veloce ma mandare al corpo i segnali giusti, con la tecnica corretta, un corpo preparato e un'intensità che il tuo sistema può gestire; il resto è una conseguenza.
 
-**L6 tre cose da domani · Giovedì Pratico · CTA DOMANI**
-Tre cose da fare da domani. Uno: esci e cammina almeno 10 minuti respirando solo dal naso, meglio dopo pranzo; sembra poco, ma è un segnale potentissimo che accende il motore aerobico e mette al lavoro i mitocondri. Due: se già cammini, inserisci qualche minuto di corsa facile, dove facile vuol dire che respirare dal naso basta; se il naso non basta torni a camminare, senza fretta e senza ascoltare l'ego. Tre: lo squat completo, talloni a terra, per 30 secondi; se non ci riesci senza dolore hai appena trovato il tuo primo esercizio di manutenzione quotidiana. Chiusura: nel metodo Correre Naturale lo squat è uno dei gesti più potenti per rimettere in funzione il corpo.
+**L6 tre cose da domani · Giovedì Pratico · CTA DOMANI** (v2, 12/11)
+Apertura di contesto: non si smette di correre perché si invecchia, si invecchia perché si smette di correre e di muoversi. Quindi, cosa puoi fare da domani? Tre cose. Uno: esci e cammina almeno 10 minuti respirando solo dal naso, meglio dopo pranzo; sembra poco, ma è un segnale potentissimo che accende il motore aerobico e mette al lavoro i mitocondri. Due: se già cammini, inserisci qualche minuto di corsa facile, dove facile vuol dire che respirare dal naso basta; se il naso non basta torni a camminare, senza fretta e senza ascoltare l'ego. Tre: lo squat completo, talloni a terra, per 30 secondi; se non ci riesci senza dolore hai appena trovato il tuo primo esercizio di manutenzione quotidiana. Chiusura: nel metodo Correre Naturale lo squat è uno dei gesti più potenti per rimettere in funzione il corpo.
 
 ## YTCN 38 · efficienza e flessibilità metabolica (9 reel)
 
@@ -125,25 +125,25 @@ Il problema: quattro anni di fascite plantare, e la prima maratona, in programma
 
 ## CCB «new angle» · reel, versione «manuale» (CTA a voce di Daniele con scritta in sovraimpressione, animazioni sotto il mento)
 
-**C1 Il runner che sapeva troppo · Martedì Educativo · CTA parlata «te lo spiego qui sotto»** (v3, 12/11)
+**C1 Il runner che sapeva troppo · Martedì Educativo · CTA parlata «te lo spiego qui sotto»** (v4, 12/11)
 Il problema: un runner decide di migliorare la tecnica, si informa, guarda video, salva tutorial; la mattina dopo pensa a ogni singolo passo e torna a casa più rigido di quando è uscito. La risposta: non è colpa sua, dentro di noi ci sono due cervelli, quello pensante e quello motorio, e la corsa appartiene al secondo; pensare ogni gesto è come guidare ragionando su ogni movimento del piede. Chiusura: «la tecnica giusta non va spiegata alla testa, va insegnata al corpo. E come si fa? Te lo spiego qui sotto.»
 
-**C2 Quello che ho visto in Namibia · Martedì Educativo · CTA parlata «qui sotto ti racconto»** (v3, 12/11)
+**C2 Quello che ho visto in Namibia · Martedì Educativo · CTA parlata «qui sotto ti racconto»** (v4, 12/11)
 Il problema: al parco, in Italia, ognuno corre a modo suo, e lo scambiamo per stile o personalità. La risposta: in Namibia, con i Boscimani, nessuno insegnava a un altro come si corre, eppure correvano tutti allo stesso modo, leggeri, dritti, quasi senza far rumore; loro non hanno mai smesso di muoversi come madre natura ha previsto, noi sì. Chiusura: quella corsa «ce l'avevi anche tu da bambino, va solo ritrovata. Qui sotto ti racconto cosa ci è successo e perché oggi corri in modo diverso da come dovresti.»
 
-**C3 La ricetta della corsa · Venerdì Conversione · CTA parlata «lo trovi qui sotto» (manuale Come correre bene)** (v3, 12/11)
+**C3 La ricetta della corsa · Venerdì Conversione · CTA parlata «lo trovi qui sotto» (manuale Come correre bene)** (v4, 12/11)
 Il problema: per il pane servono acqua, farina e lievito, e se togli il lievito non ottieni il pane; nella corsa succede lo stesso quando manca un ingrediente. La risposta: la corsa di ingredienti ne ha sette, postura, ritmo, relax, appoggio del piede, posizione della testa, uso delle braccia e parabola; tutto quello che Daniele ha imparato in dodici anni, errori compresi, è nel manuale Come correre bene, con le sette fondamenta spiegate una per una, gli esercizi e i video. Chiusura: «Lo trovi qui sotto. Inizia dal primo ingrediente che ti manca.»
 
-**C4 Esseri umani da zoo · Mercoledì Problem/Solution · CTA parlata «trovi tutto qui sotto»** (v3, 12/11)
+**C4 Esseri umani da zoo · Mercoledì Problem/Solution · CTA parlata «trovi tutto qui sotto»** (v4, 12/11)
 Il problema: una giornata normale, otto ore seduto alla scrivania, il telefono in mano con la testa piegata in avanti, scarpe che fanno il lavoro al posto dei piedi, ore in macchina; il corpo si adatta a tutto questo e siamo diventati esseri umani da zoo. La risposta: si può tornare indietro, riportando nella corsa le sette fondamenta della corsa secondo natura. Chiusura: «Trovi tutto qui sotto, e questo è il primo passo per tornare a correre come un essere umano naturale.»
 
-**C5 Il test del muro · Giovedì Pratico · CTA parlata «trovi tutto qui sotto» (manuale + tagliando corporeo)** (v3, 12/11)
+**C5 Il test del muro · Giovedì Pratico · CTA parlata «trovi tutto qui sotto» (manuale + tagliando corporeo)** (v4, 12/11)
 Il problema: l'87% delle persone analizzate aveva una tecnica scorretta, e nessuno sente da solo quanto si è allontanato dalla corsa secondo natura. La risposta: il test del muro, talloni contro il battiscopa, nuca appoggiata, sguardo all'orizzonte, un filo che tira verso l'alto; poi un passo avanti senza cambiare niente e 20 secondi di corsa sul posto: la sensazione di essere sbilanciati all'indietro è la misura di quanto il corpo si è abituato a qualcos'altro. Chiusura: nel manuale Come correre bene ci sono tutte e sette le fondamenta, e in regalo il tagliando corporeo del corridore, otto test; «trovi tutto qui sotto».
 
-**C6 Il test del metronomo · Giovedì Pratico · CTA parlata «trovi tutto qui sotto»** (v3, 12/11)
+**C6 Il test del metronomo · Giovedì Pratico · CTA parlata «trovi tutto qui sotto»** (v4, 12/11)
 Il problema: la cadenza giusta di solito viene spiegata come una regola da ricordare. La risposta: un metronomo e tre prove di saltelli sul posto; a 110 battute ogni saltello lo fai tu, ed è tutta fatica muscolare; a 220 fai uno sforzo enorme solo per stargli dietro e sprechi efficienza; a 175 succede una cosa strana, inizi a rimbalzare, perché piede, tendine d'Achille e fascia plantare lavorano come molle e restituiscono energia al passo dopo. Chiusura: «Non te l'ho spiegato con una regola: te l'ho fatto percepire, l'hai sentito. Trovi tutto qui sotto. Lascia a casa le regole e lascia correre il tuo corpo.»
 
-**C7 Esercizi che tatuano la tecnica · Venerdì Conversione · CTA parlata «trovi tutto qui sotto» (manuale + videolezione + test)** (v3, 12/11)
+**C7 Esercizi che tatuano la tecnica · Venerdì Conversione · CTA parlata «trovi tutto qui sotto» (manuale + videolezione + test)** (v4, 12/11)
 Il problema: la tecnica di corsa spiegata alla testa, con troppe regole da ricordare. La risposta: insegnarla al corpo con esercizi precisi, prima, durante e dopo la corsa, che trasmettono il gesto giusto direttamente al cervello motorio; Daniele li usa da dodici anni e un po' alla volta «tatuano la tecnica giusta nel tuo corpo»; nel manuale Come correre bene ci sono gli esercizi per tutte e sette le fondamenta con le dimostrazioni video, più la videolezione Corsa perfetta in 30 secondi e il test del corridore. Chiusura: «Lascia a casa le regole e lascia correre il tuo corpo.»
 
 ## CCB «new angle» · reel, versione «percorso» (senza il manuale, pannello «Commenta PERCORSO», stesse animazioni)

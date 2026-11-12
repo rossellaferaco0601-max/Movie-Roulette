@@ -991,7 +991,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
   {
     id: "C1-runner",
     title: "Il runner che sapeva troppo",
-    cover: { kicker: "Tecnica di corsa", lines: ["Il runner che", "sapeva troppo"], accent: "troppo", shiftY: -0.09 },
+    cover: { frame: 2388, kicker: "Tecnica di corsa", lines: ["Il runner che", "sapeva troppo"], accent: "troppo", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v1_runner.mov",
@@ -1036,7 +1036,7 @@ Non è colpa tua: dentro di te ci sono due cervelli, quello pensante e quello mo
   {
     id: "C2-namibia",
     title: "Quello che ho visto in Namibia",
-    cover: { kicker: "Tecnica di corsa", lines: ["Cosa ho visto", "in Namibia"], accent: "Namibia", shiftY: -0.09 },
+    cover: { frame: 1788, kicker: "Tecnica di corsa", lines: ["Cosa ho visto", "in Namibia"], accent: "Namibia", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v1_namibia.mov",
@@ -1084,7 +1084,7 @@ Poi sono tornato in Italia, e al parco ognuno correva a modo suo. Non è questio
   {
     id: "C3-ricetta",
     title: "La ricetta della corsa",
-    cover: { kicker: "Tecnica di corsa", lines: ["La ricetta", "della corsa"], accent: "ricetta", shiftY: -0.09 },
+    cover: { frame: 564, kicker: "Tecnica di corsa", lines: ["La ricetta", "della corsa"], accent: "ricetta", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_ricetta.mov",
@@ -1130,7 +1130,7 @@ La corsa ne ha sette: postura, ritmo, relax, appoggio del piede, posizione della
   {
     id: "C4-zoo",
     title: "Esseri umani da zoo",
-    cover: { kicker: "Tecnica di corsa", lines: ["Esseri umani", "da zoo"], accent: "da zoo", shiftY: -0.09 },
+    cover: { frame: 1396, kicker: "Tecnica di corsa", lines: ["Esseri umani", "da zoo"], accent: "da zoo", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_ritrova.mov",
@@ -1175,7 +1175,7 @@ La buona notizia è che si può tornare indietro. Le sette fondamenta della cors
   {
     id: "C5-muro",
     title: "Il test del muro",
-    cover: { kicker: "Tecnica di corsa", lines: ["Il test", "del muro"], accent: "muro", shiftY: -0.09 },
+    cover: { frame: 760, kicker: "Tecnica di corsa", lines: ["Il test", "del muro"], accent: "muro", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_ritrova.mov",
@@ -1217,7 +1217,7 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
   {
     id: "C6-metronomo",
     title: "Il test del metronomo",
-    cover: { kicker: "Tecnica di corsa", lines: ["Il test", "del metronomo"], accent: "metronomo", shiftY: -0.09 },
+    cover: { frame: 458, kicker: "Tecnica di corsa", lines: ["Il test", "del metronomo"], accent: "metronomo", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_sentendo.mov",
@@ -1265,7 +1265,7 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
   {
     id: "C7-tecnica",
     title: "Esercizi che tatuano la tecnica",
-    cover: { kicker: "Tecnica di corsa", lines: ["Esercizi che", "tatuano la tecnica"], accent: "tatuano", shiftY: -0.09 },
+    cover: { frame: 370, kicker: "Tecnica di corsa", lines: ["Esercizi che", "tatuano la tecnica"], accent: "tatuano", shiftY: -0.09 },
     props: {
       ...base,
       src: "ccb/v2_sentendo.mov",
