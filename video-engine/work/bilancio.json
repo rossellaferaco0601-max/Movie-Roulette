@@ -1,0 +1,41 @@
+{
+ "id": "T7-bilancio",
+ "src": "public/testimonianze/C3502-001.MP4",
+ "pre": "crop=534:952:722:126,scale=1080:1920:flags=lanczos+accurate_rnd",
+ "out": "public/testimonianze/T7-bilancio.mp4",
+ "faceX": 0.5,
+ "faceY": 0.27,
+ "zooms": [
+  1,
+  1.04
+ ],
+ "blendFrames": 5,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 142.05,
+   "to": 152.45
+  },
+  {
+   "from": 48.457,
+   "to": 50.6903
+  },
+  {
+   "from": 52.867,
+   "to": 69.4337
+  },
+  {
+   "from": 76.767,
+   "to": 88.4003
+  },
+  {
+   "from": 117.227,
+   "to": 132.127
+  },
+  {
+   "from": 153.387,
+   "to": 165.7203
+  }
+ ]
+}

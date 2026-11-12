@@ -1,0 +1,18 @@
+{
+ "raw": "public/testimonianze/C3502-001.MP4",
+ "duration": 486.49,
+ "face": {
+  "cx": 990,
+  "top": 223,
+  "chin95": 553,
+  "cxRange": [
+   939,
+   1039
+  ]
+ },
+ "pre": "crop=534:952:722:126,scale=1080:1920:flags=lanczos+accurate_rnd",
+ "chinFrac": 0.448,
+ "faceXLong": 0.515,
+ "faceYLong": 0.359,
+ "align": "804 parole allineate; scarto dai tempi di Whisper: mediana -30 ms, |scarto| medio 116 ms, oltre 150 ms: 104, massimo 2710 ms"
+}

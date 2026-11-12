@@ -1,7 +1,7 @@
 {
  "v1_runner": {
   "src": "public/ccb/v1_runner.mov",
-  "words": "work/ccb_v1_runner_w.json",
+  "words": "src/cn/wordsCcbV1Runner.json",
   "stories": [
    [
     [
@@ -53,7 +53,7 @@
  },
  "v1_namibia": {
   "src": "public/ccb/v1_namibia.mov",
-  "words": "work/ccb_v1_namibia_w.json",
+  "words": "src/cn/wordsCcbV1Namibia.json",
   "stories": [
    [
     [
@@ -97,7 +97,7 @@
  },
  "v2_ricetta": {
   "src": "public/ccb/v2_ricetta.mov",
-  "words": "work/ccb_v2_ricetta_w.json",
+  "words": "src/cn/wordsCcbV2Ricetta.json",
   "stories": [
    [
     [
@@ -145,7 +145,7 @@
  },
  "v2_ritrova": {
   "src": "public/ccb/v2_ritrova.mov",
-  "words": "work/ccb_v2_ritrova_w.json",
+  "words": "src/cn/wordsCcbV2Ritrova.json",
   "stories": [
    [
     [
@@ -213,7 +213,7 @@
  },
  "v2_sentendo": {
   "src": "public/ccb/v2_sentendo.mov",
-  "words": "work/ccb_v2_sentendo_w.json",
+  "words": "src/cn/wordsCcbV2Sentendo.json",
   "stories": [
    [
     [

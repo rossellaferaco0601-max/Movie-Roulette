@@ -1,0 +1,53 @@
+{
+ "id": "T8-trail",
+ "src": "public/testimonianze/C3504-010.MP4",
+ "pre": "crop=532:948:718:130,scale=1080:1920:flags=lanczos+accurate_rnd",
+ "out": "public/testimonianze/T8-trail.mp4",
+ "faceX": 0.5,
+ "faceY": 0.25,
+ "zooms": [
+  1,
+  1.04
+ ],
+ "blendFrames": 5,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 43.91,
+   "to": 48.5767
+  },
+  {
+   "from": 83.167,
+   "to": 95.8337
+  },
+  {
+   "from": 300.037,
+   "to": 303.137
+  },
+  {
+   "from": 308.247,
+   "to": 319.6137
+  },
+  {
+   "from": 321.577,
+   "to": 324.677
+  },
+  {
+   "from": 330.137,
+   "to": 336.6703
+  },
+  {
+   "from": 146.807,
+   "to": 157.9403
+  },
+  {
+   "from": 162.947,
+   "to": 168.2803
+  },
+  {
+   "from": 191.977,
+   "to": 204.3103
+  }
+ ]
+}

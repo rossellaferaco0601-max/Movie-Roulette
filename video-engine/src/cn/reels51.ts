@@ -6,6 +6,8 @@ import wordsTaddeo from "./wordsTaddeo.json";
 import wordsMattia from "./wordsMattia.json";
 import wordsC3500 from "./wordsC3500.json";
 import wordsC3501 from "./wordsC3501.json";
+import wordsC3502 from "./wordsC3502.json";
+import wordsC3504 from "./wordsC3504.json";
 import wordsCcbV1Runner from "./wordsCcbV1Runner.json";
 import wordsCcbV1Namibia from "./wordsCcbV1Namibia.json";
 import wordsCcbV2Ricetta from "./wordsCcbV2Ricetta.json";
@@ -1051,5 +1053,88 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
 Un po' alla volta tatuano la tecnica giusta nel tuo corpo. Lascia a casa le regole e lascia correre il tuo corpo.
 
 #correrenaturale #comecorrerebene #corsa #running`,
+  },
+  {
+    id: "T7-bilancio",
+    title: "«Da 10 che pensavo potesse fare, il mio corpo sa fare 100» (testimonianza: bilancio di metà percorso)",
+    props: {
+      ...base,
+      src: "testimonianze/C3502-001.MP4",
+      words: wordsC3502 as CNReelProps["words"],
+      master: "testimonianze/T7-bilancio.mp4",
+      // bilancio di metà percorso della Superhuman Academy (racconto libero): nel girato non dice il nome, quindi niente cartellino
+      gfxShift: 100,
+      gfxScale: 0.9,
+      capShift: 30,
+      segments: cut([142.05, 152.36], [48.54, 50.6], [52.95, 69.35], [76.85, 88.33], [117.31, 132.05], [153.47, 165.72]),
+      hook: null,
+      elements: [
+        { kind: "title", at: 0.2, dur: 3.3, lines: ["La mente risponde", "al corpo"], accent: "corpo" },
+        { kind: "stat", at: 6.45, word: "100", dur: 2.3, value: "10 → 100", label: "quello che il corpo sa fare" },
+        { kind: "stat", at: 9.15, word: "3000", dur: 1.75, value: "10.000", label: "quello che la mente sa di poter fare" },
+        { kind: "title", at: 12.49, word: "estremamente", dur: 2.6, lines: ["Bilancio di metà percorso", "estremamente positivo"], accent: "positivo" },
+        { kind: "title", at: 16.05, word: "vanno", dur: 2.9, lines: ["Molto al di là", "della corsa"], accent: "corsa" },
+        { kind: "title", at: 20.79, word: "percorso", dur: 4.4, cues: ["percorso", "360"], lines: ["Un percorso che ti forma", "a 360 gradi"], accent: "360" },
+        { kind: "title", at: 26.53, word: "ripensare", dur: 2.0, lines: ["Ripensare", "molti schemi"], accent: "schemi" },
+        { kind: "checklist", at: 34.09, word: "condizione", dur: 5.9, big: true, cues: ["condizione", "segnali"], items: ["La condizione fisica", "I segnali del corpo"] },
+        { kind: "checklist", at: 45.04, word: "ambito", dur: 9.6, big: true, cues: ["corsa", "quotidiana", "lavorativo", "ambizioni"], items: ["Nella corsa", "Nella vita quotidiana", "Nel lavoro", "Nelle ambizioni"] },
+        { kind: "title", at: 58.29, word: "tasselli", dur: 2.4, lines: ["Tasselli che si mettono", "in fila"], accent: "fila" },
+        { kind: "title", at: 61.27, word: "tessere", dur: 5.6, cues: ["tessere", "può", "mirare"], lines: ["Come le tessere del domino", "si può sempre mirare", "a qualcosa di più"], accent: "più" },
+      ],
+      cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
+    },
+    didascalia: `«Se so che il mio corpo, da 10 che pensavo potesse fare, sa fare 100, la mia mente ora sa che può fare 3000, 10.000.»
+
+Bilancio di metà percorso: estremamente positivo, per aspetti che vanno molto al di là della corsa. È un percorso che ti forma a 360 gradi, come persona.
+
+Ha imparato a gestire meglio la condizione fisica e a riconoscere i segnali del corpo. E ha scoperto possibilità nuove: nella corsa, nella vita quotidiana, nel lavoro, nelle ambizioni.
+
+«È tutto un processo di tasselli che si mettono in fila: come le tessere del domino, si può sempre mirare a qualcosina di più.»
+
+Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #testimonianza #corsa #running #superhuman`,
+  },
+  {
+    id: "T8-trail",
+    title: "«Quattro anni di fascite plantare, e ora il mio primo trail» (testimonianza)",
+    props: {
+      ...base,
+      src: "testimonianze/C3504-010.MP4",
+      words: wordsC3504 as CNReelProps["words"],
+      master: "testimonianze/T8-trail.mp4",
+      // bilancio di sei mesi di Superhuman Academy (racconto libero): nel girato non dice il nome, quindi niente cartellino
+      gfxShift: 30,
+      capShift: 20,
+      segments: cut([43.91, 48.49], [83.25, 95.74], [300.12, 303.06], [308.33, 319.54], [321.66, 324.59], [330.22, 336.6], [146.89, 157.86], [163.03, 168.2], [192.06, 204.3]),
+      hook: null,
+      elements: [
+        { kind: "stat", at: 1.19, word: "quattro", dur: 3.1, value: "4 anni", label: "di fascite plantare" },
+        { kind: "title", at: 6.79, word: "maratona", dur: 2.6, lines: ["La mia prima maratona", "ad aprile"], accent: "maratona" },
+        { kind: "bigstrike", at: 11.99, word: "saltare", dur: 2.6, text: "La prima maratona" },
+        { kind: "checklist", at: 18.76, word: "esercizi", dur: 7.4, big: true, cues: ["esercizi", "rallentando", "pazienza"], items: ["Gli esercizi giusti", "Rallentare un po'", "Pazienza, soprattutto"] },
+        { kind: "title", at: 27.25, word: "tornata", dur: 3.6, cues: ["tornata", "senza"], lines: ["Tornata come prima", "senza alcun fastidio"], accent: "prima" },
+        { kind: "title", at: 32.96, word: "coach", dur: 2.2, lines: ["I coach sempre a fianco"], accent: "coach" },
+        { kind: "title", at: 36.81, word: "programma", dur: 3.4, lines: ["Il programma cambiava", "con i miei piedi"], accent: "piedi" },
+        { kind: "title", at: 44.03, word: "obiettivi", dur: 2.0, lines: ["Ho rivisto i miei obiettivi"], accent: "obiettivi" },
+        { kind: "title", at: 49.63, word: "correre", dur: 1.9, lines: ["A correre", "sui sentieri"], accent: "sentieri" },
+        { kind: "stat", at: 54.35, word: "trail", dur: 2.0, value: "25 km", label: "il mio primo trail" },
+        { kind: "title", at: 56.76, word: "obiettivo", dur: 3.4, lines: ["Un obiettivo", "può saltare"], accent: "saltare" },
+        { kind: "title", at: 63.6, word: "pilastri", dur: 2.25, lines: ["Grazie ai pilastri", "di Correre Naturale"], accent: "pilastri" },
+        { kind: "title", at: 66.4, word: "può", dur: 2.1, lines: ["Si può fare", "tutt'altro"], accent: "tutt'altro" },
+      ],
+      cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
+    },
+    didascalia: `«Ho sofferto per quattro anni di fascite plantare.»
+
+Aveva in programma la sua prima maratona ad aprile, e ha dovuto saltarla per un fastidio all'altro piede. Ma sapeva che con gli esercizi giusti, rallentando un po' e soprattutto con pazienza sarebbe tornata come prima, senza alcun fastidio. E così è stato.
+
+I coach sempre a fianco, il programma modificato in corso d'opera in base a come stavano i suoi piedi. Poi ha rivisto gli obiettivi: ha iniziato a correre sui sentieri, e tra una settimana ha il suo primo trail di 25 km.
+
+«Un obiettivo può non essere raggiunto, ma grazie ai pilastri di Correre Naturale® si può andare a fare tutt'altro.»
+
+Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #testimonianza #corsa #running #trailrunning`,
   },
 ];

@@ -41,10 +41,16 @@ for i, s in enumerate(c["segments"]):
 d = c["blendFrames"] / FPS
 inputs = []; fv = fa = ""; pv, pa = "[0:v]", "[0:a]"; off = 0.0; total = parts[0][1]
 for p, _ in parts: inputs += ["-i", p]
+HARD = c["blendFrames"] <= 1   # stacco netto: xfade di un solo fotogramma tronca il master (12/11), quindi i pezzi si accodano con concat
+if HARD and len(parts) > 1:
+    for i, (_, nvp) in enumerate(parts):
+        fv += f"[{i}:v]trim=end_frame={nvp - (c['blendFrames'] if i < len(parts) - 1 else 0)},setpts=PTS-STARTPTS[h{i}];"
+    fv += "".join(f"[h{i}]" for i in range(len(parts))) + f"concat=n={len(parts)}:v=1:a=0[vh];"; pv = "[vh]"
 for i in range(1, len(parts)):
     off += parts[i-1][1] / FPS - d
-    fv += f"{pv}[{i}:v]xfade=transition=fade:duration={d:.4f}:offset={off:.4f}[v{i}];"; fa += f"{pa}[{i}:a]acrossfade=d={AX}:c1=tri:c2=tri[a{i}];"
-    pv, pa = f"[v{i}]", f"[a{i}]"; total += parts[i][1] - c["blendFrames"]
+    if not HARD: fv += f"{pv}[{i}:v]xfade=transition=fade:duration={d:.4f}:offset={off:.4f}[v{i}];"; pv = f"[v{i}]"
+    fa += f"{pa}[{i}:a]acrossfade=d={AX}:c1=tri:c2=tri[a{i}];"
+    pa = f"[a{i}]"; total += parts[i][1] - c["blendFrames"]
 k = len(parts)
 for j, b in enumerate(c.get("broll", [])):
     inputs += ["-ss", f"{b['from']:.3f}", "-t", f"{b['dur']:.3f}", "-i", b["file"]]

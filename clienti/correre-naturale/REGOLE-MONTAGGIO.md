@@ -419,3 +419,9 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 - **2026-11-12 (testimonianze, seguito)**: fatti T5 (la sei ore, C3500: racconto libero, senza nome nel girato) e T6 (Giancarlo, C3501). Con i pezzi
   rimontati in ordine diverso dal girato gli agganci alle parole vanno cercati nel tempo del reel: `remapWords` ora ordina le parole per tempo di master.
   Su magliette chiare o stampate le scritte libere (kinetic) si leggono male: usare `title`, `stat`, `checklist` (fondo scuro).
+- **2026-11-12 mattina (errore mio, corretto)**: i reel CCB 2, 3 e 4 erano stati mandati a Ross con il master troncato (video fermo e audio muto
+  dopo il primo o il secondo pezzo): la dissolvenza `xfade` di un solo fotogramma chiudeva il flusso in anticipo. In `cn_master_v.py` con
+  `blendFrames ≤ 1` i pezzi ora si accodano con `concat` (stacco netto vero). **Regola**: prima di mandare un reel controllare sempre che la durata
+  del master sia quella attesa («frame attesi») e che l'audio ci sia fino all'ultimo secondo; la ritrascrizione va letta fino in fondo, non solo l'inizio.
+- **2026-11-12 (testimonianze, fine)**: fatti T7 (bilancio di metà percorso, C3502) e T8 (il primo trail, C3504): racconti liberi, nessuno dei due
+  dice il nome nel girato, quindi senza cartellino e senza versione lunga finché Ross non dà i nomi.

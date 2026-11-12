@@ -35,3 +35,16 @@ Il problema: sei ore di corsa, 50 chilometri; dopo quattro ore e mezza la nipoti
 
 **T6 Giancarlo reel · Venerdì Conversione · CTA PERCORSO** (v1, 12/11)
 Il problema: la corsa vissuta come un cronometro, «arrivi a casa, sei stanco, sei nervoso perché non sei riuscito a fare il tempo che volevi». La svolta: «questo non esiste più»; da quando ha conosciuto Correre Naturale Giancarlo è migliorato soprattutto nella conoscenza di sé, nel fisico e nella mente, con una crescita costante e progressiva; il beneficio più grande è conoscersi e godersi il cammino, perché «a volte bisogna aspettare che il frutto sia maturo prima di raccoglierlo». Chiusura: a chi tentenna dice che il primo passo è provare, iniziare, perché «la competenza c'è, la serietà c'è, la rete di sicurezza c'è».
+
+**T6 Giancarlo versione lunga · Venerdì Conversione · CTA PERCORSO** (v1, 12/11)
+L'intervista completa in sette domande (7:42, orizzontale, per YouTube e il sito). Quanto è migliorato da quando conosce Correre Naturale, soprattutto nella conoscenza di sé, nel fisico e nella mente; come ha conosciuto il metodo; l'obiettivo con cui è partito; il beneficio più grande, conoscersi e godersi il cammino senza l'ansia del cronometro; che cosa è cambiato anche fuori dalla corsa; le resistenze prima di iniziare; il consiglio a chi è indeciso. Chiusura: «la competenza c'è, la serietà c'è, la rete di sicurezza c'è».
+
+## Testimonianze · Bilancio di metà percorso (girato C3502-008)
+
+**T7 Bilancio di metà percorso reel · Venerdì Conversione · CTA PERCORSO** (v1, 12/11)
+Il problema: pensava che il suo corpo potesse fare 10, e ragionava dentro schemi che il percorso gli ha fatto ripensare. La svolta: a metà della Superhuman Academy il bilancio è «estremamente positivo, per aspetti che vanno molto al di là della corsa», perché è un percorso che forma a 360 gradi, come persona; ha imparato a gestire molto meglio la condizione fisica e a riconoscere i segnali del corpo, e ha scoperto possibilità nuove nella corsa, nella vita quotidiana, nel lavoro, nelle ambizioni: «se so che il mio corpo, da 10 che pensavo potesse fare, sa fare 100, la mia mente ora sa che può fare 3000, 10.000». Chiusura: «è tutto un processo di tasselli che si mettono in fila: come le tessere del domino, si può sempre mirare a qualcosina di più». (Nel girato non dice il nome: manca il cartellino.)
+
+## Testimonianze · Il primo trail (girato C3504-010)
+
+**T8 Il primo trail reel · Venerdì Conversione · CTA PERCORSO** (v1, 12/11)
+Il problema: quattro anni di fascite plantare, e la prima maratona, in programma ad aprile, saltata per un fastidio all'altro piede. La svolta: sapeva che con gli esercizi giusti, rallentando un po' e soprattutto con pazienza sarebbe tornata come prima, senza alcun fastidio, «e così è stato»; i coach le sono stati sempre a fianco e il programma veniva modificato in corso d'opera in base a come stavano i suoi piedi; poi ha rivisto gli obiettivi, ha iniziato a correre sui sentieri e tra una settimana ha il suo primo trail di 25 chilometri. Chiusura: «un obiettivo può non essere raggiunto, ma grazie ai pilastri di Correre Naturale si può andare a fare tutt'altro». (Nel girato non dice il nome: manca il cartellino.)
