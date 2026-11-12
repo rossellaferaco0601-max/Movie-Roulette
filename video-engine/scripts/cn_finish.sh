@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Finitura e QA di un reel: loudness -14 LUFS, anteprima leggera, copertina, didascalia, foglio fotogrammi, ritrascrizione.
+# sospensione temporanea: con out/HOLD_CCB i reel CCB (C…) non partono (12/11: vanno prima rifatti con le animazioni)
+[ -f out/HOLD_CCB ] && case "$1" in C*) echo "$1: sospeso (out/HOLD_CCB)"; exit 0;; esac
 # Uso: scripts/cn_finish.sh R1-fiatone [versione]
 set -euo pipefail
 cd "$(dirname "$0")/.."

@@ -934,8 +934,25 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
       ctaSeconds: 0,
       segments: cutN(1, [6.08, 54.7], [60.8, 69.74], [71.31, 79.76], [85.34, 94.94], [99.73, 109.18]),
       hook: null,
-      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      // animazioni nella fascia stretta sotto il mento (Ross 12/11: animazioni in tutti i reel CCB): il volto arriva a 0,63, quindi la zona
+      // grafiche scende a 0,645 e si rimpicciolisce, i sottotitoli scendono fino al limite dell'area sicura; sulla CTA a voce, la scritta di richiamo
+      gfxShift: 395,
+      gfxScale: 0.8,
+      capShift: 80,
       elements: [
+        { kind: "title", at: 0.1, dur: 3.6, lines: ["Il runner che", "sapeva troppo"], accent: "troppo" },
+        { kind: "cycle", at: 9.2, word: "informa,", dur: 4.0, cues: ["informa,", "guarda", "legge", "salva"], items: ["Si informa", "Guarda video", "Legge articoli", "Salva tutorial"] },
+        { kind: "cycle", at: 15.1, word: "testa", dur: 6.15, cues: ["testa", "busto", "piede", "braccia", "spalle"], items: ["Testa così", "Busto così", "Piede così", "Braccia a 90°", "Spalle basse"] },
+        { kind: "title", at: 25.0, word: "pensare", dur: 2.4, lines: ["Pensa a ogni", "singolo passo"], accent: "passo" },
+        { kind: "title", at: 34.5, word: "più", dur: 3.2, lines: ["Più rigido, più stanco"], accent: "rigido," },
+        { kind: "title", at: 44.5, word: "non", dur: 2.4, lines: ["Non è colpa tua"], accent: "colpa tua" },
+        { kind: "bigstrike", at: 50.0, word: "funziona", dur: 2.6, text: "Funziona così" },
+        { kind: "stat", at: 55.1, word: "dentro", dur: 2.3, value: "2", label: "cervelli dentro di te" },
+        { kind: "title", at: 57.9, word: "cervello", dur: 3.2, lines: ["Cervello pensante", "lento e calcolatore"], accent: "pensante" },
+        { kind: "title", at: 61.6, word: "cervello", dur: 3.6, lines: ["Cervello motorio", "rapidissimo, istintivo"], accent: "motorio" },
+        { kind: "title", at: 69.1, word: "cervello", dur: 3.0, lines: ["Il pensante si intromette"], accent: "intromette" },
+        { kind: "title", at: 73.2, word: "lumaca", dur: 2.2, lines: ["Una lumaca alla guida", "di una macchina da corsa"], accent: "lumaca" },
+        { kind: "title", at: 77.4, word: "non", dur: 4.4, cues: ["spiegata", "insegnata"], lines: ["Non va spiegata alla testa", "va insegnata al corpo"], accent: "corpo" },
         { kind: "pointer", at: 83.2, word: "Beh,", dur: 1.85, text: "Te lo spiego qui sotto", accent: "qui sotto" },
       ],
       cta: { word: "", title: "" },
@@ -959,8 +976,28 @@ Non è colpa tua: dentro di te ci sono due cervelli, quello pensante e quello mo
       ctaSeconds: 0,
       segments: cutN(1, [11.89, 64.94], [87.42, 92.84], [97.84, 125.87]),
       hook: null,
-      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      // animazioni nella fascia stretta sotto il mento (Ross 12/11: animazioni in tutti i reel CCB): il volto arriva a 0,63, quindi la zona
+      // grafiche scende a 0,645 e si rimpicciolisce, i sottotitoli scendono fino al limite dell'area sicura; sulla CTA a voce, la scritta di richiamo
+      gfxShift: 395,
+      gfxScale: 0.8,
+      capShift: 80,
       elements: [
+        { kind: "title", at: 0.05, dur: 3.3, lines: ["Quello che ho visto", "in Namibia"], accent: "Namibia" },
+        { kind: "title", at: 10.7, word: "migliaia", dur: 2.3, lines: ["Da migliaia di anni"], accent: "migliaia" },
+        { kind: "title", at: 17.6, word: "nessuno", dur: 2.7, lines: ["Nessuno insegnava", "come si corre"], accent: "Nessuno" },
+        { kind: "cycle", at: 20.6, word: "nessun", dur: 3.15, cues: ["allenatore,", "tabella,", "video,"], items: ["Nessun allenatore", "Nessuna tabella", "Nessun video"] },
+        { kind: "title", at: 23.9, word: "correvano", dur: 1.9, lines: ["Tutti allo stesso modo"], accent: "stesso" },
+        { kind: "title", at: 26.1, word: "bambini,", dur: 2.9, lines: ["Bambini, adulti, anziani"], accent: "anziani" },
+        { kind: "cycle", at: 29.4, word: "leggeri,", dur: 6.65, cues: ["leggeri,", "dritti,", "piede", "rumore."], items: ["Leggeri", "Dritti", "Piede sotto il corpo", "Quasi senza rumore"] },
+        { kind: "title", at: 36.2, word: "tornato", dur: 2.4, lines: ["Poi sono tornato", "in Italia"], accent: "Italia" },
+        { kind: "title", at: 41.7, word: "ognuno", dur: 1.7, lines: ["Ognuno a modo suo"], accent: "suo" },
+        { kind: "cycle", at: 44.0, word: "guardava", dur: 8.6, cues: ["guardava", "seduto", "martello,", "pugni"], items: ["Chi guarda a terra", "Chi sembra seduto", "Piede a martello", "Pugni stretti"] },
+        { kind: "title", at: 53.6, word: "perché", dur: 4.4, lines: ["Perché corriamo", "ognuno a modo suo?"], accent: "suo?" },
+        { kind: "bigstrike", at: 59.4, word: "stile", dur: 1.5, text: "Stile o personalità" },
+        { kind: "title", at: 61.5, word: "abbiamo", dur: 2.2, lines: ["Abbiamo perso qualcosa"], accent: "perso" },
+        { kind: "title", at: 66.7, word: "madre", dur: 2.6, lines: ["Come madre natura", "ha previsto"], accent: "natura" },
+        { kind: "title", at: 73.9, word: "leggera,", dur: 2.2, lines: ["Leggera, dritta, naturale"], accent: "naturale" },
+        { kind: "title", at: 76.6, word: "l'avevi", dur: 4, cues: ["l'avevi", "va"], lines: ["Ce l'avevi anche tu", "va solo ritrovata"], accent: "ritrovata" },
         { kind: "pointer", at: 80.9, word: "Qui", dur: 5.5, text: "Te lo racconto qui sotto", accent: "qui sotto" },
       ],
       cta: { word: "", title: "" },
@@ -984,9 +1021,27 @@ Poi sono tornato in Italia, e al parco ognuno correva a modo suo. Non è questio
       ctaSeconds: 0,
       segments: cutN(1, [3.88, 38.95], [60.08, 80.66], [109.92, 131.02], [142.95, 148.67]),
       hook: null,
-      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      // animazioni nella fascia stretta sotto il mento (Ross 12/11: animazioni in tutti i reel CCB): il volto arriva a 0,63, quindi la zona
+      // grafiche scende a 0,645 e si rimpicciolisce, i sottotitoli scendono fino al limite dell'area sicura; sulla CTA a voce, la scritta di richiamo
+      gfxShift: 395,
+      gfxScale: 0.8,
+      capShift: 80,
       elements: [
+        { kind: "title", at: 0.05, dur: 2.6, lines: ["La ricetta", "della corsa"], accent: "ricetta" },
+        { kind: "stat", at: 3.3, word: "pane", dur: 2.6, value: "3", label: "ingredienti per il pane" },
+        { kind: "cycle", at: 6.3, word: "acqua,", dur: 2.45, cues: ["acqua,", "farina", "lievito."], items: ["Acqua", "Farina", "Lievito"] },
+        { kind: "bigstrike", at: 8.9, word: "lievito,", dur: 1.6, text: "Lievito" },
+        { kind: "title", at: 11.4, word: "ottieni", dur: 2.0, lines: ["Non ottieni il pane"], accent: "pane" },
+        { kind: "stat", at: 17.2, word: "stesso", dur: 1.8, value: "7", label: "ingredienti della corsa" },
+        { kind: "cycle", at: 19.3, word: "postura,", dur: 5.8, cues: ["postura,", "ritmo,", "relax,", "appoggio", "posizione", "uso", "parabola."], items: ["Postura", "Ritmo", "Relax", "Appoggio del piede", "Posizione della testa", "Uso delle braccia", "Parabola"] },
+        { kind: "title", at: 25.3, word: "manca", dur: 4.1, cues: ["manca", "non"], lines: ["Se ne manca uno", "la corsa non lievita"], accent: "lievita" },
+        { kind: "cycle", at: 32.7, word: "fastidi,", dur: 2.3, cues: ["fastidi,", "fatica,", "poca"], items: ["Fastidi", "Fatica", "Poca voglia di uscire"] },
+        { kind: "title", at: 38.7, word: "tuo", dur: 1.6, lines: ["Il tuo corpo te lo dice"], accent: "corpo" },
+        { kind: "cycle", at: 42.1, word: "Come", dur: 9.3, cues: ["Come", "dopo?", "Hai", "Esci", "Sei"], items: ["Come ti senti mentre corri?", "E dopo?", "Hai spesso fastidi?", "Esci con piacere?", "Sei soddisfatto dei risultati?"] },
+        { kind: "title", at: 53.7, word: "nella", dur: 1.9, lines: ["Nella tua ricetta", "qualcosa non va"], accent: "non va" },
+        { kind: "stat", at: 57.6, word: "dodici", dur: 2.4, value: "12 anni", label: "di lavoro, errori compresi" },
         { kind: "pointer", at: 60.6, word: "manuale", dur: 7.6, arrow: false, text: "Manuale «Come correre bene»", accent: "«Come correre bene»" },
+        { kind: "cycle", at: 68.6, word: "sette", dur: 7.9, cues: ["sette", "esercizi", "video"], items: ["Le 7 fondamenta", "Gli esercizi", "I video"] },
         { kind: "pointer", at: 78.2, word: "lo", dur: 4.1, text: "Lo trovi qui sotto", accent: "qui sotto" },
       ],
       cta: { word: "", title: "" },
@@ -1010,8 +1065,26 @@ La corsa ne ha sette: postura, ritmo, relax, appoggio del piede, posizione della
       ctaSeconds: 0,
       segments: cutN(1, [2.82, 43.8], [47.31, 71.93], [164.09, 170.26]),
       hook: null,
-      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      // animazioni nella fascia stretta sotto il mento (Ross 12/11: animazioni in tutti i reel CCB): il volto arriva a 0,63, quindi la zona
+      // grafiche scende a 0,645 e si rimpicciolisce, i sottotitoli scendono fino al limite dell'area sicura; sulla CTA a voce, la scritta di richiamo
+      gfxShift: 395,
+      gfxScale: 0.8,
+      capShift: 80,
       elements: [
+        { kind: "title", at: 0.05, dur: 1.65, lines: ["Una giornata", "normale"], accent: "normale" },
+        // a 5,5 s Daniele piega la testa in avanti (il mento scende a 0,66): lì niente grafica
+        { kind: "stat", at: 2.0, word: "8", dur: 2.9, value: "8 ore", label: "seduto alla scrivania" },
+        { kind: "cycle", at: 6.4, word: "avanti,", dur: 6.9, cues: ["avanti,", "scarpe", "macchina."], items: ["Testa piegata in avanti", "Scarpe che costringono i piedi", "Ore in macchina"] },
+        { kind: "title", at: 14.2, word: "corpo", dur: 1.7, lines: ["Il corpo si adatta"], accent: "adatta" },
+        { kind: "cycle", at: 16.2, word: "muscoli", dur: 5.6, cues: ["muscoli", "articolazioni", "tendini"], items: ["Muscoli più deboli", "Articolazioni rigide", "Tendini meno elastici"] },
+        { kind: "title", at: 24.3, word: "esseri", dur: 2.2, lines: ["Esseri umani da zoo"], accent: "da zoo" },
+        { kind: "title", at: 27.8, word: "gabbia", dur: 1.9, lines: ["Una gabbia", "costruita da soli"], accent: "gabbia" },
+        { kind: "title", at: 30.0, word: "perso", dur: 4.4, lines: ["Abbiamo perso", "la capacità di correre"], accent: "correre" },
+        { kind: "title", at: 35.6, word: "buona", dur: 4.6, cues: ["buona", "può"], lines: ["La buona notizia:", "si può tornare indietro"], accent: "indietro" },
+        { kind: "stat", at: 42.8, word: "12", dur: 2.4, value: "12 anni", label: "di analisi su migliaia di runner" },
+        { kind: "stat", at: 46.1, word: "7", dur: 3.6, value: "7", label: "elementi della corsa secondo natura" },
+        { kind: "cycle", at: 52.8, word: "postura,", dur: 6.55, cues: ["postura,", "ritmo,", "relax,", "appoggio", "posizione", "uso", "parabola."], items: ["Postura", "Ritmo", "Relax", "Appoggio del piede", "Posizione della testa", "Uso delle braccia", "Parabola"] },
+        { kind: "title", at: 60.4, word: "Boscimani", dur: 4.9, cues: ["Boscimani", "dobbiamo"], lines: ["I Boscimani lo fanno", "noi dobbiamo reimparare"], accent: "reimparare" },
         { kind: "pointer", at: 65.7, word: "Trovi", dur: 5.9, text: "Trovi tutto qui sotto", accent: "qui sotto" },
       ],
       cta: { word: "", title: "" },
@@ -1035,9 +1108,24 @@ La buona notizia è che si può tornare indietro. Le sette fondamenta della cors
       ctaSeconds: 0,
       segments: cutN(1, [71.93, 88.0], [90.71, 118.86], [142.16, 153.12], [154.84, 170.26]),
       hook: null,
-      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      // animazioni nella fascia stretta sotto il mento (Ross 12/11: animazioni in tutti i reel CCB): il volto arriva a 0,63, quindi la zona
+      // grafiche scende a 0,645 e si rimpicciolisce, i sottotitoli scendono fino al limite dell'area sicura; sulla CTA a voce, la scritta di richiamo
+      gfxShift: 395,
+      gfxScale: 0.8,
+      capShift: 80,
       elements: [
+        { kind: "title", at: 0.1, dur: 1.8, lines: ["Un dato", "scioccante"], accent: "scioccante" },
+        { kind: "stat", at: 2.2, word: "l'87%", dur: 4.8, value: "87%", label: "ha una tecnica scorretta" },
+        { kind: "stat", at: 7.8, word: "9", dur: 2.5, value: "9 su 10", label: "persone analizzate" },
+        { kind: "title", at: 12.3, word: "quanto", dur: 3.4, lines: ["Quanto ti sei", "allontanato?"], accent: "allontanato?" },
+        { kind: "cycle", at: 17.7, word: "talloni", dur: 11.3, cues: ["talloni", "nuca", "sguardo", "filo", "rilassati."], items: ["Talloni contro il battiscopa", "Nuca appoggiata al muro", "Sguardo all'orizzonte", "Un filo ti tira verso l'alto", "Rilassati"] },
+        { kind: "title", at: 29.6, word: "passo", dur: 2.0, cues: ["passo", "senza"], lines: ["Un passo avanti", "senza cambiare niente"], accent: "niente" },
+        { kind: "stat", at: 32.0, word: "corri", dur: 2.3, value: "20 secondi", label: "di corsa sul posto" },
+        { kind: "cycle", at: 35.0, word: "posizione", dur: 3.3, cues: ["posizione", "sbilanciato"], items: ["Posizione strana?", "Sbilanciato all'indietro?"] },
+        { kind: "title", at: 39.8, word: "sensazione", dur: 4.2, lines: ["È la misura di quanto", "ti sei abituato ad altro"], accent: "misura" },
+        { kind: "pill", at: 44.6, word: "solo", dur: 1.7, text: "Solo uno dei tanti esercizi" },
         { kind: "pointer", at: 46.75, word: "manuale", dur: 8.2, arrow: false, text: "Manuale «Come correre bene»", accent: "«Come correre bene»" },
+        { kind: "stat", at: 57.6, word: "tagliando", dur: 5.6, value: "8 test", label: "in regalo: il tagliando corporeo" },
         { kind: "pointer", at: 64.5, word: "Trovi", dur: 5.9, text: "Trovi tutto qui sotto", accent: "qui sotto" },
       ],
       cta: { word: "", title: "" },
@@ -1062,9 +1150,29 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
       // chiusa a voce presa dal finale del girato (lo stesso di C7): «Trovi tutto qui sotto. Lascia a casa le regole e lascia correre il tuo corpo.»
       segments: [...C6_SEGS, tailFrom(C7_SEGS, 1, 55.0667)],
       hook: null,
-      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      // animazioni nella fascia stretta sotto il mento (Ross 12/11: animazioni in tutti i reel CCB): il volto arriva a 0,63, quindi la zona
+      // grafiche scende a 0,645 e si rimpicciolisce, i sottotitoli scendono fino al limite dell'area sicura; sulla CTA a voce, la scritta di richiamo
+      gfxShift: 395,
+      gfxScale: 0.8,
+      capShift: 80,
       elements: [
-        { kind: "pointer", at: 76.3, word: "Trovi", dur: 4.6, text: "Il manuale è qui sotto", accent: "qui sotto" },
+        { kind: "title", at: 0.05, dur: 3.0, lines: ["Il test", "del metronomo"], accent: "metronomo" },
+        { kind: "pill", at: 4.5, word: "un'app", dur: 3.0, text: "Un'app gratuita sul telefono" },
+        { kind: "beat", at: 10.0, word: "110", dur: 6.6, bpm: 110, label: "saltella sul posto a tempo" },
+        { kind: "title", at: 19.0, word: "saltello", dur: 2.4, lines: ["Ogni saltello", "lo fai tu"], accent: "tu" },
+        { kind: "cycle", at: 21.8, word: "pieghi", dur: 3.12, cues: ["pieghi", "spingi,", "atterri,", "ricominci"], items: ["Pieghi le gambe", "Spingi", "Atterri", "Ricominci"] },
+        { kind: "title", at: 25.1, word: "tutta", dur: 2.1, lines: ["Tutta fatica muscolare"], accent: "muscolare" },
+        { kind: "beat", at: 29.2, word: "220", dur: 5.9, bpm: 220, label: "un ritmo velocissimo", tone: "coral" },
+        { kind: "title", at: 37.0, word: "sprecare", dur: 2.2, lines: ["Sprechi efficienza"], accent: "efficienza" },
+        { kind: "beat", at: 42.5, word: "175", dur: 4.2, bpm: 175, label: "l'ultimo test" },
+        { kind: "title", at: 47.4, word: "saltelli", dur: 3.5, cues: ["saltelli", "accadono"], lines: ["Un po' li fai tu", "un po' accadono da soli"], accent: "da soli" },
+        { kind: "title", at: 51.8, word: "rimbalzare,", dur: 2.6, lines: ["Inizi a rimbalzare"], accent: "rimbalzare" },
+        { kind: "cycle", at: 57.3, word: "piede,", dur: 2.4, cues: ["piede,", "tendine", "fascia"], items: ["Piede", "Tendine d'Achille", "Fascia plantare"] },
+        { kind: "title", at: 59.9, word: "lavorano", dur: 1.5, lines: ["Lavorano come molle"], accent: "molle" },
+        { kind: "title", at: 61.7, word: "assorbono", dur: 5.4, cues: ["assorbono", "restituiscono"], lines: ["Assorbono energia", "e te la restituiscono"], accent: "restituiscono" },
+        { kind: "title", at: 71.8, word: "spiegato", dur: 4.0, cues: ["regola,", "fatto"], lines: ["Non con una regola:", "te l'ho fatto sentire"], accent: "sentire" },
+        { kind: "pointer", at: 76.2, word: "Trovi", dur: 1.8, text: "Il manuale è qui sotto", accent: "qui sotto" },
+        { kind: "title", at: 78.3, word: "Lascia", dur: 2.9, cues: ["regole", "correre"], lines: ["Lascia a casa le regole", "lascia correre il corpo"], accent: "corpo" },
       ],
       cta: { word: "", title: "" },
     },
@@ -1087,10 +1195,27 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
       ctaSeconds: 0,
       segments: C7_SEGS,
       hook: null,
-      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      // animazioni nella fascia stretta sotto il mento (Ross 12/11: animazioni in tutti i reel CCB): il volto arriva a 0,63, quindi la zona
+      // grafiche scende a 0,645 e si rimpicciolisce, i sottotitoli scendono fino al limite dell'area sicura; sulla CTA a voce, la scritta di richiamo
+      gfxShift: 395,
+      gfxScale: 0.8,
+      capShift: 80,
       elements: [
+        { kind: "title", at: 0.1, dur: 2.6, lines: ["La tecnica si insegna", "al corpo"], accent: "corpo" },
+        { kind: "title", at: 3.0, word: "esercizi", dur: 1.6, lines: ["Esercizi precisi"], accent: "precisi" },
+        { kind: "cycle", at: 5.1, word: "prima,", dur: 2.3, cues: ["prima,", "durante", "dopo"], items: ["Prima", "Durante", "Dopo la corsa"] },
+        { kind: "title", at: 8.6, word: "gesto", dur: 3.1, cues: ["gesto", "cervello"], lines: ["Il gesto giusto", "al cervello motorio"], accent: "motorio" },
+        { kind: "bigstrike", at: 12.0, word: "senza", dur: 1.5, text: "Spiegazioni" },
+        { kind: "bigstrike", at: 13.8, word: "senza", dur: 2.7, text: "Troppe regole" },
+        { kind: "stat", at: 19.3, word: "12", dur: 2.0, value: "12 anni", label: "che uso questi esercizi" },
+        { kind: "title", at: 21.8, word: "migliaia", dur: 1.2, lines: ["Migliaia di corridori"], accent: "Migliaia" },
+        { kind: "title", at: 23.9, word: "tatuano", dur: 2.95, cues: ["tatuano", "nel"], lines: ["Tatuano la tecnica", "nel tuo corpo"], accent: "Tatuano" },
+        { kind: "title", at: 28.1, word: "corri", dur: 3.0, cues: ["corri", "senza"], lines: ["Corri bene", "senza sapere come"], accent: "bene" },
         { kind: "pointer", at: 32.3, word: "manuale", dur: 7.4, arrow: false, text: "Manuale «Come correre bene»", accent: "«Come correre bene»" },
-        { kind: "pointer", at: 55.15, word: "Trovi", dur: 4.9, text: "Trovi tutto qui sotto", accent: "qui sotto" },
+        { kind: "stat", at: 41.9, word: "Corsa", dur: 5.8, value: "30 secondi", label: "videolezione Corsa perfetta" },
+        { kind: "title", at: 50.7, word: "test", dur: 3.6, lines: ["Il test del corridore"], accent: "test" },
+        { kind: "pointer", at: 55.15, word: "Trovi", dur: 1.8, text: "Trovi tutto qui sotto", accent: "qui sotto" },
+        { kind: "title", at: 57.2, word: "Lascia", dur: 2.9, cues: ["regole", "correre"], lines: ["Lascia a casa le regole", "lascia correre il corpo"], accent: "corpo" },
       ],
       cta: { word: "", title: "" },
     },
@@ -1208,13 +1333,24 @@ const PERCORSO: { from: string; segments: Seg[]; ranges: [number, number][]; tit
 export const CCB_BUILD: Record<string, { srcs: string[]; ranges: [number, number][] }> = {
   "C6-metronomo-manuale": { srcs: ["ccb/masters/C6-metronomo.mp4", "ccb/masters/C7-tecnica.mp4"], ranges: [[0, playEnd(C6_SEGS, 1)], [55.0667, playEnd(C7_SEGS, 1)]] },
 };
+/** Grafiche di un reel riportate su una variante fatta di intervalli del suo master: restano quelle che cadono per intero in un intervallo
+ *  (la coda di 0,5 s vale come margine), spostate sul nuovo tempo; i richiami alla CTA a voce (`pointer`) non passano. */
+const keepEls = (els: CNReelProps["elements"], ranges: [number, number][]): CNReelProps["elements"] => {
+  const out: CNReelProps["elements"] = [];
+  let off = 0;
+  ranges.forEach(([a, b], i) => {
+    for (const e of els) if (e.kind !== "pointer" && e.at >= a - 0.05 && e.at + e.dur <= b + 0.45) out.push({ ...e, at: +(e.at - a + off).toFixed(2) });
+    off += b - a - (i < ranges.length - 1 ? 1 / 30 : 0);
+  });
+  return out;
+};
 for (const v of PERCORSO) {
   const r = ccb(v.from), id = `${v.from}-percorso`;
   if (v.ranges.length) CCB_BUILD[id] = { srcs: [`ccb/masters/${v.from}.mp4`], ranges: v.ranges };
   REELS.push({
     id,
     title: `${r.title} (versione percorso)`,
-    props: { ...r.props, master: v.ranges.length ? `ccb/masters/${id}.mp4` : "ccb/masters/C6-metronomo.mp4", segments: v.segments, elements: [], ctaSeconds: 8, cta: { word: "PERCORSO", title: v.title } },
+    props: { ...r.props, master: v.ranges.length ? `ccb/masters/${id}.mp4` : "ccb/masters/C6-metronomo.mp4", segments: v.segments, elements: keepEls(r.props.elements, v.ranges.length ? v.ranges : [[0, playEnd(v.segments, 1)]]), ctaSeconds: 8, cta: { word: "PERCORSO", title: v.title } },
     didascalia: r.didascalia.replace(/\n\n(#[^\n]*)$/, `\n\n${PERCORSO_CTA}\n\n$1`),
   });
 }

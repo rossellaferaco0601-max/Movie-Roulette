@@ -12,7 +12,7 @@ import { CTA } from "./CTA";
 import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
 import { Clip, Compare, Step, Airflow, Filter, Beats, Ring, Duo, Slam, Orbit, Drill, slamImpact, slamShake, orbitCam } from "./Elements5";
 import { Pair, Lifebar, Fulltext, Slides } from "./Elements6";
-import { Flow, Renew, Versus, Grid4, Plan, Lights, Pointer } from "./Elements7";
+import { Flow, Renew, Versus, Grid4, Plan, Lights, Pointer, Cycle, Beat } from "./Elements7";
 import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide, Question, NameTag } from "./Elements4";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
@@ -56,6 +56,8 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "plan": return <Plan el={el} start={start} />;
     case "lights": return <Lights el={el} start={start} />;
     case "pointer": return <Pointer el={el} start={start} />;
+    case "cycle": return <Cycle el={el} start={start} />;
+    case "beat": return <Beat el={el} start={start} />;
     case "clip": return <Clip el={el} start={start} />;
     case "compare": return <Compare el={el} start={start} />;
     case "step": return <Step el={el} start={start} />;

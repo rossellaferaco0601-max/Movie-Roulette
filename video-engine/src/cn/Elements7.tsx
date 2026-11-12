@@ -278,17 +278,17 @@ export const Lights: React.FC<P<"lights">> = ({ el, start }) => {
 };
 
 /* ---------- Richiamo (video spontanei): una riga sola sotto il mento, sopra i sottotitoli, quando chi parla dice «lo trovi qui sotto».
-   Sta fuori dalla zona grafiche (nei selfie il volto scende fino a ~0,62): `y` = bordo alto in frazione dell'altezza. ---------- */
+   Sta in cima alla zona grafiche: nei selfie (volto fino a ~0,62) la zona si abbassa con `gfxShift`. `y` = bordo alto in frazione dell.altezza. ---------- */
 export const Pointer: React.FC<{ el: Extract<Element, { kind: "pointer" }>; start: number }> = ({ el, start }) => {
   const { fps } = useVideoConfig();
   const durF = Math.round(el.dur * fps);
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
-  const size = Math.min(54, Math.floor(1300 / Math.max(14, el.text.length)));
+  const size = Math.min(64, Math.floor(1500 / Math.max(14, el.text.length)));
   const bob = el.arrow === false ? 0 : Math.sin((local / fps) * Math.PI * 2 * 1.4) * 7;
   const parts = el.accent && el.text.includes(el.accent) ? [el.text.slice(0, el.text.indexOf(el.accent)), el.accent, el.text.slice(el.text.indexOf(el.accent) + el.accent.length)] : [el.text, "", ""];
   return (
-    <div style={{ position: "absolute", left: 0, width: W, top: Math.round(1920 * (el.y ?? 0.645)), display: "flex", justifyContent: "center", fontFamily: FONT, opacity: out }}>
+    <div style={{ position: "absolute", left: 0, width: W, top: Math.round(1920 * (el.y ?? 0.445)), display: "flex", justifyContent: "center", fontFamily: FONT, opacity: out }}>
       <div style={{ display: "flex", alignItems: "center", gap: 18, background: "rgba(11,15,10,0.92)", border: `4px solid ${BRAND.lime}`, borderRadius: 999, padding: "14px 34px 14px 18px", transform: `translateY(${(1 - s) * 40}px) scale(${0.92 + 0.08 * s})`, opacity: Math.min(1, s * 1.4) }}>
         <div style={{ width: 62, height: 62, borderRadius: 31, background: BRAND.lime, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
           {el.arrow === false ? (
@@ -299,6 +299,66 @@ export const Pointer: React.FC<{ el: Extract<Element, { kind: "pointer" }>; star
         </div>
         <div style={{ fontWeight: 900, fontSize: size, lineHeight: 1, textTransform: "uppercase", color: BRAND.white, whiteSpace: "nowrap" }}>
           {parts[0]}<span style={{ color: BRAND.lime }}>{parts[1]}</span>{parts[2]}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* ---------- Elenco a scorrimento (fascia stretta): una voce alla volta, agganciata alla parola detta (`cues`), con il contatore n/N
+   e i puntini di avanzamento. Serve dove un elenco intero non entra (selfie: la zona grafiche è alta meno di 200 px). ---------- */
+export const Cycle: React.FC<{ el: Extract<Element, { kind: "cycle" }>; start: number }> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible } = useInOut(start, durF);
+  if (!visible) return null;
+  const n = el.items.length;
+  const on = (el.onAt ?? el.items.map((_, i) => (i * el.dur) / n)).map((t) => Math.round(t * fps));
+  let idx = 0;
+  for (let i = 0; i < n; i++) if (local >= (on[i] ?? Infinity)) idx = i;
+  const k = spring({ frame: local - (on[idx] ?? 0), fps, config: { damping: 14, stiffness: 210, mass: 0.6 } });
+  const text = el.items[idx];
+  const size = Math.min(86, Math.floor(1900 / Math.max(12, text.length)));
+  return (
+    <div style={{ position: "absolute", left: 0, width: W, top: GFX_TOP + 8, fontFamily: FONT, opacity: out, transform: `translateY(${(1 - s) * 30}px)` }}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 16, opacity: Math.min(1, s * 1.5) }}>
+        <div style={{ minWidth: 124, height: 124, borderRadius: 30, background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 66, display: "flex", alignItems: "center", justifyContent: "center", transform: `scale(${0.85 + 0.15 * k})` }}>
+          {idx + 1}<span style={{ fontSize: 38, opacity: 0.6, marginLeft: 2 }}>/{n}</span>
+        </div>
+        <div style={{ background: "rgba(11,15,10,0.92)", color: BRAND.white, fontWeight: 900, fontSize: size, lineHeight: 1, textTransform: "uppercase", whiteSpace: "nowrap", padding: `${Math.round((124 - size) / 2)}px 34px`, borderRadius: 26, opacity: Math.min(1, k * 1.6), transform: `translateY(${(1 - k) * 26}px)` }}>{text}</div>
+      </div>
+      <div style={{ display: "flex", justifyContent: "center", gap: 14, marginTop: 20 }}>
+        {el.items.map((_, i) => (
+          <div key={i} style={{ width: i === idx ? 52 : 20, height: 20, borderRadius: 10, background: i <= idx ? BRAND.lime : "rgba(255,255,255,0.55)", boxShadow: "0 2px 6px rgba(0,0,0,0.45)" }} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+/* ---------- Battito (fascia stretta): il numero di battute al minuto con un punto che pulsa a quel ritmo esatto. ---------- */
+export const Beat: React.FC<{ el: Extract<Element, { kind: "beat" }>; start: number }> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible } = useInOut(start, durF);
+  if (!visible) return null;
+  const col = el.tone === "coral" ? "#FF6B4A" : BRAND.lime;
+  const phase = (((local / fps) * el.bpm) / 60) % 1;
+  const pulse = Math.exp(-phase * 6);
+  const count = Math.round(el.bpm * easeOut(local / 14));
+  return (
+    <div style={{ position: "absolute", left: 0, width: W, top: GFX_TOP + 4, display: "flex", justifyContent: "center", fontFamily: FONT, opacity: out }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 26, background: "rgba(11,15,10,0.92)", borderRadius: 30, padding: "16px 40px 16px 30px", transform: `translateY(${(1 - s) * 36}px) scale(${0.9 + 0.1 * s})`, opacity: Math.min(1, s * 1.4) }}>
+        <div style={{ width: 120, height: 120, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+          <div style={{ position: "absolute", width: 120, height: 120, borderRadius: 60, border: `5px solid ${col}`, opacity: 0.25 + 0.6 * (1 - phase), transform: `scale(${0.55 + 0.5 * phase})` }} />
+          <div style={{ width: 62, height: 62, borderRadius: 31, background: col, transform: `scale(${0.8 + 0.55 * pulse})` }} />
+        </div>
+        <div>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 14, color: BRAND.white, fontWeight: 900, lineHeight: 0.95 }}>
+            <span style={{ fontSize: 132, color: col, fontVariantNumeric: "tabular-nums" }}>{count}</span>
+            <span style={{ fontSize: 58 }}>BPM</span>
+          </div>
+          <div style={{ marginTop: 6, color: BRAND.cream, fontWeight: 700, fontSize: 48, lineHeight: 1.05, whiteSpace: "nowrap" }}>{el.label}</div>
         </div>
       </div>
     </div>

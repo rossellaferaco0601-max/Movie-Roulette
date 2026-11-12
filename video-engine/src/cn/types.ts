@@ -46,6 +46,8 @@ export type Element = ElementBase &
     | { kind: "plan"; n: number; kicker: string; pre?: string; title: string[]; points: string[]; foot?: string; art: "walk" | "run" | "timer"; fadeIn?: number; fadeOut?: number }
     | { kind: "lights"; title: string; items: string[] }
     | { kind: "pointer"; text: string; accent?: string; arrow?: boolean; y?: number }
+    | { kind: "cycle"; items: string[] }
+    | { kind: "beat"; bpm: number; label: string; tone?: "lime" | "coral" }
     | { kind: "fulltext"; lines: string[]; accentIndex?: number; fadeIn?: number; fadeOut?: number }
     | { kind: "clip"; src: string; from?: number; tag: string; text: string; posY?: number }
     | { kind: "step"; n: string; label: string; sub: string; strike: string }

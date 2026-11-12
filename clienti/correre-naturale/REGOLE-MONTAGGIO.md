@@ -437,3 +437,15 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - **Reel CCB «percorso»** (`C1-runner-percorso`…): stesso reel senza la parte sul manuale e senza «qui sotto», chiuso dal pannello «Commenta PERCORSO»
     (8 s, tre passi) e con la riga «Vuoi iniziare il tuo percorso? Commenta PERCORSO…» in didascalia. I master sono ritagli dei master CCB
     (`CCB_BUILD` in `reels51.ts`, `npx tsx scripts/ccb_build.ts`): niente da riscaricare.
+- **2026-11-12 (Ross, subito dopo)**: «Aspetta nelle versioni della ccb fai comparire in tutte sia quelle con cta parlata che le altre delle animazioni.
+  Mentre quelle delle stories restano solo con sottotitolo».
+  - **Animazioni in tutti i reel CCB** (manuale e percorso). Nei selfie il volto arriva a 0,63 dell'altezza, quindi la zona grafiche standard lo coprirebbe:
+    le grafiche stanno in una **fascia stretta sotto il mento** (`gfxShift: 395, gfxScale: 0.8`, bordo a 0,645) e i sottotitoli scendono al limite dell'area
+    sicura (`capShift: 80`, bordo basso a 0,795). In fascia entrano solo grafiche basse: `title` (meglio una riga, due al massimo), `stat`, `bigstrike`,
+    `pill`, `pointer` e le due nuove `cycle` (elenco a scorrimento, una voce alla volta agganciata alla parola, con contatore n/N) e `beat` (battute al
+    minuto con il punto che pulsa a quel ritmo). **Non usare** `kinetic` (tocca i sottotitoli), `checklist` e le grafiche in scatola (troppo alte).
+  - Controllo volto con bordo 0,645 (`cn_facecheck_elements.py ID mento.json 0.645`). In C4 a 5,5 s Daniele piega la testa in avanti: lì niente grafica.
+  - Le varianti «percorso» ereditano le grafiche del reel di partenza (`keepEls`), senza i richiami alla CTA a voce.
+  - **Stories**: restano solo con i sottotitoli.
+  - Errore mio da non ripetere: ho modificato `cn_finish.sh` mentre girava e la finitura di T8 v2 è saltata (bash rilegge il file mentre lo esegue).
+    Mai toccare uno script in esecuzione.
