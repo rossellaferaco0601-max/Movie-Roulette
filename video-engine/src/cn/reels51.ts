@@ -6,6 +6,11 @@ import wordsTaddeo from "./wordsTaddeo.json";
 import wordsMattia from "./wordsMattia.json";
 import wordsC3500 from "./wordsC3500.json";
 import wordsC3501 from "./wordsC3501.json";
+import wordsCcbV1Runner from "./wordsCcbV1Runner.json";
+import wordsCcbV1Namibia from "./wordsCcbV1Namibia.json";
+import wordsCcbV2Ricetta from "./wordsCcbV2Ricetta.json";
+import wordsCcbV2Ritrova from "./wordsCcbV2Ritrova.json";
+import wordsCcbV2Sentendo from "./wordsCcbV2Sentendo.json";
 import wordsLongevita from "./wordsLongevita.json";
 import type { CNReelProps } from "./types";
 
@@ -892,5 +897,159 @@ A chi tentenna dice: «Il primo passo è provare, iniziare. La competenza c'è, 
 Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
 
 #correrenaturale #testimonianza #corsa #running #benessere`,
+  },
+  {
+    id: "C1-runner",
+    title: "Il runner che sapeva troppo",
+    props: {
+      ...base,
+      src: "ccb/v1_runner.mov",
+      words: wordsCcbV1Runner as CNReelProps["words"],
+      master: "ccb/masters/C1-runner.mp4",
+      // selfie in camminata («yapping»): deve sembrare spontaneo. Tagli netti, niente grafiche (il volto arriva a 0,62), niente pannello CTA: solo sottotitoli
+      blendFrames: 1,
+      ctaSeconds: 0,
+      segments: cutN(1, [6.08, 54.7], [60.8, 69.74], [71.31, 79.76], [85.34, 94.94], [99.73, 109.18]),
+      hook: null,
+      elements: [],
+      cta: { word: "", title: "" },
+    },
+    didascalia: `Un runner decide di migliorare la sua tecnica: si informa, guarda video, salva tutorial. La mattina dopo pensa a ogni singolo passo, e torna a casa più rigido di quando è uscito.
+
+Non è colpa tua: dentro di te ci sono due cervelli, quello pensante e quello motorio. La tecnica giusta non va spiegata alla testa, va insegnata al corpo.
+
+#correrenaturale #tecnicadicorsa #corsa #running`,
+  },
+  {
+    id: "C2-namibia",
+    title: "Quello che ho visto in Namibia",
+    props: {
+      ...base,
+      src: "ccb/v1_namibia.mov",
+      words: wordsCcbV1Namibia as CNReelProps["words"],
+      master: "ccb/masters/C2-namibia.mp4",
+      // selfie in camminata («yapping»): deve sembrare spontaneo. Tagli netti, niente grafiche (il volto arriva a 0,62), niente pannello CTA: solo sottotitoli
+      blendFrames: 1,
+      ctaSeconds: 0,
+      segments: cutN(1, [11.89, 64.94], [87.42, 92.84], [97.84, 125.87]),
+      hook: null,
+      elements: [],
+      cta: { word: "", title: "" },
+    },
+    didascalia: `In Namibia, con i Boscimani, nessuno insegnava a un altro come si corre. Eppure correvano tutti allo stesso modo: leggeri, dritti, quasi senza far rumore.
+
+Poi sono tornato in Italia, e al parco ognuno correva a modo suo. Non è questione di stile: è il segno che abbiamo perso qualcosa. Quella corsa ce l'avevi anche tu da bambino: va solo ritrovata.
+
+#correrenaturale #corsanaturale #corsa #running`,
+  },
+  {
+    id: "C3-ricetta",
+    title: "La ricetta della corsa",
+    props: {
+      ...base,
+      src: "ccb/v2_ricetta.mov",
+      words: wordsCcbV2Ricetta as CNReelProps["words"],
+      master: "ccb/masters/C3-ricetta.mp4",
+      // selfie in camminata («yapping»): deve sembrare spontaneo. Tagli netti, niente grafiche (il volto arriva a 0,62), niente pannello CTA: solo sottotitoli
+      blendFrames: 1,
+      ctaSeconds: 0,
+      segments: cutN(1, [3.88, 38.95], [60.08, 80.66], [109.92, 131.02], [142.95, 148.67]),
+      hook: null,
+      elements: [],
+      cta: { word: "", title: "" },
+    },
+    didascalia: `Per il pane servono tre ingredienti: acqua, farina e lievito. Se togli il lievito non ottieni il pane.
+
+La corsa ne ha sette: postura, ritmo, relax, appoggio del piede, posizione della testa, uso delle braccia e parabola. Se ne manca uno, la tua corsa non lievita.
+
+#correrenaturale #comecorrerebene #corsa #running`,
+  },
+  {
+    id: "C4-zoo",
+    title: "Esseri umani da zoo",
+    props: {
+      ...base,
+      src: "ccb/v2_ritrova.mov",
+      words: wordsCcbV2Ritrova as CNReelProps["words"],
+      master: "ccb/masters/C4-zoo.mp4",
+      // selfie in camminata («yapping»): deve sembrare spontaneo. Tagli netti, niente grafiche (il volto arriva a 0,62), niente pannello CTA: solo sottotitoli
+      blendFrames: 1,
+      ctaSeconds: 0,
+      segments: cutN(1, [2.82, 43.8], [47.31, 71.93], [164.09, 170.26]),
+      hook: null,
+      elements: [],
+      cta: { word: "", title: "" },
+    },
+    didascalia: `Otto ore seduto, il telefono in mano, scarpe che fanno il lavoro al posto dei piedi. Il corpo si adatta: siamo diventati esseri umani da zoo.
+
+La buona notizia è che si può tornare indietro. Le sette fondamenta della corsa secondo natura: postura, ritmo, relax, appoggio del piede, posizione della testa, uso delle braccia e parabola.
+
+#correrenaturale #corsanaturale #corsa #running`,
+  },
+  {
+    id: "C5-muro",
+    title: "Il test del muro",
+    props: {
+      ...base,
+      src: "ccb/v2_ritrova.mov",
+      words: wordsCcbV2Ritrova as CNReelProps["words"],
+      master: "ccb/masters/C5-muro.mp4",
+      // selfie in camminata («yapping»): deve sembrare spontaneo. Tagli netti, niente grafiche (il volto arriva a 0,62), niente pannello CTA: solo sottotitoli
+      blendFrames: 1,
+      ctaSeconds: 0,
+      segments: cutN(1, [71.93, 88.0], [90.71, 118.86], [142.16, 153.12], [154.84, 170.26]),
+      hook: null,
+      elements: [],
+      cta: { word: "", title: "" },
+    },
+    didascalia: `L'87% delle persone che abbiamo analizzato aveva una tecnica scorretta. Vuoi sentire quanto ti sei allontanato dalla corsa secondo natura?
+
+Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo avanti senza cambiare niente e corri sul posto per 20 secondi.
+
+#correrenaturale #tecnicadicorsa #corsa #running`,
+  },
+  {
+    id: "C6-metronomo",
+    title: "Il test del metronomo",
+    props: {
+      ...base,
+      src: "ccb/v2_sentendo.mov",
+      words: wordsCcbV2Sentendo as CNReelProps["words"],
+      master: "ccb/masters/C6-metronomo.mp4",
+      // selfie in camminata («yapping»): deve sembrare spontaneo. Tagli netti, niente grafiche (il volto arriva a 0,62), niente pannello CTA: solo sottotitoli
+      blendFrames: 1,
+      ctaSeconds: 0,
+      segments: cutN(1, [17.61, 44.99], [53.17, 96.92], [116.56, 121.58]),
+      hook: null,
+      elements: [],
+      cta: { word: "", title: "" },
+    },
+    didascalia: `Ti serve solo un metronomo. A 110 battiti ogni saltello lo fai tu: tutta fatica muscolare. A 220 sprechi efficienza. A 175 succede una cosa strana: inizi a rimbalzare.
+
+È il tuo sistema piede, tendine d'Achille, fascia plantare che lavora come una molla. Non te l'ho spiegato con una regola: te l'ho fatto sentire.
+
+#correrenaturale #cadenza #corsa #running`,
+  },
+  {
+    id: "C7-tecnica",
+    title: "Esercizi che tatuano la tecnica",
+    props: {
+      ...base,
+      src: "ccb/v2_sentendo.mov",
+      words: wordsCcbV2Sentendo as CNReelProps["words"],
+      master: "ccb/masters/C7-tecnica.mp4",
+      // selfie in camminata («yapping»): deve sembrare spontaneo. Tagli netti, niente grafiche (il volto arriva a 0,62), niente pannello CTA: solo sottotitoli
+      blendFrames: 1,
+      ctaSeconds: 0,
+      segments: cutN(1, [0.5, 17.31], [231.85, 275.22]),
+      hook: null,
+      elements: [],
+      cta: { word: "", title: "" },
+    },
+    didascalia: `Insegnare la tecnica di corsa al corpo vuol dire usare esercizi precisi, che trasmettono il gesto giusto direttamente al cervello motorio. Senza spiegazioni e senza troppe regole da ricordare.
+
+Un po' alla volta tatuano la tecnica giusta nel tuo corpo. Lascia a casa le regole e lascia correre il tuo corpo.
+
+#correrenaturale #comecorrerebene #corsa #running`,
   },
 ];

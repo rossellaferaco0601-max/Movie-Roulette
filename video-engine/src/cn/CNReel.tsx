@@ -131,9 +131,12 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
           <Captions words={words} endFrame={total - 4} />
         </AbsoluteFill>
       </Sequence>
-      <Sequence from={total - xfade} durationInFrames={ctaFrames + xfade} layout="none">
-        <CTA cta={p.cta} frames={ctaFrames} />
-      </Sequence>
+      {/* ctaSeconds: 0 = reel senza pannello finale (video «spontanei»: la chiusa la dice chi parla) */}
+      {ctaFrames > 0 ? (
+        <Sequence from={total - xfade} durationInFrames={ctaFrames + xfade} layout="none">
+          <CTA cta={p.cta} frames={ctaFrames} />
+        </Sequence>
+      ) : null}
     </AbsoluteFill>
   );
 };

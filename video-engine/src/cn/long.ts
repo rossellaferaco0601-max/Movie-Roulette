@@ -7,6 +7,8 @@ import wordsTaddeoLong from "./wordsTaddeoLong.json";
 import planTaddeo from "../../work/taddeo_long.json";
 import wordsMattiaLong from "./wordsMattiaLong.json";
 import planMattia from "../../work/mattia_long.json";
+import wordsGiancarloLong from "./wordsGiancarloLong.json";
+import planGiancarlo from "../../work/giancarlo_long.json";
 
 /** Versioni lunghe orizzontali delle testimonianze (piano dei tagli: scripts/cn_long_plan.py). */
 export const LONGS: { id: string; props: CNLongProps }[] = [
@@ -71,6 +73,22 @@ export const LONGS: { id: string; props: CNLongProps }[] = [
       chapters: planMattia.chapters,
       name: "Mattia",
       sub: "Milano",
+      end: { title: "Vuoi scrivere anche tu la tua storia?", sub: "Scopri i percorsi di coaching personalizzato" },
+      endSeconds: 6,
+    },
+  },
+  {
+    id: "T6-giancarlo-lungo",
+    props: {
+      master: "testimonianze/T6-giancarlo-lungo.mp4",
+      segments: [{ from: 0, to: planGiancarlo.total }],
+      blendFrames: 0,
+      words: wordsGiancarloLong as CNLongProps["words"],
+      wordFix: {},
+      wordOffset: -0.05,
+      chapters: planGiancarlo.chapters,
+      name: "Giancarlo",
+      sub: "Esine · Valle Camonica",
       end: { title: "Vuoi scrivere anche tu la tua storia?", sub: "Scopri i percorsi di coaching personalizzato" },
       endSeconds: 6,
     },

@@ -1,0 +1,37 @@
+{
+ "id": "C1-runner",
+ "src": "public/ccb/v1_runner.mov",
+ "pre": "scale=1080:1920:flags=lanczos",
+ "out": "public/ccb/masters/C1-runner.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 6.08,
+   "to": 54.7133
+  },
+  {
+   "from": 60.783,
+   "to": 69.7497
+  },
+  {
+   "from": 71.293,
+   "to": 79.793
+  },
+  {
+   "from": 85.323,
+   "to": 94.9563
+  },
+  {
+   "from": 99.713,
+   "to": 109.1797
+  }
+ ]
+}

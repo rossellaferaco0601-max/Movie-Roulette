@@ -22,13 +22,14 @@ def lines_of(words, ranges):
             s, e = w["startMs"] / 1000, w["endMs"] / 1000
             if a <= (s + e) / 2 <= b:
                 t = w["text"].strip(); t = FIX.get(re.sub(r"[.,?!;:]", "", t).lower(), None) and re.sub(r"^[^.,?!;:]+", FIX[re.sub(r"[.,?!;:]", "", t).lower()], t) or t
-                ws.append([off + max(0, s - a), off + min(b, e) - a, t])
+                ws.append([off + max(0, s - a), off + min(b, e) - a, t, False])
+        if ws: ws[-1][3] = True   # ultimo del pezzo: la riga si chiude al taglio
         off += b - a
     lines, cur = [], []
     for i, w in enumerate(ws):
         cur.append(w); txt = " ".join(x[2] for x in cur); nxt = ws[i + 1] if i + 1 < len(ws) else None
         gap = nxt[0] - w[1] if nxt else 9
-        if re.search(r"[.?!]$", w[2]) or gap > 0.45 or (len(txt) >= 26 and not (nxt and re.search(r"[.?!]$", nxt[2]) and len(txt) + 1 + len(nxt[2]) <= 36)) or (w[2].endswith(",") and len(txt) >= 14) or (nxt and len(txt) + 1 + len(nxt[2]) > (36 if re.search(r"[.?!]$", nxt[2]) else 30)):
+        if w[3] or re.search(r"[.?!]$", w[2]) or gap > 0.45 or (len(txt) >= 26 and not (nxt and re.search(r"[.?!]$", nxt[2]) and len(txt) + 1 + len(nxt[2]) <= 36)) or (w[2].endswith(",") and len(txt) >= 14) or (nxt and len(txt) + 1 + len(nxt[2]) > (36 if re.search(r"[.?!]$", nxt[2]) else 30)):
             lines.append([cur[0][0], cur[-1][1], txt]); cur = []
     if cur: lines.append([cur[0][0], cur[-1][1], " ".join(x[2] for x in cur)])
     for i, l in enumerate(lines):
@@ -43,12 +44,13 @@ for name, v in cuts.items():
     words = json.load(open(v["words"])); short = name.split("_", 1)[1]
     for k, ranges in enumerate(v["stories"]):
         base = f"{out}/{short}_storia{k + 1}"; inputs, fc = [], ""
+        SOLO_SUB = os.environ.get("SOLO_SOTTOTITOLI") and os.path.exists(base + ".mp4")   # rifà solo la versione con i sottotitoli
         for i, (a, b) in enumerate(ranges):
             inputs += ["-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", v["src"]]
             fc += f"[{i}:v]scale=1080:1920:flags=lanczos,fps=30,setsar=1,setpts=PTS-STARTPTS[v{i}];[{i}:a]aresample=48000,afade=t=in:d=0.02,afade=t=out:st={b - a - 0.03:.3f}:d=0.03,asetpts=PTS-STARTPTS[a{i}];"
         n = len(ranges)
         fc += "".join(f"[v{i}][a{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=1[v][a0];[a0]loudnorm=I=-14:TP=-1.5:LRA=11,alimiter=limit=0.75:level=disabled:attack=3:release=40,aresample=48000[a]"
-        run(["ffmpeg", "-loglevel", "error", "-y", *inputs, "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p",
+        if not SOLO_SUB: run(["ffmpeg", "-loglevel", "error", "-y", *inputs, "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p",
              "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", base + ".mp4"])
         ass = ("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
                "Style: ig,Inter,50,&H00FFFFFF,&H00FFFFFF,&H78000000,&H78000000,-1,0,0,0,100,100,0,0,3,14,0,2,70,70,440,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")

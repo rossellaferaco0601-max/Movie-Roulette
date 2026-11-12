@@ -1,0 +1,29 @@
+{
+ "id": "C4-zoo",
+ "src": "public/ccb/v2_ritrova.mov",
+ "pre": "scale=1080:1920:flags=lanczos",
+ "out": "public/ccb/masters/C4-zoo.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 2.82,
+   "to": 43.82
+  },
+  {
+   "from": 47.293,
+   "to": 71.9597
+  },
+  {
+   "from": 164.073,
+   "to": 170.273
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "C3-ricetta",
+ "src": "public/ccb/v2_ricetta.mov",
+ "pre": "scale=1080:1920:flags=lanczos",
+ "out": "public/ccb/masters/C3-ricetta.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 3.88,
+   "to": 38.98
+  },
+  {
+   "from": 60.063,
+   "to": 80.663
+  },
+  {
+   "from": 109.903,
+   "to": 131.0363
+  },
+  {
+   "from": 142.933,
+   "to": 148.6663
+  }
+ ]
+}

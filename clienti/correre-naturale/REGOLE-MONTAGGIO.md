@@ -408,3 +408,14 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - Volto medio (Laura, Taddeo): `gfxShift: 50`, `capShift: 30`, avvicinamento alterno 1,04. Volto grande (Mattia, come Massimiliano):
     `gfxShift: 173`, `gfxScale: 0.8`, `capShift: 30`, avvicinamento 1,03; controllo del volto con bordo a 0,53.
   - Spazio su disco: un girato grezzo alla volta (3-4,7 GB l'uno); dopo reel e versione lunga la copia locale si cancella (gli originali restano sul Drive).
+- **2026-11-12 notte (Ross, nuova cartella Drive «CCB new angle», 5 selfie di Daniele in camminata)**: «Devo farne sia dei reel per ig che degli
+  spezzoni da mettere in stories ig per simulare lo yapping mode quindi devono sembrare video spontanei, chiaro?»
+  - **Stories**: spezzoni ≤ 60 s in sequenza, solo tagli netti nei silenzi (via le false partenze e le frasi rifatte), niente grafiche, niente
+    musica, niente zoom; due file per spezzone, pulito e con sottotitoli piccoli stile Instagram (`scripts/cn_stories.py`, tagli in `work/ccb_cuts.json`).
+  - **Reel** (`C1`…`C7` in `reels51.ts`): stesso girato ripulito e portato sotto il minuto e mezzo, tagli netti (incrocio di 1 fotogramma),
+    solo sottotitoli del brand; niente grafiche (nel selfie il volto arriva a 0,62 dell'altezza: coprirebbero il volto) e niente pannello CTA
+    (`ctaSeconds: 0`): la chiusa la dice Daniele («lo trovi qui sotto»). Da chiedere a Ross se vuole la CTA «Commenta …» per il manuale.
+  - Piano dei tagli, frase per frase: `video-engine/work/ccb_plan.md`.
+- **2026-11-12 (testimonianze, seguito)**: fatti T5 (la sei ore, C3500: racconto libero, senza nome nel girato) e T6 (Giancarlo, C3501). Con i pezzi
+  rimontati in ordine diverso dal girato gli agganci alle parole vanno cercati nel tempo del reel: `remapWords` ora ordina le parole per tempo di master.
+  Su magliette chiare o stampate le scritte libere (kinetic) si leggono male: usare `title`, `stat`, `checklist` (fondo scuro).

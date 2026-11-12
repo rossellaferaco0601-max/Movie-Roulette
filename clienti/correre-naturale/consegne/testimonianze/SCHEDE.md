@@ -22,3 +22,16 @@ L'intervista completa in nove domande (5:50, orizzontale, per YouTube e il sito)
 
 **T4 Mattia reel · Venerdì Conversione · CTA PERCORSO** (v1, 11/11)
 Il problema: prima del percorso Mattia era sostanzialmente fermo, sempre bloccato da infortuni, con tanta voglia di fare che rimaneva solo voglia; e diffidava, perché era già stato seguito da altri coach e seguire i loro consigli lo aveva portato a infortunarsi: «perché questa volta dovrebbe essere diverso?». La svolta: con Correre Naturale ha iniziato ad amare la corsa per la sua essenza, un veicolo per migliorare la sua vita; il beneficio più grande è la capacità di ascoltarsi, e oggi è veramente felice di aver intrapreso il percorso. Chiusura: a chi è indeciso dice «prova, al massimo cosa può succedere, hai investito per te stesso», sicuro che vedrà un netto miglioramento; la sua esperienza in una parola, «consapevolezza».
+
+**T4 Mattia versione lunga · Venerdì Conversione · CTA PERCORSO** (v1, 12/11)
+L'intervista completa in otto domande (7:20, orizzontale, per YouTube e il sito). Da «sostanzialmente fermo, sempre bloccato da infortuni» alla corsa amata per la sua essenza; gli obiettivi di prima, tutti tempo e Strava; il beneficio più grande, la capacità di ascoltarsi, raccontato con la mezza maratona in cui si è ritirato per una storta invece di peggiorare le cose; l'ascolto portato anche nel lavoro, in un periodo durissimo; la diffidenza dopo altri coach e l'evento di novembre che l'ha sbloccato; il consiglio a chi è indeciso; l'autenticità di Daniele. Chiusura: l'esperienza in una parola, «consapevolezza».
+
+## Testimonianze · La sei ore (girato C3500-007)
+
+**T5 La sei ore reel · Venerdì Conversione · CTA PERCORSO** (v1, 12/11)
+Il problema: sei ore di corsa, 50 chilometri; dopo quattro ore e mezza la nipotina che lo salutava a ogni giro va via ed è «un down pazzesco». La svolta: «mi sono messo alla guida del mio corpo, mi sono guardato il mio cruscotto», con le spie accese della benzina, dell'acqua, del caldo; ha rallentato la corsa, ha rallentato il respiro, ha ritrovato consapevolezza e tranquillità. L'ultimo giro è stato il più veloce di tutti i 50 chilometri, chiuso a 6 secondi dallo scoccare delle sei ore; finita la gara è scoppiato a piangere pensando a tutto il lavoro di questi anni. Chiusura: «Adesso, con questa chiave di lettura, non mi ferma più nessuno.» (Nel girato non dice il nome: manca il cartellino.)
+
+## Testimonianze · Giancarlo (girato C3501-003)
+
+**T6 Giancarlo reel · Venerdì Conversione · CTA PERCORSO** (v1, 12/11)
+Il problema: la corsa vissuta come un cronometro, «arrivi a casa, sei stanco, sei nervoso perché non sei riuscito a fare il tempo che volevi». La svolta: «questo non esiste più»; da quando ha conosciuto Correre Naturale Giancarlo è migliorato soprattutto nella conoscenza di sé, nel fisico e nella mente, con una crescita costante e progressiva; il beneficio più grande è conoscersi e godersi il cammino, perché «a volte bisogna aspettare che il frutto sia maturo prima di raccoglierlo». Chiusura: a chi tentenna dice che il primo passo è provare, iniziare, perché «la competenza c'è, la serietà c'è, la rete di sicurezza c'è».

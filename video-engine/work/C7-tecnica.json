@@ -1,0 +1,25 @@
+{
+ "id": "C7-tecnica",
+ "src": "public/ccb/v2_sentendo.mov",
+ "pre": "scale=1080:1920:flags=lanczos",
+ "out": "public/ccb/masters/C7-tecnica.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 0.5,
+   "to": 17.3333
+  },
+  {
+   "from": 231.833,
+   "to": 275.233
+  }
+ ]
+}

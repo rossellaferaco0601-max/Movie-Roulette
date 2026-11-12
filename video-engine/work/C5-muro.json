@@ -1,0 +1,33 @@
+{
+ "id": "C5-muro",
+ "src": "public/ccb/v2_ritrova.mov",
+ "pre": "scale=1080:1920:flags=lanczos",
+ "out": "public/ccb/masters/C5-muro.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 71.93,
+   "to": 88.03
+  },
+  {
+   "from": 90.693,
+   "to": 118.893
+  },
+  {
+   "from": 142.143,
+   "to": 153.143
+  },
+  {
+   "from": 154.823,
+   "to": 170.2563
+  }
+ ]
+}

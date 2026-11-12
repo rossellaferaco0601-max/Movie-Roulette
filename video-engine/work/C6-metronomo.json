@@ -1,0 +1,29 @@
+{
+ "id": "C6-metronomo",
+ "src": "public/ccb/v2_sentendo.mov",
+ "pre": "scale=1080:1920:flags=lanczos",
+ "out": "public/ccb/masters/C6-metronomo.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 17.61,
+   "to": 45.01
+  },
+  {
+   "from": 53.153,
+   "to": 96.953
+  },
+  {
+   "from": 116.543,
+   "to": 121.5763
+  }
+ ]
+}

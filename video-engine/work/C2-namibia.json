@@ -1,0 +1,29 @@
+{
+ "id": "C2-namibia",
+ "src": "public/ccb/v1_namibia.mov",
+ "pre": "scale=1080:1920:flags=lanczos",
+ "out": "public/ccb/masters/C2-namibia.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 11.89,
+   "to": 64.9567
+  },
+  {
+   "from": 87.403,
+   "to": 92.8697
+  },
+  {
+   "from": 97.823,
+   "to": 125.8563
+  }
+ ]
+}
