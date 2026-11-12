@@ -21,8 +21,8 @@ type P<K extends Element["kind"]> = { el: Extract<Element, { kind: K }>; start: 
 export const TOP_Y = 0.07;
 export const STRIP_Y = 0.652;
 /** Altezza in pixel della targa di `topword` (serve anche al controllo sul volto): righe × (corpo + 2 × margine). */
-export const topwordSize = (lines: string[], max = 92) => Math.min(max, Math.floor(1560 / Math.max(9, ...lines.map((l) => l.length))));
-export const topwordHeight = (lines: string[], max = 92) => { const s = topwordSize(lines, max); return lines.length * (s + 22) + (lines.length - 1) * 8; };
+export const topwordSize = (lines: string[], max = 124) => Math.min(max, Math.floor(1640 / Math.max(9, ...lines.map((l) => l.length))));
+export const topwordHeight = (lines: string[], max = 124) => { const s = topwordSize(lines, max); return lines.length * (s + 22) + (lines.length - 1) * 8; };
 
 /* ---------- Parole sopra la testa (o nella fascia): targhe scure, parola in lime. `anim: "drop"` = lettere che cadono una a una ---------- */
 export const TopWord: React.FC<P<"topword">> = ({ el, start }) => {
@@ -30,7 +30,8 @@ export const TopWord: React.FC<P<"topword">> = ({ el, start }) => {
   const durF = Math.round(el.dur * fps);
   const { local, out, visible } = useInOut(start, durF);
   if (!visible) return null;
-  const size = topwordSize(el.lines, el.max);
+  // nella fascia bassa due righe devono stare sopra 0,80: corpo massimo 104
+  const size = topwordSize(el.lines, el.zone === "strip" && el.lines.length > 1 ? Math.min(el.max ?? 104, 104) : el.max);
   const top = Math.round(H * (el.zone === "strip" ? STRIP_Y : el.y ?? TOP_Y));
   const on = (i: number) => (el.onAt?.[i] !== undefined ? Math.round(el.onAt[i] * fps) : i * 7);
   let letterNo = 0;
@@ -83,10 +84,10 @@ export const Counter: React.FC<P<"counter">> = ({ el, start }) => {
   return (
     <div style={{ position: "absolute", left: 0, width: W, top: GFX_TOP, textAlign: "center", opacity: out, fontFamily: FONT }}>
       <div style={{ display: "inline-block", background: BRAND.green, color: BRAND.white, borderRadius: 28, padding: "10px 42px 12px", transform: `scale(${s * (1 + 0.06 * (local >= RUN ? 1 - Math.min(1, hitK) : 0))})`, boxShadow: "0 14px 30px rgba(0,0,0,0.35)" }}>
-        <div style={{ fontWeight: 900, fontSize: 118, lineHeight: 1, color: BRAND.lime, fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>
-          {el.prefix ?? ""}{shown}<span style={{ fontSize: el.suffix && el.suffix.length > 2 ? 64 : 118 }}>{el.suffix ? (el.suffix.length > 2 ? " " : "") + el.suffix : ""}</span>
+        <div style={{ fontWeight: 900, fontSize: 164, lineHeight: 1, color: BRAND.lime, fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>
+          {el.prefix ?? ""}{shown}<span style={{ fontSize: el.suffix && el.suffix.length > 2 ? 84 : 164 }}>{el.suffix ? (el.suffix.length > 2 ? " " : "") + el.suffix : ""}</span>
         </div>
-        <div style={{ fontWeight: 700, fontSize: 38, textTransform: "uppercase", letterSpacing: 2, whiteSpace: "nowrap" }}>{el.label}</div>
+        <div style={{ fontWeight: 800, fontSize: 48, textTransform: "uppercase", letterSpacing: 1, whiteSpace: "nowrap" }}>{el.label}</div>
       </div>
     </div>
   );
@@ -98,16 +99,16 @@ export const BigPointer: React.FC<P<"pointer">> = ({ el, start }) => {
   const durF = Math.round(el.dur * fps);
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
-  const size = Math.min(78, Math.floor(1560 / Math.max(12, el.text.length)));
+  const size = Math.min(96, Math.floor(1500 / Math.max(12, el.text.length)));
   const bob = Math.sin((local / fps) * Math.PI * 2 * 1.5) * 9;
   const pulse = 1 + 0.025 * Math.sin((local / fps) * Math.PI * 2 * 1.5);
   const hit = el.accent && el.text.includes(el.accent) ? el.text.indexOf(el.accent) : -1;
   const Arrow = () => (
-    <div style={{ width: 96, height: 96, borderRadius: 48, background: BRAND.lime, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+    <div style={{ width: 112, height: 112, borderRadius: 56, background: BRAND.lime, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
       {el.arrow === false ? (
         <svg width="50" height="50" viewBox="0 0 34 34"><path d="M9 4h16a2 2 0 0 1 2 2v24l-10-6-10 6V6a2 2 0 0 1 2-2z" fill={BRAND.ink} /></svg>
       ) : (
-        <svg width="56" height="56" viewBox="0 0 36 36" style={{ transform: `translateY(${bob}px)` }}><path d="M18 4v24M7 18l11 11 11-11" fill="none" stroke={BRAND.ink} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+        <svg width="66" height="66" viewBox="0 0 36 36" style={{ transform: `translateY(${bob}px)` }}><path d="M18 4v24M7 18l11 11 11-11" fill="none" stroke={BRAND.ink} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" /></svg>
       )}
     </div>
   );
@@ -133,14 +134,14 @@ export const Wall: React.FC<P<"wall">> = ({ el, start }) => {
   const IN = 9, OUT = 9;
   const up = 1 - Math.pow(1 - clamp01(local / IN), 3), down = Math.pow(1 - clamp01((durF - local) / OUT), 3);
   const n = el.rows.length;
-  const rowH = Math.min(210, Math.floor((H * 0.745 - 150) / n));   // il muro si ferma sopra i sottotitoli
+  const rowH = Math.min(230, Math.floor((H * 0.745 - 190) / n));   // il muro si ferma sopra i sottotitoli
   const styles: React.CSSProperties[] = [
     { background: BRAND.lime, color: BRAND.ink }, { background: "rgba(255,255,255,0.08)", color: BRAND.white, border: "3px solid rgba(255,255,255,0.35)" },
     { background: BRAND.cream, color: BRAND.green }, { background: BRAND.green, color: BRAND.white }, { background: "#0B0F0A", color: BRAND.lime, border: `3px solid ${BRAND.lime}` },
   ];
   return (
     <AbsoluteFill style={{ background: "linear-gradient(180deg,#1C3D15 0%,#0B0F0A 75%)", transform: `translateY(${(1 - up) * 100 + down * 100}%)`, fontFamily: FONT }}>
-      {el.title ? <div style={{ position: "absolute", top: 70, left: 0, width: W, textAlign: "center", fontWeight: 800, fontSize: 44, letterSpacing: 4, color: BRAND.lime, textTransform: "uppercase" }}>{el.title}</div> : null}
+      {el.title ? <div style={{ position: "absolute", top: 70, left: 0, width: W, textAlign: "center", fontWeight: 900, fontSize: 64, letterSpacing: 3, color: BRAND.lime, textTransform: "uppercase" }}>{el.title}</div> : null}
       {el.rows.map((r, i) => {
         const t0 = el.onAt?.[i] !== undefined ? Math.round(el.onAt[i] * fps) : 4 + i * 6;
         const k = spring({ frame: local - t0, fps, config: { damping: 11, stiffness: 230, mass: 0.6 } });
@@ -148,7 +149,7 @@ export const Wall: React.FC<P<"wall">> = ({ el, start }) => {
         const size = Math.min(rowH - 44, Math.floor(1500 / Math.max(7, r.length)));
         const fromLeft = i % 2 === 0;
         return (
-          <div key={i} style={{ position: "absolute", top: 150 + i * rowH, left: 40, width: W - 80, height: rowH - 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div key={i} style={{ position: "absolute", top: 190 + i * rowH, left: 40, width: W - 80, height: rowH - 14, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <div style={{ ...styles[i % styles.length], borderRadius: 22, padding: `0 34px`, height: rowH - 14, display: "flex", alignItems: "center", fontWeight: 900, fontSize: size, lineHeight: 1, textTransform: "uppercase", whiteSpace: "nowrap", transform: `translateX(${(1 - k) * (fromLeft ? -260 : 260)}px) rotate(${(1 - Math.min(1, k)) * (fromLeft ? -4 : 4)}deg) scale(${0.9 + 0.1 * k})`, opacity: Math.min(1, k * 1.8), boxSizing: "border-box" }}>{r}</div>
           </div>
         );
@@ -159,14 +160,14 @@ export const Wall: React.FC<P<"wall">> = ({ el, start }) => {
 
 /* ---------- Pannello laterale: il video di Daniele si ritira a sinistra (resta sempre visibile) e a destra si costruisce un elenco
    («effetto elenco», una voce per parola detta) oppure scorre la mappa Italia ⇄ Namibia. La parte «camera» sta in CNReel (sideCam). ---------- */
-export const SIDE = { scale: 0.56, x: 36, y: 210, px: 660, pw: 384 };   // video ridotto: 605×1075 a (36,150); pannello a destra da x 660, largo 384
+export const SIDE = { scale: 0.5, x: 28, y: 280, px: 590, pw: 462 };   // video ridotto: 605×1075 a (36,150); pannello a destra da x 660, largo 384
 export const sideK = (local: number, durF: number) => smooth(local / 12) * smooth((durF - local) / 12);
 
 const land = feature(world as any, (world as any).objects.countries) as any;
 const ROME: [number, number] = [12.5, 41.9], WINDHOEK: [number, number] = [17.08, -22.56];
 
 const SideMap: React.FC<{ dir: "it-na" | "na-it"; local: number; durF: number; fps: number }> = ({ dir, local, durF }) => {
-  const PW = SIDE.pw, PH = 1075;
+  const PW = SIDE.pw, PH = 960;
   const proj = geoMercator().fitExtent([[10, 60], [PW - 10, PH - 40]], { type: "MultiPoint", coordinates: [[-14, 46], [44, 46], [-14, -35], [44, -35]] } as any);
   const path = geoPath(proj);
   const a = proj(dir === "it-na" ? ROME : WINDHOEK)!, b = proj(dir === "it-na" ? WINDHOEK : ROME)!;
@@ -181,8 +182,8 @@ const SideMap: React.FC<{ dir: "it-na" | "na-it"; local: number; durF: number; f
     <g transform={`translate(${at[0]} ${at[1]})`}>
       <circle r={on ? 13 : 9} fill={BRAND.lime} /><circle r={on ? 26 : 0} fill="none" stroke={BRAND.lime} strokeWidth={3} opacity={0.5} />
       <g transform={`translate(${side === "r" ? 22 : -22} 0)`}>
-        <rect x={side === "r" ? 0 : -text.length * 19 - 24} y={-24} width={text.length * 19 + 24} height={48} rx={12} fill={on ? BRAND.lime : "rgba(11,15,10,0.9)"} />
-        <text x={side === "r" ? 12 : -12} y={10} textAnchor={side === "r" ? "start" : "end"} fontFamily={FONT} fontWeight={900} fontSize={30} fill={on ? BRAND.ink : BRAND.white}>{text}</text>
+        <rect x={side === "r" ? 0 : -text.length * 24 - 26} y={-30} width={text.length * 24 + 26} height={60} rx={14} fill={on ? BRAND.lime : "rgba(11,15,10,0.9)"} />
+        <text x={side === "r" ? 12 : -12} y={12} textAnchor={side === "r" ? "start" : "end"} fontFamily={FONT} fontWeight={900} fontSize={38} fill={on ? BRAND.ink : BRAND.white}>{text}</text>
       </g>
     </g>
   );
@@ -208,21 +209,22 @@ export const Side: React.FC<P<"side">> = ({ el, start }) => {
   if (local < 0 || local >= durF) return null;
   const k = sideK(local, durF);
   const items = el.items ?? [];
-  const rowH = items.length ? Math.min(150, Math.floor(1000 / items.length)) : 0;
+  const rowH = items.length ? Math.min(190, Math.floor((960 - (el.title ? 100 : 0)) / items.length)) : 0;
   return (
-    <div style={{ position: "absolute", left: SIDE.px, top: SIDE.y, width: SIDE.pw, height: 1075, fontFamily: FONT, opacity: Math.min(1, k * 1.5), transform: `translateX(${(1 - k) * 140}px)` }}>
+    <div style={{ position: "absolute", left: SIDE.px, top: SIDE.y, width: SIDE.pw, height: 960, fontFamily: FONT, opacity: Math.min(1, k * 1.5), transform: `translateX(${(1 - k) * 140}px)` }}>
       {el.map ? <SideMap dir={el.map} local={local} durF={durF} fps={fps} /> : (
         <>
-          {el.title ? <div style={{ background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 38, lineHeight: 1.05, letterSpacing: 1, textTransform: "uppercase", borderRadius: 16, padding: "12px 18px", marginBottom: 14, textAlign: "center" }}>{el.title}</div> : null}
+          {el.title ? <div style={{ background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 52, lineHeight: 1.05, letterSpacing: 1, textTransform: "uppercase", borderRadius: 18, padding: "14px 18px", marginBottom: 16, textAlign: "center" }}>{el.title}</div> : null}
           {items.map((it, i) => {
             const t0 = el.onAt?.[i] !== undefined ? Math.round(el.onAt[i] * fps) : 14 + i * 12;
             const r = spring({ frame: local - t0, fps, config: { damping: 13, stiffness: 210, mass: 0.6 } });
             const on = local >= t0;
-            const size = Math.min(44, Math.floor(620 / Math.max(8, it.length)) + 18);
+            // una riga se la voce è corta, altrimenti due righe che stanno DENTRO la casella (mai sopra la voce vicina)
+            const size = it.length <= 11 ? Math.min(62, rowH - 44) : Math.min(50, Math.floor((rowH - 30) / 2.1));
             return (
               <div key={i} style={{ height: rowH - 10, marginBottom: 10, display: "flex", alignItems: "center", gap: 14, background: on ? "rgba(11,15,10,0.88)" : "rgba(255,255,255,0.05)", borderRadius: 18, padding: "0 16px", transform: `translateX(${on ? (1 - r) * 120 : 0}px)`, border: on ? `2px solid ${BRAND.lime}` : "2px solid rgba(255,255,255,0.10)", boxSizing: "border-box" }}>
-                <div style={{ width: 54, height: 54, borderRadius: 27, background: on ? BRAND.lime : "rgba(255,255,255,0.12)", color: BRAND.ink, fontWeight: 900, fontSize: 32, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transform: `scale(${on ? 0.7 + 0.3 * r : 1})` }}>{on ? i + 1 : ""}</div>
-                <div style={{ fontWeight: 900, fontSize: size, lineHeight: 1.02, textTransform: "uppercase", color: on ? BRAND.white : "rgba(255,255,255,0)", flex: 1 }}>{it}</div>
+                <div style={{ width: 66, height: 66, borderRadius: 33, background: on ? BRAND.lime : "rgba(255,255,255,0.12)", color: BRAND.ink, fontWeight: 900, fontSize: 40, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transform: `scale(${on ? 0.7 + 0.3 * r : 1})` }}>{on ? i + 1 : ""}</div>
+                <div style={{ fontWeight: 900, fontSize: size, lineHeight: 1.02, textTransform: "uppercase", color: on ? BRAND.white : "rgba(255,255,255,0)", flex: 1, overflow: "hidden", maxHeight: rowH - 18 }}>{it}</div>
               </div>
             );
           })}

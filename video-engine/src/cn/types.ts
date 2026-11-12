@@ -103,6 +103,8 @@ export type CNReelProps = {
   tailLive?: number;
   /** secondi iniziali senza sottotitoli (Oscar 12/11: «la parte iniziale dove c'è l'hook visivo togliamo i sottotitoli»): ripartono dalla prima pagina intera dopo questo tempo */
   capFrom?: number;
+  /** selfie: in basso un solo testo alla volta. Mentre è a schermo una grafica della fascia bassa i sottotitoli si spengono (Ross 12/11: «titoli sovrapposti») */
+  capHideOnGfx?: boolean;
   gfxShift?: number;
   gfxScale?: number;
   capShift?: number;

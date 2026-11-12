@@ -486,3 +486,11 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - Il richiamo alla CTA a voce («te lo spiego qui sotto») deve essere **grande e ben visibile**.
   - Versioni «percorso» (CTA a schermo): **tagli da rifare** (frasi e chiuse complete, niente stacchi a metà discorso) e **durata più corta**.
   - Approvati: L1, L2, L3, L4, le 17 stories CCB.
+- **2026-11-12 sera (Ross, su C1 v3)**: «vedo sempre gli stessi errori che ti avevo detto di correggere, titoli sovrapposti, scritte troppo piccole
+  rivedi tutto». Errore mio: avevo lasciato le grafiche nella fascia tra mento e sottotitoli, a 40 px dai sottotitoli e con le stesse parole (due testi
+  impilati = «sovrapposti»), e per farle stare le avevo rimpicciolite (gfxScale 0,8, righe lunghe). Regole per i selfie da ora:
+  - **In basso UN SOLO testo alla volta**: quando è a schermo una grafica della fascia bassa i sottotitoli si spengono (`capHideOnGfx`) e ripartono dopo.
+  - **Scritte grandi, sempre più grandi dei sottotitoli**: fascia bassa a grandezza piena (`gfxScale` 1), righe di **massimo 16 lettere** (due righe
+    brevi invece di una lunga rimpicciolita); parole sopra la testa fino a 124 px; voci d'elenco dentro la loro casella.
+  - Prima di lanciare una coda di render: **guardare i fotogrammi a grandezza reale** (non a miniatura) e mandare a Ross una tavola o un solo reel.
+  - Copertine (Ross): per tutti i reel, stessa grafica, Daniele che sorride (fotogramma scelto con `scripts/cn_smile.py`), file con lo stesso nome del reel.

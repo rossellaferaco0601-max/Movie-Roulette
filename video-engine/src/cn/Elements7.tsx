@@ -318,14 +318,14 @@ export const Cycle: React.FC<{ el: Extract<Element, { kind: "cycle" }>; start: n
   for (let i = 0; i < n; i++) if (local >= (on[i] ?? Infinity)) idx = i;
   const k = spring({ frame: local - (on[idx] ?? 0), fps, config: { damping: 14, stiffness: 210, mass: 0.6 } });
   const text = el.items[idx];
-  const size = Math.min(86, Math.floor(1900 / Math.max(12, text.length)));
+  const size = Math.min(100, Math.floor(1390 / Math.max(8, text.length)));   // badge + targa stanno sempre dentro i 1000 px utili
   return (
     <div style={{ position: "absolute", left: 0, width: W, top: GFX_TOP + 8, fontFamily: FONT, opacity: out, transform: `translateY(${(1 - s) * 30}px)` }}>
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 16, opacity: Math.min(1, s * 1.5) }}>
-        <div style={{ minWidth: 124, height: 124, borderRadius: 30, background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 66, display: "flex", alignItems: "center", justifyContent: "center", transform: `scale(${0.85 + 0.15 * k})` }}>
+        <div style={{ minWidth: 136, height: 136, borderRadius: 32, background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 74, display: "flex", alignItems: "center", justifyContent: "center", transform: `scale(${0.85 + 0.15 * k})` }}>
           {idx + 1}<span style={{ fontSize: 38, opacity: 0.6, marginLeft: 2 }}>/{n}</span>
         </div>
-        <div style={{ background: "rgba(11,15,10,0.92)", color: BRAND.white, fontWeight: 900, fontSize: size, lineHeight: 1, textTransform: "uppercase", whiteSpace: "nowrap", padding: `${Math.round((124 - size) / 2)}px 34px`, borderRadius: 26, opacity: Math.min(1, k * 1.6), transform: `translateY(${(1 - k) * 26}px)` }}>{text}</div>
+        <div style={{ background: "rgba(11,15,10,0.92)", color: BRAND.white, fontWeight: 900, fontSize: size, lineHeight: 1, textTransform: "uppercase", whiteSpace: "nowrap", padding: `${Math.round((136 - size) / 2)}px 34px`, borderRadius: 28, opacity: Math.min(1, k * 1.6), transform: `translateY(${(1 - k) * 26}px)` }}>{text}</div>
       </div>
       <div style={{ display: "flex", justifyContent: "center", gap: 14, marginTop: 20 }}>
         {el.items.map((_, i) => (
@@ -355,10 +355,10 @@ export const Beat: React.FC<{ el: Extract<Element, { kind: "beat" }>; start: num
         </div>
         <div>
           <div style={{ display: "flex", alignItems: "baseline", gap: 14, color: BRAND.white, fontWeight: 900, lineHeight: 0.95 }}>
-            <span style={{ fontSize: 108, color: col, fontVariantNumeric: "tabular-nums" }}>{count}</span>
-            <span style={{ fontSize: 50 }}>BPM</span>
+            <span style={{ fontSize: 150, color: col, fontVariantNumeric: "tabular-nums" }}>{count}</span>
+            <span style={{ fontSize: 64 }}>BPM</span>
           </div>
-          <div style={{ marginTop: 6, color: BRAND.cream, fontWeight: 700, fontSize: 40, lineHeight: 1.05, whiteSpace: "nowrap" }}>{el.label}</div>
+          <div style={{ marginTop: 6, color: BRAND.cream, fontWeight: 800, fontSize: 50, lineHeight: 1.05, whiteSpace: "nowrap" }}>{el.label}</div>
         </div>
       </div>
     </div>
