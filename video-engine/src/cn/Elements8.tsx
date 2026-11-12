@@ -99,7 +99,11 @@ export const BigPointer: React.FC<P<"pointer">> = ({ el, start }) => {
   const durF = Math.round(el.dur * fps);
   const { local, s, out, visible } = useInOut(start, durF);
   if (!visible) return null;
-  const size = Math.min(96, Math.floor(1500 / Math.max(12, el.text.length)));
+  // due righe quando la frase finisce con la parte in evidenza («Te lo spiego» / «qui sotto»): la scritta diventa molto più grande (Ross 12/11)
+  const two = !!el.accent && el.text.endsWith(el.accent) && el.text.length > el.accent.length + 1;
+  const rows = two ? [el.text.slice(0, -el.accent!.length).trim(), el.accent!] : [el.text];
+  const room = el.arrow === false ? 826 : 692;
+  const size = two ? Math.min(100, Math.floor(room / (0.57 * Math.max(...rows.map((r) => r.length))))) : Math.min(96, Math.floor(1500 / Math.max(12, el.text.length)));
   const bob = Math.sin((local / fps) * Math.PI * 2 * 1.5) * 9;
   const pulse = 1 + 0.025 * Math.sin((local / fps) * Math.PI * 2 * 1.5);
   const hit = el.accent && el.text.includes(el.accent) ? el.text.indexOf(el.accent) : -1;
@@ -114,10 +118,11 @@ export const BigPointer: React.FC<P<"pointer">> = ({ el, start }) => {
   );
   return (
     <div style={{ position: "absolute", left: 0, width: W, top: Math.round(H * (el.y ?? STRIP_Y)), display: "flex", justifyContent: "center", fontFamily: FONT, opacity: out }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 22, background: "rgba(11,15,10,0.94)", border: `6px solid ${BRAND.lime}`, borderRadius: 999, padding: "12px 14px", transform: `translateY(${(1 - s) * 60}px) scale(${(0.9 + 0.1 * s) * pulse})`, opacity: Math.min(1, s * 1.4), boxShadow: "0 12px 34px rgba(0,0,0,0.45)" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 22, background: "rgba(11,15,10,0.94)", border: `6px solid ${BRAND.lime}`, borderRadius: two ? 84 : 999, padding: "12px 14px", transform: `translateY(${(1 - s) * 60}px) scale(${(0.9 + 0.1 * s) * pulse})`, opacity: Math.min(1, s * 1.4), boxShadow: "0 12px 34px rgba(0,0,0,0.45)" }}>
         <Arrow />
         <div style={{ fontWeight: 900, fontSize: size, lineHeight: 1, textTransform: "uppercase", color: BRAND.white, whiteSpace: "nowrap", padding: "0 6px" }}>
-          {hit < 0 ? el.text : <>{el.text.slice(0, hit)}<span style={{ color: BRAND.lime }}>{el.accent}</span>{el.text.slice(hit + el.accent!.length)}</>}
+          {two ? <div style={{ textAlign: "center", lineHeight: 1.06, padding: "6px 0" }}><div>{rows[0]}</div><div style={{ color: BRAND.lime }}>{rows[1]}</div></div>
+            : hit < 0 ? el.text : <>{el.text.slice(0, hit)}<span style={{ color: BRAND.lime }}>{el.accent}</span>{el.text.slice(hit + el.accent!.length)}</>}
         </div>
         {el.arrow === false ? null : <Arrow />}
       </div>
@@ -219,12 +224,16 @@ export const Side: React.FC<P<"side">> = ({ el, start }) => {
             const t0 = el.onAt?.[i] !== undefined ? Math.round(el.onAt[i] * fps) : 14 + i * 12;
             const r = spring({ frame: local - t0, fps, config: { damping: 13, stiffness: 210, mass: 0.6 } });
             const on = local >= t0;
-            // una riga se la voce è corta, altrimenti due righe che stanno DENTRO la casella (mai sopra la voce vicina)
-            const size = it.length <= 11 ? Math.min(62, rowH - 44) : Math.min(50, Math.floor((rowH - 30) / 2.1));
+            // le voci sono SEMPRE più grandi dei sottotitoli (64): una riga se sta nella larghezza, altrimenti due righe dentro la casella
+            const room = el.pairs ? 430 : 334;
+            const fit = (t: string) => { const one = Math.min(84, rowH - 44, Math.floor(room / (0.57 * t.length))); if (one >= 66 || !t.includes(" ")) return one;
+              const w = t.split(" "); let best = 99; for (let c = 1; c < w.length; c++) best = Math.min(best, Math.max(w.slice(0, c).join(" ").length, w.slice(c).join(" ").length));
+              return Math.min(78, Math.floor((rowH - 30) / 2.1), Math.floor(room / (0.57 * best))); };
+            const size = Math.min(...items.map(fit));
             return (
               <div key={i} style={{ height: rowH - 10, marginBottom: 10, display: "flex", alignItems: "center", gap: 14, background: on ? "rgba(11,15,10,0.88)" : "rgba(255,255,255,0.05)", borderRadius: 18, padding: "0 16px", transform: `translateX(${on ? (1 - r) * 120 : 0}px)`, border: on ? `2px solid ${BRAND.lime}` : "2px solid rgba(255,255,255,0.10)", boxSizing: "border-box" }}>
-                <div style={{ width: 66, height: 66, borderRadius: 33, background: on ? BRAND.lime : "rgba(255,255,255,0.12)", color: BRAND.ink, fontWeight: 900, fontSize: 40, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transform: `scale(${on ? 0.7 + 0.3 * r : 1})` }}>{on ? i + 1 : ""}</div>
-                <div style={{ fontWeight: 900, fontSize: size, lineHeight: 1.02, textTransform: "uppercase", color: on ? BRAND.white : "rgba(255,255,255,0)", flex: 1, overflow: "hidden", maxHeight: rowH - 18 }}>{it}</div>
+                {el.pairs ? null : <div style={{ width: 66, height: 66, borderRadius: 33, background: on ? BRAND.lime : "rgba(255,255,255,0.12)", color: BRAND.ink, fontWeight: 900, fontSize: 40, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transform: `scale(${on ? 0.7 + 0.3 * r : 1})` }}>{on ? i + 1 : ""}</div>}
+                <div style={{ fontWeight: 900, fontSize: size, lineHeight: 1.02, textTransform: "uppercase", color: on ? (el.pairs && i % 2 === 0 ? BRAND.lime : BRAND.white) : "rgba(255,255,255,0)", textAlign: el.pairs ? "center" : "left", flex: 1, overflow: "hidden", maxHeight: rowH - 18 }}>{it}</div>
               </div>
             );
           })}

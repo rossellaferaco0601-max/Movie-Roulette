@@ -32,7 +32,7 @@ export type Element = ElementBase &
     | { kind: "lungs"; title: string; sub?: string }
     | { kind: "horizon"; title: string; kmTo: number }
     | { kind: "chat"; sender: string; messages: string[] }
-    | { kind: "bigstrike"; text: string }
+    | { kind: "bigstrike"; text: string; big?: boolean }
     | { kind: "stack"; title: string; items: string[] }
     | { kind: "guide"; mode: "ritmica" | "nasale" | "hold"; title?: string; titleSec?: number; inhale?: number; exhale?: number; hold?: number; breaths?: number }
     | { kind: "metronome"; title: string; inhale: number; exhale: number; bpm?: number }
@@ -50,7 +50,7 @@ export type Element = ElementBase &
     | { kind: "topword"; lines: string[]; accent?: string; anim?: "pop" | "drop"; zone?: "top" | "strip"; y?: number; max?: number }
     | { kind: "counter"; to: number; from?: number; prefix?: string; suffix?: string; decimals?: number; label: string }
     | { kind: "wall"; rows: string[]; title?: string }
-    | { kind: "side"; title?: string; items?: string[]; map?: "it-na" | "na-it" }
+    | { kind: "side"; title?: string; items?: string[]; map?: "it-na" | "na-it"; pairs?: boolean }
     | { kind: "beat"; bpm: number; label: string; tone?: "lime" | "coral" }
     | { kind: "fulltext"; lines: string[]; accentIndex?: number; fadeIn?: number; fadeOut?: number }
     | { kind: "clip"; src: string; from?: number; tag: string; text: string; posY?: number }

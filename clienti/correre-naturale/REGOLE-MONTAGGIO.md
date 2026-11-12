@@ -495,3 +495,9 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - Prima di lanciare una coda di render: **guardare i fotogrammi a grandezza reale** (non a miniatura) e mandare a Ross una tavola o un solo reel.
   - Copertine (Ross): per tutti i reel, stessa grafica, Daniele che sorride (fotogramma scelto con `scripts/cn_smile.py`), file con lo stesso nome del reel.
   - Copertine, scelta del fotogramma (12/11): sorriso naturale, occhi aperti, **niente sopracciglia alzate né occhi sgranati**, niente mani davanti a occhiello e titolo; il fotogramma va sempre guardato sulla copertina finita prima di consegnare. Fotogrammi scelti nel campo `cover.frame` di ogni reel (YTCN 51, Longevità, testimonianze consegnate il 12/11; CCB in attesa insieme ai reel).
+
+### 12/11 (sera) · CCB, controllo di C1 v4 a grandezza reale prima di mandarlo
+- **Ogni scritta di una grafica è più grande dei sottotitoli (64 px), anche dentro gli elenchi a lato**: voci di una o due parole («Postura», «Appoggio», «Testa», «Braccia»), mai frasi che costringono a rimpicciolire. Elenco a coppie senza numeri quando non è una lista numerata («Due cervelli»: Pensante/Lento, Motorio/Rapido, campo `pairs`).
+- «Te lo spiego qui sotto» e gli altri rimandi: **su due righe** (frase / «qui sotto» in lime), scritta fino a 100 px con le due frecce.
+- Frase barrata nei selfie (`big`): scritta più grande e barra che arriva dopo mezzo secondo, così si legge prima di essere cancellata.
+
