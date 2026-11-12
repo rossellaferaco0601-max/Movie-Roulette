@@ -11,13 +11,14 @@ const FONT = "Blinker, sans-serif";
 
 export const CNCover: React.FC<CoverProps> = ({ master, frame, kicker, lines, accent }) => {
   const longest = Math.max(...lines.map((l) => l.length));
-  const size = Math.min(148, Math.floor(1700 / Math.max(8, longest)));
+  // stessa grandezza per tutti i titoli (feed ordinato): si riduce solo se una riga supera le 16 lettere
+  const size = Math.min(104, Math.floor(1700 / Math.max(8, longest)));
   return (
     <AbsoluteFill style={{ background: "#0B0F0A", fontFamily: FONT }}>
       <OffthreadVideo src={staticFile(master)} startFrom={frame} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(11,15,10,0) 44%, rgba(20,44,15,0.82) 60%, rgba(11,15,10,0.97) 78%, #0B0F0A 100%)" }} />
-      {/* blocco titolo: sempre tra y 1010 e y 1440, centrato */}
-      <div style={{ position: "absolute", left: 0, width: W, top: 1010, height: 430, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+      {/* blocco titolo: occhiello sempre a y 1066, titolo subito sotto */}
+      <div style={{ position: "absolute", left: 0, width: W, top: 1066, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
         <div style={{ background: BRAND.lime, color: BRAND.ink, fontWeight: 900, fontSize: 38, letterSpacing: 3, textTransform: "uppercase", padding: "8px 26px", borderRadius: 12, marginBottom: 26 }}>{kicker}</div>
         {lines.map((l, i) => {
           const hit = accent && l.includes(accent) ? [l.slice(0, l.indexOf(accent)), accent, l.slice(l.indexOf(accent) + accent.length)] : [l, "", ""];

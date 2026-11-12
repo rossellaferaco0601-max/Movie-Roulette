@@ -1,4 +1,4 @@
-import { Composition, Still } from "remotion";
+import { Composition } from "remotion";
 import { FORMATS } from "./lib/formats";
 import { CNReel, reelDuration } from "./cn/CNReel";
 import { REELS } from "./cn/reels51";
@@ -15,9 +15,10 @@ export const RemotionRoot: React.FC = () => (
     {REELS.map((r) => (
       <Composition key={r.id} id={r.id} component={CNReel} durationInFrames={reelDuration(r.props)} {...reel} defaultProps={r.props} />
     ))}
-    {/* copertine: stesso formato per tutti i reel che hanno `cover` (id del reel + «-copertina») */}
+    {/* copertine: stesso formato per tutti i reel che hanno `cover` (id del reel + «-copertina»). Composition a 30 fps e non Still (che va a 1 fps): così `frame` è il fotogramma del master */}
     {REELS.filter((r) => r.cover).map((r) => (
-      <Still key={`${r.id}-copertina`} id={`${r.id}-copertina`} component={CNCover} width={1080} height={1920} defaultProps={{ master: r.props.master, ...r.cover! }} />
+
+      <Composition key={`${r.id}-copertina`} id={`${r.id}-copertina`} component={CNCover} width={1080} height={1920} fps={30} durationInFrames={1} defaultProps={{ master: r.props.master.replace("_fx.mp4", ".mp4"), ...r.cover! }} />
     ))}
     {LONGS.map((r) => (
       <Composition key={r.id} id={r.id} component={CNLong} durationInFrames={longDuration(r.props)} width={1920} height={1080} fps={30} defaultProps={r.props} />

@@ -65,7 +65,7 @@ export const REELS: ReelDef[] = [
   {
     id: "R1-fiatone",
     title: "Non sei fatto per correre? Sbagliato",
-    cover: { frame: 150, kicker: "Respirazione nella corsa", lines: ["Ti manca", "il fiato?"], accent: "il fiato?" },
+    cover: { frame: 552, kicker: "Respirazione nella corsa", lines: ["Ti manca", "il fiato?"], accent: "il fiato?" },
     props: {
       ...base,
       master: master("R1-fiatone", true),
@@ -101,7 +101,7 @@ Vuoi imparare a correre senza fiatone? Commenta FIATO e ti mando tutte le info s
   {
     id: "R2-naso",
     title: "Il primo passo: respira con il naso",
-    cover: { frame: 60, kicker: "Respirazione nella corsa", lines: ["Respira", "con il naso"], accent: "naso" },
+    cover: { frame: 390, kicker: "Respirazione nella corsa", lines: ["Respira", "con il naso"], accent: "naso" },
     props: {
       ...base,
       master: master("R2-naso"),
@@ -134,7 +134,7 @@ Commenta NASO e ti mando tutte le info sui percorsi di coaching personalizzato.
   {
     id: "R3-bocca",
     title: "Chiudi la bocca e trova il tuo ritmo",
-    cover: { frame: 120, kicker: "Respirazione nella corsa", lines: ["Chiudi", "la bocca"], accent: "la bocca" },
+    cover: { frame: 594, kicker: "Respirazione nella corsa", lines: ["Chiudi", "la bocca"], accent: "la bocca" },
     props: {
       ...base,
       master: master("R3-bocca"),
@@ -164,7 +164,7 @@ Commenta ENERGIA e ti mando tutte le info sui percorsi di coaching personalizzat
   {
     id: "R4-piano",
     title: "Il secondo errore: corri troppo forte",
-    cover: { frame: 100, kicker: "Respirazione nella corsa", lines: ["Corri", "troppo forte?"], accent: "troppo forte?" },
+    cover: { frame: 546, kicker: "Respirazione nella corsa", lines: ["Corri", "troppo forte?"], accent: "troppo forte?" },
     props: {
       ...base,
       master: master("R4-piano"),
@@ -196,7 +196,7 @@ Commenta PIANO e ti mando tutte le info sui percorsi di coaching personalizzato.
   {
     id: "R5-esercizi",
     title: "Tre esercizi per allenare il respiro",
-    cover: { frame: 200, kicker: "Respirazione nella corsa", lines: ["3 esercizi", "per il respiro"], accent: "3 esercizi" },
+    cover: { frame: 120, kicker: "Respirazione nella corsa", lines: ["3 esercizi", "per il respiro"], accent: "3 esercizi" },
     props: {
       ...base,
       master: master("R5-esercizi"),
@@ -256,7 +256,7 @@ Commenta ESERCIZI e ti mando tutte le info sui percorsi di coaching personalizza
   {
     id: "R8-dialogo",
     title: "La corsa è un dialogo con il tuo corpo",
-    cover: { frame: 120, kicker: "Respirazione nella corsa", lines: ["Un dialogo", "con il tuo corpo"], accent: "dialogo" },
+    cover: { frame: 594, kicker: "Respirazione nella corsa", lines: ["Un dialogo", "con il tuo corpo"], accent: "dialogo" },
     props: {
       ...base,
       master: master("R8-dialogo"),
