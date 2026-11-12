@@ -692,7 +692,7 @@ Commenta TECNICA e ti mando tutte le info sui percorsi di coaching personalizzat
   {
     id: "L6-domani",
     title: "Tre cose da fare da domani",
-    cover: { frame: 1392, kicker: "Longevità", lines: ["3 cose", "da fare domani"], accent: "3 cose" },
+    cover: { frame: 1625, kicker: "Longevità", lines: ["3 cose", "da fare domani"], accent: "3 cose" },
     props: {
       ...base,
       src: "longevita/longevita.webm",
@@ -726,7 +726,9 @@ Commenta TECNICA e ti mando tutte le info sui percorsi di coaching personalizzat
       ],
       cta: { word: "DOMANI", title: "Vuoi iniziare nel modo giusto?" },
     },
-    didascalia: `Cosa puoi fare da domani? Tre cose.
+    didascalia: `Non si smette di correre perché si invecchia: si invecchia perché si smette di correre e di muoversi.
+
+Quindi, cosa puoi fare da domani? Tre cose.
 
 1. Esci e cammina almeno 10 minuti, respirando solo dal naso. Dopo pranzo è uno dei momenti migliori. Sembra poco, ma è un segnale potentissimo: stai accendendo il motore aerobico e stai dicendo ai tuoi mitocondri di mettersi al lavoro.
 
