@@ -1,0 +1,76 @@
+{
+ "id": "T2-laura-lungo",
+ "src": "public/testimonianze/C3496-005.MP4",
+ "out": "public/testimonianze/T2-laura-lungo.mp4",
+ "size": [
+  1920,
+  1080
+ ],
+ "faceX": 0.516,
+ "faceY": 0.374,
+ "zooms": [
+  1.0,
+  1.07
+ ],
+ "blendFrames": 8,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 51.2,
+   "to": 71.79,
+   "zoom": 1.0
+  },
+  {
+   "from": 79.12,
+   "to": 85.35,
+   "zoom": 1.0
+  },
+  {
+   "from": 100.09,
+   "to": 131.85,
+   "zoom": 1.06
+  },
+  {
+   "from": 133.6,
+   "to": 139.93,
+   "zoom": 1.06
+  },
+  {
+   "from": 163.82,
+   "to": 167.49,
+   "zoom": 1.0
+  },
+  {
+   "from": 172.06,
+   "to": 182.67,
+   "zoom": 1.0
+  },
+  {
+   "from": 200.82,
+   "to": 250.53,
+   "zoom": 1.06
+  },
+  {
+   "from": 273.27,
+   "to": 282.73,
+   "zoom": 1.0
+  },
+  {
+   "from": 289.87,
+   "to": 312.58,
+   "zoom": 1.06
+  },
+  {
+   "from": 321.47,
+   "to": 332.08,
+   "zoom": 1.06
+  },
+  {
+   "from": 353.67,
+   "to": 382.36,
+   "zoom": 1.0
+  }
+ ],
+ "broll": []
+}

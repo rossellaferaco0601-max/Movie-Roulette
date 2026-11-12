@@ -1,8 +1,8 @@
 import type { CNLongProps } from "./CNLong";
 import wordsMassimilianoLong from "./wordsMassimilianoLong.json";
 import planMassimiliano from "../../work/massimiliano_long.json";
-import wordsLauraLong from "./wordsLauraLong.json";
-import planLaura from "../../work/laura_long.json";
+import wordsLauraLong from "./wordsLauraLongV2.json"; // v2 (12/11): senza i passaggi su Superhuman, sottotitoli della v1 riportati sulla nuova scaletta
+import planLaura from "../../work/laura_long_v2.json";
 import wordsTaddeoLong from "./wordsTaddeoLong.json";
 import planTaddeo from "../../work/taddeo_long.json";
 import wordsMattiaLong from "./wordsMattiaLong.json";
