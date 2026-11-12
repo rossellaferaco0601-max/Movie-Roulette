@@ -48,3 +48,36 @@ Il problema: pensava che il suo corpo potesse fare 10, e ragionava dentro schemi
 
 **T8 Giulia (il primo trail) reel · Venerdì Conversione · CTA PERCORSO** (v3, 12/11)
 Il problema: quattro anni di fascite plantare, e la prima maratona, in programma ad aprile, saltata per un fastidio all'altro piede. La svolta: sapeva che con gli esercizi giusti, rallentando un po' e soprattutto con pazienza sarebbe tornata come prima, senza alcun fastidio, «e così è stato»; i coach le sono stati sempre a fianco e il programma veniva modificato in corso d'opera in base a come stavano i suoi piedi; poi ha rivisto gli obiettivi, ha iniziato a correre sui sentieri e tra una settimana ha il suo primo trail di 25 chilometri. Chiusura: «un obiettivo può non essere raggiunto, ma grazie ai pilastri di Correre Naturale si può andare a fare tutt'altro». (Nel girato non dice il nome: nel cartellino c'è un nome di fantasia, «Giulia», deciso con Ross il 12/11.)
+
+
+## Stories dalle testimonianze (29 spezzoni, in `video-engine/out/testimonianze/stories/`, file `_sottotitoli`)
+
+Richiesta di Ross (12/11): un set di stories da ogni testimonianza. Stesso formato delle stories CCB approvate: spezzoni verticali presi dal reel, tagli sulle pause, solo sottotitoli piccoli in stile Instagram, niente grafiche né musica. Ogni set si pubblica in sequenza.
+
+**Daniela · 3 stories in sequenza**
+La prima: stava sul divano, non aveva mai corso, Correre Naturale «mi ha miracolato», e quest'estate c'è stato il secondo miracolo. La seconda: grazie alla filosofia della cura del proprio corpo ha fatto gli esami, ha scoperto presto un brutto male all'intestino, è tornata a correre da tre settimane senza dover fare la chemio. La terza: a 60 anni ha rifatto la stessa mezza maratona e ha battuto la Daniela di 50 anni di oltre 20 minuti.
+
+**Massimiliano · 3 stories in sequenza**
+La prima: una vita di infortuni, anche dieci uscite a settimana con il fai da te, fino a capire di aver bisogno di una guida. La seconda: è cambiato tutto, fisico, mente, energia e soprattutto disciplina, ben oltre le aspettative; «non aspettare i miei 54 anni». La terza: stare meglio lo trasmetti in casa, alla famiglia, ai figli, «non ha prezzo»; il consiglio è fare il percorso il prima possibile.
+
+**Laura · 3 stories in sequenza**
+La prima: da quando è seguita dal team non ha più avuto infortuni e ha smesso di frequentare fisioterapisti e osteopati. La seconda: il suo obiettivo è il benessere a 360 gradi, non la performance cronometrica; il percorso l'ha resa più centrata, più motivata, più attenta a sé e agli altri. La terza: la resistenza era il tempo, la sorpresa è stata trovare un buon compromesso; «se ti vuoi bene devi aderire, cercali».
+
+**Taddeo · 4 stories in sequenza**
+La prima: andava oltre i suoi limiti e stava male dopo le corse; ora finisce una gara e sta meglio di quando è partito. La seconda: i miglioramenti, energia, benessere e soprattutto testa: sicurezza, fiducia in se stesso, disciplina. La terza: la resistenza economica, superata perché «la salute viene cento volte prima dei soldi». La quarta: «inizia subito, non aspettare», e in una parola: vitalità.
+
+**Mattia · 3 stories in sequenza**
+La prima: prima era fermo, bloccato dagli infortuni; con il percorso ha iniziato ad amare la corsa per la sua essenza. La seconda: il beneficio più grande è la capacità di ascoltarsi; le resistenze venivano da altri coach che lo avevano portato a infortunarsi, ed è felice di aver iniziato lo stesso. La terza: «prova, al massimo hai investito su te stesso», la curva andrà verso l'alto; in una parola: consapevolezza.
+
+**Franco (la sei ore) · 3 stories in sequenza**
+La prima: finita la sei ore è scoppiato a piangere; il momento più duro quando è andata via la nipotina che lo salutava a ogni giro. La seconda: si è messo «alla guida del suo corpo», ha guardato il cruscotto, ha rallentato corsa e respiro e ha ritrovato tranquillità. La terza: l'ultimo giro è stato il più veloce dei 50 km, chiuso a 6 secondi dallo scoccare delle sei ore.
+
+**Giancarlo · 3 stories in sequenza**
+La prima: la corsa non deve essere quella cosa che ti fa tornare a casa nervoso per il tempo mancato; devi tornare soddisfatto di quello che quel giorno potevi fare. La seconda: con Correre Naturale è cresciuto nella conoscenza di sé, fisica e mentale; il beneficio più grande è godersi il cammino. La terza: bisogna aspettare che il frutto sia maturo; a chi tentenna dice che il primo passo è provare, «la rete di sicurezza c'è».
+
+**Davide (bilancio di metà percorso) · 4 stories in sequenza**
+La prima: «da 10 che pensavo potesse fare, il mio corpo sa fare 100», e la mente ora sa che può fare molto di più. La seconda: bilancio di metà percorso estremamente positivo, un percorso che forma a 360 gradi come persona. La terza: ha imparato a gestire la condizione fisica e a riconoscere i segnali del corpo, scoprendo possibilità nella corsa, nel lavoro, nelle ambizioni. La quarta: i tasselli si mettono in fila come le tessere del domino.
+
+**Giulia (il primo trail) · 3 stories in sequenza**
+La prima: quattro anni di fascite plantare e la prima maratona saltata. La seconda: sapeva che con gli esercizi giusti, rallentando e con pazienza sarebbe tornata come prima, «e così è stato», con i coach sempre a fianco. La terza: ha rivisto gli obiettivi, ha iniziato a correre sui sentieri e tra una settimana ha il suo primo trail di 25 km.
+

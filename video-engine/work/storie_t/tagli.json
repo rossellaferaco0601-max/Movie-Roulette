@@ -1,0 +1,239 @@
+{
+ "t_daniela": {
+  "src": "public/daniela/D1-daniela.mp4",
+  "words": "work/storie_t/D1-daniela_parole.json",
+  "reel": "D1-daniela",
+  "stories": [
+   [
+    [
+     0.0,
+     15.8
+    ]
+   ],
+   [
+    [
+     15.8,
+     44.05
+    ]
+   ],
+   [
+    [
+     44.05,
+     55.95
+    ]
+   ]
+  ]
+ },
+ "t_massimiliano": {
+  "src": "public/testimonianze/T1-massimiliano.mp4",
+  "words": "work/storie_t/T1-massimiliano_parole.json",
+  "reel": "T1-massimiliano",
+  "stories": [
+   [
+    [
+     0.0,
+     22.28
+    ]
+   ],
+   [
+    [
+     22.35,
+     41.55
+    ]
+   ],
+   [
+    [
+     41.55,
+     62.6
+    ]
+   ]
+  ]
+ },
+ "t_laura": {
+  "src": "public/testimonianze/T2-laura_v2.mp4",
+  "words": "work/storie_t/T2-laura_parole.json",
+  "reel": "T2-laura",
+  "stories": [
+   [
+    [
+     0.0,
+     14.0
+    ]
+   ],
+   [
+    [
+     14.0,
+     33.2
+    ]
+   ],
+   [
+    [
+     33.2,
+     60.1
+    ]
+   ]
+  ]
+ },
+ "t_taddeo": {
+  "src": "public/testimonianze/T3-taddeo.mp4",
+  "words": "work/storie_t/T3-taddeo_parole.json",
+  "reel": "T3-taddeo",
+  "stories": [
+   [
+    [
+     0.0,
+     26.35
+    ]
+   ],
+   [
+    [
+     26.35,
+     42.8
+    ]
+   ],
+   [
+    [
+     42.8,
+     64.8
+    ]
+   ],
+   [
+    [
+     64.8,
+     75.6
+    ]
+   ]
+  ]
+ },
+ "t_mattia": {
+  "src": "public/testimonianze/T4-mattia.mp4",
+  "words": "work/storie_t/T4-mattia_parole.json",
+  "reel": "T4-mattia",
+  "stories": [
+   [
+    [
+     0.0,
+     25.2
+    ]
+   ],
+   [
+    [
+     25.2,
+     53.32
+    ]
+   ],
+   [
+    [
+     53.32,
+     77.9
+    ]
+   ]
+  ]
+ },
+ "t_franco": {
+  "src": "public/testimonianze/T5-seiore.mp4",
+  "words": "work/storie_t/T5-seiore_parole.json",
+  "reel": "T5-seiore",
+  "stories": [
+   [
+    [
+     0.0,
+     27.285
+    ]
+   ],
+   [
+    [
+     27.285,
+     60.7
+    ]
+   ],
+   [
+    [
+     60.7,
+     77.4
+    ]
+   ]
+  ]
+ },
+ "t_giancarlo": {
+  "src": "public/testimonianze/T6-giancarlo.mp4",
+  "words": "work/storie_t/T6-giancarlo_parole.json",
+  "reel": "T6-giancarlo",
+  "stories": [
+   [
+    [
+     0.0,
+     21.6
+    ]
+   ],
+   [
+    [
+     21.6,
+     48.47
+    ]
+   ],
+   [
+    [
+     48.47,
+     73.9
+    ]
+   ]
+  ]
+ },
+ "t_davide": {
+  "src": "public/testimonianze/T7-bilancio.mp4",
+  "words": "work/storie_t/T7-bilancio_parole.json",
+  "reel": "T7-bilancio",
+  "stories": [
+   [
+    [
+     0.0,
+     10.33
+    ]
+   ],
+   [
+    [
+     10.33,
+     28.73
+    ]
+   ],
+   [
+    [
+     28.73,
+     55.2
+    ]
+   ],
+   [
+    [
+     55.2,
+     66.9
+    ]
+   ]
+  ]
+ },
+ "t_giulia": {
+  "src": "public/testimonianze/T8-trail.mp4",
+  "words": "work/storie_t/T8-trail_parole.json",
+  "reel": "T8-trail",
+  "stories": [
+   [
+    [
+     0.0,
+     17.0
+    ]
+   ],
+   [
+    [
+     17.0,
+     40.4
+    ]
+   ],
+   [
+    [
+     40.4,
+     69.0
+    ]
+   ]
+  ]
+ }
+}

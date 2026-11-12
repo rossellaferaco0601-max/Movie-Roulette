@@ -38,6 +38,7 @@ def lines_of(words, ranges):
         l[1] = min(l[1] + 0.25, lines[i + 1][0]) if i + 1 < len(lines) else l[1] + 0.4
     return lines
 cuts = json.load(open(sys.argv[1])); out = sys.argv[2]; os.makedirs(out, exist_ok=True)
+BOX = os.environ.get("SUB_BOX", "&H78000000")   # fascia dietro i sottotitoli (AABBGGRR): più coprente (&H38000000) sugli sfondi pieni di dettagli, come le magliette stampate
 only = sys.argv[3:]
 for name, v in cuts.items():
     if only and name not in only: continue
@@ -53,7 +54,7 @@ for name, v in cuts.items():
         if not SOLO_SUB: run(["ffmpeg", "-loglevel", "error", "-y", *inputs, "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p",
              "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", base + ".mp4"])
         ass = ("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-               "Style: ig,Inter,50,&H00FFFFFF,&H00FFFFFF,&H78000000,&H78000000,-1,0,0,0,100,100,0,0,3,14,0,2,70,70,440,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
+               f"Style: ig,Inter,50,&H00FFFFFF,&H00FFFFFF,{BOX},{BOX},-1,0,0,0,100,100,0,0,3,14,0,2,70,70,440,1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
         for s, e, t in lines_of(words, ranges): ass += f"Dialogue: 0,{ts(s)},{ts(e)},ig,,0,0,0,,{t}\n"
         open(base + ".ass", "w").write(ass)
         run(["ffmpeg", "-loglevel", "error", "-y", "-i", base + ".mp4", "-vf", f"subtitles={base}.ass", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p", "-c:a", "copy", "-movflags", "+faststart", base + "_sottotitoli.mp4"])
