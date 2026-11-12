@@ -501,3 +501,9 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
 - «Te lo spiego qui sotto» e gli altri rimandi: **su due righe** (frase / «qui sotto» in lime), scritta fino a 100 px con le due frecce.
 - Frase barrata nei selfie (`big`): scritta più grande e barra che arriva dopo mezzo secondo, così si legge prima di essere cancellata.
 
+### 12/11 (notte) · Ross approva l'assetto CCB su C1 v4: «Sì va benissimo vai con tutto e finisci»
+- **Assetto CCB approvato** (selfie): un solo testo alla volta in basso (i sottotitoli spariscono durante la grafica), parole sopra la testa dove c'è spazio, elenco a lato con voci di una o due parole, rimando «qui sotto» su due righe, contatore/BPM/mappa con etichette grandi. Consegnati C1–C7 manuale **v4** e C1–C7 percorso **v2**, con copertine.
+- Prima di ogni serie: `npx tsx scripts/cn_stills.ts ID …` (un fotogramma per ogni grafica, un solo bundle) e si guardano i fogli; solo dopo si lancia il render.
+- Etichette che erano rimaste piccole e ora sono regola: sotto i contatori (fino a 76 px, frase ≤ 21 lettere), sotto i BPM (68 px), sulla mappa (52 px, centrate sopra/sotto il punto).
+- **L6 v2**: apertura di contesto con la frase «Non si smette di correre perché si invecchia, ma si invecchia perché si smette di correre e di muoversi», poi «Quindi, cosa puoi fare da domani?» (proposta a Ross il 12/11, confermata con il via libera generale).
+

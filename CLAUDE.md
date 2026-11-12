@@ -27,6 +27,8 @@ npx tsx scripts/cn_fx.ts R1-fiatone --still   # fotogrammi di controllo degli ef
 python3 scripts/cn_align.py public/x/src.mp4 src/cn/words.json src/cn/words.json   # tempi reali di ogni parola (allineamento fonetico): da fare prima di agganciare grafiche e tagli
 python3 scripts/cn_master_shots.py work/L3.json    # master verticale da un video GIÀ montato (longevità): un ritaglio per inquadratura, riprese di copertura, schede da coprire
 npx tsx scripts/validate-reels.ts             # sovrapposizioni e ancore di hook/elementi/effetti
+npx tsx scripts/cn_stills.ts C1-runner C2-namibia@12.5,30   # fogli di controllo PRIMA del render: un fotogramma per ogni grafica (ID@secondi = solo quei momenti)
+npx tsx scripts/cn_covers.ts R1-fiatone       # copertina nel formato unico (fotogramma `cover.frame`; candidati con scripts/cn_smile.py), file con lo stesso nome del reel
 python3 scripts/cn_facecheck_elements.py R2-naso public/ytcn51/masters/R2-naso_mento.json   # volto libero grafica per grafica (dopo cn_facecheck.py)
 ../.claude/skills/effects/.venv/bin/python scripts/cn_facecheck.py public/x/master.mp4 0.44   # il volto non si copre MAI: mento sotto il bordo grafiche
 scripts/rs_render.sh progetto.json ytcn51/ytcn51_src.mp4 out/x.mp4   # render di un project.json ReelStudio
