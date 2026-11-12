@@ -466,3 +466,23 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   - **Copertina unica con logo** (`CNCover`, composizione «ID-copertina», campo `cover` del reel): fotogramma pulito di Daniele, occhiello della serie,
     titolo sempre nella stessa posizione e con lo stesso stile, logo orizzontale bianco in basso; tutto dentro il ritaglio 4:5 della griglia.
     `cn_finish.sh` la usa per ogni reel che ha `cover`. Da estendere alle altre serie quando Ross dà l'ok.
+- **2026-11-12 pomeriggio (Ross, controllo di tutto il lavoro dell'11-12/11)**: «L1, l2, l3, l4 vanno bene, l5 toglierei riferimento ai mitocondri,
+  l6 manca un contesto iniziale cosa puoi fare da domani per fare cosa? Se guardo solo quel reel non si capisce. Possiamo dargli contesto in qualche
+  modo? Dimmi prima come faresti. T2 Laura togli riferimenti a super human, parla solo di metodo correre naturale. T7 togli riferimento a super human.
+  T8 togli riferimento a super human. Togli riferimenti a super human anche nei lunghi. C1 ci sono parole a comparsa che si sovrappongono ai
+  sottotitoli, hai molto spazio libero sulla testa di Daniele fai comparire lì qualche parola e mancano animazioni ed effetti e il te lo spiego qui
+  sotto deve essere più visibile e più grande. C2 inserisci animazione che dall'Italia porta alla Namibia e viceversa quando Daniele ne parla, come
+  in C1 i sottotitoli sono sovrapposti e mancano effetti e animazioni. C3 stessa cosa di C1 e C2 aggiungi animazioni. Stessa cosa riguardo agli
+  altri dai, fai sempre gli stessi errori su, modifica tutto. Per le 7 leve usa effetto elenco. Usa anche lettere che cadono. Muro di parole.
+  Effetto contatore per i numeri. Le versioni con cta a schermo vanno riviste tutte i tagli sono proprio sbagliati non va bene, anche la durata
+  riduci un po'. Invece quelli per le stories vanno bene.»
+  Regole che ne escono (valgono da ora):
+  - **Ogni reel deve stare in piedi da solo**: l'apertura deve dire di che cosa si parla e perché (L6: «cosa puoi fare da domani» per fare cosa?).
+  - **Mai «Superhuman» / «Superhuman Academy»** nei contenuti: né detto, né scritto, né in didascalia o hashtag. Si parla solo di **metodo Correre
+    Naturale**. Vale per reel e versioni lunghe.
+  - **Le grafiche non toccano MAI i sottotitoli** (nemmeno di poco): tra il bordo basso di una grafica e i sottotitoli deve restare aria.
+  - **Selfie (CCB)**: usare lo spazio libero SOPRA la testa per le parole a comparsa; servono più animazioni ed effetti, non solo targhe:
+    elenco che si costruisce (per le 7 fondamenta), lettere che cadono, muro di parole, contatore sui numeri, animazione Italia ⇄ Namibia.
+  - Il richiamo alla CTA a voce («te lo spiego qui sotto») deve essere **grande e ben visibile**.
+  - Versioni «percorso» (CTA a schermo): **tagli da rifare** (frasi e chiuse complete, niente stacchi a metà discorso) e **durata più corta**.
+  - Approvati: L1, L2, L3, L4, le 17 stories CCB.

@@ -1,0 +1,98 @@
+{
+ "segments": [
+  {
+   "from": 51.2,
+   "to": 71.79,
+   "zoom": 1.0
+  },
+  {
+   "from": 79.12,
+   "to": 85.35,
+   "zoom": 1.0
+  },
+  {
+   "from": 100.09,
+   "to": 131.85,
+   "zoom": 1.06
+  },
+  {
+   "from": 133.6,
+   "to": 139.93,
+   "zoom": 1.06
+  },
+  {
+   "from": 163.82,
+   "to": 167.49,
+   "zoom": 1.0
+  },
+  {
+   "from": 172.06,
+   "to": 182.67,
+   "zoom": 1.0
+  },
+  {
+   "from": 200.82,
+   "to": 250.53,
+   "zoom": 1.06
+  },
+  {
+   "from": 273.27,
+   "to": 282.73,
+   "zoom": 1.0
+  },
+  {
+   "from": 289.87,
+   "to": 312.58,
+   "zoom": 1.06
+  },
+  {
+   "from": 321.47,
+   "to": 332.08,
+   "zoom": 1.06
+  },
+  {
+   "from": 353.67,
+   "to": 382.36,
+   "zoom": 1.0
+  }
+ ],
+ "chapters": [
+  {
+   "q": "Qual è il tuo obiettivo?",
+   "seg": 0,
+   "at": 0.0
+  },
+  {
+   "q": "E la performance, prima di Correre Naturale?",
+   "seg": 2,
+   "at": 26.3
+  },
+  {
+   "q": "Cosa è cambiato in te con il percorso?",
+   "seg": 4,
+   "at": 63.87
+  },
+  {
+   "q": "Avevi delle resistenze prima di cominciare?",
+   "seg": 6,
+   "at": 77.6
+  },
+  {
+   "q": "Cosa diresti a chi è indeciso?",
+   "seg": 7,
+   "at": 127.03
+  },
+  {
+   "q": "Hai un prossimo obiettivo?",
+   "seg": 8,
+   "at": 136.23
+  },
+  {
+   "q": "Qualcosa da aggiungere su Daniele o sul percorso?",
+   "seg": 10,
+   "at": 169.0
+  }
+ ],
+ "blendFrames": 8,
+ "total": 197.7
+}

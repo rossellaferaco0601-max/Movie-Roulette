@@ -11,11 +11,24 @@
   1
  ],
  "blendFrames": 1,
+ "tailLive": true,
  "vf": "eq=contrast=1.0",
  "voice": "",
  "segments": [
   {
    "from": 0,
+   "to": 26.0333
+  },
+  {
+   "from": 29.1,
+   "to": 43.4333
+  },
+  {
+   "from": 53.0333,
+   "to": 63.6
+  },
+  {
+   "from": 69.6333,
    "to": 80.5667
   }
  ]

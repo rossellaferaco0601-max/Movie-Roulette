@@ -58,6 +58,42 @@ const tailFrom = (segs: Seg[], blend: number, fromSec: number): Seg => {
   const items = layout(segs, blend).items, it = items[items.length - 1];
   return { from: +(it.seg.from + (Math.round(fromSec * 30) - it.start) / 30).toFixed(4), to: it.seg.to };
 };
+/** Pezzi di un reel ridotto ad alcuni intervalli del suo master (tempi del master, in secondi): ogni intervallo ridiventa uno o più pezzi
+ *  del sorgente, così parole e grafiche si riagganciano da sole. Un bordo che cade dentro un incrocio vale per il pezzo che resta. */
+const cutRanges = (segs: Seg[], blend: number, ranges: [number, number][]): Seg[] => {
+  const items = layout(segs, blend).items, out: Seg[] = [];
+  for (const [a, b] of ranges) {
+    const fa = Math.round(a * 30), fb = Math.round(b * 30);
+    for (const it of items) {
+      const s = Math.max(fa, it.start), e = Math.min(fb, it.start + it.len);
+      if (e - s <= Math.max(2, blend)) continue;
+      out.push({ from: +(it.seg.from + (s - it.start) / 30).toFixed(4), to: +(it.seg.from + (e - it.start) / 30).toFixed(4) });
+    }
+  }
+  return out;
+};
+/** Grafiche di un reel riportate su una variante fatta di intervalli del suo master: restano quelle che cadono per intero in un intervallo
+ *  (la coda di 0,5 s vale come margine), spostate sul nuovo tempo; i richiami alla CTA a voce (`pointer`) passano solo se `pointers`. */
+const keepEls = (els: CNReelProps["elements"], ranges: [number, number][], blend = 1, pointers = false): CNReelProps["elements"] => {
+  const out: CNReelProps["elements"] = [];
+  let off = 0;
+  ranges.forEach(([a, b], i) => {
+    for (const e of els) if ((pointers || e.kind !== "pointer") && e.at >= a - 0.05 && e.at + e.dur <= b + 0.45) out.push({ ...e, at: +(e.at - a + off).toFixed(2) });
+    off += b - a - (i < ranges.length - 1 ? blend / 30 : 0);
+  });
+  return out;
+};
+const playEnd = (segs: Seg[], blend: number) => +((layout(segs, blend).total - 15) / 30).toFixed(4);
+/** Ricette dei master ritagliati da master già fatti (scripts/ccb_build.ts): id → sorgenti, intervalli (tempo del master di partenza),
+ *  incrocio in fotogrammi (1 = stacco netto) e file di uscita (default: public/ccb/masters/<id>.mp4). */
+export const CCB_BUILD: Record<string, { srcs: string[]; ranges: [number, number][]; blend?: number; out?: string; tailLive?: boolean }> = {};
+
+// T2 Laura senza riferimenti a Superhuman (Ross 12/11: «parla solo di metodo Correre Naturale»): dal master v1 restano tre intervalli.
+// Via «con Superhuman ho avuto l'opportunità di farlo e sta funzionando» (21,13-27,43) e «e soprattutto con la Superhuman Academy» (30,77-34,63).
+const T2_SEGS = cut([119.82, 128.37], [133.78, 138.05], [138.52, 139.66], [51.15, 55.7], [57.28, 60.05], [72.47, 73.97], [74.18, 78.9], [164.06, 171.14], [172.12, 177.19], [178.19, 182.42], [201.06, 204.03], [222.85, 237.4], [272.7, 277.0], [277.5, 282.6]);
+const T2_KEEP: [number, number][] = [[0, 634 / 30], [823 / 30, 923 / 30], [1039 / 30, playEnd(T2_SEGS, 5)]];
+CCB_BUILD["T2-laura-v2"] = { srcs: ["testimonianze/T2-laura.mp4"], ranges: T2_KEEP, blend: 5, out: "testimonianze/T2-laura_v2.mp4" };
+
 const C6_SEGS = cutN(1, [17.61, 44.99], [53.17, 96.92], [116.56, 121.58]);
 const C7_SEGS = cutN(1, [0.5, 17.31], [231.85, 275.22]);
 
@@ -599,7 +635,8 @@ Commenta CAMMINA e ti mando tutte le info sui percorsi di coaching personalizzat
       blendFrames: 2,
       tailLive: 0.25,
       // un taglio solo: salta il passaggio sulla zona aerobica (già nel reel sulle cellule) e va dritto al principio cardine
-      segments: cutN(2, [537.8, 583.1], [593.95, 609.95]),
+      // 12/11 (Ross): via il riferimento ai mitocondri («non stai rinnovando i mitocondri», 564,58-566,46): il taglio cade sotto la scheda a tutto schermo
+      segments: cutN(2, [537.8, 564.58], [566.46, 583.1], [593.95, 609.95]),
       hook: null,
       elements: [
         { kind: "kinetic", at: 0.12, word: "non", dur: 1.95, words: ["NON BASTA", "USCIRE A CORRERE"], accentIndex: 0 },
@@ -607,27 +644,26 @@ Commenta CAMMINA e ti mando tutte le info sui percorsi di coaching personalizzat
         { kind: "checklist", at: 6.06, word: "correre", dur: 5.0, big: true, cross: true, cues: ["male", "pronto", "allenare"], items: ["Correre male", "Corpo non pronto", "Non sapersi allenare"] },
         { kind: "title", at: 11.26, word: "non", dur: 4.04, cues: ["non", "quando"], lines: ["Non è se ti farai male", "È quando"], accent: "quando" },
         { kind: "title", at: 18.4, word: "segnale", dur: 4.04, cues: ["segnale", "manda", "direzione"], lines: ["Un segnale sbagliato", "manda la biologia", "nella direzione sbagliata"], accent: "sbagliata" },
-        { kind: "slides", at: 22.55, dur: 9.34, fadeIn: 4, fadeOut: 0, cues: ["troppo", "bocca", "fiatone", "senza", "rinnovando", "stressando"], header: "Segnali sbagliati", steps: [
+        { kind: "slides", at: 22.55, dur: 7.46, fadeIn: 4, fadeOut: 0, cues: ["troppo", "bocca", "fiatone", "senza", "stressando"], header: "Segnali sbagliati", steps: [
           { g: 0, kind: "chip", label: "correre troppo forte", color: "coral" },
           { g: 0, kind: "chip", label: "con la bocca aperta", color: "coral" },
           { g: 0, kind: "chip", label: "col fiatone", color: "coral" },
           { g: 0, kind: "chip", label: "senza saper correre", color: "coral" },
-          { g: 1, kind: "text", lines: ["Non stai rinnovando", "i mitocondri"] },
           { g: 1, kind: "text", lines: ["Stai stressando", "un sistema non pronto"], accent: 0 },
         ] },
-        { kind: "kinetic", at: 33.16, word: "naso", dur: 2.3, words: ["IL NASO", "LIMITATORE", "NATURALE"], accentIndex: 0 },
-        { kind: "question", at: 35.88, word: "se", dur: 2.6, label: "Il test", text: "Riesci a respirare solo dal naso?" },
-        { kind: "kinetic", at: 38.88, word: "probabilmente", dur: 2.05, words: ["STAI ANDANDO", "TROPPO FORTE"], accentIndex: 1 },
-        { kind: "kinetic", at: 41.26, word: "rallenta", dur: 1.5, words: ["RALLENTA", "O CAMMINA"], accentIndex: 0 },
-        { kind: "kinetic", at: 42.96, word: "non", dur: 2.24, words: ["NON È DEBOLEZZA", "È INTELLIGENZA", "BIOLOGICA"], accentIndex: 2 },
-        { kind: "slides", at: 45.27, dur: 3.59, fadeIn: 0, fadeOut: 0, cues: ["principio", "metodo"], steps: [
+        { kind: "kinetic", at: 31.28, word: "naso", dur: 2.3, words: ["IL NASO", "LIMITATORE", "NATURALE"], accentIndex: 0 },
+        { kind: "question", at: 34.00, word: "se", dur: 2.6, label: "Il test", text: "Riesci a respirare solo dal naso?" },
+        { kind: "kinetic", at: 37.00, word: "probabilmente", dur: 2.05, words: ["STAI ANDANDO", "TROPPO FORTE"], accentIndex: 1 },
+        { kind: "kinetic", at: 39.38, word: "rallenta", dur: 1.5, words: ["RALLENTA", "O CAMMINA"], accentIndex: 0 },
+        { kind: "kinetic", at: 41.08, word: "non", dur: 2.24, words: ["NON È DEBOLEZZA", "È INTELLIGENZA", "BIOLOGICA"], accentIndex: 2 },
+        { kind: "slides", at: 43.39, dur: 3.59, fadeIn: 0, fadeOut: 0, cues: ["principio", "metodo"], steps: [
           { g: 0, kind: "text", lines: ["Il principio", "cardine"], accent: 1 },
           { g: 0, kind: "chip", label: "del metodo Correre Naturale®" },
         ] },
-        { kind: "bigstrike", at: 49.87, word: "correre", dur: 1.75, text: "Correre di più o più veloce" },
-        { kind: "kinetic", at: 52.29, word: "mandare", dur: 1.65, words: ["I SEGNALI", "GIUSTI"], accentIndex: 1 },
-        { kind: "checklist", at: 54.15, word: "con", dur: 5.6, big: true, cues: ["tecnica", "corpo", "intensità"], items: ["Tecnica corretta", "Corpo preparato", "Intensità sostenibile"] },
-        { kind: "kinetic", at: 60.01, word: "resto", dur: 1.25, words: ["IL RESTO È UNA", "CONSEGUENZA"], accentIndex: 1 },
+        { kind: "bigstrike", at: 47.99, word: "correre", dur: 1.75, text: "Correre di più o più veloce" },
+        { kind: "kinetic", at: 50.41, word: "mandare", dur: 1.65, words: ["I SEGNALI", "GIUSTI"], accentIndex: 1 },
+        { kind: "checklist", at: 52.27, word: "con", dur: 5.6, big: true, cues: ["tecnica", "corpo", "intensità"], items: ["Tecnica corretta", "Corpo preparato", "Intensità sostenibile"] },
+        { kind: "kinetic", at: 58.13, word: "resto", dur: 1.25, words: ["IL RESTO È UNA", "CONSEGUENZA"], accentIndex: 1 },
       ],
       cta: { word: "TECNICA", title: "Vuoi imparare a correre bene?" },
     },
@@ -635,7 +671,7 @@ Commenta CAMMINA e ti mando tutte le info sui percorsi di coaching personalizzat
 
 Se esci a correre male, con un corpo non pronto e senza saperti allenare, la questione non è se ti farai male. È quando.
 
-Il corpo risponde ai segnali che gli mandi, e un segnale sbagliato manda la biologia nella direzione sbagliata. Correre troppo forte, con la bocca aperta, col fiatone, senza saper correre: non stai rinnovando i mitocondri, stai stressando un sistema che non è pronto.
+Il corpo risponde ai segnali che gli mandi, e un segnale sbagliato manda la biologia nella direzione sbagliata. Correre troppo forte, con la bocca aperta, col fiatone, senza saper correre: stai stressando un sistema che non è pronto.
 
 Il naso è il limitatore naturale dell'essere umano: se mentre corri non riesci a respirare solo dal naso, molto probabilmente stai andando troppo forte. Rallentare o camminare non è debolezza, è intelligenza biologica.
 
@@ -699,13 +735,14 @@ Commenta DOMANI e ti mando tutte le info sui percorsi di coaching personalizzato
       ...base,
       src: "testimonianze/laura_src.mp4",
       words: wordsLaura as CNReelProps["words"],
-      master: "testimonianze/T2-laura.mp4",
+      master: "testimonianze/T2-laura_v2.mp4",
       gfxShift: 50, // con l'avvicinamento dei pezzi alterni il mento arriva a 0,45: grafiche da 0,466
       capShift: 30,
       // intervista: tagli nei punti più silenziosi delle pause (misurati sull'energia dell'audio), domande a schermo (l'intervistatore è fuori microfono)
-      segments: cut([119.82, 128.37], [133.78, 138.05], [138.52, 139.66], [51.15, 55.7], [57.28, 60.05], [72.47, 73.97], [74.18, 78.9], [164.06, 171.14], [172.12, 177.19], [178.19, 182.42], [201.06, 204.03], [222.85, 237.4], [272.7, 277.0], [277.5, 282.6]),
+      segments: cutRanges(T2_SEGS, 5, T2_KEEP),
       hook: null,
-      elements: [
+      // grafiche della v1 riportate sui tre intervalli che restano (quelle su Superhuman cadono da sole)
+      elements: keepEls([
         { kind: "nametag", at: 0.4, dur: 2.5, name: "Laura", sub: "Roma · con Correre Naturale dal 2016" },
         { kind: "pill", at: 3.14, word: "CN", dur: 2.6, text: "CN = Correre Naturale®" },
         { kind: "kinetic", at: 7.28, word: "non", dur: 1.8, words: ["NON HO AVUTO PIÙ", "INFORTUNI"], accentIndex: 1 },
@@ -725,7 +762,7 @@ Commenta DOMANI e ti mando tutte le info sui percorsi di coaching personalizzato
         { kind: "question", at: 61.35, dur: 2.1, text: "Cosa diresti a chi è indeciso?" },
         { kind: "kinetic", at: 63.64, word: "devi", dur: 1.9, words: ["SE TI VUOI BENE", "DEVI ADERIRE"], accentIndex: 1 },
         { kind: "kinetic", at: 67.82, word: "non", dur: 2.5, words: ["NON ASPETTARE", "CERCALI"], accentIndex: 1 },
-      ],
+      ], T2_KEEP, 5),
       cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
     },
     didascalia: `«Da quando sono seguita da Correre Naturale non ho avuto più infortuni.»
@@ -953,19 +990,21 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
       gfxScale: 0.8,
       capShift: 80,
       elements: [
-        { kind: "title", at: 0.1, dur: 3.6, lines: ["Il runner che", "sapeva troppo"], accent: "troppo" },
+        { kind: "topword", at: 0.1, dur: 3.6, lines: ["Il runner che sapeva troppo"], accent: "troppo", anim: "drop" },
+        { kind: "topword", at: 5.9, word: "migliorare", dur: 2.5, lines: ["Migliorare la tecnica"], accent: "tecnica" },
         { kind: "cycle", at: 9.2, word: "informa,", dur: 4.0, cues: ["informa,", "guarda", "legge", "salva"], items: ["Si informa", "Guarda video", "Legge articoli", "Salva tutorial"] },
-        { kind: "cycle", at: 15.1, word: "testa", dur: 6.15, cues: ["testa", "busto", "piede", "braccia", "spalle"], items: ["Testa così", "Busto così", "Piede così", "Braccia a 90°", "Spalle basse"] },
-        { kind: "title", at: 25.0, word: "pensare", dur: 2.4, lines: ["Pensa a ogni", "singolo passo"], accent: "passo" },
+        { kind: "wall", at: 15.1, word: "testa", dur: 6.1, cues: ["testa", "busto", "piede", "braccia", "spalle"], title: "Le regole da ricordare", rows: ["Testa così", "Busto così", "Piede così", "Braccia a 90°", "Spalle basse"] },
+        { kind: "topword", at: 25.0, word: "pensare", dur: 2.4, lines: ["Pensa a ogni singolo passo"], accent: "passo" },
+        { kind: "cycle", at: 27.6, word: "testa", dur: 5.4, cues: ["testa", "aspetta", "toccato", "l'avampiede"], items: ["La testa qui, non troppo", "Aspetta, il piede", "Ho toccato il tallone", "No, l'avampiede!"] },
         { kind: "title", at: 34.5, word: "più", dur: 3.2, lines: ["Più rigido, più stanco"], accent: "rigido," },
-        { kind: "title", at: 44.5, word: "non", dur: 2.4, lines: ["Non è colpa tua"], accent: "colpa tua" },
+        { kind: "topword", at: 39.8, word: "peggio", dur: 1.5, lines: ["Peggio di prima"], accent: "Peggio", anim: "drop" },
+        { kind: "topword", at: 44.5, word: "non", dur: 2.6, lines: ["Non è colpa tua"], accent: "colpa tua", zone: "strip" },
         { kind: "bigstrike", at: 50.0, word: "funziona", dur: 2.6, text: "Funziona così" },
-        { kind: "stat", at: 55.1, word: "dentro", dur: 2.3, value: "2", label: "cervelli dentro di te" },
-        { kind: "title", at: 57.9, word: "cervello", dur: 3.2, lines: ["Cervello pensante", "lento e calcolatore"], accent: "pensante" },
-        { kind: "title", at: 61.6, word: "cervello", dur: 3.6, lines: ["Cervello motorio", "rapidissimo, istintivo"], accent: "motorio" },
+        { kind: "side", at: 55.1, word: "dentro", dur: 10.0, cues: ["pensante,", "lento", "motorio,", "rapidissimo,"], title: "Due cervelli", items: ["Pensante", "Lento e calcolatore", "Motorio", "Rapidissimo, istintivo"] },
         { kind: "title", at: 69.1, word: "cervello", dur: 3.0, lines: ["Il pensante si intromette"], accent: "intromette" },
-        { kind: "title", at: 73.2, word: "lumaca", dur: 2.2, lines: ["Una lumaca alla guida", "di una macchina da corsa"], accent: "lumaca" },
-        { kind: "title", at: 77.4, word: "non", dur: 4.4, cues: ["spiegata", "insegnata"], lines: ["Non va spiegata alla testa", "va insegnata al corpo"], accent: "corpo" },
+        { kind: "topword", at: 73.2, word: "lumaca", dur: 2.2, lines: ["Una lumaca al volante"], accent: "lumaca" },
+        { kind: "title", at: 78.0, word: "spiegata", dur: 1.75, lines: ["Non spiegata alla testa"], accent: "testa" },
+        { kind: "topword", at: 80.2, word: "insegnata", dur: 1.9, lines: ["Insegnata al corpo"], accent: "corpo", anim: "drop", zone: "strip" },
         { kind: "pointer", at: 83.2, word: "Beh,", dur: 1.85, text: "Te lo spiego qui sotto", accent: "qui sotto" },
       ],
       cta: { word: "", title: "" },
@@ -995,23 +1034,25 @@ Non è colpa tua: dentro di te ci sono due cervelli, quello pensante e quello mo
       gfxScale: 0.8,
       capShift: 80,
       elements: [
-        { kind: "title", at: 0.05, dur: 3.3, lines: ["Quello che ho visto", "in Namibia"], accent: "Namibia" },
+        { kind: "title", at: 0.05, dur: 1.3, lines: ["Quello che ho visto in Namibia"], accent: "Namibia" },
+        { kind: "side", at: 1.5, word: "Boscimani", dur: 4.4, map: "it-na" },
         { kind: "title", at: 10.7, word: "migliaia", dur: 2.3, lines: ["Da migliaia di anni"], accent: "migliaia" },
-        { kind: "title", at: 17.6, word: "nessuno", dur: 2.7, lines: ["Nessuno insegnava", "come si corre"], accent: "Nessuno" },
+        { kind: "title", at: 17.6, word: "nessuno", dur: 2.7, lines: ["Nessuno insegnava a correre"], accent: "Nessuno" },
         { kind: "cycle", at: 20.6, word: "nessun", dur: 3.15, cues: ["allenatore,", "tabella,", "video,"], items: ["Nessun allenatore", "Nessuna tabella", "Nessun video"] },
-        { kind: "title", at: 23.9, word: "correvano", dur: 1.9, lines: ["Tutti allo stesso modo"], accent: "stesso" },
+        { kind: "topword", at: 23.9, word: "correvano", dur: 1.9, lines: ["Tutti allo stesso modo"], accent: "stesso", anim: "drop", zone: "strip" },
         { kind: "title", at: 26.1, word: "bambini,", dur: 2.9, lines: ["Bambini, adulti, anziani"], accent: "anziani" },
         { kind: "cycle", at: 29.4, word: "leggeri,", dur: 6.65, cues: ["leggeri,", "dritti,", "piede", "rumore."], items: ["Leggeri", "Dritti", "Piede sotto il corpo", "Quasi senza rumore"] },
-        { kind: "title", at: 36.2, word: "tornato", dur: 2.4, lines: ["Poi sono tornato", "in Italia"], accent: "Italia" },
+        { kind: "side", at: 36.2, word: "tornato", dur: 3.4, map: "na-it" },
         { kind: "title", at: 41.7, word: "ognuno", dur: 1.7, lines: ["Ognuno a modo suo"], accent: "suo" },
         { kind: "cycle", at: 44.0, word: "guardava", dur: 8.6, cues: ["guardava", "seduto", "martello,", "pugni"], items: ["Chi guarda a terra", "Chi sembra seduto", "Piede a martello", "Pugni stretti"] },
-        { kind: "title", at: 53.6, word: "perché", dur: 4.4, lines: ["Perché corriamo", "ognuno a modo suo?"], accent: "suo?" },
+        { kind: "title", at: 53.6, word: "perché", dur: 4.4, lines: ["Perché ognuno a modo suo?"], accent: "suo?" },
         { kind: "bigstrike", at: 59.4, word: "stile", dur: 1.5, text: "Stile o personalità" },
         { kind: "title", at: 61.5, word: "abbiamo", dur: 2.2, lines: ["Abbiamo perso qualcosa"], accent: "perso" },
-        { kind: "title", at: 66.7, word: "madre", dur: 2.6, lines: ["Come madre natura", "ha previsto"], accent: "natura" },
+        { kind: "title", at: 66.7, word: "madre", dur: 2.6, lines: ["Come madre natura ha previsto"], accent: "natura" },
         { kind: "title", at: 73.9, word: "leggera,", dur: 2.2, lines: ["Leggera, dritta, naturale"], accent: "naturale" },
-        { kind: "title", at: 76.6, word: "l'avevi", dur: 4, cues: ["l'avevi", "va"], lines: ["Ce l'avevi anche tu", "va solo ritrovata"], accent: "ritrovata" },
-        { kind: "pointer", at: 80.9, word: "Qui", dur: 5.5, text: "Te lo racconto qui sotto", accent: "qui sotto" },
+        { kind: "title", at: 76.6, word: "l'avevi", dur: 2.6, lines: ["Ce l'avevi anche tu"], accent: "anche tu" },
+        { kind: "topword", at: 79.6, word: "va", dur: 1.6, lines: ["Va solo ritrovata"], accent: "ritrovata", anim: "drop", zone: "strip" },
+        { kind: "pointer", at: 81.4, word: "racconto", dur: 5.0, text: "Te lo racconto qui sotto", accent: "qui sotto" },
       ],
       cta: { word: "", title: "" },
     },
@@ -1040,19 +1081,20 @@ Poi sono tornato in Italia, e al parco ognuno correva a modo suo. Non è questio
       gfxScale: 0.8,
       capShift: 80,
       elements: [
-        { kind: "title", at: 0.05, dur: 2.6, lines: ["La ricetta", "della corsa"], accent: "ricetta" },
-        { kind: "stat", at: 3.3, word: "pane", dur: 2.6, value: "3", label: "ingredienti per il pane" },
+        { kind: "topword", at: 0.05, dur: 2.6, lines: ["La ricetta della corsa"], accent: "ricetta", anim: "drop", zone: "strip" },
+        { kind: "counter", at: 3.3, word: "pane", dur: 2.6, to: 3, label: "ingredienti per il pane" },
         { kind: "cycle", at: 6.3, word: "acqua,", dur: 2.45, cues: ["acqua,", "farina", "lievito."], items: ["Acqua", "Farina", "Lievito"] },
         { kind: "bigstrike", at: 8.9, word: "lievito,", dur: 1.6, text: "Lievito" },
         { kind: "title", at: 11.4, word: "ottieni", dur: 2.0, lines: ["Non ottieni il pane"], accent: "pane" },
-        { kind: "stat", at: 17.2, word: "stesso", dur: 1.8, value: "7", label: "ingredienti della corsa" },
-        { kind: "cycle", at: 19.3, word: "postura,", dur: 5.8, cues: ["postura,", "ritmo,", "relax,", "appoggio", "posizione", "uso", "parabola."], items: ["Postura", "Ritmo", "Relax", "Appoggio del piede", "Posizione della testa", "Uso delle braccia", "Parabola"] },
-        { kind: "title", at: 25.3, word: "manca", dur: 4.1, cues: ["manca", "non"], lines: ["Se ne manca uno", "la corsa non lievita"], accent: "lievita" },
+        { kind: "counter", at: 17.2, word: "stesso", dur: 1.8, to: 7, label: "ingredienti della corsa" },
+        { kind: "side", at: 19.3, word: "postura,", dur: 5.8, cues: ["postura,", "ritmo,", "relax,", "appoggio", "posizione", "uso", "parabola."], title: "I 7 ingredienti", items: ["Postura", "Ritmo", "Relax", "Appoggio del piede", "Posizione della testa", "Uso delle braccia", "Parabola"] },
+        { kind: "title", at: 25.3, word: "manca", dur: 2.6, lines: ["Se ne manca uno"], accent: "uno" },
+        { kind: "topword", at: 28.4, word: "non", dur: 2.4, lines: ["La corsa non lievita"], accent: "non lievita", anim: "drop", zone: "strip" },
         { kind: "cycle", at: 32.7, word: "fastidi,", dur: 2.3, cues: ["fastidi,", "fatica,", "poca"], items: ["Fastidi", "Fatica", "Poca voglia di uscire"] },
         { kind: "title", at: 38.7, word: "tuo", dur: 1.6, lines: ["Il tuo corpo te lo dice"], accent: "corpo" },
         { kind: "cycle", at: 42.1, word: "Come", dur: 9.3, cues: ["Come", "dopo?", "Hai", "Esci", "Sei"], items: ["Come ti senti mentre corri?", "E dopo?", "Hai spesso fastidi?", "Esci con piacere?", "Sei soddisfatto dei risultati?"] },
-        { kind: "title", at: 53.7, word: "nella", dur: 1.9, lines: ["Nella tua ricetta", "qualcosa non va"], accent: "non va" },
-        { kind: "stat", at: 57.6, word: "dodici", dur: 2.4, value: "12 anni", label: "di lavoro, errori compresi" },
+        { kind: "title", at: 53.7, word: "nella", dur: 1.9, lines: ["Qualcosa non va"], accent: "non va" },
+        { kind: "counter", at: 57.6, word: "dodici", dur: 2.4, to: 12, suffix: "anni", label: "di lavoro, errori compresi" },
         { kind: "pointer", at: 60.6, word: "manuale", dur: 7.6, arrow: false, text: "Manuale «Come correre bene»", accent: "«Come correre bene»" },
         { kind: "cycle", at: 68.6, word: "sette", dur: 7.9, cues: ["sette", "esercizi", "video"], items: ["Le 7 fondamenta", "Gli esercizi", "I video"] },
         { kind: "pointer", at: 78.2, word: "lo", dur: 4.1, text: "Lo trovi qui sotto", accent: "qui sotto" },
@@ -1084,20 +1126,21 @@ La corsa ne ha sette: postura, ritmo, relax, appoggio del piede, posizione della
       gfxScale: 0.8,
       capShift: 80,
       elements: [
-        { kind: "title", at: 0.05, dur: 1.65, lines: ["Una giornata", "normale"], accent: "normale" },
+        { kind: "topword", at: 0.05, dur: 1.65, lines: ["Una giornata normale"], accent: "normale", anim: "drop", zone: "strip" },
         // a 5,5 s Daniele piega la testa in avanti (il mento scende a 0,66): lì niente grafica
-        { kind: "stat", at: 2.0, word: "8", dur: 2.9, value: "8 ore", label: "seduto alla scrivania" },
+        { kind: "counter", at: 2.0, word: "8", dur: 2.9, to: 8, suffix: "ore", label: "seduto alla scrivania" },
         { kind: "cycle", at: 6.4, word: "avanti,", dur: 6.9, cues: ["avanti,", "scarpe", "macchina."], items: ["Testa piegata in avanti", "Scarpe che costringono i piedi", "Ore in macchina"] },
         { kind: "title", at: 14.2, word: "corpo", dur: 1.7, lines: ["Il corpo si adatta"], accent: "adatta" },
         { kind: "cycle", at: 16.2, word: "muscoli", dur: 5.6, cues: ["muscoli", "articolazioni", "tendini"], items: ["Muscoli più deboli", "Articolazioni rigide", "Tendini meno elastici"] },
-        { kind: "title", at: 24.3, word: "esseri", dur: 2.2, lines: ["Esseri umani da zoo"], accent: "da zoo" },
-        { kind: "title", at: 27.8, word: "gabbia", dur: 1.9, lines: ["Una gabbia", "costruita da soli"], accent: "gabbia" },
-        { kind: "title", at: 30.0, word: "perso", dur: 4.4, lines: ["Abbiamo perso", "la capacità di correre"], accent: "correre" },
-        { kind: "title", at: 35.6, word: "buona", dur: 4.6, cues: ["buona", "può"], lines: ["La buona notizia:", "si può tornare indietro"], accent: "indietro" },
-        { kind: "stat", at: 42.8, word: "12", dur: 2.4, value: "12 anni", label: "di analisi su migliaia di runner" },
-        { kind: "stat", at: 46.1, word: "7", dur: 3.6, value: "7", label: "elementi della corsa secondo natura" },
-        { kind: "cycle", at: 52.8, word: "postura,", dur: 6.55, cues: ["postura,", "ritmo,", "relax,", "appoggio", "posizione", "uso", "parabola."], items: ["Postura", "Ritmo", "Relax", "Appoggio del piede", "Posizione della testa", "Uso delle braccia", "Parabola"] },
-        { kind: "title", at: 60.4, word: "Boscimani", dur: 4.9, cues: ["Boscimani", "dobbiamo"], lines: ["I Boscimani lo fanno", "noi dobbiamo reimparare"], accent: "reimparare" },
+        { kind: "topword", at: 24.3, word: "esseri", dur: 2.2, lines: ["Esseri umani da zoo"], accent: "da zoo", anim: "drop", zone: "strip" },
+        { kind: "title", at: 27.8, word: "gabbia", dur: 1.9, lines: ["Una gabbia costruita da soli"], accent: "gabbia" },
+        { kind: "title", at: 30.0, word: "perso", dur: 4.4, lines: ["Persa la capacità di correre"], accent: "correre" },
+        { kind: "title", at: 36.7, word: "può", dur: 3.4, lines: ["Si può tornare indietro"], accent: "indietro" },
+        { kind: "counter", at: 42.8, word: "12", dur: 2.4, to: 12, suffix: "anni", label: "di analisi su migliaia di runner" },
+        { kind: "counter", at: 46.1, word: "7", dur: 3.6, to: 7, label: "elementi della corsa secondo natura" },
+        { kind: "side", at: 52.8, word: "postura,", dur: 6.55, cues: ["postura,", "ritmo,", "relax,", "appoggio", "posizione", "uso", "parabola."], title: "Le 7 fondamenta", items: ["Postura", "Ritmo", "Relax", "Appoggio del piede", "Posizione della testa", "Uso delle braccia", "Parabola"] },
+        { kind: "title", at: 60.4, word: "Boscimani", dur: 2.3, lines: ["I Boscimani lo fanno"], accent: "Boscimani" },
+        { kind: "title", at: 63.4, word: "invece", dur: 1.9, lines: ["Noi dobbiamo reimparare"], accent: "reimparare" },
         { kind: "pointer", at: 65.7, word: "Trovi", dur: 5.9, text: "Trovi tutto qui sotto", accent: "qui sotto" },
       ],
       cta: { word: "", title: "" },
@@ -1127,18 +1170,18 @@ La buona notizia è che si può tornare indietro. Le sette fondamenta della cors
       gfxScale: 0.8,
       capShift: 80,
       elements: [
-        { kind: "title", at: 0.1, dur: 1.8, lines: ["Un dato", "scioccante"], accent: "scioccante" },
-        { kind: "stat", at: 2.2, word: "l'87%", dur: 4.8, value: "87%", label: "ha una tecnica scorretta" },
-        { kind: "stat", at: 7.8, word: "9", dur: 2.5, value: "9 su 10", label: "persone analizzate" },
-        { kind: "title", at: 12.3, word: "quanto", dur: 3.4, lines: ["Quanto ti sei", "allontanato?"], accent: "allontanato?" },
-        { kind: "cycle", at: 17.7, word: "talloni", dur: 11.3, cues: ["talloni", "nuca", "sguardo", "filo", "rilassati."], items: ["Talloni contro il battiscopa", "Nuca appoggiata al muro", "Sguardo all'orizzonte", "Un filo ti tira verso l'alto", "Rilassati"] },
-        { kind: "title", at: 29.6, word: "passo", dur: 2.0, cues: ["passo", "senza"], lines: ["Un passo avanti", "senza cambiare niente"], accent: "niente" },
-        { kind: "stat", at: 32.0, word: "corri", dur: 2.3, value: "20 secondi", label: "di corsa sul posto" },
+        { kind: "topword", at: 0.1, dur: 1.8, lines: ["Un dato scioccante"], accent: "scioccante", anim: "drop" },
+        { kind: "counter", at: 2.2, word: "l'87%", dur: 4.8, to: 87, suffix: "%", label: "ha una tecnica scorretta" },
+        { kind: "counter", at: 7.8, word: "9", dur: 2.5, to: 9, suffix: "su 10", label: "persone analizzate" },
+        { kind: "topword", at: 12.3, word: "quanto", dur: 3.4, lines: ["Quanto ti sei allontanato?"], accent: "allontanato?" },
+        { kind: "side", at: 17.7, word: "talloni", dur: 11.3, cues: ["talloni", "nuca", "sguardo", "filo", "rilassati."], title: "Il test del muro", items: ["Talloni contro il battiscopa", "Nuca al muro", "Sguardo all'orizzonte", "Un filo ti tira verso l'alto", "Rilassati"] },
+        { kind: "title", at: 29.6, word: "passo", dur: 2.0, lines: ["Un passo avanti"], accent: "avanti" },
+        { kind: "counter", at: 32.0, word: "corri", dur: 2.3, to: 20, suffix: "secondi", label: "di corsa sul posto" },
         { kind: "cycle", at: 35.0, word: "posizione", dur: 3.3, cues: ["posizione", "sbilanciato"], items: ["Posizione strana?", "Sbilanciato all'indietro?"] },
-        { kind: "title", at: 39.8, word: "sensazione", dur: 4.2, lines: ["È la misura di quanto", "ti sei abituato ad altro"], accent: "misura" },
+        { kind: "title", at: 39.8, word: "sensazione", dur: 4.2, lines: ["Il corpo si è abituato ad altro"], accent: "altro" },
         { kind: "pill", at: 44.6, word: "solo", dur: 1.7, text: "Solo uno dei tanti esercizi" },
         { kind: "pointer", at: 46.75, word: "manuale", dur: 8.2, arrow: false, text: "Manuale «Come correre bene»", accent: "«Come correre bene»" },
-        { kind: "stat", at: 57.6, word: "tagliando", dur: 5.6, value: "8 test", label: "in regalo: il tagliando corporeo" },
+        { kind: "counter", at: 57.6, word: "tagliando", dur: 5.6, to: 8, suffix: "test", label: "in regalo: il tagliando corporeo" },
         { kind: "pointer", at: 64.5, word: "Trovi", dur: 5.9, text: "Trovi tutto qui sotto", accent: "qui sotto" },
       ],
       cta: { word: "", title: "" },
@@ -1169,23 +1212,24 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
       gfxScale: 0.8,
       capShift: 80,
       elements: [
-        { kind: "title", at: 0.05, dur: 3.0, lines: ["Il test", "del metronomo"], accent: "metronomo" },
+        { kind: "topword", at: 0.05, dur: 3.0, lines: ["Il test del metronomo"], accent: "metronomo", anim: "drop", zone: "strip" },
         { kind: "pill", at: 4.5, word: "un'app", dur: 3.0, text: "Un'app gratuita sul telefono" },
         { kind: "beat", at: 10.0, word: "110", dur: 6.6, bpm: 110, label: "saltella sul posto a tempo" },
-        { kind: "title", at: 19.0, word: "saltello", dur: 2.4, lines: ["Ogni saltello", "lo fai tu"], accent: "tu" },
+        { kind: "title", at: 19.0, word: "saltello", dur: 2.4, lines: ["Ogni saltello lo fai tu"], accent: "tu" },
         { kind: "cycle", at: 21.8, word: "pieghi", dur: 3.12, cues: ["pieghi", "spingi,", "atterri,", "ricominci"], items: ["Pieghi le gambe", "Spingi", "Atterri", "Ricominci"] },
         { kind: "title", at: 25.1, word: "tutta", dur: 2.1, lines: ["Tutta fatica muscolare"], accent: "muscolare" },
         { kind: "beat", at: 29.2, word: "220", dur: 5.9, bpm: 220, label: "un ritmo velocissimo", tone: "coral" },
         { kind: "title", at: 37.0, word: "sprecare", dur: 2.2, lines: ["Sprechi efficienza"], accent: "efficienza" },
         { kind: "beat", at: 42.5, word: "175", dur: 4.2, bpm: 175, label: "l'ultimo test" },
-        { kind: "title", at: 47.4, word: "saltelli", dur: 3.5, cues: ["saltelli", "accadono"], lines: ["Un po' li fai tu", "un po' accadono da soli"], accent: "da soli" },
-        { kind: "title", at: 51.8, word: "rimbalzare,", dur: 2.6, lines: ["Inizi a rimbalzare"], accent: "rimbalzare" },
+        { kind: "cycle", at: 47.4, word: "saltelli", dur: 3.5, cues: ["saltelli", "accadono"], items: ["Un po' li fai tu", "Un po' accadono da soli"] },
+        { kind: "topword", at: 51.8, word: "rimbalzare,", dur: 2.6, lines: ["Inizi a rimbalzare"], accent: "rimbalzare", anim: "drop", zone: "strip" },
         { kind: "cycle", at: 57.3, word: "piede,", dur: 2.4, cues: ["piede,", "tendine", "fascia"], items: ["Piede", "Tendine d'Achille", "Fascia plantare"] },
         { kind: "title", at: 59.9, word: "lavorano", dur: 1.5, lines: ["Lavorano come molle"], accent: "molle" },
-        { kind: "title", at: 61.7, word: "assorbono", dur: 5.4, cues: ["assorbono", "restituiscono"], lines: ["Assorbono energia", "e te la restituiscono"], accent: "restituiscono" },
-        { kind: "title", at: 71.8, word: "spiegato", dur: 4.0, cues: ["regola,", "fatto"], lines: ["Non con una regola:", "te l'ho fatto sentire"], accent: "sentire" },
+        { kind: "cycle", at: 61.7, word: "assorbono", dur: 5.4, cues: ["assorbono", "restituiscono"], items: ["Assorbono energia", "E te la restituiscono"] },
+        { kind: "title", at: 71.8, word: "spiegato", dur: 1.7, lines: ["Non con una regola"], accent: "regola" },
+        { kind: "title", at: 73.9, word: "fatto", dur: 1.9, lines: ["Te l'ho fatto sentire"], accent: "sentire" },
         { kind: "pointer", at: 76.2, word: "Trovi", dur: 1.8, text: "Il manuale è qui sotto", accent: "qui sotto" },
-        { kind: "title", at: 78.3, word: "Lascia", dur: 2.9, cues: ["regole", "correre"], lines: ["Lascia a casa le regole", "lascia correre il corpo"], accent: "corpo" },
+        { kind: "cycle", at: 78.3, word: "Lascia", dur: 2.9, cues: ["regole", "correre"], items: ["Lascia a casa le regole", "Lascia correre il corpo"] },
       ],
       cta: { word: "", title: "" },
     },
@@ -1214,21 +1258,21 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
       gfxScale: 0.8,
       capShift: 80,
       elements: [
-        { kind: "title", at: 0.1, dur: 2.6, lines: ["La tecnica si insegna", "al corpo"], accent: "corpo" },
+        { kind: "topword", at: 0.1, dur: 2.6, lines: ["La tecnica al corpo"], accent: "corpo", anim: "drop", zone: "strip" },
         { kind: "title", at: 3.0, word: "esercizi", dur: 1.6, lines: ["Esercizi precisi"], accent: "precisi" },
         { kind: "cycle", at: 5.1, word: "prima,", dur: 2.3, cues: ["prima,", "durante", "dopo"], items: ["Prima", "Durante", "Dopo la corsa"] },
-        { kind: "title", at: 8.6, word: "gesto", dur: 3.1, cues: ["gesto", "cervello"], lines: ["Il gesto giusto", "al cervello motorio"], accent: "motorio" },
+        { kind: "title", at: 9.6, word: "direttamente", dur: 2.1, lines: ["Dritto al cervello motorio"], accent: "motorio" },
         { kind: "bigstrike", at: 12.0, word: "senza", dur: 1.5, text: "Spiegazioni" },
         { kind: "bigstrike", at: 13.8, word: "senza", dur: 2.7, text: "Troppe regole" },
-        { kind: "stat", at: 19.3, word: "12", dur: 2.0, value: "12 anni", label: "che uso questi esercizi" },
+        { kind: "counter", at: 19.3, word: "12", dur: 2.0, to: 12, suffix: "anni", label: "che uso questi esercizi" },
         { kind: "title", at: 21.8, word: "migliaia", dur: 1.2, lines: ["Migliaia di corridori"], accent: "Migliaia" },
-        { kind: "title", at: 23.9, word: "tatuano", dur: 2.95, cues: ["tatuano", "nel"], lines: ["Tatuano la tecnica", "nel tuo corpo"], accent: "Tatuano" },
-        { kind: "title", at: 28.1, word: "corri", dur: 3.0, cues: ["corri", "senza"], lines: ["Corri bene", "senza sapere come"], accent: "bene" },
+        { kind: "topword", at: 23.9, word: "tatuano", dur: 2.9, lines: ["Tatuano la tecnica"], accent: "Tatuano", anim: "drop", zone: "strip" },
+        { kind: "title", at: 28.1, word: "corri", dur: 3.0, lines: ["Corri bene senza pensarci"], accent: "bene" },
         { kind: "pointer", at: 32.3, word: "manuale", dur: 7.4, arrow: false, text: "Manuale «Come correre bene»", accent: "«Come correre bene»" },
-        { kind: "stat", at: 41.9, word: "Corsa", dur: 5.8, value: "30 secondi", label: "videolezione Corsa perfetta" },
+        { kind: "counter", at: 41.9, word: "Corsa", dur: 5.8, to: 30, suffix: "secondi", label: "videolezione Corsa perfetta" },
         { kind: "title", at: 50.7, word: "test", dur: 3.6, lines: ["Il test del corridore"], accent: "test" },
         { kind: "pointer", at: 55.15, word: "Trovi", dur: 1.8, text: "Trovi tutto qui sotto", accent: "qui sotto" },
-        { kind: "title", at: 57.2, word: "Lascia", dur: 2.9, cues: ["regole", "correre"], lines: ["Lascia a casa le regole", "lascia correre il corpo"], accent: "corpo" },
+        { kind: "cycle", at: 57.2, word: "Lascia", dur: 2.9, cues: ["regole", "correre"], items: ["Lascia a casa le regole", "Lascia correre il corpo"] },
       ],
       cta: { word: "", title: "" },
     },
@@ -1254,7 +1298,7 @@ Un po' alla volta tatuano la tecnica giusta nel tuo corpo. Lascia a casa le rego
       hook: null,
       elements: [
         // nome di fantasia (Ross 12/11): nel girato non lo dice
-        { kind: "nametag", at: 3.82, dur: 2.2, name: "Davide", sub: "Superhuman Academy" },
+        { kind: "nametag", at: 3.82, dur: 2.2, name: "Davide", sub: "con Correre Naturale®" },
         { kind: "title", at: 0.2, dur: 3.3, lines: ["La mente risponde", "al corpo"], accent: "corpo" },
         { kind: "stat", at: 6.45, word: "100", dur: 2.3, value: "10 → 100", label: "quello che il corpo sa fare" },
         { kind: "stat", at: 9.15, word: "3000", dur: 1.75, value: "10.000", label: "quello che la mente sa di poter fare" },
@@ -1279,7 +1323,7 @@ Ha imparato a gestire meglio la condizione fisica e a riconoscere i segnali del 
 
 Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
 
-#correrenaturale #testimonianza #corsa #running #superhuman`,
+#correrenaturale #testimonianza #corsa #running`,
   },
   {
     id: "T8-trail",
@@ -1296,7 +1340,7 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
       hook: null,
       elements: [
         // nome di fantasia (Ross 12/11): nel girato non lo dice
-        { kind: "nametag", at: 4.25, dur: 2.15, name: "Giulia", sub: "Superhuman Academy" },
+        { kind: "nametag", at: 4.25, dur: 2.15, name: "Giulia", sub: "con Correre Naturale®" },
         { kind: "stat", at: 1.19, word: "quattro", dur: 2.8, value: "4 anni", label: "di fascite plantare" },
         { kind: "title", at: 6.79, word: "maratona", dur: 2.6, lines: ["La mia prima maratona", "ad aprile"], accent: "maratona" },
         { kind: "bigstrike", at: 11.99, word: "saltare", dur: 2.6, text: "La prima maratona" },
@@ -1331,39 +1375,34 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
    «Commenta PERCORSO» con le regole degli altri reel. I master sono ritagli dei master CCB (`CCB_BUILD`, scripts/ccb_build.ts). ---------- */
 const PERCORSO_CTA = "Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.";
 const ccb = (id: string) => REELS.find((r) => r.id === id)!;
-const playEnd = (segs: Seg[], blend: number) => +((layout(segs, blend).total - 15) / 30).toFixed(4);
-const C1 = ccb("C1-runner").props.segments, C2 = ccb("C2-namibia").props.segments, C3 = ccb("C3-ricetta").props.segments, C4 = ccb("C4-zoo").props.segments, C5 = ccb("C5-muro").props.segments;
-const PERCORSO: { from: string; segments: Seg[]; ranges: [number, number][]; title: string }[] = [
-  { from: "C1-runner", segments: upTo(C1, 1, 82.9667), ranges: [[0, 82.9667]], title: "Vuoi insegnare la tecnica al tuo corpo?" },        // chiude su «E come si fa?»
-  { from: "C2-namibia", segments: upTo(C2, 1, 80.5667), ranges: [[0, 80.5667]], title: "Vuoi ritrovare la tua corsa naturale?" },      // chiude su «va solo ritrovata»
-  { from: "C3-ricetta", segments: C3.slice(0, 2), ranges: [[0, playEnd(C3.slice(0, 2), 1)]], title: "Vuoi scoprire quale ingrediente ti manca?" },
-  { from: "C4-zoo", segments: C4.slice(0, 2), ranges: [[0, playEnd(C4.slice(0, 2), 1)]], title: "Vuoi tornare a correre secondo natura?" },
-  { from: "C5-muro", segments: upTo(C5, 1, 46.5667), ranges: [[0, 46.5667]], title: "Vuoi correggere la tua tecnica di corsa?" },      // chiude su «uno dei tanti esercizi»
-  { from: "C6-metronomo", segments: C6_SEGS, ranges: [], title: "Vuoi correre con questa elasticità?" },                               // master originale di C6 (senza chiusa sul manuale)
-  { from: "C7-tecnica", segments: [...upTo(C7_SEGS, 1, 31.5333), tailFrom(C7_SEGS, 1, 57.1)], ranges: [[0, 31.5333], [57.1, playEnd(C7_SEGS, 1)]], title: "Vuoi tatuare la tecnica giusta nel tuo corpo?" },
+// Tagli rifatti il 12/11 dopo il controllo di Ross («i tagli sono proprio sbagliati», «anche la durata riduci un po'»): non più il reel
+// «manuale» troncato, ma una scelta di frasi complete con una chiusa vera, più corta; ogni bordo cade in un silenzio misurato sull'audio
+// (fotogrammi del master «manuale»). La coda sotto il pannello della CTA è dal vivo, non un fermo immagine.
+const fr = (...f: [number, number][]): [number, number][] => f.map(([a, b]) => [+(a / 30).toFixed(4), +(b / 30).toFixed(4)]);
+const PERCORSO: { from: string; ranges: [number, number][]; title: string }[] = [
+  // 58 s: scena del runner → pensa a ogni passo → torna a casa più rigido → non è colpa tua, due cervelli → «va insegnata al corpo»
+  { from: "C1-runner", ranges: fr([0, 392], [647, 821], [1000, 1980], [2260, 2456]), title: "Vuoi insegnare la tecnica al tuo corpo?" },
+  // 62 s: i Boscimani corrono tutti allo stesso modo → in Italia ognuno a modo suo → abbiamo perso qualcosa → «va solo ritrovata»
+  { from: "C2-namibia", ranges: fr([0, 781], [873, 1303], [1591, 1908], [2089, 2417]), title: "Vuoi ritrovare la tua corsa naturale?" },
+  // 50 s: il pane e i 7 ingredienti → le domande per capire se ne manca uno → «nella tua ricetta qualcosa non va»
+  { from: "C3-ricetta", ranges: fr([0, 872], [1055, 1668]), title: "Vuoi scoprire quale ingrediente ti manca?" },
+  // 41 s: la giornata da zoo → il corpo si adatta → la gabbia → «si può tornare indietro, ma bisogna sapere cosa c'è da ritrovare»
+  { from: "C4-zoo", ranges: fr([0, 1229]), title: "Vuoi tornare a correre secondo natura?" },
+  // 44 s: l'87% → il test del muro → «quella sensazione è la misura di quanto il tuo corpo si è abituato a qualcos'altro»
+  { from: "C5-muro", ranges: fr([0, 1327]), title: "Vuoi correggere la tua tecnica di corsa?" },
+  // 58 s: metronomo a 110, 220 e 175 → le molle → «non te l'ho spiegato con una regola, te l'ho fatto percepire»
+  { from: "C6-metronomo", ranges: fr([0, 619], [742, 936], [1079, 1845], [2134, 2282]), title: "Vuoi correre con questa elasticità?" },
+  // 35 s: insegnare la tecnica al corpo → esercizi che la tatuano → «lascia a casa le regole e lascia correre il tuo corpo»
+  { from: "C7-tecnica", ranges: [...fr([0, 947]), [1716 / 30, playEnd(C7_SEGS, 1)]], title: "Vuoi tatuare la tecnica giusta nel tuo corpo?" },
 ];
-/** Ricette dei master ritagliati dai master CCB: id → sorgenti e intervalli (tempo del master di partenza). */
-export const CCB_BUILD: Record<string, { srcs: string[]; ranges: [number, number][] }> = {
-  "C6-metronomo-manuale": { srcs: ["ccb/masters/C6-metronomo.mp4", "ccb/masters/C7-tecnica.mp4"], ranges: [[0, playEnd(C6_SEGS, 1)], [55.0667, playEnd(C7_SEGS, 1)]] },
-};
-/** Grafiche di un reel riportate su una variante fatta di intervalli del suo master: restano quelle che cadono per intero in un intervallo
- *  (la coda di 0,5 s vale come margine), spostate sul nuovo tempo; i richiami alla CTA a voce (`pointer`) non passano. */
-const keepEls = (els: CNReelProps["elements"], ranges: [number, number][]): CNReelProps["elements"] => {
-  const out: CNReelProps["elements"] = [];
-  let off = 0;
-  ranges.forEach(([a, b], i) => {
-    for (const e of els) if (e.kind !== "pointer" && e.at >= a - 0.05 && e.at + e.dur <= b + 0.45) out.push({ ...e, at: +(e.at - a + off).toFixed(2) });
-    off += b - a - (i < ranges.length - 1 ? 1 / 30 : 0);
-  });
-  return out;
-};
+CCB_BUILD["C6-metronomo-manuale"] = { srcs: ["ccb/masters/C6-metronomo.mp4", "ccb/masters/C7-tecnica.mp4"], ranges: [[0, playEnd(C6_SEGS, 1)], [55.0667, playEnd(C7_SEGS, 1)]] };
 for (const v of PERCORSO) {
   const r = ccb(v.from), id = `${v.from}-percorso`;
-  if (v.ranges.length) CCB_BUILD[id] = { srcs: [`ccb/masters/${v.from}.mp4`], ranges: v.ranges };
+  CCB_BUILD[id] = { srcs: [r.props.master], ranges: v.ranges, tailLive: true };
   REELS.push({
     id,
     title: `${r.title} (versione percorso)`,
-    props: { ...r.props, master: v.ranges.length ? `ccb/masters/${id}.mp4` : "ccb/masters/C6-metronomo.mp4", segments: v.segments, elements: keepEls(r.props.elements, v.ranges.length ? v.ranges : [[0, playEnd(v.segments, 1)]]), ctaSeconds: 8, cta: { word: "PERCORSO", title: v.title } },
+    props: { ...r.props, master: `ccb/masters/${id}.mp4`, segments: cutRanges(r.props.segments, 1, v.ranges), elements: keepEls(r.props.elements, v.ranges, 1), ctaSeconds: 8, cta: { word: "PERCORSO", title: v.title } },
     didascalia: r.didascalia.replace(/\n\n(#[^\n]*)$/, `\n\n${PERCORSO_CTA}\n\n$1`),
   });
 }

@@ -1,0 +1,30 @@
+{
+ "id": "T2-laura-v2",
+ "srcs": [
+  "public/testimonianze/T2-laura.mp4"
+ ],
+ "out": "public/testimonianze/T2-laura_v2.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 5,
+ "vf": "eq=contrast=1.0",
+ "voice": "",
+ "segments": [
+  {
+   "from": 0,
+   "to": 21.133333333333333
+  },
+  {
+   "from": 27.433333333333334,
+   "to": 30.766666666666666
+  },
+  {
+   "from": 34.63333333333333,
+   "to": 70.7333
+  }
+ ]
+}

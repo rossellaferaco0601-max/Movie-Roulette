@@ -348,17 +348,17 @@ export const Beat: React.FC<{ el: Extract<Element, { kind: "beat" }>; start: num
   const count = Math.round(el.bpm * easeOut(local / 14));
   return (
     <div style={{ position: "absolute", left: 0, width: W, top: GFX_TOP + 4, display: "flex", justifyContent: "center", fontFamily: FONT, opacity: out }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 26, background: "rgba(11,15,10,0.92)", borderRadius: 30, padding: "16px 40px 16px 30px", transform: `translateY(${(1 - s) * 36}px) scale(${0.9 + 0.1 * s})`, opacity: Math.min(1, s * 1.4) }}>
-        <div style={{ width: 120, height: 120, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-          <div style={{ position: "absolute", width: 120, height: 120, borderRadius: 60, border: `5px solid ${col}`, opacity: 0.25 + 0.6 * (1 - phase), transform: `scale(${0.55 + 0.5 * phase})` }} />
-          <div style={{ width: 62, height: 62, borderRadius: 31, background: col, transform: `scale(${0.8 + 0.55 * pulse})` }} />
+      <div style={{ display: "flex", alignItems: "center", gap: 26, background: "rgba(11,15,10,0.92)", borderRadius: 28, padding: "10px 36px 10px 26px", transform: `translateY(${(1 - s) * 36}px) scale(${0.9 + 0.1 * s})`, opacity: Math.min(1, s * 1.4) }}>
+        <div style={{ width: 104, height: 104, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+          <div style={{ position: "absolute", width: 104, height: 104, borderRadius: 52, border: `5px solid ${col}`, opacity: 0.25 + 0.6 * (1 - phase), transform: `scale(${0.55 + 0.5 * phase})` }} />
+          <div style={{ width: 54, height: 54, borderRadius: 27, background: col, transform: `scale(${0.8 + 0.55 * pulse})` }} />
         </div>
         <div>
           <div style={{ display: "flex", alignItems: "baseline", gap: 14, color: BRAND.white, fontWeight: 900, lineHeight: 0.95 }}>
-            <span style={{ fontSize: 132, color: col, fontVariantNumeric: "tabular-nums" }}>{count}</span>
-            <span style={{ fontSize: 58 }}>BPM</span>
+            <span style={{ fontSize: 108, color: col, fontVariantNumeric: "tabular-nums" }}>{count}</span>
+            <span style={{ fontSize: 50 }}>BPM</span>
           </div>
-          <div style={{ marginTop: 6, color: BRAND.cream, fontWeight: 700, fontSize: 48, lineHeight: 1.05, whiteSpace: "nowrap" }}>{el.label}</div>
+          <div style={{ marginTop: 6, color: BRAND.cream, fontWeight: 700, fontSize: 40, lineHeight: 1.05, whiteSpace: "nowrap" }}>{el.label}</div>
         </div>
       </div>
     </div>

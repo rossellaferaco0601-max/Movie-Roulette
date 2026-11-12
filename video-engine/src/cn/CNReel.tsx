@@ -12,13 +12,16 @@ import { CTA } from "./CTA";
 import { Stairs, SplitCard, splitCamera, SPLIT_CARD_H, Metronome, Road3D, Graph, Toggles } from "./Elements2";
 import { Clip, Compare, Step, Airflow, Filter, Beats, Ring, Duo, Slam, Orbit, Drill, slamImpact, slamShake, orbitCam } from "./Elements5";
 import { Pair, Lifebar, Fulltext, Slides } from "./Elements6";
-import { Flow, Renew, Versus, Grid4, Plan, Lights, Pointer, Cycle, Beat } from "./Elements7";
+import { Flow, Renew, Versus, Grid4, Plan, Lights, Cycle, Beat } from "./Elements7";
+import { TopWord, Counter, BigPointer, Wall, Side, SIDE, sideK } from "./Elements8";
 import { Title, Mouth, Runner, Lungs, Horizon, Chat, BigStrike, Stack, Guide, Question, NameTag } from "./Elements4";
 
 loadFont("normal", { weights: ["600", "700", "800", "900"], subsets: ["latin"] });
 
 /** elementi che occupano tutto il fotogramma: fuori dallo spostamento/scala della zona grafiche */
-const FULLSCREEN = new Set<Element["kind"]>(["orbit", "drill", "guide", "pair", "lifebar", "fulltext", "slides", "renew", "versus", "plan"]);
+// fuori dalla zona grafiche (non si spostano né si rimpiccioliscono con gfxShift/gfxScale): schede a tutto schermo e, nei selfie, le parole
+// sopra la testa, il richiamo alla CTA, il muro di parole e il pannello laterale
+const FULLSCREEN = new Set<Element["kind"]>(["orbit", "drill", "guide", "pair", "lifebar", "fulltext", "slides", "renew", "versus", "plan", "topword", "pointer", "wall", "side"]);
 
 const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => {
   switch (el.kind) {
@@ -55,7 +58,11 @@ const AnyElement: React.FC<{ el: Element; start: number }> = ({ el, start }) => 
     case "grid4": return <Grid4 el={el} start={start} />;
     case "plan": return <Plan el={el} start={start} />;
     case "lights": return <Lights el={el} start={start} />;
-    case "pointer": return <Pointer el={el} start={start} />;
+    case "pointer": return <BigPointer el={el} start={start} />;
+    case "topword": return <TopWord el={el} start={start} />;
+    case "counter": return <Counter el={el} start={start} />;
+    case "wall": return <Wall el={el} start={start} />;
+    case "side": return <Side el={el} start={start} />;
     case "cycle": return <Cycle el={el} start={start} />;
     case "beat": return <Beat el={el} start={start} />;
     case "clip": return <Clip el={el} start={start} />;
@@ -109,15 +116,20 @@ export const CNReel: React.FC<CNReelProps> = (p) => {
   let orb = 0, orbBack = 0.72;
   p.elements.forEach((el, i) => { if (el.kind === "orbit") { const z = orbitCam(el, starts[i], frame, fps); if (z > orb) { orb = z; orbBack = el.back ?? 0.72; } } });
   const orbScale = 1 - (1 - orbBack) * orb;
+  // pannello laterale: il video si ritira a sinistra (sempre visibile) e lascia la colonna di destra a un elenco o a una mappa
+  let sd = 0;
+  p.elements.forEach((el, i) => { if (el.kind === "side") { const l = frame - starts[i], d = Math.round(el.dur * fps); if (l >= 0 && l < d) sd = Math.max(sd, sideK(l, d)); } });
 
   return (
     <AbsoluteFill style={{ background: "#2F4D1E", fontFamily: "Blinker, sans-serif" }}>
       <Sequence from={0} durationInFrames={total} layout="none">
         {cam > 0 ? <AbsoluteFill style={{ background: "#E9E4D2", opacity: cam }} /> : null}
-        {orb > 0 ? <AbsoluteFill style={{ background: "linear-gradient(180deg,#1C3D15 0%,#0B0F0A 100%)" }} /> : null}
+        {orb > 0 || sd > 0 ? <AbsoluteFill style={{ background: "linear-gradient(180deg,#1C3D15 0%,#0B0F0A 100%)" }} /> : null}
+        <AbsoluteFill style={{ transform: `translate(${sd * SIDE.x}px, ${sd * SIDE.y}px) scale(${1 - (1 - SIDE.scale) * sd})`, transformOrigin: "0 0", borderRadius: sd > 0 ? 60 * sd : 0, overflow: sd > 0 ? "hidden" : "visible" }}>
         <AbsoluteFill style={{ transform: `scale(${orbScale})`, transformOrigin: "50% 100%", borderRadius: 44 * orb, overflow: "hidden", boxShadow: orb > 0 ? "0 -20px 80px rgba(0,0,0,0.6)" : "none" }}>
         <AbsoluteFill style={{ opacity: videoFade, transform: `translate(${shake.dx}px, ${camShift + shake.dy}px) scale(${hookZoom * shake.sc * tailPush})`, transformOrigin: "50% 30%" }}>
           <Master src={p.master} total={total} />
+        </AbsoluteFill>
         </AbsoluteFill>
         </AbsoluteFill>
         {p.hook ? <Hook hook={p.hook} /> : null}
