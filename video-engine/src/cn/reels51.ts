@@ -14,7 +14,8 @@ import wordsCcbV2Ricetta from "./wordsCcbV2Ricetta.json";
 import wordsCcbV2Ritrova from "./wordsCcbV2Ritrova.json";
 import wordsCcbV2Sentendo from "./wordsCcbV2Sentendo.json";
 import wordsLongevita from "./wordsLongevita.json";
-import type { CNReelProps } from "./types";
+import type { CNReelProps, Seg } from "./types";
+import { layout } from "./timeline";
 
 const SRC = "ytcn51/ytcn51_src.mp4";
 const master = (id: string, fx = false) => `ytcn51/masters/${id}${fx ? "_fx" : ""}.mp4`;
@@ -40,6 +41,24 @@ const cutN = (blend: number, ...a: [number, number][]) => a.map(([f, t], i) => {
 });
 const cut = (...a: [number, number][]) => cutN(5, ...a);
 const BREATH = [{ label: "INSPIRA", sec: 3.5, scale: 1 }, { label: "ESPIRA", sec: 4.5, scale: 0.25 }];
+
+/** Pezzi di un reel accorciato a `endSec` (tempo del reel): serve per le varianti dei reel CCB senza rifare i tagli. */
+const upTo = (segs: Seg[], blend: number, endSec: number): Seg[] => {
+  const f = Math.round(endSec * 30), out: Seg[] = [];
+  for (const it of layout(segs, blend).items) {
+    if (f - it.start < 3) break;
+    if (it.start + it.len <= f) out.push(it.seg);
+    else { out.push({ from: it.seg.from, to: +(it.seg.from + (f - it.start) / 30).toFixed(4) }); break; }
+  }
+  return out;
+};
+/** Coda dell'ultimo pezzo di un reel, da `fromSec` (tempo del reel) alla fine. */
+const tailFrom = (segs: Seg[], blend: number, fromSec: number): Seg => {
+  const items = layout(segs, blend).items, it = items[items.length - 1];
+  return { from: +(it.seg.from + (Math.round(fromSec * 30) - it.start) / 30).toFixed(4), to: it.seg.to };
+};
+const C6_SEGS = cutN(1, [17.61, 44.99], [53.17, 96.92], [116.56, 121.58]);
+const C7_SEGS = cutN(1, [0.5, 17.31], [231.85, 275.22]);
 
 export const REELS: ReelDef[] = [
   {
@@ -825,6 +844,8 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
       segments: cut([267.9, 277.5], [378.54, 429.18], [458.36, 466.95], [481.49, 485.91], [546.31, 550.5]),
       hook: null,
       elements: [
+        // nome di fantasia (Ross 12/11): nel girato non lo dice
+        { kind: "nametag", at: 12.55, dur: 1.95, name: "Franco", sub: "6 ore · 50 km" },
         { kind: "title", at: 0, dur: 3.6, lines: ["6 ore di corsa", "50 chilometri", "e una scoperta"], accent: "50" },
         { kind: "title", at: 5.18, word: "tutto", dur: 3.9, lines: ["Tutto il lavoro", "di questi anni"], accent: "lavoro" },
         { kind: "title", at: 9.9, word: "momento", dur: 2.4, lines: ["Il momento più duro"] },
@@ -913,7 +934,10 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
       ctaSeconds: 0,
       segments: cutN(1, [6.08, 54.7], [60.8, 69.74], [71.31, 79.76], [85.34, 94.94], [99.73, 109.18]),
       hook: null,
-      elements: [],
+      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      elements: [
+        { kind: "pointer", at: 83.2, word: "Beh,", dur: 1.85, text: "Te lo spiego qui sotto", accent: "qui sotto" },
+      ],
       cta: { word: "", title: "" },
     },
     didascalia: `Un runner decide di migliorare la sua tecnica: si informa, guarda video, salva tutorial. La mattina dopo pensa a ogni singolo passo, e torna a casa più rigido di quando è uscito.
@@ -935,7 +959,10 @@ Non è colpa tua: dentro di te ci sono due cervelli, quello pensante e quello mo
       ctaSeconds: 0,
       segments: cutN(1, [11.89, 64.94], [87.42, 92.84], [97.84, 125.87]),
       hook: null,
-      elements: [],
+      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      elements: [
+        { kind: "pointer", at: 80.9, word: "Qui", dur: 5.5, text: "Te lo racconto qui sotto", accent: "qui sotto" },
+      ],
       cta: { word: "", title: "" },
     },
     didascalia: `In Namibia, con i Boscimani, nessuno insegnava a un altro come si corre. Eppure correvano tutti allo stesso modo: leggeri, dritti, quasi senza far rumore.
@@ -957,7 +984,11 @@ Poi sono tornato in Italia, e al parco ognuno correva a modo suo. Non è questio
       ctaSeconds: 0,
       segments: cutN(1, [3.88, 38.95], [60.08, 80.66], [109.92, 131.02], [142.95, 148.67]),
       hook: null,
-      elements: [],
+      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      elements: [
+        { kind: "pointer", at: 60.6, word: "manuale", dur: 7.6, arrow: false, text: "Manuale «Come correre bene»", accent: "«Come correre bene»" },
+        { kind: "pointer", at: 78.2, word: "lo", dur: 4.1, text: "Lo trovi qui sotto", accent: "qui sotto" },
+      ],
       cta: { word: "", title: "" },
     },
     didascalia: `Per il pane servono tre ingredienti: acqua, farina e lievito. Se togli il lievito non ottieni il pane.
@@ -979,7 +1010,10 @@ La corsa ne ha sette: postura, ritmo, relax, appoggio del piede, posizione della
       ctaSeconds: 0,
       segments: cutN(1, [2.82, 43.8], [47.31, 71.93], [164.09, 170.26]),
       hook: null,
-      elements: [],
+      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      elements: [
+        { kind: "pointer", at: 65.7, word: "Trovi", dur: 5.9, text: "Trovi tutto qui sotto", accent: "qui sotto" },
+      ],
       cta: { word: "", title: "" },
     },
     didascalia: `Otto ore seduto, il telefono in mano, scarpe che fanno il lavoro al posto dei piedi. Il corpo si adatta: siamo diventati esseri umani da zoo.
@@ -1001,7 +1035,11 @@ La buona notizia è che si può tornare indietro. Le sette fondamenta della cors
       ctaSeconds: 0,
       segments: cutN(1, [71.93, 88.0], [90.71, 118.86], [142.16, 153.12], [154.84, 170.26]),
       hook: null,
-      elements: [],
+      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      elements: [
+        { kind: "pointer", at: 46.75, word: "manuale", dur: 8.2, arrow: false, text: "Manuale «Come correre bene»", accent: "«Come correre bene»" },
+        { kind: "pointer", at: 64.5, word: "Trovi", dur: 5.9, text: "Trovi tutto qui sotto", accent: "qui sotto" },
+      ],
       cta: { word: "", title: "" },
     },
     didascalia: `L'87% delle persone che abbiamo analizzato aveva una tecnica scorretta. Vuoi sentire quanto ti sei allontanato dalla corsa secondo natura?
@@ -1017,13 +1055,17 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
       ...base,
       src: "ccb/v2_sentendo.mov",
       words: wordsCcbV2Sentendo as CNReelProps["words"],
-      master: "ccb/masters/C6-metronomo.mp4",
+      master: "ccb/masters/C6-metronomo-manuale.mp4",
       // selfie in camminata («yapping»): deve sembrare spontaneo. Tagli netti, niente grafiche (il volto arriva a 0,62), niente pannello CTA: solo sottotitoli
       blendFrames: 1,
       ctaSeconds: 0,
-      segments: cutN(1, [17.61, 44.99], [53.17, 96.92], [116.56, 121.58]),
+      // chiusa a voce presa dal finale del girato (lo stesso di C7): «Trovi tutto qui sotto. Lascia a casa le regole e lascia correre il tuo corpo.»
+      segments: [...C6_SEGS, tailFrom(C7_SEGS, 1, 55.0667)],
       hook: null,
-      elements: [],
+      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      elements: [
+        { kind: "pointer", at: 76.3, word: "Trovi", dur: 4.6, text: "Il manuale è qui sotto", accent: "qui sotto" },
+      ],
       cta: { word: "", title: "" },
     },
     didascalia: `Ti serve solo un metronomo. A 110 battiti ogni saltello lo fai tu: tutta fatica muscolare. A 220 sprechi efficienza. A 175 succede una cosa strana: inizi a rimbalzare.
@@ -1043,9 +1085,13 @@ Talloni contro il battiscopa, nuca al muro, sguardo all'orizzonte. Fai un passo 
       // selfie in camminata («yapping»): deve sembrare spontaneo. Tagli netti, niente grafiche (il volto arriva a 0,62), niente pannello CTA: solo sottotitoli
       blendFrames: 1,
       ctaSeconds: 0,
-      segments: cutN(1, [0.5, 17.31], [231.85, 275.22]),
+      segments: C7_SEGS,
       hook: null,
-      elements: [],
+      // scritta in sovraimpressione quando Daniele dice la CTA (Ross 12/11), sotto il mento e sopra i sottotitoli
+      elements: [
+        { kind: "pointer", at: 32.3, word: "manuale", dur: 7.4, arrow: false, text: "Manuale «Come correre bene»", accent: "«Come correre bene»" },
+        { kind: "pointer", at: 55.15, word: "Trovi", dur: 4.9, text: "Trovi tutto qui sotto", accent: "qui sotto" },
+      ],
       cta: { word: "", title: "" },
     },
     didascalia: `Insegnare la tecnica di corsa al corpo vuol dire usare esercizi precisi, che trasmettono il gesto giusto direttamente al cervello motorio. Senza spiegazioni e senza troppe regole da ricordare.
@@ -1069,6 +1115,8 @@ Un po' alla volta tatuano la tecnica giusta nel tuo corpo. Lascia a casa le rego
       segments: cut([142.05, 152.36], [48.54, 50.6], [52.95, 69.35], [76.85, 88.33], [117.31, 132.05], [153.47, 165.72]),
       hook: null,
       elements: [
+        // nome di fantasia (Ross 12/11): nel girato non lo dice
+        { kind: "nametag", at: 3.82, dur: 2.2, name: "Davide", sub: "Superhuman Academy" },
         { kind: "title", at: 0.2, dur: 3.3, lines: ["La mente risponde", "al corpo"], accent: "corpo" },
         { kind: "stat", at: 6.45, word: "100", dur: 2.3, value: "10 → 100", label: "quello che il corpo sa fare" },
         { kind: "stat", at: 9.15, word: "3000", dur: 1.75, value: "10.000", label: "quello che la mente sa di poter fare" },
@@ -1109,7 +1157,9 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
       segments: cut([43.91, 48.49], [83.25, 95.74], [300.12, 303.06], [308.33, 319.54], [321.66, 324.59], [330.22, 336.6], [146.89, 157.86], [163.03, 168.2], [192.06, 204.3]),
       hook: null,
       elements: [
-        { kind: "stat", at: 1.19, word: "quattro", dur: 3.1, value: "4 anni", label: "di fascite plantare" },
+        // nome di fantasia (Ross 12/11): nel girato non lo dice
+        { kind: "nametag", at: 4.25, dur: 2.15, name: "Giulia", sub: "Superhuman Academy" },
+        { kind: "stat", at: 1.19, word: "quattro", dur: 2.8, value: "4 anni", label: "di fascite plantare" },
         { kind: "title", at: 6.79, word: "maratona", dur: 2.6, lines: ["La mia prima maratona", "ad aprile"], accent: "maratona" },
         { kind: "bigstrike", at: 11.99, word: "saltare", dur: 2.6, text: "La prima maratona" },
         { kind: "checklist", at: 18.76, word: "esercizi", dur: 7.4, big: true, cues: ["esercizi", "rallentando", "pazienza"], items: ["Gli esercizi giusti", "Rallentare un po'", "Pazienza, soprattutto"] },
@@ -1138,3 +1188,33 @@ Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui pe
 #correrenaturale #testimonianza #corsa #running #trailrunning`,
   },
 ];
+
+/* ---------- CCB «percorso» (Ross 12/11): stessi reel senza la parte sul manuale «Come correre bene», chiusi dal pannello
+   «Commenta PERCORSO» con le regole degli altri reel. I master sono ritagli dei master CCB (`CCB_BUILD`, scripts/ccb_build.ts). ---------- */
+const PERCORSO_CTA = "Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.";
+const ccb = (id: string) => REELS.find((r) => r.id === id)!;
+const playEnd = (segs: Seg[], blend: number) => +((layout(segs, blend).total - 15) / 30).toFixed(4);
+const C1 = ccb("C1-runner").props.segments, C2 = ccb("C2-namibia").props.segments, C3 = ccb("C3-ricetta").props.segments, C4 = ccb("C4-zoo").props.segments, C5 = ccb("C5-muro").props.segments;
+const PERCORSO: { from: string; segments: Seg[]; ranges: [number, number][]; title: string }[] = [
+  { from: "C1-runner", segments: upTo(C1, 1, 82.9667), ranges: [[0, 82.9667]], title: "Vuoi insegnare la tecnica al tuo corpo?" },        // chiude su «E come si fa?»
+  { from: "C2-namibia", segments: upTo(C2, 1, 80.5667), ranges: [[0, 80.5667]], title: "Vuoi ritrovare la tua corsa naturale?" },      // chiude su «va solo ritrovata»
+  { from: "C3-ricetta", segments: C3.slice(0, 2), ranges: [[0, playEnd(C3.slice(0, 2), 1)]], title: "Vuoi scoprire quale ingrediente ti manca?" },
+  { from: "C4-zoo", segments: C4.slice(0, 2), ranges: [[0, playEnd(C4.slice(0, 2), 1)]], title: "Vuoi tornare a correre secondo natura?" },
+  { from: "C5-muro", segments: upTo(C5, 1, 46.5667), ranges: [[0, 46.5667]], title: "Vuoi correggere la tua tecnica di corsa?" },      // chiude su «uno dei tanti esercizi»
+  { from: "C6-metronomo", segments: C6_SEGS, ranges: [], title: "Vuoi correre con questa elasticità?" },                               // master originale di C6 (senza chiusa sul manuale)
+  { from: "C7-tecnica", segments: [...upTo(C7_SEGS, 1, 31.5333), tailFrom(C7_SEGS, 1, 57.1)], ranges: [[0, 31.5333], [57.1, playEnd(C7_SEGS, 1)]], title: "Vuoi tatuare la tecnica giusta nel tuo corpo?" },
+];
+/** Ricette dei master ritagliati dai master CCB: id → sorgenti e intervalli (tempo del master di partenza). */
+export const CCB_BUILD: Record<string, { srcs: string[]; ranges: [number, number][] }> = {
+  "C6-metronomo-manuale": { srcs: ["ccb/masters/C6-metronomo.mp4", "ccb/masters/C7-tecnica.mp4"], ranges: [[0, playEnd(C6_SEGS, 1)], [55.0667, playEnd(C7_SEGS, 1)]] },
+};
+for (const v of PERCORSO) {
+  const r = ccb(v.from), id = `${v.from}-percorso`;
+  if (v.ranges.length) CCB_BUILD[id] = { srcs: [`ccb/masters/${v.from}.mp4`], ranges: v.ranges };
+  REELS.push({
+    id,
+    title: `${r.title} (versione percorso)`,
+    props: { ...r.props, master: v.ranges.length ? `ccb/masters/${id}.mp4` : "ccb/masters/C6-metronomo.mp4", segments: v.segments, elements: [], ctaSeconds: 8, cta: { word: "PERCORSO", title: v.title } },
+    didascalia: r.didascalia.replace(/\n\n(#[^\n]*)$/, `\n\n${PERCORSO_CTA}\n\n$1`),
+  });
+}

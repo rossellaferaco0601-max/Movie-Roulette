@@ -1,31 +1,54 @@
 # Schede CCB «new angle» (cartella Drive del 12/11)
 
-Formato fisso (vedi `memoria/feedback-formato-schede.md`). Richiesta di Ross (12/11): reel per Instagram e spezzoni per le stories «per simulare lo yapping mode», quindi devono sembrare video spontanei. Per questo: tagli netti, nessuna grafica (nel selfie il volto arriva a 0,62 dell'altezza: una grafica lo coprirebbe), nessun pannello CTA; nei reel solo i sottotitoli CN, nelle stories una versione pulita e una con sottotitoli piccoli in stile Instagram.
+Formato fisso (vedi `memoria/feedback-formato-schede.md`). Richiesta di Ross (12/11): reel per Instagram e spezzoni per le stories «per simulare lo yapping mode», quindi devono sembrare video spontanei. Per questo: tagli netti, nessuna grafica (nel selfie il volto arriva a 0,62 dell'altezza: una grafica lo coprirebbe), nei reel solo i sottotitoli CN. Indicazioni di Ross dopo la prima consegna (12/11): per le stories valgono solo i file con i sottotitoli; i reel escono in due versioni, «manuale» (CTA a voce di Daniele con una scritta in sovraimpressione nel momento in cui la dice, v2) e «percorso» (senza la parte sul manuale, con il pannello «Commenta PERCORSO»).
 
-## Reel
+## Reel, versione «manuale» (v2: CTA a voce + scritta in sovraimpressione)
 
-**C1 Il runner che sapeva troppo · Martedì Educativo · CTA parlata «te lo spiego qui sotto»** (v1, 12/11)
+**C1 Il runner che sapeva troppo · Martedì Educativo · CTA parlata «te lo spiego qui sotto»** (v2, 12/11)
 Il problema: un runner decide di migliorare la tecnica, si informa, guarda video, salva tutorial; la mattina dopo pensa a ogni singolo passo e torna a casa più rigido di quando è uscito. La risposta: non è colpa sua, dentro di noi ci sono due cervelli, quello pensante e quello motorio, e la corsa appartiene al secondo; pensare ogni gesto è come guidare ragionando su ogni movimento del piede. Chiusura: «la tecnica giusta non va spiegata alla testa, va insegnata al corpo. E come si fa? Te lo spiego qui sotto.»
 
-**C2 Quello che ho visto in Namibia · Martedì Educativo · CTA parlata «qui sotto ti racconto»** (v1, 12/11)
+**C2 Quello che ho visto in Namibia · Martedì Educativo · CTA parlata «qui sotto ti racconto»** (v2, 12/11)
 Il problema: al parco, in Italia, ognuno corre a modo suo, e lo scambiamo per stile o personalità. La risposta: in Namibia, con i Boscimani, nessuno insegnava a un altro come si corre, eppure correvano tutti allo stesso modo, leggeri, dritti, quasi senza far rumore; loro non hanno mai smesso di muoversi come madre natura ha previsto, noi sì. Chiusura: quella corsa «ce l'avevi anche tu da bambino, va solo ritrovata. Qui sotto ti racconto cosa ci è successo e perché oggi corri in modo diverso da come dovresti.»
 
-**C3 La ricetta della corsa · Venerdì Conversione · CTA parlata «lo trovi qui sotto» (manuale Come correre bene)** (v1, 12/11)
+**C3 La ricetta della corsa · Venerdì Conversione · CTA parlata «lo trovi qui sotto» (manuale Come correre bene)** (v2, 12/11)
 Il problema: per il pane servono acqua, farina e lievito, e se togli il lievito non ottieni il pane; nella corsa succede lo stesso quando manca un ingrediente. La risposta: la corsa di ingredienti ne ha sette, postura, ritmo, relax, appoggio del piede, posizione della testa, uso delle braccia e parabola; tutto quello che Daniele ha imparato in dodici anni, errori compresi, è nel manuale Come correre bene, con le sette fondamenta spiegate una per una, gli esercizi e i video. Chiusura: «Lo trovi qui sotto. Inizia dal primo ingrediente che ti manca.»
 
-**C4 Esseri umani da zoo · Mercoledì Problem/Solution · CTA parlata «trovi tutto qui sotto»** (v1, 12/11)
+**C4 Esseri umani da zoo · Mercoledì Problem/Solution · CTA parlata «trovi tutto qui sotto»** (v2, 12/11)
 Il problema: una giornata normale, otto ore seduto alla scrivania, il telefono in mano con la testa piegata in avanti, scarpe che fanno il lavoro al posto dei piedi, ore in macchina; il corpo si adatta a tutto questo e siamo diventati esseri umani da zoo. La risposta: si può tornare indietro, riportando nella corsa le sette fondamenta della corsa secondo natura. Chiusura: «Trovi tutto qui sotto, e questo è il primo passo per tornare a correre come un essere umano naturale.»
 
-**C5 Il test del muro · Giovedì Pratico · CTA parlata «trovi tutto qui sotto» (manuale + tagliando corporeo)** (v1, 12/11)
+**C5 Il test del muro · Giovedì Pratico · CTA parlata «trovi tutto qui sotto» (manuale + tagliando corporeo)** (v2, 12/11)
 Il problema: l'87% delle persone analizzate aveva una tecnica scorretta, e nessuno sente da solo quanto si è allontanato dalla corsa secondo natura. La risposta: il test del muro, talloni contro il battiscopa, nuca appoggiata, sguardo all'orizzonte, un filo che tira verso l'alto; poi un passo avanti senza cambiare niente e 20 secondi di corsa sul posto: la sensazione di essere sbilanciati all'indietro è la misura di quanto il corpo si è abituato a qualcos'altro. Chiusura: nel manuale Come correre bene ci sono tutte e sette le fondamenta, e in regalo il tagliando corporeo del corridore, otto test; «trovi tutto qui sotto».
 
-**C6 Il test del metronomo · Giovedì Pratico · senza CTA (chiude sulla frase)** (v1, 12/11)
-Il problema: la cadenza giusta di solito viene spiegata come una regola da ricordare. La risposta: un metronomo e tre prove di saltelli sul posto; a 110 battute ogni saltello lo fai tu, ed è tutta fatica muscolare; a 220 fai uno sforzo enorme solo per stargli dietro e sprechi efficienza; a 175 succede una cosa strana, inizi a rimbalzare, perché piede, tendine d'Achille e fascia plantare lavorano come molle e restituiscono energia al passo dopo. Chiusura: «Non te l'ho spiegato con una regola: te l'ho fatto percepire, l'hai sentito.»
+**C6 Il test del metronomo · Giovedì Pratico · CTA parlata «trovi tutto qui sotto»** (v2, 12/11)
+Il problema: la cadenza giusta di solito viene spiegata come una regola da ricordare. La risposta: un metronomo e tre prove di saltelli sul posto; a 110 battute ogni saltello lo fai tu, ed è tutta fatica muscolare; a 220 fai uno sforzo enorme solo per stargli dietro e sprechi efficienza; a 175 succede una cosa strana, inizi a rimbalzare, perché piede, tendine d'Achille e fascia plantare lavorano come molle e restituiscono energia al passo dopo. Chiusura: «Non te l'ho spiegato con una regola: te l'ho fatto percepire, l'hai sentito. Trovi tutto qui sotto. Lascia a casa le regole e lascia correre il tuo corpo.»
 
-**C7 Esercizi che tatuano la tecnica · Venerdì Conversione · CTA parlata «trovi tutto qui sotto» (manuale + videolezione + test)** (v1, 12/11)
+**C7 Esercizi che tatuano la tecnica · Venerdì Conversione · CTA parlata «trovi tutto qui sotto» (manuale + videolezione + test)** (v2, 12/11)
 Il problema: la tecnica di corsa spiegata alla testa, con troppe regole da ricordare. La risposta: insegnarla al corpo con esercizi precisi, prima, durante e dopo la corsa, che trasmettono il gesto giusto direttamente al cervello motorio; Daniele li usa da dodici anni e un po' alla volta «tatuano la tecnica giusta nel tuo corpo»; nel manuale Come correre bene ci sono gli esercizi per tutte e sette le fondamenta con le dimostrazioni video, più la videolezione Corsa perfetta in 30 secondi e il test del corridore. Chiusura: «Lascia a casa le regole e lascia correre il tuo corpo.»
 
-## Stories (17 spezzoni, in `video-engine/out/ccb/stories/`, ognuno pulito e `_sottotitoli`)
+## Reel, versione «percorso» (senza il manuale, pannello «Commenta PERCORSO»)
+
+**C1 Il runner che sapeva troppo, versione percorso · Martedì Educativo · CTA PERCORSO** (v1, 12/11)
+Il problema: un runner studia la tecnica, la mattina dopo pensa a ogni singolo passo e torna a casa più rigido di quando è uscito. La risposta: non è colpa sua, dentro di noi ci sono due cervelli, quello pensante e quello motorio, e la tecnica giusta non va spiegata alla testa, va insegnata al corpo. Chiusura: «E come si fa?», e sale il pannello «Vuoi insegnare la tecnica al tuo corpo? Commenta PERCORSO».
+
+**C2 Quello che ho visto in Namibia, versione percorso · Martedì Educativo · CTA PERCORSO** (v1, 12/11)
+Il problema: al parco ognuno corre a modo suo, e lo scambiamo per stile. La risposta: i Boscimani corrono tutti allo stesso modo senza che nessuno glielo insegni, perché non hanno mai smesso di muoversi come madre natura ha previsto. Chiusura: quella corsa «ce l'avevi anche tu da bambino, va solo ritrovata», poi il pannello «Vuoi ritrovare la tua corsa naturale? Commenta PERCORSO».
+
+**C3 La ricetta della corsa, versione percorso · Martedì Educativo · CTA PERCORSO** (v1, 12/11)
+Il problema: se dal pane togli il lievito non ottieni il pane, e nella corsa succede lo stesso quando manca uno dei sette ingredienti. La risposta: postura, ritmo, relax, appoggio del piede, posizione della testa, uso delle braccia e parabola; per capire se ne manca uno basta rispondere sinceramente a poche domande su come ti senti mentre corri e dopo. Chiusura: «se anche una sola risposta non ti piace, nella tua ricetta qualcosa non va», poi il pannello «Vuoi scoprire quale ingrediente ti manca? Commenta PERCORSO».
+
+**C4 Esseri umani da zoo, versione percorso · Mercoledì Problem/Solution · CTA PERCORSO** (v1, 12/11)
+Il problema: otto ore seduti, telefono in mano, scarpe che lavorano al posto dei piedi; il corpo si adatta e siamo diventati esseri umani da zoo. La risposta: si può tornare indietro, ritrovando le sette fondamenta che la corsa secondo natura ha sempre. Chiusura: sono le cose «che i Boscimani fanno senza pensarci e che noi invece dobbiamo reimparare», poi il pannello «Vuoi tornare a correre secondo natura? Commenta PERCORSO».
+
+**C5 Il test del muro, versione percorso · Giovedì Pratico · CTA PERCORSO** (v1, 12/11)
+Il problema: l'87% delle persone analizzate aveva una tecnica scorretta, e da soli non si sente quanto ci si è allontanati dalla corsa secondo natura. La risposta: il test del muro, talloni contro il battiscopa, nuca appoggiata, un passo avanti senza cambiare niente e 20 secondi di corsa sul posto. Chiusura: «Questo è solo uno dei tanti esercizi», poi il pannello «Vuoi correggere la tua tecnica di corsa? Commenta PERCORSO».
+
+**C6 Il test del metronomo, versione percorso · Giovedì Pratico · CTA PERCORSO** (v1, 12/11)
+Il problema: la cadenza spiegata come una regola da ricordare. La risposta: tre prove di saltelli con il metronomo, a 110, a 220 e a 175 battute, dove si inizia a rimbalzare perché piede, tendine d'Achille e fascia plantare lavorano come molle. Chiusura: «non te l'ho spiegato con una regola, te l'ho fatto percepire», poi il pannello «Vuoi correre con questa elasticità? Commenta PERCORSO».
+
+**C7 Esercizi che tatuano la tecnica, versione percorso · Martedì Educativo · CTA PERCORSO** (v1, 12/11)
+Il problema: la tecnica di corsa spiegata alla testa, con troppe regole da ricordare. La risposta: insegnarla al corpo con esercizi precisi, che un po' alla volta «tatuano la tecnica giusta nel tuo corpo, finché un giorno ti accorgi che corri bene senza sapere nemmeno come sia successo». Chiusura: «Lascia a casa le regole e lascia correre il tuo corpo», poi il pannello «Vuoi tatuare la tecnica giusta nel tuo corpo? Commenta PERCORSO».
+
+## Stories (17 spezzoni, in `video-engine/out/ccb/stories/`, si usano i file `_sottotitoli`)
 
 **Il runner che sapeva troppo · 3 stories in sequenza**
 La prima racconta il runner che studia la tecnica e la mattina dopo torna a casa più rigido di prima; la seconda spiega i due cervelli, quello pensante e quello motorio; la terza chiude: la tecnica non va spiegata alla testa, va insegnata al corpo, «te lo spiego qui sotto» (da accompagnare con l'adesivo del link).

@@ -1,0 +1,22 @@
+{
+ "id": "C3-ricetta-percorso",
+ "srcs": [
+  "public/ccb/masters/C3-ricetta.mp4"
+ ],
+ "out": "public/ccb/masters/C3-ricetta-percorso.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "",
+ "segments": [
+  {
+   "from": 0,
+   "to": 55.6667
+  }
+ ]
+}

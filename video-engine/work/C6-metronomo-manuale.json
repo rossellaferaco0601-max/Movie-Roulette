@@ -1,0 +1,27 @@
+{
+ "id": "C6-metronomo-manuale",
+ "srcs": [
+  "public/ccb/masters/C6-metronomo.mp4",
+  "public/ccb/masters/C7-tecnica.mp4"
+ ],
+ "out": "public/ccb/masters/C6-metronomo-manuale.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "",
+ "segments": [
+  {
+   "from": 0,
+   "to": 76.1667
+  },
+  {
+   "from": 55.0667,
+   "to": 60.2
+  }
+ ]
+}

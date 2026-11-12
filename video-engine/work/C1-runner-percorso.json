@@ -1,0 +1,22 @@
+{
+ "id": "C1-runner-percorso",
+ "srcs": [
+  "public/ccb/masters/C1-runner.mp4"
+ ],
+ "out": "public/ccb/masters/C1-runner-percorso.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "",
+ "segments": [
+  {
+   "from": 0,
+   "to": 82.9667
+  }
+ ]
+}

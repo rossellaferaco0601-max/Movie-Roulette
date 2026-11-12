@@ -425,3 +425,15 @@ Da leggere prima di ogni montaggio. Ogni correzione ricevuta va aggiunta in fond
   del master sia quella attesa («frame attesi») e che l'audio ci sia fino all'ultimo secondo; la ritrascrizione va letta fino in fondo, non solo l'inizio.
 - **2026-11-12 (testimonianze, fine)**: fatti T7 (bilancio di metà percorso, C3502) e T8 (il primo trail, C3504): racconti liberi, nessuno dei due
   dice il nome nel girato, quindi senza cartellino e senza versione lunga finché Ross non dà i nomi.
+- **2026-11-12 (Ross, dopo la consegna di testimonianze e CCB)**: «Per i video in cui non viene detto il nome inventalo, per i video della ccb fai così:
+  -spezzoni per le stories con solo sottotitoli -reel con cta a voce quella che dice Daniele ovviamente fai comparire comunque una scritta o qualcosa
+  in sovraimpressione - poi fai una versione senza che si parli del manuale come correre bene e metti una cta per il percorso con le regole che ti ho
+  dato per gli altri reel dei giorni scorsi».
+  - **Nomi di fantasia** nei cartellini quando il girato non dice il nome: T5 «Franco», T7 «Davide», T8 «Giulia» (da sostituire se arrivano i nomi veri).
+  - **Stories CCB**: valgono solo i file `_sottotitoli` (nient'altro a schermo).
+  - **Reel CCB «manuale»** (`C1`…`C7`, v2): la CTA resta quella a voce di Daniele, con una scritta in sovraimpressione nel momento in cui la dice
+    (elemento `pointer`: una riga sola a 0,645 dell'altezza, sotto il mento e sopra i sottotitoli; targa «Manuale «Come correre bene»» quando lo nomina,
+    freccia «… qui sotto» sulla chiusa). C6 non aveva chiusa: aggiunta quella del girato («Trovi tutto qui sotto. Lascia a casa le regole…»).
+  - **Reel CCB «percorso»** (`C1-runner-percorso`…): stesso reel senza la parte sul manuale e senza «qui sotto», chiuso dal pannello «Commenta PERCORSO»
+    (8 s, tre passi) e con la riga «Vuoi iniziare il tuo percorso? Commenta PERCORSO…» in didascalia. I master sono ritagli dei master CCB
+    (`CCB_BUILD` in `reels51.ts`, `npx tsx scripts/ccb_build.ts`): niente da riscaricare.

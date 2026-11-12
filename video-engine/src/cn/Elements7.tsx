@@ -276,3 +276,31 @@ export const Lights: React.FC<P<"lights">> = ({ el, start }) => {
     </div>
   );
 };
+
+/* ---------- Richiamo (video spontanei): una riga sola sotto il mento, sopra i sottotitoli, quando chi parla dice «lo trovi qui sotto».
+   Sta fuori dalla zona grafiche (nei selfie il volto scende fino a ~0,62): `y` = bordo alto in frazione dell'altezza. ---------- */
+export const Pointer: React.FC<{ el: Extract<Element, { kind: "pointer" }>; start: number }> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const durF = Math.round(el.dur * fps);
+  const { local, s, out, visible } = useInOut(start, durF);
+  if (!visible) return null;
+  const size = Math.min(54, Math.floor(1300 / Math.max(14, el.text.length)));
+  const bob = el.arrow === false ? 0 : Math.sin((local / fps) * Math.PI * 2 * 1.4) * 7;
+  const parts = el.accent && el.text.includes(el.accent) ? [el.text.slice(0, el.text.indexOf(el.accent)), el.accent, el.text.slice(el.text.indexOf(el.accent) + el.accent.length)] : [el.text, "", ""];
+  return (
+    <div style={{ position: "absolute", left: 0, width: W, top: Math.round(1920 * (el.y ?? 0.645)), display: "flex", justifyContent: "center", fontFamily: FONT, opacity: out }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 18, background: "rgba(11,15,10,0.92)", border: `4px solid ${BRAND.lime}`, borderRadius: 999, padding: "14px 34px 14px 18px", transform: `translateY(${(1 - s) * 40}px) scale(${0.92 + 0.08 * s})`, opacity: Math.min(1, s * 1.4) }}>
+        <div style={{ width: 62, height: 62, borderRadius: 31, background: BRAND.lime, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+          {el.arrow === false ? (
+            <svg width="34" height="34" viewBox="0 0 34 34"><path d="M9 4h16a2 2 0 0 1 2 2v24l-10-6-10 6V6a2 2 0 0 1 2-2z" fill={BRAND.ink} /></svg>
+          ) : (
+            <svg width="36" height="36" viewBox="0 0 36 36" style={{ transform: `translateY(${bob}px)` }}><path d="M18 5v22M8 18l10 10 10-10" fill="none" stroke={BRAND.ink} strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          )}
+        </div>
+        <div style={{ fontWeight: 900, fontSize: size, lineHeight: 1, textTransform: "uppercase", color: BRAND.white, whiteSpace: "nowrap" }}>
+          {parts[0]}<span style={{ color: BRAND.lime }}>{parts[1]}</span>{parts[2]}
+        </div>
+      </div>
+    </div>
+  );
+};

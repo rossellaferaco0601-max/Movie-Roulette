@@ -1,0 +1,22 @@
+{
+ "id": "C2-namibia-percorso",
+ "srcs": [
+  "public/ccb/masters/C2-namibia.mp4"
+ ],
+ "out": "public/ccb/masters/C2-namibia-percorso.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "vf": "eq=contrast=1.0",
+ "voice": "",
+ "segments": [
+  {
+   "from": 0,
+   "to": 80.5667
+  }
+ ]
+}
