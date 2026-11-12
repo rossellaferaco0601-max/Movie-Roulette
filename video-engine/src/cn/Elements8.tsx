@@ -83,11 +83,11 @@ export const Counter: React.FC<P<"counter">> = ({ el, start }) => {
   const hitK = spring({ frame: local - RUN, fps, config: { damping: 8, stiffness: 260, mass: 0.5 } });
   return (
     <div style={{ position: "absolute", left: 0, width: W, top: GFX_TOP, textAlign: "center", opacity: out, fontFamily: FONT }}>
-      <div style={{ display: "inline-block", background: BRAND.green, color: BRAND.white, borderRadius: 28, padding: "10px 42px 12px", transform: `scale(${s * (1 + 0.06 * (local >= RUN ? 1 - Math.min(1, hitK) : 0))})`, boxShadow: "0 14px 30px rgba(0,0,0,0.35)" }}>
-        <div style={{ fontWeight: 900, fontSize: 164, lineHeight: 1, color: BRAND.lime, fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>
-          {el.prefix ?? ""}{shown}<span style={{ fontSize: el.suffix && el.suffix.length > 2 ? 84 : 164 }}>{el.suffix ? (el.suffix.length > 2 ? " " : "") + el.suffix : ""}</span>
+      <div style={{ display: "inline-block", background: BRAND.green, color: BRAND.white, borderRadius: 28, padding: "8px 34px 12px", transform: `scale(${s * (1 + 0.06 * (local >= RUN ? 1 - Math.min(1, hitK) : 0))})`, boxShadow: "0 14px 30px rgba(0,0,0,0.35)" }}>
+        <div style={{ fontWeight: 900, fontSize: 150, lineHeight: 1, color: BRAND.lime, fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>
+          {el.prefix ?? ""}{shown}<span style={{ fontSize: el.suffix && el.suffix.length > 2 ? 84 : 150 }}>{el.suffix ? (el.suffix.length > 2 ? " " : "") + el.suffix : ""}</span>
         </div>
-        <div style={{ fontWeight: 800, fontSize: 48, textTransform: "uppercase", letterSpacing: 1, whiteSpace: "nowrap" }}>{el.label}</div>
+        <div style={{ fontWeight: 800, fontSize: Math.min(76, Math.floor(900 / (0.6 * Math.max(8, el.label.length)))), lineHeight: 1.05, textTransform: "uppercase", letterSpacing: 1, whiteSpace: "nowrap" }}>{el.label}</div>
       </div>
     </div>
   );
@@ -173,7 +173,7 @@ const ROME: [number, number] = [12.5, 41.9], WINDHOEK: [number, number] = [17.08
 
 const SideMap: React.FC<{ dir: "it-na" | "na-it"; local: number; durF: number; fps: number }> = ({ dir, local, durF }) => {
   const PW = SIDE.pw, PH = 960;
-  const proj = geoMercator().fitExtent([[10, 60], [PW - 10, PH - 40]], { type: "MultiPoint", coordinates: [[-14, 46], [44, 46], [-14, -35], [44, -35]] } as any);
+  const proj = geoMercator().fitExtent([[10, 104], [PW - 10, PH - 70]], { type: "MultiPoint", coordinates: [[-14, 46], [44, 46], [-14, -35], [44, -35]] } as any);
   const path = geoPath(proj);
   const a = proj(dir === "it-na" ? ROME : WINDHOEK)!, b = proj(dir === "it-na" ? WINDHOEK : ROME)!;
   const ctrl: [number, number] = [(a[0] + b[0]) / 2 + (dir === "it-na" ? 120 : -120), (a[1] + b[1]) / 2];
@@ -183,22 +183,24 @@ const SideMap: React.FC<{ dir: "it-na" | "na-it"; local: number; durF: number; f
   const head = q(p), prev = q(Math.max(0, p - 0.03));
   const ang = (Math.atan2(head[1] - prev[1], head[0] - prev[0]) * 180) / Math.PI;
   const it = proj(ROME)!, na = proj(WINDHOEK)!;
-  const Label: React.FC<{ at: [number, number]; text: string; on: boolean; side: "l" | "r" }> = ({ at, text, on, side }) => (
-    <g transform={`translate(${at[0]} ${at[1]})`}>
-      <circle r={on ? 13 : 9} fill={BRAND.lime} /><circle r={on ? 26 : 0} fill="none" stroke={BRAND.lime} strokeWidth={3} opacity={0.5} />
-      <g transform={`translate(${side === "r" ? 22 : -22} 0)`}>
-        <rect x={side === "r" ? 0 : -text.length * 24 - 26} y={-30} width={text.length * 24 + 26} height={60} rx={14} fill={on ? BRAND.lime : "rgba(11,15,10,0.9)"} />
-        <text x={side === "r" ? 12 : -12} y={12} textAnchor={side === "r" ? "start" : "end"} fontFamily={FONT} fontWeight={900} fontSize={38} fill={on ? BRAND.ink : BRAND.white}>{text}</text>
+  // etichette grandi (52, come i titoli degli elenchi), centrate sopra o sotto il punto e sempre dentro il pannello
+  const Label: React.FC<{ at: [number, number]; text: string; on: boolean; pos: "above" | "below" }> = ({ at, text, on, pos }) => {
+    const w = text.length * 33 + 30, cx = Math.min(PW - w / 2 - 8, Math.max(w / 2 + 8, at[0])), cy = at[1] + (pos === "above" ? -62 : 62);
+    return (
+      <g>
+        <g transform={`translate(${at[0]} ${at[1]})`}><circle r={on ? 13 : 9} fill={BRAND.lime} /><circle r={on ? 26 : 0} fill="none" stroke={BRAND.lime} strokeWidth={3} opacity={0.5} /></g>
+        <rect x={cx - w / 2} y={cy - 36} width={w} height={72} rx={16} fill={on ? BRAND.lime : "rgba(11,15,10,0.92)"} />
+        <text x={cx} y={cy + 18} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={52} fill={on ? BRAND.ink : BRAND.white}>{text}</text>
       </g>
-    </g>
-  );
+    );
+  };
   return (
     <svg width={PW} height={PH} style={{ borderRadius: 30, background: "#0E1F0B" }}>
       <path d={path(land) ?? ""} fill="#27521C" stroke="#3E7A2E" strokeWidth={0.8} />
       {land.features.filter((f: any) => f.id === "380" || f.id === "516").map((f: any) => <path key={f.id} d={path(f) ?? ""} fill={BRAND.lime} opacity={0.9} />)}
       <polyline points={pts.map((x) => x.join(",")).join(" ")} fill="none" stroke={BRAND.white} strokeWidth={5} strokeDasharray="12 10" strokeLinecap="round" />
-      <Label at={it as [number, number]} text="ITALIA" on={dir === "it-na" ? p < 0.5 : p > 0.9} side="r" />
-      <Label at={na as [number, number]} text="NAMIBIA" on={dir === "it-na" ? p > 0.9 : p < 0.5} side="r" />
+      <Label at={it as [number, number]} text="ITALIA" on={dir === "it-na" ? p < 0.5 : p > 0.9} pos="above" />
+      <Label at={na as [number, number]} text="NAMIBIA" on={dir === "it-na" ? p > 0.9 : p < 0.5} pos="below" />
       <g transform={`translate(${head[0]} ${head[1]}) rotate(${ang})`} opacity={p > 0.01 && p < 0.995 ? 1 : 0}>
         <circle r={22} fill={BRAND.white} /><path d="M-10 -8 L12 0 L-10 8 L-5 0 Z" fill={BRAND.green} />
       </g>
@@ -214,7 +216,8 @@ export const Side: React.FC<P<"side">> = ({ el, start }) => {
   if (local < 0 || local >= durF) return null;
   const k = sideK(local, durF);
   const items = el.items ?? [];
-  const rowH = items.length ? Math.min(190, Math.floor((960 - (el.title ? 100 : 0)) / items.length)) : 0;
+  const LH = 1040;   // l'elenco può scendere un po' sotto la scheda video: resta comunque sopra i sottotitoli
+  const rowH = items.length ? Math.min(190, Math.floor((LH - (el.title ? 100 : 0)) / items.length)) : 0;
   return (
     <div style={{ position: "absolute", left: SIDE.px, top: SIDE.y, width: SIDE.pw, height: 960, fontFamily: FONT, opacity: Math.min(1, k * 1.5), transform: `translateX(${(1 - k) * 140}px)` }}>
       {el.map ? <SideMap dir={el.map} local={local} durF={durF} fps={fps} /> : (
@@ -225,14 +228,14 @@ export const Side: React.FC<P<"side">> = ({ el, start }) => {
             const r = spring({ frame: local - t0, fps, config: { damping: 13, stiffness: 210, mass: 0.6 } });
             const on = local >= t0;
             // le voci sono SEMPRE più grandi dei sottotitoli (64): una riga se sta nella larghezza, altrimenti due righe dentro la casella
-            const room = el.pairs ? 430 : 334;
+            const room = el.pairs ? 430 : 356;
             const fit = (t: string) => { const one = Math.min(84, rowH - 44, Math.floor(room / (0.57 * t.length))); if (one >= 66 || !t.includes(" ")) return one;
               const w = t.split(" "); let best = 99; for (let c = 1; c < w.length; c++) best = Math.min(best, Math.max(w.slice(0, c).join(" ").length, w.slice(c).join(" ").length));
               return Math.min(78, Math.floor((rowH - 30) / 2.1), Math.floor(room / (0.57 * best))); };
             const size = Math.min(...items.map(fit));
             return (
               <div key={i} style={{ height: rowH - 10, marginBottom: 10, display: "flex", alignItems: "center", gap: 14, background: on ? "rgba(11,15,10,0.88)" : "rgba(255,255,255,0.05)", borderRadius: 18, padding: "0 16px", transform: `translateX(${on ? (1 - r) * 120 : 0}px)`, border: on ? `2px solid ${BRAND.lime}` : "2px solid rgba(255,255,255,0.10)", boxSizing: "border-box" }}>
-                {el.pairs ? null : <div style={{ width: 66, height: 66, borderRadius: 33, background: on ? BRAND.lime : "rgba(255,255,255,0.12)", color: BRAND.ink, fontWeight: 900, fontSize: 40, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transform: `scale(${on ? 0.7 + 0.3 * r : 1})` }}>{on ? i + 1 : ""}</div>}
+                {el.pairs ? null : <div style={{ width: 54, height: 54, borderRadius: 27, background: on ? BRAND.lime : "rgba(255,255,255,0.12)", color: BRAND.ink, fontWeight: 900, fontSize: 34, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transform: `scale(${on ? 0.7 + 0.3 * r : 1})` }}>{on ? i + 1 : ""}</div>}
                 <div style={{ fontWeight: 900, fontSize: size, lineHeight: 1.02, textTransform: "uppercase", color: on ? (el.pairs && i % 2 === 0 ? BRAND.lime : BRAND.white) : "rgba(255,255,255,0)", textAlign: el.pairs ? "center" : "left", flex: 1, overflow: "hidden", maxHeight: rowH - 18 }}>{it}</div>
               </div>
             );

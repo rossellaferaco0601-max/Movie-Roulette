@@ -355,10 +355,10 @@ export const Beat: React.FC<{ el: Extract<Element, { kind: "beat" }>; start: num
         </div>
         <div>
           <div style={{ display: "flex", alignItems: "baseline", gap: 14, color: BRAND.white, fontWeight: 900, lineHeight: 0.95 }}>
-            <span style={{ fontSize: 150, color: col, fontVariantNumeric: "tabular-nums" }}>{count}</span>
+            <span style={{ fontSize: 140, color: col, fontVariantNumeric: "tabular-nums" }}>{count}</span>
             <span style={{ fontSize: 64 }}>BPM</span>
           </div>
-          <div style={{ marginTop: 6, color: BRAND.cream, fontWeight: 800, fontSize: 50, lineHeight: 1.05, whiteSpace: "nowrap" }}>{el.label}</div>
+          <div style={{ marginTop: 2, color: BRAND.cream, fontWeight: 800, fontSize: 68, lineHeight: 1.05, whiteSpace: "nowrap" }}>{el.label}</div>
         </div>
       </div>
     </div>
