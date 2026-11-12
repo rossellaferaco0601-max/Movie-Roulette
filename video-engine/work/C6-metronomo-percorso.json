@@ -1,0 +1,35 @@
+{
+ "id": "C6-metronomo-percorso",
+ "srcs": [
+  "public/ccb/masters/C6-metronomo-manuale.mp4"
+ ],
+ "out": "public/ccb/masters/C6-metronomo-percorso.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1
+ ],
+ "blendFrames": 1,
+ "tailLive": true,
+ "vf": "eq=contrast=1.0",
+ "voice": "",
+ "segments": [
+  {
+   "from": 0,
+   "to": 20.6333
+  },
+  {
+   "from": 24.7333,
+   "to": 31.2
+  },
+  {
+   "from": 35.9667,
+   "to": 61.5
+  },
+  {
+   "from": 71.1333,
+   "to": 76.0667
+  }
+ ]
+}
