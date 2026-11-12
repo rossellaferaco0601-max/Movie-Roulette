@@ -4,6 +4,8 @@ import wordsMassimiliano from "./wordsMassimiliano.json";
 import wordsLaura from "./wordsLaura.json";
 import wordsTaddeo from "./wordsTaddeo.json";
 import wordsMattia from "./wordsMattia.json";
+import wordsC3500 from "./wordsC3500.json";
+import wordsC3501 from "./wordsC3501.json";
 import wordsLongevita from "./wordsLongevita.json";
 import type { CNReelProps } from "./types";
 
@@ -799,5 +801,96 @@ Il suo consiglio a chi è indeciso: «Prova. Al massimo cosa può succedere? Hai
 Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
 
 #correrenaturale #testimonianza #corsa #running #infortuni`,
+  },
+  {
+    id: "T5-seiore",
+    title: "«Mi sono messo alla guida del mio corpo» (testimonianza: la sei ore)",
+    props: {
+      ...base,
+      src: "testimonianze/C3500-007.MP4",
+      words: wordsC3500 as CNReelProps["words"],
+      master: "testimonianze/T5-seiore.mp4",
+      // racconto libero (non un'intervista a domande): cinque pezzi, tagli solo nei silenzi veri; nel girato non dice il nome, quindi niente cartellino.
+      // Maglietta bianca con stampa a colori: le scritte sono tutte su fondo scuro (title), non parole libere, per restare leggibili
+      gfxShift: 100, // mento al massimo a 0,46: grafiche da 0,49, appena ridotte
+      gfxScale: 0.9,
+      capShift: 30,
+      segments: cut([267.9, 277.5], [378.54, 429.18], [458.36, 466.95], [481.49, 485.91], [546.31, 550.5]),
+      hook: null,
+      elements: [
+        { kind: "title", at: 0, dur: 3.6, lines: ["6 ore di corsa", "50 chilometri", "e una scoperta"], accent: "50" },
+        { kind: "title", at: 5.18, word: "tutto", dur: 3.9, lines: ["Tutto il lavoro", "di questi anni"], accent: "lavoro" },
+        { kind: "title", at: 9.9, word: "momento", dur: 2.4, lines: ["Il momento più duro"] },
+        { kind: "title", at: 14.88, word: "nipotina", dur: 2.4, lines: ["La mia nipotina", "mi salutava a ogni giro"], accent: "nipotina" },
+        { kind: "stat", at: 20.08, word: "quattro", dur: 2.2, value: "4h30", label: "non c'era più lei" },
+        { kind: "title", at: 25.56, word: "down", dur: 1.7, lines: ["Un down pazzesco"], accent: "pazzesco" },
+        { kind: "title", at: 32.16, word: "guida", dur: 3.0, lines: ["Alla guida", "del mio corpo"], accent: "guida" },
+        { kind: "lights", at: 38.32, word: "cruscotto", dur: 8.75, cues: ["benzina", "acqua", "caldo"], title: "Il mio cruscotto", items: ["Benzina", "Acqua", "Caldo"] },
+        { kind: "checklist", at: 50.92, word: "rallentato", dur: 9.0, big: true, cues: ["rallentato", "rallentato", "ritrovato"], items: ["Rallento la corsa", "Rallento il respiro", "Ritrovo tranquillità"] },
+        { kind: "title", at: 63.65, word: "clamoroso", dur: 1.5, lines: ["Clamoroso"], accent: "Clamoroso" },
+        { kind: "title", at: 65.35, word: "veloce", dur: 3.0, lines: ["Il giro più veloce", "di tutti i 50 km"], accent: "veloce" },
+        { kind: "stat", at: 70.48, word: "6", dur: 2.6, value: "6 secondi", label: "allo scoccare delle 6 ore" },
+        { kind: "title", at: 75.87, word: "non", dur: 1.6, lines: ["Non mi ferma", "più nessuno"], accent: "nessuno" },
+      ],
+      cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
+    },
+    didascalia: `«Finita quella sei ore sono scoppiato a piangere: ho pensato a tutto il lavoro di questi anni.»
+
+Sei ore di corsa, 50 chilometri. Il momento più duro arriva dopo quattro ore e mezza, quando la nipotina che lo salutava a ogni giro va via: un down pazzesco.
+
+«Allora mi sono messo alla guida del mio corpo, mi sono guardato il mio cruscotto: le spie accese della benzina, dell'acqua, del caldo.» Ha rallentato la corsa, ha rallentato il respiro, ha ritrovato consapevolezza e tranquillità.
+
+L'ultimo giro è stato il più veloce di tutti i 50 chilometri, chiuso a 6 secondi dallo scoccare delle sei ore. «Adesso, con questa chiave di lettura, non mi ferma più nessuno.»
+
+Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #testimonianza #corsa #running #ultramaratona`,
+  },
+  {
+    id: "T6-giancarlo",
+    title: "«Arrivi a casa nervoso per il tempo? Questo non esiste più» (testimonianza di Giancarlo)",
+    props: {
+      ...base,
+      src: "testimonianze/C3501-003.MP4",
+      words: wordsC3501 as CNReelProps["words"],
+      master: "testimonianze/T6-giancarlo.mp4",
+      // volto grande e mobile: grafiche da 0,547 e ridotte, sottotitoli appena più giù; scritte tutte su fondo scuro
+      gfxShift: 205,
+      gfxScale: 0.72,
+      capShift: 40,
+      segments: cut([310.52, 332.14], [52.3, 66.1], [192.66, 205.76], [372.49, 384.88], [510.52, 517.58], [552.06, 557.76]),
+      hook: null,
+      elements: [
+        { kind: "title", at: 0, dur: 3.4, lines: ["La corsa non deve", "interrompere", "tutto il resto"], accent: "resto" },
+        { kind: "nametag", at: 3.6, dur: 2.4, name: "Giancarlo", sub: "Esine · Valle Camonica" },
+        { kind: "checklist", at: 9.5, word: "stanco", dur: 3.75, big: true, cross: true, cues: ["stanco", "nervoso", "tempo"], items: ["Stanco", "Nervoso", "Per il tempo mancato"] },
+        { kind: "title", at: 13.46, word: "questo", dur: 1.6, lines: ["Questo non esiste più"], accent: "più" },
+        { kind: "title", at: 17.56, word: "soddisfatto", dur: 3.8, cues: ["soddisfatto", "fatto"], lines: ["Arrivare a casa soddisfatto", "hai fatto quello che potevi"], accent: "soddisfatto" },
+        { kind: "question", at: 21.6, dur: 2.1, text: "Cosa è cambiato?" },
+        { kind: "checklist", at: 27.02, word: "conoscenza", dur: 5.2, big: true, cues: ["conoscenza", "fisico", "mentale"], items: ["Conoscenza di me", "Fisico", "Mente"] },
+        { kind: "title", at: 32.92, word: "crescita", dur: 2.3, lines: ["Una crescita", "costante e progressiva"], accent: "costante" },
+        { kind: "question", at: 35.42, dur: 2.1, text: "Il beneficio più grande?" },
+        { kind: "title", at: 37.86, word: "conoscersi", dur: 1.9, lines: ["Conoscersi"], accent: "Conoscersi" },
+        { kind: "bigstrike", at: 42.04, word: "tal", dur: 2.6, text: "Fare il tal tempo" },
+        { kind: "title", at: 47.18, word: "godersi", dur: 2.1, lines: ["Godersi il cammino"], accent: "cammino" },
+        { kind: "title", at: 52.31, word: "frutto", dur: 3.2, lines: ["Aspettare che il frutto", "sia maturo"], accent: "maturo" },
+        { kind: "title", at: 55.87, word: "natura", dur: 4.8, cues: ["natura", "noi"], lines: ["La natura ha i suoi tempi", "noi abbiamo i nostri"], accent: "tempi" },
+        { kind: "question", at: 60.92, dur: 2.1, text: "Cosa diresti a chi è indeciso?" },
+        { kind: "title", at: 63.84, word: "primo", dur: 4.0, cues: ["primo", "provare"], lines: ["Il primo passo", "è provare, iniziare"], accent: "iniziare" },
+        { kind: "checklist", at: 68.28, word: "competenza", dur: 5.35, big: true, cues: ["competenza", "serietà", "rete"], items: ["La competenza c'è", "La serietà c'è", "La rete di sicurezza c'è"] },
+      ],
+      cta: { word: "PERCORSO", title: "Vuoi scrivere anche tu la tua storia?" },
+    },
+    didascalia: `«Arrivi a casa stanco, nervoso perché non sei riuscito a fare il tempo che volevi? No, questo non esiste più.»
+
+Giancarlo viene da Esine, in Valle Camonica. Da quando ha conosciuto Correre Naturale® è migliorato soprattutto nella conoscenza di sé, nel fisico e nella mente: una crescita costante e progressiva.
+
+Il beneficio più grande? Conoscersi. Non riuscire a fare «il tal tempo», ma godersi il cammino. «A volte bisogna aspettare che il frutto sia maturo prima di raccoglierlo: la natura ha i suoi tempi, noi abbiamo i nostri.»
+
+A chi tentenna dice: «Il primo passo è provare, iniziare. La competenza c'è, la serietà c'è, la rete di sicurezza c'è.»
+
+Vuoi iniziare il tuo percorso? Commenta PERCORSO e ti mando tutte le info sui percorsi di coaching personalizzato di Correre Naturale®.
+
+#correrenaturale #testimonianza #corsa #running #benessere`,
   },
 ];

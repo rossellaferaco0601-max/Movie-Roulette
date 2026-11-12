@@ -1,0 +1,86 @@
+{
+ "id": "T6-giancarlo-lungo",
+ "src": "public/testimonianze/C3501-003.MP4",
+ "out": "public/testimonianze/T6-giancarlo-lungo.mp4",
+ "size": [
+  1920,
+  1080
+ ],
+ "faceX": 0.475,
+ "faceY": 0.359,
+ "zooms": [
+  1.0,
+  1.06
+ ],
+ "blendFrames": 8,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 52.3,
+   "to": 87.63,
+   "zoom": 1.0
+  },
+  {
+   "from": 96.77,
+   "to": 114.63,
+   "zoom": 1.06
+  },
+  {
+   "from": 120.47,
+   "to": 180.83,
+   "zoom": 1.0
+  },
+  {
+   "from": 192.53,
+   "to": 274.5,
+   "zoom": 1.06
+  },
+  {
+   "from": 276.49,
+   "to": 282.23,
+   "zoom": 1.06
+  },
+  {
+   "from": 293.17,
+   "to": 365.11,
+   "zoom": 1.0
+  },
+  {
+   "from": 366.17,
+   "to": 430.53,
+   "zoom": 1.0
+  },
+  {
+   "from": 439.47,
+   "to": 504.23,
+   "zoom": 1.06
+  },
+  {
+   "from": 510.39,
+   "to": 525.26,
+   "zoom": 1.0
+  },
+  {
+   "from": 526.57,
+   "to": 530.9,
+   "zoom": 1.0
+  },
+  {
+   "from": 531.91,
+   "to": 564.47,
+   "zoom": 1.0
+  },
+  {
+   "from": 565.83,
+   "to": 567.51,
+   "zoom": 1.0
+  },
+  {
+   "from": 568.78,
+   "to": 571.35,
+   "zoom": 1.0
+  }
+ ],
+ "broll": []
+}

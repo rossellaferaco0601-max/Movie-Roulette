@@ -249,3 +249,30 @@ export const Plan: React.FC<P<"plan">> = ({ el, start }) => {
     </AbsoluteFill>
   );
 };
+
+/* ---------- cruscotto: tre spie che si accendono sulle parole (testimonianza della sei ore) ---------- */
+export const Lights: React.FC<P<"lights">> = ({ el, start }) => {
+  const { fps } = useVideoConfig();
+  const { local, s, out, visible } = useInOut(start, Math.round(el.dur * fps));
+  if (!visible) return null;
+  const AMBER = "#FFB020";
+  const n = el.items.length, cw = (PANEL_W - 60) / n;
+  return (
+    <div style={{ position: "absolute", left: PANEL_X, width: PANEL_W, top: GFX_TOP, height: 400, borderRadius: 30, background: "rgba(11,15,10,0.9)", fontFamily: FONT, opacity: out * Math.min(1, s * 1.3), transform: `translateY(${(1 - s) * 40}px)` }}>
+      <div style={{ position: "absolute", top: 22, left: 0, width: "100%", textAlign: "center", fontWeight: 900, fontSize: 44, textTransform: "uppercase", letterSpacing: 3, color: BRAND.lime }}>{el.title}</div>
+      {el.items.map((it, i) => {
+        const f0 = cueF(el, i, fps, 0.8 + i * 0.9), on = local >= f0;
+        const k = spring({ frame: local - f0, fps, config: { damping: 11, stiffness: 220, mass: 0.7 } });
+        const pulse = on ? 0.75 + 0.25 * Math.sin((local - f0) / 3.2) : 0;
+        return (
+          <div key={i} style={{ position: "absolute", left: 30 + i * cw, width: cw, top: 104, textAlign: "center" }}>
+            <div style={{ display: "inline-block", width: 150, height: 150, borderRadius: 75, boxSizing: "border-box", border: `8px solid ${on ? AMBER : "rgba(255,255,255,0.25)"}`, background: on ? `rgba(255,176,32,${0.25 + 0.6 * pulse})` : "rgba(255,255,255,0.06)", transform: `scale(${on ? 0.85 + 0.15 * k : 1})` }}>
+              <div style={{ fontWeight: 900, fontSize: 96, lineHeight: "134px", color: on ? BRAND.ink : "rgba(255,255,255,0.3)" }}>!</div>
+            </div>
+            <div style={{ marginTop: 16, fontWeight: 800, fontSize: 50, color: on ? BRAND.white : "rgba(255,255,255,0.45)" }}>{it}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};

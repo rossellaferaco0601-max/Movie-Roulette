@@ -1,0 +1,37 @@
+{
+ "id": "T5-seiore",
+ "src": "public/testimonianze/C3500-007.MP4",
+ "pre": "crop=518:922:764:156,scale=1080:1920:flags=lanczos+accurate_rnd",
+ "out": "public/testimonianze/T5-seiore.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1.03
+ ],
+ "blendFrames": 5,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 267.9,
+   "to": 277.6
+  },
+  {
+   "from": 378.457,
+   "to": 429.257
+  },
+  {
+   "from": 458.277,
+   "to": 467.0437
+  },
+  {
+   "from": 481.407,
+   "to": 486.007
+  },
+  {
+   "from": 546.227,
+   "to": 550.4937
+  }
+ ]
+}

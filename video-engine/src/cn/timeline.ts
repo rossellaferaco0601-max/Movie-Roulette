@@ -35,6 +35,9 @@ export const remapWords = (words: Caption[], items: ReturnType<typeof layout>["i
     if (wordFix[key]) text = wordFix[key] + text.slice(key.length);
     res.push({ text, start, end: Math.max(end, start + 2) });
   }
+  // in ordine di master: con i pezzi rimontati in un ordine diverso dal sorgente, gli agganci alle parole (`cues`) devono trovare
+  // la prima occorrenza nel tempo del reel, non nel tempo del girato
+  res.sort((a, b) => a.start - b.start);
   return res;
 };
 

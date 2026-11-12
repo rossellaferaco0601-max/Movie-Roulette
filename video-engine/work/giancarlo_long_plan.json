@@ -1,0 +1,9 @@
+{"blendFrames": 8, "gap": 1.6, "chapters": [
+ {"q": "Quanto sei migliorato da quando conosci Correre Naturale?", "ranges": [[52.3, 87.5]]},
+ {"q": "Come ci hai conosciuto?", "ranges": [[96.9, 114.5]]},
+ {"q": "Qual era il tuo obiettivo?", "ranges": [[120.6, 180.7]]},
+ {"q": "Qual è il maggior beneficio?", "ranges": [[192.66, 282.1]]},
+ {"q": "È migliorata anche la tua vita fuori dalla corsa?", "ranges": [[293.3, 430.4]]},
+ {"q": "Avevi delle resistenze prima di iniziare?", "ranges": [[439.6, 504.1]]},
+ {"q": "Cosa diresti a chi è indeciso?", "ranges": [[510.52, 571.35]]}
+]}

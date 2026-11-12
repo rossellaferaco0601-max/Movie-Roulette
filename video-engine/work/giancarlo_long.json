@@ -1,0 +1,108 @@
+{
+ "segments": [
+  {
+   "from": 52.3,
+   "to": 87.63,
+   "zoom": 1.0
+  },
+  {
+   "from": 96.77,
+   "to": 114.63,
+   "zoom": 1.06
+  },
+  {
+   "from": 120.47,
+   "to": 180.83,
+   "zoom": 1.0
+  },
+  {
+   "from": 192.53,
+   "to": 274.5,
+   "zoom": 1.06
+  },
+  {
+   "from": 276.49,
+   "to": 282.23,
+   "zoom": 1.06
+  },
+  {
+   "from": 293.17,
+   "to": 365.11,
+   "zoom": 1.0
+  },
+  {
+   "from": 366.17,
+   "to": 430.53,
+   "zoom": 1.0
+  },
+  {
+   "from": 439.47,
+   "to": 504.23,
+   "zoom": 1.06
+  },
+  {
+   "from": 510.39,
+   "to": 525.26,
+   "zoom": 1.0
+  },
+  {
+   "from": 526.57,
+   "to": 530.9,
+   "zoom": 1.0
+  },
+  {
+   "from": 531.91,
+   "to": 564.47,
+   "zoom": 1.0
+  },
+  {
+   "from": 565.83,
+   "to": 567.51,
+   "zoom": 1.0
+  },
+  {
+   "from": 568.78,
+   "to": 571.35,
+   "zoom": 1.0
+  }
+ ],
+ "chapters": [
+  {
+   "q": "Quanto sei migliorato da quando conosci Correre Naturale?",
+   "seg": 0,
+   "at": 0.0
+  },
+  {
+   "q": "Come ci hai conosciuto?",
+   "seg": 1,
+   "at": 35.07
+  },
+  {
+   "q": "Qual era il tuo obiettivo?",
+   "seg": 2,
+   "at": 52.67
+  },
+  {
+   "q": "Qual è il maggior beneficio?",
+   "seg": 3,
+   "at": 112.77
+  },
+  {
+   "q": "È migliorata anche la tua vita fuori dalla corsa?",
+   "seg": 5,
+   "at": 199.93
+  },
+  {
+   "q": "Avevi delle resistenze prima di iniziare?",
+   "seg": 7,
+   "at": 335.7
+  },
+  {
+   "q": "Cosa diresti a chi è indeciso?",
+   "seg": 8,
+   "at": 400.2
+  }
+ ],
+ "blendFrames": 8,
+ "total": 455.1333333333333
+}

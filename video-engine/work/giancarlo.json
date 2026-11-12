@@ -1,0 +1,43 @@
+{
+ "id": "T6-giancarlo",
+ "src": "public/testimonianze/C3501-003.MP4",
+ "pre": "crop=540:960:642:96,scale=1080:1920:flags=lanczos+accurate_rnd",
+ "out": "public/testimonianze/T6-giancarlo.mp4",
+ "faceX": 0.5,
+ "faceY": 0.3,
+ "zooms": [
+  1,
+  1.03
+ ],
+ "blendFrames": 5,
+ "vf": "cas=0.3,eq=contrast=1.04:saturation=1.06",
+ "voice": "highpass=f=80,",
+ "segments": [
+  {
+   "from": 310.52,
+   "to": 332.22
+  },
+  {
+   "from": 52.217,
+   "to": 66.1837
+  },
+  {
+   "from": 192.577,
+   "to": 205.8437
+  },
+  {
+   "from": 372.407,
+   "to": 384.9737,
+   "pre": "crop=540:960:672:96,scale=1080:1920:flags=lanczos+accurate_rnd"
+  },
+  {
+   "from": 510.437,
+   "to": 517.6703
+  },
+  {
+   "from": 551.977,
+   "to": 557.7437,
+   "pre": "crop=540:960:672:96,scale=1080:1920:flags=lanczos+accurate_rnd"
+  }
+ ]
+}

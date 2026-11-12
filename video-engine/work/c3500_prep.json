@@ -1,0 +1,18 @@
+{
+ "raw": "public/testimonianze/C3500-007.MP4",
+ "duration": 570.57,
+ "face": {
+  "cx": 1024,
+  "top": 250,
+  "chin95": 590,
+  "cxRange": [
+   788,
+   1078
+  ]
+ },
+ "pre": "crop=518:922:764:156,scale=1080:1920:flags=lanczos+accurate_rnd",
+ "chinFrac": 0.471,
+ "faceXLong": 0.534,
+ "faceYLong": 0.389,
+ "align": "1007 parole allineate; scarto dai tempi di Whisper: mediana -40 ms, |scarto| medio 198 ms, oltre 150 ms: 183, massimo 6210 ms"
+}
