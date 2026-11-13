@@ -14,3 +14,4 @@
 - [Hook: niente grafiche SVG disegnate](feedback-hook-niente-grafiche-svg.md) — 6/11: gli hook SVG (tachimetro, sagome, badge) bocciati «bruttissimi»; mostrare un fotogramma e aspettare l'ok
 - [Solo i punti richiesti](feedback-solo-punti-richiesti.md) — 6/11: toccare solo ciò che Ross elenca; niente logo nei reel; tagli netti tra inquadrature; box ridotte, titoli sopra la testa
 - [Reference = schema esatto](feedback-reference-schema-esatto.md) — 6/11: misurare la reference e replicarla; logo scontornato; 7/11: brano dato da Ross = solo quello, stacchi sui colpi misurati
+- [GitHub e pulizia versioni](feedback-github-push.md) — 13/11: GitHub di nuovo attivo, push dopo i commit (niente PR); in consegna solo l'ultima versione di ogni video
