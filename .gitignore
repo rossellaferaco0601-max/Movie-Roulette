@@ -1,0 +1,15 @@
+node_modules/
+video-engine/out/
+video-engine/public/*.mp4
+video-engine/public/*.mov
+video-engine/public/*.wav
+video-engine/public/*.mp3
+*.captions.json
+.env
+.env.*
+__pycache__/
+video-engine/public/ytcn51/
+video-engine/work/**/frames/
+video-engine/work/**/*.wav
+video-engine/work/**/*.csv
+video-engine/work/**/*.log

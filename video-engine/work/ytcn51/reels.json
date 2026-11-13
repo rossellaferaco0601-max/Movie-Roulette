@@ -1,0 +1,94 @@
+[
+ {
+  "id": "R1-fiatone",
+  "src": "ytcn51/ytcn51_src.mp4",
+  "segments": [
+   {
+    "from": 0,
+    "to": 16.9
+   },
+   {
+    "from": 23.75,
+    "to": 44.95
+   }
+  ],
+  "blendFrames": 5
+ },
+ {
+  "id": "R2-naso",
+  "src": "ytcn51/ytcn51_src.mp4",
+  "segments": [
+   {
+    "from": 44.9,
+    "to": 74.3
+   }
+  ],
+  "blendFrames": 5
+ },
+ {
+  "id": "R3-bocca",
+  "src": "ytcn51/ytcn51_src.mp4",
+  "segments": [
+   {
+    "from": 74.35,
+    "to": 98.5
+   }
+  ],
+  "blendFrames": 5
+ },
+ {
+  "id": "R4-piano",
+  "src": "ytcn51/ytcn51_src.mp4",
+  "segments": [
+   {
+    "from": 98.65,
+    "to": 130.7
+   }
+  ],
+  "blendFrames": 5
+ },
+ {
+  "id": "R5-esercizio1",
+  "src": "ytcn51/ytcn51_src.mp4",
+  "segments": [
+   {
+    "from": 130.65,
+    "to": 179.25
+   }
+  ],
+  "blendFrames": 5
+ },
+ {
+  "id": "R6-breathhold",
+  "src": "ytcn51/ytcn51_src.mp4",
+  "segments": [
+   {
+    "from": 175.8,
+    "to": 205.1
+   }
+  ],
+  "blendFrames": 5
+ },
+ {
+  "id": "R7-ritmica",
+  "src": "ytcn51/ytcn51_src.mp4",
+  "segments": [
+   {
+    "from": 205.05,
+    "to": 241.3
+   }
+  ],
+  "blendFrames": 5
+ },
+ {
+  "id": "R8-dialogo",
+  "src": "ytcn51/ytcn51_src.mp4",
+  "segments": [
+   {
+    "from": 242.78,
+    "to": 279.9
+   }
+  ],
+  "blendFrames": 5
+ }
+]
