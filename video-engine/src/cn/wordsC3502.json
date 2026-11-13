@@ -1320,20 +1320,12 @@
   "whisperStartMs": 104540
  },
  {
-  "text": " la",
+  "text": " l'asticella",
   "startMs": 104780,
-  "endMs": 104860,
+  "endMs": 105440,
   "timestampMs": 104820,
   "confidence": 0.8920784592628479,
   "whisperStartMs": 104800
- },
- {
-  "text": " sticella",
-  "startMs": 104880,
-  "endMs": 105440,
-  "timestampMs": 105160,
-  "confidence": 0.9512081940968832,
-  "whisperStartMs": 105800
  },
  {
   "text": " sempre",
