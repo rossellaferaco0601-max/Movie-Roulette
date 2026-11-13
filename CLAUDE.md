@@ -30,6 +30,7 @@ npx tsx scripts/validate-reels.ts             # sovrapposizioni e ancore di hook
 npx tsx scripts/cn_stills.ts C1-runner C2-namibia@12.5,30   # fogli di controllo PRIMA del render: un fotogramma per ogni grafica (ID@secondi = solo quei momenti)
 npx tsx scripts/cn_covers.ts R1-fiatone       # copertina nel formato unico (fotogramma `cover.frame`; candidati con scripts/cn_smile.py), file con lo stesso nome del reel
 python3 scripts/cn_cta_music.py L5-bugia v2 v3  # musica anche sotto la CTA quando la musica è dentro il sorgente (toglie la voce dal seguito con scripts/cn_music_stem.py, modello ONNX in work/models/uvr)
+python3 scripts/cn_long_words.py work/x_long.json work/c3502.wav out/x_new.json   # versione lunga: ritrascrizione pezzo per pezzo (da LEGGERE prima del master: voci fuori campo); poi scripts/cn_words_merge.py per i sottotitoli
 SUB_BOX="&H38000000" python3 scripts/cn_stories.py work/storie_t/tagli.json out/testimonianze/stories   # spezzoni per le stories (solo sottotitoli); parole nel tempo del master: npx tsx scripts/cn_words_master.ts ID
 python3 scripts/cn_facecheck_elements.py R2-naso public/ytcn51/masters/R2-naso_mento.json   # volto libero grafica per grafica (dopo cn_facecheck.py)
 ../.claude/skills/effects/.venv/bin/python scripts/cn_facecheck.py public/x/master.mp4 0.44   # il volto non si copre MAI: mento sotto il bordo grafiche

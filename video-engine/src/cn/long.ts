@@ -9,12 +9,12 @@ import wordsMattiaLong from "./wordsMattiaLong.json";
 import planMattia from "../../work/mattia_long.json";
 import wordsGiancarloLong from "./wordsGiancarloLong.json";
 import planGiancarlo from "../../work/giancarlo_long.json";
-// lunghi di Franco, Davide e Giulia (13/11): sottotitoli dalle parole già corrette del girato, rimappate sui pezzi del piano
-import wordsC3500 from "./wordsC3500.json";
+// lunghi di Franco, Davide e Giulia (13/11): sottotitoli = parole del girato unite alla ritrascrizione pezzo per pezzo (scripts/cn_words_merge.py), nei tempi del girato
+import wordsFrancoL from "./wordsFrancoLong.json";
 import planFranco from "../../work/franco_long.json";
-import wordsC3502 from "./wordsC3502.json";
+import wordsDavideL from "./wordsDavideLong.json";
 import planDavide from "../../work/davide_long.json";
-import wordsC3504 from "./wordsC3504.json";
+import wordsGiuliaL from "./wordsGiuliaLong.json";
 import planGiulia from "../../work/giulia_long.json";
 
 /** Versioni lunghe orizzontali delle testimonianze (piano dei tagli: scripts/cn_long_plan.py). */
@@ -106,7 +106,7 @@ export const LONGS: { id: string; props: CNLongProps }[] = [
       master: "testimonianze/T5-seiore-lungo.mp4",
       segments: planFranco.segments,
       blendFrames: planFranco.blendFrames,
-      words: wordsC3500 as CNLongProps["words"],
+      words: wordsFrancoL as CNLongProps["words"],
       wordFix: { toro: "Thor", torre: "Thor", trascorporia: "extracorporea" },
       wordOffset: -0.05,
       chapters: planFranco.chapters,
@@ -122,8 +122,8 @@ export const LONGS: { id: string; props: CNLongProps }[] = [
       master: "testimonianze/T7-bilancio-lungo.mp4",
       segments: planDavide.segments,
       blendFrames: planDavide.blendFrames,
-      words: wordsC3502 as CNLongProps["words"],
-      wordFix: { virgoletto: "virgolette", po: "po'" },
+      words: wordsDavideL as CNLongProps["words"],
+      wordFix: { virgoletto: "virgolette", po: "po'", sticella: "asticella" },
       wordOffset: -0.05,
       chapters: planDavide.chapters,
       name: "Davide",
@@ -138,7 +138,7 @@ export const LONGS: { id: string; props: CNLongProps }[] = [
       master: "testimonianze/T8-trail-lungo.mp4",
       segments: planGiulia.segments,
       blendFrames: planGiulia.blendFrames,
-      words: wordsC3504 as CNLongProps["words"],
+      words: wordsGiuliaL as CNLongProps["words"],
       wordFix: { ascemarsi: "a scemare", tirocino: "tirocinio" },
       wordOffset: -0.05,
       chapters: planGiulia.chapters,
