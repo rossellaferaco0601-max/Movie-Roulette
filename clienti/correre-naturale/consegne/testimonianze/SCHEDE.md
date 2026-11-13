@@ -41,7 +41,7 @@ L'intervista completa in sette domande (7:42, orizzontale, per YouTube e il sito
 
 ## Testimonianze · Bilancio di metà percorso (girato C3502-008)
 
-**T7 Davide (bilancio di metà percorso) reel · Venerdì Conversione · CTA PERCORSO** (v3, 12/11)
+**T7 Davide (bilancio di metà percorso) reel · Venerdì Conversione · CTA PERCORSO** (v4, 13/11: ultimo sottotitolo completo)
 Il problema: pensava che il suo corpo potesse fare 10, e ragionava dentro schemi che il percorso gli ha fatto ripensare. La svolta: a metà percorso il bilancio è «estremamente positivo, per aspetti che vanno molto al di là della corsa», perché è un percorso che forma a 360 gradi, come persona; ha imparato a gestire molto meglio la condizione fisica e a riconoscere i segnali del corpo, e ha scoperto possibilità nuove nella corsa, nella vita quotidiana, nel lavoro, nelle ambizioni: «se so che il mio corpo, da 10 che pensavo potesse fare, sa fare 100, la mia mente ora sa che può fare 3000, 10.000». Chiusura: «è tutto un processo di tasselli che si mettono in fila: come le tessere del domino, si può sempre mirare a qualcosina di più». (Nel girato non dice il nome: nel cartellino c'è un nome di fantasia, «Davide», deciso con Ross il 12/11.)
 
 ## Testimonianze · Il primo trail (girato C3504-010)
