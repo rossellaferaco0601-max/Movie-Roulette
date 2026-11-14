@@ -29,22 +29,22 @@ La corsa non è un test di resistenza: è un dialogo tra te e il tuo corpo, e qu
 
 ## Longevità · «Ho letto 5 studi sulla longevità» (rifatti l'11/11 al livello di YTCN 51 v11)
 
-**L1 ultimi 20 anni · Lunedì Scientifico · CTA PIANO** (v3, 12/11: musica anche sotto la CTA)
+**L1 ultimi 20 anni · Lunedì Scientifico · CTA PIANO** (v4, 14/11: solo voce, senza musica di sottofondo)
 La medicina moderna ci ha regalato 30 anni di vita in più, ma ce li ha messi tutti alla fine. Due numeri definiscono la tua vita: il lifespan, quanti anni vivi, e l'healthspan, quanti anni vivi bene. In Italia l'aspettativa di vita è circa 83 anni, quella in salute si ferma intorno ai 60: in media gli ultimi 20 anni si passano in declino, due decenni in cui il corpo si spegne. La domanda vera non è quanto a lungo vivo, ma a che punto il mio corpo smetterà di funzionare come dovrebbe. Chiusura: non si smette di correre perché si invecchia, si invecchia perché si smette di correre.
 
-**L2 nessun farmaco · Lunedì Scientifico · CTA MOTORE** (v2, 12/11: musica anche sotto la CTA)
+**L2 nessun farmaco · Lunedì Scientifico · CTA MOTORE** (v3, 14/11: solo voce, senza musica di sottofondo)
 Il segnale più potente che esista per la longevità è il movimento aerobico. Una meta-analisi su 100.000 persone sane (Kodama et al., 2009, JAMA): ogni piccolo incremento del motore aerobico abbassa del 13% il rischio di morire per qualsiasi causa e del 15% quello di un evento cardiovascolare; non esiste farmaco al mondo con questo effetto. Quanto serve correre: uno studio americano su oltre 155.000 adulti seguiti per 15 anni (Lee et al., 2014, JACC) dice che bastano meno di 51 minuti a settimana, anche piano, per ridurre del 30% la mortalità per tutte le cause e del 45% quella cardiovascolare. Chiusura: 10 minuti al giorno, non una maratona; è tenere accesa la macchina biologica che sposta l'ago.
 
-**L3 cellule · Martedì Educativo · CTA RINNOVO** (v2, 12/11: musica anche sotto la CTA)
+**L3 cellule · Martedì Educativo · CTA RINNOVO** (v3, 14/11: solo voce, senza musica di sottofondo)
 Cosa succede dentro le tue cellule quando corri. I mitocondri sono le centrali energetiche: trasformano ossigeno e nutrienti in ATP, la moneta con cui il corpo paga ogni battito, ogni pensiero, ogni passo. Quando funzionano bene il corpo si ripara, si rinnova, resta giovane; quando funzionano male il sistema decade: l'invecchiamento non è il tempo che passa, sono le centrali che smettono di fare il loro lavoro. Ma i mitocondri non sono statici, rispondono ai segnali: movimento aerobico, respirazione nasale e intensità controllata ne producono di più e più efficienti, e attivano la mitofagia, che sostituisce quelli vecchi e malfunzionanti con nuovi. Chiusura: è il 90% del valore della corsa che quasi nessuno conosce; ma attento, devi correre bene.
 
-**L4 cervello · Lunedì Scientifico · CTA CAMMINA** (v2, 12/11: musica anche sotto la CTA)
+**L4 cervello · Lunedì Scientifico · CTA CAMMINA** (v3, 14/11: solo voce, senza musica di sottofondo)
 Il cervello si è coevoluto con il movimento: non può funzionare correttamente senza un corpo in movimento. Lo studio (Erickson et al., 2011, PNAS): 120 anziani sedentari, metà ha camminato tre volte a settimana per un anno partendo da 10 minuti fino ad arrivare a 40, l'altra metà ha fatto solo stretching leggero; risonanza magnetica dell'ippocampo prima e dopo. Risultato: in chi ha camminato l'ippocampo è cresciuto del 2%, nel gruppo di controllo è diminuito; chi si è mosso ha fatto tornare indietro l'orologio del cervello. Chiusura: motore, muscoli, tendini e cervello sono i quattro capitoli di un'unica storia, e quando ti muovi correttamente ogni pezzo amplifica gli altri.
 
-**L5 bugia del running · Mercoledì Problem/Solution · CTA TECNICA** (v3, 12/11: musica anche sotto la CTA)
+**L5 bugia del running · Mercoledì Problem/Solution · CTA TECNICA** (v4, 14/11: solo voce, senza musica di sottofondo)
 Il problema: «basta uscire a correre» è la bugia più diffusa nel mondo del running. Se corri male, con un corpo non pronto e senza saperti allenare, la questione non è se ti farai male ma quando: troppo forte, a bocca aperta, col fiatone, stai stressando un sistema che non è pronto. La risposta: il naso come limitatore naturale; se mentre corri non riesci a respirare solo dal naso stai andando troppo forte, e rallentare o camminare non è debolezza, è intelligenza biologica. Chiusura: il principio cardine del metodo Correre Naturale, non correre di più o più veloce ma mandare al corpo i segnali giusti, con la tecnica corretta, un corpo preparato e un'intensità che il tuo sistema può gestire; il resto è una conseguenza.
 
-**L6 tre cose da domani · Giovedì Pratico · CTA DOMANI** (v3, 12/11: musica anche sotto la CTA)
+**L6 tre cose da domani · Giovedì Pratico · CTA DOMANI** (v4, 14/11: solo voce, senza musica di sottofondo)
 Apertura di contesto: non si smette di correre perché si invecchia, si invecchia perché si smette di correre e di muoversi. Quindi, cosa puoi fare da domani? Tre cose. Uno: esci e cammina almeno 10 minuti respirando solo dal naso, meglio dopo pranzo; sembra poco, ma è un segnale potentissimo che accende il motore aerobico e mette al lavoro i mitocondri. Due: se già cammini, inserisci qualche minuto di corsa facile, dove facile vuol dire che respirare dal naso basta; se il naso non basta torni a camminare, senza fretta e senza ascoltare l'ego. Tre: lo squat completo, talloni a terra, per 30 secondi; se non ci riesci senza dolore hai appena trovato il tuo primo esercizio di manutenzione quotidiana. Chiusura: nel metodo Correre Naturale lo squat è uno dei gesti più potenti per rimettere in funzione il corpo.
 
 ## YTCN 38 · efficienza e flessibilità metabolica (9 reel)
@@ -84,7 +84,7 @@ Una giornata di workshop a Vicenza (24 ottobre) in un minuto: check-in, lezione 
 **VLOG workshop lungo · Venerdì Conversione · CTA WORKSHOP**
 Stessa giornata raccontata per esteso, dalle 9:30 alle 18:30: tutto quello che Correre Naturale insegna online, provato sul corpo, insieme.
 
-**D1 Daniela · Venerdì Conversione · CTA PERCORSO** (v2, 9/11)
+**D1 Daniela · Venerdì Conversione · CTA PERCORSO** (v7, 14/11: stacchi netti, inquadratura agganciata al volto; in attesa del sì di Oscar)
 Testimonianza reale dal workshop di Vicenza. Daniela stava sul divano e non aveva mai corso; ha iniziato con Correre Naturale per dimagrire («mi ha miracolato»). Il «secondo miracolo»: grazie alla filosofia della cura del proprio corpo ha fatto gli esami, ha scoperto in tempo un brutto male all'intestino, dopo tre settimane era di nuovo a correre senza chemio. Chiusura sul numero: nella mezza maratona la Daniela di 60 anni batte quella di 50 di oltre 20 minuti. Sorgente: IMG_0650 (telefono di Paola), nessun video YouTube.
 
 ## Testimonianze (cartella Drive «Testimonianze CN»)
